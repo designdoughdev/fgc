@@ -1,4 +1,7 @@
-@use '../index' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colours' as *;
+@use '../utils/grid' as *;
+
 
 
 // font imports // 
@@ -360,4 +363,3 @@ input, textarea{
      font-family: $primary-font;
      font-weight: 400;
 }
-
