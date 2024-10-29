@@ -1,6 +1,4 @@
-@use '../abstracts/mixins' as *;
-@use '../abstracts/colours' as *;
-@use '../utils/grid' as *;
+@use '../index' as *;
 
 
 // font imports // 
@@ -23,41 +21,35 @@
 // global type variables
 $primary-font: 'FT Sterling', sans-serif;
 $secondary-font: 'FT Sterling', sans-serif;
-$lineheight : 14;
+$lineheight : 1.2;
 
 // font hierachy
-$hone : 120;
+$hone : 60;
 @mixin h-one{
 	font-family: $primary-font;
     font-size: $hone + px;
-	line-height: 1;
-	font-weight: 300;
-	letter-spacing: -6px;
-	line-height: 0.8;
-	color: grey;
+	line-height: 1em;
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	color: $darkNavy;
 	-webkit-font-smoothing: antialiased;
 	@include respond-to(md) {
-	    font-size: $hone + px;
-	    // line-height: $hone * 0.8 + $lineheight + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(lg) {
-	    font-size: $hone + px;
-	    // line-height: $hone * 0.9 + $lineheight + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(xl) {
-	    font-size: $hone + px;
+	    font-size: 1em;
 	}
 	@include respond-to(tablet) {
-	    font-size: $hone + px;
-	    // line-height: $hone * 0.8 + $lineheight + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(mobile) {
-		font-size: 3.5rem;
-		letter-spacing: -6px;
+		font-size: 0.8em;
 	}
 	@include respond-to(sm) {
-		font-size: 3.5rem;
-		letter-spacing: -6px;
+		font-size: 0.9em;
 	}	
 }
 
@@ -66,35 +58,32 @@ $hone : 120;
 }
 
 // h2: used for headings in all flexes underneath the page header, which uses h1
-$htwo : 80;
+$htwo : 60;
 @mixin h-two {
 	font-family: $primary-font;
     font-size: $htwo + px;
-	font-weight: 200;
-	letter-spacing: -5.6px;
-	line-height: 0.9;
-	color: grey;
+	line-height: 0.9em;
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	color: $darkNavy;
 	-webkit-font-smoothing: antialiased;
 	@include respond-to(md) {
-	    font-size: $htwo * 0.6 + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(lg) {
-	    font-size: $htwo * 0.9 + px;
-	    // line-height: $htwo * 0.9 + $lineheight + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(xl) {
-	    font-size: $htwo + px;
+	    font-size: 1em;
 	}
 	@include respond-to(tablet) {
-	    font-size: $htwo * 0.6 + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(mobile) {
-	    font-size: $htwo * 0.4 + px;
-		letter-spacing: -2px;
+		font-size: 0.8em;
 	}
 	@include respond-to(sm) {
-	    font-size: $htwo * 0.4 + px;
-		letter-spacing: -2px;
+		font-size: 0.9em;
 	}	
 }
 
@@ -103,36 +92,32 @@ $htwo : 80;
 }
 
 // h3: used for subheadings within flexes, after an h2
-$hthree : 50;
+$hthree : 47;
 @mixin h-three{
 	font-family: $primary-font;
     font-size: $hthree + px;
-    line-height: $hthree + $lineheight + px;
-	font-weight: 300;
-	letter-spacing: -3px;
-	line-height: 2.6rem;
-	color: grey;
+	line-height: 1em;
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	color: $darkNavy;
 	-webkit-font-smoothing: antialiased;
 	@include respond-to(md) {
-	    font-size: $hthree * 0.8 + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(lg) {
-		font-size: $hthree + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(xl) {
-	    font-size: $hthree + px;
+	    font-size: 1em;
 	}
 	@include respond-to(tablet) {
-		font-size: $hthree * 0.8 + px;
-		letter-spacing: -3px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(mobile) {
-	    font-size: $hthree * 0.6 + px;
-		letter-spacing: -3px;
+		font-size: 0.8em;
 	}
 	@include respond-to(sm) {
-	    font-size: $hthree * 0.6 + px;
-		letter-spacing: -3px;
+		font-size: 0.9em;
 	}	
 }
 
@@ -141,35 +126,32 @@ $hthree : 50;
 }
 
 // h4 
-$hfour : 24;
+$hfour : 28;
 @mixin h-four{
 	font-family: $primary-font;
     font-size: $hfour + px;
-	line-height: 1.2;
-	font-weight: 300;
-	letter-spacing: -0.9px;
-	color: grey;
+	line-height: 1.4em;
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	color: $darkNavy;
 	-webkit-font-smoothing: antialiased;
 	@include respond-to(md) {
-	    font-size: $hfour * 0.75 + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(lg) {
-	    font-size: $hfour + px;
-	    // line-height: $hfour * 0.9 + $lineheight + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(xl) {
-	    font-size: $hfour + px;
+	    font-size: 1em;
 	}
 	@include respond-to(tablet) {
-	    font-size: $hfour * 0.8 + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(mobile) {
-	    font-size: $hfour * 0.6 + px;
-		letter-spacing: 0px;
+		font-size: 0.8em;
 	}
 	@include respond-to(sm) {
-	    font-size: $hfour * 0.6 + px;
-		letter-spacing: 0px;
+		font-size: 0.9em;
 	}	
 }
 
@@ -178,40 +160,34 @@ $hfour : 24;
 }
 
 
-// h5: used for small titles and subheadings.
-$hfive : 22;
+// h5: used for small titles and subheadings. - title tag
+$hfive : 14;
 
 @mixin h-five{
 	font-family: $primary-font;
     font-size: $hfive + px;
-    line-height: $hfive + $lineheight + px;
+	line-height: 1.2em;
 	font-weight: 300;
-	margin-bottom: 20px;
-	letter-spacing: -1px;
-	color: grey;
+	// letter-spacing: -0.03em;
+	color: $darkNavy;
 	-webkit-font-smoothing: antialiased;
 	@include respond-to(md) {
-	    font-size: $hfive * 0.8 + px;
-	    line-height: $hfive * 0.8 + $lineheight + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(lg) {
-	    font-size: $hfive * 0.9 + px;
-	    line-height: $hfive * 0.9 + $lineheight + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(xl) {
-	    font-size: $hfive + px;
+	    font-size: 1em;
 	}
 	@include respond-to(tablet) {
-	    font-size: $hfive * 0.8 + px;
-	    line-height: $hfive * 0.8 + $lineheight + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(mobile) {
-	    font-size: $hfive * 0.7 + px;
-	    line-height: $hfive * 0.7 + $lineheight + px;
+		font-size: 0.8em;
 	}
 	@include respond-to(sm) {
-	    font-size: $hfive * 0.7 + px;
-	    line-height: $hfive * 0.7 + $lineheight + px;
+		font-size: 0.9em;
 	}	
 }
 
@@ -221,46 +197,34 @@ $hfive : 22;
 
 
 // h6: used for categories and tags. 
-$hsix : 12;
+$hsix : 11;
 
 @mixin h-six {
 	font-family: $primary-font;
     font-size: $hsix + px;
-    line-height: $hsix + 8 + px;
+	line-height: 1.2em;
 	font-weight: 300;
-    letter-spacing: 0px;
-    border: solid 1px #FBFBFB;
-	padding: 0px 12px;
-	@include border_radius;
-	width: fit-content;
-	height: fit-content;
+	// letter-spacing: -0.03em;
+	color: $darkNavy;
 	-webkit-font-smoothing: antialiased;
-	color: grey;
 	@include respond-to(md) {
-	    font-size: $hsix + px;
-		// line-height: $hsix + 6 + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(lg) {
-	    font-size: $hsix + px;
-    	// line-height: $hsix + 7 + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(xl) {
-	    font-size: $hsix + 2px;
+	    font-size: 1em;
 	}
 	@include respond-to(tablet) {
-	    font-size: $hsix + px;
-    	// line-height: $hsix + 6 + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(mobile) {
-	    font-size: $hsix + px;
-		padding: 4px 10px 0px 10px;
-    	// line-height: $hsix + 5 + px;
+		font-size: 0.8em;
 	}
 	@include respond-to(sm) {
-	    font-size: $hsix + px;
-    	line-height: $hsix + px;
-		padding: 2px 10px;
-	}	
+		font-size: 0.9em;
+	}		
 }
 
 .h6 {
@@ -272,37 +236,38 @@ blockquote {
 }
 
 
-$para : 14;
+$para : 15;
 
 @mixin body{
  	font-family: $primary-font;
     font-size: $para + px;
-    line-height: $para + 8 + px;
+    line-height: 1.4;
 	-webkit-font-smoothing: antialiased;
-	color: grey;
+	color: $darkNavy;
+
 	@include respond-to(md) {
-	    font-size: $para * 0.9 + px;
-	    line-height: $para + 9 + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(lg) {
-	    font-size: $para * 0.9 + px;
-	    line-height: $para + 9 + px;
+	    font-size: 0.9em;
 	}
 	@include respond-to(xl) {
-	    font-size: $para + px;
+	    font-size: 1em;
 	}
 	@include respond-to(tablet) {
-	    font-size: $para * 0.8 + px;
-	    line-height: $para + 8 + px;
+	    font-size: 0.8em;
 	}
 	@include respond-to(mobile) {
-	    font-size: $para * 0.9 + px;
-	    line-height: $para + 9 + px;
+	    font-size: 0.8em;
 	}
 	@include respond-to(sm) {
-	    font-size: $para * 0.9 + px;
-	    line-height: $para + 9 + px;
+	    font-size: 0.8em;
 	}
+}
+
+.link{
+	@include body;
+	font-size: 16;
 }
 
 .p, .plain-text {       
@@ -317,6 +282,10 @@ body{
 
 blockquote {
   font-style: italic;	
+}
+
+.medium-text{
+	font-weight: 500;
 }
 
 strong, b, .bold {
@@ -356,8 +325,7 @@ ol li {
 a {
 	color: grey;
 	text-decoration: none;
-	position: relative;
-	cursor: none;
+	cursor: pointer;
 }
 
 

@@ -1,7 +1,6 @@
 /* Always import the mixins file incase you need them! */
 
-@use "../abstracts/mixins";
-@use "../abstracts/colours";
+@use '../index' as *;
 
 /* Get your SASS in now! */
 

@@ -1,5 +1,4 @@
-@use "colours";
-@use '../utils/grid' as *;
+@use '../index' as *;
 
 
 
@@ -120,7 +119,7 @@ $bigperpad: $px0 $v10;
 ================================================== */
 
 @mixin border_radius {
-    border-radius: 50px;
+    border-radius: 0.125rem;
     // overflow: hidden;
 }
 
@@ -1199,6 +1198,8 @@ $conpad : 1.5625vw;
 
 @mixin buttonsimple {
     text-decoration: underline;
+    border: none;
+    cursor: pointer;
     &:hover {
         text-decoration: none;
     }
@@ -1206,6 +1207,23 @@ $conpad : 1.5625vw;
 .btn_simple {
     @include buttonsimple;
 }
+
+
+
+@mixin btn-menu {
+    @include body;
+    @include border_radius;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0.4em 1.3em;
+}
+
+.btn-menu{
+
+    @include btn-menu;
+
+}
+
 // standard fade/border hover button for common <a> tags
 @mixin buttonanchor {
     @include transition;
