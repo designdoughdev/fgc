@@ -1,0 +1,51 @@
+@use '../abstracts/colours' as *;
+
+header{
+
+    .pre-header{
+        background-color: $darkNavy;
+        padding: 0 1rem;
+        
+
+        .pre-header-right{
+            margin-left: auto;
+            width: fit-content;
+            color: white;
+            display: flex;
+            gap: 1rem;
+
+            .search-container{
+                display: flex;
+                gap: 0.25rem;
+
+                img.search-icon{
+                    width: 12px;
+                    height: auto;
+                }
+
+                input{
+                    background-color: $darkNavy;
+                    border: none;
+                    width: 60px;
+                    overflow-x: scroll;
+
+                    &::placeholder{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-header{
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        .header-logo-container{
+            img.header-logo{
+                max-width: 173px;
+                height: auto;
+            }
+        }
+    }
+}

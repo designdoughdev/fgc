@@ -9,34 +9,33 @@
 </head>
 <header x-data="{ isOpen: false }">
 
-    <div class="header-left w-1/3">
-        <div>
-            <h1><?php bloginfo('name'); ?></h1>
-        </div>
-        <div class="header-right grow flex">
-            <nav class="">
 
-            </nav>
+    <div class="pre-header">
+        <div class="pre-header-right">
+            <p>ENG | CYM</p>
+            <?php get_template_part('components/includes/search-bar'); ?>
+        </div>
+    </div>
+
+    <div class="main-header container">
+
+        <div class="header-logo-container">
+            <img class="header-logo" src="<?php bloginfo('template_url'); ?>/assets/images/svg/logo.svg" alt="">
+
+        </div>
+
+        <div class="menu-btn-container">
+            <button>One</button>
+            <button>Two</button>
+            <button>Three</button>
+        </div>
+        <div class="menu-btn-container">
             <button class="md:hidden ms-auto" aria-label="Menu" @click="isOpen = !isOpen">
                 Menu
             </button>
 
             <?php get_template_part('components/includes/mobile-nav'); ?>
-
-
-
         </div>
-        <div class="top-header-bar">
-            <div class="">
-                <h1>Top Header Bar</h1>
-            </div>
-
-        </div>
-        <div>
-            <h1>Header</h1>
-        </div>
-
-
 </header>
 
 <body>

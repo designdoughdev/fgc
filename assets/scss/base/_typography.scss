@@ -332,7 +332,7 @@ ol, ul, li {
 	@include body;
 }
 
-p, .plain-text {
+.p, .plain-text {
 	@include body;
 }
 

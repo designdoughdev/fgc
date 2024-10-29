@@ -375,9 +375,9 @@ $conpad : 1.5625vw;
 
 @mixin container {
     width: calc(100vw - #{$conpad * 4});
-    // @include respond-to('lg') {
-    //     width: calc(100vw - #{$conpad * 2});
-    // }
+    @include respond-to('lg') {
+        width: calc(100vw - #{$conpad * 2});
+    }
     position: relative;
     margin: $zeroauto;
     max-width: 2000px;

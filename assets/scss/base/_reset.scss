@@ -341,17 +341,17 @@ textarea {
 }
 
 
-::-moz-selection {
-    background: grey;
-	color: black;
-    text-shadow: none;
-}
+// ::-moz-selection {
+//     background: grey;
+// 	color: black;
+//     text-shadow: none;
+// }
 
-::selection {
-    background: white;
-	color: black;
-    text-shadow: none;
-}
+// ::selection {
+//     background: white;
+// 	color: black;
+//     text-shadow: none;
+// }
 
 img {
     vertical-align: middle;

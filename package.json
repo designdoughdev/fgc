@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/scss/main.scss src/js/main.js --dist-dir dist --public-url ./",
-    "build": "parcel build src/scss/main.scss src/js/main.js --dist-dir dist --public-url ./"
+    "start": "parcel assets/scss/main.scss assets/js/main.js --dist-dir dist --public-url ./",
+    "build": "parcel build assets/scss/main.scss assets/js/main.js --dist-dir dist --public-url ./"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "sass": "^1.80.4"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "alpinejs": "^3.14.3"
   }
 }

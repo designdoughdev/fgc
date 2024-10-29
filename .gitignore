@@ -1,3 +1,7 @@
 node_modules
 .parcel-cache
 dist
+.DS_Store
+.vscode
+package-lock.json
+package.json
