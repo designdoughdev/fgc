@@ -60,10 +60,16 @@
 
         </div>
     </div>
+    <div class="hero-container relative">
+        <div class="action-nav-container relative">
+            <?php get_template_part('components/includes/action-nav'); ?>
 
-    <?php get_template_part('components/includes/action-nav'); ?>
+        </div>
 
-    <div class="hero-vid-container">
+
+
+
+
         <video autoplay muted loop playsinline style="width: 100%; height: 100%">
             <source src="https://videos.pexels.com/video-files/4114797/4114797-uhd_2560_1440_25fps.mp4"
                 type="video/mp4">
@@ -120,6 +126,10 @@
         </div>
 
     </div>
+
+
+
+
 
 
 

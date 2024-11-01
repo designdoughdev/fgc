@@ -477,3 +477,9 @@ iframe{
   grid-template-columns: 1fr 1fr;
 
 }
+
+@mixin four_columns{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+}

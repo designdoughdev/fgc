@@ -13,15 +13,23 @@ if(headerMenu){
 
    document.addEventListener('mouseover', (e)=> {
       
+      const mainHeader = document.querySelector('main-header');
+      const actionNav = document.querySelector('.action-nav');
 
-      const actionNav = document.querySelector('.menu-content');
-
-      if(headerMenu.contains(e.target) || actionNav.contains(e.target)){
+      if(headerMenu.contains(e.target)){
          actionNav.classList.add('show');
-      }else{
-         actionNav.classList.remove('show');
-
       }
+
+      if(!actionNav.contains(e.target) && !headerMenu.contains(e.target)){
+         actionNav.classList.remove('show');
+      }
+
+     
+
+      
+
+
+
    })
 
    // headerMenu.addEventListener('mouseover', ()=>{

@@ -4,18 +4,21 @@
 @use '../utils/grid' as *;
 
 footer{
+    @include sections_padding_large;
     background-color: $darkNavy;
-    padding: 5rem 0;
+    color: white;
     
     .footer-content{
 
         .footer-top{
 
-            padding: 8rem 0;
+            margin-bottom: 4vw;
+            gap: 2rem;
 
             &{
                 @include respond-to(md){
                     @include two_columns; 
+
                  }
 
             }
@@ -35,14 +38,125 @@ footer{
                 .heading{
                     @include h-three;
                     color: white;
+                    margin-bottom: 2em;
+                }
+
+                .signup-container{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: nowrap;
+                    gap: 0.6rem;
+                    margin-bottom: 3rem;
+
+                    input{
+                        @include body;
+                        color: white;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid white;
+                        flex-grow: 1;
+                        padding-bottom: 0.5em;
+           
+                    }
+
+                    button{
+                        background-color: transparent;
+                        display: inline-flex;
+                        align-content: center;
+                        justify-content: center;
+                        border: 1px solid $skyBlue;
+                        @include border-radius;
+                        aspect-ratio: 1;
+                        padding: 0.4em;
+                        cursor: pointer;
+                    }
                 }
 
 
+            }
+
+            .footer-top-right{
+
+                @include two_columns;
+
+                &{
+                    @include respond-to(md){
+                        @include four_columns; 
+                        gap: 0.5rem;
+                     }
+    
+                }
+
+                .menu-col{
+
+                    margin-bottom: 1rem;
+
+                    li{
+                        margin-bottom: 0.7em;
+                    }
+
+                    .menu-parent-page{
+                        @include h-five;
+                        color: white;
+                        margin-bottom: 2em;
+                    }
+
+                    a.menu-child-page{
+                        @include body;
+                        color: white;
+                        
+                    }
+
+                }
             }
         }
 
         .footer-bottom{
             border-top: 0.25px solid white;
+            padding: 6rem 0;
+            
+
+
+            &{
+                @include respond-to(md){
+                    @include two_columns; 
+                 }
+
+            }
+
+            .footer-bottom-left{
+                
+                .logo-white{
+                    max-width: 169px;
+                }
+                margin-bottom: 2rem;
+            }
+
+            .footer-bottom-right{
+
+                .col{
+                    margin-bottom: 1rem;
+                }
+
+                @include two_columns;
+
+                &{
+                    @include respond-to(md){
+                        @include four_columns; 
+                        gap: 0.5rem;
+                     }
+    
+                }
+
+            }
         }
+    }
+
+    img.horizontal-bars{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: auto;
     }
 }

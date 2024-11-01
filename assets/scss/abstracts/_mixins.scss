@@ -271,32 +271,13 @@ body {
 
 
 @mixin sections_padding {
-    padding: 50px 0;
-    @include respond-to('lg') {
-        padding: 80px 0;
-    }
-    // &:nth-child(2) {
-    //     padding-top: 0;
-    // }
-    &:last-child {
-        padding-bottom: 80px;
-        @include respond-to('lg') {
-            padding-bottom: 160px;
-        }
-    }
+    padding: calc($conpad * 4) 0;
+
 }
 
 @mixin sections_padding_large {
-    padding: 80px 0;
-    @include respond-to('lg') {
-        padding: 120px 0;
-    }
-    // &:nth-child(2) {
-    //     padding-top: 0;
-    // }
-    &:last-child {
-        padding-bottom: 160px;
-    }
+
+    padding: calc($conpad * 6) 0;
 }
 
 @mixin title_bar {

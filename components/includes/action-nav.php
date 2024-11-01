@@ -1,6 +1,7 @@
-<nav class="action-nav">
+<nav class="action-nav relative">
+    <img class="vertical-bars" src="<?php bloginfo('template_url'); ?>/assets/images/svg/vertical-bars.svg" alt="">
+
     <div class="menu-content relative discover-content">
-        <img class="vertical-bars" src="<?php bloginfo('template_url'); ?>/assets/images/svg/vertical-bars.svg" alt="">
 
         <div class="container">
             <div class="menu-grid">

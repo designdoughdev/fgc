@@ -370,24 +370,32 @@ $para : 15;
 	-webkit-font-smoothing: antialiased;
 	color: $darkNavy;
 
-	@include respond-to(md) {
-	    font-size: 0.9em;
+	@include respond-to('md') {
+	    font-size: $para * 0.6 + px;
+	    line-height: $para * 0.8 + $lineheight + px;
 	}
-	@include respond-to(lg) {
-	    font-size: 0.9em;
+	@include respond-to('lg') {
+	    font-size: $para * 0.8 + px;
+	    line-height: $para * 0.8 + $lineheight + px;
 	}
-	@include respond-to(xl) {
-	    font-size: 1em;
+	@include respond-to('xl') {
+	    font-size: $para + px;
+		line-height: $para * 1 + $lineheight + px;
 	}
 	@include respond-to(tablet) {
-	    font-size: 0.8em;
+	    font-size: $para * 0.6 + px;
+	    line-height: $para * 0.7 + $lineheight + px;
 	}
 	@include respond-to(mobile) {
-	    font-size: 0.8em;
+		font-size: $para * 0.6 + px;
+	    line-height: $para * 0.7 + $lineheight + px;
 	}
 	@include respond-to(sm) {
-	    font-size: 0.8em;
-	}
+		font-size: $para * 0.6 + px;
+	    line-height: $para * 0.7 + $lineheight + px;
+	}	
+
+
 }
 
 @mixin title_tag($textColour, $dotColour) {
@@ -448,6 +456,7 @@ em, i, .italic {
 
 ol, ul, li {
 	@include body;
+	color: black;
 }
 
 .p, .plain-text {
@@ -455,26 +464,42 @@ ol, ul, li {
 }
 
 ul li {
-  list-style-type: disc;
+  list-style-type: none;
   
 }
 
 ol li {
-  list-style-type:decimal;
-  margin-left: 1rem;
-	&::marker{
-		@include h-one;
-		@include respond-to(md){
-			@include h-two;
-		}
-		color: black;
-	}
+  list-style-type:none;
+//   margin-left: 1rem;
+	// &::marker{
+	// 	@include h-one;
+	// 	@include respond-to(md){
+	// 		@include h-two;
+	// 	}
+	// 	color: black;
+	// }
 }
+
+// ol li {
+//   list-style-type:decimal;
+//   margin-left: 1rem;
+// 	&::marker{
+// 		@include h-one;
+// 		@include respond-to(md){
+// 			@include h-two;
+// 		}
+// 		color: black;
+// 	}
+// }
 
 a {
 	
 	text-decoration: none;
 	cursor: pointer;
+
+	&:hover{
+		text-decoration: underline;
+	}
 }
 
 

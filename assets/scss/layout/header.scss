@@ -136,8 +136,12 @@ header{
                     display: flex;
                     flex: 30vw 1 0;
                     align-items: center;
+                }
+
+                .main-header-left, .main-header-right{
                     padding-bottom: 1rem;
                 }
+
                 .main-header-left{
                     display: flex;
                     flex: 30vw 1 0;
@@ -161,12 +165,19 @@ header{
     
                         }
                     }
-        
+                    
+                    .header-menu-btns{
+
+                        border-bottom: 1rem solid white;
+
+                        button.btn-menu{
+                            @include btn-menu;
+                        }
+
+                    }
 
         
-                    button.btn-menu{
-                        @include btn-menu;
-                    }
+
         
         
         
@@ -241,54 +252,73 @@ header{
 
     //---- Action Nav ----/
 
-    nav.action-nav{
-        position: relative;
-        display: none;
-        @include sections_padding;
-        @include shorttransition;
+    div.action-nav-container{
+        top: -0.5rem;
+        left: 0;
+        width: 100%;
 
-        img.vertical-bars{
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 100%;
-            width: auto;
-            opacity: 0.5;
-        }
 
-        .menu-grid{
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-
-            .col:not(:last-child){
-                border-right: 2px solid $grey;
+        nav.action-nav{
+            position: relative;
+            z-index: 99;
+            opacity: 0;
+            background-color: white;
+            // display: none;
+            @include sections_padding;
+            @include shorttransition;
+    
+            img.vertical-bars{
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: auto;
+                opacity: 0.5;
             }
-
-            .col{
-                padding: 0 1rem;
-
-                a.parent-page-link{
-                    @include h-four-3;
+    
+            .menu-grid{
+                display: grid;
+                grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    
+                .col:not(:last-child){
+                    border-right: 2px solid $grey;
                 }
+    
+                .col{
+                    padding: 0 1rem;
 
-                ul{
-                    margin-top: 0.8rem;
-                    li{
-                        list-style-type: none;
-                        margin-bottom: 0.5rem;
-                        a{
-                            @include body;
+
+    
+                    a.parent-page-link{
+                        @include h-four-3;
+                        @include shorttransition;
+                        
+
+
+                    }
+    
+                    ul{
+                        margin-top: 0.8rem;
+                        li{
+                            list-style-type: none;
+                            margin-bottom: 0.5rem;
+                            a{
+                                @include body;
+                            }
                         }
                     }
                 }
             }
-        }
-
-        &.show{
-            display: block;
+    
+            &.show{
+                opacity: 1;
+            }
+    
         }
 
     }
+
+
 
     //---- Mobile Nav -----/
     .mobile-nav{
@@ -337,7 +367,7 @@ header{
 
     //------ Hero Section ---------//
 
-    .hero-vid-container{
+    .hero-container{
 
         position: relative;
         width: 100%;         /* Set width as needed */
