@@ -1,5 +1,6 @@
 @use "colours";
 @use '../utils/grid' as *;
+@use '../base/typography' as *;
 
 
 
@@ -1524,6 +1525,17 @@ $conpad : 1.5625vw;
 /* #Forms & Input fields
 ================================================== */
 
+@mixin input{
+    border: none;
+    padding: 0.5em;
+    text-indent: 0.2em;
+    @include body;
+}
+
+.input{
+    @include input;
+}
+
 @mixin input_field_default {
     border: none;
     display: block;
@@ -1858,4 +1870,21 @@ body[data-theme='light'] {
 
 .relative{
     position: relative;
+}
+
+@mixin title_tag($textColour, $dotColour) {
+    @include h-five;
+    text-transform: uppercase;
+    color: $textColour;
+    margin-bottom: $px15;
+    &:before{
+        height: 0.5rem;
+        width: 0.5rem;
+        background-color: white;
+        content: '';
+        border-radius: 0.75rem;
+        display: inline-block;
+        margin-right: 0.6rem;
+        background-color:$dotColour;
+    } 
 }

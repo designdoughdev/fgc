@@ -1,4 +1,4 @@
-@use '../abstracts/mixins' as *;
+// @use '../abstracts/mixins' as *;
 @use '../abstracts/colours' as *;
 @use '../utils/grid' as *;
 
@@ -398,22 +398,7 @@ $para : 15;
 
 }
 
-@mixin title_tag($textColour, $dotColour) {
-    @include h-five;
-    text-transform: uppercase;
-    color: $textColour;
-    margin-bottom: $px15;
-    &:before{
-        height: 0.5rem;
-        width: 0.5rem;
-        background-color: white;
-        content: '';
-        border-radius: 0.75rem;
-        display: inline-block;
-        margin-right: 0.6rem;
-        background-color:$dotColour;
-    } 
-}
+
 
 
 
@@ -510,9 +495,6 @@ textarea{
 	display: block;
 }
 
-input[type=submit]{
-	@include buttondefault;
-}
 
 .bold {
   font-weight:700;

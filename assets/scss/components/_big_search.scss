@@ -1,0 +1,29 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
+
+section.section_big_search{
+
+    @include sections_padding_large;
+
+
+    .search-wrapper{
+        padding: 4vw 5vw;
+        background-color: $lighterSkyBlue;
+
+        .title-tag{
+            @include title_tag($darkNavy, $cobaltBlue);
+            margin-bottom: 4em;
+
+        }
+
+        .search-box{
+            display: flex;
+
+            input{
+                
+            }
+        }
+    }
+}
