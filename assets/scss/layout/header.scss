@@ -1,5 +1,7 @@
 @use '../abstracts/colours' as *;
 @use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
 
 // header{
 //     // background-color: $offwhite;
@@ -82,82 +84,394 @@
 
 header{
 
-    .pre-header{
-        background-color: $darkNavy;
-        padding: 0 1rem;
-        
 
-        .pre-header-right{
-            margin-left: auto;
-            width: fit-content;
-            color: white;
-            display: flex;
-            gap: 1rem;
+    .header-bar{
+        position: relative;
+        z-index: 99;
 
-            .search-container{
+        .pre-header{
+            background-color: $darkNavy;
+            padding: 0.2rem 1rem;
+            
+    
+            .pre-header-right{
+                margin-left: auto;
+                width: fit-content;
+                color: white;
                 display: flex;
-                gap: 0.25rem;
-
-                img.search-icon{
-                    width: 12px;
-                    height: auto;
-                }
-
-                input{
-                    background-color: $darkNavy;
-                    border: none;
-                    width: 60px;
-                    overflow-x: scroll;
-
-                    &::placeholder{
-                        color: white;
+                gap: 1rem;
+    
+                .search-container{
+                    display: flex;
+                    gap: 0.25rem;
+    
+                    img.search-icon{
+                        width: 12px;
+                        height: auto;
+                    }
+    
+                    input{
+                        background-color: $darkNavy;
+                        border: none;
+                        width: 60px;
+                        overflow-x: scroll;
+    
+                        &::placeholder{
+                            color: white;
+                        }
                     }
                 }
             }
         }
-    }
+    
+        .main-header{
 
-    .main-header{
-        padding: 1rem 0;
-        display: flex;
-        justify-content: space-between;
-        .main-header-left{
-            img.header-logo{
-                max-width: 173px;
-                height: auto;
-            }
-        }
-        .main-header-centre{
+            .main-header-content{
 
-            button.menu-btn{
-                @include btn-menu;
-            }
+                padding: 1rem 0 0 0;
+                display: flex;
+                justify-content: space-between;
 
-
-
-        }
-        .main-header-right{
-
-            .hamburger-icon-container{
-
-                width: 43px;
-                height: 43px;
-
-                button.hamburger-btn{
-                    @include buttonsimple;
-                    background-color: $mintGreen;
+                .main-header-left, .main-header-centre, .main-header-right{
                     display: flex;
-                    align-content: center;
-                    justify-content: center;
-
-                    .hamburger-icon{
-                        width: 28px;
+                    flex: 30vw 1 0;
+                    align-items: center;
+                    padding-bottom: 1rem;
+                }
+                .main-header-left{
+                    display: flex;
+                    flex: 30vw 1 0;
+                    align-items: center;
+                    img.header-logo{
+                        max-width: 173px;
                         height: auto;
                     }
                 }
+                .main-header-centre{
+
+                    display: none;
+                    justify-content: center;
+                    gap: 0.3rem;
+
+                    &{
+                        @include respond-to(lg){
+                            display: flex;
+                            flex: 30vw 1 0;
+                            align-items: center;
+    
+                        }
+                    }
+        
+
+        
+                    button.btn-menu{
+                        @include btn-menu;
+                    }
+        
+        
+        
+                }
+                .main-header-right{
+        
+                    display: flex;
+                    flex: 30vw 1 0;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    .right-links-container{
+
+                        display:  none;
+
+                        @include respond-to(lg){
+                            display: flex;
+                        }
+
+                        a{
+                            @include body;
+                            font-weight: bold;
+                        }
+
+                        a:not(:last-child){
+                            border-right: 1px solid black;
+                            padding-right: 0.3rem;
+                        }
+
+                        a:not(:first-child){
+                            padding-left: 0.3rem;
+                        }
+
+                    }
+
+
+        
+                    .hamburger-icon-container{
+        
+                        width: 43px;
+                        height: 43px;
+
+                        @include respond-to(lg){
+                            display: none;
+                        }
+        
+                        button.hamburger-btn{
+                            @include buttonsimple;
+                            background-color: $mintGreen;
+                            display: flex;
+                            align-content: center;
+                            justify-content: center;
+                            
+        
+                            .hamburger-icon{
+                                width: 28px;
+                                height: auto;
+                            }
+                        }
+                    }
+        
+                }
+
+            }
+
+    
+
+        }
+
+    }
+
+
+    //---- Action Nav ----/
+
+    nav.action-nav{
+        position: relative;
+        display: none;
+        @include sections_padding;
+        @include shorttransition;
+
+        img.vertical-bars{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: auto;
+            opacity: 0.5;
+        }
+
+        .menu-grid{
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+
+            .col:not(:last-child){
+                border-right: 2px solid $grey;
+            }
+
+            .col{
+                padding: 0 1rem;
+
+                a.parent-page-link{
+                    @include h-four-3;
+                }
+
+                ul{
+                    margin-top: 0.8rem;
+                    li{
+                        list-style-type: none;
+                        margin-bottom: 0.5rem;
+                        a{
+                            @include body;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.show{
+            display: block;
+        }
+
+    }
+
+    //---- Mobile Nav -----/
+    .mobile-nav{
+        position: absolute;
+        background-color: white;
+        top: 0;
+        right: 0;
+        width: 384px;
+        height: 100%;
+        padding: 2rem;
+    } 
+
+        /* Slide-in transition */
+    .slide-in {
+        transform: translateX(0);
+    }
+    .slide-in-start {
+        transform: translateX(100%);
+    }
+    .slide-in-end {
+        transform: translateX(0);
+    }
+
+    /* Slide-out transition */
+    .slide-out {
+        transform: translateX(100%);
+    }
+    .slide-out-start {
+        transform: translateX(0);
+    }
+    .slide-out-end {
+        transform: translateX(100%);
+    }
+
+    /* Optional styling for nav content */
+    .nav-content {
+        padding: 20px;
+    }
+    .close-btn {
+        font-size: 24px;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+
+    //------ Hero Section ---------//
+
+    .hero-vid-container{
+
+        position: relative;
+        width: 100%;         /* Set width as needed */
+        height: 80vh;       /* Set height as needed */
+        // overflow: hidden;
+
+
+
+    }
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+    }
+
+    #hero-overlay{
+        position: absolute;
+        height: 106%;
+        width: 100%;
+        top: 0;
+
+        .hero-grid{
+            display: flex;
+            height: 100%;
+            align-items: flex-end;
+            
+
+            &{
+                @include respond-to(md){
+                    @include two_columns; 
+                    align-items: end;
+                 }
+    
+            }
+    
+            .hero-text-container{
+    
+                padding: 3.5vw 4.5vw 3vw 4.5vw;
+    
+                .title-tag{
+                    @include title_tag(white, $yellow);
+                    margin-bottom: 5em;
+    
+                }
+    
+                .heading{
+                    @include h-one;
+                    color: white;
+                    margin-bottom: 0.8em;
+                }
+     
+    
+            }
+
+            .col-right{
+                display: none;
+
+                &{
+                    @include respond-to(lg){
+                        display: flex;
+
+                    }
+                }
+
+                a{
+                    margin-left: 35%;
+                    
+
+                    .hero-video-link-container{
+                        background-color: $lighterSkyBlue;
+                        display: grid;
+                        grid-template-columns: 1fr 1.2fr;
+                        gap: 1.5rem;
+                        padding: 1.5rem;
+                        
+                        margin-bottom: 1rem;
+             
+                            .text-half{
+
+                                display: grid;
+                                
+
+                                .text{
+                                    @include h-five;
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex-grow: 1;
+    
+         
+                                 }
+    
+                                .play-btn{
+                                    padding: 0.4rem 0.8rem;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    // gap: 0.5rem;
+                                    background-color: white;
+                                    flex-grow: 1;
+                                    gap: 0.3rem;
+                                    align-self: end;
+    
+                                    
+                                    
+                                    @include body;
+        
+                                    .play-icon{
+                                        height: 13px;
+                                        width: 18px;
+                                    }
+                                }
+
+                            }
+
+                    }
+    
+
+                }
+
+                
+
             }
 
         }
+        
+
     }
+
+
 }
 

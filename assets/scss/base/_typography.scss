@@ -36,23 +36,29 @@ $hone : 60;
 	letter-spacing: -0.03em;
 	color: $darkNavy;
 	-webkit-font-smoothing: antialiased;
-	@include respond-to(md) {
-	    font-size: 0.9em;
+	@include respond-to('md') {
+	    font-size: $hone * 0.6 + px;
+	    line-height: $hone * 0.8 + $lineheight + px;
 	}
-	@include respond-to(lg) {
-	    font-size: 0.9em;
+	@include respond-to('lg') {
+	    font-size: $hone * 0.8 + px;
+	    line-height: $hone * 0.8 + $lineheight + px;
 	}
-	@include respond-to(xl) {
-	    font-size: 1em;
+	@include respond-to('xl') {
+	    font-size: $hone + px;
+		line-height: $hone * 1 + $lineheight + px;
 	}
 	@include respond-to(tablet) {
-	    font-size: 0.9em;
+	    font-size: $hone * 0.6 + px;
+	    line-height: $hone * 0.7 + $lineheight + px;
 	}
 	@include respond-to(mobile) {
-		font-size: 0.8em;
+		font-size: $hone * 0.6 + px;
+	    line-height: $hone * 0.7 + $lineheight + px;
 	}
 	@include respond-to(sm) {
-		font-size: 0.9em;
+		font-size: $hone * 0.6 + px;
+	    line-height: $hone * 0.7 + $lineheight + px;
 	}	
 }
 
@@ -61,7 +67,7 @@ $hone : 60;
 }
 
 // h2: used for headings in all flexes underneath the page header, which uses h1
-$htwo : 60;
+$htwo : 47;
 @mixin h-two {
 	font-family: $primary-font;
     font-size: $htwo + px;
@@ -71,23 +77,33 @@ $htwo : 60;
 	color: $darkNavy;
 	-webkit-font-smoothing: antialiased;
 	@include respond-to(md) {
-	    font-size: 0.9em;
+		letter-spacing: (-3 * 0.6) + px;
+	    font-size: $htwo * 0.6 + px;
+		line-height: $htwo + ($lineheight * 1.5) + px;
 	}
 	@include respond-to(lg) {
-	    font-size: 0.9em;
+		letter-spacing: (-3 * 0.9) + px;
+	    font-size: $htwo * 0.9 + px;
+		line-height: $htwo + ($lineheight * 1.5) + px;
 	}
 	@include respond-to(xl) {
-	    font-size: 1em;
+		letter-spacing: -3px;
+	    font-size: $htwo + px;
 	}
 	@include respond-to(tablet) {
-	    font-size: 0.9em;
+	    font-size: $htwo * 0.6 + px;
+		line-height: $htwo + ($lineheight * 1.3) + px;
 	}
 	@include respond-to(mobile) {
-		font-size: 0.8em;
+	    font-size: $htwo * 0.6 + px;
+		letter-spacing: (-3 * 0.4) + px;
+		line-height: $htwo + ($lineheight * 1.2) + px;
 	}
 	@include respond-to(sm) {
-		font-size: 0.9em;
-	}	
+	    font-size: $htwo * 0.6 + px;
+		letter-spacing: (-3 * 0.4) + px;
+		line-height: $htwo + ($lineheight * 1.2) + px;
+	}
 }
 
 .h2, .large-header {
@@ -95,7 +111,7 @@ $htwo : 60;
 }
 
 // h3: used for subheadings within flexes, after an h2
-$hthree : 47;
+$hthree : 38;
 @mixin h-three{
 	font-family: $primary-font;
     font-size: $hthree + px;
@@ -105,22 +121,33 @@ $hthree : 47;
 	color: $darkNavy;
 	-webkit-font-smoothing: antialiased;
 	@include respond-to(md) {
-	    font-size: 0.9em;
+		letter-spacing: (-3 * 0.8) + px;
+	    font-size: $hthree * 0.8 + px;
+		line-height: $hthree + ($lineheight * 1.5) + px;
 	}
 	@include respond-to(lg) {
-	    font-size: 0.9em;
+		letter-spacing: (-3 * 0.9) + px;
+	    font-size: $hthree * 0.9 + px;
+		line-height: $hthree + ($lineheight * 1.5) + px;
 	}
 	@include respond-to(xl) {
-	    font-size: 1em;
+		letter-spacing: -3px;
+	    font-size: $hthree + px;
+		line-height: $hthree + ($lineheight * 1.5) + px;
 	}
 	@include respond-to(tablet) {
-	    font-size: 0.9em;
+		font-size: $hthree * 0.8 + px;
+		letter-spacing: (-3 * 0.8) + px;
 	}
 	@include respond-to(mobile) {
-		font-size: 0.8em;
+	    font-size: $hthree * 0.7 + px;
+		line-height: $hthree + ($lineheight * 0.8) + px;
+		letter-spacing: (-3 * 0.6) + px;
 	}
 	@include respond-to(sm) {
-		font-size: 0.9em;
+	    font-size: $hthree * 0.7 + px;
+		letter-spacing: (-3 * 0.6) + px;
+		line-height: $hthree + ($lineheight * 0.8) + px;
 	}	
 }
 
@@ -139,27 +166,114 @@ $hfour : 28;
 	color: $darkNavy;
 	-webkit-font-smoothing: antialiased;
 	@include respond-to(md) {
-	    font-size: 0.9em;
+	    font-size: $hfour * 0.75 + px;
+		letter-spacing: (-1 * 0.75) + px;
 	}
 	@include respond-to(lg) {
-	    font-size: 0.9em;
+	    font-size: $hfour * 0.9 + px;
+	    // line-height: $hfour * 0.9 + $lineheight + px;
+		letter-spacing: (-1 * 0.8) + px;
 	}
 	@include respond-to(xl) {
-	    font-size: 1em;
+	    font-size: $hfour + px;
 	}
 	@include respond-to(tablet) {
-	    font-size: 0.9em;
+	    font-size: $hfour * 0.8 + px;
+		letter-spacing: (-1 * 0.6) + px;
 	}
 	@include respond-to(mobile) {
-		font-size: 0.8em;
+	    font-size: $hfour * 0.6 + px;
+		letter-spacing: (-1 * 0.4) + px;
 	}
 	@include respond-to(sm) {
-		font-size: 0.9em;
+	    font-size: $hfour * 0.6 + px;
+		letter-spacing: (-1 * 0.4) + px;
 	}	
 }
 
 .h4 {
 	@include h-four;
+}
+
+
+// h4 v2
+$hfour2 : 24;
+@mixin h-four-2{
+	font-family: $primary-font;
+    font-size: $hfour2 + px;
+	line-height: 1.4em;
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	color: $darkNavy;
+	-webkit-font-smoothing: antialiased;
+	@include respond-to(md) {
+	    font-size: $hfour2 * 0.75 + px;
+		letter-spacing: (-1 * 0.75) + px;
+	}
+	@include respond-to(lg) {
+	    font-size: $hfour2 * 0.9 + px;
+	    // line-height: $hfour * 0.9 + $lineheight + px;
+		letter-spacing: (-1 * 0.8) + px;
+	}
+	@include respond-to(xl) {
+	    font-size: $hfour2 + px;
+	}
+	@include respond-to(tablet) {
+	    font-size: $hfour2 * 0.8 + px;
+		letter-spacing: (-1 * 0.6) + px;
+	}
+	@include respond-to(mobile) {
+	    font-size: $hfour2 * 0.6 + px;
+		letter-spacing: (-1 * 0.4) + px;
+	}
+	@include respond-to(sm) {
+	    font-size: $hfour2 * 0.6 + px;
+		letter-spacing: (-1 * 0.4) + px;
+	}	
+}
+
+.h4-2 {
+	@include h-four-2;
+}
+
+// h4 v2
+$hfour3 : 22;
+@mixin h-four-3{
+	font-family: $primary-font;
+    font-size: $hfour3 + px;
+	line-height: 1.4em;
+	font-weight: 600;
+	letter-spacing: -0.03em;
+	color: $darkNavy;
+	-webkit-font-smoothing: antialiased;
+	@include respond-to(md) {
+	    font-size: $hfour3 * 0.75 + px;
+		letter-spacing: (-1 * 0.75) + px;
+	}
+	@include respond-to(lg) {
+	    font-size: $hfour3 * 0.9 + px;
+	    // line-height: $hfour * 0.9 + $lineheight + px;
+		letter-spacing: (-1 * 0.8) + px;
+	}
+	@include respond-to(xl) {
+	    font-size: $hfour3 + px;
+	}
+	@include respond-to(tablet) {
+	    font-size: $hfour3 * 0.8 + px;
+		letter-spacing: (-1 * 0.6) + px;
+	}
+	@include respond-to(mobile) {
+	    font-size: $hfour3 * 0.6 + px;
+		letter-spacing: (-1 * 0.4) + px;
+	}
+	@include respond-to(sm) {
+	    font-size: $hfour3 * 0.6 + px;
+		letter-spacing: (-1 * 0.4) + px;
+	}	
+}
+
+.h4-3 {
+	@include h-four-3;
 }
 
 
@@ -173,24 +287,25 @@ $hfive : 14;
 	font-weight: 300;
 	// letter-spacing: -0.03em;
 	color: $darkNavy;
+	text-transform: uppercase;
 	-webkit-font-smoothing: antialiased;
 	@include respond-to(md) {
-	    font-size: 0.9em;
+	    font-size: $hfive * 0.8 + px;
 	}
 	@include respond-to(lg) {
-	    font-size: 0.9em;
+	    font-size: $hfive * 0.9 + px;
 	}
 	@include respond-to(xl) {
-	    font-size: 1em;
+	    font-size: $hfive + px;
 	}
 	@include respond-to(tablet) {
-	    font-size: 0.9em;
+	    font-size: $hfive * 0.8 + px;
 	}
 	@include respond-to(mobile) {
-		font-size: 0.8em;
+	    font-size: $hfive * 0.8 + px;
 	}
 	@include respond-to(sm) {
-		font-size: 0.9em;
+	    font-size: $hfive * 0.8 + px;
 	}	
 }
 
@@ -211,22 +326,29 @@ $hsix : 11;
 	color: $darkNavy;
 	-webkit-font-smoothing: antialiased;
 	@include respond-to(md) {
-	    font-size: 0.9em;
+	    font-size: $hsix + px;
+		// line-height: $hsix + 6 + px;
 	}
 	@include respond-to(lg) {
-	    font-size: 0.9em;
+	    font-size: $hsix + px;
+    	// line-height: $hsix + 7 + px;
 	}
 	@include respond-to(xl) {
-	    font-size: 1em;
+	    font-size: $hsix + 2px;
 	}
 	@include respond-to(tablet) {
-	    font-size: 0.9em;
+	    font-size: $hsix + px;
+    	// line-height: $hsix + 6 + px;
 	}
 	@include respond-to(mobile) {
-		font-size: 0.8em;
+	    font-size: $hsix + px;
+		padding: 4px 10px 0px 10px;
+    	// line-height: $hsix + 5 + px;
 	}
 	@include respond-to(sm) {
-		font-size: 0.9em;
+	    font-size: $hsix + px;
+    	line-height: $hsix + px;
+		padding: 2px 10px;
 	}		
 }
 
@@ -268,6 +390,25 @@ $para : 15;
 	}
 }
 
+@mixin title_tag($textColour, $dotColour) {
+    @include h-five;
+    text-transform: uppercase;
+    color: $textColour;
+    margin-bottom: $px15;
+    &:before{
+        height: 0.5rem;
+        width: 0.5rem;
+        background-color: white;
+        content: '';
+        border-radius: 0.75rem;
+        display: inline-block;
+        margin-right: 0.6rem;
+        background-color:$dotColour;
+    } 
+}
+
+
+
 .link{
 	@include body;
 	font-size: 16;
@@ -275,6 +416,11 @@ $para : 15;
 
 .p, .plain-text {       
 	@include body;
+}
+
+.text-white{
+	color: white;
+
 }
 
 
@@ -326,7 +472,7 @@ ol li {
 }
 
 a {
-	color: grey;
+	
 	text-decoration: none;
 	cursor: pointer;
 }

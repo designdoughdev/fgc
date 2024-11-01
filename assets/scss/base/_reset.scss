@@ -93,12 +93,12 @@ textarea {
 
 audio,
 canvas,
-// video {
-//     display: inline-block;
-//     *display: inline;
-//     *zoom: 1;
-//     max-width: 100%;
-// }
+video {
+    display: inline-block;
+    // *display: inline;
+    // *zoom: 1;
+    max-width: 100%;
+}
 
 /**
  * Prevent modern browsers from displaying `audio` without controls.

@@ -120,7 +120,7 @@ $bigperpad: $px0 $v10;
 ================================================== */
 
 @mixin border_radius {
-    border-radius: 50px;
+    border-radius: 0.15rem;
     // overflow: hidden;
 }
 
@@ -374,13 +374,13 @@ $conpad : 1.5625vw;
 // }
 
 @mixin container {
-    width: calc(100vw - #{$conpad * 4});
-    @include respond-to('lg') {
-        width: calc(100vw - #{$conpad * 2});
-    }
+    width: calc(100vw - #{$conpad * 8});
+    // @include respond-to('lg') {
+    //     width: calc(100vw - #{$conpad * 2});
+    // }
     position: relative;
     margin: $zeroauto;
-    max-width: 2000px;
+    // max-width: 2000px;
 }
 
 @mixin smallcontainer {
@@ -562,6 +562,7 @@ $conpad : 1.5625vw;
     &.remove_sticky {
         position: relative;
     }
+
     
     // two_columns layout
     .two_columns {
@@ -1197,19 +1198,64 @@ $conpad : 1.5625vw;
 
 // simplest button, just an underline with a hover
 
+
+
 @mixin buttonsimple {
-    text-decoration: underline;
+    border: none;
+    width: fit-content;
+    cursor: pointer;
+    text-decoration: none;
+
     &:hover {
         text-decoration: none;
     }
 }
+
 .btn_simple {
     @include buttonsimple;
 }
 
-@mixin btn-menu{
-    padding: 0.6em 1.2em;
+@mixin btn{
+    font-size: 1rem;
+    color: #112343;
+    @include buttonsimple;
+    @include border_radius;
 
+
+    padding: 0.3em 0.3em 0.3em 1em;
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2em;
+    margin-right: 0.2em;
+    
+    &:after{
+        content: "";
+        display: inline-block; 
+        background-image: url('/assets/images/svg/arrow-right.svg'); 
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-color: white;
+        height: 11px;
+        width: 10px;
+        
+
+        @include border_radius;
+        border: 0.4em solid white;
+       
+    }
+}
+
+.btn{
+    @include btn;
+}
+
+@mixin btn-menu{
+    @include border_radius;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0.44em 1.38em;
+    cursor: pointer;
 }
 
 // standard fade/border hover button for common <a> tags
@@ -1827,4 +1873,8 @@ body[data-theme='light'] {
     a.button{
         @include buttonsecond;
     }
+}
+
+.relative{
+    position: relative;
 }

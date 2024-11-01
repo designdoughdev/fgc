@@ -468,3 +468,12 @@ iframe{
 // }
 
 // 	}
+
+
+// grid
+
+@mixin two_columns{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}

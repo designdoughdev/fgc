@@ -1,0 +1,48 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
+
+footer{
+    background-color: $darkNavy;
+    padding: 5rem 0;
+    
+    .footer-content{
+
+        .footer-top{
+
+            padding: 8rem 0;
+
+            &{
+                @include respond-to(md){
+                    @include two_columns; 
+                 }
+
+            }
+
+            color: white;
+            
+            .footer-top-left{
+
+                .top-left-content{
+                    margin-right: 17vw;
+                }
+
+                .title-tag{
+                    @include title_tag(white, $skyBlue)
+                }
+
+                .heading{
+                    @include h-three;
+                    color: white;
+                }
+
+
+            }
+        }
+
+        .footer-bottom{
+            border-top: 0.25px solid white;
+        }
+    }
+}
