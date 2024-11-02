@@ -1,0 +1,80 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
+
+
+section.section_images{
+
+    @include sections_padding;
+
+    .section-wrapper.splide.images-carousel{
+
+        /*------------------------ Default/Mobile Styles -------------------------------*/
+        
+        background-color: $lighterSkyBlue;
+        padding: 5vw 0 7vw 0;
+
+        .text-container{
+
+            padding: 0 7vw;
+            margin-bottom: 4vw;
+
+
+            .title-tag{
+                @include title_tag($darkNavy, $cobaltBlue);
+                margin-bottom: 3em;
+    
+            }
+
+            .button-container{
+                display: none;
+            }
+        }
+
+        .splide.images-carousel{
+
+            padding-bottom: 4vw;
+        }
+
+        
+        /*------------------------ Desktop Styles -------------------------------*/
+
+        &{
+            @include respond-to('md'){
+
+                padding-bottom: 0;
+
+                div.text-container{
+
+                    display: grid;
+                    grid-template-columns: 3fr 1fr;
+                    grid-template-rows: max-content;
+                    column-gap: 9vw;
+
+                    .heading{
+                        grid-column: 1;
+                        grid-row: 2;
+
+                    }
+
+                    .button-container{
+                        display: block;
+                        grid-column: 2;
+                        grid-row: 2;
+                        align-self: end;
+                        justify-self: end;
+                    }
+
+                }
+
+                
+
+            }
+        }
+    }
+
+
+
+
+}
