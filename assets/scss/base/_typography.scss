@@ -302,10 +302,10 @@ $hfive : 14;
 	    font-size: $hfive * 0.8 + px;
 	}
 	@include respond-to(mobile) {
-	    font-size: $hfive * 0.8 + px;
+	    font-size: $hfive * 0.7 + px;
 	}
 	@include respond-to(sm) {
-	    font-size: $hfive * 0.8 + px;
+	    font-size: $hfive * 0.7 + px;
 	}	
 }
 

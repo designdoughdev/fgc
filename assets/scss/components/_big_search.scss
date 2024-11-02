@@ -6,24 +6,142 @@
 section.section_big_search{
 
     @include sections_padding_large;
+    position: relative;
 
 
     .search-wrapper{
+        position: relative;
         padding: 4vw 5vw;
+        
         background-color: $lighterSkyBlue;
 
-        .title-tag{
-            @include title_tag($darkNavy, $cobaltBlue);
-            margin-bottom: 4em;
-
+        .triangle{
+            position: absolute;
+            top: -4.8vw;
+            left: 13vw;
+            width: 7.5vw;
+            height: 6.725vw;
+            background-color: $lighterSkyBlue;
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%); /* Creates a triangle */
         }
 
-        .search-box{
-            display: flex;
+        div.search-flex-content{
 
-            input{
-                
+            &{
+                @include respond-to(md){
+                    padding: 0 4vw;
+                    border-left: 1px solid $cobaltBlue;
+                    border-right: 1px solid $cobaltBlue;
+                }
             }
+
+            .heading{
+                margin-bottom: 1.2em;
+            }
+
+            .title-tag{
+                @include title_tag($darkNavy, $cobaltBlue);
+                margin-bottom: 4em;
+    
+            }
+    
+            form.search-form{
+
+                display: block;
+    
+                &{
+                    @include respond-to(md){
+                        display: grid;
+                        grid-template-columns: 2fr 1fr;
+                        grid-template-rows: max-content;
+                        column-gap: 0.5rem;
+                        row-gap: 0;
+                     }
+    
+                }
+    
+                .search-box{
+                    display: flex;
+                    gap: 0.2rem;
+        
+                    input{
+                        flex-grow: 1
+                        
+                    }
+
+
+                }
+
+                .search-box{
+                    grid-column: 1; 
+                    grid-row: 2;
+                    align-self: stretch; 
+                    button{
+                        cursor: pointer;
+                        border: none;
+                        @include border-radius;
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+                        
+
+
+                        .search-text{
+                            display: none;
+                        }
+
+                        &{
+                            @include respond-to(md){
+
+                                aspect-ratio: auto;
+                                @include btn;
+    
+                                .search-text{
+                                    display: block;
+                                }
+                                .search-icon{
+                                    display: none;
+                                }
+                             }
+
+                        }
+
+                        
+                    }
+                }
+
+
+
+                    label{
+                        @include h-five;
+                        display: block;
+                        margin: 1em 0 0.5em 0;
+                        grid-column: 2;
+                        grid-row: 1;
+                    }
+
+                    select{
+                        grid-column: 2;
+                        grid-row: 2; 
+
+                        padding-right: 1rem;
+                        width: 100%;
+
+                        
+                    }
+                    option{
+                        background-color: white;
+                        border: none;
+                    }
+           
+
+    
+            }
+    
+
         }
+
+
+
     }
 }

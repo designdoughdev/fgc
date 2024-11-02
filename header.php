@@ -13,7 +13,7 @@
     <div class="header-bar">
         <div class="pre-header">
             <div class="pre-header-right">
-                <p>ENG | CYM</p>
+                <p class="h5 text-white">ENG | CYM</p>
                 <?php get_template_part('components/includes/search-bar'); ?>
             </div>
         </div>

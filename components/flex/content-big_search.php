@@ -11,20 +11,42 @@
 <section class="section_big_search row-<?php echo $row; ?>">
     <div class="container">
 
-        <div class="search-wrapper">
-            <p class="title-tag">Resources</p>
-            <h3 class="heading h1">Looking for something specific?</h3>
-            <form class="search-form" action="">
-                <div class="search-box">
-                    <input type="text" placeholder="Search">
-                    <button class="btn cobalt text-white">Search</button>
-                </div>
-                <select name="category">
-                    <option value="volvo">News</option>
-                    <option value="saab">Press Releases</option>
-                </select>
 
-            </form>
+        <div class="search-wrapper">
+            <div class="triangle"></div>
+            <div class="search-flex-content">
+                <p class="title-tag">Resources</p>
+                <h3 class="heading h1">Looking for something specific?</h3>
+                <form class="search-form " action="">
+
+
+                    <div class="search-box ">
+                        <input class="input" type="text" placeholder="Search">
+                        <button class="cobalt">
+                            <img class="search-icon"
+                                src="<?php bloginfo('template_url'); ?>/assets/images/svg/search-icon.svg" alt="">
+                            <span class="search-text text-white">Search</span>
+                        </button>
+                    </div>
+
+
+
+
+                    <label>Category</label>
+                    <select class="input" name="category">
+                        <option value="volvo">News</option>
+                        <option value="saab">Press Releases</option>
+                    </select>
+
+
+
+
+
+
+                </form>
+
+            </div>
+
 
 
         </div>

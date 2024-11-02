@@ -278,7 +278,7 @@ body {
 
 @mixin sections_padding_large {
 
-    padding: calc($conpad * 6) 0;
+    padding: calc($conpad * 8) 0;
 }
 
 @mixin title_bar {
@@ -1183,10 +1183,12 @@ $conpad : 1.5625vw;
 
 
 @mixin buttonsimple {
+    @include body;
     border: none;
     width: fit-content;
     cursor: pointer;
     text-decoration: none;
+    color: #112343;
 
     &:hover {
         text-decoration: none;
@@ -1198,13 +1200,13 @@ $conpad : 1.5625vw;
 }
 
 @mixin btn{
-    font-size: 1rem;
-    color: #112343;
+    
+    
     @include buttonsimple;
     @include border_radius;
+    font-weight: 600;
 
-
-    padding: 0.3em 0.3em 0.3em 1em;
+    padding: 0.5em 0.3em 0.5em 1em;
     display: inline-flex;
     align-items: center;
     gap: 1.2em;
@@ -1529,7 +1531,9 @@ $conpad : 1.5625vw;
     border: none;
     padding: 0.5em;
     text-indent: 0.2em;
+    background-color: white;
     @include body;
+    @include border_radius;
 }
 
 .input{
