@@ -22,8 +22,8 @@
     <div class="splide images-carousel container section-wrapper" aria-label="Splide Basic HTML Example">
 
         <div class="text-container">
-            <p class="title-tag">Resources</p>
-            <h3 class="heading h1">Looking for something specific?</h3>
+            <p class="title-tag">In action</p>
+            <h3 class="heading h1">The moments that matter</h3>
             <div class="button-container">
                 <button class="splide__arrow custom-prev btn-prev" aria-label="Previous slide">
                     Previous
