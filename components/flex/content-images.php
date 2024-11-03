@@ -38,9 +38,15 @@
 
         <div class="splide__track">
             <ul class="splide__list">
-                <li class="splide__slide"><img src="https://picsum.photos/2000/1333" alt=""></li>
-                <li class="splide__slide"><img src="https://picsum.photos/2000/1333" alt=""></li>
-                <li class="splide__slide"><img src="https://picsum.photos/2000/1333" alt=""></li>
+                <li class="splide__slide relative"><img src="https://picsum.photos/2000/1333" alt="">
+                    <p class="caption h5 light-navy">Lorem ipsum dolor sit amet,</p>
+                </li>
+                <li class="splide__slide"><img src="https://picsum.photos/2000/1333" alt="">
+                    <p class="caption h5 light-mint">Lorem ipsum dolor sit amet,</p>
+                </li>
+                <li class="splide__slide"><img src="https://picsum.photos/2000/1333" alt="">
+                    <p class="caption h5 light-sky">Lorem ipsum dolor sit amet,</p>
+                </li>
             </ul>
         </div>
     </div>

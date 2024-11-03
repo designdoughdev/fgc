@@ -32,9 +32,20 @@ section.section_images{
             }
         }
 
-        .splide.images-carousel{
+        .splide__slide{
 
-            padding-bottom: 4vw;
+
+            position: relative;
+
+
+            p.caption{
+                position: absolute;
+                bottom: 1rem;
+                right: 1rem;
+                padding: 0.9em 0.85em;
+                width: 8em;
+            }
+
         }
 
         
@@ -43,7 +54,11 @@ section.section_images{
         &{
             @include respond-to('md'){
 
-                padding-bottom: 0;
+                
+                padding-bottom: 0!important;
+
+
+  
 
                 div.text-container{
 
