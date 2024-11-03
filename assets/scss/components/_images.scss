@@ -64,6 +64,8 @@ section.section_images{
                         grid-row: 2;
                         align-self: end;
                         justify-self: end;
+                        display: flex;
+                        align-items: flex-end;
                     }
 
                 }

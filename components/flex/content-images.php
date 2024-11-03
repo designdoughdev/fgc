@@ -25,10 +25,10 @@
             <p class="title-tag">Resources</p>
             <h3 class="heading h1">Looking for something specific?</h3>
             <div class="button-container">
-                <button class="splide__arrow custom-prev" aria-label="Previous slide">
+                <button class="splide__arrow custom-prev btn-prev" aria-label="Previous slide">
                     Previous
                 </button>
-                <button class="splide__arrow custom-next" aria-label="Next slide">
+                <button class="splide__arrow custom-next btn-next" aria-label="Next slide">
                     Next
                 </button>
             </div>

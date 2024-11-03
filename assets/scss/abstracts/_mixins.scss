@@ -1,4 +1,4 @@
-@use "colours";
+@use "colours" as *;
 @use '../utils/grid' as *;
 @use '../base/typography' as *;
 
@@ -1200,8 +1200,7 @@ $conpad : 1.5625vw;
 }
 
 @mixin btn{
-    
-    
+
     @include buttonsimple;
     @include border_radius;
     font-weight: 600;
@@ -1231,6 +1230,74 @@ $conpad : 1.5625vw;
 
 .btn{
     @include btn;
+}
+
+@mixin btn-gallery{
+    background-color: transparent;
+    border: 1px solid $darkNavy;
+    gap: 0.3rem
+}
+
+@mixin btn-prev{
+
+    @include buttonsimple;
+    @include border_radius;
+    @include btn-gallery;
+    font-weight: 600;
+    gap: 0.5em;
+
+    padding: 0.5em 0.4em 0.5em 0.4em;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 0.3em;
+    
+    &:before{
+        content: "";
+        display: inline-block; 
+        background-image: url('/assets/images/svg/arrow-straight-prev.svg'); 
+        background-size: contain; 
+        background-repeat: no-repeat;
+        height: 11px;
+        width: 10px;
+        margin-left: 0.4em;
+  
+    }
+}
+
+.btn-prev{
+    @include btn-prev;
+}
+
+@mixin btn-next{
+
+    @include buttonsimple;
+    @include border_radius;
+    @include btn-gallery;
+    font-weight: 600;
+
+    padding: 0.5em 0.3em 0.5em 1em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-right: 0.3em;
+    
+    &:after{
+        content: "";
+        display: inline-block; 
+        background-image: url('/assets/images/svg/arrow-straight-next.svg'); 
+        background-size: contain; 
+        background-repeat: no-repeat;
+        height: 11px;
+        width: 10px;
+        margin-right: 0.4em;
+        
+
+       
+    }
+}
+
+.btn-next{
+    @include btn-next;
 }
 
 @mixin btn-menu{
