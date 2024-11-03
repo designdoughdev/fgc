@@ -48,9 +48,9 @@ section.section_images{
                 div.text-container{
 
                     display: grid;
-                    grid-template-columns: 3fr 1fr;
+                    grid-template-columns: 1fr 1fr;
                     grid-template-rows: max-content;
-                    column-gap: 9vw;
+                    column-gap: 25vw;
 
                     .heading{
                         grid-column: 1;
