@@ -5,16 +5,17 @@
 
 
 section.section_text_and_image{
-
+    // styles for all layouts
     @include sections_padding;
 
-    .section-wrapper{
+    /*----------------------------- Full Colour Layout -----------------------------------------------------------*/
+    .section-content.full-colour-layout{
 
         /*------------------------ Default/Mobile Styles -------------------------------*/
         
         background-color: $cobaltBlue;
         color: white;
-        padding: 7vw 2vw;
+        padding: 7vw 5vw;
 
         .vertical-bars{
             display: none;
@@ -35,20 +36,6 @@ section.section_text_and_image{
             }
         }
 
-
-    
-                
-
-            
-
-
-
-
-
-
-        
-
-        
         /*------------------------ Desktop Styles -------------------------------*/
 
         &{
@@ -70,6 +57,72 @@ section.section_text_and_image{
                     fill: $skyBlue;
                 }
             }
+
+                
+
+
+                
+
+            
+        }
+    }
+}
+
+    /*----------------------------- Rows Layout -----------------------------------------------------------*/
+    .section-content.rows-layout{
+
+        /*------------------------ Default/Mobile Styles -------------------------------*/
+        
+        
+        padding: 7vw 5vw;
+
+        .title-tag{
+            @include title_tag($darkNavy, $cobaltBlue);
+            margin-bottom: 2em;
+        }
+        .heading{
+            margin-bottom: 0.7em;
+        }
+        .body{
+            margin-bottom: 1.5em;
+        }
+
+        div.img-wrap{
+            margin-bottom: 0.3rem;
+        }
+
+        .btn{
+            margin-bottom: 1.5rem;
+        }
+
+
+        .vertical-bars{
+            // display: block;
+            // position: absolute;
+            // top: 0;
+            // right: 0;
+            
+            // object-fit: cover;
+            height: 4rem;
+            width: fit-content;
+            margin-left: auto;
+            display: block;
+            
+            path{
+                fill: $skyBlue;
+            }
+        }
+
+    
+
+        /*------------------------ Desktop Styles -------------------------------*/
+
+        &{
+            @include respond-to('md'){
+
+
+
+
 
                 
 

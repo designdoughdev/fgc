@@ -237,7 +237,7 @@ $hfive : 14;
 @mixin h-five{
 	font-family: $primary-font;
     font-size: $hfive + px;
-	line-height: 1.05em;
+	line-height: 1.8em;
 	font-weight: 300;
 	// letter-spacing: -0.03em;
 	color: $darkNavy;
@@ -338,6 +338,10 @@ $para : 15;
 	}	
 
 
+}
+
+.body{
+	@include body;
 }
 
 

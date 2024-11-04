@@ -10,25 +10,90 @@
 
 <section class="section_text_and_image row-<?php // echo $row; 
                                             ?>">
-    <div class="section-wrapper container relative">
-        <?php
-        // $row = get_sub_field('columns', $post->ID);
-        // if ($row < 1) {
-        //     $rows = 0;
-        // } else {
-        //     $rows = count($row);
-        // }
-        ?>
 
-        <div class="col">
-            <p class="title-tag">Public Bodies</p>
-            <h3 class="heading h2 text-white">Find out more information about your local public body.</h3>
-            <a href="/" class="link btn text-white sky-blue">Visit Page</a>
+    <?php
+    // $row = get_sub_field('columns', $post->ID);
+    // if ($row < 1) {
+    //     $rows = 0;
+    // } else {
+    //     $rows = count($row);
+    // }
+
+
+    ?>
+
+    <div class="section-wrapper container">
+
+        <!-------------------------- Layout 1 --------------------------------->
+        <div class="section-content full-colour-layout relative">
+
+
+
+            <div class="col">
+                <p class="title-tag">Public Bodies</p>
+                <h3 class="heading h2 text-white">Find out more information about your local public body.</h3>
+                <a href="/" class="link btn text-white sky-blue">Visit Page</a>
+            </div>
+
+            <?php
+            echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
+            ?>
+
         </div>
 
-        <?php
-        echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
-        ?>
+        <!---------------------------------------------------------------------->
+
+
+
+    </div>
+</section>
+
+<section class="section_text_and_image row-<?php // echo $row; 
+                                            ?>">
+
+    <?php
+    // $row = get_sub_field('columns', $post->ID);
+    // if ($row < 1) {
+    //     $rows = 0;
+    // } else {
+    //     $rows = count($row);
+    // }
+
+
+    ?>
+
+    <div class="section-wrapper container">
+
+        <!-------------------------- Layout 2 --------------------------------->
+        <div class="section-content rows-layout relative">
+
+
+
+
+            <p class="title-tag">Well-being of Future
+                Generations (Wales) Act 2015</p>
+            <h3 class="heading h2">Shaping a brighter tomorrow: Discover how the Well-being of Future Generations Act is
+                transforming Wales</h3>
+            <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et
+                dolore magna aliqua ut enim ad.</p>
+            <a href="/" class="link btn text-white sky-blue">Visit Page</a>
+
+            <div class="img-wrap">
+                <img src="https://picsum.photos/2000/1333" alt="">
+            </div>
+
+            <div class="vertical-lines-container">
+                <?php
+                echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars-small.svg');
+                ?>
+
+            </div>
+
+
+        </div>
+
+        <!---------------------------------------------------------------------->
 
 
 
