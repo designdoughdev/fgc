@@ -42,8 +42,8 @@ section.section_images{
                 position: absolute;
                 bottom: 1rem;
                 right: 1rem;
-                padding: 0.9em 0.85em;
                 width: 8em;
+                @include caption;
             }
 
         }

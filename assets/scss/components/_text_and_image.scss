@@ -73,16 +73,10 @@ section.section_text_and_image{
 
         /*------------------------ Default/Mobile Styles -------------------------------*/
         
+        @include mobile_text_col_spacing;
 
         .title-tag{
             @include title_tag($darkNavy, $cobaltBlue);
-            margin-bottom: 2em;
-        }
-        .heading{
-            margin-bottom: 0.7em;
-        }
-        .body{
-            margin-bottom: 1.5em;
         }
 
         div.img-wrap{
@@ -98,7 +92,6 @@ section.section_text_and_image{
         }
 
         .btn{
-            margin-bottom: 1.5rem;
             background-color: $cobaltBlue;
         }
 
@@ -197,6 +190,171 @@ section.section_text_and_image{
 
                     height: 100%;
                 }
+        
+        }
+    }
+}
+
+    /*-----------------------------  Half Image Layout -----------------------------------------------------------*/
+    .section-content.half-image-layout{
+
+        /*------------------------ Default/Mobile Styles -------------------------------*/
+        
+        .text-content{
+            padding: 1.5rem 1rem 0 1rem;
+            @include mobile_text_col_spacing;
+        
+            .title-tag{
+                @include title_tag($darkNavy, $cobaltBlue);
+            }
+
+        }
+
+
+        div.img-wrap{
+            margin-bottom: 0.3rem;
+            width: 100%;
+            height: fit-content;
+            position: relative;
+            z-index: 2;
+
+            img.landscape-img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            img.portrait-img{
+                display: none;
+            }
+        }
+
+
+
+        div.bars-container{
+
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+
+            .horizontal-bars-small{
+                // width: 100%;
+                // height: auto;
+                // object-fit: cover;     
+                position: absolute;
+                bottom: 0; 
+                right: 0; 
+                width: 100%;
+                height: auto; 
+
+            }
+
+            svg.vertical-bars{
+                display: none;
+            }
+
+            .caption{
+                margin: 2rem 1rem 1.8rem 1rem;
+                position: relative;
+                text-align: right;
+                width: 17em;
+            }
+
+        }  
+
+        /*------------------------ Desktop Styles -------------------------------*/
+
+        &{
+            @include respond-to('md'){
+
+                display: flex;
+                align-items: stretch;
+                height: 100%;
+
+
+                .text-content{
+                    flex: 1 0 45%;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    @include mobile_text_col_spacing;
+                    width: 45%;
+
+                    &>* {
+                        margin-left: 3rem;
+                        margin-right: 7vw;
+                    }
+                
+                    .title-tag{
+                        @include title_tag($darkNavy, $cobaltBlue);
+                        flex-grow: 1;
+                        margin-top: 4rem
+
+                    }
+                    .heading{
+                        @include h-one;
+                        margin-bottom: 2rem;
+                    }
+
+                    a.btn{
+                        margin-top: 2rem;
+                        margin-bottom: 2.5rem;
+                    }
+        
+                }
+        
+        
+                div.img-wrap{
+                    flex: 1 1 auto;
+                    margin-bottom: 0;
+                    height: 100%;
+                    position: relative;
+                    z-index: 2;
+                    display: flex;
+
+        
+                    img.landscape-img{
+                        display: none;
+                    }
+        
+                    img.portrait-img{
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+        
+        
+        
+                div.bars-container{
+                    // flex: 0 0 15%;
+                    position: relative;
+                    align-items: flex-end;
+                    flex: 1;
+
+                    .horizontal-bars-small{
+                        display: none;             
+                    }
+
+        
+                    svg.vertical-bars{
+                        display: block;
+                        position: absolute;
+                        bottom: 0; 
+                        right: 0; 
+                        width: auto;
+                        height: 100%; 
+                    }
+        
+                    .caption{
+
+                        text-align: right;
+                        margin-bottom: 2.5rem;
+                        
+                    }
+        
+                }  
         
         }
     }

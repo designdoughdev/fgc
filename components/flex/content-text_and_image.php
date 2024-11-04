@@ -103,3 +103,65 @@
 
     </div>
 </section>
+
+<section class="section_text_and_image row-<?php // echo $row; 
+                                            ?>">
+
+    <?php
+    // $row = get_sub_field('columns', $post->ID);
+    // if ($row < 1) {
+    //     $rows = 0;
+    // } else {
+    //     $rows = count($row);
+    // }
+
+
+    ?>
+
+    <div class="section-wrapper container">
+
+        <!-------------------------- Layout 3 --------------------------------->
+        <div class="section-content half-image-layout relative green-style">
+
+
+            <div class="text-content">
+                <p class="title-tag">Meet the commissioner</p>
+                <h3 class="heading h2">Creating a legacy for Future Generations</h3>
+                <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua ut enim ad.</p>
+                <a href="/" class="link btn text-white">About the Act</a>
+
+            </div>
+
+
+
+            <div class="img-wrap">
+                <img class="landscape-img" src="https://picsum.photos/2000/1333" alt="">
+                <img class="portrait-img" src="https://picsum.photos/1333/2000" alt="">
+            </div>
+
+            <div class="bars-container">
+
+                <?php
+                // horizontal bars
+                echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars-small.svg');
+                // vertical bars
+                echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
+                ?>
+
+                <div class="caption light-navy">
+                    <p class="bold">Derek Walker</p>
+                    <p>Future Generations Commissioner for Wales</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!---------------------------------------------------------------------->
+
+
+
+    </div>
+</section>
