@@ -12,7 +12,28 @@ section.section_text_and_image{
 
         /*------------------------ Default/Mobile Styles -------------------------------*/
         
-        padding: 5vw 0 7vw 0;
+        background-color: $cobaltBlue;
+        color: white;
+        padding: 7vw 2vw;
+
+        .vertical-bars{
+            display: none;
+        }
+
+
+        .col{
+            margin-right: 3vw;
+            .title-tag{
+                @include title_tag(white, $skyBlue);
+                margin-bottom: 4.5em;
+            }
+            .heading{
+                margin-bottom: 1.5em;
+            }
+            .body{
+                margin-bottom: 3em;
+            }
+        }
 
 
     
@@ -25,13 +46,30 @@ section.section_text_and_image{
 
 
 
-        }
+        
 
         
         /*------------------------ Desktop Styles -------------------------------*/
 
         &{
             @include respond-to('md'){
+
+            .col{
+                width: 50%;
+            }
+
+            .vertical-bars{
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: auto;
+                
+                path{
+                    fill: $skyBlue;
+                }
+            }
 
                 
 
@@ -41,6 +79,7 @@ section.section_text_and_image{
             
         }
     }
+}
 
 
 
