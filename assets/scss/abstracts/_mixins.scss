@@ -365,8 +365,7 @@ $conpad : 1.5625vw;
 
 @mixin smallcontainer {
     width: calc(100vw - #{$conpad * 8});
-    margin: 0 12vw;
-    position: relative;
+    margin: $zeroauto;
 
 }
 

@@ -6,8 +6,8 @@
 
 <?php get_template_part('components/flex/content-images'); ?>
 
-<?php get_template_part('components/flex/content-postcode_search'); ?>
-
 <?php get_template_part('components/flex/content-post_aggregator'); ?>
+
+<?php get_template_part('components/flex/content-postcode_search'); ?>
 
 <?php get_footer(); ?>
