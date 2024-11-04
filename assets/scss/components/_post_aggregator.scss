@@ -1,0 +1,145 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
+
+
+section.section_posts_agg{
+
+    @include sections_padding;
+
+    .section-wrapper.splide.post-feed-carousel{
+
+        /*------------------------ Default/Mobile Styles -------------------------------*/
+        
+        padding: 5vw 0 7vw 0;
+
+        .text-container{
+
+            padding: 0 7vw;
+            margin-bottom: 4vw;
+
+
+            .title-tag{
+                @include title_tag($darkNavy, $cobaltBlue);
+                margin-bottom: 3em;
+    
+            }
+
+            .button-container{
+                display: none;
+            }
+        }
+
+        .splide__slide{
+
+            padding: 0 1rem;
+            border-left: 1px solid $lightNavy;
+
+            a{
+                &:hover{
+                    text-decoration: none;
+                }
+
+                div.post-card{
+
+
+                    padding: 1.3rem;
+    
+                    .card-top{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 3rem;
+    
+                        .tag-container{
+                            .tag{
+                                display: inline-block;
+                                margin-right: 0.3em;
+                                padding: 0.3em 0.5em;
+                                @include border-radius;
+    
+                            }
+                            
+                        }
+
+                        div.hand-icon-container{
+                            width: 33px;
+                            height: 51px;
+                        }
+
+   
+                    }
+                    .card-body{
+                        margin-right: 3%;
+                        .post-info{
+                            margin: 3.5rem 0 3rem 0;
+                        }
+                    }
+                    .card-bottom{
+                        margin-top: 2rem;
+                        border-top: 1px solid $darkNavy;
+                        display: flex;
+                        justify-content: space-between;
+                        padding-top: 0.8rem;
+
+                        p{
+                            @include body;
+                            text-decoration: underline;
+                        }
+                    }
+    
+                }
+
+            }
+
+
+
+
+
+
+        }
+
+        
+        /*------------------------ Desktop Styles -------------------------------*/
+
+        &{
+            @include respond-to('md'){
+
+                
+                padding-bottom: 0!important;
+
+                div.text-container{
+
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: max-content;
+                    column-gap: 15vw;
+
+                    .heading{
+                        grid-column: 1;
+                        grid-row: 2;
+
+                    }
+
+                    .button-container{
+                        display: block;
+                        grid-column: 2;
+                        grid-row: 2;
+                        align-self: end;
+                        justify-self: end;
+                        display: flex;
+                        align-items: flex-end;
+                    }
+
+                }
+
+                
+
+            }
+        }
+    }
+
+
+
+
+}

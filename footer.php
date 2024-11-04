@@ -79,8 +79,8 @@
             <div class="footer-bottom-right">
                 <div class="col">
                     <div class="address">
-                        <p>Tramshed Tech
-                            Pendyris Street
+                        <p>Tramshed Tech<br>
+                            Pendyris Street<br>
                             Cardiff CF11 6BH</p>
                     </div>
                 </div>

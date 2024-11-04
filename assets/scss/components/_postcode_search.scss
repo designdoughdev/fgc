@@ -1,0 +1,85 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
+
+
+section.section_postcode_search{
+
+    @include sections_padding;
+    .postcode-search-wrapper{
+        
+
+        /*------------------------ Default/Mobile Styles -------------------------------*/
+
+        // max-height: 25rem;
+
+        .img-wrapper{
+            width: 100%;
+            aspect-ratio: 11/6;
+            
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .text-col{
+            padding: 0 6vw;
+            margin-top: 2.5rem;
+
+            .title-tag{
+                @include title_tag($darkNavy, $cobaltBlue);
+                margin-bottom: 2em;
+            }
+
+            .heading{
+                margin-bottom: 1em;
+            }
+
+            div.search-box{
+                display: flex;
+                gap: 0.2rem;
+                input{
+                    background-color: $grey;
+                    flex-grow: 1;
+                }
+            }
+        }
+
+
+        /*------------------------ Desktop Styles -------------------------------*/
+
+
+        &{
+            @include respond-to(md){
+
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: max-content;
+                gap: 4vw;
+                align-items: start;
+
+                div.text-col{
+                    margin-top: 0;
+                    align-self: stretch;
+                    display: grid;
+
+
+                    form.search-form{
+                        align-self: flex-end;
+                    }
+
+                }
+            }
+        }
+    }
+
+ 
+
+
+
+
+
+}

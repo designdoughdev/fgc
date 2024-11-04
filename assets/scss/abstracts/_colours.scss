@@ -3,15 +3,24 @@
 $darkNavy: #112343;
 $lightNavy: #D4DEF7;
 $cobaltBlue: #2A5AD5;
-$skyBlue: #46D1EE;
-$lightSkyBlue: #91EAFF;
-$lighterSkyBlue:#CDF5FF;
 
-$lightMintGreen: #D1F8EE;
-$mintGreen: #1ADDAC;
+$skyBlue: #46D1EE;
+$midSkyBlue: #91EAFF;
+$lightSkyBlue:#CDF5FF;
+
 $green: #A8E332;
-$lightYellow: #FEF6CC;
+$midGreen: #dcf4ad;
+$lightGreen: #eef9d6;
+
+
+$mintGreen: #1ADDAC;
+$midMintGreen: #a2f1de;
+$lightMintGreen: #D1F8EE;
+
 $yellow: #FBDB34;
+$midYellow: #fdf1ae;
+$lightYellow: #FEF6CC;
+
 $grey: #F3F4F6;
 
 // Colour utility classes
@@ -30,6 +39,10 @@ $grey: #F3F4F6;
 
 .sky-blue{
     background-color: $skyBlue;
+}
+
+.mid-sky{
+    background-color: $midSkyBlue;
 }
 
 .light-sky{

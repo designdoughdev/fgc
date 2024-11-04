@@ -19,7 +19,7 @@
 <section class="section_images row-<?php // echo $row; 
                                     ?>">
 
-    <div class="splide images-carousel container section-wrapper" aria-label="Splide Basic HTML Example">
+    <div class="splide images-carousel container section-wrapper" aria-label="Image Gallery">
 
         <div class="text-container">
             <p class="title-tag">In action</p>
@@ -45,7 +45,7 @@
                     <p class="caption h5 light-mint">Lorem ipsum dolor sit amet,</p>
                 </li>
                 <li class="splide__slide"><img src="https://picsum.photos/2000/1333" alt="">
-                    <p class="caption h5 light-sky">Lorem ipsum dolor sit amet,</p>
+                    <p class="caption h5 mid-sky">Lorem ipsum dolor sit amet,</p>
                 </li>
             </ul>
         </div>

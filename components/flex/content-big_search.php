@@ -30,17 +30,11 @@
                     </div>
 
 
-
-
                     <label>Category</label>
                     <select class="input" name="category">
                         <option value="volvo">News</option>
                         <option value="saab">Press Releases</option>
                     </select>
-
-
-
-
 
 
                 </form>

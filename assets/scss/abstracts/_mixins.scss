@@ -366,15 +366,9 @@ $conpad : 1.5625vw;
 }
 
 @mixin smallcontainer {
-    width: calc(100vw - #{$conpad * 4});
+    margin: 0 12vw;
     position: relative;
-    margin: $zeroauto;
-    max-width: 2000px;
-    &{
-        @include respond-to('lg') {
-            width: calc(100vw - #{$conpad * 24});
-        }
-    }
+
 }
 
 @mixin containerleft {
@@ -1188,7 +1182,7 @@ $conpad : 1.5625vw;
     width: fit-content;
     cursor: pointer;
     text-decoration: none;
-    color: #112343;
+    color: $darkNavy;
 
     &:hover {
         text-decoration: none;
@@ -1204,7 +1198,6 @@ $conpad : 1.5625vw;
     @include buttonsimple;
     @include border_radius;
     font-weight: 600;
-
     padding: 0.5em 0.3em 0.5em 1em;
     display: inline-flex;
     align-items: center;
@@ -1221,7 +1214,6 @@ $conpad : 1.5625vw;
         height: 11px;
         width: 10px;
         
-
         @include border_radius;
         border: 0.4em solid white;
        
@@ -1958,4 +1950,94 @@ body[data-theme='light'] {
         margin-right: 0.6rem;
         background-color:$dotColour;
     } 
+}
+
+/*------------------------ Card colour styles -------------------------------*/
+
+// green 
+
+@mixin postCardGreenStyle{
+    background-color: $lightGreen;
+                    
+    .tag{
+        background-color: $green;
+    }
+
+    div.hand-icon-container{
+
+        svg path{
+            fill: $green;
+        }
+    }
+}
+
+.post-card.green-style{
+    @include postCardGreenStyle;
+    
+}
+
+// yellow
+
+@mixin postCardYellowStyle{
+    background-color: $lightYellow;
+                    
+    .tag{
+        background-color: $yellow;
+    }
+
+    div.hand-icon-container{
+
+        svg path{
+            fill: $yellow;
+        }
+    }
+}
+
+.post-card.yellow-style{
+    @include postCardYellowStyle;
+    
+}
+
+// mint
+
+@mixin postCardMintStyle{
+    background-color: $lightMintGreen;
+                    
+    .tag{
+        background-color: $mintGreen;
+    }
+
+    div.hand-icon-container{
+
+        svg path{
+            fill: $mintGreen;
+        }
+    }
+}
+
+.post-card.mint-style{
+    @include postCardMintStyle;
+    
+}
+
+// blue
+
+@mixin postCardBlueStyle{
+    background-color: $lightSkyBlue;
+                    
+    .tag{
+        background-color: $skyBlue;
+    }
+
+    div.hand-icon-container{
+
+        svg path{
+            fill: $skyBlue;
+        }
+    }
+}
+
+.post-card.blue-style{
+    @include postCardBlueStyle;
+    
 }

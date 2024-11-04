@@ -35,3 +35,5 @@ function adams_wp_starter_theme_support()
 }
 
 add_action('after_setup_theme', 'adams_wp_starter_theme_support');
+
+// Custom Functions

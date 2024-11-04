@@ -13,7 +13,7 @@ section.section_big_search{
         position: relative;
         padding: 4vw 5vw;
         
-        background-color: $lighterSkyBlue;
+        background-color: $lightSkyBlue;
 
         .triangle{
             position: absolute;
@@ -21,7 +21,7 @@ section.section_big_search{
             left: 13vw;
             width: 7.5vw;
             height: 6.725vw;
-            background-color: $lighterSkyBlue;
+            background-color: $lightSkyBlue;
             clip-path: polygon(50% 0%, 100% 100%, 0% 100%); /* Creates a triangle */
         }
 

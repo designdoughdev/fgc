@@ -52,6 +52,50 @@ document.addEventListener('DOMContentLoaded', function () {
      });
    }
  });
+
+ // images gallery
+
+
+document.addEventListener('DOMContentLoaded', function () {
+   // Select all carousel elements with the class `images-carousel`
+   const carousels = document.querySelectorAll('.post-feed-carousel');
+ 
+   if (carousels) {
+     // Loop over each carousel and initialize Splide
+     carousels.forEach((carousel) => {
+       // Find custom arrows within the current carousel
+       const prevArrow = carousel.querySelector('.custom-prev');
+       const nextArrow = carousel.querySelector('.custom-next');
+ 
+       // Initialize Splide with default arrows disabled
+       const splide = new Splide(carousel, {
+         type: 'loop',
+         arrows: false,
+         updateOnMove: true,
+         perPage: 3,
+         padding: '7vw',
+         focus: 'center',
+         pagination: false,
+         breakpoints: {
+           767: {
+             gap: '6vw',
+             padding: '6vw',
+             perPage: 1,
+           },
+         },
+       }).mount();
+ 
+       // Add custom event listeners for the custom arrows
+       if (prevArrow) {
+         prevArrow.addEventListener('click', () => splide.go('<')); // Go to previous slide
+       }
+ 
+       if (nextArrow) {
+         nextArrow.addEventListener('click', () => splide.go('>')); // Go to next slide
+       }
+     });
+   }
+ });
  
  
   
