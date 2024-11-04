@@ -24,7 +24,7 @@
 
     <div class="section-wrapper container">
 
-        <!-------------------------- Layout 1 --------------------------------->
+        <!-------------------------- Layout Full Colour --------------------------------->
         <div class="section-content full-colour-layout relative">
 
 
@@ -64,7 +64,7 @@
 
     <div class="section-wrapper container">
 
-        <!-------------------------- Layout 2 --------------------------------->
+        <!-------------------------- Layout Rows --------------------------------->
         <div class="section-content rows-layout relative">
 
 
@@ -153,6 +153,57 @@
                     <p class="bold">Derek Walker</p>
                     <p>Future Generations Commissioner for Wales</p>
                 </div>
+
+            </div>
+
+
+        </div>
+
+        <!---------------------------------------------------------------------->
+
+
+
+    </div>
+</section>
+
+<section class="section_text_and_image row-<?php // echo $row; 
+                                            ?>">
+
+    <?php
+    // $row = get_sub_field('columns', $post->ID);
+    // if ($row < 1) {
+    //     $rows = 0;
+    // } else {
+    //     $rows = count($row);
+    // }
+
+
+    ?>
+
+    <div class="section-wrapper container">
+
+        <!-------------------------- Layout Full Image --------------------------------->
+        <div class="section-content full-image-layout relative yellow-style"
+            style="background-image: url('https://picsum.photos/2000/1333') ;">
+
+
+            <div class="text-content">
+                <p class="title-tag">Meet the commissioner</p>
+                <h3 class="heading h2">Creating a legacy for Future Generations</h3>
+                <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua ut enim ad.</p>
+                <a href="/" class="link btn text-white">About the Act</a>
+
+            </div>
+
+
+
+            <div class="bars-container">
+
+                <?php
+                // horizontal bars
+                echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars.svg');
+                ?>
 
             </div>
 

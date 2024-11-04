@@ -2002,6 +2002,13 @@ body[data-theme='light'] {
         background-color: $lightGreen;
     }
 
+    // full image layout
+    &.full-image-layout{
+        .text-content{
+            background-color: $lightGreen;
+        }
+    }
+
 }
 
 .green-style{
@@ -2032,6 +2039,13 @@ body[data-theme='light'] {
 
     .caption{
         background-color: $lightYellow;
+    }
+
+    // full image layout
+    &.full-image-layout{
+        .text-content{
+            background-color: $lightYellow;
+        }
     }
 }
 
@@ -2064,6 +2078,13 @@ body[data-theme='light'] {
     .caption{
         background-color: $lightMintGreen;
     }
+
+    // full image layout
+    &.full-image-layout{
+        .text-content{
+            background-color: $lightMintGreen;
+        }
+    }
 }
 
 .mint-style{
@@ -2094,6 +2115,13 @@ body[data-theme='light'] {
 
     .caption{
         background-color: $lightSkyBlue;
+    }
+
+    // full image layout
+    &.full-image-layout{
+        .text-content{
+            background-color: $lightSkyBlue;
+        }
     }
 }
 
