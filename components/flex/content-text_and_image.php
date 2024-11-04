@@ -77,15 +77,19 @@
             <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et
                 dolore magna aliqua ut enim ad.</p>
-            <a href="/" class="link btn text-white sky-blue">Visit Page</a>
+            <a href="/" class="link btn text-white">About the Act</a>
 
             <div class="img-wrap">
                 <img src="https://picsum.photos/2000/1333" alt="">
             </div>
 
-            <div class="vertical-lines-container">
+            <div class="vertical-bars-container">
+
                 <?php
+                // small version
                 echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars-small.svg');
+                // large version
+                echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
                 ?>
 
             </div>
