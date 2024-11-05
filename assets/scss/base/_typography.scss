@@ -6,23 +6,61 @@
 
 // font imports // 
 
-// @font-face {
-//     font-family: 'FT Sterling';
-//     src: url('assets/fonts/ft-sterling/FTSterling-Light.eot');
-//     src: url('assets/fonts/ft-sterling/FTSterling-Light.eot?#iefix') format('embedded-opentype'),
-//         url('assets/fonts/ft-sterling/FTSterling-Light.woff2') format('woff2'),
-//         url('assets/fonts/ft-sterling/FTSterling-Light.woff') format('woff'),
-//         url('assets/fonts/ft-sterling/FTSterling-Light.ttf') format('truetype'),
-//         url('assets/fonts/ft-sterling/FTSterling-Light.svg#FTSterling-Light') format('svg');
-//     font-weight: 200;
-//     font-style: normal;
-//     font-display: swap;
-// }
+@font-face {
+    font-family: 'Messina Sans';
+    src: url('/assets/fonts/MessinaSans-Light.otf') format('embedded-opentype');
+
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Messina Sans';
+    src: url('/assets/fonts/MessinaSans-Regular.otf') format('embedded-opentype');
+
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Messina Sans';
+    src: url('/assets/fonts/MessinaSans-SemiBold.otf') format('embedded-opentype');
+
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Messina Sans';
+    src: url('/assets/fonts/MessinaSans-SemiBold.otf') format('embedded-opentype');
+
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Messina Sans';
+    src: url('/assets/fonts/MessinaSans-BoldItalic.otf') format('embedded-opentype');
+
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Messina Sans';
+    src: url('/assets/fonts/MessinaSans-RegularItalic.otf') format('embedded-opentype');
+
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
 
 
 
 // global type variables
-$primary-font: 'FT Sterling', sans-serif;
+$primary-font: 'Messina Sans', sans-serif;
 $secondary-font: 'FT Sterling', sans-serif;
 
 // font hierachy
@@ -235,7 +273,7 @@ $hfour3 : 22;
 $hfive : 14;
 
 @mixin h-five{
-	font-family: $primary-font;
+	font-family: $secondary-font;
     font-size: $hfive + px;
 	line-height: 1.8em;
 	font-weight: 300;
