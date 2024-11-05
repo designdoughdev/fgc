@@ -72,7 +72,8 @@ section.section_text_and_image{
     .section-content.rows-layout{
 
         /*------------------------ Default/Mobile Styles -------------------------------*/
-        
+
+        background-color: white; // override colour style class names
         @include mobile_text_col_spacing;
 
         .title-tag{
@@ -112,9 +113,7 @@ section.section_text_and_image{
                 margin-left: auto;
                 display: block;
                 
-                path{
-                    fill: $skyBlue;
-                }
+
             }
 
         }
@@ -179,9 +178,123 @@ section.section_text_and_image{
                         
       
                         
-                        path{
-                            fill: $skyBlue;
-                        }
+                    }
+
+                }
+
+                div.img-wrap{
+
+                    height: 100%;
+                }
+        
+        }
+    }
+}
+
+    /*----------------------------- Big Image No Bg Layout -----------------------------------------------------------*/
+    .section-content.big-img-no-bg-layout{
+
+        /*------------------------ Default/Mobile Styles -------------------------------*/
+        
+        @include mobile_text_col_spacing;
+
+        background-color: white; // override colour style class names
+        .title-tag{
+            @include title_tag($darkNavy, $cobaltBlue);
+        }
+
+        div.img-wrap{
+            margin-bottom: 0.3rem;
+            width: 100%;
+            height: fit-content;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .btn{
+            background-color: $cobaltBlue;
+        }
+
+        .vertical-bars{
+            display: none;
+        }
+
+        div.vertical-bars-container{
+            .vertical-bars-small{
+                // display: block;
+                // position: absolute;
+                // top: 0;
+                // right: 0;
+                
+                // object-fit: cover;
+                height: 4rem;
+                width: fit-content;
+                margin-left: auto;
+                display: block;
+                
+
+            }
+
+        }
+
+
+    
+
+        /*------------------------ Desktop Styles -------------------------------*/
+
+        &{
+            @include respond-to('md'){
+
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: repeat(6, max-content);
+                gap: 0.5rem;
+                
+                
+
+                .text-content{
+                    grid-area: 1 / 9 / span 8 / span 4;
+
+                }
+
+                .title-tag{
+                    grid-area: 1 / 1 / span 1 / span 3;
+
+                }
+        
+                div.img-wrap{
+                    margin-bottom: 0;
+                    grid-area: 3 / 1 / span 9 / span 7;
+                    
+       
+                }
+        
+
+
+                div.vertical-bars-container{
+
+                    
+                    grid-area: 9 / 9 / span 3 / span 4;
+                    width: 100%;
+
+                    .vertical-bars-small{
+                        display: block;
+                        height: 100%;
+                        width: auto;
+                        margin-left: auto;
+                    }
+
+                    .vertical-bars{
+                        display: none;
+
+
+                        
+      
+                        
                     }
 
                 }
