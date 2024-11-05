@@ -51,16 +51,6 @@ section.section_posts_agg{
                         justify-content: space-between;
                         margin-bottom: 3rem;
     
-                        .tag-container{
-                            .tag{
-                                display: inline-block;
-                                margin-right: 0.3em;
-                                padding: 0.3em 0.5em;
-                                @include border-radius;
-    
-                            }
-                            
-                        }
 
                         div.hand-icon-container{
                             width: 33px;

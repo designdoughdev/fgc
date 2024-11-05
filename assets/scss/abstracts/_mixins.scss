@@ -1971,6 +1971,17 @@ body[data-theme='light'] {
     
 }
 
+@mixin tag{
+    display: inline-block;
+    margin-right: 0.3em;
+    padding: 0.3em 0.5em;
+    @include border-radius;
+}
+
+.tag{
+    @include tag;
+}
+
 .caption{
     @include caption;
 }
@@ -1999,6 +2010,15 @@ body[data-theme='light'] {
     }
 
     .caption{
+        background-color: $lightGreen;
+    }
+
+    // wayfinder-rows
+    .arrow-container{
+        background-color: $green;
+    }
+
+    .triangle{
         background-color: $lightGreen;
     }
 
@@ -2041,6 +2061,15 @@ body[data-theme='light'] {
         background-color: $lightYellow;
     }
 
+    // wayfinder-rows
+    .arrow-container{
+        background-color: $yellow;
+    }
+
+    .triangle{
+        background-color: $lightYellow;
+    }
+
     // full image layout
     &.full-image-layout{
         .text-content{
@@ -2076,6 +2105,15 @@ body[data-theme='light'] {
     }
 
     .caption{
+        background-color: $lightMintGreen;
+    }
+
+    // wayfinder-rows
+    .arrow-container{
+        background-color: $mintGreen;
+    }
+
+    .triangle{
         background-color: $lightMintGreen;
     }
 
@@ -2116,6 +2154,16 @@ body[data-theme='light'] {
     .caption{
         background-color: $lightSkyBlue;
     }
+
+    // wayfinder-rows
+    .arrow-container{
+        background-color: $skyBlue;
+    }
+
+    .triangle{
+        background-color: $lightSkyBlue;
+    }
+
 
     // full image layout
     &.full-image-layout{

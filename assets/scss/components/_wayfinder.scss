@@ -1,0 +1,155 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
+@use '../abstracts/variables' as *;
+
+section.section_wayfinder{
+    @include sections_padding;
+
+    .section-content{
+
+        /*------------------------ Default/Mobile Styles -------------------------------*/
+    
+        
+        .text-content{
+            height: fit-content;
+            @include mobile_text_col_spacing;
+
+            .title-tag{
+                @include title_tag($darkNavy, $cobaltBlue)
+            }
+
+        }
+
+
+        .wayfinder-container{
+
+            width: calc(100vw - 6vw);
+            margin-left: auto;
+
+            // loop through each wayfinder row and decrease padding each time
+
+            @for $i from 1 through 4 {
+                li:nth-child(#{$i}) {
+                  --index: #{4 - $i}; // Sets --index to decrease for each child
+                //   --index2: #{if($i > 1, $i - 1, 0)}; 
+                --index2: #{$i}; 
+                }
+              }
+              
+              li .arrow-content {
+
+                padding-right: calc(10vw * var(--index));
+              }
+
+              li{
+                @include h-one;
+                margin-bottom: .5em;
+                margin-left: calc(9vw * var(--index2));
+                @include longtransition;
+                
+              }
+              li:hover{
+                margin-left: 0;
+              }
+
+
+
+            a.wayfinder-link-wrap{
+
+               
+
+
+
+                &:hover{
+                    text-decoration: none;
+                }
+    
+                .wayfinder-row{
+                    padding: 1.3rem 2rem 1rem 2rem;
+
+                    .bar-container{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        height: 100%;
+                        width: auto;
+                        
+                        svg.vertical-bars-small{
+                            height: 100%;
+                            width: 233%;
+                        }
+                    }
+    
+
+                    .row-content{
+                        display: flex;
+                        justify-items: space-between;
+    
+                        .text-content{
+                            flex-grow: 1;
+    
+                            .heading{
+                                margin-top: 0.5em;
+                                margin-bottom: 0;
+                            }
+    
+                        }
+                        .arrow-content{
+                            align-self: stretch;
+                            align-content: center;
+    
+                            .arrow-container{
+                                @include border_radius;
+                                @include h-one;
+                                height: $squareWidth;
+                                width: $squareWidth;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                justify-self: flex-end;
+                                margin-left: .5em;
+       
+    
+    
+                                svg.arrow{
+                                    width:40%;
+                                    height: 40%;
+                                   path{
+                                    fill: $darkNavy;
+                                   }
+                                }
+
+                                .triangle{
+                                    @include h-one;
+                                    position: absolute;
+                                    top: $squareWidth;
+                                    left: 0;
+                                    height: calc($squareWidth * 0.85);
+                                    width: $squareWidth;
+                                    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+                                    z-index: 2;
+                                }
+                                
+        
+                            }
+    
+                        }
+    
+    
+                    }
+        
+    
+                }
+    
+            }
+
+        }
+
+
+
+
+
+    }
+}
