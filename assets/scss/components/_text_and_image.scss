@@ -13,7 +13,6 @@ section.section_text_and_image{
 
         /*------------------------ Default/Mobile Styles -------------------------------*/
         
-        background-color: $cobaltBlue;
         color: white;
         padding: 7vw 5vw;
 
@@ -25,7 +24,6 @@ section.section_text_and_image{
         .col{
             margin-right: 3vw;
             .title-tag{
-                @include title_tag(white, $skyBlue);
                 margin-bottom: 4.5em;
             }
             .heading{
@@ -53,9 +51,7 @@ section.section_text_and_image{
                 height: 100%;
                 width: auto;
                 
-                path{
-                    fill: $skyBlue;
-                }
+
             }
 
                 

@@ -2123,6 +2123,13 @@ body[data-theme='light'] {
             background-color: $lightSkyBlue;
         }
     }
+
+    &.full-colour-layout{
+        background-color: $cobaltBlue;
+        .title-tag{
+            @include title_tag(white, $skyBlue);
+        }
+    }
 }
 
 .blue-style{

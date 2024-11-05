@@ -6,6 +6,13 @@
 
 // font imports // 
 
+
+// secondary font
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+// primary font 
+
 @font-face {
     font-family: 'Messina Sans';
     src: url('/assets/fonts/MessinaSans-Light.otf') format('embedded-opentype');
@@ -61,7 +68,7 @@
 
 // global type variables
 $primary-font: 'Messina Sans', sans-serif;
-$secondary-font: 'FT Sterling', sans-serif;
+$secondary-font: "Chivo Mono", monospace;
 
 // font hierachy
 $hone : 60;

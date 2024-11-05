@@ -25,7 +25,7 @@
     <div class="section-wrapper container">
 
         <!-------------------------- Layout Full Colour --------------------------------->
-        <div class="section-content full-colour-layout relative">
+        <div class="section-content full-colour-layout relative blue-style">
 
 
 
