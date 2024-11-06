@@ -146,6 +146,7 @@ $layout = get_query_var('layout'); ?>
                                 <?php echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg'); ?>
 
                                 <div class="text-content">
+
                                     <div class="card-top">
                                         <div class="tag-container">
                                             <p class="tag h6">Explore</p>
