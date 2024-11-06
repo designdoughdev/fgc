@@ -687,8 +687,23 @@ const headerMenu = document.querySelector(".header-menu-btns");
 if (headerMenu) document.addEventListener("mouseover", (e)=>{
     const mainHeader = document.querySelector("main-header");
     const actionNav = document.querySelector(".action-nav");
+    // display menu block
     if (headerMenu.contains(e.target)) actionNav.classList.add("show");
+    // remove menu block
     if (!actionNav.contains(e.target) && !headerMenu.contains(e.target)) actionNav.classList.remove("show");
+    if (e.target.classList.contains("btn-menu")) {
+        const menuBtns = document.querySelectorAll(".btn-menu");
+        console.log(menuBtns);
+        menuBtns.forEach((i)=>{
+            if (i.value == e.target.value) {
+                const menuPanels = document.querySelectorAll(".menu-content");
+                menuPanels.forEach((j)=>{
+                    if (j.classList.contains(`${i.value}-content`)) j.classList.add("show");
+                    else j.classList.remove("show");
+                });
+            }
+        });
+    }
 });
 
 },{"alpinejs":"69hXP","@splidejs/splide":"5CJev","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"69hXP":[function(require,module,exports) {

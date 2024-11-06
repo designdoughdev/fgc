@@ -126,6 +126,7 @@ header{
         }
     
         .main-header{
+            z-index: 99;
 
             .main-header-content{
 
@@ -263,12 +264,13 @@ header{
             position: relative;
             z-index: 99;
             opacity: 0;
+            min-height: 15vw;
             background-color: white;
             // display: none;
             @include sections_padding;
             @include shorttransition;
     
-            img.vertical-bars{
+            .vertical-bars{
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -276,40 +278,80 @@ header{
                 width: auto;
                 opacity: 0.5;
             }
-    
-            .menu-grid{
-                display: grid;
-                grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-    
-                .col:not(:last-child){
-                    border-right: 2px solid $grey;
+
+            .menu-content{
+                position: absolute;
+                padding-top: 4rem;
+                height: calc(100% - 4rem);
+                top: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                @include easeintransition;
+
+                &.show{
+                    opacity: 1;
                 }
-    
-                .col{
-                    padding: 0 1rem;
 
 
-    
-                    a.parent-page-link{
-                        @include h-four-3;
-                        @include shorttransition;
-                        
-
-
+                .menu-grid{
+                    display: grid;
+                    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+        
+                    .col:not(:last-child){
+                        border-right: 2px solid $grey;
                     }
+        
+                    .col{
+                        padding: 0 1rem;
     
-                    ul{
-                        margin-top: 0.8rem;
-                        li{
-                            list-style-type: none;
-                            margin-bottom: 0.5rem;
-                            a{
-                                @include body;
+    
+        
+                        a.parent-page-link{
+                            @include h-four-3;
+                            @include shorttransition;
+                            
+    
+    
+                        }
+        
+                        ul{
+                            margin-top: 0.8rem;
+                            margin-bottom: 1.3rem;
+                            li{
+                                list-style-type: none;
+                                margin-bottom: 0.5rem;
+                                a{
+                                    @include body;
+                                }
                             }
                         }
                     }
                 }
+
+                // colour vertical bars svg on menu change
+
+                &.discover-content{
+                    svg path{
+                        fill: $mintGreen;
+                    }
+                }
+
+                &.explore-content{
+                    svg path{
+                        fill: $yellow;
+                    }
+                }
+
+                &.do-content{
+                    svg path{
+                        fill: $skyBlue;
+                    }
+                }
+
             }
+    
+
     
             &.show{
                 opacity: 1;
@@ -319,51 +361,6 @@ header{
 
     }
 
-
-
-    //---- Mobile Nav -----/
-    .mobile-nav{
-        position: absolute;
-        background-color: white;
-        top: 0;
-        right: 0;
-        width: 384px;
-        height: 100%;
-        padding: 2rem;
-    } 
-
-        /* Slide-in transition */
-    .slide-in {
-        transform: translateX(0);
-    }
-    .slide-in-start {
-        transform: translateX(100%);
-    }
-    .slide-in-end {
-        transform: translateX(0);
-    }
-
-    /* Slide-out transition */
-    .slide-out {
-        transform: translateX(100%);
-    }
-    .slide-out-start {
-        transform: translateX(0);
-    }
-    .slide-out-end {
-        transform: translateX(100%);
-    }
-
-    /* Optional styling for nav content */
-    .nav-content {
-        padding: 20px;
-    }
-    .close-btn {
-        font-size: 24px;
-        cursor: pointer;
-        background: none;
-        border: none;
-    }
 
 
     //------ Hero Section ---------//

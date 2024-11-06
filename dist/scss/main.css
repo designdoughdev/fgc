@@ -2622,12 +2622,19 @@ textarea {
 }
 
 section.section_big_search {
-  padding: 12.5vw 0;
+  padding: 7vw 0;
   position: relative;
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_big_search {
+    padding: 5vw 0;
+  }
 }
 
 section.section_big_search .search-wrapper {
   background-color: #cdf5ff;
+  margin-top: 7.5vw;
   padding: 4vw 5vw;
   position: relative;
 }
@@ -2897,10 +2904,10 @@ section.section_big_search .search-wrapper div.search-flex-content form.search-f
 }
 
 section.section_images {
-  padding: 8vw 0;
+  padding: 7vw 0;
 }
 
-@media only screen and (width >= 1200px) {
+@media only screen and (width >= 1600px) {
   section.section_images {
     padding: 5vw 0;
   }
@@ -3058,10 +3065,10 @@ section.section_images .section-wrapper.splide.images-carousel .splide__slide p.
 }
 
 section.section_postcode_search {
-  padding: 8vw 0;
+  padding: 7vw 0;
 }
 
-@media only screen and (width >= 1200px) {
+@media only screen and (width >= 1600px) {
   section.section_postcode_search {
     padding: 5vw 0;
   }
@@ -3176,10 +3183,10 @@ section.section_postcode_search .postcode-search-wrapper .text-col div.search-bo
 }
 
 section.section_posts_agg {
-  padding: 8vw 0;
+  padding: 7vw 0;
 }
 
-@media only screen and (width >= 1200px) {
+@media only screen and (width >= 1600px) {
   section.section_posts_agg {
     padding: 5vw 0;
   }
@@ -3582,10 +3589,10 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel .verti
 }
 
 section.section_text_and_image {
-  padding: 8vw 0;
+  padding: 7vw 0;
 }
 
-@media only screen and (width >= 1200px) {
+@media only screen and (width >= 1600px) {
   section.section_text_and_image {
     padding: 5vw 0;
   }
@@ -4262,10 +4269,10 @@ section.section_text_and_image .section-content.full-image-layout div.bars-conta
 }
 
 section.section_wayfinder {
-  padding: 8vw 0;
+  padding: 7vw 0;
 }
 
-@media only screen and (width >= 1200px) {
+@media only screen and (width >= 1600px) {
   section.section_wayfinder {
     padding: 5vw 0;
   }
@@ -4627,6 +4634,10 @@ header .header-bar .pre-header .pre-header-right .search-container input::placeh
   color: #fff;
 }
 
+header .header-bar .main-header {
+  z-index: 99;
+}
+
 header .header-bar .main-header .main-header-content {
   justify-content: space-between;
   padding: 1rem 0 0;
@@ -4834,18 +4845,19 @@ header div.action-nav-container nav.action-nav {
   opacity: 0;
   -o-transition: .2s;
   background-color: #fff;
-  padding: 8vw 0;
+  min-height: 15vw;
+  padding: 7vw 0;
   transition: all .2s;
   position: relative;
 }
 
-@media only screen and (width >= 1200px) {
+@media only screen and (width >= 1600px) {
   header div.action-nav-container nav.action-nav {
     padding: 5vw 0;
   }
 }
 
-header div.action-nav-container nav.action-nav img.vertical-bars {
+header div.action-nav-container nav.action-nav .vertical-bars {
   opacity: .5;
   width: auto;
   height: 100%;
@@ -4854,20 +4866,35 @@ header div.action-nav-container nav.action-nav img.vertical-bars {
   right: 0;
 }
 
-header div.action-nav-container nav.action-nav .menu-grid {
+header div.action-nav-container nav.action-nav .menu-content {
+  opacity: 0;
+  height: calc(100% - 4rem);
+  padding-top: 4rem;
+  transition: all .2s cubic-bezier(.55, 0, 1, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header div.action-nav-container nav.action-nav .menu-content.show {
+  opacity: 1;
+}
+
+header div.action-nav-container nav.action-nav .menu-content .menu-grid {
   grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
   display: grid;
 }
 
-header div.action-nav-container nav.action-nav .menu-grid .col:not(:last-child) {
+header div.action-nav-container nav.action-nav .menu-content .menu-grid .col:not(:last-child) {
   border-right: 2px solid #f3f4f6;
 }
 
-header div.action-nav-container nav.action-nav .menu-grid .col {
+header div.action-nav-container nav.action-nav .menu-content .menu-grid .col {
   padding: 0 1rem;
 }
 
-header div.action-nav-container nav.action-nav .menu-grid .col a.parent-page-link {
+header div.action-nav-container nav.action-nav .menu-content .menu-grid .col a.parent-page-link {
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
@@ -4880,51 +4907,52 @@ header div.action-nav-container nav.action-nav .menu-grid .col a.parent-page-lin
 }
 
 @media only screen and (width >= 768px) {
-  header div.action-nav-container nav.action-nav .menu-grid .col a.parent-page-link {
+  header div.action-nav-container nav.action-nav .menu-content .menu-grid .col a.parent-page-link {
     font-size: 16.5px;
   }
 }
 
 @media only screen and (width >= 1200px) {
-  header div.action-nav-container nav.action-nav .menu-grid .col a.parent-page-link {
+  header div.action-nav-container nav.action-nav .menu-content .menu-grid .col a.parent-page-link {
     font-size: 19.8px;
   }
 }
 
 @media only screen and (width >= 1600px) {
-  header div.action-nav-container nav.action-nav .menu-grid .col a.parent-page-link {
+  header div.action-nav-container nav.action-nav .menu-content .menu-grid .col a.parent-page-link {
     font-size: 22px;
   }
 }
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
-  header div.action-nav-container nav.action-nav .menu-grid .col a.parent-page-link {
+  header div.action-nav-container nav.action-nav .menu-content .menu-grid .col a.parent-page-link {
     font-size: 17.6px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
-  header div.action-nav-container nav.action-nav .menu-grid .col a.parent-page-link {
+  header div.action-nav-container nav.action-nav .menu-content .menu-grid .col a.parent-page-link {
     font-size: 13.2px;
   }
 }
 
 @media only screen and (width <= 768px) {
-  header div.action-nav-container nav.action-nav .menu-grid .col a.parent-page-link {
+  header div.action-nav-container nav.action-nav .menu-content .menu-grid .col a.parent-page-link {
     font-size: 13.2px;
   }
 }
 
-header div.action-nav-container nav.action-nav .menu-grid .col ul {
+header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul {
   margin-top: .8rem;
+  margin-bottom: 1.3rem;
 }
 
-header div.action-nav-container nav.action-nav .menu-grid .col ul li {
+header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul li {
   margin-bottom: .5rem;
   list-style-type: none;
 }
 
-header div.action-nav-container nav.action-nav .menu-grid .col ul li a {
+header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul li a {
   -webkit-font-smoothing: antialiased;
   color: #112343;
   font-family: Messina Sans, sans-serif;
@@ -4933,88 +4961,55 @@ header div.action-nav-container nav.action-nav .menu-grid .col ul li a {
 }
 
 @media only screen and (width >= 768px) {
-  header div.action-nav-container nav.action-nav .menu-grid .col ul li a {
+  header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul li a {
     font-size: 9px;
   }
 }
 
 @media only screen and (width >= 1200px) {
-  header div.action-nav-container nav.action-nav .menu-grid .col ul li a {
+  header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul li a {
     font-size: 12px;
   }
 }
 
 @media only screen and (width >= 1600px) {
-  header div.action-nav-container nav.action-nav .menu-grid .col ul li a {
+  header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul li a {
     font-size: 15px;
   }
 }
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
-  header div.action-nav-container nav.action-nav .menu-grid .col ul li a {
+  header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul li a {
     font-size: 9px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
-  header div.action-nav-container nav.action-nav .menu-grid .col ul li a {
+  header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul li a {
     font-size: 9px;
   }
 }
 
 @media only screen and (width <= 768px) {
-  header div.action-nav-container nav.action-nav .menu-grid .col ul li a {
+  header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul li a {
     font-size: 9px;
   }
 }
 
+header div.action-nav-container nav.action-nav .menu-content.discover-content svg path {
+  fill: #1addac;
+}
+
+header div.action-nav-container nav.action-nav .menu-content.explore-content svg path {
+  fill: #fbdb34;
+}
+
+header div.action-nav-container nav.action-nav .menu-content.do-content svg path {
+  fill: #46d1ee;
+}
+
 header div.action-nav-container nav.action-nav.show {
   opacity: 1;
-}
-
-header .mobile-nav {
-  background-color: #fff;
-  width: 384px;
-  height: 100%;
-  padding: 2rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-header .slide-in {
-  transform: translateX(0);
-}
-
-header .slide-in-start {
-  transform: translateX(100%);
-}
-
-header .slide-in-end {
-  transform: translateX(0);
-}
-
-header .slide-out {
-  transform: translateX(100%);
-}
-
-header .slide-out-start {
-  transform: translateX(0);
-}
-
-header .slide-out-end {
-  transform: translateX(100%);
-}
-
-header .nav-content {
-  padding: 20px;
-}
-
-header .close-btn {
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-size: 24px;
 }
 
 header .hero-container {
@@ -5302,13 +5297,13 @@ footer {
   -webkit-font-smoothing: antialiased;
   color: #fff;
   background-color: #112343;
-  padding: 8vw 0;
+  padding: 7vw 0;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
   line-height: 1.3em;
 }
 
-@media only screen and (width >= 1200px) {
+@media only screen and (width >= 1600px) {
   footer {
     padding: 5vw 0;
   }

@@ -5,11 +5,12 @@
 
 section.section_big_search{
 
-    @include sections_padding_large;
+    @include sections_padding;
     position: relative;
 
 
     .search-wrapper{
+        margin-top: 7.5vw;
         position: relative;
         padding: 4vw 5vw;
         

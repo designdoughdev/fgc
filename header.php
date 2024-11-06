@@ -29,9 +29,9 @@
 
                 <div class="main-header-centre">
                     <div class="header-menu-btns">
-                        <button class="btn-menu mint">Discover</button>
-                        <button class="btn-menu yellow">Explore</button>
-                        <button class="btn-menu sky-blue">Do</button>
+                        <button class="btn-menu mint" value="discover">Discover</button>
+                        <button class="btn-menu yellow" value="explore">Explore</button>
+                        <button class="btn-menu sky-blue" value="do">Do</button>
                     </div>
 
                 </div>

@@ -36,6 +36,10 @@
     transition: (2s);
 }
 
+@mixin easeintransition{
+    transition: all 0.2s cubic-bezier(0.55, 0, 1, 1);
+}
+
 
 /* Percentage values */
 
@@ -272,9 +276,12 @@ body {
 
 
 @mixin sections_padding {
-    padding: 8vw 0;
+    padding: 7vw 0;
 
-    @include respond-to(lg){
+    @include respond-to(xl){
+        padding: 6vw 0;
+    }
+    @include respond-to(xl){
         padding: 5vw 0;
     }
 
