@@ -2,13 +2,87 @@
 
 <?php get_template_part('components/flex/content-big_search'); ?>
 
-<?php get_template_part('components/flex/content-text_and_image'); ?>
 
-<?php get_template_part('components/flex/content-images'); ?>
+
+<?php
+
+// text and image rows flex
+
+set_query_var('layout', 'rows');
+
+
+get_template_part('components/flex/content-text_and_image', 'rows'); ?>
+<!--------------------------  --------------------------------->
+
+<?php
+
+// text and image half image flex
+
+set_query_var('layout', 'half-image');
+
+
+get_template_part('components/flex/content-text_and_image', 'half-image'); ?>
+
+<!--------------------------  --------------------------------->
+
+<?php
+
+// text and image no bg
+
+set_query_var('layout', 'big-img-no-bg');
+
+get_template_part('components/flex/content-text_and_image', 'big-img-no-bg'); ?>
+
+<!--------------------------  --------------------------------->
+
+<?php
+
+// text and image full image
+
+set_query_var('layout', 'full-image');
+
+//------------------------  -------------------------------//
+
+
+get_template_part('components/flex/content-text_and_image', 'full-image'); ?>
 
 <?php get_template_part('components/flex/content-wayfinder'); ?>
 
-<?php get_template_part('components/flex/content-post_aggregator'); ?>
+<?php get_template_part('components/flex/content-images'); ?>
+
+<?php
+
+// press releases carousel
+
+set_query_var('layout', 'press-releases');
+
+
+get_template_part('components/flex/content-post_aggregator', 'press-releases');
+
+//------------------------  -------------------------------//
+
+?>
+<?php
+
+// news carousel
+
+set_query_var('layout', 'news');
+
+get_template_part('components/flex/content-post_aggregator', 'news');
+
+//------------------------  -------------------------------//
+?>
+<?php
+
+// text and image full colour
+
+set_query_var('layout', 'full-colour');
+
+get_template_part('components/flex/content-text_and_image', 'full-colour');
+
+//------------------------  -------------------------------//
+
+?>
 
 <?php get_template_part('components/flex/content-postcode_search'); ?>
 

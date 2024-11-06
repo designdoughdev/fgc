@@ -15,9 +15,14 @@
 // $rows = count($images);
 // }
 
-?>
+$layout = get_query_var('layout'); ?>
+
+
 <section class="section_posts_agg row-<?php // echo $row; 
                                         ?>">
+
+
+    <?php if ($layout == 'news'): ?>
 
     <!-------------------------- News Feed Layout --------------------------------->
 
@@ -42,15 +47,15 @@
             <ul class="splide__list">
 
                 <?php $colourSchemes = ['blue', 'yellow', 'mint', 'green']; // The repeating set of values 
-                ?>
+                    ?>
 
 
                 <?php for ($x = 0; $x < 12; $x++) {
 
-                    $colourScheme = $colourSchemes[$x % 4]; // Use modulo to cycle through values
+                        $colourScheme = $colourSchemes[$x % 4]; // Use modulo to cycle through values
 
 
-                ?>
+                    ?>
                 <li class="splide__slide relative">
                     <a href="/">
                         <div class="post-card <?php echo $colourScheme; ?>-style">
@@ -61,8 +66,8 @@
                                 </div>
                                 <div class="hand-icon-container">
                                     <?php
-                                        echo file_get_contents(get_template_directory() . '/assets/images/svg/hand-icon.svg');
-                                        ?>
+                                            echo file_get_contents(get_template_directory() . '/assets/images/svg/hand-icon.svg');
+                                            ?>
                                 </div>
                             </div>
                             <div class="card-body">
@@ -92,12 +97,14 @@
                     </a>
                 </li>
                 <?php }
-                ?>
+                    ?>
 
 
             </ul>
         </div>
     </div>
+
+    <?php elseif ($layout == 'press-releases'): ?>
 
     <!-------------------------- Press Releases Layout --------------------------------->
 
@@ -122,16 +129,16 @@
         <div class="splide__track">
             <ul class="splide__list">
                 <?php
-                $colourSchemes = ['blue', 'yellow', 'mint', 'green']; // Array of color schemes 
+                    $colourSchemes = ['blue', 'yellow', 'mint', 'green']; // Array of color schemes 
 
-                // Loop through slides in increments of 2 to group every two slides together
-                for ($x = 0; $x < 12; $x += 2) {
-                ?>
+                    // Loop through slides in increments of 2 to group every two slides together
+                    for ($x = 0; $x < 12; $x += 2) {
+                    ?>
                 <li class="splide__slide">
                     <!-- First stacked slide in the pair -->
                     <?php
-                        $colourScheme = $colourSchemes[$x % 4];
-                        ?>
+                            $colourScheme = $colourSchemes[$x % 4];
+                            ?>
                     <a href="/" class="stacked-slide">
                         <div class="press-release-card <?php echo $colourScheme; ?>-style">
                             <div class="text-col relative">
@@ -167,9 +174,9 @@
 
                     <!-- Second stacked slide in the pair -->
                     <?php
-                        if ($x + 1 < 12) { // Ensure we don't exceed the total number of slides
-                            $colourScheme = $colourSchemes[($x + 1) % 4];
-                        ?>
+                            if ($x + 1 < 12) { // Ensure we don't exceed the total number of slides
+                                $colourScheme = $colourSchemes[($x + 1) % 4];
+                            ?>
                     <a href="/" class="stacked-slide">
                         <div class="press-release-card <?php echo $colourScheme; ?>-style">
                             <div class="text-col relative">
@@ -210,6 +217,8 @@
         </div>
 
     </div>
+
+    <?php endif ?>
 
 
 
