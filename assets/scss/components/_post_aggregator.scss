@@ -8,6 +8,8 @@ section.section_posts_agg{
 
     @include sections_padding;
 
+    /*------------------------ Post Feed Layout -------------------------------*/
+
     .section-wrapper.splide.post-feed-carousel{
 
         /*------------------------ Default/Mobile Styles -------------------------------*/
@@ -46,37 +48,7 @@ section.section_posts_agg{
 
                     padding: 1.3rem;
     
-                    .card-top{
-                        display: flex;
-                        justify-content: space-between;
-                        margin-bottom: 3rem;
-    
-
-                        div.hand-icon-container{
-                            width: 33px;
-                            height: 51px;
-                        }
-
-   
-                    }
-                    .card-body{
-                        margin-right: 3%;
-                        .post-info{
-                            margin: 3.5rem 0 3rem 0;
-                        }
-                    }
-                    .card-bottom{
-                        margin-top: 2rem;
-                        border-top: 1px solid $darkNavy;
-                        display: flex;
-                        justify-content: space-between;
-                        padding-top: 0.8rem;
-
-                        p{
-                            @include body;
-                            text-decoration: underline;
-                        }
-                    }
+                    @include postCard;
     
                 }
 
@@ -129,7 +101,153 @@ section.section_posts_agg{
         }
     }
 
+    /*------------------------ Press Releases Layout -------------------------------*/
 
+    .section-wrapper.splide.press-releases-carousel{
+
+        /*------------------------ Default/Mobile Styles -------------------------------*/
+        
+        padding: 5vw 0 7vw 0;
+
+        .text-container{
+
+            padding: 0 7vw;
+            margin-bottom: 4vw;
+
+
+            .title-tag{
+                @include title_tag($darkNavy, $cobaltBlue);
+                margin-bottom: 3em;
+    
+            }
+
+            .button-container{
+                display: none;
+            }
+        }
+
+        li.splide__slide {
+        display: flex;
+        flex-direction: column; 
+
+            .stacked-slide {
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+        
+                .press-release-card {
+                    display: grid;
+                    grid-template-columns:repeat(9, 1fr);
+                    height: 100%; 
+
+                    @include postCard;
+
+                    
+            
+        
+                    .text-col{
+                        grid-column: span 5;
+
+                        .text-content{
+                            padding: 2rem;
+                            width: 40%;
+
+                        }
+
+
+                    }
+        
+                    .img-wrap{
+        
+                        grid-column: span 4;
+        
+        
+                        img {
+                            
+                
+                        width: 100%;
+                        height: 100%; 
+                        object-fit: cover;
+                        }
+        
+        
+                    }
+            
+                    
+                    }
+            }
+
+            // styling for even slides
+
+            .stacked-slide:nth-child(2) .press-release-card {
+             
+                
+            
+                .text-col {
+                    order: 2!important;
+                  
+                  
+                }
+
+
+
+            }
+        }
+
+
+
+
+        .vertical-bars{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            display: flex;
+            width: fit-content;
+
+
+        }
+
+        
+        /*------------------------ Desktop Styles -------------------------------*/
+
+        &{
+            @include respond-to('md'){
+
+                
+                padding-bottom: 0!important;
+
+                div.text-container{
+
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: max-content;
+                    column-gap: 15vw;
+
+                    .heading{
+                        grid-column: 1;
+                        grid-row: 2;
+
+                    }
+
+                    .button-container{
+                        display: block;
+                        grid-column: 2;
+                        grid-row: 2;
+                        align-self: end;
+                        justify-self: end;
+                        display: flex;
+                        align-items: flex-end;
+                    }
+
+                }
+
+                
+
+            }
+        }
+
+    }
 
 
 }

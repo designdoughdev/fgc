@@ -1986,6 +1986,40 @@ body[data-theme='light'] {
     @include caption;
 }
 
+@mixin postCard{
+    .card-top{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+
+
+        div.hand-icon-container{
+            width: 33px;
+            height: 51px;
+        }
+
+
+    }
+    .card-body{
+        margin-right: 3%;
+        .post-info{
+            margin: 3.5rem 0 3rem 0;
+        }
+    }
+    .card-bottom{
+        margin-top: 2rem;
+        border-top: 1px solid $darkNavy;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0.8rem;
+
+        p{
+            @include body;
+            text-decoration: underline;
+        }
+    }
+}
+
 /*------------------------ Card colour styles -------------------------------*/
 
 // green 
