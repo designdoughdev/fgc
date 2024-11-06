@@ -359,7 +359,7 @@ $para : 15;
 @mixin body{
  	font-family: $primary-font;
     font-size: $para + px;
-    line-height: 1.3em;
+    line-height: 1.6em;
 	-webkit-font-smoothing: antialiased;
 	color: $darkNavy;
 
@@ -367,19 +367,19 @@ $para : 15;
 	    font-size: $para * 0.6 + px;
 	}
 	@include respond-to('lg') {
-	    font-size: $para * 0.8 + px;
+	    font-size: $para * 0.9 + px;
 	}
 	@include respond-to('xl') {
 	    font-size: $para + px;
 	}
 	@include respond-to(tablet) {
-	    font-size: $para * 0.6 + px;
+	    font-size: $para * 0.7 + px;
 	}
 	@include respond-to(mobile) {
-		font-size: $para * 0.6 + px;
+		font-size: $para * 0.7 + px;
 	}
 	@include respond-to(sm) {
-		font-size: $para * 0.6 + px;
+		font-size: $para * 0.7 + px;
 	}	
 
 

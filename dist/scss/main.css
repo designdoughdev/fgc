@@ -690,7 +690,7 @@ blockquote {
   color: #112343;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
-  line-height: 1.3em;
+  line-height: 1.6em;
 }
 
 @media only screen and (width >= 768px) {
@@ -701,7 +701,7 @@ blockquote {
 
 @media only screen and (width >= 1200px) {
   .body {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -713,19 +713,19 @@ blockquote {
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   .body {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   .body {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   .body {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -734,7 +734,7 @@ blockquote {
   color: #112343;
   font-family: Messina Sans, sans-serif;
   font-size: 16px;
-  line-height: 1.3em;
+  line-height: 1.6em;
 }
 
 @media only screen and (width >= 768px) {
@@ -745,7 +745,7 @@ blockquote {
 
 @media only screen and (width >= 1200px) {
   .link {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -757,19 +757,19 @@ blockquote {
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   .link {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   .link {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   .link {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -781,7 +781,7 @@ blockquote {
 
 @media only screen and (width >= 1200px) {
   .p, .plain-text {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -793,19 +793,19 @@ blockquote {
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   .p, .plain-text {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   .p, .plain-text {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   .p, .plain-text {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -823,7 +823,7 @@ body {
   margin-bottom: 0;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
-  line-height: 1.3em;
+  line-height: 1.6em;
 }
 
 @media only screen and (width >= 768px) {
@@ -834,7 +834,7 @@ body {
 
 @media only screen and (width >= 1200px) {
   body {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -846,19 +846,19 @@ body {
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   body {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   body {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   body {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -879,7 +879,7 @@ ol, ul, li {
   color: #000;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
-  line-height: 1.3em;
+  line-height: 1.6em;
 }
 
 @media only screen and (width >= 768px) {
@@ -890,7 +890,7 @@ ol, ul, li {
 
 @media only screen and (width >= 1200px) {
   ol, ul, li {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -902,19 +902,19 @@ ol, ul, li {
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   ol, ul, li {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   ol, ul, li {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   ol, ul, li {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -923,7 +923,7 @@ ol, ul, li {
   color: #112343;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
-  line-height: 1.3em;
+  line-height: 1.6em;
 }
 
 @media only screen and (width >= 768px) {
@@ -934,7 +934,7 @@ ol, ul, li {
 
 @media only screen and (width >= 1200px) {
   .p, .plain-text {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -946,19 +946,19 @@ ol, ul, li {
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   .p, .plain-text {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   .p, .plain-text {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   .p, .plain-text {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -982,7 +982,7 @@ textarea {
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
   font-weight: 600;
-  line-height: 1.3em;
+  line-height: 1.6em;
   display: block;
 }
 
@@ -994,7 +994,7 @@ textarea {
 
 @media only screen and (width >= 1200px) {
   textarea {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -1006,19 +1006,19 @@ textarea {
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   textarea {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   textarea {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   textarea {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -1288,7 +1288,7 @@ body {
   width: fit-content;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
-  line-height: 1.3em;
+  line-height: 1.6em;
   text-decoration: none;
 }
 
@@ -1300,7 +1300,7 @@ body {
 
 @media only screen and (width >= 1200px) {
   .btn_simple {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -1312,19 +1312,19 @@ body {
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   .btn_simple {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   .btn_simple {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   .btn_simple {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -1346,7 +1346,7 @@ body {
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
   font-weight: 600;
-  line-height: 1.3em;
+  line-height: 1.6em;
   text-decoration: none;
   display: inline-flex;
 }
@@ -1359,7 +1359,7 @@ body {
 
 @media only screen and (width >= 1200px) {
   .btn {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -1371,19 +1371,19 @@ body {
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   .btn {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   .btn {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   .btn {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -1419,7 +1419,7 @@ body {
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
   font-weight: 600;
-  line-height: 1.3em;
+  line-height: 1.6em;
   text-decoration: none;
   display: inline-flex;
 }
@@ -1432,7 +1432,7 @@ body {
 
 @media only screen and (width >= 1200px) {
   .btn-prev {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -1444,19 +1444,19 @@ body {
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   .btn-prev {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   .btn-prev {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   .btn-prev {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -1490,7 +1490,7 @@ body {
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
   font-weight: 600;
-  line-height: 1.3em;
+  line-height: 1.6em;
   text-decoration: none;
   display: inline-flex;
 }
@@ -1503,7 +1503,7 @@ body {
 
 @media only screen and (width >= 1200px) {
   .btn-next {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -1515,19 +1515,19 @@ body {
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   .btn-next {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   .btn-next {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   .btn-next {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -1836,7 +1836,7 @@ body {
   padding: .5em;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
-  line-height: 1.3em;
+  line-height: 1.6em;
 }
 
 @media only screen and (width >= 768px) {
@@ -1847,7 +1847,7 @@ body {
 
 @media only screen and (width >= 1200px) {
   .input {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -1859,19 +1859,19 @@ body {
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   .input {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   .input {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   .input {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -2774,7 +2774,7 @@ section.section_big_search .search-wrapper div.search-flex-content form.search-f
     font-family: Messina Sans, sans-serif;
     font-size: 15px;
     font-weight: 600;
-    line-height: 1.3em;
+    line-height: 1.6em;
     text-decoration: none;
     display: inline-flex;
   }
@@ -2788,7 +2788,7 @@ section.section_big_search .search-wrapper div.search-flex-content form.search-f
 
 @media only screen and (width >= 768px) and (width >= 1200px) {
   section.section_big_search .search-wrapper div.search-flex-content form.search-form .search-box button {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -2800,19 +2800,19 @@ section.section_big_search .search-wrapper div.search-flex-content form.search-f
 
 @media only screen and (width >= 768px) and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (width >= 768px) and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (width >= 768px) and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (width >= 768px) and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (width >= 768px) and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (width >= 768px) and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (width >= 768px) and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (width >= 768px) and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (width >= 768px) and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (width >= 768px) and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (width >= 768px) and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   section.section_big_search .search-wrapper div.search-flex-content form.search-form .search-box button {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width >= 768px) and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (width >= 768px) and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (width >= 768px) and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (width >= 768px) and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (width >= 768px) and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (width >= 768px) and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (width >= 768px) and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (width >= 768px) and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (width >= 768px) and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (width >= 768px) and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (width >= 768px) and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (width >= 768px) and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (width >= 768px) and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (width >= 768px) and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (width >= 768px) and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (width >= 768px) and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (width >= 768px) and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   section.section_big_search .search-wrapper div.search-flex-content form.search-form .search-box button {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width >= 768px) and (width <= 768px) {
   section.section_big_search .search-wrapper div.search-flex-content form.search-form .search-box button {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -3201,12 +3201,28 @@ section.section_posts_agg .section-wrapper.splide.post-feed-carousel .text-conta
   padding: 0 7vw;
 }
 
+section.section_posts_agg .section-wrapper.splide.post-feed-carousel .text-container .text-inner .title-tag {
+  margin-bottom: 2em;
+}
+
+section.section_posts_agg .section-wrapper.splide.post-feed-carousel .text-container .text-inner .heading {
+  margin-bottom: .8em;
+}
+
+section.section_posts_agg .section-wrapper.splide.post-feed-carousel .text-container .text-inner .body {
+  margin-bottom: 1.5em;
+}
+
+section.section_posts_agg .section-wrapper.splide.post-feed-carousel .text-container .text-inner .btn {
+  margin: .7em 0 1.5rem;
+}
+
 section.section_posts_agg .section-wrapper.splide.post-feed-carousel .text-container .title-tag {
   color: #112343;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
   text-transform: uppercase;
-  margin-bottom: 3em;
+  margin-bottom: 15px;
   font-family: Chivo Mono, monospace;
   font-size: 14px;
   font-weight: 300;
@@ -3259,6 +3275,10 @@ section.section_posts_agg .section-wrapper.splide.post-feed-carousel .text-conta
   display: inline-block;
 }
 
+section.section_posts_agg .section-wrapper.splide.post-feed-carousel .text-container a.btn {
+  margin-top: .5em;
+}
+
 section.section_posts_agg .section-wrapper.splide.post-feed-carousel .text-container .button-container {
   display: none;
 }
@@ -3308,7 +3328,7 @@ section.section_posts_agg .section-wrapper.splide.post-feed-carousel .splide__sl
   color: #112343;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
-  line-height: 1.3em;
+  line-height: 1.6em;
   text-decoration: underline;
 }
 
@@ -3320,7 +3340,7 @@ section.section_posts_agg .section-wrapper.splide.post-feed-carousel .splide__sl
 
 @media only screen and (width >= 1200px) {
   section.section_posts_agg .section-wrapper.splide.post-feed-carousel .splide__slide a div.post-card .card-bottom p {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -3332,19 +3352,19 @@ section.section_posts_agg .section-wrapper.splide.post-feed-carousel .splide__sl
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   section.section_posts_agg .section-wrapper.splide.post-feed-carousel .splide__slide a div.post-card .card-bottom p {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   section.section_posts_agg .section-wrapper.splide.post-feed-carousel .splide__slide a div.post-card .card-bottom p {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   section.section_posts_agg .section-wrapper.splide.post-feed-carousel .splide__slide a div.post-card .card-bottom p {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -3386,7 +3406,7 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel .text-
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
   text-transform: uppercase;
-  margin-bottom: 3em;
+  margin-bottom: 15px;
   font-family: Chivo Mono, monospace;
   font-size: 14px;
   font-weight: 300;
@@ -3448,38 +3468,42 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.spl
   display: flex;
 }
 
-section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide {
+section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide {
   flex-direction: column;
   height: 50%;
   display: flex;
 }
 
-section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card {
+section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide:hover {
+  text-decoration: none;
+}
+
+section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card {
   grid-template-columns: repeat(9, 1fr);
   height: 100%;
   display: grid;
 }
 
-section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .card-top {
+section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .card-top {
   justify-content: space-between;
   margin-bottom: 3rem;
   display: flex;
 }
 
-section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .card-top div.hand-icon-container {
+section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .card-top div.hand-icon-container {
   width: 33px;
   height: 51px;
 }
 
-section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .card-body {
+section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .card-body {
   margin-right: 3%;
 }
 
-section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .card-body .post-info {
+section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .card-body .post-info {
   margin: 3.5rem 0 3rem;
 }
 
-section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .card-bottom {
+section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .card-bottom {
   border-top: 1px solid #112343;
   justify-content: space-between;
   margin-top: 2rem;
@@ -3487,65 +3511,109 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.spl
   display: flex;
 }
 
-section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .card-bottom p {
+section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .card-bottom p {
   -webkit-font-smoothing: antialiased;
   color: #112343;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
-  line-height: 1.3em;
+  line-height: 1.6em;
   text-decoration: underline;
 }
 
 @media only screen and (width >= 768px) {
-  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .card-bottom p {
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .card-bottom p {
     font-size: 9px;
   }
 }
 
 @media only screen and (width >= 1200px) {
-  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .card-bottom p {
-    font-size: 12px;
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .card-bottom p {
+    font-size: 13.5px;
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .card-bottom p {
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .card-bottom p {
     font-size: 15px;
   }
 }
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
-  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .card-bottom p {
-    font-size: 9px;
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .card-bottom p {
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
-  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .card-bottom p {
-    font-size: 9px;
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .card-bottom p {
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
-  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .card-bottom p {
-    font-size: 9px;
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .card-bottom p {
+    font-size: 10.5px;
   }
 }
 
-section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .text-col {
+section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .text-col {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
   grid-column: span 5;
+  padding: 1em 1.5em;
+  font-family: Messina Sans, sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1.05em;
 }
 
-section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .text-col .text-content {
+@media only screen and (width >= 768px) {
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .text-col {
+    font-size: 27px;
+  }
+}
+
+@media only screen and (width >= 1200px) {
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .text-col {
+    font-size: 40.5px;
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .text-col {
+    font-size: 45px;
+  }
+}
+
+@media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .text-col {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .text-col {
+    font-size: 27px;
+  }
+}
+
+@media only screen and (width <= 768px) {
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .text-col {
+    font-size: 27px;
+  }
+}
+
+section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .text-col .text-content {
   width: 40%;
   padding: 2rem;
 }
 
-section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .img-wrap {
+section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .img-wrap {
   grid-column: span 4;
 }
 
-section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide .stacked-slide .press-release-card .img-wrap img {
+section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .img-wrap img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -3570,14 +3638,33 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel .verti
   }
 
   section.section_posts_agg .section-wrapper.splide.press-releases-carousel div.text-container {
-    grid-template-rows: max-content;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 15vw;
-    display: grid;
+    justify-content: space-between;
+    gap: 15vw;
+    display: flex;
   }
 
-  section.section_posts_agg .section-wrapper.splide.press-releases-carousel div.text-container .heading {
-    grid-area: 2 / 1;
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel div.text-container .text-inner {
+    max-width: 40%;
+  }
+
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel div.text-container .text-inner .title-tag {
+    margin-bottom: 2em;
+  }
+
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel div.text-container .text-inner .heading {
+    margin-bottom: .8em;
+  }
+
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel div.text-container .text-inner .body {
+    margin-bottom: 1.5em;
+  }
+
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel div.text-container .text-inner .btn {
+    margin: .7em 0 1.5rem;
+  }
+
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel div.text-container .text-inner a.btn {
+    margin-bottom: 0;
   }
 
   section.section_posts_agg .section-wrapper.splide.press-releases-carousel div.text-container .button-container {
@@ -3616,10 +3703,11 @@ section.section_text_and_image .section-content.full-colour-layout .col .title-t
 }
 
 section.section_text_and_image .section-content.full-colour-layout .col .heading {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 section.section_text_and_image .section-content.full-colour-layout .col .body {
+  max-width: 60%;
   margin-bottom: 3em;
 }
 
@@ -3647,7 +3735,7 @@ section.section_text_and_image .section-content.rows-layout .title-tag {
 }
 
 section.section_text_and_image .section-content.rows-layout .heading {
-  margin-bottom: .7em;
+  margin-bottom: .8em;
 }
 
 section.section_text_and_image .section-content.rows-layout .body {
@@ -3655,7 +3743,7 @@ section.section_text_and_image .section-content.rows-layout .body {
 }
 
 section.section_text_and_image .section-content.rows-layout .btn {
-  margin-bottom: 1.5rem;
+  margin: .7em 0 1.5rem;
 }
 
 section.section_text_and_image .section-content.rows-layout .title-tag {
@@ -3805,7 +3893,7 @@ section.section_text_and_image .section-content.big-img-no-bg-layout .title-tag 
 }
 
 section.section_text_and_image .section-content.big-img-no-bg-layout .heading {
-  margin-bottom: .7em;
+  margin-bottom: .8em;
 }
 
 section.section_text_and_image .section-content.big-img-no-bg-layout .body {
@@ -3813,7 +3901,7 @@ section.section_text_and_image .section-content.big-img-no-bg-layout .body {
 }
 
 section.section_text_and_image .section-content.big-img-no-bg-layout .btn {
-  margin-bottom: 1.5rem;
+  margin: .7em 0 1.5rem;
 }
 
 section.section_text_and_image .section-content.big-img-no-bg-layout .title-tag {
@@ -3952,7 +4040,7 @@ section.section_text_and_image .section-content.half-image-layout .text-content 
 }
 
 section.section_text_and_image .section-content.half-image-layout .text-content .heading {
-  margin-bottom: .7em;
+  margin-bottom: .8em;
 }
 
 section.section_text_and_image .section-content.half-image-layout .text-content .body {
@@ -3960,7 +4048,7 @@ section.section_text_and_image .section-content.half-image-layout .text-content 
 }
 
 section.section_text_and_image .section-content.half-image-layout .text-content .btn {
-  margin-bottom: 1.5rem;
+  margin: .7em 0 1.5rem;
 }
 
 section.section_text_and_image .section-content.half-image-layout div.img-wrap {
@@ -4025,7 +4113,7 @@ section.section_text_and_image .section-content.half-image-layout div.bars-conta
   }
 
   section.section_text_and_image .section-content.half-image-layout .text-content .heading {
-    margin-bottom: .7em;
+    margin-bottom: .8em;
   }
 
   section.section_text_and_image .section-content.half-image-layout .text-content .body {
@@ -4033,7 +4121,7 @@ section.section_text_and_image .section-content.half-image-layout div.bars-conta
   }
 
   section.section_text_and_image .section-content.half-image-layout .text-content .btn {
-    margin-bottom: 1.5rem;
+    margin: .7em 0 1.5rem;
   }
 
   section.section_text_and_image .section-content.half-image-layout .text-content > * {
@@ -4165,7 +4253,7 @@ section.section_text_and_image .section-content.full-image-layout .text-content 
 }
 
 section.section_text_and_image .section-content.full-image-layout .text-content .heading {
-  margin-bottom: .7em;
+  margin-bottom: .8em;
 }
 
 section.section_text_and_image .section-content.full-image-layout .text-content .body {
@@ -4173,7 +4261,7 @@ section.section_text_and_image .section-content.full-image-layout .text-content 
 }
 
 section.section_text_and_image .section-content.full-image-layout .text-content .btn {
-  margin-bottom: 1.5rem;
+  margin: .7em 0 1.5rem;
 }
 
 section.section_text_and_image .section-content.full-image-layout div.bars-container {
@@ -4287,7 +4375,7 @@ section.section_wayfinder .section-content .text-content .title-tag {
 }
 
 section.section_wayfinder .section-content .text-content .heading {
-  margin-bottom: .7em;
+  margin-bottom: .8em;
 }
 
 section.section_wayfinder .section-content .text-content .body {
@@ -4295,7 +4383,7 @@ section.section_wayfinder .section-content .text-content .body {
 }
 
 section.section_wayfinder .section-content .text-content .btn {
-  margin-bottom: 1.5rem;
+  margin: .7em 0 1.5rem;
 }
 
 section.section_wayfinder .section-content .text-content .heading {
@@ -4715,7 +4803,7 @@ header .header-bar .main-header .main-header-content .main-header-right .right-l
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
   font-weight: bold;
-  line-height: 1.3em;
+  line-height: 1.6em;
 }
 
 @media only screen and (width >= 768px) {
@@ -4726,7 +4814,7 @@ header .header-bar .main-header .main-header-content .main-header-right .right-l
 
 @media only screen and (width >= 1200px) {
   header .header-bar .main-header .main-header-content .main-header-right .right-links-container a {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -4738,19 +4826,19 @@ header .header-bar .main-header .main-header-content .main-header-right .right-l
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   header .header-bar .main-header .main-header-content .main-header-right .right-links-container a {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   header .header-bar .main-header .main-header-content .main-header-right .right-links-container a {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   header .header-bar .main-header .main-header-content .main-header-right .right-links-container a {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -4784,7 +4872,7 @@ header .header-bar .main-header .main-header-content .main-header-right .hamburg
   width: fit-content;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
-  line-height: 1.3em;
+  line-height: 1.6em;
   text-decoration: none;
   display: flex;
 }
@@ -4797,7 +4885,7 @@ header .header-bar .main-header .main-header-content .main-header-right .hamburg
 
 @media only screen and (width >= 1200px) {
   header .header-bar .main-header .main-header-content .main-header-right .hamburger-icon-container button.hamburger-btn {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -4809,19 +4897,19 @@ header .header-bar .main-header .main-header-content .main-header-right .hamburg
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   header .header-bar .main-header .main-header-content .main-header-right .hamburger-icon-container button.hamburger-btn {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   header .header-bar .main-header .main-header-content .main-header-right .hamburger-icon-container button.hamburger-btn {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   header .header-bar .main-header .main-header-content .main-header-right .hamburger-icon-container button.hamburger-btn {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -4957,7 +5045,7 @@ header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul 
   color: #112343;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
-  line-height: 1.3em;
+  line-height: 1.6em;
 }
 
 @media only screen and (width >= 768px) {
@@ -4968,7 +5056,7 @@ header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul 
 
 @media only screen and (width >= 1200px) {
   header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul li a {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -4980,19 +5068,19 @@ header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul 
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul li a {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul li a {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul li a {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -5248,7 +5336,7 @@ header #hero-overlay .hero-grid .col-right a .hero-video-link-container .text-ha
   padding: .4rem .8rem;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
-  line-height: 1.3em;
+  line-height: 1.6em;
   display: flex;
 }
 
@@ -5260,7 +5348,7 @@ header #hero-overlay .hero-grid .col-right a .hero-video-link-container .text-ha
 
 @media only screen and (width >= 1200px) {
   header #hero-overlay .hero-grid .col-right a .hero-video-link-container .text-half .play-btn {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -5272,19 +5360,19 @@ header #hero-overlay .hero-grid .col-right a .hero-video-link-container .text-ha
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   header #hero-overlay .hero-grid .col-right a .hero-video-link-container .text-half .play-btn {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   header #hero-overlay .hero-grid .col-right a .hero-video-link-container .text-half .play-btn {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   header #hero-overlay .hero-grid .col-right a .hero-video-link-container .text-half .play-btn {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -5300,7 +5388,7 @@ footer {
   padding: 7vw 0;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
-  line-height: 1.3em;
+  line-height: 1.6em;
 }
 
 @media only screen and (width >= 1600px) {
@@ -5317,7 +5405,7 @@ footer {
 
 @media only screen and (width >= 1200px) {
   footer {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -5329,19 +5417,19 @@ footer {
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   footer {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   footer {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   footer {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -5486,7 +5574,7 @@ footer .footer-content .footer-top .footer-top-left .signup-container input {
   padding-bottom: .5em;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
-  line-height: 1.3em;
+  line-height: 1.6em;
 }
 
 @media only screen and (width >= 768px) {
@@ -5497,7 +5585,7 @@ footer .footer-content .footer-top .footer-top-left .signup-container input {
 
 @media only screen and (width >= 1200px) {
   footer .footer-content .footer-top .footer-top-left .signup-container input {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -5509,19 +5597,19 @@ footer .footer-content .footer-top .footer-top-left .signup-container input {
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   footer .footer-content .footer-top .footer-top-left .signup-container input {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   footer .footer-content .footer-top .footer-top-left .signup-container input {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   footer .footer-content .footer-top .footer-top-left .signup-container input {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
@@ -5609,7 +5697,7 @@ footer .footer-content .footer-top .footer-top-right .menu-col a.menu-child-page
   color: #fff;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
-  line-height: 1.3em;
+  line-height: 1.6em;
 }
 
 @media only screen and (width >= 768px) {
@@ -5620,7 +5708,7 @@ footer .footer-content .footer-top .footer-top-right .menu-col a.menu-child-page
 
 @media only screen and (width >= 1200px) {
   footer .footer-content .footer-top .footer-top-right .menu-col a.menu-child-page {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 
@@ -5632,19 +5720,19 @@ footer .footer-content .footer-top .footer-top-right .menu-col a.menu-child-page
 
 @media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
   footer .footer-content .footer-top .footer-top-right .menu-col a.menu-child-page {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
   footer .footer-content .footer-top .footer-top-right .menu-col a.menu-child-page {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 
 @media only screen and (width <= 768px) {
   footer .footer-content .footer-top .footer-top-right .menu-col a.menu-child-page {
-    font-size: 9px;
+    font-size: 10.5px;
   }
 }
 

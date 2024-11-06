@@ -21,11 +21,18 @@ section.section_posts_agg{
             padding: 0 7vw;
             margin-bottom: 4vw;
 
+            .text-inner{
+                @include mobile_text_col_spacing;
+            }
+
 
             .title-tag{
                 @include title_tag($darkNavy, $cobaltBlue);
-                margin-bottom: 3em;
     
+            }
+
+            a.btn{
+                margin-top: 0.5em;
             }
 
             .button-container{
@@ -117,7 +124,7 @@ section.section_posts_agg{
 
             .title-tag{
                 @include title_tag($darkNavy, $cobaltBlue);
-                margin-bottom: 3em;
+             
     
             }
 
@@ -130,7 +137,12 @@ section.section_posts_agg{
         display: flex;
         flex-direction: column; 
 
-            .stacked-slide {
+            a.stacked-slide {
+                &:hover{
+                    text-decoration: none;
+
+                }
+                
                 height: 50%;
                 display: flex;
                 flex-direction: column;
@@ -146,6 +158,8 @@ section.section_posts_agg{
             
         
                     .text-col{
+                        @include h-two;
+                        padding: 1em 1.5em;
                         grid-column: span 5;
 
                         .text-content{
@@ -219,16 +233,20 @@ section.section_posts_agg{
 
                 div.text-container{
 
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: max-content;
-                    column-gap: 15vw;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 15vw;
 
-                    .heading{
-                        grid-column: 1;
-                        grid-row: 2;
+                    .text-inner{
+                        @include mobile_text_col_spacing;
+                        max-width: 40%;
 
+                        a.btn{
+                            margin-bottom: 0;
+                        }
                     }
+
+
 
                     .button-container{
                         display: block;

@@ -37,8 +37,11 @@ $layout = get_query_var('layout'); ?>
 
 
             <div class="col">
-                <p class="title-tag">Public Bodies</p>
-                <h3 class="heading h2 text-white">Find out more information about your local public body.</h3>
+                <p class="title-tag">international</p>
+                <h3 class="heading h2 text-white">Empowering Change Worldwide</h3>
+                <p class="body text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor
+                    incididunt ut labore et dolore magna aliqua ut enim ad.</p>
                 <a href="/" class="link btn text-white sky-blue">Visit Page</a>
             </div>
 
