@@ -25,7 +25,7 @@
 
         <div class="text-container">
             <p class="title-tag">News</p>
-            <h3 class="heading h2">Stay </h3>
+            <h3 class="heading h2">Stay connected with our latest news and updates</h3>
             <div class="button-container">
                 <button class="splide__arrow custom-prev btn-prev" aria-label="Previous slide">
                     Previous
