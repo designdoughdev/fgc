@@ -38,8 +38,9 @@ section.section_wayfinder{
             @for $i from 1 through 4 {
                 li:nth-child(#{$i}) {
                   --index: #{4 - $i}; // Sets --index to decrease for each child
-                //   --index2: #{if($i > 1, $i - 1, 0)}; 
-                --index2: #{$i}; 
+                  --index2: #{if($i > 1, $i - 1, 0)}; 
+               
+                
                 }
               }
               
