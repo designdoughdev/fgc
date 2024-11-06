@@ -272,7 +272,11 @@ body {
 
 
 @mixin sections_padding {
-    padding: calc($conpad * 4) 0;
+    padding: 8vw 0;
+
+    @include respond-to(lg){
+        padding: 5vw 0;
+    }
 
 }
 

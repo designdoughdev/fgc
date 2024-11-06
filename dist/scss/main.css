@@ -2897,7 +2897,13 @@ section.section_big_search .search-wrapper div.search-flex-content form.search-f
 }
 
 section.section_images {
-  padding: 6.25vw 0;
+  padding: 8vw 0;
+}
+
+@media only screen and (width >= 1200px) {
+  section.section_images {
+    padding: 5vw 0;
+  }
 }
 
 section.section_images .section-wrapper.splide.images-carousel {
@@ -3052,7 +3058,13 @@ section.section_images .section-wrapper.splide.images-carousel .splide__slide p.
 }
 
 section.section_postcode_search {
-  padding: 6.25vw 0;
+  padding: 8vw 0;
+}
+
+@media only screen and (width >= 1200px) {
+  section.section_postcode_search {
+    padding: 5vw 0;
+  }
 }
 
 section.section_postcode_search .postcode-search-wrapper .img-wrapper {
@@ -3164,7 +3176,13 @@ section.section_postcode_search .postcode-search-wrapper .text-col div.search-bo
 }
 
 section.section_posts_agg {
-  padding: 6.25vw 0;
+  padding: 8vw 0;
+}
+
+@media only screen and (width >= 1200px) {
+  section.section_posts_agg {
+    padding: 5vw 0;
+  }
 }
 
 section.section_posts_agg .section-wrapper.splide.post-feed-carousel {
@@ -3564,7 +3582,13 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel .verti
 }
 
 section.section_text_and_image {
-  padding: 6.25vw 0;
+  padding: 8vw 0;
+}
+
+@media only screen and (width >= 1200px) {
+  section.section_text_and_image {
+    padding: 5vw 0;
+  }
 }
 
 section.section_text_and_image .section-content.full-colour-layout {
@@ -4238,7 +4262,13 @@ section.section_text_and_image .section-content.full-image-layout div.bars-conta
 }
 
 section.section_wayfinder {
-  padding: 6.25vw 0;
+  padding: 8vw 0;
+}
+
+@media only screen and (width >= 1200px) {
+  section.section_wayfinder {
+    padding: 5vw 0;
+  }
 }
 
 section.section_wayfinder .section-content .text-content {
@@ -4804,9 +4834,15 @@ header div.action-nav-container nav.action-nav {
   opacity: 0;
   -o-transition: .2s;
   background-color: #fff;
-  padding: 6.25vw 0;
+  padding: 8vw 0;
   transition: all .2s;
   position: relative;
+}
+
+@media only screen and (width >= 1200px) {
+  header div.action-nav-container nav.action-nav {
+    padding: 5vw 0;
+  }
 }
 
 header div.action-nav-container nav.action-nav img.vertical-bars {
@@ -5266,10 +5302,16 @@ footer {
   -webkit-font-smoothing: antialiased;
   color: #fff;
   background-color: #112343;
-  padding: 6.25vw 0;
+  padding: 8vw 0;
   font-family: Messina Sans, sans-serif;
   font-size: 15px;
   line-height: 1.3em;
+}
+
+@media only screen and (width >= 1200px) {
+  footer {
+    padding: 5vw 0;
+  }
 }
 
 @media only screen and (width >= 768px) {
