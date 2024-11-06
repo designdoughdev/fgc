@@ -2,7 +2,7 @@
   "name": "parcel-scss",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+
   "scripts": {
     "start": "parcel assets/scss/main.scss assets/js/main.js --dist-dir dist --public-url ./",
     "build": "parcel build assets/scss/main.scss assets/js/main.js --dist-dir dist --public-url ./"
