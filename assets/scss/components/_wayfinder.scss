@@ -52,12 +52,10 @@ section.section_wayfinder{
                 @include h-one;
                 margin-bottom: .5em;
                 margin-left: calc(4vw * var(--index2));
-                @include longtransition;
+                
                 
               }
-              li:hover{
-                margin-left: 0;
-              }
+
 
 
 
@@ -116,8 +114,7 @@ section.section_wayfinder{
                                 justify-self: flex-end;
                                 margin-left: .5em;
        
-    
-    
+       
                                 svg.arrow{
                                     width:40%;
                                     height: 40%;
