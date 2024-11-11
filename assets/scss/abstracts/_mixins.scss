@@ -1242,7 +1242,8 @@ $conpad : 1.5625vw;
 @mixin btn-gallery{
     background-color: transparent;
     border: 1px solid $darkNavy;
-    gap: 0.3rem
+    gap: 0.3rem;
+    font-weight: 400;
 }
 
 @mixin btn-prev{
@@ -2279,9 +2280,9 @@ body[data-theme='light'] {
     .arrow-container{
         background-color: $darkNavy;
 
-        svg{
+        svg.arrow{
             path{
-                fill: $lightNavy;
+                fill: $lightNavy!important;
             }
         }
     }

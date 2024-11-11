@@ -227,4 +227,20 @@ if(headerMenu){
    // })
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const wayfinderRows = document.querySelectorAll(".wayfinder-row");
+
+  const slideInOnScroll = () => {
+    wayfinderRows.forEach((row) => {
+      const rect = row.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        row.classList.add("animate-slide-in");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", slideInOnScroll);
+  slideInOnScroll(); // Check on load as well
+});
+
 

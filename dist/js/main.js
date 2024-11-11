@@ -721,6 +721,17 @@ if (headerMenu) document.addEventListener("mouseover", (e)=>{
         });
     }
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const wayfinderRows = document.querySelectorAll(".wayfinder-row");
+    const slideInOnScroll = ()=>{
+        wayfinderRows.forEach((row)=>{
+            const rect = row.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) row.classList.add("animate-slide-in");
+        });
+    };
+    window.addEventListener("scroll", slideInOnScroll);
+    slideInOnScroll(); // Check on load as well
+});
 
 },{"@splidejs/splide":"5CJev","animate.css":"8t3va","aos":"eRzTM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","alpinejs":"69hXP"}],"5CJev":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

@@ -136,6 +136,7 @@ section.section_posts_agg{
         li.splide__slide {
         display: flex;
         flex-direction: column; 
+        gap: 0.5rem;
 
             a.stacked-slide {
                 &:hover{
@@ -150,6 +151,7 @@ section.section_posts_agg{
                 .press-release-card {
                     display: grid;
                     grid-template-columns:repeat(9, 1fr);
+                    
                     height: 100%; 
 
                     @include postCard;
@@ -161,10 +163,18 @@ section.section_posts_agg{
                         @include h-two;
                         padding: 1em 1.5em;
                         grid-column: span 5;
+                        border-right: 0.5rem solid white;
 
                         .text-content{
-                            padding: 2rem;
-                            width: 40%;
+                            width: 60%;
+                            min-height: 30rem;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+
+                            .card-bottom{
+                                margin-top: auto;
+                            }
 
                         }
 
@@ -194,11 +204,14 @@ section.section_posts_agg{
             // styling for even slides
 
             .stacked-slide:nth-child(2) .press-release-card {
+
              
                 
             
                 .text-col {
                     order: 2!important;
+                    border-right: none;
+                    border-left: 0.5rem solid white;
                   
                   
                 }
@@ -228,14 +241,15 @@ section.section_posts_agg{
         &{
             @include respond-to('md'){
 
+                padding: 2.69rem;
+
                 
-                padding-bottom: 0!important;
 
                 div.text-container{
 
                     display: flex;
                     justify-content: space-between;
-                    gap: 15vw;
+                    gap: 12vw;
 
                     .text-inner{
                         @include mobile_text_col_spacing;

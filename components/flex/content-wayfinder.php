@@ -19,12 +19,14 @@
             <ul>
 
                 <?php $colourSchemes = ['mint', 'yellow', 'blue', 'navy']; // The repeating set of values 
+                $titles = ['How We Work', 'Tools', 'Case Studies', 'Careers']; // The repeating set of values 
                 ?>
 
 
                 <?php for ($x = 0; $x < 4; $x++) {
 
                     $colourScheme = $colourSchemes[$x % 4]; // Use modulo to cycle through values
+                    $title = $titles[$x % 4]; // Use modulo to cycle through values
 
 
                     // wayfinder element
@@ -32,8 +34,7 @@
 
                     <li>
                         <a href="/" class="wayfinder-link-wrap">
-                            <div class="wayfinder-row <?php echo $colourScheme; ?>-style relative" data-aos="fade-left"
-                                data-aos-anchor-placement="top-bottom" data-aos-offset="500" data-aos-duration="500">
+                            <div class="wayfinder-row <?php echo $colourScheme; ?>-style relative">
                                 <div class="bar-container">
                                     <?php
                                     // small version
@@ -44,7 +45,7 @@
                                     <div class="text-content">
                                         <p class=" tag h6">Explore</p>
                                         <h4 class="h1 heading">
-                                            How We Work
+                                            <?php echo $title; ?>
                                         </h4>
                                     </div>
                                     <div class="arrow-content">
