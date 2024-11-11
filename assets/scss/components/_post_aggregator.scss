@@ -6,7 +6,7 @@
 
 section.section_posts_agg{
 
-    @include sections_padding;
+    // @include sections_padding;
 
     /*------------------------ Post Feed Layout -------------------------------*/
 
@@ -153,7 +153,6 @@ section.section_posts_agg{
         
                 .press-release-card {
                     display: grid;
-                    grid-template-columns:repeat(9, 1fr);
                     
                     height: 100%; 
 
@@ -166,7 +165,6 @@ section.section_posts_agg{
                         @include h-two;
                         padding: 1em 1.5em;
                         grid-column: span 5;
-                        border-right: 0.5rem solid white;
                         overflow-x: hidden;
 
                         .text-content{
@@ -187,16 +185,7 @@ section.section_posts_agg{
         
                     .img-wrap{
         
-                        grid-column: span 4;
-        
-        
-                        img {
-                            
-                
-                        width: 100%;
-                        height: 100%; 
-                        object-fit: cover;
-                        }
+                        display: none;
         
         
                     }
@@ -214,8 +203,6 @@ section.section_posts_agg{
             
                 .text-col {
                     order: 2!important;
-                    border-right: none;
-                    border-left: 0.5rem solid white;
                   
                   
                 }
@@ -250,9 +237,10 @@ section.section_posts_agg{
                 padding: 2.69rem;
 
                 
+                .text-container{
 
-                div.text-container{
-
+                    padding: 0 7vw;
+                    margin-bottom: 2vw;
                     display: flex;
                     justify-content: space-between;
                     gap: 12vw;
@@ -277,6 +265,121 @@ section.section_posts_agg{
                         display: flex;
                         align-items: flex-end;
                     }
+        
+        
+                }
+        
+                li.splide__slide {
+                display: flex;
+                flex-direction: column; 
+                gap: 0.5rem;
+        
+                    a.stacked-slide {
+                        &:hover{
+                            text-decoration: none;
+        
+                        }
+                        
+                        height: 50%;
+                        display: flex;
+                        flex-direction: column;
+                
+                        .press-release-card {
+                            display: grid;
+                            grid-template-columns:repeat(9, 1fr);
+                            
+                            height: 100%; 
+        
+                            @include postCard;
+        
+                            
+                    
+                
+                            .text-col{
+                                @include h-two;
+                                padding: 1em 1.5em;
+                                grid-column: span 5;
+                                border-right: 0.5rem solid white;
+                                overflow-x: hidden;
+        
+                                .text-content{
+                                    width: 60%;
+                                    min-height: 30rem;
+                                    height: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+        
+                                    .card-bottom{
+                                        margin-top: auto;
+                                    }
+        
+                                }
+        
+        
+                            }
+                
+                            .img-wrap{
+                                display: block;
+                                grid-column: span 4;
+                
+                
+                                img {
+                                    
+                        
+                                width: 100%;
+                                height: 100%; 
+                                object-fit: cover;
+                                }
+                
+                
+                            }
+                    
+                            
+                            }
+                    }
+        
+                    // styling for even slides
+        
+                    .stacked-slide:nth-child(2) .press-release-card {
+        
+                     
+                        
+                    
+                        .text-col {
+                            order: 2!important;
+                            border-right: none;
+                            border-left: 0.5rem solid white;
+                          
+                          
+                        }
+        
+        
+        
+                    }
+                }
+        
+        
+        
+        
+                .vertical-bars{
+                    @include h-four;
+                    position: absolute;
+                    top: 0;
+                    right: -4em;
+                    height: 100%;
+                    display: flex;
+                    width: fit-content;
+                    opacity: 0.5;
+        
+        
+                }
+                div.text-container{
+
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 12vw;
+
+
 
                 }
 

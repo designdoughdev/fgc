@@ -329,9 +329,8 @@ blockquote {
 
 @mixin body{
  	font-family: $primary-font;
-	 @include responsiveFontSize(1.2rem, 1.75rem); // font size
-	 @include letterSpacingEm(-0.0525rem, 1.75rem);
-	 line-height: ;
+	 @include responsiveFontSize(0.8rem, 1rem); // font size
+	 line-height: 143% ;
 	-webkit-font-smoothing: antialiased;
 	color: $darkNavy;
 

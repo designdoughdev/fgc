@@ -10,7 +10,8 @@ section.section_big_search{
 
 
     .search-wrapper{
-        margin-top: 11vw;
+        @include h-one;
+        margin-top: 2em;
         position: relative;
         padding: 4vw 5vw;
         
