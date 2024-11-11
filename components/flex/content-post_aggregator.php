@@ -146,6 +146,7 @@ $layout = get_query_var('layout'); ?>
                                 <div class="press-release-card <?php echo $colourScheme; ?>-style">
                                     <div class="text-col relative">
 
+
                                         <?php echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg'); ?>
 
                                         <div class="text-content">

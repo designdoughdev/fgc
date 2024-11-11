@@ -119,13 +119,16 @@ section.section_posts_agg{
         .text-container{
 
             padding: 0 7vw;
-            margin-bottom: 4vw;
+            margin-bottom: 2vw;
 
 
             .title-tag{
                 @include title_tag($darkNavy, $cobaltBlue);
              
     
+            }
+            .heading{
+                margin-bottom: 0.5em;
             }
 
             .button-container{
@@ -164,6 +167,7 @@ section.section_posts_agg{
                         padding: 1em 1.5em;
                         grid-column: span 5;
                         border-right: 0.5rem solid white;
+                        overflow-x: hidden;
 
                         .text-content{
                             width: 60%;
@@ -225,12 +229,14 @@ section.section_posts_agg{
 
 
         .vertical-bars{
+            @include h-four;
             position: absolute;
             top: 0;
-            right: 0;
+            right: -4em;
             height: 100%;
             display: flex;
             width: fit-content;
+            opacity: 0.5;
 
 
         }

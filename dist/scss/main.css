@@ -380,44 +380,20 @@ iframe {
   color: #112343;
   -webkit-font-smoothing: antialiased;
   font-family: Messina Sans, sans-serif;
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 1.05em;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 104%;
 }
 
 @media only screen and (width >= 768px) {
   .h4 {
-    font-size: 21px;
-  }
-}
-
-@media only screen and (width >= 1200px) {
-  .h4 {
-    font-size: 25.2px;
+    font-size: clamp(1.2rem, 1.2rem + 1vw, 1.75rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
   .h4 {
-    font-size: 28px;
-  }
-}
-
-@media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
-  .h4 {
-    font-size: 22.4px;
-  }
-}
-
-@media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
-  .h4 {
-    font-size: 16.8px;
-  }
-}
-
-@media only screen and (width <= 768px) {
-  .h4 {
-    font-size: 16.8px;
+    font-size: 1.75rem;
   }
 }
 
@@ -1022,7 +998,7 @@ body {
   padding: .5em .4em;
   font-family: Messina Sans, sans-serif;
   font-size: .72727rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.04545rem;
   text-decoration: none;
   display: inline-flex;
@@ -1057,7 +1033,7 @@ body {
   padding: .5em .3em .5em 1em;
   font-family: Messina Sans, sans-serif;
   font-size: .72727rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.04545rem;
   text-decoration: none;
   display: inline-flex;
@@ -2652,7 +2628,7 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel {
 }
 
 section.section_posts_agg .section-wrapper.splide.press-releases-carousel .text-container {
-  margin-bottom: 4vw;
+  margin-bottom: 2vw;
   padding: 0 7vw;
 }
 
@@ -2692,6 +2668,10 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel .text-
   height: .22727rem;
   margin-right: .37rem;
   display: inline-block;
+}
+
+section.section_posts_agg .section-wrapper.splide.press-releases-carousel .text-container .heading {
+  margin-bottom: .5em;
 }
 
 section.section_posts_agg .section-wrapper.splide.press-releases-carousel .text-container .button-container {
@@ -2768,6 +2748,7 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.spl
   font-style: normal;
   font-weight: 700;
   line-height: 104.4%;
+  overflow-x: hidden;
 }
 
 @media only screen and (width >= 768px) {
@@ -2811,12 +2792,32 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.spl
 }
 
 section.section_posts_agg .section-wrapper.splide.press-releases-carousel .vertical-bars {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  opacity: .5;
   width: fit-content;
   height: 100%;
+  font-family: Messina Sans, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 104%;
   display: flex;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -4em;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel .vertical-bars {
+    font-size: clamp(1.2rem, 1.2rem + 1vw, 1.75rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_posts_agg .section-wrapper.splide.press-releases-carousel .vertical-bars {
+    font-size: 1.75rem;
+  }
 }
 
 @media only screen and (width >= 768px) {

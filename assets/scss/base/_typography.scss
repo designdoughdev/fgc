@@ -179,33 +179,16 @@ $hthree : 38;
 }
 
 // h4 
-$hfour : 28;
+
 @mixin h-four{
 	font-family: $primary-font;
-    font-size: $hfour + px;
-	line-height: 1.05em;
-	font-weight: 600;
-	letter-spacing: -0.03em;
+	@include responsiveFontSize(1.2rem, 1.75rem); // font size
+	@include letterSpacingEm(-0.0525rem, 1.75rem);
+	line-height: 104%;
+	font-weight: 500;
 	color: $darkNavy;
 	-webkit-font-smoothing: antialiased;
-	@include respond-to(md) {
-	    font-size: $hfour * 0.75 + px;
-	}
-	@include respond-to(lg) {
-	    font-size: $hfour * 0.9 + px;
-	}
-	@include respond-to(xl) {
-	    font-size: $hfour + px;
-	}
-	@include respond-to(tablet) {
-	    font-size: $hfour * 0.8 + px;
-	}
-	@include respond-to(mobile) {
-	    font-size: $hfour * 0.6 + px;
-	}
-	@include respond-to(sm) {
-	    font-size: $hfour * 0.6 + px;
-	}	
+	
 }
 
 .h4 {
@@ -346,8 +329,9 @@ blockquote {
 
 @mixin body{
  	font-family: $primary-font;
-    font-size: 0.72727rem;
-    line-height: 1.04545rem;
+	 @include responsiveFontSize(1.2rem, 1.75rem); // font size
+	 @include letterSpacingEm(-0.0525rem, 1.75rem);
+	 line-height: ;
 	-webkit-font-smoothing: antialiased;
 	color: $darkNavy;
 

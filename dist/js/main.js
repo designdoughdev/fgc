@@ -684,7 +684,7 @@ document.addEventListener("DOMContentLoaded", function() {
             type: "loop",
             perPage: 1,
             perMove: 1,
-            gap: "6vw",
+            gap: "7vw",
             padding: "6vw",
             pagination: false,
             arrows: false,
