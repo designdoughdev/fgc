@@ -8,7 +8,8 @@
 // $layout = get_sub_field('layout');
 ?>
 
-<section class="section_big_search row-<?php echo $row; ?>">
+<section class="section_big_search row-<?php echo $row; ?>" data-aos="fade-up"
+    data-aos-anchor-placement="bottom-bottom">
     <div class="container">
 
 

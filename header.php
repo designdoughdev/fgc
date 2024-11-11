@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php wp_title('|', true, 'right'); ?></title>
     <?php wp_head(); ?>
+    <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/node_modules/aos/dist/aos.css"> -->
+
 </head>
 <header x-data="{ isOpen: false }">
 
@@ -60,15 +62,12 @@
 
         </div>
     </div>
-    <div class="hero-container relative">
-        <div class="action-nav-container relative">
-            <?php get_template_part('components/includes/action-nav'); ?>
 
-        </div>
+    <!-------------------------- Hero / Page Header --------------------------------->
 
+    <section class="hero-container relative">
 
-
-
+        <?php get_template_part('components/includes/action-nav'); ?>
 
         <video autoplay muted loop playsinline style="width: 100%; height: 100%">
             <source src="<?php bloginfo('template_url'); ?>/assets/video/home-video.mp4" type="video/mp4">
@@ -96,7 +95,10 @@
                     <a href="https://www.youtube.com/" target="_blank">
 
                         <div class="hero-video-link-container">
-                            <img src="https://picsum.photos/164/94" alt="">
+                            <div class="img-wrap">
+                                <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/derek.jpg" ?>
+                                    alt="">
+                            </div>
 
 
                             <div class="text-half">
@@ -124,13 +126,9 @@
 
         </div>
 
-    </div>
+    </section>
 
-
-
-
-
-
+    <!--------------------------  --------------------------------->
 
 
 

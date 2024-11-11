@@ -12,7 +12,7 @@ section.section_images{
 
         /*------------------------ Default/Mobile Styles -------------------------------*/
         
-        background-color: $lightSkyBlue;
+        background-color: rgba($skyBlue, 0.05);
         padding: 5vw 0 7vw 0;
 
         .text-container{
@@ -34,6 +34,17 @@ section.section_images{
 
         .splide__slide{
 
+            div.img-wrap{
+                height: 100%;
+                width: auto;
+            }
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
 
             position: relative;
 
@@ -41,9 +52,10 @@ section.section_images{
             p.caption{
                 position: absolute;
                 bottom: 1rem;
-                right: 1rem;
-                width: 8em;
-                @include caption;
+                left: 1rem;
+                max-width: 13.3rem;
+                @include captionTwo;
+                
             }
 
         }

@@ -1,5 +1,29 @@
 import Alpine from 'alpinejs';
 import Splide from '@splidejs/splide';
+import 'animate.css';
+import AOS from 'aos';
+
+
+
+// Initialize AOS
+document.addEventListener("DOMContentLoaded", () => {
+   AOS.init({
+     duration: 1200,
+     once: true,
+   });
+ });
+
+
+
+ // Add delay to each AOS item
+document.querySelectorAll('.wayfinder-row').forEach((item, index) => {
+   const delay = index * 200; 
+   item.setAttribute('data-aos-delay', delay);
+});
+
+
+
+ 
 
  
 // initialise Alpine
@@ -30,13 +54,14 @@ document.addEventListener('DOMContentLoaded', function () {
          arrows: false, // Disable default arrows completely
          updateOnMove: true,
          gap: '1vw',
-         padding: '7vw',
+         padding: '10vw',
          focus: 'center',
          pagination: false,
+         heightRatio: 0.5,
          breakpoints: {
            767: {
-             gap: '6vw',
-             padding: '6vw',
+             gap: '7vw',
+             padding: '7vw',
            },
          },
        }).mount();
@@ -176,6 +201,7 @@ if(headerMenu){
                menuPanels.forEach((j)=> {
                   if (j.classList.contains(`${i.value}-content`)){
                      j.classList.add('show');
+                     
 
                   }else{
                      j.classList.remove('show');

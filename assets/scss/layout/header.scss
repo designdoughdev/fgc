@@ -205,8 +205,8 @@ header{
                         }
 
                         a:not(:last-child){
-                            border-right: 1px solid black;
-                            padding-right: 0.3rem;
+                            border-right: 2px solid rgba(black, 0.1);
+                            padding-right: 0.2rem;
                         }
 
                         a:not(:first-child){
@@ -280,6 +280,7 @@ header{
             }
 
             .menu-content{
+                display: none;
                 position: absolute;
                 padding-top: 4rem;
                 height: calc(100% - 4rem);
@@ -290,6 +291,7 @@ header{
                 @include easeintransition;
 
                 &.show{
+                    display: block;
                     opacity: 1;
                 }
 
@@ -365,140 +367,199 @@ header{
 
     //------ Hero Section ---------//
 
-    .hero-container{
+    section.hero-container{
+
+        /*------------------------ Default/ Mobile Styles -------------------------------*/
 
         position: relative;
-        width: 100%;         /* Set width as needed */
-        height: 80vh;       /* Set height as needed */
-        // overflow: hidden;
+        width: 100%;         
+        height: 80vh;       
+      
 
-
-
-    }
-    video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        object-fit: cover;
-    }
-
-    #hero-overlay{
-        position: absolute;
-        height: 106%;
-        width: 100%;
-        top: 0;
-
-        .hero-grid{
-            display: flex;
-            height: 100%;
-            align-items: flex-end;
-            
-
-            &{
-                @include respond-to(md){
-                    @include two_columns; 
-                    align-items: end;
-                 }
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+        }
     
-            }
+        #hero-overlay{
+            position: absolute;
+            height: calc(100% + 3.19rem);
+            width: 100%;
+            top: 0;
     
-            .hero-text-container{
+            .hero-grid{
+                display: flex;
+                height: 100%;
+                align-items: flex-end;
+                
     
-                padding: 3.5vw 4.5vw 3vw 4.5vw;
-    
-                .title-tag{
-                    @include title_tag(white, $yellow);
-                    margin-bottom: 5em;
-    
-                }
-    
-                .heading{
-                    @include h-one;
-                    color: white;
-                    margin-bottom: 0.8em;
-                }
-     
-    
-            }
-
-            .col-right{
-                display: none;
-
                 &{
-                    @include respond-to(lg){
-                        display: flex;
-
-                    }
-                }
-
-                a{
-                    margin-left: 35%;
-                    
-
-                    .hero-video-link-container{
-                        background-color: $lightSkyBlue;
-                        display: grid;
-                        grid-template-columns: 1fr 1.2fr;
-                        gap: 1.5rem;
-                        padding: 1.5rem;
-                        
-                        margin-bottom: 1rem;
-             
-                            .text-half{
-
-                                display: grid;
-                                
-
-                                .text{
-                                    @include h-five;
-                                    display: flex;
-                                    flex-direction: column;
-                                    flex-grow: 1;
-    
-         
-                                 }
-    
-                                .play-btn{
-                                    padding: 0.4rem 0.8rem;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-between;
-                                    // gap: 0.5rem;
-                                    background-color: white;
-                                    flex-grow: 1;
-                                    gap: 0.3rem;
-                                    align-self: end;
-    
-                                    
-                                    
-                                    @include body;
+                    @include respond-to(md){
+                        @include two_columns; 
+                        align-items: end;
+                     }
         
-                                    .play-icon{
-                                        height: 13px;
-                                        width: 18px;
-                                    }
+                }
+        
+                .hero-text-container{
+        
+                    padding: 2rem 1.25rem 3.19rem 1.75rem;
+        
+                    .title-tag{
+                        @include title_tag(white, $yellow);
+                        margin-bottom: 1.87rem;
+                        
+        
+                    }
+        
+                    .heading{
+                        @include h-one;
+                        color: white;
+                        margin-bottom: 2.13rem;
+                    }
+         
+        
+                }
+    
+                .col-right{
+                    display: none;
+    
+                    &{
+                        @include respond-to(lg){
+                            display: flex;
+    
+                        }
+                    }
+    
+                    a{
+                        margin-left: 35%;
+                        
+    
+                        .hero-video-link-container{
+                            background-color: $lightSkyBlue;
+                            display: grid;
+                            grid-template-columns: 1fr 1.2fr;
+                            gap: 2rem;
+                            padding: 1.19rem;
+                            margin-bottom: 1rem;
+    
+                            .img-wrap{
+                                aspect-ratio: 10.2 / 5.8;
+                                height: 100%;
+                                flex-shrink: 0;
+    
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
                                 }
+    
+                            }
+                 
+                                .text-half{
+    
+                                    display: grid;
+                                    
+    
+                                    .text{
+                                        @include h-five;
+                                        display: flex;
+                                        flex-direction: column;
+                                        flex-grow: 1;
+
+                                        p{margin-bottom: 1em;}
+        
+             
+                                     }
+        
+                                    .play-btn{
+                                        padding: 0.4rem 0.8rem;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        // gap: 0.5rem;
+                                        background-color: white;
+                                        flex-grow: 1;
+                                        gap: 0.3rem;
+                                        align-self: end;
+        
+                                        
+                                        
+                                        @include body;
+            
+                                        .play-icon{
+                                            height: 13px;
+                                            width: 18px;
+                                        }
+                                    }
+    
+                                }
+    
+                        }
+        
+    
+                    }
+    
+                    
+    
+                }
+    
+            }
+            
+    
+        }
+
+
+        /*------------------------ Desktop Styles -------------------------------*/
+
+        &{
+
+            @include respond-to(lg){
+
+                #hero-overlay{
+
+                    .hero-grid{
+                        .hero-text-container{
+                        
+                            padding: 3.38rem 4.62rem 4.12rem 3.81rem;
+                            justify-self: start;
+
+                            .title-tag{
+                                margin-bottom: 5.88rem;
+                                // margin-bottom: 4.27rem; // desktop
 
                             }
 
-                    }
-    
-
-                }
-
+                            .heading{
+                                @include h-one;
+                                color: white;
+                                margin-bottom: 2.81rem;
+                                max-width: 39rem;
+                            }
                 
+
+                        }
+                    }
+                }
 
             }
 
         }
         
+        
+
+
+
 
     }
+    
 
 
 }

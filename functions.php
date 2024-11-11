@@ -2,39 +2,44 @@
 
 // Register styles
 
-function adams_wp_starter_register_styles()
+function fgc_register_styles()
 {
 
     $version = wp_get_theme()->get('Version');
 
-    wp_enqueue_style('adams_wp_starter', get_template_directory_uri() . '/dist/scss/main.css', array(), $version);
+    // Main stylesheet
+    wp_enqueue_style('fgc', get_template_directory_uri() . '/dist/scss/main.css', array(), $version);
+
+    // AOS stylesheet
+    wp_enqueue_style('aos', get_template_directory_uri() . '/node_modules/aos/dist/aos.css', array(), '3.0.0'); // Adjust version if needed
 }
 
-add_action('wp_enqueue_scripts', 'adams_wp_starter_register_styles');
+add_action('wp_enqueue_scripts', 'fgc_register_styles');
+
 
 
 // Register scripts
 
-function adams_wp_starter_register_scripts()
+function fgc_register_scripts()
 {
 
     $version = wp_get_theme()->get('Version');
 
-    wp_enqueue_script('adams_wp_starter-main', get_template_directory_uri() . '/dist/js/main.js', array(), $version, true);
+    wp_enqueue_script('fgc-main', get_template_directory_uri() . '/dist/js/main.js', array(), $version, true);
 }
 
-add_action('wp_enqueue_scripts', 'adams_wp_starter_register_scripts');
+add_action('wp_enqueue_scripts', 'fgc_register_scripts');
 
 //------------------------ Theme Support -------------------------------//
 
-function adams_wp_starter_theme_support()
+function fgc_theme_support()
 {
 
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
 }
 
-add_action('after_setup_theme', 'adams_wp_starter_theme_support');
+add_action('after_setup_theme', 'fgc_theme_support');
 
 //------------------------ Custom Functions -------------------------------//
 

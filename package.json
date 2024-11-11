@@ -2,7 +2,6 @@
   "name": "parcel-scss",
   "version": "1.0.0",
   "description": "",
-
   "scripts": {
     "start": "parcel assets/scss/main.scss assets/js/main.js --dist-dir dist --public-url ./ && npm parcel cache clean",
     "build": "parcel build assets/scss/main.scss assets/js/main.js --dist-dir dist --public-url ./ && npm parcel cache clean"
@@ -17,6 +16,8 @@
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
-    "alpinejs": "^3.14.3"
+    "alpinejs": "^3.14.3",
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4"
   }
 }

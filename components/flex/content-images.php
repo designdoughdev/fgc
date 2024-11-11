@@ -17,9 +17,9 @@
 
 ?>
 <section class="section_images row-<?php // echo $row; 
-                                    ?>">
+                                    ?>" data-aos="fade-left" data-aos-anchor-placement="top-bottom">
 
-    <div class="splide images-carousel container section-wrapper" aria-label="Image Gallery">
+    <div class="splide images-carousel container_big section-wrapper" aria-label="Image Gallery">
 
         <div class="text-container">
             <p class="title-tag">In action</p>
@@ -38,15 +38,19 @@
 
         <div class="splide__track">
             <ul class="splide__list">
-                <li class="splide__slide relative"><img src="https://picsum.photos/2000/1333" alt="">
+                <li class="splide__slide relative"><img
+                        src="<?php echo get_template_directory_uri() . '/assets/images/jpg/kids.jpg' ?>" alt="">
                     <p class="caption light-navy">Lorem ipsum dolor sit amet,</p>
                 </li>
-                <li class="splide__slide"><img src="https://picsum.photos/2000/1333" alt="">
-                    <p class="caption light-mint">Lorem ipsum dolor sit amet,</p>
+                <li class="splide__slide relative"><img
+                        src="<?php echo get_template_directory_uri() . '/assets/images/jpg/kids.jpg' ?>" alt="">
+                    <p class="caption light-navy">Lorem ipsum dolor sit amet,</p>
                 </li>
-                <li class="splide__slide"><img src="https://picsum.photos/2000/1333" alt="">
-                    <p class="caption mid-sky">Lorem ipsum dolor sit amet,</p>
+                <li class="splide__slide relative"><img
+                        src="<?php echo get_template_directory_uri() . '/assets/images/jpg/kids.jpg' ?>" alt="">
+                    <p class="caption light-navy">Lorem ipsum dolor sit amet,</p>
                 </li>
+
             </ul>
         </div>
     </div>

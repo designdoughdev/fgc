@@ -14,7 +14,7 @@
 
         <div class="postcode-search-wrapper">
             <div class="img-wrapper">
-                <img src="https://picsum.photos/800/400" alt="">
+                <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/train.jpg" ?> alt="">
             </div>
 
 

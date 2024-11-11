@@ -4,6 +4,8 @@
 
 
 
+
+
 // font imports // 
 
 
@@ -24,7 +26,7 @@
 
 @font-face {
     font-family: 'Messina Sans';
-    src: url('/assets/fonts/MessinaSans-Regular.otf') format('embedded-opentype');
+    src: url('/assets/fonts/MessinaSans-Book.otf') format('embedded-opentype');
 
     font-weight: 400;
     font-style: normal;
@@ -40,7 +42,7 @@
 }
 @font-face {
     font-family: 'Messina Sans';
-    src: url('/assets/fonts/MessinaSans-SemiBold.otf') format('embedded-opentype');
+    src: url('/assets/fonts/MessinaSans-Book.otf') format('embedded-opentype');
 
     font-weight: 500;
     font-style: normal;
@@ -66,72 +68,76 @@
 
 
 
+
+// Mixin for responsive font size using clamp with min and max values
+// $min-font-size: Minimum font size in rem for small screens
+// $max-font-size: Maximum font size in rem for larger screens
+
+
+@mixin responsiveFontSize($min-font-size, $max-font-size) {
+	
+	font-size: $min-font-size;
+	
+	@include respond-to(md){
+		font-size: clamp($min-font-size, $min-font-size + 1vw, $max-font-size);
+
+	}
+	@include respond-to(xl){
+		font-size: $max-font-size;
+	}
+  }
+  
+
+// Mixin to convert letter-spacing from rem to em
+// $letter-spacing-rem: The letter spacing in rem based on a 16px root font size
+// $font-size: The font size of the element in rem
+
+@mixin letterSpacingEm($letter-spacing-rem, $font-size) {
+	// Calculate the letter-spacing in em based on the font size
+	letter-spacing: #{$letter-spacing-rem / $font-size}em;
+  }
+
+
+
+
 // global type variables
 $primary-font: 'Messina Sans', sans-serif;
 $secondary-font: "Chivo Mono", monospace;
 
 // font hierachy
-$hone : 60;
+
 @mixin h-one{
+	@include responsiveFontSize(2.0625rem, 3.75rem); // font size
+	@include letterSpacingEm(-0.1125rem, 3.75rem);
 	font-family: $primary-font;
-    font-size: $hone + px;
-	line-height: 1.05em;
+	font-style: normal;
 	font-weight: 700;
-	letter-spacing: -0.03em;
+	line-height: 100%; 
 	color: $darkNavy;
-	-webkit-font-smoothing: antialiased;
-	@include respond-to('md') {
-	    font-size: $hone * 0.6 + px;
-	}
-	@include respond-to('lg') {
-	    font-size: $hone * 0.8 + px;
-	}
-	@include respond-to('xl') {
-	    font-size: $hone + px;
-	}
-	@include respond-to(tablet) {
-	    font-size: $hone * 0.6 + px;
-	}
-	@include respond-to(mobile) {
-		font-size: $hone * 0.6 + px;
-	}
-	@include respond-to(sm) {
-		font-size: $hone * 0.6 + px;
-	}	
+	-webkit-font-smoothing: antialiased;	
 }
 
 .h1, .large-header {
 	@include h-one;
 }
 
+
+.h1, .large-header {
+	@include h-one;
+}
+
 // h2: used for headings in all flexes underneath the page header, which uses h1
-$htwo : 45;
+
 @mixin h-two {
 	font-family: $primary-font;
-    font-size: $htwo + px;
-	line-height: 1.05em;
+	@include responsiveFontSize(1.5625rem, 2.8125rem); // font size
+	@include letterSpacingEm(-0.04688rem, 1.5625rem);
+	line-height: 104.4%;
 	font-weight: 700;
-	letter-spacing: -0.03em;
+	font-style: normal;
 	color: $darkNavy;
 	-webkit-font-smoothing: antialiased;
-	@include respond-to(md) {
-	    font-size: $htwo * 0.6 + px;
-	}
-	@include respond-to(lg) {
-	    font-size: $htwo * 0.9 + px;
-	}
-	@include respond-to(xl) {
-	    font-size: $htwo + px;
-	}
-	@include respond-to(tablet) {
-	    font-size: $htwo * 0.8 + px;
-	}
-	@include respond-to(mobile) {
-	    font-size: $htwo * 0.6 + px;
-	}
-	@include respond-to(sm) {
-	    font-size: $htwo * 0.6 + px;
-	}
+
 }
 
 .h2, .large-header {
@@ -281,31 +287,13 @@ $hfive : 14;
 
 @mixin h-five{
 	font-family: $secondary-font;
-    font-size: $hfive + px;
-	line-height: 1.8em;
+	@include responsiveFontSize(0.75rem, 0.9375rem); 
+	line-height: normal;
 	font-weight: 300;
-	// letter-spacing: -0.03em;
 	color: $darkNavy;
 	text-transform: uppercase;
 	-webkit-font-smoothing: antialiased;
-	@include respond-to(md) {
-	    font-size: $hfive * 0.8 + px;
-	}
-	@include respond-to(lg) {
-	    font-size: $hfive * 0.9 + px;
-	}
-	@include respond-to(xl) {
-	    font-size: $hfive + px;
-	}
-	@include respond-to(tablet) {
-	    font-size: $hfive * 0.8 + px;
-	}
-	@include respond-to(mobile) {
-	    font-size: $hfive * 0.7 + px;
-	}
-	@include respond-to(sm) {
-	    font-size: $hfive * 0.7 + px;
-	}	
+
 }
 
 .h5 {
@@ -354,34 +342,14 @@ blockquote {
 }
 
 
-$para : 15;
+
 
 @mixin body{
  	font-family: $primary-font;
-    font-size: $para + px;
-    line-height: 1.6em;
+    font-size: 0.72727rem;
+    line-height: 1.04545rem;
 	-webkit-font-smoothing: antialiased;
 	color: $darkNavy;
-
-	@include respond-to('md') {
-	    font-size: $para * 0.6 + px;
-	}
-	@include respond-to('lg') {
-	    font-size: $para * 0.9 + px;
-	}
-	@include respond-to('xl') {
-	    font-size: $para + px;
-	}
-	@include respond-to(tablet) {
-	    font-size: $para * 0.7 + px;
-	}
-	@include respond-to(mobile) {
-		font-size: $para * 0.7 + px;
-	}
-	@include respond-to(sm) {
-		font-size: $para * 0.7 + px;
-	}	
-
 
 }
 

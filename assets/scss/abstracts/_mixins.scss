@@ -125,7 +125,7 @@ $bigperpad: $px0 $v10;
 ================================================== */
 
 @mixin border_radius {
-    border-radius: 0.15rem;
+    border-radius: 0.13636rem;
     // overflow: hidden;
 }
 
@@ -358,17 +358,16 @@ body {
 // splits the screen into 64 columns
 $conpad : 1.5625vw;
 
-// @mixin bigcontainer {
-//     // todo: width method or padding method?
-//     // padding: calc(100vw - #{$conpad * 2});
-//     position: relative;
-//     margin: $zeroauto;
-//     max-width: 2000px;
-// }
+@mixin bigcontainer {
+    width: 94vw;
+    position: relative;
+    margin: $zeroauto;
+    max-width: 2000px;
+}
 
 @mixin container {
     
-    width: 88vw;
+    width: 90vw;
     position: relative;
     margin: $zeroauto;
     
@@ -405,6 +404,10 @@ $conpad : 1.5625vw;
 
 .container_small {
     @include smallcontainer;
+}
+
+.container_big{
+    @include bigcontainer;
 }
 
 
@@ -555,7 +558,7 @@ $conpad : 1.5625vw;
         display: grid;
         grid-template-columns: 1fr 1fr;
         // the gap is a stand-in for padding.
-        gap: 100px;
+        gap: 4.545rem;
         .title_wrap {
             padding: 100px 0;
             width: 80%;
@@ -1206,25 +1209,28 @@ $conpad : 1.5625vw;
 
     @include buttonsimple;
     @include border_radius;
-    font-weight: 600;
-    padding: 0.5em 0.4em 0.5em 1em;
+    font-weight: 500;
+    padding: 0.23rem 0.23rem 0.23rem 0.91rem;
     display: inline-flex;
+    height: 2.045rem;
+    width: fit-content;
     align-items: center;
     gap: 1.2em;
-    margin-right: 0.2em;
+    margin-right: 0.41rem;
     
     &:after{
         content: "";
         display: inline-block; 
         background-image: url('/assets/images/svg/arrow-right.svg'); 
-        background-size: contain; 
+        background-size: auto; 
         background-repeat: no-repeat;
         background-color: white;
-        height: 11px;
-        width: 10px;
-        
+        align-self: stretch;
+        height: 100%;
+        aspect-ratio: 1;
+        background-position: center;
+ 
         @include border_radius;
-        border: 0.4em solid white;
        
     }
 }
@@ -1304,9 +1310,11 @@ $conpad : 1.5625vw;
 @mixin btn-menu{
     @include border_radius;
     border: none;
-    font-size: 18px;
+    font-size: .818rem;
     font-weight: 600;
-    padding: 0.44em 1.38em;
+    line-height: normal;
+    letter-spacing: -0.02455rem;
+    padding: 0.36em 1.14em;
     cursor: pointer;
 }
 
@@ -1949,15 +1957,21 @@ body[data-theme='light'] {
     text-transform: uppercase;
     color: $textColour;
     margin-bottom: $px15;
+    position: relative;
+    padding-left: 0.59727rem;
+    text-indent: -0.59727rem;
+
     &:before{
-        height: 0.5rem;
-        width: 0.5rem;
-        background-color: white;
+        height: 0.22727rem;
+        width: 0.22727rem;
         content: '';
+        vertical-align: middle;
         border-radius: 0.75rem;
         display: inline-block;
-        margin-right: 0.6rem;
+        margin-right: 0.37rem;
         background-color:$dotColour;
+
+
     } 
 }
 
@@ -1971,7 +1985,7 @@ body[data-theme='light'] {
     .body{
         margin-bottom: 1.5em;
     }
-    .btn{
+    a.btn{
         margin: 0.7em 0 1.5rem 0;
     }
 }
@@ -1979,6 +1993,15 @@ body[data-theme='light'] {
 @mixin caption{
     @include h-five;
     padding: 0.9em 0.85em;
+    
+}
+
+@mixin captionTwo{
+    @include h-five;
+    padding: 0.9em 0.85em;
+    font-family: $primary-font;
+    font-weight: 600;
+    text-transform: none;
     
 }
 
@@ -2030,6 +2053,8 @@ body[data-theme='light'] {
         }
     }
 }
+
+
 
 /*------------------------ Card colour styles -------------------------------*/
 
@@ -2210,22 +2235,75 @@ body[data-theme='light'] {
     }
 
 
-    // full image layout
-    &.full-image-layout{
-        .text-content{
-            background-color: $lightSkyBlue;
-        }
-    }
-
+    
     &.full-colour-layout{
         background-color: $cobaltBlue;
         .title-tag{
             @include title_tag(white, $skyBlue);
         }
     }
+
+
 }
 
 .blue-style{
     @include BlueStyle;
     
 }
+
+@mixin NavyStyle{
+    background-color: $lightNavy;
+
+    .title-tag{
+        @include title_tag($darkNavy, $darkNavy);
+    }
+                    
+    .tag{
+        background-color: $midNavy;
+    }
+
+    a.btn{
+        background-color: $darkNavy;
+        color: white;
+    }
+
+    svg path{
+        fill: $darkNavy;
+    }
+
+    .caption{
+        background-color: $lightSkyBlue;
+    }
+
+    // wayfinder-rows
+    .arrow-container{
+        background-color: $darkNavy;
+
+        svg{
+            path{
+                fill: $lightNavy;
+            }
+        }
+    }
+
+    .triangle{
+        background-color: $lightNavy;
+    }
+
+
+    // full image layout
+    &.full-image-layout{
+        .text-content{
+            background-color: $lightNavy;
+        }
+    }
+
+
+}
+
+
+.navy-style{
+    @include NavyStyle;
+    
+}
+
