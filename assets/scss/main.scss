@@ -1,3 +1,5 @@
+
+
 @use 'abstracts';
 @use 'base';
 @use 'components';
@@ -7,6 +9,9 @@
 
 // Splide
 @import '/node_modules/@splidejs/splide/dist/css/splide-core.min.css';
+//Aos
+@import '../../node_modules/aos/dist/aos.css';
+
 
 
   

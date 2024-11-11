@@ -10,8 +10,8 @@ function fgc_register_styles()
     // Main stylesheet
     wp_enqueue_style('fgc', get_template_directory_uri() . '/dist/scss/main.css', array(), $version);
 
-    // AOS stylesheet
-    wp_enqueue_style('aos', get_template_directory_uri() . '/node_modules/aos/dist/aos.css', array(), '3.0.0'); // Adjust version if needed
+    // // AOS stylesheet
+    // wp_enqueue_style('aos', get_template_directory_uri() . '/node_modules/aos/dist/aos.css', array(), '3.0.0'); // Adjust version if needed
 }
 
 add_action('wp_enqueue_scripts', 'fgc_register_styles');
