@@ -1,0 +1,25 @@
+.section_placeholder {
+    @include sections_padding;
+    .container {
+        .title_wrap {
+            padding-bottom: 40px;
+        }
+        .placeholder_wrap {
+            @include border_radius_top;
+            width: 100%;
+            height: 50vw;
+            color: $white;
+            background-image: linear-gradient(
+                45deg, 
+                rgba(0,0,0,0.5) 25%, 
+                transparent 25%, 
+                transparent 50%, 
+                rgba(0,0,0,0.5) 50%, 
+                rgba(0,0,0,0.5) 75%, 
+                transparent 75%, 
+                transparent
+                );
+            background-size: 50px 50px;
+        }
+    }
+}

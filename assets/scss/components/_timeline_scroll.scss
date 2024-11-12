@@ -1,0 +1,95 @@
+.section_timeline_scroll {
+    @include sections_padding_large;
+    .container {
+        .title_wrap {
+            display: flex;
+            text-align: center;
+            gap: 30px;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            position: sticky;
+            top: 30vh;
+            @include respond-to('md') {
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .timeline_grid {
+        display: grid;
+        gap: 20px;
+        @include respond-to('lg') {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+        .timeline_stage {
+            @include transition;
+            @include border_radius_small;
+            height: auto;
+            box-shadow: 0 0 5px #676363;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            position: sticky;
+            top: 20vh;
+            min-height: 400px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            @include respond-to('xl') {
+                top: 10vh;
+            }
+            .stage_title_wrap {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                text-transform: uppercase;
+                .stage_icon {
+                    width: 30%;
+                    height: auto;
+                    @include transition;
+                    &.pink {
+                        filter: invert(1) sepia(22%) saturate(8003%) hue-rotate(291deg) brightness(78%) contrast(270%);
+                        @include transition;
+                    }
+                }
+                @include respond-to('xl') {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .stage_icon {
+                        width: 100%;
+                    }
+                    .stage_title {
+                        font-size: 30px;
+                    }
+                }
+            }
+            .stage_body_text {
+                ul {
+                    margin-top: 20px;
+                    li {
+
+                        list-style-type: none;
+                        margin-left: 0;
+                        font-weight: 400;
+                        &:before {
+                            content: "+";
+                            margin-right: 4px;
+                        }
+                    }
+                }
+            }
+            
+            @for $i from 1 through 6 {
+                &:nth-child(#{$i}) {
+                  grid-row: #{$i + 1};
+                  grid-column: #{$i};
+                }
+            }
+        }
+    }
+}

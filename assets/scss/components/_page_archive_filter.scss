@@ -1,0 +1,25 @@
+.page_archive_filter{
+    margin-bottom: 0px;
+    z-index: 1;
+    .posts_layout_wrapper {
+        &.post_grid {
+            // this is the archive page, not the aggregator, so let's call the grid class
+            @include post_grid;
+            @include container;
+            .post_row {
+                display: none;
+            }
+        }
+        
+        &.post_rows {
+            // this is the archive page, not the aggregator, so let's call the row class
+            @include post_rows;
+            .grid_cell {
+                display: none;
+            }
+        }
+    }
+    // &.black_bg {
+    //     background-color: $offblack;
+    // }
+}

@@ -1,0 +1,61 @@
+.section_accordion {
+    @include sections_padding;
+    .accord_container {
+        &.grid {
+            .accord_wrap {
+                @include respond-to('lg') {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 0.1fr;
+                    padding: 20px 0px;
+                }
+            }
+        }
+        &.standard {
+
+        }
+        .accord_wrap {
+            @include transition;
+            width: 100%;
+            border-top: solid 1px $grey;
+            &:last-child {
+                border-bottom: solid 1px $grey;
+            }
+            .accord_head {
+                position: relative;
+                padding: 15px 0px 1px 20px;
+                @include shorttransition;
+                // cursor: pointer;
+            }
+            .accord_body {
+                height: auto;
+                max-height: 1px;
+                overflow: hidden;
+                opacity: 0;
+                padding: 15px 0px 1px 20px;
+                @include transition;
+            }
+            .accord_image_wrap {
+                .accordion_down_arrow {
+                    height: 44px;
+                    transform: rotateZ(-180deg);
+                    @include shorttransition;
+                }
+            }
+            &:hover {
+                background-color: $offblack;
+                @include transition;
+            }
+            &.active {
+                @include transition;
+                .accord_body {
+                    max-height: 2000px;
+                    padding-bottom: 40px;
+                    opacity: 1;
+                }
+                .accordion_down_arrow {
+                    transform: rotateZ(0deg);
+                }
+            }
+        }
+    }
+}

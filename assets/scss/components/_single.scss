@@ -1,0 +1,197 @@
+.back_to_all_wrap_fixed {
+    position: fixed;
+    top: 210px;
+    align-items: center;
+    gap: 15px;
+    z-index: 0;
+    opacity: 0;
+    display: none;
+    @include respond-to('lg') {
+        display: flex;
+    }
+    img {
+        max-width: 24px;
+    }
+    p {
+        color: black;
+        margin-top: 4px;
+    }
+    &.hide {
+        opacity: 0;
+        @include shorttransition;
+    }
+}
+
+.single_page_header {
+    padding-top: 200px;
+    h2 {
+        text-transform: none;
+    }
+    .title_bar {
+        @include title_bar;
+        border-color: $white;
+        
+    }
+    .title_box {
+        .title_wrap {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 0.5fr 1fr;
+            @include respond-to('lg') {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 50px;
+                line-height: 0.8;
+                grid-column: 1 /span 2;
+                @include respond-to('lg') {
+                    font-size: 70px;
+                }
+                span {
+                    letter-spacing: -6px;
+                }
+            }
+            .back_to_all_wrap {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                z-index: 1;
+                order: -1;
+                img {
+                    max-width: 24px;
+                }
+                p {
+                    color: black;
+                    margin-top: 4px;
+                }
+                @include respond-to('lg') {
+                    display: none;
+                }
+            }
+            
+            .author_wrap {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                justify-content: end;
+                order: -1;
+                p {
+                    text-transform: uppercase;
+                }
+                .user_avatar_wrap img {
+                    border-radius: 50%;
+                    max-width: 40px;
+                }
+                @include respond-to('lg') {
+                    grid-column: 1;
+                    order: unset;
+                    justify-content: start;
+                }
+            }
+        }
+    }
+}
+.image_container {
+    .featured_image_wrap {
+        background-size: cover;
+        max-height: 360px;
+        @include respond-to('lg') {
+            min-height: 600px;
+            width: 100%;
+        }
+        @include border_radius_small;
+    }
+}
+
+.simple_post {
+    @include sections_padding;
+    z-index: -1;
+    .post_content_wrap {
+        width: 100%;
+        p {
+            font-size: 20px;
+            font-weight: 200;
+            line-height: normal;
+            letter-spacing: normal;
+            @include respond-to('lg') {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.other_posts {
+    @include sections_padding;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    .title_bar {
+        @include title_bar
+    }
+    .title_wrap {
+        @include title_box
+    }
+    padding-bottom: 60px;
+    // styles for rows
+    .post_rows {
+        @include post_rows;
+    }
+
+    // styles for grid
+    .post_grid {
+        @include post_grid;
+        // @include post_slider;
+        &.four_columns {
+            @include respond-to('md') {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+            @include respond-to('lg') {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 20px;
+            }
+            .grid_cell {
+                // overwrite the 6vh of the 2 column grid cells. 
+                @include respond-to('lg') {
+                    height: 400px;
+                }
+                .overlay_image_wrapper {
+                    height: 65%;
+                    @include shorttransition;
+                    background-size: 140%;
+                }
+                .text_wrapper {
+                    display: flex;
+                    gap: 14px;
+                    flex-direction: column;
+                    justify-content: start;
+                    height: 25%;
+                    h3 {
+                        @include h-four;
+                    }
+                    @include respond-to('lg') {
+                        padding: 0;
+                        justify-content: space-between;
+                        height: 30%;
+                    }
+                    .meta_wrapper {
+                        display: flex;
+                        gap: 20px;
+                    }
+                }
+                &:hover {
+                    .overlay_image_wrapper {
+                        opacity: 1;
+                        background-size: 150%;
+                        @include shorttransition;
+                    }
+                }
+            }
+        }
+
+    }
+
+    // styles for editorial layout
+    .posts_editorial {
+        @include posts_editorial;
+    }
+}
