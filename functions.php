@@ -38,25 +38,169 @@ function fgc_theme_support()
 
 add_action('after_setup_theme', 'fgc_theme_support');
 
-//------------------------ Custom Functions -------------------------------//
+// add_filter( 'query_vars', 'addnew_query_vars_blogs', 10, 1 );
+/* include functions */
 
-// Save ACF JSON files to a specific folder in your theme
-function my_acf_json_save_point($path)
-{
-    // Update path to 'acf-json' folder in your theme
-    $path = get_stylesheet_directory() . '/acf-json';
-    return $path;
+
+//------------------------ Includes -------------------------------//
+
+// require get_parent_theme_file_path('/inc/admincss.php');
+// require get_parent_theme_file_path('/inc/comments.php');
+// require get_parent_theme_file_path('/inc/contactform.php');
+// require get_parent_theme_file_path('/inc/responsiveimages.php');
+// require get_parent_theme_file_path('/inc/siteoptions.php');
+// require get_parent_theme_file_path('/inc/customposttypes.php');
+// require get_parent_theme_file_path('/inc/disableadminbar.php');
+// require get_parent_theme_file_path('/inc/posttonews.php');
+// require get_parent_theme_file_path('/inc/excerpt-length.php');
+
+require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
+
+
+
+
+
+// ACF field syncing
+
+// Only run if ACF is active
+if (function_exists('acf')) {
+
+    // Define the ACF JSON directory
+    define('MY_ACF_JSON_DIR', get_stylesheet_directory() . '/acf-json');
+
+    // Create the ACF JSON directory if it doesn't exist
+    function my_acf_create_json_dir()
+    {
+        if (!file_exists(MY_ACF_JSON_DIR)) {
+            mkdir(MY_ACF_JSON_DIR, 0755, true);
+        }
+    }
+    add_action('after_setup_theme', 'my_acf_create_json_dir');
+
+    // Save ACF JSON files to a specific folder in your theme
+    function my_acf_json_save_point($path)
+    {
+        return MY_ACF_JSON_DIR;
+    }
+    add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+
+    // Load ACF JSON files from a specific folder in your theme
+    function my_acf_json_load_point($paths)
+    {
+        array_unshift($paths, MY_ACF_JSON_DIR);
+        return $paths;
+    }
+    add_filter('acf/settings/load_json', 'my_acf_json_load_point');
 }
-add_filter('acf/settings/save_json', 'my_acf_json_save_point');
 
-// Load ACF JSON files from a specific folder in your theme
-function my_acf_json_load_point($paths)
+
+//------------------------ DD theme -------------------------------//
+
+
+
+
+// if( function_exists('acf_add_options_page') ) {
+//     acf_add_options_page();
+// }
+
+// /* Actions and Filters */
+// add_action( 'wp_enqueue_scripts', 'starkers_script_enqueuer' );
+// add_filter( 'body_class', function( $classes ) {
+// 	return array_merge( $classes, array( 'class-name' ) );
+// } );
+
+
+
+
+// function addnew_query_vars($vars) {
+// 	$vars[] = 'designdough-portfolio'; // c is the name of variable you want to add
+// 	//	$vars[] = 'c'; // c is the name of variable you want to add
+// 	return $vars;
+// }
+// add_filter( 'query_vars', 'addnew_query_vars', 10, 1 );
+
+
+// function addnew_query_vars_blogs($vars) {
+// 	$vars[] = 'designdough-blogs'; // c is the name of variable you want to add
+// 	//	$vars[] = 'c'; // c is the name of variable you want to add
+// 	return $vars;
+// }
+
+
+
+
+// format the clock
+$timezone = new DateTimeZone('Europe/London');
+
+
+
+// add svg support
+function add_file_types_to_uploads($file_types)
 {
-    // Clear the default load path
-    unset($paths[0]);
-
-    // Update path to 'acf-json' folder in your theme
-    $paths[] = get_stylesheet_directory() . '/acf-json';
-    return $paths;
+    $new_filetypes = array();
+    $new_filetypes['svg'] = 'image/svg+xml';
+    $file_types = array_merge($file_types, $new_filetypes);
+    return $file_types;
 }
-add_filter('acf/settings/load_json', 'my_acf_json_load_point');
+add_filter('upload_mimes', 'add_file_types_to_uploads');
+
+//------------------------ Plugin Management -------------------------------//
+
+add_action('tgmpa_register', 'dd_theme_register_required_plugins');
+
+function dd_theme_register_required_plugins()
+{
+    $plugins = array(
+        // ACF Pro - Packaged with the theme as a ZIP file
+        array(
+            'name'      => 'Advanced Custom Fields Pro',
+            'slug'      => 'advanced-custom-fields-pro',
+            'source'    => get_template_directory() . '/plugins/advanced-custom-fields-pro.zip', // Path to bundled ZIP
+            'required'  => true,  // This plugin is required
+        ),
+        // Duplicator Pro - Packaged with the theme as a ZIP file
+        array(
+            'name'      => 'Duplicator Pro',
+            'slug'      => 'duplicator-pro',
+            'source'    => get_template_directory() . '/plugins/duplicator-pro.zip',
+            'required'  => false,  // Optional plugin
+        ),
+        // Contact Form 7 - Available in the WordPress repository
+        array(
+            'name'      => 'Contact Form 7',
+            'slug'      => 'contact-form-7',
+            'required'  => false,  // Optional plugin
+        ),
+    );
+
+    $config = array(
+        'id'           => 'dd_theme',
+        'default_path' => '',
+        'menu'         => 'tgmpa-install-plugins',
+        'parent_slug'  => 'themes.php',
+        'capability'   => 'edit_theme_options',
+        'has_notices'  => true,
+        'dismissable'  => true,
+    );
+
+    tgmpa($plugins, $config);
+}
+
+// Automatically activate required plugins after theme switch
+function dd_theme_activate_required_plugins()
+{
+    // Define the paths for each required plugin's main file
+    $required_plugins = array(
+        'advanced-custom-fields-pro/acf.php',   // ACF Pro
+        'duplicator-pro/duplicator-pro.php',    // Duplicator Pro
+        'contact-form-7/wp-contact-form-7.php', // Contact Form 7
+    );
+
+    // Loop through each plugin and activate it if it's not active
+    foreach ($required_plugins as $plugin_path) {
+        if (file_exists(WP_PLUGIN_DIR . '/' . $plugin_path) && !is_plugin_active($plugin_path)) {
+            activate_plugin($plugin_path);
+        }
+    }
+}
+add_action('after_switch_theme', 'dd_theme_activate_required_plugins');
