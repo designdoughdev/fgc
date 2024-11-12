@@ -5033,6 +5033,389 @@ section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link
   z-index: 20;
 }
 
+section.section_text {
+  padding: 7vw 0;
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text {
+    padding: 5vw 0;
+  }
+}
+
+section.section_text .flex-content .title-tag {
+  color: #112343;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-indent: -.59727rem;
+  margin-bottom: 1.7em;
+  padding-left: .59727rem;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+  position: relative;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .flex-content .title-tag {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text .flex-content .title-tag {
+    font-size: .9375rem;
+  }
+}
+
+section.section_text .flex-content .title-tag:before {
+  content: "";
+  vertical-align: middle;
+  background-color: #2a5ad5;
+  border-radius: .75rem;
+  width: .22727rem;
+  height: .22727rem;
+  margin-right: .37rem;
+  display: inline-block;
+}
+
+section.section_text .flex-content .text-editor > * {
+  margin-bottom: 1em;
+}
+
+section.section_text .flex-content .text-editor h1 {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  font-family: Messina Sans, sans-serif;
+  font-size: 2.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .flex-content .text-editor h1 {
+    font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text .flex-content .text-editor h1 {
+    font-size: 3.75rem;
+  }
+}
+
+section.section_text .flex-content .text-editor h2 {
+  letter-spacing: -.0300032em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  font-family: Messina Sans, sans-serif;
+  font-size: 1.5625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 104.4%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .flex-content .text-editor h2 {
+    font-size: clamp(1.5625rem, 1.5625rem + 1vw, 2.8125rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text .flex-content .text-editor h2 {
+    font-size: 2.8125rem;
+  }
+}
+
+section.section_text .flex-content .text-editor h3 {
+  letter-spacing: -.03em;
+  color: #2a5ad5;
+  -webkit-font-smoothing: antialiased;
+  font-family: Messina Sans, sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.05em;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .flex-content .text-editor h3 {
+    font-size: 30.4px;
+  }
+}
+
+@media only screen and (width >= 1200px) {
+  section.section_text .flex-content .text-editor h3 {
+    font-size: 34.2px;
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text .flex-content .text-editor h3 {
+    font-size: 38px;
+  }
+}
+
+@media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
+  section.section_text .flex-content .text-editor h3 {
+    font-size: 30.4px;
+  }
+}
+
+@media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
+  section.section_text .flex-content .text-editor h3 {
+    font-size: 26.6px;
+  }
+}
+
+@media only screen and (width <= 768px) {
+  section.section_text .flex-content .text-editor h3 {
+    font-size: 26.6px;
+  }
+}
+
+section.section_text .flex-content .text-editor h4 {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  font-family: Messina Sans, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 104%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .flex-content .text-editor h4 {
+    font-size: clamp(1.2rem, 1.2rem + 1vw, 1.75rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text .flex-content .text-editor h4 {
+    font-size: 1.75rem;
+  }
+}
+
+section.section_text .flex-content .text-editor h5 {
+  color: #112343;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .flex-content .text-editor h5 {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text .flex-content .text-editor h5 {
+    font-size: .9375rem;
+  }
+}
+
+section.section_text .flex-content .text-editor h6 {
+  color: #112343;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  font-family: Messina Sans, sans-serif;
+  font-size: 11px;
+  font-weight: 200;
+  line-height: 1em;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .flex-content .text-editor h6 {
+    font-size: 8.8px;
+  }
+}
+
+@media only screen and (width >= 1200px) {
+  section.section_text .flex-content .text-editor h6 {
+    font-size: 9.9px;
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text .flex-content .text-editor h6 {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
+  section.section_text .flex-content .text-editor h6 {
+    font-size: 8.8px;
+  }
+}
+
+@media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
+  section.section_text .flex-content .text-editor h6 {
+    font-size: 7.7px;
+  }
+}
+
+@media only screen and (width <= 768px) {
+  section.section_text .flex-content .text-editor h6 {
+    font-size: 7.7px;
+  }
+}
+
+section.section_text .flex-content .text-editor p {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  font-family: Messina Sans, sans-serif;
+  font-size: .8rem;
+  line-height: 143%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .flex-content .text-editor p {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text .flex-content .text-editor p {
+    font-size: 1rem;
+  }
+}
+
+section.section_text .flex-content .text-editor blockquote {
+  background-color: #daf6fc;
+  border-radius: .13636rem;
+  padding: .5em .75em .55em;
+  font-weight: 700;
+}
+
+section.section_text .flex-content .text-editor strong, section.section_text .flex-content .text-editor b, section.section_text .flex-content .text-editor em, section.section_text .flex-content .text-editor i {
+  font-weight: 700;
+}
+
+section.section_text .flex-content .text-editor ol, section.section_text .flex-content .text-editor ul, section.section_text .flex-content .text-editor li {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  font-family: Messina Sans, sans-serif;
+  font-size: .8rem;
+  line-height: 143%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .flex-content .text-editor ol, section.section_text .flex-content .text-editor ul, section.section_text .flex-content .text-editor li {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text .flex-content .text-editor ol, section.section_text .flex-content .text-editor ul, section.section_text .flex-content .text-editor li {
+    font-size: 1rem;
+  }
+}
+
+section.section_text .flex-content .text-editor ul li {
+  margin-left: 1rem;
+  list-style-type: disc;
+}
+
+section.section_text .flex-content .text-editor ol li {
+  margin-left: 1rem;
+  list-style-type: decimal;
+}
+
+section.section_text .flex-content .text-editor ol li::marker {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  font-family: Messina Sans, sans-serif;
+  font-size: 2.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .flex-content .text-editor ol li::marker {
+    font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text .flex-content .text-editor ol li::marker {
+    font-size: 3.75rem;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .flex-content .text-editor ol li::marker {
+    letter-spacing: -.0300032em;
+    color: #112343;
+    -webkit-font-smoothing: antialiased;
+    font-family: Messina Sans, sans-serif;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 104.4%;
+  }
+}
+
+@media only screen and (width >= 768px) and (width >= 768px) {
+  section.section_text .flex-content .text-editor ol li::marker {
+    font-size: clamp(1.5625rem, 1.5625rem + 1vw, 2.8125rem);
+  }
+}
+
+@media only screen and (width >= 768px) and (width >= 1600px) {
+  section.section_text .flex-content .text-editor ol li::marker {
+    font-size: 2.8125rem;
+  }
+}
+
+section.section_text .flex-content .text-editor li:last-child {
+  padding-bottom: .5rem;
+}
+
+section.section_text .flex-content .text-editor a {
+  color: #112343;
+  -o-transition: .4s;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all .4s;
+  position: relative;
+}
+
+section.section_text .flex-content .text-editor a:before {
+  content: "";
+  -o-transition: .4s;
+  width: 0%;
+  height: 1px;
+  transition: all .4s;
+  position: absolute;
+  bottom: 0;
+}
+
+section.section_text .flex-content .text-editor a:hover {
+  -o-transition: .4s;
+  transition: all .4s;
+}
+
+section.section_text .flex-content .text-editor a:hover:before {
+  -o-transition: .4s;
+  width: 100%;
+  transition: all .4s;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .flex-content {
+    max-width: 75%;
+  }
+}
+
 header .header-bar {
   z-index: 99;
   position: relative;

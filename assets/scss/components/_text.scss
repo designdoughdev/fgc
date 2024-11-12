@@ -1,64 +1,132 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
 
-.section_text {
+section.section_text {
     @include sections_padding;
-    .container {
-        .title_bar {
-            @include title_bar;
-            // overwrite regular title bar padding
-            padding-bottom: 10px;
-        }
-        .title_box {
-            @include title_box;
-            .glance_box {
-                min-width: 250px;
-            }
-        }
-        .text_no_cols { 
-           .no_col_title {
 
-           }
-           .no_col_body {
-                @include respond-to('lg') {
-                    width: 50%;
+    .flex-content{
+
+        /*------------------------ Default/Mobile Stlyes -------------------------------*/
+
+
+        .title-tag{
+            @include title_tag($darkNavy, $cobaltBlue);
+            margin-bottom: 1.7em;
+        }
+    
+        // text editor styling
+    
+        .text-editor{
+    
+            & > * {
+                margin-bottom: 1em;
+            }
+    
+            h1{
+                @include h-one;
+            }
+            h2{
+                @include h-two;
+            }
+            h3{
+                @include h-three;
+                color: $cobaltBlue;
+            }
+            h4{
+                @include h-four;
+            }
+            h5{
+                @include h-five;
+            }
+            h6{
+                @include h-six;
+            }
+            p{
+                @include body;
+            }
+            blockquote {
+                @include border-radius;
+                background-color: $lightLightSkyBlue;
+                font-weight: 700;
+                padding: 0.5em 0.75em 0.55em 0.75em;
+
+            }
+              
+              
+            strong, b{
+                font-weight: 700;
+            }
+            
+            em, i{
+                font-weight: 700;
+            }
+            
+            
+            ol, ul, li {
+                @include body;
+            }
+            
+
+            
+            ul li {
+            list-style-type:disc;
+            margin-left: 1rem;
+            }
+            
+            ol li {
+            list-style-type:decimal;
+            margin-left: 1rem;
+                &::marker{
+                    @include h-one;
+                    @include respond-to(md){
+                        @include h-two;
+                    }
+                    color: $darkNavy;
                 }
-           } 
-        }
-        .text_cols {
-            display: grid;
-            @include respond-to('md') {
-                grid-template-columns: 1fr 1fr;
-                gap: 40px;
-                width: 75%;
             }
-
-            // common styling for all columns
-            .col_title {
-                &.border_bottom {
-                    border-bottom: 1px solid $black;
+            
+            li:last-child {
+            padding-bottom: 0.5rem;
+            }
+            
+            
+            a {
+                color: $darkNavy;
+                text-decoration: none;
+                position: relative;
+                font-weight: 600;
+                @include transition;
+                &:before{
+                    content:"";
+                    height: 1px;
+                    width: 0%;
+                    position: absolute;
+                    bottom: 0;
+                    @include transition;
+                }
+                &:hover{
+                    @include transition;
+                    &:before{
+                        width: 100%;
+                        @include transition;
+                    }
                 }
             }
-            .col_body {
-                padding-bottom: 40px;
-            }
+              
+        }
 
-            .text_col_1 {
-                // any unquie styles here
-            }
-            .text_col_2 {
-                // any unquie styles here
-            }
-            .text_col_3 {
-                // any unquie styles here
+        /*------------------------ Desktop Styles -------------------------------*/
+
+        &{
+            @include respond-to(md){
+                max-width: 75%;
             }
         }
-        .stats_wrap {
-            display: flex;
-            gap: 60px;
-            flex-wrap: wrap;
-            margin-top: 60px;
-            @include respond-to('lg') {
-                gap: 20px;
-            }
-        }
+
     }
+
+
+
 }
