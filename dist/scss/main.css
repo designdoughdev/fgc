@@ -4914,19 +4914,6 @@ section.section_wayfinder .section-content .wayfinder-container li {
   }
 }
 
-section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .bar-container {
-  width: auto;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .bar-container svg.vertical-bars-small {
-  width: auto;
-  height: 100%;
-}
-
 section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap:hover {
   text-decoration: none;
 }
@@ -4934,6 +4921,20 @@ section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link
 section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row {
   padding: 1.3rem 2rem 1rem;
   transform: translateX(100%);
+}
+
+section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .bar-container {
+  z-index: 10;
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .bar-container svg.vertical-bars-small {
+  width: auto;
+  height: 100%;
 }
 
 section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content {

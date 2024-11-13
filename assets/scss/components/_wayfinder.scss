@@ -67,18 +67,7 @@ section.section_wayfinder{
 
             a.wayfinder-link-wrap{
 
-                .bar-container{
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    height: 100%;
-                    width: auto;
-                    
-                    svg.vertical-bars-small{
-                        height: 100%;
-                        width: auto;
-                    }
-                }
+
 
                
 
@@ -93,6 +82,20 @@ section.section_wayfinder{
   
 
                     transform: translateX(100%); // Initially off-screen to the right
+
+                    .bar-container{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        height: 100%;
+                        width: auto;
+                        z-index: 10;
+                        
+                        svg.vertical-bars-small{
+                            height: 100%;
+                            width: auto;
+                        }
+                    }
 
 
 
