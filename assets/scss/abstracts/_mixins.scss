@@ -1310,12 +1310,10 @@ $conpad : 1.5625vw;
 
 @mixin btn-menu{
     @include border_radius;
+    @include bodyLarge;
     border: none;
-    font-size: .818rem;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: -0.02455rem;
-    padding: 0.36em 1.14em;
+    font-weight: 500;
+    padding: 0.55em 1.4em;
     cursor: pointer;
 }
 

@@ -73,7 +73,6 @@
 // $min-font-size: Minimum font size in rem for small screens
 // $max-font-size: Maximum font size in rem for larger screens
 
-
 @mixin responsiveFontSize($min-font-size, $max-font-size) {
 	
 	font-size: $min-font-size;
@@ -98,8 +97,6 @@
   }
 
 
-
-
 // global type variables
 $primary-font: 'Messina Sans', sans-serif;
 $secondary-font: "Chivo Mono", monospace;
@@ -115,6 +112,10 @@ $secondary-font: "Chivo Mono", monospace;
 	line-height: 100%; 
 	color: $darkNavy;
 	-webkit-font-smoothing: antialiased;	
+}
+
+@mixin h-one-sizing{
+	@include responsiveFontSize(2.0625rem, 3.75rem); // font size
 }
 
 .h1, .large-header {
@@ -142,6 +143,10 @@ $secondary-font: "Chivo Mono", monospace;
 
 .h2, .large-header {
 	@include h-two;
+}
+
+@mixin h-two-sizing{
+	@include responsiveFontSize(1.5625rem, 2.8125rem); // font size
 }
 
 // h3: used for subheadings within flexes, after an h2
@@ -271,6 +276,7 @@ $hfive : 14;
 @mixin h-five{
 	font-family: $secondary-font;
 	@include responsiveFontSize(0.75rem, 0.9375rem); 
+	letter-spacing: normal;
 	line-height: normal;
 	font-weight: 300;
 	color: $darkNavy;
@@ -338,6 +344,16 @@ blockquote {
 
 .body{
 	@include body;
+}
+
+@mixin bodyLarge{
+	font-family: $primary-font;
+	@include responsiveFontSize(1rem, 1.125rem); // font size
+	@include letterSpacingEm(-0.03375rem, 1.125rem);
+	line-height: normal;
+   -webkit-font-smoothing: antialiased;
+   color: $darkNavy;
+
 }
 
 

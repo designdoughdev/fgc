@@ -1,3 +1,9 @@
+<?php
+
+$layout = get_field('layout');
+$video = get_field('video');
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -63,72 +69,159 @@
         </div>
     </div>
 
-    <!-------------------------- Hero / Page Header --------------------------------->
+    <?php if ($layout == 'boxed'): ?>
 
-    <section class="hero-container relative">
+        <!-------------------------- Hero / Page Header --------------------------------->
 
-        <?php get_template_part('components/includes/action-nav'); ?>
+        <section class="hero-container relative">
 
-        <video autoplay muted loop playsinline style="width: 100%; height: 100%">
-            <source src="<?php bloginfo('template_url'); ?>/assets/video/home-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+            <?php get_template_part('components/includes/action-nav'); ?>
 
+            <?php if ($video): ?>
 
-        <div id="hero-overlay" class="container">
+                <!-- <video autoplay muted loop playsinline style="width: 100%; height: 100%">
+                    <source src="<?php bloginfo('template_url'); ?>/assets/video/home-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> -->
 
-            <div class="hero-grid container">
-                <div class="col-left">
-                    <div class="hero-text-container cobalt">
-                        <p class="title-tag">Welcome</p>
-                        <h3 class="heading">Help us create a Wales that we all want to live in, now and in the future.
-                        </h3>
-                        <div class="button-container">
-                            <a href="" class="btn mint">Cymru Can</a>
-                            <a href="" class="btn sky-blue">Cymru Can</a>
-                        </div>
-                    </div>
+            <?php else: ?>
 
+                <div class="img-wrap">
+                    <img src="" alt="">
                 </div>
 
-                <div class="col-right">
-                    <a href="https://www.youtube.com/" target="_blank">
+            <?php endif; ?>
 
-                        <div class="hero-video-link-container">
-                            <div class="img-wrap">
-                                <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/derek.jpg" ?>
-                                    alt="">
+
+
+            <div id="hero-overlay" class="container">
+
+                <div class="hero-grid container">
+                    <div class="col-left">
+                        <div class="hero-text-container cobalt">
+                            <p class="title-tag">Welcome</p>
+                            <h3 class="heading">Help us create a Wales that we all want to live in, now and in the future.
+                            </h3>
+                            <div class="button-container">
+                                <a href="" class="btn mint">Cymru Can</a>
+                                <a href="" class="btn sky-blue">Cymru Can</a>
                             </div>
-
-
-                            <div class="text-half">
-                                <div class="text">
-                                    <h6 class="bold">CYMRU CAN |</h6>
-                                    <p>our Vision and Purpose</p>
-
-                                </div>
-
-                                <div class="play-btn">
-                                    <p>Watch Video Now</p>
-                                    <img class="play-icon"
-                                        src="<?php bloginfo('template_url'); ?>/assets/images/svg/play-icon.svg" alt="">
-
-                                </div>
-
-                            </div>
-
                         </div>
-                    </a>
+
+                    </div>
+
+                    <div class="col-right">
+                        <a href="https://www.youtube.com/" target="_blank">
+
+                            <div class="hero-video-link-container">
+                                <div class="img-wrap">
+                                    <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/derek.jpg" ?>
+                                        alt="">
+                                </div>
+
+
+                                <div class="text-half">
+                                    <div class="text">
+                                        <h6 class="bold">CYMRU CAN |</h6>
+                                        <p>our Vision and Purpose</p>
+
+                                    </div>
+
+                                    <div class="play-btn">
+                                        <p>Watch Video Now</p>
+                                        <img class="play-icon"
+                                            src="<?php bloginfo('template_url'); ?>/assets/images/svg/play-icon.svg" alt="">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </a>
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+        <!--------------------------  --------------------------------->
 
-    <!--------------------------  --------------------------------->
+    <?php elseif ($layout == 'banner'): ?>
+
+
+
+
+
+        <!--------------------------  --------------------------------->
+
+    <?php else: ?>
+        <section class="hero-container relative">
+
+            <?php get_template_part('components/includes/action-nav'); ?>
+
+            <video autoplay muted loop playsinline style="width: 100%; height: 100%">
+                <source src="<?php bloginfo('template_url'); ?>/assets/video/home-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+
+            <div id="hero-overlay" class="container">
+
+                <div class="hero-grid container">
+                    <div class="col-left">
+                        <div class="hero-text-container cobalt">
+                            <p class="title-tag">Welcome</p>
+                            <h3 class="heading">Help us create a Wales that we all want to live in, now and in the future.
+                            </h3>
+                            <div class="button-container">
+                                <a href="" class="btn mint">Cymru Can</a>
+                                <a href="" class="btn sky-blue">Cymru Can</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-right">
+                        <a href="https://www.youtube.com/" target="_blank">
+
+                            <div class="hero-video-link-container">
+                                <div class="img-wrap">
+                                    <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/derek.jpg" ?>
+                                        alt="">
+                                </div>
+
+
+                                <div class="text-half">
+                                    <div class="text">
+                                        <h6 class="bold">CYMRU CAN |</h6>
+                                        <p>our Vision and Purpose</p>
+
+                                    </div>
+
+                                    <div class="play-btn">
+                                        <p>Watch Video Now</p>
+                                        <img class="play-icon"
+                                            src="<?php bloginfo('template_url'); ?>/assets/images/svg/play-icon.svg" alt="">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    <?php endif; ?>
 
 
 

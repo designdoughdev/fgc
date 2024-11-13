@@ -48,7 +48,7 @@ get_template_part('components/flex/content-text_and_image', 'full-image'); ?>
 
 <?php get_template_part('components/flex/content-wayfinder'); ?>
 
-<?php get_template_part('components/flex/content-images'); ?>
+<?php get_template_part('components/flex/content-image-gallery'); ?>
 
 <?php
 

@@ -2576,8 +2576,8 @@
                 },
                 "layout_64f88ea4c338d": {
                     "key": "layout_64f88ea4c338d",
-                    "name": "images",
-                    "label": "Images",
+                    "name": "image-gallery",
+                    "label": "Image Gallery",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -7069,5 +7069,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731448029
+    "modified": 1731485066
 }

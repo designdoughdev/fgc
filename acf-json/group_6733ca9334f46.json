@@ -17,8 +17,8 @@
                 "id": ""
             },
             "choices": {
-                "video": "Video",
-                "top_level_page": "Top Level Page",
+                "boxed": "Boxed Text",
+                "banner": "Banner",
                 "second_level_page": "Second Level Page"
             },
             "default_value": false,
@@ -70,5 +70,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731448220
+    "modified": 1731484597
 }

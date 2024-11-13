@@ -76,7 +76,7 @@ section.section_wayfinder{
                 }
     
                 .wayfinder-row{
-                    padding: 1.3rem 2rem 1rem 2rem;
+                    padding: 1.5rem 2rem 1.5rem 2rem;
   
 
                     transform: translateX(100%); // Initially off-screen to the right
@@ -106,6 +106,9 @@ section.section_wayfinder{
     
                         .text-content{
                             flex-grow: 1;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: start;
     
                             .heading{
                                 margin-top: 0.5em;
@@ -120,8 +123,8 @@ section.section_wayfinder{
                             .arrow-container{
                                 @include border_radius;
                                 @include h-one;
-                                height: $squareWidth;
-                                width: $squareWidth;
+                                height: 100%;
+                                aspect-ratio: 1;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
@@ -140,10 +143,10 @@ section.section_wayfinder{
                                 .triangle{
                                     @include h-one;
                                     position: absolute;
-                                    top: $squareWidth;
+                                    top: 100%;
                                     left: 0;
-                                    height: calc($squareWidth * 0.85);
-                                    width: $squareWidth;
+                                    height: calc(100% * 0.8);
+                                    width: 100%;
                                     clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
                                     z-index: 20;
                                 }
