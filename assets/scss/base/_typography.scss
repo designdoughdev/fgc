@@ -17,7 +17,7 @@
 
 @font-face {
     font-family: 'Messina Sans';
-    src: url('/assets/fonts/MessinaSans-Light.otf') format('embedded-opentype');
+    src: url('/assets/fonts/MessinaSans-Book.otf') format('embedded-opentype');
 
     font-weight: 200;
     font-style: normal;
@@ -32,14 +32,7 @@
     font-style: normal;
     font-display: swap;
 }
-@font-face {
-    font-family: 'Messina Sans';
-    src: url('/assets/fonts/MessinaSans-SemiBold.otf') format('embedded-opentype');
 
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
 @font-face {
     font-family: 'Messina Sans';
     src: url('/assets/fonts/MessinaSans-Book.otf') format('embedded-opentype');

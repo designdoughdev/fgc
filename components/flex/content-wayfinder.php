@@ -33,14 +33,22 @@
                 ?>
 
                     <li>
-                        <a href="/" class="wayfinder-link-wrap">
-                            <div class="wayfinder-row <?php echo $colourScheme; ?>-style relative">
-                                <div class="bar-container">
-                                    <?php
-                                    // small version
-                                    echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars-small.svg');
-                                    ?>
-                                </div>
+                        <a href="/" class="wayfinder-link-wrap <?php echo $colourScheme; ?>-style relative">
+
+                            <div class="bar-container">
+                                <?php
+                                // small version
+                                echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars-small.svg');
+                                ?>
+                            </div>
+
+
+
+
+                            <div class="wayfinder-row  relative">
+
+
+
                                 <div class="row-content">
                                     <div class="text-content">
                                         <p class=" tag h6">Explore</p>

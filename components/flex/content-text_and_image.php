@@ -123,7 +123,7 @@ $layout = get_query_var('layout'); ?>
 
                     <?php
                     // small version
-                    echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars-small.svg');
+                    echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars-block.svg');
                     // large version
                     echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
                     ?>

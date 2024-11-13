@@ -67,6 +67,19 @@ section.section_wayfinder{
 
             a.wayfinder-link-wrap{
 
+                .bar-container{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 100%;
+                    width: auto;
+                    
+                    svg.vertical-bars-small{
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+
                
 
 
@@ -76,7 +89,7 @@ section.section_wayfinder{
                 }
     
                 .wayfinder-row{
-                    padding: 1.5rem 2rem 1.5rem 2rem;
+                    padding: 1.3rem 2rem 1rem 2rem;
   
 
                     transform: translateX(100%); // Initially off-screen to the right
@@ -86,18 +99,7 @@ section.section_wayfinder{
   
 
 
-                    .bar-container{
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                        height: 100%;
-                        width: auto;
-                        
-                        svg.vertical-bars-small{
-                            height: 100%;
-                            width: 260%;
-                        }
-                    }
+
     
 
                     .row-content{
@@ -123,8 +125,8 @@ section.section_wayfinder{
                             .arrow-container{
                                 @include border_radius;
                                 @include h-one;
-                                height: 100%;
-                                aspect-ratio: 1;
+                                height: $squareWidth;
+                                width: $squareWidth;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
@@ -143,10 +145,10 @@ section.section_wayfinder{
                                 .triangle{
                                     @include h-one;
                                     position: absolute;
-                                    top: 100%;
+                                    top: $squareWidth;
                                     left: 0;
-                                    height: calc(100% * 0.8);
-                                    width: 100%;
+                                    height: calc($squareWidth * 0.85);
+                                    width: $squareWidth;
                                     clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
                                     z-index: 20;
                                 }
