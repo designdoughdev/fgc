@@ -77,18 +77,20 @@ $video = get_field('video');
 
             <?php get_template_part('components/includes/action-nav'); ?>
 
-            <?php if ($video): ?>
 
-                <!-- <video autoplay muted loop playsinline style="width: 100%; height: 100%">
+            <?php if (is_front_page()): ?>
+
+                <video autoplay muted loop playsinline style="width: 100%; height: 100%">
                     <source src="<?php bloginfo('template_url'); ?>/assets/video/home-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                </video> -->
+                </video>
 
             <?php else: ?>
 
-                <div class="img-wrap">
-                    <img src="" alt="">
+                <div class="banner-img-wrap">
+                    <img src="https://picsum.photos/2000/1333" alt="">
                 </div>
+
 
             <?php endif; ?>
 
@@ -96,9 +98,18 @@ $video = get_field('video');
 
             <div id="hero-overlay" class="container">
 
-                <div class="hero-grid container">
+                <div class="hero-grid container <?php if (!is_front_page()) {
+                                                    echo 'standard-page';
+                                                } ?>">
                     <div class="col-left">
                         <div class="hero-text-container cobalt">
+                            <?php if (!is_front_page()): ?>
+                                <div class="breadcrumbs-container">
+                                    <?php display_breadcrumbs(); ?>
+
+                                </div>
+                            <?php endif; ?>
+
                             <p class="title-tag">Welcome</p>
                             <h3 class="heading">Help us create a Wales that we all want to live in, now and in the future.
                             </h3>

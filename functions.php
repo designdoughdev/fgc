@@ -206,3 +206,39 @@ function dd_theme_activate_required_plugins()
     }
 }
 add_action('after_switch_theme', 'dd_theme_activate_required_plugins');
+
+//------------------------ Custom theme functions -------------------------------//
+
+
+// Function to display breadcrumb navigation with 'current' class on the current page
+function display_breadcrumbs()
+{
+    global $post;
+
+    $home_icon_url = get_template_directory_uri() . '/assets/images/svg/home.svg';
+
+
+    $breadcrumb = '<img class="home-icon" src="' . $home_icon_url . '" alt="Home Icon">';
+    $breadcrumb .= '<a href="' . home_url() . '">Home</a>';
+
+
+    // Initialize an array to hold the ancestor pages
+    $ancestors = array();
+
+    // Get all parent pages up the hierarchy if the current page has parents
+    if ($post->post_parent) {
+        $ancestors = get_post_ancestors($post->ID);
+        $ancestors = array_reverse($ancestors); // Reverse to start from the top ancestor
+    }
+
+    // Loop through each ancestor page and add it as a clickable link
+    foreach ($ancestors as $ancestor) {
+        $breadcrumb .= ' &gt; <a href="' . get_permalink($ancestor) . '">' . get_the_title($ancestor) . '</a>';
+    }
+
+    // Add the current page as a clickable link with 'current' class
+    $breadcrumb .= ' &gt; <a href="' . get_permalink($post->ID) . '" class="current">' . get_the_title($post->ID) . '</a>';
+
+    // Display the breadcrumb trail
+    echo $breadcrumb;
+}
