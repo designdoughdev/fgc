@@ -5,14 +5,12 @@ $layout = get_query_var('layout'); ?>
 $row = get_row_index() - 0;
 
 // acf fields
-$layoutStyle = get_field('layout');
-$backgroundColour = get_field('background_colour');
-$smallTitle = get_field('small_title');
-$bigTitle = get_field('big_title');
-$body = get_field('body');
-
-
-$link = get_field('link');
+$layoutStyle = get_sub_field('layout_style');
+$backgroundColour = get_sub_field('background_colour');
+$smallTitle = get_sub_field('small_title');
+$bigTitle = get_sub_field('big_title');
+$body = get_sub_field('body');
+$link = get_sub_field('link');
 
 
 
@@ -39,7 +37,9 @@ endif
 
     <div class="section-wrapper container">
 
+
         <?php if ($layout == 'full-colour' || $layoutStyle == 'full-colour'): ?>
+
 
 
         <!-------------------------- Layout Full Colour --------------------------------->
