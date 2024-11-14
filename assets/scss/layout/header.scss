@@ -401,6 +401,21 @@ header{
                 object-fit: cover;
             }
 
+            .bar-container{
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: fit-content;
+
+                img{
+                    height: 100%;
+                    width: auto;
+                    object-fit: cover;
+                    opacity: 0.3;
+                }
+            }
+
         }
       
         //---- video version
@@ -489,6 +504,11 @@ header{
                         @include h-one;
                         color: white;
                         margin-bottom: 2.13rem;
+                    }
+
+                    .text{
+                        @include body;
+                        color: white;
                     }
          
         
@@ -599,6 +619,7 @@ header{
                         
                             padding: 3.38rem 4.62rem 4.12rem 3.81rem;
                             justify-self: start;
+                            
 
                             
 

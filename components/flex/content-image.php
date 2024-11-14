@@ -2,17 +2,24 @@
 $row = get_row_index() - 0;
 
 
-$image = get_sub_field('image');
+$img = get_sub_field('image');
+
 
 ?>
 
 
-<section class="image-section row-<?php echo $row; ?> fade-in fade-delay-<?php echo $row; ?>">
+<section class="image-section row-<?php echo $row; ?> ">
 
     <div class="container">
         <div class="img-wrap">
-            <img src="" alt="">
+            <img src="<?php echo $img['url'] ?>" alt="">
         </div>
+        <?php if ($img['caption']): ?>
+            <p class="img-caption"><?php echo $img['caption'] ?> </p>
+        <?php endif; ?>
+
+
+
     </div>
 
 </section>

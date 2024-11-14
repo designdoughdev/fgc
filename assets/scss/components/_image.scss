@@ -1,50 +1,42 @@
-.image-container {
-    width: 100%;
-    margin-left: 0%;
-    position: relative;
-    .wrapper{
-        position: relative;
-    }    
-    .image_text_area{
-        position: relative;
-        width:100%;
-        .grid_img{
-            .image_text_area_bg{
-                margin: $px0;
-            }
-        }            
-        @include respond-to('md'){
-            position: absolute;
-            z-index: 200;
-            top:30%;
-            width:50%;
-            &.overleft{
-                left:0;
-            }
-            &.overright{
-                right:0;
-            }
-            &.overcenter{
-                left:25%;
-            }
-            .image_text_area_bg{
-                background-color: $white;
-                padding: $px30;
-            }
-            .grid_img{
-                .image_text_area_bg{
-                    margin: $px50;
-                }
-            }            
+@use '../abstracts/colours' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
+
+section.image-section{
+
+    @include sections_padding;
+
+    .img-wrap{
+        aspect-ratio: 75/40;
+        width: 100%;
+        height: auto;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
     }
-}
 
+    .img-caption{
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 850px) {
-    .image-container {
-        .wrapper{
-            position: relative;
-        }
+        @include body;
+        margin-top: 1.5em;
+        font-weight: 600;
+
+        &:before{
+            height: 1rem;
+            width: 1rem;
+            content: '';
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: 1rem;
+            background-color:$skyBlue;
+            
+    
+    
+        } 
+
     }
 }

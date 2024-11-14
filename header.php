@@ -87,8 +87,16 @@ $video = get_field('video');
 
             <?php else: ?>
 
-                <div class="banner-img-wrap">
+                <div class="banner-img-wrap relative">
                     <img src="https://picsum.photos/2000/1333" alt="">
+
+                    <div class="bar-container">
+
+                        <img src=<?php echo get_template_directory_uri() . '/assets/images/svg/vertical-bars.svg' ?> alt="">
+
+                    </div>
+
+
                 </div>
 
 
@@ -113,10 +121,17 @@ $video = get_field('video');
                             <p class="title-tag">Welcome</p>
                             <h3 class="heading">Help us create a Wales that we all want to live in, now and in the future.
                             </h3>
-                            <div class="button-container">
-                                <a href="" class="btn mint">Cymru Can</a>
-                                <a href="" class="btn sky-blue">Cymru Can</a>
-                            </div>
+                            <?php if (is_front_page()): ?>
+                                <div class="button-container">
+                                    <a href="" class="btn mint">Cymru Can</a>
+                                    <a href="" class="btn sky-blue">Cymru Can</a>
+                                </div>
+                            <?php else: ?>
+                                <p class="text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                    labore et dolore magna aliqua ut enim ad.
+                                </p>
+                            <?php endif; ?>
                         </div>
 
                     </div>
