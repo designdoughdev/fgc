@@ -146,12 +146,13 @@ function add_file_types_to_uploads($file_types)
 }
 add_filter('upload_mimes', 'add_file_types_to_uploads');
 
-<?php
+
 //------------------------ Plugin Management -------------------------------//
 
 add_action('tgmpa_register', 'dd_theme_register_required_plugins');
 
-function dd_theme_register_required_plugins() {
+function dd_theme_register_required_plugins()
+{
     $plugins = array(
         // ACF Pro - Packaged with the theme as a ZIP file
         array(
