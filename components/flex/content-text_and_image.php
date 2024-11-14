@@ -12,6 +12,22 @@
 <?php // Retrieve the variable in the template part
 $layout = get_query_var('layout'); ?>
 
+<?php
+// acf fields
+$layoutStyle = get_field('layout');
+
+
+$link = get_field('page_link');
+
+
+
+if ($link):
+    $link_url = esc_url($link['url']);
+    $link_title = $link['title'];
+    $link_target = $link['target'] ? $link['target'] : '_self';
+endif
+?>
+
 <section class="section_text_and_image row-<?php // echo $row; 
                                             ?>">
 
@@ -207,44 +223,7 @@ $layout = get_query_var('layout'); ?>
 
             </div>
 
-            <?php elseif ($layout == 'big-img-no-bg'): ?>
 
-            <!-------------------------- Layout Big Image No BG --------------------------------->
-            <div class="section-content big-img-no-bg-layout relative mint-style" data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom">
-
-
-
-
-                <p class="title-tag">Cymru Can</p>
-                <div class="text-content">
-                    <h3 class="heading h2">The innovative goals paving the way for a stronger, greener Wales</h3>
-                    <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut
-                        labore et
-                        dolore magna aliqua ut enim ad.</p>
-                    <a href="/" class="link btn text-white">Cymru Can</a>
-
-                </div>
-
-
-                <div class="img-wrap">
-                    <img src=<?php echo get_template_directory_uri() . "https://picsum.photos/2000/1333" ?> alt="">
-                </div>
-
-                <div class="vertical-bars-container">
-
-                    <?php
-                        // small version
-                        echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars-small.svg');
-                        // large version
-                        echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
-                        ?>
-
-                </div>
-
-
-            </div>
 
 
         </div>

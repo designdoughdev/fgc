@@ -2222,7 +2222,7 @@
                 },
                 "layout_64f86e2e47f69": {
                     "key": "layout_64f86e2e47f69",
-                    "name": "text_&_image",
+                    "name": "text_and_image",
                     "label": "Text & Image",
                     "display": "block",
                     "sub_fields": [
@@ -7105,5 +7105,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731570560
+    "modified": 1731590907
 }

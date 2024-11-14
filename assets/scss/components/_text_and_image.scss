@@ -182,7 +182,7 @@ section.section_text_and_image{
                         width: auto;
                         position: absolute;
                         top: 0;
-                        right: 0;
+                        left: 0;
                         transform: scaleX(-1); /* Reflects the element horizontally */
 
                     }
@@ -386,7 +386,7 @@ section.section_text_and_image{
             @include respond-to('md'){
 
                 display: grid;
-                grid-template-columns: 1fr 0.7fr 0.5fr;
+                grid-template-columns: 1fr 1fr;
                 grid-template-rows: max-content;
                 align-items: stretch;
                 height: 100%;
@@ -427,28 +427,7 @@ section.section_text_and_image{
         
         
                 div.img-wrap{
-                    margin-bottom: 0;
-                    height: 100%;
-                    width: 100%;
-                    min-height: 800px;
-                    
-
-        
-                    img.landscape-img{
-                        display: none;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        object-position: center;
-                        object-position: left 10rem;
-                    }
-        
-                    img.portrait-img{
-                        display: block;
-                        height: 100%;
-                        width: 100%;
-                        object-fit: cover;
-                    }
+                    display: none;
                 }
         
         
@@ -482,7 +461,40 @@ section.section_text_and_image{
         
                 }  
         
-        }
+            }
+
+            &{
+                @include respond-to('lg'){
+
+                    grid-template-columns: 1fr 0.7fr 0.5fr;
+
+                    div.img-wrap{
+                        display: block;
+                        margin-bottom: 0;
+                        height: 100%;
+                        width: 100%;
+                        min-height: 800px;
+                        
+    
+            
+                        img.landscape-img{
+                            display: none;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            object-position: left 10rem;
+                        }
+            
+                        img.portrait-img{
+                            display: block;
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
     }
 }
 
