@@ -101,14 +101,25 @@ section.section_text_and_image{
             margin-left: auto;
             display: block;
 
-            .vertical-bars-block{
+            .vertical-bars-small{
+
                 height: 100%;
                 width: auto;
                 position: absolute;
                 top: 0;
                 right: 0;
 
+            }
 
+
+
+
+            .vertical-bars{
+
+                display: none;
+
+
+                        
             }
 
         }
@@ -162,14 +173,18 @@ section.section_text_and_image{
 
                     .vertical-bars-small{
                         display: none;
+        
                     }
 
-                    .vertical-bars-block{
-                        transform: scaleX(-1); /* Reflects the element horizontally */
+                    .vertical-bars{
                         display: block;
                         height: 100%;
                         width: auto;
-                        
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        transform: scaleX(-1); /* Reflects the element horizontally */
+
                     }
 
                 }

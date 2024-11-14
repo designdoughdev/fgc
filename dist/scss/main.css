@@ -4345,12 +4345,16 @@ section.section_text_and_image .section-content.rows-layout div.vertical-bars-co
   position: relative;
 }
 
-section.section_text_and_image .section-content.rows-layout div.vertical-bars-container .vertical-bars-block {
+section.section_text_and_image .section-content.rows-layout div.vertical-bars-container .vertical-bars-small {
   width: auto;
   height: 100%;
   position: absolute;
   top: 0;
   right: 0;
+}
+
+section.section_text_and_image .section-content.rows-layout div.vertical-bars-container .vertical-bars {
+  display: none;
 }
 
 @media only screen and (width >= 768px) {
@@ -4394,10 +4398,13 @@ section.section_text_and_image .section-content.rows-layout div.vertical-bars-co
     display: none;
   }
 
-  section.section_text_and_image .section-content.rows-layout div.vertical-bars-container .vertical-bars-block {
+  section.section_text_and_image .section-content.rows-layout div.vertical-bars-container .vertical-bars {
     width: auto;
     height: 100%;
     display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
     transform: scaleX(-1);
   }
 

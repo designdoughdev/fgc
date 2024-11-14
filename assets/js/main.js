@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
          focus: 'center',
          pagination: false,
          breakpoints: {
+          
            767: {
              gap: '6vw',
              padding: '6vw',
