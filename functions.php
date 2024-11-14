@@ -146,12 +146,12 @@ function add_file_types_to_uploads($file_types)
 }
 add_filter('upload_mimes', 'add_file_types_to_uploads');
 
+<?php
 //------------------------ Plugin Management -------------------------------//
 
 add_action('tgmpa_register', 'dd_theme_register_required_plugins');
 
-function dd_theme_register_required_plugins()
-{
+function dd_theme_register_required_plugins() {
     $plugins = array(
         // ACF Pro - Packaged with the theme as a ZIP file
         array(
@@ -185,27 +185,33 @@ function dd_theme_register_required_plugins()
             'slug'      => 'wp-mail-smtp',
             'required'  => false,  // Optional plugin
         ),
+        // CookieYes | GDPR Cookie Consent - Recommended plugin from the WordPress repository
+        array(
+            'name'      => 'CookieYes | GDPR Cookie Consent',
+            'slug'      => 'cookie-law-info',
+            'required'  => false,  // Optional plugin
+        ),
         // Flamingo - Recommended plugin from the WordPress repository
         array(
             'name'      => 'Flamingo',
             'slug'      => 'flamingo',
             'required'  => false,  // Optional plugin
-        )
-
+        ),
     );
 
     $config = array(
-        'id'           => 'dd_theme',
-        'default_path' => '',
-        'menu'         => 'tgmpa-install-plugins',
-        'parent_slug'  => 'themes.php',
-        'capability'   => 'edit_theme_options',
-        'has_notices'  => true,
-        'dismissable'  => true,
+        'id'           => 'dd_theme',                 // Unique ID for hashing notices for multiple instances of TGMPA
+        'default_path' => '',                         // Default absolute path to bundled plugins
+        'menu'         => 'tgmpa-install-plugins',    // Menu slug
+        'parent_slug'  => 'themes.php',               // Parent menu slug
+        'capability'   => 'edit_theme_options',       // Capability needed to view plugin install page
+        'has_notices'  => true,                       // Show admin notices or not
+        'dismissable'  => true,                       // Dismissable by user
     );
 
     tgmpa($plugins, $config);
 }
+
 
 // Automatically activate required plugins after theme switch
 function dd_theme_activate_required_plugins()
