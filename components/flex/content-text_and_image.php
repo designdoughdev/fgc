@@ -1,23 +1,18 @@
-<?php
-// $row = get_row_index() - 0; 
-
-// $small_title = get_sub_field('small_title');
-// $big_title = get_sub_field('big_title');
-// $intro_text = get_sub_field('intro_text');
-// $link = get_sub_field('link');
-// $layout = get_sub_field('layout');
-?>
-
-
 <?php // Retrieve the variable in the template part
 $layout = get_query_var('layout'); ?>
 
 <?php
+$row = get_row_index() - 0;
+
 // acf fields
 $layoutStyle = get_field('layout');
+$backgroundColour = get_field('background_colour');
+$smallTitle = get_field('small_title');
+$bigTitle = get_field('big_title');
+$body = get_field('body');
 
 
-$link = get_field('page_link');
+$link = get_field('link');
 
 
 
@@ -28,7 +23,7 @@ if ($link):
 endif
 ?>
 
-<section class="section_text_and_image row-<?php // echo $row; 
+<section class="section_text_and_image row-<?php echo $row;
                                             ?>">
 
     <?php
@@ -44,7 +39,7 @@ endif
 
     <div class="section-wrapper container">
 
-        <?php if ($layout == 'full-colour'): ?>
+        <?php if ($layout == 'full-colour' || $layoutStyle == 'full-colour'): ?>
 
 
         <!-------------------------- Layout Full Colour --------------------------------->
@@ -53,12 +48,27 @@ endif
 
 
             <div class="col">
-                <p class="title-tag">international</p>
-                <h3 class="heading h2 text-white">Empowering Change Worldwide</h3>
-                <p class="body text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor
-                    incididunt ut labore et dolore magna aliqua ut enim ad.</p>
-                <a href="/" class="link btn text-white sky-blue">Visit Page</a>
+                <?php if ($link || $smallTitle): ?>
+                <p class="title-tag"><?php if ($link) {
+                                                    echo $link_title;
+                                                } else {
+                                                    echo $smallTitle;
+                                                } ?></p>
+                <?php endif;  // title tag
+                    ?>
+                <?php if ($bigTitle): ?>
+                <h3 class="heading h2 text-white"><?php echo $bigTitle; ?></h3>
+                <?php endif; // big title 
+                    ?>
+                <?php if ($body): ?>
+                <p class="body text-white"><?php echo $body; ?></p>
+                <?php endif; // body 
+                    ?>
+                <?php if ($link): ?>
+                <a href="/" class="link btn text-white sky-blue"
+                    target="<?php echo $link_target; ?>"><?php echo $link_title; ?></a>
+                <?php endif; // link 
+                    ?>
             </div>
 
             <?php
@@ -69,7 +79,7 @@ endif
 
         <!---------------------------------------------------------------------->
 
-        <?php elseif ($layout == 'big-img-no-bg'): ?>
+        <?php elseif ($layout == 'big-img-no-bg' || $layoutStyle == 'big-img-no-bg'): ?>
 
         <!-------------------------- Layout Big Image No BG --------------------------------->
         <div class="section-content big-img-no-bg-layout relative mint-style" data-aos="fade-up"
@@ -78,7 +88,7 @@ endif
 
 
 
-            <p class="title-tag">Cymru Can5</p>
+            <p class="title-tag">Cymru Can</p>
             <div class="text-content">
                 <h3 class="heading h2">The innovative goals paving the way for a stronger, greener Wales</h3>
                 <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -115,7 +125,7 @@ endif
 
         <!-------------------------- Layout Rows --------------------------------->
 
-        <?php elseif ($layout == 'rows'): ?>
+        <?php elseif ($layout == 'rows' || $layoutStyle == 'rows'): ?>
         <div class="section-content rows-layout relative blue-style" data-aos="fade-up"
             data-aos-anchor-placement="top-bottom">
 
@@ -149,7 +159,7 @@ endif
 
         </div>
 
-        <?php elseif ($layout == 'half-image'): ?>
+        <?php elseif ($layout == 'half-image' || $layoutStyle == 'half-image'): ?>
 
         <!-------------------------- Layout Half image --------------------------------->
         <div class="section-content half-image-layout relative mint-style" data-aos="fade-up"
@@ -192,7 +202,7 @@ endif
 
             </div>
 
-            <?php elseif ($layout == 'full-image'): ?>
+            <?php elseif ($layout == 'full-image' || $layoutStyle == 'full-image'): ?>
 
             <!-------------------------- Layout Full Image --------------------------------->
             <div class="section-content full-image-layout relative yellow-style" data-aos="fade-up"
