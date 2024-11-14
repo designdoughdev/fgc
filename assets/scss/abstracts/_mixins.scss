@@ -380,19 +380,14 @@ $conpad : 1.5625vw;
 }
 
 @mixin containerleft {
-    width: calc(100vw - #{$conpad * 4});
-    @include respond-to('lg') {
-        width: calc(100vw - #{$conpad * 2});
-    }
+    width: calc(100vw - 6vw);
+    margin-right: auto;
     position: relative;
     max-width: 2000px;
 }
 
 @mixin containerright {
-    width: calc(100vw - #{$conpad * 4});
-    @include respond-to('lg') {
-        width: calc(100vw - #{$conpad * 2});
-    }
+    width: calc(100vw - 6vw);
     position: relative;
     max-width: 2000px;
     margin-left: auto;
@@ -408,6 +403,14 @@ $conpad : 1.5625vw;
 
 .container_big{
     @include bigcontainer;
+}
+
+.container_left{
+    @include containerleft;
+}
+
+.container_left{
+    @include containerright;
 }
 
 
@@ -2240,6 +2243,9 @@ body[data-theme='light'] {
         .title-tag{
             @include title_tag(white, $skyBlue);
         }
+        .heading, .body, .btn{
+            color: white;
+        }
     }
 
 
@@ -2295,6 +2301,25 @@ body[data-theme='light'] {
     &.full-image-layout{
         .text-content{
             background-color: $lightNavy;
+        }
+        
+    }
+
+    // full colour layout
+    &.full-colour-layout{
+        background-color: $darkNavy;
+        .title-tag{
+            @include title_tag(white, $skyBlue);
+        }
+        .heading, .body{
+            color: white;
+        }
+        a.btn{
+            background-color: $skyBlue;
+            color: $darkNavy;
+        }
+        svg path{
+            fill: $skyBlue;
         }
     }
 

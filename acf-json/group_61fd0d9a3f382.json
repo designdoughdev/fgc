@@ -2041,7 +2041,38 @@
                                 "big-img-no-bg": "Large Image (no background)",
                                 "rows": "Row Layout (no background)",
                                 "half-image": "Image Columns",
-                                "full-image": "Full Background Image"
+                                "full-image": "Full Background Image",
+                                "half-text-half-img": "Half Text Half Image"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 1,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_67360f3b5236b",
+                            "label": "Colour Scheme",
+                            "name": "colour_scheme",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "green": "Green",
+                                "yellow": "Yellow",
+                                "mint": "Mint",
+                                "blue": "Blue",
+                                "navy": "Navy"
                             },
                             "default_value": false,
                             "return_format": "value",
@@ -2068,6 +2099,27 @@
                             },
                             "return_format": "array",
                             "allow_in_bindings": 1
+                        },
+                        {
+                            "key": "field_6736150f028e4",
+                            "label": "Reverse Layout",
+                            "name": "reverse",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Enable to reverse column order on larger screens",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "allow_in_bindings": 0,
+                            "ui_on_text": "Text Right",
+                            "ui_off_text": "Text Left",
+                            "ui": 1
                         },
                         {
                             "key": "field_64f86e2e47f6a",
@@ -6630,5 +6682,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731595913
+    "modified": 1731598858
 }

@@ -56,6 +56,24 @@ section.section_text_and_image{
                 
 
             }
+
+            // reverse layout option selected
+
+            &.reverse{
+
+                .col{
+                    margin-left: auto;
+                    margin-right: 0;
+
+                }
+
+                .vertical-bars{
+                    left: 0;
+                    transform: scaleX(-1); /* Reflects the element horizontally */
+                    
+    
+                }
+            }
             
         }
     }
@@ -188,6 +206,93 @@ section.section_text_and_image{
                     }
 
                 }
+
+                div.img-wrap{
+
+                    height: 100%;
+                }
+        
+        }
+    }
+}
+
+    /*----------------------------- Half Image Half Text Square Layout -----------------------------------------------------------*/
+    .section-content.half-text-half-img-layout{
+
+        /*------------------------ Default/Mobile Styles -------------------------------*/
+
+        background-color: white; // override colour style class names
+        @include mobile_text_col_spacing;
+
+        .title-tag{
+            @include title_tag($darkNavy, $cobaltBlue);
+        }
+
+        div.img-wrap{
+            margin-bottom: 0.3rem;
+            width: 100%;
+            height: fit-content;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .btn{
+            background-color: $cobaltBlue;
+        }
+
+        .vertical-bars{
+            display: none;
+        }
+
+        div.vertical-bars-container{
+
+            position: relative;
+            height: 4rem;
+            width: fit-content;
+            margin-left: auto;
+            display: block;
+
+            .vertical-bars-small{
+
+                height: 100%;
+                width: auto;
+                position: absolute;
+                top: 0;
+                right: 0;
+
+            }
+
+
+            .vertical-bars{
+
+                display: none;
+
+
+                        
+            }
+
+        }
+
+
+    
+
+        /*------------------------ Desktop Styles -------------------------------*/
+
+        &{
+            @include respond-to('md'){
+
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.3rem;
+                
+
+
+
+
 
                 div.img-wrap{
 
