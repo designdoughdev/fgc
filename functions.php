@@ -173,6 +173,25 @@ function dd_theme_register_required_plugins()
             'slug'      => 'contact-form-7',
             'required'  => false,  // Optional plugin
         ),
+        // AltText.ai - Recommended plugin from the WordPress repository
+        array(
+            'name'      => 'AltText.ai',
+            'slug'      => 'alttext-ai',
+            'required'  => false,  // Optional plugin
+        ),
+        // WP Mail SMTP - Recommended plugin from the WordPress repository
+        array(
+            'name'      => 'WP Mail SMTP',
+            'slug'      => 'wp-mail-smtp',
+            'required'  => false,  // Optional plugin
+        ),
+        // Flamingo - Recommended plugin from the WordPress repository
+        array(
+            'name'      => 'Flamingo',
+            'slug'      => 'flamingo',
+            'required'  => false,  // Optional plugin
+        )
+
     );
 
     $config = array(
