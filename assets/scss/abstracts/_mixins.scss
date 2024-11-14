@@ -380,17 +380,17 @@ $conpad : 1.5625vw;
 }
 
 @mixin containerleft {
-    width: calc(100vw - 6vw);
+    width: 95vw;
     margin-right: auto;
+    margin-left: 0;
     position: relative;
-    max-width: 2000px;
 }
 
 @mixin containerright {
-    width: calc(100vw - 6vw);
+    width: 95vw;
     position: relative;
-    max-width: 2000px;
     margin-left: auto;
+    margin-right: 0;
 }
 
 .container {
@@ -409,7 +409,7 @@ $conpad : 1.5625vw;
     @include containerleft;
 }
 
-.container_left{
+.container_right{
     @include containerright;
 }
 

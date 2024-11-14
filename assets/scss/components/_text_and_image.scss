@@ -220,7 +220,7 @@ section.section_text_and_image{
     .section-content.half-text-half-img-layout{
 
         /*------------------------ Default/Mobile Styles -------------------------------*/
-
+        @include container;
         background-color: white; // override colour style class names
         @include mobile_text_col_spacing;
 
@@ -240,6 +240,40 @@ section.section_text_and_image{
             }
         }
 
+        .links-container{
+            margin-bottom: 0.8rem;
+            a{
+                display: block;
+                @include body;
+                font-weight: 500;
+                text-decoration: underline;
+                padding: 0.8em 1.5em 0.8em 0;
+                
+                
+            }
+            a:not(:last-child){
+                border-bottom: 1px solid $lightNavy;
+
+            }
+
+            a:before{
+                
+                    content: "";
+                    display: inline-block;
+                    width: 1em; 
+                    height: 1em;
+                    background-color: $skyBlue; 
+                    background-image: url('/assets/images/svg/arrow-right.svg');
+                    background-repeat: no-repeat;
+                    background-position: center; 
+                    background-size: 0.37rem 0.35rem; 
+                    margin-right: 0.5rem; 
+                    vertical-align: text-top;
+
+                
+            }
+        }
+
         .btn{
             background-color: $cobaltBlue;
         }
@@ -254,7 +288,6 @@ section.section_text_and_image{
             height: 4rem;
             width: fit-content;
             margin-left: auto;
-            display: block;
 
             .vertical-bars-small{
 
@@ -285,18 +318,90 @@ section.section_text_and_image{
         &{
             @include respond-to('md'){
 
+                width: 100%;
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(24, 1fr);
                 gap: 0.3rem;
+
                 
 
 
 
+                .text-col{
+                    grid-area: 1 / 1 / span 1 / span 11;
+                    
+                    padding: 0 5vw 0 16vw;
+                    
+                    position: relative;
 
+                    @include respond-to(lg){
+                        .links-container{
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            width: 80%;
+    
+                            /* Remove border-bottom from the last row items - accounting for a potential odd number of items */ 
+                            
+                            a:nth-last-child(1):nth-child(2) {
+                                border-bottom: none;
+                            }
+                        }
+
+                    }
+
+
+                }
 
                 div.img-wrap{
-
+                    
+                    grid-area: 1 / 13 / span 1 / span 11;
                     height: 100%;
+                }
+
+                div.vertical-bars-container{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: fit-content;
+                    max-width: 12vw;
+                    transform: scaleX(-1); /* Reflects the element horizontally */
+
+                    .vertical-bars{
+                        display: block;
+                        height: 100%;
+                        width: auto;
+
+                        path{
+                            fill: $skyBlue;
+                        }
+                    }
+                }
+
+                &.reverse{
+
+                    
+
+                    div.vertical-bars-container{
+                        right: 0;
+                    }
+
+                    .text-col{
+                        grid-column: span 14;
+                        padding: 0 16vw 0 5vw;
+
+                    }
+
+                    div.img-wrap{
+                        grid-area: 1 / 2 / span 1 / span 11;
+                    }
+
+                    div.vertical-bars-container{
+                        transform: scaleX(1); /* Reflects the element horizontally */
+
+
+                    }
+
                 }
         
         }

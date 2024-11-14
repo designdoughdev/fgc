@@ -391,40 +391,74 @@ endif
 
     <?php elseif ($layoutStyle == 'half-text-half-img'): ?>
 
-    <div class="section-content half-text-half-img-layout relative container_left" data-aos="fade-up"
+    <div class="section-content half-text-half-img-layout <?php if ($reverseLayout) {
+                                                                    echo "reverse ";
+                                                                } ?>" data-aos=" fade-up"
         data-aos-anchor-placement="top-bottom">
+
+        <div class="img-wrap">
+            <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/talk.jpg" ?> alt="">
+        </div>
 
 
         <div class="text-col">
 
             <p class="title-tag">Well-being of Future
                 Generations (Wales) Act 2015</p>
-            <h3 class="heading h2">Shaping a brighter tomorrow: Discover how the Well-being of Future Generations
-                Act is
-                transforming Wales</h3>
-            <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut
-                labore et
-                dolore magna aliqua ut enim ad.</p>
-            <a href="/" class="link btn text-white">About the Act</a>
-
-        </div>
+            <?php if ($bigTitle): ?>
+            <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
+            <?php endif; // big title 
+                ?>
+            <?php if ($body): ?>
+            <p class="body"><?php echo $body; ?></p>
+            <?php endif; // body 
+                ?>
 
 
-        <div class="img-wrap">
-            <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/talk.jpg" ?> alt="">
+            <?php
+                if (have_rows('page_links')): ?>
+
+            <div class="links-container">
+
+
+                <?php while (have_rows('page_links')) : the_row(); ?>
+
+
+                <?php $linkID = get_sub_field('page_link'); ?>
+
+
+                <a href="<?php echo  get_the_permalink($linkID) ?>"><?php echo get_the_title($linkID); ?></a>
+
+
+                <?php endwhile; ?>
+
+            </div>
+
+
+            <?php endif; ?>
+
+            <?php if ($link): ?>
+            <a href="/" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?></a>
+            <?php endif; // link 
+                ?>
+
+
         </div>
 
         <div class="vertical-bars-container">
 
             <?php
-                // small version
-                echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars-small.svg');
-                // large version
+
+
                 echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
                 ?>
 
         </div>
+
+
+
+
+
 
 
     </div>
@@ -548,9 +582,6 @@ endif
 
 
             </div>
-
-
-
 
         </div>
 
