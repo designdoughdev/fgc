@@ -173,7 +173,6 @@ function dd_theme_register_required_plugins()
             'slug'      => 'contact-form-7',
             'required'  => false,  // Optional plugin
         ),
-
     );
 
     $config = array(
