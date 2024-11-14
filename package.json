@@ -1,7 +1,7 @@
 {
   "name": "parcel-scss",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. Navigate to your Wordpress local development environment and into your 'themes' directory",
   "scripts": {
     "start": "parcel assets/scss/main.scss assets/js/main.js --dist-dir dist --public-url ./ && npm parcel cache clean",
     "build": "parcel build assets/scss/main.scss assets/js/main.js --dist-dir dist --public-url ./ && npm parcel cache clean"
@@ -19,5 +19,6 @@
     "alpinejs": "^3.14.3",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4"
-  }
+  },
+  "main": "index.js"
 }
