@@ -2054,6 +2054,42 @@
                             "placeholder": ""
                         },
                         {
+                            "key": "field_673702099c4ff",
+                            "label": "Style Variation",
+                            "name": "half_image_variation",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_651438b594262",
+                                        "operator": "==",
+                                        "value": "half-text-half-img"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "centre": "Centred",
+                                "left-style": "Left Style",
+                                "right-style": "Right Style"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_67360f3b5236b",
                             "label": "Colour Scheme",
                             "name": "colour_scheme",
@@ -2061,7 +2097,29 @@
                             "type": "select",
                             "instructions": "",
                             "required": 1,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_651438b594262",
+                                        "operator": "==",
+                                        "value": "half-text-half-img"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_651438b594262",
+                                        "operator": "==",
+                                        "value": "big-img-no-bg"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_651438b594262",
+                                        "operator": "==",
+                                        "value": "rows"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -2108,7 +2166,15 @@
                             "type": "true_false",
                             "instructions": "Enable to reverse column order on larger screens",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_651438b594262",
+                                        "operator": "!=",
+                                        "value": "half-text-half-img"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -6741,5 +6807,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731620225
+    "modified": 1731659084
 }

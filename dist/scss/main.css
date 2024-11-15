@@ -1178,42 +1178,86 @@ iframe {
 
 @font-face {
   font-family: Messina Sans;
-  src: url("../MessinaSans-Book.642a05cc.otf") format("embedded-opentype");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Messina Sans;
-  src: url("../MessinaSans-Book.642a05cc.otf") format("embedded-opentype");
+  src: url("../messinasans-regular-webfont.24e8af2d.woff2") format("woff2"), url("../messinasans-regular-webfont.cacd78ef.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
   font-family: Messina Sans;
-  src: url("../MessinaSans-Book.642a05cc.otf") format("embedded-opentype");
-  font-weight: 500;
+  src: url("../messinasans-regularitalic-webfont.2f980756.woff2") format("woff2"), url("../messinasans-regularitalic-webfont.7f9cc2c3.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Messina Sans;
+  src: url("../messinasans-light-webfont.a9fd0ae4.woff2") format("woff2"), url("../messinasans-light-webfont.bd56d875.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
   font-family: Messina Sans;
-  src: url("../MessinaSans-BoldItalic.b10e7170.otf") format("embedded-opentype");
+  src: url("../messinasans-lightitalic-webfont.446641a5.woff2") format("woff2"), url("../messinasans-lightitalic-webfont.8925bf76.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Messina Sans Book;
+  src: url("../messinasans-book-webfont.fdfaf6c6.woff2") format("woff2"), url("../messinasans-book-webfont.45891f9f.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Messina Sans Book;
+  src: url("../messinasans-bookitalic-webfont.e069889c.woff2") format("woff2"), url("../messinasans-bookitalic-webfont.87c78a36.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Messina Sans;
+  src: url("../messinasans-semibold-webfont.a95b1c3c.woff2") format("woff2"), url("../messinasans-semibold-webfont.39e65ab2.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Messina Sans;
+  src: url("../messinasans-semibolditalic-webfont.a72d1518.woff2") format("woff2"), url("../messinasans-semibolditalic-webfont.66c59986.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Messina Sans;
+  src: url("../messinasans-bold-webfont.2109bbce.woff2") format("woff2"), url("../messinasans-bold-webfont.4ffad145.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Messina Sans;
+  src: url("../messinasans-bolditalic-webfont.3ee86098.woff2") format("woff2"), url("../messinasans-bolditalic-webfont.60f17feb.woff") format("woff");
   font-weight: 700;
   font-style: italic;
-  font-display: swap;
 }
 
 @font-face {
   font-family: Messina Sans;
-  src: url("../MessinaSans-RegularItalic.f1018a0b.otf") format("embedded-opentype");
-  font-weight: 400;
+  src: url("../messinasans-black-webfont.4efbe1e4.woff2") format("woff2"), url("../messinasans-black-webfont.356cf411.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Messina Sans;
+  src: url("../messinasans-blackitalic-webfont.273f8138.woff2") format("woff2"), url("../messinasans-blackitalic-webfont.90525d8b.woff") format("woff");
+  font-weight: 900;
   font-style: italic;
-  font-display: swap;
 }
 
 @media only screen and (width >= 768px) {
@@ -1526,6 +1570,18 @@ blockquote {
   }
 }
 
+@media only screen and (width >= 768px) {
+  .body {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  .body {
+    font-size: 1rem;
+  }
+}
+
 .body {
   -webkit-font-smoothing: antialiased;
   color: #112343;
@@ -1549,7 +1605,7 @@ blockquote {
 .link {
   -webkit-font-smoothing: antialiased;
   color: #112343;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: 16px;
   line-height: 143%;
 }
@@ -1590,7 +1646,7 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #112343;
   margin-bottom: 0;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
 }
@@ -1622,7 +1678,7 @@ strong, b, .bold, em, i, .italic {
 ol, ul, li {
   -webkit-font-smoothing: antialiased;
   color: #000;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
 }
@@ -1642,7 +1698,7 @@ ol, ul, li {
 .p, .plain-text {
   -webkit-font-smoothing: antialiased;
   color: #112343;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
 }
@@ -1676,7 +1732,7 @@ textarea {
   -webkit-font-smoothing: antialiased;
   color: #112343;
   padding: 10px 20px;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   font-weight: 600;
   line-height: 143%;
@@ -1980,7 +2036,7 @@ body {
   cursor: pointer;
   border: none;
   width: fit-content;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
   text-decoration: none;
@@ -2014,9 +2070,9 @@ body {
   height: 2.045rem;
   margin-right: .41rem;
   padding: .23rem .23rem .23rem .91rem;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 143%;
   text-decoration: none;
   display: inline-flex;
@@ -2064,7 +2120,7 @@ body {
   width: fit-content;
   margin-right: .3em;
   padding: .5em .4em;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   font-weight: 400;
   line-height: 143%;
@@ -2111,7 +2167,7 @@ body {
   width: fit-content;
   margin-right: .3em;
   padding: .5em .3em .5em 1em;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   font-weight: 400;
   line-height: 143%;
@@ -2434,7 +2490,7 @@ body {
   border: none;
   border-radius: .13636rem;
   padding: .5em;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
 }
@@ -3342,9 +3398,9 @@ section.section_big_search .search-wrapper div.search-flex-content form.search-f
     height: 2.045rem;
     margin-right: .41rem;
     padding: .23rem .23rem .23rem .91rem;
-    font-family: Messina Sans, sans-serif;
+    font-family: Messina Sans Book, sans-serif;
     font-size: .8rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 143%;
     text-decoration: none;
     display: inline-flex;
@@ -3585,7 +3641,7 @@ section.image-section .img-caption {
   -webkit-font-smoothing: antialiased;
   color: #112343;
   margin-top: 1.5em;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   font-weight: 600;
   line-height: 143%;
@@ -3827,7 +3883,7 @@ section.section_posts_agg .section-wrapper.splide.post-feed-carousel .splide__sl
 section.section_posts_agg .section-wrapper.splide.post-feed-carousel .splide__slide a div.post-card .card-bottom p {
   -webkit-font-smoothing: antialiased;
   color: #112343;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
   text-decoration: underline;
@@ -3976,7 +4032,7 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.spl
 section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .card-bottom p {
   -webkit-font-smoothing: antialiased;
   color: #112343;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
   text-decoration: underline;
@@ -4161,7 +4217,7 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel .verti
   section.section_posts_agg .section-wrapper.splide.press-releases-carousel li.splide__slide a.stacked-slide .press-release-card .card-bottom p {
     -webkit-font-smoothing: antialiased;
     color: #112343;
-    font-family: Messina Sans, sans-serif;
+    font-family: Messina Sans Book, sans-serif;
     font-size: .8rem;
     line-height: 143%;
     text-decoration: underline;
@@ -4497,30 +4553,30 @@ section.section_text_and_image .section-content.rows-layout div.vertical-bars-co
   }
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned {
   background-color: #fff;
   width: 90vw;
   margin: 0 auto;
   position: relative;
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout .title-tag {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .title-tag {
   margin-bottom: 2em;
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout .heading {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .heading {
   margin-bottom: .8em;
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout .body {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .body {
   margin-bottom: 1.5em;
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout a.btn {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned a.btn {
   margin: .7em 0 1.5rem;
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout .title-tag {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .title-tag {
   letter-spacing: normal;
   color: #112343;
   text-transform: uppercase;
@@ -4537,18 +4593,18 @@ section.section_text_and_image .section-content.half-text-half-img-layout .title
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text_and_image .section-content.half-text-half-img-layout .title-tag {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .title-tag {
     font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_text_and_image .section-content.half-text-half-img-layout .title-tag {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .title-tag {
     font-size: .9375rem;
   }
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout .title-tag:before {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .title-tag:before {
   content: "";
   vertical-align: middle;
   background-color: #2a5ad5;
@@ -4559,27 +4615,27 @@ section.section_text_and_image .section-content.half-text-half-img-layout .title
   display: inline-block;
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout div.img-wrap {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned div.img-wrap {
   width: 100%;
   height: fit-content;
   margin-bottom: .3rem;
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout div.img-wrap img {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned div.img-wrap img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout .links-container {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .links-container {
   margin-bottom: .8rem;
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout .links-container a {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .links-container a {
   -webkit-font-smoothing: antialiased;
   color: #112343;
   padding: .8em 1.5em .8em 0;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   font-weight: 500;
   line-height: 143%;
@@ -4588,22 +4644,22 @@ section.section_text_and_image .section-content.half-text-half-img-layout .links
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text_and_image .section-content.half-text-half-img-layout .links-container a {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .links-container a {
     font-size: clamp(.8rem, .8rem + 1vw, 1rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_text_and_image .section-content.half-text-half-img-layout .links-container a {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .links-container a {
     font-size: 1rem;
   }
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout .links-container a:not(:last-child) {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .links-container a:not(:last-child) {
   border-bottom: 1px solid #f3f4f6;
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout .links-container a:before {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .links-container a:before {
   content: "";
   vertical-align: text-top;
   background-color: #46d1ee;
@@ -4617,22 +4673,22 @@ section.section_text_and_image .section-content.half-text-half-img-layout .links
   display: inline-block;
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout .btn {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .btn {
   background-color: #2a5ad5;
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout .vertical-bars {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .vertical-bars {
   display: none;
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout div.vertical-bars-container {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned div.vertical-bars-container {
   width: fit-content;
   height: 4rem;
   margin-left: auto;
   position: relative;
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout div.vertical-bars-container .vertical-bars-small {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned div.vertical-bars-container .vertical-bars-small {
   width: auto;
   height: 100%;
   position: absolute;
@@ -4640,81 +4696,81 @@ section.section_text_and_image .section-content.half-text-half-img-layout div.ve
   right: 0;
 }
 
-section.section_text_and_image .section-content.half-text-half-img-layout div.vertical-bars-container .vertical-bars {
+section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned div.vertical-bars-container .vertical-bars {
   display: none;
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text_and_image .section-content.half-text-half-img-layout {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned {
     grid-template-columns: repeat(24, 1fr);
     gap: .3rem;
     width: 100%;
     display: grid;
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout .text-col {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .text-col {
     grid-area: 1 / 1 / span 1 / span 11;
     padding: 0 5vw 0 16vw;
     position: relative;
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout .text-col p.title-tag {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .text-col p.title-tag {
     margin-bottom: 2.28571em;
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout .text-col .heading {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .text-col .heading {
     margin-bottom: .888889em;
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout .text-col p.body {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .text-col p.body {
     margin-bottom: 5em;
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout .text-col a.btn {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .text-col a.btn {
     margin-bottom: 0;
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout .text-col .links-container {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .text-col .links-container {
     -webkit-font-smoothing: antialiased;
     color: #112343;
     margin-bottom: 5em;
-    font-family: Messina Sans, sans-serif;
+    font-family: Messina Sans Book, sans-serif;
     font-size: .8rem;
     line-height: 143%;
   }
 }
 
 @media only screen and (width >= 768px) and (width >= 768px) {
-  section.section_text_and_image .section-content.half-text-half-img-layout .text-col .links-container {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .text-col .links-container {
     font-size: clamp(.8rem, .8rem + 1vw, 1rem);
   }
 }
 
 @media only screen and (width >= 768px) and (width >= 1600px) {
-  section.section_text_and_image .section-content.half-text-half-img-layout .text-col .links-container {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .text-col .links-container {
     font-size: 1rem;
   }
 }
 
 @media only screen and (width >= 768px) and (width >= 1200px) {
-  section.section_text_and_image .section-content.half-text-half-img-layout .text-col .links-container {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .text-col .links-container {
     grid-template-columns: 1fr 1fr;
     width: 95%;
     display: grid;
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout .text-col .links-container a:last-child:nth-child(2) {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .text-col .links-container a:last-child:nth-child(2) {
     border-bottom: none;
   }
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text_and_image .section-content.half-text-half-img-layout div.img-wrap {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned div.img-wrap {
     grid-area: 1 / 13 / span 1 / span 11;
     height: 100%;
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout div.vertical-bars-container {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned div.vertical-bars-container {
     width: fit-content;
     max-width: 12vw;
     height: 100%;
@@ -4724,31 +4780,283 @@ section.section_text_and_image .section-content.half-text-half-img-layout div.ve
     transform: scaleX(-1);
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout div.vertical-bars-container .vertical-bars {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned div.vertical-bars-container .vertical-bars {
     width: auto;
     height: 100%;
     display: block;
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout div.vertical-bars-container .vertical-bars path {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned div.vertical-bars-container .vertical-bars path {
     fill: #46d1ee;
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout.reverse div.vertical-bars-container {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned.reverse div.vertical-bars-container {
     right: 0;
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout.reverse .text-col {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned.reverse .text-col {
     grid-column: span 14;
     padding: 0 16vw 0 5vw;
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout.reverse div.img-wrap {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned.reverse div.img-wrap {
     grid-area: 1 / 2 / span 1 / span 11;
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout.reverse div.vertical-bars-container {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned.reverse div.vertical-bars-container {
     transform: scaleX(1);
+  }
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style {
+  background-color: #fff;
+  width: 90vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .title-tag {
+  margin-bottom: 2em;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .heading {
+  margin-bottom: .8em;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .body {
+  margin-bottom: 1.5em;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style a.btn {
+  margin: .7em 0 1.5rem;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .title-tag {
+  letter-spacing: normal;
+  color: #112343;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-indent: -.59727rem;
+  margin-bottom: 15px;
+  padding-left: .59727rem;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+  position: relative;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .title-tag {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .title-tag {
+    font-size: .9375rem;
+  }
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .title-tag:before {
+  content: "";
+  vertical-align: middle;
+  background-color: #2a5ad5;
+  border-radius: .75rem;
+  width: .22727rem;
+  height: .22727rem;
+  margin-right: .37rem;
+  display: inline-block;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style div.img-wrap {
+  width: 100%;
+  height: fit-content;
+  margin-bottom: .3rem;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style div.img-wrap img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .links-container {
+  margin-bottom: .8rem;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .links-container a {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  padding: .8em 1.5em .8em 0;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .8rem;
+  font-weight: 500;
+  line-height: 143%;
+  text-decoration: underline;
+  display: block;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .links-container a {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .links-container a {
+    font-size: 1rem;
+  }
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .links-container a:not(:last-child) {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .links-container a:before {
+  content: "";
+  vertical-align: text-top;
+  background-color: #46d1ee;
+  background-image: url("../arrow-right.99b6cc4c.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: .37rem .35rem;
+  width: 1em;
+  height: 1em;
+  margin-right: .5rem;
+  display: inline-block;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .btn {
+  background-color: #2a5ad5;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .vertical-bars {
+  display: none;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style div.vertical-bars-container {
+  width: fit-content;
+  height: 4rem;
+  margin-left: auto;
+  position: relative;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style div.vertical-bars-container .vertical-bars-small {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style div.vertical-bars-container .vertical-bars {
+  display: none;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style {
+    grid-template-columns: 1fr 1fr;
+    gap: .3rem;
+    display: grid;
+  }
+
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col {
+    flex-direction: column;
+    padding: 0 12vw 0 5vw;
+    display: flex;
+    position: relative;
+  }
+
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col p.title-tag {
+    margin-bottom: 2.28571em;
+  }
+
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col .heading {
+    margin-bottom: .888889em;
+  }
+
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col p.body {
+    margin-bottom: 3em;
+  }
+
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col a.btn {
+    margin-bottom: 0;
+  }
+
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col .links-container {
+    -webkit-font-smoothing: antialiased;
+    color: #112343;
+    margin-bottom: 3em;
+    font-family: Messina Sans Book, sans-serif;
+    font-size: .8rem;
+    line-height: 143%;
+  }
+}
+
+@media only screen and (width >= 768px) and (width >= 768px) {
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col .links-container {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 768px) and (width >= 1600px) {
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col .links-container {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (width >= 768px) and (width >= 1200px) {
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col .links-container {
+    grid-template-columns: 1fr 1fr;
+    width: 95%;
+    display: grid;
+  }
+
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col .links-container a:last-child:nth-child(2) {
+    border-bottom: none;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col div.bars-container {
+    -webkit-font-smoothing: antialiased;
+    color: #112343;
+    width: fit-content;
+    height: 6rem;
+    margin-top: 5em;
+    font-family: Messina Sans Book, sans-serif;
+    font-size: .8rem;
+    line-height: 143%;
+  }
+}
+
+@media only screen and (width >= 768px) and (width >= 768px) {
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col div.bars-container {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 768px) and (width >= 1600px) {
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col div.bars-container {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col div.bars-container .vertical-bars-block {
+    width: auto;
+    height: 100%;
+    transform: scaleX(-1);
+  }
+
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col div.bars-container .vertical-bars-block path {
+    fill: #a8e332;
+  }
+
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style div.img-wrap {
+    height: 100%;
   }
 }
 
@@ -5773,7 +6081,7 @@ section.section_text .flex-content .text-editor h6 {
 section.section_text .flex-content .text-editor p {
   -webkit-font-smoothing: antialiased;
   color: #112343;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
 }
@@ -5804,7 +6112,7 @@ section.section_text .flex-content .text-editor strong, section.section_text .fl
 section.section_text .flex-content .text-editor ol, section.section_text .flex-content .text-editor ul, section.section_text .flex-content .text-editor li {
   -webkit-font-smoothing: antialiased;
   color: #112343;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
 }
@@ -6020,7 +6328,7 @@ header .header-bar .main-header .main-header-content .main-header-centre .header
   border: none;
   border-radius: .13636rem;
   padding: .55em 1.4em;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: normal;
@@ -6058,7 +6366,7 @@ header .header-bar .main-header .main-header-content .main-header-right .right-l
 header .header-bar .main-header .main-header-content .main-header-right .right-links-container a {
   -webkit-font-smoothing: antialiased;
   color: #112343;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   font-weight: 500;
   line-height: 143%;
@@ -6104,7 +6412,7 @@ header .header-bar .main-header .main-header-content .main-header-right .hamburg
   border: none;
   place-content: center;
   width: fit-content;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
   text-decoration: none;
@@ -6255,7 +6563,7 @@ header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul 
 header div.action-nav-container nav.action-nav .menu-content .menu-grid .col ul li a {
   -webkit-font-smoothing: antialiased;
   color: #112343;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   font-weight: 300;
   line-height: 143%;
@@ -6479,7 +6787,7 @@ header section.hero-container #hero-overlay .hero-grid .hero-text-container .hea
 header section.hero-container #hero-overlay .hero-grid .hero-text-container .text {
   -webkit-font-smoothing: antialiased;
   color: #fff;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
 }
@@ -6578,7 +6886,7 @@ header section.hero-container #hero-overlay .hero-grid .col-right a .hero-video-
   align-items: center;
   gap: .2rem;
   padding: .5rem .8rem;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
   display: flex;
@@ -6642,7 +6950,7 @@ footer {
   color: #fff;
   background-color: #112343;
   padding: 7vw 0;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
 }
@@ -6785,7 +7093,7 @@ footer .footer-content .footer-top .footer-top-left .signup-container input {
   border-bottom: 1px solid #fff;
   flex-grow: 1;
   padding-bottom: .5em;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
 }
@@ -6861,7 +7169,7 @@ footer .footer-content .footer-top .footer-top-right .menu-col .menu-parent-page
 footer .footer-content .footer-top .footer-top-right .menu-col a.menu-child-page {
   -webkit-font-smoothing: antialiased;
   color: #fff;
-  font-family: Messina Sans, sans-serif;
+  font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
 }
