@@ -87,7 +87,8 @@
 @mixin letterSpacingEm($letter-spacing-rem, $font-size) {
 	// Calculate the letter-spacing in em based on the font size
 	letter-spacing: #{$letter-spacing-rem / $font-size}em;
-  }
+}
+
 
 
 // global type variables

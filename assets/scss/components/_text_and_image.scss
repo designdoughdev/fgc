@@ -329,16 +329,37 @@ section.section_text_and_image{
 
                 .text-col{
                     grid-area: 1 / 1 / span 1 / span 11;
-                    
                     padding: 0 5vw 0 16vw;
-                    
                     position: relative;
+
+                    p.title-tag{
+                        @include rem-to-em(margin, 2rem, 0.875rem, 1rem, (bottom));
+                    }
+
+                    .heading{
+                        @include rem-to-em(margin, 2.5rem, 2.8125rem, 1rem, (bottom));
+
+                    }
+
+                    p.body{
+                        margin-bottom: 5em;
+                    }
+
+                    a.btn{
+                        margin-bottom: 0;
+                    }
+
+                    .links-container{
+                        @include body;
+                        margin-bottom: 5em;
+                    }
 
                     @include respond-to(lg){
                         .links-container{
                             display: grid;
                             grid-template-columns: 1fr 1fr;
-                            width: 80%;
+                            width: 95%;
+
     
                             /* Remove border-bottom from the last row items - accounting for a potential odd number of items */ 
                             
@@ -348,6 +369,8 @@ section.section_text_and_image{
                         }
 
                     }
+
+
 
 
                 }

@@ -2332,3 +2332,29 @@ body[data-theme='light'] {
     
 }
 
+/*------------------------ Relative spacing to font size (margin/padding) -------------------------------*/
+
+// Mixin to convert rem to em for any CSS property and sides
+@mixin rem-to-em($property, $rem-value, $element-font-size-rem, $root-font-size-rem: 1rem, $sides: null) {
+    // Convert values to unitless for clean calculations
+    $rem-value-unitless: $rem-value / 1rem;
+    $element-font-size-unitless: $element-font-size-rem / 1rem;
+    $root-font-size-unitless: $root-font-size-rem / 1rem;
+  
+    // Calculate em value
+    $em-value: $rem-value-unitless * calc($root-font-size-unitless / $element-font-size-unitless);
+  
+    // Apply em value to the specified property and sides
+    @if $sides == null {
+      // Apply to entire property (e.g., `margin: x em`)
+      #{$property}: #{$em-value}em;
+    } @else {
+      // Apply to specific sides (e.g., `margin-top: x em`, `padding-left: x em`)
+      @each $side in $sides {
+        #{$property}-#{$side}: #{$em-value}em;
+      }
+    }
+  }
+  
+  
+
