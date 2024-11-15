@@ -37,7 +37,7 @@ $video = get_field('video');
 
                 <div class="main-header-centre">
                     <div class="header-menu-btns">
-                        <button class="btn-menu mint" value="discover">Discove</button>
+                        <button class="btn-menu mint" value="discover">Discover</button>
                         <button class="btn-menu yellow" value="explore">Explore</button>
                         <button class="btn-menu sky-blue" value="do">Do</button>
                     </div>
