@@ -405,12 +405,12 @@ endif
     <div class="section-content half-text-half-img-layout centre-style <?php if ($colourScheme) {
                                                                                     echo $colourScheme;
                                                                                 } ?>-style <?php if ($reverseLayout) {
-                                                                                                                                            echo " reverse ";
-                                                                                                                                        }
-                                                                                                                                        if ($barsAtTop) {
-                                                                                                                                            echo "bars-at-top";
-                                                                                                                                        } ?>"
-        data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                                                                                                echo " reverse ";
+                                                                                            }
+                                                                                            if ($barsAtTop) {
+                                                                                                echo "bars-at-top";
+                                                                                            } ?>" data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom">
 
 
 
@@ -504,9 +504,9 @@ endif
     <div class="section-content half-text-half-img-layout side-aligned <?php if ($colourScheme) {
                                                                                     echo $colourScheme;
                                                                                 } ?>-style <?php if ($halfImageStyleVariation == 'right-style') {
-                                                                                                                                            echo "reverse ";
-                                                                                                                                        } ?>"
-        data-aos=" fade-up" data-aos-anchor-placement="top-bottom">
+                                                                                                echo "reverse ";
+                                                                                            } ?>" data-aos=" fade-up"
+        data-aos-anchor-placement="top-bottom">
 
         <div class="text-col">
 
