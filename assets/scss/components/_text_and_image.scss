@@ -304,9 +304,7 @@ section.section_text_and_image{
             .vertical-bars{
 
                 display: none;
-
-
-                        
+           
             }
 
         }
@@ -332,6 +330,7 @@ section.section_text_and_image{
                     grid-area: 1 / 1 / span 1 / span 11;
                     padding: 0 5vw 0 16vw;
                     position: relative;
+                    
 
                     p.title-tag{
                         @include rem-to-em(margin, 2rem, 0.875rem, 1rem, (bottom));
@@ -396,9 +395,7 @@ section.section_text_and_image{
                         height: 100%;
                         width: auto;
 
-                        path{
-                            fill: $skyBlue;
-                        }
+
                     }
                 }
 
@@ -495,37 +492,15 @@ section.section_text_and_image{
         background-color: $cobaltBlue;
     }
 
-    .vertical-bars{
-        display: none;
-    }
 
-    div.vertical-bars-container{
+    .bottom-bars-container, .top-bars-container{
 
-        position: relative;
-        height: 4rem;
-        width: fit-content;
-        margin-left: auto;
-
-        .vertical-bars-small{
-
-            height: 100%;
-            width: auto;
-            position: absolute;
-            top: 0;
-            right: 0;
-
-        }
-
-
-        .vertical-bars{
-
-            display: none;
-
-
-                    
-        }
+       display: none;
+     
 
     }
+
+
 
 
 
@@ -541,31 +516,46 @@ section.section_text_and_image{
 
             
 
+            
+
 
 
             .text-col{
                 
-                padding: 0 12vw 0 5vw;
-                position: relative;
+                padding-right: 5vw;
                 display: flex;
                 flex-direction: column;
+                position: relative;
+                justify-content: space-between;
+                
 
-                p.title-tag{
-                    @include rem-to-em(margin, 2rem, 0.875rem, 1rem, (bottom));
+
+                .text-content{
+
+                    max-width: 95%;
+
+                    p.title-tag{
+                        @include rem-to-em(margin, 2rem, 0.875rem, 1rem, (bottom));
+                    }
+    
+                    .heading{
+                        @include rem-to-em(margin, 2.5rem, 2.8125rem, 1rem, (bottom));
+    
+                    }
+    
+                    p.body{
+                        margin-bottom: 3em;
+                    }
+    
+                    a.btn{
+                        margin-bottom: 0;
+                    }
+
                 }
 
-                .heading{
-                    @include rem-to-em(margin, 2.5rem, 2.8125rem, 1rem, (bottom));
+                
 
-                }
 
-                p.body{
-                    margin-bottom: 3em;
-                }
-
-                a.btn{
-                    margin-bottom: 0;
-                }
 
                 .links-container{
                     @include body;
@@ -588,11 +578,16 @@ section.section_text_and_image{
 
                 }
 
-                div.bars-container{
+                .top-bars-container, .bottom-bars-container{
+                    width: fit-content;
+                }
+
+                .bottom-bars-container{
+                    display: block;
                     @include body;
                     margin-top: 5em;
-                    height: 6rem;
-                    width: fit-content;
+                    height: 5em;
+                    
 
     
                     .vertical-bars-block{
@@ -601,9 +596,7 @@ section.section_text_and_image{
                         width: auto;
                         transform: scaleX(-1); /* Reflects the element horizontally */
     
-                        path{
-                            fill: $green;
-                        }
+
                     }
                 }
 
@@ -615,30 +608,53 @@ section.section_text_and_image{
                 height: 100%;
             }
 
+            // if bars at top option is sleceted
 
+            &.bars-at-top{
+                .top-bars-container{
+                    display: block;
+                    margin-right: auto;
+                    margin-bottom: 6rem;
+                    transform: scaleX(-1); /* Reflects the element horizontally */
+                }
+                .bottom-bars-container{
+                    @include body;
+                    display: none;
+                }
+            }
+
+            // if reverse option is selected
 
             &.reverse{
 
+                .text-col{
+                    padding-left: 5vw;
+                    padding-right: 0;
+                }
+
+                &.bars-at-top{
+                    .top-bars-container{
+                        margin-right: 0;
+                        margin-left: auto;
+                        transform: scaleX(1); /* Reflects the element horizontally */
+                    }
+                }
+
+
+
                 
 
-                // div.vertical-bars-container{
-                //     right: 0;
-                // }
+                div.text-col{
+                    order: 2
+                }
 
-                // .text-col{
-                //     padding: 0 16vw 0 5vw;
+                .bottom-bars-container{
 
-                // }
-
-                // div.img-wrap{
-                //     grid-area: 1 / 2 / span 1 / span 11;
-                // }
-
-                // div.vertical-bars-container{
-                //     transform: scaleX(1); /* Reflects the element horizontally */
-
-
-                // }
+                    margin-left: auto;
+                    transform: scaleX(-1); /* Reflects the element horizontally */
+                    
+ 
+                }
 
             }
     
@@ -682,12 +698,7 @@ section.section_text_and_image{
 
         div.vertical-bars-container{
             .vertical-bars-small{
-                // display: block;
-                // position: absolute;
-                // top: 0;
-                // right: 0;
-                
-                // object-fit: cover;
+
                 height: 4rem;
                 width: fit-content;
                 margin-left: auto;

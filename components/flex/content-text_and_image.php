@@ -395,64 +395,89 @@ endif
 
     <?php $halfImageStyleVariation = get_sub_field('half_image_variation'); ?>
 
+    <?php $barsAtTop = get_sub_field('bars_at_top'); ?>
+
     <?php if ($halfImageStyleVariation == 'centre'):
 
             /// centred layout version 
         ?>
 
-    <div class="section-content half-text-half-img-layout centre-style" data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom">
+    <div class="section-content half-text-half-img-layout centre-style <?php if ($colourScheme) {
+                                                                                    echo $colourScheme;
+                                                                                } ?>-style <?php if ($reverseLayout) {
+                                                                                                                                            echo " reverse ";
+                                                                                                                                        }
+                                                                                                                                        if ($barsAtTop) {
+                                                                                                                                            echo "bars-at-top";
+                                                                                                                                        } ?>"
+        data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 
 
 
         <div class="text-col">
 
-            <p class="title-tag">Well-being of Future
-                Generations (Wales) Act 2015</p>
-            <?php if ($bigTitle): ?>
-            <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
-            <?php endif; // big title 
-                    ?>
-            <?php if ($body): ?>
-            <p class="body"><?php echo $body; ?></p>
-            <?php endif; // body 
-                    ?>
+            <div class="top-bars-container">
+
+                <?php
 
 
-            <?php
-                    if (have_rows('page_links')): ?>
-
-            <div class="links-container">
+                        echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars-small.svg');
+                        ?>
 
 
-                <?php while (have_rows('page_links')) : the_row(); ?>
+            </div>
+            <div class="text-content">
+                <p class="title-tag">Well-being of Future
+                    Generations (Wales) Act 2015</p>
+                <?php if ($bigTitle): ?>
+                <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
+                <?php endif; // big title 
+                        ?>
+                <?php if ($body): ?>
+                <p class="body"><?php echo $body; ?></p>
+                <?php endif; // body 
+                        ?>
 
 
-                <?php $linkID = get_sub_field('page_link'); ?>
+                <?php
+                        if (have_rows('page_links')): ?>
+
+                <div class="links-container">
 
 
-                <a href="<?php echo  get_the_permalink($linkID) ?>"><?php echo get_the_title($linkID); ?></a>
+                    <?php while (have_rows('page_links')) : the_row(); ?>
 
 
-                <?php endwhile; ?>
+                    <?php $linkID = get_sub_field('page_link'); ?>
+
+
+                    <a href="<?php echo  get_the_permalink($linkID) ?>"><?php echo get_the_title($linkID); ?></a>
+
+
+                    <?php endwhile; ?>
+
+                </div>
+
+
+                <?php endif; ?>
+
+                <?php if ($link): ?>
+                <a href="/" class="link btn text-white"
+                    target="<?php echo $link_target; ?>"><?php echo $link_title; ?></a>
+                <?php endif; // link 
+                        ?>
 
             </div>
 
 
-            <?php endif; ?>
-
-            <?php if ($link): ?>
-            <a href="/" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?></a>
-            <?php endif; // link 
-                    ?>
-
-            <div class="bars-container">
+            <div class="bottom-bars-container">
 
                 <?php
 
 
                         echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars-block.svg');
                         ?>
+
 
             </div>
 
@@ -476,51 +501,59 @@ endif
 
     <?php else: ?>
 
-    <div class="section-content half-text-half-img-layout side-aligned <?php if ($halfImageStyleVariation == 'right-style') {
-                                                                                    echo "reverse ";
-                                                                                } ?>" data-aos=" fade-up"
-        data-aos-anchor-placement="top-bottom">
+    <div class="section-content half-text-half-img-layout side-aligned <?php if ($colourScheme) {
+                                                                                    echo $colourScheme;
+                                                                                } ?>-style <?php if ($halfImageStyleVariation == 'right-style') {
+                                                                                                                                            echo "reverse ";
+                                                                                                                                        } ?>"
+        data-aos=" fade-up" data-aos-anchor-placement="top-bottom">
 
         <div class="text-col">
 
-            <p class="title-tag">Well-being of Future
-                Generations (Wales) Act 2015</p>
-            <?php if ($bigTitle): ?>
-            <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
-            <?php endif; // big title 
-                    ?>
-            <?php if ($body): ?>
-            <p class="body"><?php echo $body; ?></p>
-            <?php endif; // body 
-                    ?>
+            <div class="text-content">
+                <p class="title-tag">Well-being of Future
+                    Generations (Wales) Act 2015</p>
+                <?php if ($bigTitle): ?>
+                <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
+                <?php endif; // big title 
+                        ?>
+                <?php if ($body): ?>
+                <p class="body"><?php echo $body; ?></p>
+                <?php endif; // body 
+                        ?>
 
 
-            <?php
-                    if (have_rows('page_links')): ?>
+                <?php
+                        if (have_rows('page_links')): ?>
 
-            <div class="links-container">
-
-
-                <?php while (have_rows('page_links')) : the_row(); ?>
+                <div class="links-container">
 
 
-                <?php $linkID = get_sub_field('page_link'); ?>
+                    <?php while (have_rows('page_links')) : the_row(); ?>
 
 
-                <a href="<?php echo  get_the_permalink($linkID) ?>"><?php echo get_the_title($linkID); ?></a>
+                    <?php $linkID = get_sub_field('page_link'); ?>
 
 
-                <?php endwhile; ?>
+                    <a href="<?php echo  get_the_permalink($linkID) ?>"><?php echo get_the_title($linkID); ?></a>
+
+
+                    <?php endwhile; ?>
+
+                </div>
+
+
+                <?php endif; ?>
+
+                <?php if ($link): ?>
+                <a href="/" class="link btn text-white"
+                    target="<?php echo $link_target; ?>"><?php echo $link_title; ?></a>
+                <?php endif; // link 
+                        ?>
 
             </div>
 
 
-            <?php endif; ?>
-
-            <?php if ($link): ?>
-            <a href="/" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?></a>
-            <?php endif; // link 
-                    ?>
 
 
         </div>

@@ -2166,11 +2166,32 @@
                             "type": "true_false",
                             "instructions": "Enable to reverse column order on larger screens",
                             "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "allow_in_bindings": 0,
+                            "ui_on_text": "Text Right",
+                            "ui_off_text": "Text Left",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_6737d7cfbeefb",
+                            "label": "Bars at Top",
+                            "name": "bars_at_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Enable to put vertical bar pattern at the top of the flex as opposed to the default position at the bottom",
+                            "required": 0,
                             "conditional_logic": [
                                 [
                                     {
                                         "field": "field_651438b594262",
-                                        "operator": "!=",
+                                        "operator": "==",
                                         "value": "half-text-half-img"
                                     }
                                 ]
@@ -2183,8 +2204,8 @@
                             "message": "",
                             "default_value": 0,
                             "allow_in_bindings": 0,
-                            "ui_on_text": "Text Right",
-                            "ui_off_text": "Text Left",
+                            "ui_on_text": "Bars at Top",
+                            "ui_off_text": "Bars at Bottom",
                             "ui": 1
                         },
                         {
@@ -2263,6 +2284,11 @@
                                         "field": "field_651438b594262",
                                         "operator": "==",
                                         "value": "half-text-half-img"
+                                    },
+                                    {
+                                        "field": "field_673702099c4ff",
+                                        "operator": "!=",
+                                        "value": "centre"
                                     }
                                 ]
                             ],
@@ -6807,5 +6833,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731659084
+    "modified": 1731755950
 }
