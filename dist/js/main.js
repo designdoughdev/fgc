@@ -654,7 +654,10 @@ document.addEventListener("DOMContentLoaded", function() {
             arrows: false,
             updateOnMove: true,
             perPage: 3,
-            padding: "7vw",
+            padding: {
+                left: "12vw",
+                right: "12vw"
+            },
             focus: "center",
             pagination: false,
             breakpoints: {
@@ -662,6 +665,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     gap: "6vw",
                     padding: "6vw",
                     perPage: 1
+                },
+                1200: {
+                    gap: "3vw",
+                    padding: "6vw",
+                    perPage: 2
                 }
             }
         }).mount();
@@ -685,7 +693,10 @@ document.addEventListener("DOMContentLoaded", function() {
             perPage: 1,
             perMove: 1,
             gap: "7vw",
-            padding: "6vw",
+            padding: {
+                left: "6vw",
+                right: "6vw"
+            },
             pagination: false,
             arrows: false,
             direction: "ltr",

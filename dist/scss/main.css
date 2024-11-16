@@ -3292,6 +3292,12 @@ section.section_big_search {
   position: relative;
 }
 
+@media only screen and (width >= 1200px) {
+  section.section_big_search {
+    padding: 6vw 0;
+  }
+}
+
 @media only screen and (width >= 1600px) {
   section.section_big_search {
     padding: 5vw 0;
@@ -3505,12 +3511,12 @@ section.section_big_search .search-wrapper div.search-flex-content form.search-f
 }
 
 section.section_images {
-  padding: 7vw 0;
+  padding: 5vw 0;
 }
 
 @media only screen and (width >= 1600px) {
   section.section_images {
-    padding: 5vw 0;
+    padding: 3vw 0;
   }
 }
 
@@ -3639,6 +3645,12 @@ section.image-section {
   padding: 7vw 0;
 }
 
+@media only screen and (width >= 1200px) {
+  section.image-section {
+    padding: 6vw 0;
+  }
+}
+
 @media only screen and (width >= 1600px) {
   section.image-section {
     padding: 5vw 0;
@@ -3694,6 +3706,12 @@ section.image-section .img-caption:before {
 
 section.section_postcode_search {
   padding: 7vw 0;
+}
+
+@media only screen and (width >= 1200px) {
+  section.section_postcode_search {
+    padding: 6vw 0;
+  }
 }
 
 @media only screen and (width >= 1600px) {
@@ -3788,6 +3806,16 @@ section.section_postcode_search .postcode-search-wrapper .text-col div.search-bo
 
   section.section_postcode_search .postcode-search-wrapper div.text-col form.search-form {
     align-self: flex-end;
+  }
+}
+
+section.section_posts_agg {
+  padding: 5vw 0;
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_posts_agg {
+    padding: 3vw 0;
   }
 }
 
@@ -3933,6 +3961,7 @@ section.section_posts_agg .section-wrapper.splide.post-feed-carousel .splide__sl
     grid-template-rows: max-content;
     grid-template-columns: 1fr 1fr;
     column-gap: 15vw;
+    padding: 0 12vw;
     display: grid;
   }
 
@@ -3954,7 +3983,7 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel {
 
 section.section_posts_agg .section-wrapper.splide.press-releases-carousel .text-container {
   margin-bottom: 2vw;
-  padding: 0 7vw;
+  padding: 0 6vw;
 }
 
 section.section_posts_agg .section-wrapper.splide.press-releases-carousel .text-container .title-tag {
@@ -4157,7 +4186,7 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel .verti
     justify-content: space-between;
     gap: 12vw;
     margin-bottom: 2vw;
-    padding: 0 7vw;
+    padding: 0 6vw;
     display: flex;
   }
 
@@ -4358,6 +4387,12 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel .verti
 
 section.section_text_and_image {
   padding: 7vw 0;
+}
+
+@media only screen and (width >= 1200px) {
+  section.section_text_and_image {
+    padding: 6vw 0;
+  }
 }
 
 @media only screen and (width >= 1600px) {
@@ -5540,6 +5575,16 @@ section.section_text_and_image .section-content.full-image-layout div.bars-conta
   }
 }
 
+section.section_wayfinder {
+  padding: 5vw 0;
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_wayfinder {
+    padding: 3vw 0;
+  }
+}
+
 section.section_wayfinder .section-content .text-content {
   height: fit-content;
 }
@@ -5899,6 +5944,12 @@ section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link
 
 section.section_text {
   padding: 7vw 0;
+}
+
+@media only screen and (width >= 1200px) {
+  section.section_text {
+    padding: 6vw 0;
+  }
 }
 
 @media only screen and (width >= 1600px) {
@@ -6286,6 +6337,12 @@ section.section_testimonial {
   padding: 7vw 0;
 }
 
+@media only screen and (width >= 1200px) {
+  section.section_testimonial {
+    padding: 6vw 0;
+  }
+}
+
 @media only screen and (width >= 1600px) {
   section.section_testimonial {
     padding: 5vw 0;
@@ -6350,6 +6407,10 @@ section.section_testimonial .section-content.none-style .title-tag:before {
   height: .22727rem;
   margin-right: .37rem;
   display: inline-block;
+}
+
+section.section_testimonial .section-content.none-style .text-content {
+  margin: 0 6vw;
 }
 
 section.section_testimonial .section-content .text-content {
@@ -6673,6 +6734,12 @@ header div.action-nav-container nav.action-nav {
   padding: 7vw 0;
   transition: all .2s;
   position: relative;
+}
+
+@media only screen and (width >= 1200px) {
+  header div.action-nav-container nav.action-nav {
+    padding: 6vw 0;
+  }
 }
 
 @media only screen and (width >= 1600px) {
@@ -7171,6 +7238,12 @@ footer {
   font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   line-height: 143%;
+}
+
+@media only screen and (width >= 1200px) {
+  footer {
+    padding: 6vw 0;
+  }
 }
 
 @media only screen and (width >= 1600px) {

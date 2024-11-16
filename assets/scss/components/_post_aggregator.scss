@@ -6,7 +6,7 @@
 
 section.section_posts_agg{
 
-    // @include sections_padding;
+    @include sections_padding_small;
 
     /*------------------------ Post Feed Layout -------------------------------*/
 
@@ -79,6 +79,8 @@ section.section_posts_agg{
 
                 div.text-container{
 
+                    padding: 0 12vw;
+
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     grid-template-rows: max-content;
@@ -118,7 +120,7 @@ section.section_posts_agg{
 
         .text-container{
 
-            padding: 0 7vw;
+            padding: 0 6vw;
             margin-bottom: 2vw;
 
 
@@ -239,7 +241,7 @@ section.section_posts_agg{
                 
                 .text-container{
 
-                    padding: 0 7vw;
+                    padding: 0 6vw;
                     margin-bottom: 2vw;
                     display: flex;
                     justify-content: space-between;

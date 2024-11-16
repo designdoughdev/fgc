@@ -20,6 +20,10 @@ section.section_testimonial{
                 @include title_tag($darkNavy, $cobaltBlue);
             }
 
+            .text-content{
+                margin: 0 6vw;
+            }
+
         }
 
         .text-content{
