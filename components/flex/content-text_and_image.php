@@ -52,7 +52,7 @@ endif
 
 
             <div class="col">
-                <p class="title-tag">international</p>
+                <h2 class="title-tag">international</h2>
                 <h3 class="heading h2 text-white">Empowering Change Worldwide</h3>
                 <p class="body text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor
@@ -81,7 +81,7 @@ endif
 
 
 
-            <p class="title-tag">Cymru Can</p>
+            <h2 class="title-tag">Cymru Can</h2>
             <div class="text-content">
                 <h3 class="heading h2">The innovative goals paving the way for a stronger, greener Wales</h3>
                 <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -129,8 +129,8 @@ endif
 
 
 
-            <p class="title-tag">Well-being of Future
-                Generations (Wales) Act 2015</p>
+            <h2 class="title-tag">Well-being of Future
+                Generations (Wales) Act 2015</h2>
             <h3 class="heading h2">Shaping a brighter tomorrow: Discover how the Well-being of Future Generations Act is
                 transforming Wales</h3>
             <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -170,7 +170,7 @@ endif
 
 
             <div class="text-content">
-                <p class="title-tag">Meet the commissioner</p>
+                <h2 class="title-tag">Meet the commissioner</h2>
                 <h3 class="heading h2">Creating a legacy for Future Generations</h3>
                 <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua ut enim ad.</p>
@@ -216,7 +216,7 @@ endif
 
 
                     <div class="text-content">
-                        <p class="title-tag">Meet the commissioner</p>
+                        <h2 class="title-tag">Meet the commissioner</h2>
                         <h3 class="heading h2">Creating a legacy for Future Generations</h3>
                         <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ut labore et dolore magna aliqua ut enim ad.</p>
@@ -247,7 +247,7 @@ endif
 
 
 
-                <p class="title-tag">Cymru Can</p>
+                <h2 class="title-tag">Cymru Can</h2>
                 <div class="text-content">
                     <h3 class="heading h2">The innovative goals paving the way for a stronger, greener Wales</h3>
                     <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -310,11 +310,11 @@ endif
 
             <div class="col">
                 <?php if ($link || $smallTitle): ?>
-                <p class="title-tag"><?php if ($link) {
+                <h2 class="title-tag"><?php if ($link) {
                                                     echo $link_title;
                                                 } else {
                                                     echo $smallTitle;
-                                                } ?></p>
+                                                } ?></h2>
                 <?php endif;  // title tag
                     ?>
                 <?php if ($bigTitle): ?>
@@ -354,7 +354,7 @@ endif
 
 
 
-            <p class="title-tag">Cymru Can</p>
+            <h2 class="title-tag">Cymru Can</h2>
             <div class="text-content">
                 <h3 class="heading h2">The innovative goals paving the way for a stronger, greener Wales</h3>
                 <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -427,8 +427,8 @@ endif
 
             </div>
             <div class="text-content">
-                <p class="title-tag">Well-being of Future
-                    Generations (Wales) Act 2015</p>
+                <h2 class="title-tag">Well-being of Future
+                    Generations (Wales) Act 2015</h2>
                 <?php if ($bigTitle): ?>
                 <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
                 <?php endif; // big title 
@@ -511,8 +511,8 @@ endif
         <div class="text-col">
 
             <div class="text-content">
-                <p class="title-tag">Well-being of Future
-                    Generations (Wales) Act 2015</p>
+                <h2 class="title-tag">Well-being of Future
+                    Generations (Wales) Act 2015</h2>
                 <?php if ($bigTitle): ?>
                 <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
                 <?php endif; // big title 
@@ -599,8 +599,8 @@ endif
 
 
 
-            <p class="title-tag">Well-being of Future
-                Generations (Wales) Act 2015</p>
+            <h2 class="title-tag">Well-being of Future
+                Generations (Wales) Act 2015</h2>
             <h3 class="heading h2">Shaping a brighter tomorrow: Discover how the Well-being of Future Generations Act is
                 transforming Wales</h3>
             <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -639,7 +639,7 @@ endif
 
 
             <div class="text-content">
-                <p class="title-tag">Meet the commissioner</p>
+                <h2 class="title-tag">Meet the commissioner</h2>
                 <h3 class="heading h2">Creating a legacy for Future Generations</h3>
                 <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua ut enim ad.</p>
@@ -683,7 +683,7 @@ endif
 
 
                 <div class="text-content">
-                    <p class="title-tag">Meet the commissioner</p>
+                    <h2 class="title-tag">Meet the commissioner</h2>
                     <h3 class="heading h2">Creating a legacy for Future Generations</h3>
                     <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua ut enim ad.</p>

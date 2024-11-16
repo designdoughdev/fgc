@@ -22,7 +22,7 @@
     <div class="splide images-carousel container_big section-wrapper" aria-label="Image Gallery">
 
         <div class="text-container">
-            <p class="title-tag">In action</p>
+            <h2 class="title-tag">In action</h2>
             <h3 class="heading h1">The moments that matter</h3>
             <div class="button-container">
                 <button class="splide__arrow custom-prev btn-prev" aria-label="Previous slide">

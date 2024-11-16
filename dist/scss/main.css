@@ -4772,7 +4772,7 @@ section.section_text_and_image .section-content.half-text-half-img-layout.side-a
     position: relative;
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .text-col p.title-tag {
+  section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned .text-col .title-tag {
     margin-bottom: 2.28571em;
   }
 
@@ -5009,7 +5009,7 @@ section.section_text_and_image .section-content.half-text-half-img-layout.centre
     max-width: 90%;
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col .text-content p.title-tag {
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col .text-content .title-tag {
     margin-bottom: 2.28571em;
   }
 
@@ -6508,6 +6508,247 @@ section.section_testimonial .section-content .text-content .quote-info:before {
 
 section.section_testimonial .section-content .text-content {
   margin: 3.81em 6vw;
+}
+
+.section_team-grid {
+  padding: 7vw 0;
+}
+
+@media only screen and (width >= 1200px) {
+  .section_team-grid {
+    padding: 6vw 0;
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  .section_team-grid {
+    padding: 5vw 0;
+  }
+}
+
+.section_team-grid .small-title {
+  height: 50px;
+  margin-bottom: 0;
+}
+
+.section_team-grid .section-title {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 60px;
+  font-family: Messina Sans, sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.05em;
+}
+
+@media only screen and (width >= 768px) {
+  .section_team-grid .section-title {
+    font-size: 30.4px;
+  }
+}
+
+@media only screen and (width >= 1200px) {
+  .section_team-grid .section-title {
+    font-size: 34.2px;
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  .section_team-grid .section-title {
+    font-size: 38px;
+  }
+}
+
+@media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
+  .section_team-grid .section-title {
+    font-size: 30.4px;
+  }
+}
+
+@media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
+  .section_team-grid .section-title {
+    font-size: 26.6px;
+  }
+}
+
+@media only screen and (width <= 768px) {
+  .section_team-grid .section-title {
+    font-size: 26.6px;
+  }
+}
+
+.section_team-grid .intro-text {
+  margin-bottom: 60px;
+}
+
+@media only screen and (width >= 1200px) {
+  .section_team-grid .intro-text {
+    margin-bottom: 100px;
+  }
+}
+
+.section_team-grid .team-grid {
+  gap: 80px;
+  display: grid;
+}
+
+@media only screen and (width >= 768px) {
+  .section_team-grid .team-grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 120px;
+  }
+}
+
+@media only screen and (width >= 1200px) {
+  .section_team-grid .team-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 180px;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  .section_team-grid .team-grid.board {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+  }
+}
+
+@media only screen and (width >= 1200px) {
+  .section_team-grid .team-grid.board {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 60px;
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  .section_team-grid .team-grid.board {
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 70px;
+  }
+}
+
+.section_team-grid .team-grid .staff-card-wrap {
+  display: grid;
+}
+
+.section_team-grid .team-grid .staff-card-wrap .accord_wrap {
+  align-self: end;
+}
+
+.section_team-grid .team-grid .img-wrap {
+  width: 100%;
+  height: fit-content;
+}
+
+.section_team-grid .team-grid .img-wrap img {
+  object-fit: cover;
+  object-position: top;
+  aspect-ratio: 4 / 5;
+  width: 100%;
+}
+
+.section_team-grid .team-grid .accord_wrap {
+  -o-transition: .4s;
+  -o-transition: .4s;
+  width: 100%;
+  transition: all .4s;
+}
+
+.section_team-grid .team-grid .accord_wrap .staff-name {
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+.section_team-grid .team-grid .accord_wrap .job-title {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .8rem;
+  line-height: 143%;
+}
+
+@media only screen and (width >= 768px) {
+  .section_team-grid .team-grid .accord_wrap .job-title {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  .section_team-grid .team-grid .accord_wrap .job-title {
+    font-size: 1rem;
+  }
+}
+
+.section_team-grid .team-grid .accord_wrap .accord_head {
+  -o-transition: .2s;
+  border-bottom: 1px solid #00f;
+  justify-content: space-between;
+  padding: 0 0 5px;
+  transition: all .2s;
+  display: flex;
+  position: relative;
+}
+
+.section_team-grid .team-grid .accord_wrap .accord_head .arrow-icon {
+  align-self: end;
+  width: auto;
+  height: 20px;
+  position: relative;
+}
+
+.section_team-grid .team-grid .accord_wrap .accord_body {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  opacity: 0;
+  -o-transition: .4s;
+  max-height: 1px;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .8rem;
+  line-height: 143%;
+  transition: all .4s;
+  overflow: hidden;
+}
+
+@media only screen and (width >= 768px) {
+  .section_team-grid .team-grid .accord_wrap .accord_body {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  .section_team-grid .team-grid .accord_wrap .accord_body {
+    font-size: 1rem;
+  }
+}
+
+.section_team-grid .team-grid .accord_wrap:hover {
+  cursor: pointer;
+  -o-transition: .4s;
+  transition: all .4s;
+}
+
+.section_team-grid .team-grid .accord_wrap.active {
+  -o-transition: .4s;
+  transition: all .4s;
+}
+
+.section_team-grid .team-grid .accord_wrap.active .accord_body {
+  opacity: 1;
+  max-height: 2000px;
+  padding: 10px 0 30px;
+}
+
+.section_team-grid .team-grid .accord_wrap.active .accord_head .job-title {
+  color: #00f;
+  -o-transition: .2s;
+  transition: all .2s;
+}
+
+.section_team-grid .team-grid .accord_wrap.active img {
+  -o-transition: .2s;
+  transition: all .2s;
+  transform: rotateZ(90deg);
 }
 
 header {

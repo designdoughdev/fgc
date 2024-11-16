@@ -7,7 +7,7 @@
         <div class="footer-top">
             <div class="footer-top-left">
                 <div class="top-left-content">
-                    <p class="title-tag">Newsletter</p>
+                    <h3 class="title-tag">Newsletter</h3>
                     <h4 class="heading">Lorem ipsum dolor sit amet consectetur. Ultrices nec ac. Consectet
                         lorem ipsum.
                     </h4>

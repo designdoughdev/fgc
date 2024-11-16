@@ -19,7 +19,7 @@
 
 
             <div class="text-col">
-                <p class="title-tag">Public Bodies</p>
+                <h2 class="title-tag">Public Bodies</h2>
                 <h3 class="heading h2">Find out more information about your local public body.</h3>
                 <form class="search-form " action="">
 

@@ -12,7 +12,7 @@
 
             <div class="text-content">
                 <?php if ($small_title): ?>
-                <p class="title-tag"><?php echo $small_title; ?></p>
+                <h2 class="title-tag"><?php echo $small_title; ?></h2>
                 <?php endif; ?>
                 <?php if ($quote): ?>
                 <h4 class="quote h2"><?php echo $quote; ?></h4>

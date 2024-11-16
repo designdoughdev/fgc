@@ -118,7 +118,7 @@ $video = get_field('video');
                         </div>
                         <?php endif; ?>
 
-                        <p class="title-tag">Welcome</p>
+                        <h2 class="title-tag">Welcome</h2>
                         <h3 class="heading">Help us create a Wales that we all want to live in, now and in the future.
                         </h3>
                         <?php if (is_front_page()): ?>
@@ -199,7 +199,7 @@ $video = get_field('video');
             <div class="hero-grid container">
                 <div class="col-left">
                     <div class="hero-text-container cobalt">
-                        <p class="title-tag">Welcome</p>
+                        <h2 class="title-tag">Welcome</h2>
                         <h3 class="heading">Help us create a Wales that we all want to live in, now and in the future.
                         </h3>
                         <div class="button-container">

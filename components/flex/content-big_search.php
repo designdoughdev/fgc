@@ -16,7 +16,7 @@
         <div class="search-wrapper">
             <div class="triangle"></div>
             <div class="search-flex-content">
-                <p class="title-tag">Resources</p>
+                <h2 class="title-tag">Resources</h2>
                 <h3 class="heading h1">Looking for something specific?</h3>
                 <form class="search-form " action="">
 

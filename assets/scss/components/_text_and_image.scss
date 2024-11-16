@@ -332,7 +332,7 @@ section.section_text_and_image{
                     position: relative;
                     
 
-                    p.title-tag{
+                    .title-tag{
                         @include rem-to-em(margin, 2rem, 0.875rem, 1rem, (bottom));
                     }
 
@@ -534,7 +534,7 @@ section.section_text_and_image{
 
                     max-width: 90%;
 
-                    p.title-tag{
+                    .title-tag{
                         @include rem-to-em(margin, 2rem, 0.875rem, 1rem, (bottom));
                     }
     
