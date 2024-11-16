@@ -23,10 +23,11 @@
 
                     <div class="search-box ">
                         <input class="input" type="text" placeholder="Search">
-                        <button class="cobalt">
+                        <button class="cobalt btn">
                             <img class="search-icon"
                                 src="<?php bloginfo('template_url'); ?>/assets/images/svg/search-icon.svg" alt="">
                             <span class="search-text text-white">Search</span>
+                            <div class="btn-arrow-container"></div>
                         </button>
                     </div>
 

@@ -123,8 +123,8 @@ $video = get_field('video');
                         </h3>
                         <?php if (is_front_page()): ?>
                         <div class="button-container">
-                            <a href="" class="btn mint">Cymru Can</a>
-                            <a href="" class="btn sky-blue">Cymru Can</a>
+                            <a href="" class="btn mint">Cymru Can<div class="btn-arrow-container"></div></a>
+                            <a href="" class="btn sky-blue">Cymru Can<div class="btn-arrow-container"></div></a>
                         </div>
                         <?php else: ?>
                         <p class="text">
@@ -203,8 +203,8 @@ $video = get_field('video');
                         <h3 class="heading">Help us create a Wales that we all want to live in, now and in the future.
                         </h3>
                         <div class="button-container">
-                            <a href="" class="btn mint">Cymru Can</a>
-                            <a href="" class="btn sky-blue">Cymru Can</a>
+                            <a href="" class="btn mint">Cymru Can<div class="btn-arrow-container"></div></a>
+                            <a href="" class="btn sky-blue">Cymru Can<div class="btn-arrow-container"></div></a>
                         </div>
                     </div>
 

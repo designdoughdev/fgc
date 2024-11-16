@@ -743,6 +743,16 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", slideInOnScroll);
     slideInOnScroll(); // Check on load as well
 });
+// accordion // todo: make this smoother!
+//
+const accordions = document.getElementsByClassName("accord_wrap");
+for(let i = 0; i < accordions.length; i++)accordions[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    // Find the accordion_down_arrow within the clicked accord_wrap
+    // this.querySelector('.accordion_down_arrow').classList.toggle('active');
+    // Close all other acc heads and arrows
+    for(let j = 0; j < accordions.length; j++)if (i !== j) accordions[j].classList.remove("active");
+});
 
 },{"alpinejs":"69hXP","@splidejs/splide":"5CJev","animate.css":"8t3va","aos":"eRzTM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"69hXP":[function(require,module,exports) {
 // packages/alpinejs/src/scheduler.js

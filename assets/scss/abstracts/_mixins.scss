@@ -374,6 +374,12 @@ $conpad : 1.5625vw;
     
 }
 
+@mixin mediumcontainer {
+    width: 84vw;
+    margin: $zeroauto;
+
+}
+
 @mixin smallcontainer {
     width: 78vw;
     margin: $zeroauto;
@@ -400,6 +406,10 @@ $conpad : 1.5625vw;
 
 .container_small {
     @include smallcontainer;
+}
+
+.container_medium {
+    @include mediumcontainer;
 }
 
 .container_big{
@@ -1210,10 +1220,9 @@ $conpad : 1.5625vw;
 }
 
 @mixin btn{
-
     @include buttonsimple;
     @include border_radius;
-    font-weight: 600;
+    font-weight: 500;
     padding: 0.23rem 0.23rem 0.23rem 0.91rem;
     display: inline-flex;
     height: 2.045rem;
@@ -1221,23 +1230,68 @@ $conpad : 1.5625vw;
     align-items: center;
     gap: 1.2em;
     margin-right: 0.41rem;
-    
-    &:after{
-        content: "";
-        display: inline-block; 
-        background-image: url('/assets/images/svg/arrow-right.svg'); 
-        background-size: auto; 
-        background-repeat: no-repeat;
+    position: relative; /* for positioning of pseudo-elements */
+
+    .btn-arrow-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
         background-color: white;
         align-self: stretch;
         height: 100%;
         aspect-ratio: 1;
-        background-position: center;
- 
         @include border_radius;
-       
+        overflow: hidden; /* Hide any content that moves outside */
+    }
+
+    /* Initial arrow inside the container (this is ::after) */
+    .btn-arrow-container::after {
+        content: "";
+        display: inline-block; 
+        background-image: url('/assets/images/svg/arrow-right.svg'); 
+        background-size: auto; 
+        background-repeat: no-repeat;           
+        background-position: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 50%; /* Start centered */
+        transform: translateX(-50%); /* Adjust the exact center alignment */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Replacement arrow (this is ::before) */
+    .btn-arrow-container::before {
+        content: "";
+        display: inline-block;
+        background-image: url('/assets/images/svg/arrow-right.svg');
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%; /* Initially out of view on the left */
+        opacity: 0; /* Initially hidden */
+        transition: left 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Hover effect on the button */
+    &:hover .btn-arrow-container::after {
+        transform: translateX(100%);  /* Move arrow to the right */
+        opacity: 0;  /* Fade out */
+    }
+
+    &:hover .btn-arrow-container::before {
+        left: 50%;   /* Move the arrow into the container from the left */
+        transform: translateX(-50%); /* Center it */
+        opacity: 1;  /* Make the second arrow visible */
     }
 }
+
 
 .btn{
     @include btn;

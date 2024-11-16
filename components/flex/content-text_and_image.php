@@ -57,7 +57,7 @@ endif
                 <p class="body text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor
                     incididunt ut labore et dolore magna aliqua ut enim ad.</p>
-                <a href="/" class="link btn text-white sky-blue">Visit Page</a>
+                <a href="/" class="link btn text-white sky-blue">Visit Page<div class="btn-arrow-container"></div></a>
             </div>
 
             <?php
@@ -88,7 +88,7 @@ endif
                     incididunt ut
                     labore et
                     dolore magna aliqua ut enim ad.</p>
-                <a href="/" class="link btn text-white">Cymru Can</a>
+                <a href="/" class="link btn text-white">Cymru Can<div class="btn-arrow-container"></div></a>
 
             </div>
 
@@ -136,7 +136,7 @@ endif
             <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et
                 dolore magna aliqua ut enim ad.</p>
-            <a href="/" class="link btn text-white">About the Act</a>
+            <a href="/" class="link btn text-white">About the Act<div class="btn-arrow-container"></div></a>
 
             <div class="img-wrap">
                 <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/talk.jpg" ?> alt="">
@@ -174,7 +174,7 @@ endif
                 <h3 class="heading h2">Creating a legacy for Future Generations</h3>
                 <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua ut enim ad.</p>
-                <a href="/" class="link btn">About the Act</a>
+                <a href="/" class="link btn">About the Act<div class="btn-arrow-container"></div></a>
 
             </div>
 
@@ -220,7 +220,7 @@ endif
                         <h3 class="heading h2">Creating a legacy for Future Generations</h3>
                         <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ut labore et dolore magna aliqua ut enim ad.</p>
-                        <a href="/" class="link btn text-white">About the Act</a>
+                        <a href="/" class="link btn text-white">About the Act<div class="btn-arrow-container"></div></a>
 
                     </div>
 
@@ -254,7 +254,7 @@ endif
                         incididunt ut
                         labore et
                         dolore magna aliqua ut enim ad.</p>
-                    <a href="/" class="link btn text-white">Cymru Can</a>
+                    <a href="/" class="link btn text-white">Cymru Can<div class="btn-arrow-container"></div></a>
 
                 </div>
 
@@ -326,7 +326,8 @@ endif
                 <?php endif; // body 
                     ?>
                 <?php if ($link): ?>
-                <a href="/" class="link btn" target="<?php echo $link_target; ?>"><?php echo $link_title; ?></a>
+                <a href="/" class="link btn" target="<?php echo $link_target; ?>"><?php echo $link_title; ?><div
+                        class="btn-arrow-container"></div></a>
                 <?php endif; // link 
                     ?>
             </div>
@@ -361,7 +362,7 @@ endif
                     incididunt ut
                     labore et
                     dolore magna aliqua ut enim ad.</p>
-                <a href="/" class="link btn text-white">Cymru Can</a>
+                <a href="/" class="link btn text-white">Cymru Can<div class="btn-arrow-container"></div></a>
 
             </div>
 
@@ -462,8 +463,9 @@ endif
                 <?php endif; ?>
 
                 <?php if ($link): ?>
-                <a href="/" class="link btn text-white"
-                    target="<?php echo $link_target; ?>"><?php echo $link_title; ?></a>
+                <a href="/" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?>
+                    <div class="btn-arrow-container"></div>
+                </a>
                 <?php endif; // link 
                         ?>
 
@@ -546,8 +548,9 @@ endif
                 <?php endif; ?>
 
                 <?php if ($link): ?>
-                <a href="/" class="link btn text-white"
-                    target="<?php echo $link_target; ?>"><?php echo $link_title; ?></a>
+                <a href="/" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?>
+                    <div class="btn-arrow-container"></div>
+                </a>
                 <?php endif; // link 
                         ?>
 
@@ -606,7 +609,7 @@ endif
             <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et
                 dolore magna aliqua ut enim ad.</p>
-            <a href="/" class="link btn text-white">About the Act</a>
+            <a href="/" class="link btn text-white">About the Act<div class="btn-arrow-container"></div></a>
 
             <div class="img-wrap">
                 <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/talk.jpg" ?> alt="">
@@ -643,7 +646,7 @@ endif
                 <h3 class="heading h2">Creating a legacy for Future Generations</h3>
                 <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua ut enim ad.</p>
-                <a href="/" class="link btn">About the Act</a>
+                <a href="/" class="link btn">About the Act<div class="btn-arrow-container"></div></a>
 
             </div>
 
@@ -687,7 +690,7 @@ endif
                     <h3 class="heading h2">Creating a legacy for Future Generations</h3>
                     <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua ut enim ad.</p>
-                    <a href="/" class="link btn text-white">About the Act</a>
+                    <a href="/" class="link btn text-white">About the Act<div class="btn-arrow-container"></div></a>
 
                 </div>
 

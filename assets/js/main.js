@@ -250,3 +250,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// accordion // todo: make this smoother!
+//
+const accordions = document.getElementsByClassName('accord_wrap');
+for (let i = 0; i < accordions.length; i++) {
+	accordions[i].addEventListener('click', function () {
+		this.classList.toggle('active');
+		// Find the accordion_down_arrow within the clicked accord_wrap
+		// this.querySelector('.accordion_down_arrow').classList.toggle('active');
+
+		// Close all other acc heads and arrows
+		for (let j = 0; j < accordions.length; j++) {
+			if (i !== j) {
+				accordions[j].classList.remove('active');
+				// const otherArrow = accordions[j].querySelector('.accordion_down_arrow');
+				// if (otherArrow) {
+				// 	otherArrow.classList.remove('active');
+				// }
+			}
+		}
+	});
+}
+

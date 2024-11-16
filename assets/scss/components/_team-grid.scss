@@ -7,176 +7,197 @@
     @include sections_padding;
     
 
-    //----------------Universal Styles---------------------------//
+    /*------------------------ Default / Mobile Styles -------------------------------*/
 
-    .small-title{
-       
-        margin-bottom: 0;
-        height: 50px;
-    }
+  
 
-    .section-title{
-        @include h-three;
-        margin-bottom: $px60;
+    .section-content{
 
-    }
+        padding: 0 6vw ;
 
-    .intro-text{
-        margin-bottom: $px60;
+        .title-wrap{
+            max-width: 47rem;
+            margin: 0 auto;
+            text-align: center;
+            @include body;
+            @include rem-to-em(margin, 2rem, 1rem, 1rem, (bottom));
 
-        @include respond-to(lg){
-            margin-bottom: 100px;
-        }
-    }
-
-    //team-grid Styles
-
-    .team-grid{
-        display: grid;
-        gap: $px80;
-
-            
-        @include respond-to(md){
-            grid-template-columns: 1fr 1fr;
-            column-gap: 120px;
-        }
-
-        @include respond-to(lg){
-            grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 180px;
-        }
-
-        // board member grid styles if board member option is selected
-
-        &.board{
-
-            @include respond-to(md){
-                grid-template-columns: repeat(3, 1fr);
-                column-gap: 50px;
+            .title-tag{
+        
+                @include title_tag($darkNavy, $skyBlue);
+                @include rem-to-em(margin, 1.5rem, 0.875rem, 1rem, (bottom));
             }
-    
-            @include respond-to(lg){
-                grid-template-columns: repeat(4, 1fr);
-                column-gap: 60px;
-            }
-
-            @include respond-to(xl){
-                grid-template-columns: repeat(5, 1fr);
-                column-gap: 70px;
-            }
-
-        }
-
-        // img top
-        .staff-card-wrap {
-            display: grid;
-            .accord_wrap {
-                align-self: end;
-            }
-        }
-        .img-wrap{
-            width: 100%;
-            height: fit-content;
-            
-
-            img{
-                object-fit: cover;
-                object-position: top;
-                width: 100%;
-                aspect-ratio: 4/5;
+        
+            .heading{
+                @include h-two;
+        
             }
         }
 
+        @include rem-to-em(padding, 3rem, 1rem, 1rem, (bottom));
 
-        // accordion section
+        // if add background option is selected
 
-        .accord_wrap {
-            @include transition;
-            .staff-name{
-    
-                margin-top: $px35;
-                margin-bottom: $px25;
-            }
-    
-            .job-title{
+        &.add-background{
+            background-color: $lightLightSkyBlue;
+
+            @include rem-to-em(padding, 3rem, 1rem, 1rem, (top));
+        }
+
+        //-------//
+
+        .sub-team-heading{
+            @include h-four;
+            @include rem-to-em(margin, 2rem, 1.75rem, 1rem, (bottom));
+        }
+
+
+        //team-grid Styles
+
+        .team-grid{
+            @include h-two;
+
+
+            // img top
+            .staff-card-wrap {
                 @include body;
-    
-            }
-    
-            @include transition;
-            width: 100%;
-    
-            .accord_head {
-                position: relative;
                 display: flex;
-                justify-content: space-between;
-                padding: 0 0 5px 0;
-                border-bottom: solid 1px blue;
-                @include shorttransition;
-                // cursor: pointer;
-    
-                .arrow-icon{
-                    height: 20px;
-                    width: auto;
-                    align-self: end;
-                    position: relative;
-                }
+                flex-direction: column;
+                margin-bottom: 2.5em;
+
             }
-            .accord_body {
-                
+            .img-wrap{
+                width: 100%;
+                height: fit-content;
                 @include body;
-                max-height: 1px;
-                overflow: hidden;
-                opacity: 0;
-                @include transition;
+                @include rem-to-em(margin, 2.38rem, 1rem, 1rem, (bottom));
                 
-                
-    
-            }
-    
-            &:hover {
-                cursor: pointer;
-                @include transition;
-            }
-            &.active {
-                @include transition;
-                .accord_body {
-                    max-height: 2000px;
-                    padding: 10px 0 30px 0;
-                    opacity: 1;
-                    
-                }
-    
-                .accord_head .job-title{
-                    color: blue;
-                    @include shorttransition;
-                }
-    
+
                 img{
-                    transform: rotateZ(90deg);
-                    @include shorttransition;
+                    object-fit: cover;
+                    object-position: top;
+                    width: 100%;
+                    aspect-ratio: 22/25;
                 }
-    
             }
+
+
+            // accordion section
+
+            .accord_wrap {
+                @include transition;
+
+                .staff-name{
+                    @include h-four;
+                    font-weight: 700;
+                    margin-bottom: 0.1em
+                }
+        
+                .job-title{
+                    @include h-four-4;
+        
+                }
+        
+                @include transition;
+                width: 100%;
+        
+                .accord_head {
+                    position: relative;
+
+                    padding: 0 0 5px 0;
+                    @include shorttransition;
+                    // cursor: pointer;
+        
+                    .arrow-icon{
+                        height: 20px;
+                        width: auto;
+                        align-self: end;
+                        position: relative;
+                    }
+                }
+                .accord_body {
+                    
+                    @include body;
+                    max-height: 1px;
+                    overflow: hidden;
+                    opacity: 0;
+                    @include transition;
+                    
+                    
+        
+                }
+        
+                &:hover {
+                    cursor: pointer;
+                    @include transition;
+                }
+                &.active {
+                    @include transition;
+                    .accord_body {
+                        max-height: 2000px;
+                        padding: 10px 0 30px 0;
+                        opacity: 1;
+                        
+                    }
+        
+                    .accord_head .job-title{
+                        color: blue;
+                        @include shorttransition;
+                    }
+        
+                    img{
+                        transform: rotateZ(90deg);
+                        @include shorttransition;
+                    }
+        
+                }
+            }
+
         }
 
 
+        /*------------------------ Desktop Styles -------------------------------*/
+
+        &{
+            @include respond-to(md){
+
+                @include rem-to-em(padding, 5.69rem, 1rem, 1rem, (bottom));
+
+                &.add-background{        
+                    @include rem-to-em(padding, 5.69rem, 1rem, 1rem, (top));
+                }
 
 
+                .title-wrap{
+
+                    @include rem-to-em(margin, 5.88rem, 1rem, 1rem, (bottom));
+                }
+
+                .sub-team-heading{
+                    @include h-four;
+                    @include rem-to-em(margin, 4rem, 1.75rem, 1rem, (bottom));
+                }
+
+                .team-grid{
+
+                    display: grid;
+                    gap: 2em;
+                    grid-template-columns: 1fr 1fr;
+          
+                }
+
+            }
+
+            @include respond-to(lg){
+
+                .team-grid{
+                    grid-template-columns: 1fr 1fr 1fr;
+
+                }
+            }
 
 
-            
-
-
+        }
     }
-
-
-
-
-
-
-
-
-
 
 }

@@ -365,6 +365,21 @@ $hfour3 : 22;
 	@include h-four-3;
 }
 
+@mixin h-four-4{
+	font-family: $primary-font;
+	@include responsiveFontSize(1.25rem, 1.1rem); // font size
+	@include letterSpacingEm(-0.0375rem, 1.25rem);
+	line-height: 160%;
+	font-weight: 400;
+	color: $darkNavy;
+	-webkit-font-smoothing: antialiased;
+	
+}
+
+.h4-4 {
+	@include h-four-4;
+}
+
 
 // h5: used for small titles and subheadings. - title tag
 $hfive : 14;
@@ -433,6 +448,7 @@ blockquote {
  	font-family: $primary-font-book;
 	 @include responsiveFontSize(0.8rem, 1rem); // font size
 	 line-height: 143% ;
+	 font-weight: normal;
 	-webkit-font-smoothing: antialiased;
 	color: $darkNavy;
 

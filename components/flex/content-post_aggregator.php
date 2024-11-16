@@ -114,7 +114,7 @@ $layout = get_query_var('layout'); ?>
             <div class="text-inner">
                 <p class="title-tag">News</p>
                 <h3 class="heading h2">Stay connected with our latest news and updates</h3>
-                <a href="" class="btn cobalt text-white">All Press & Media</a>
+                <a href="" class="btn cobalt text-white">All Press & Media<div class="btn-arrow-container"></div></a>
             </div>
 
             <div class="button-container">

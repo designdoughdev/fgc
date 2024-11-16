@@ -28,6 +28,7 @@
                         <input class="input" type="text" placeholder="Search">
                         <button class="btn cobalt text-white">
                             Search
+                            <div class="btn-arrow-container"></div>
                         </button>
                     </div>
 

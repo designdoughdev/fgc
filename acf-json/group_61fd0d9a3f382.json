@@ -6484,6 +6484,27 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_6738d8c245057",
+                            "label": "Add Background",
+                            "name": "add_background",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Adds a light blue background colour to the section if selected",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "allow_in_bindings": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1
+                        },
+                        {
                             "key": "field_6738c94d2d9bc",
                             "label": "Small Title",
                             "name": "small_title",
@@ -6679,7 +6700,7 @@
                                             "allow_in_bindings": 0,
                                             "rows": "",
                                             "placeholder": "",
-                                            "new_lines": "",
+                                            "new_lines": "br",
                                             "parent_repeater": "field_6738c99c2d9c0"
                                         }
                                     ],
@@ -6743,5 +6764,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731775238
+    "modified": 1731778919
 }

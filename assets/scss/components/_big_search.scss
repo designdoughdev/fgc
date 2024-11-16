@@ -76,6 +76,7 @@ section.section_big_search{
                     grid-column: 1; 
                     grid-row: 2;
                     align-self: stretch; 
+
                     button{
                         cursor: pointer;
                         border: none;
@@ -83,6 +84,15 @@ section.section_big_search{
                         display: flex;
                         justify-content: center;
                         align-content: center;
+                        padding: 0.3rem;
+
+                        .btn-arrow-container{
+                            display: none;
+
+                            @include respond-to(md){
+                                display: flex;
+                            }
+                        }
                         
 
 
