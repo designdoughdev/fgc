@@ -532,7 +532,7 @@ section.section_text_and_image{
 
                 .text-content{
 
-                    max-width: 95%;
+                    max-width: 90%;
 
                     p.title-tag{
                         @include rem-to-em(margin, 2rem, 0.875rem, 1rem, (bottom));
