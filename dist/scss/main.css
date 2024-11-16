@@ -5006,7 +5006,7 @@ section.section_text_and_image .section-content.half-text-half-img-layout.centre
   }
 
   section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col .text-content {
-    max-width: 95%;
+    max-width: 90%;
   }
 
   section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col .text-content p.title-tag {
@@ -6418,7 +6418,7 @@ section.section_testimonial .section-content .text-content {
   color: #112343;
   border-top: 1px solid #0000001a;
   border-bottom: 1px solid #0000001a;
-  margin: 3.81em 6vw;
+  margin: 2em 6vw;
   padding: 6em 0;
   font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
@@ -6504,6 +6504,10 @@ section.section_testimonial .section-content .text-content .quote-info:before {
   section.section_testimonial .section-content {
     padding: 3.81em 0;
   }
+}
+
+section.section_testimonial .section-content .text-content {
+  margin: 3.81em 6vw;
 }
 
 header {

@@ -30,7 +30,7 @@ section.section_testimonial{
             @include body;
             border-top: 1px solid rgba($color: black, $alpha: 0.1);
             border-bottom: 1px solid rgba($color: black, $alpha: 0.1);
-            margin: 3.81em 6vw;
+            margin: 2em 6vw;
             padding: 6em 0;
 
 
@@ -56,6 +56,10 @@ section.section_testimonial{
 
                 padding: 3.81em 0;
 
+            }
+
+            .text-content{
+                margin: 3.81em 6vw;
             }
         }
 
