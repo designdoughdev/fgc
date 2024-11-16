@@ -2007,6 +2007,27 @@ body[data-theme='light'] {
     
 }
 
+@mixin captionBody($colour){
+    @include body;
+    margin-top: 1.5em;
+    font-weight: 600;
+    position: relative;
+    padding-left: 1.5rem;
+    text-indent: -1.5rem;
+
+    &:before{
+        height: 1rem;
+        width: 1rem;
+        content: '';
+        vertical-align: middle;
+        display: inline-block;
+        margin-right: .5rem;
+        background-color:$colour;
+
+
+    } 
+}
+
 @mixin tag{
     display: inline-block;
     margin-right: 0.3em;
@@ -2101,6 +2122,20 @@ body[data-theme='light'] {
         }
     }
 
+    // testimonial layout
+    &.testimonial{
+
+        p.quote-info{
+            &:before{
+                background-color:$green!important;
+        
+        
+            } 
+            
+        }
+
+    }
+
 }
 
 .green-style{
@@ -2147,6 +2182,20 @@ body[data-theme='light'] {
         .text-content{
             background-color: $lightYellow;
         }
+    }
+
+    // testimonial layout
+    &.testimonial{
+
+        p.quote-info{
+            &:before{
+                background-color:$yellow!important;
+        
+        
+            } 
+            
+        }
+
     }
 }
 
@@ -2195,6 +2244,20 @@ body[data-theme='light'] {
             background-color: $lightMintGreen;
         }
     }
+
+        // testimonial layout
+        &.testimonial{
+
+            p.quote-info{
+                &:before{
+                    background-color:$mintGreen!important;
+            
+            
+                } 
+                
+            }
+    
+        }
 }
 
 .mint-style{
@@ -2246,6 +2309,20 @@ body[data-theme='light'] {
         .heading, .body, .btn{
             color: white;
         }
+    }
+
+    // testimonial layout
+    &.testimonial{
+
+        p.quote-info{
+            &:before{
+                background-color:$skyBlue!important;
+        
+        
+            } 
+            
+        }
+
     }
 
 
@@ -2321,6 +2398,20 @@ body[data-theme='light'] {
         svg path{
             fill: $skyBlue;
         }
+    }
+
+    // testimonial layout
+    &.testimonial{
+
+        p.quote-info{
+            &:before{
+                background-color:$darkNavy!important;
+        
+        
+            } 
+            
+        }
+
     }
 
 

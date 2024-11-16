@@ -21,22 +21,7 @@ section.image-section{
 
     .img-caption{
 
-        @include body;
-        margin-top: 1.5em;
-        font-weight: 600;
-
-        &:before{
-            height: 1rem;
-            width: 1rem;
-            content: '';
-            vertical-align: middle;
-            display: inline-block;
-            margin-right: 1rem;
-            background-color:$skyBlue;
-            
-    
-    
-        } 
+        @include captionBody($skyBlue);
 
     }
 }
