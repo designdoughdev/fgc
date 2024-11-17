@@ -6892,6 +6892,7 @@ section.section_testimonial .section-content .text-content {
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
+  margin-top: 2em;
   margin-bottom: 1.14286em;
   font-family: Messina Sans, sans-serif;
   font-size: 1.2rem;
@@ -6938,7 +6939,7 @@ section.section_testimonial .section-content .text-content {
   -webkit-font-smoothing: antialiased;
   color: #112343;
   flex-direction: column;
-  margin-bottom: 2.5em;
+  margin-bottom: 2em;
   font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   font-weight: normal;
@@ -6958,9 +6959,10 @@ section.section_testimonial .section-content .text-content {
   }
 }
 
-.section_team-grid .section-content .team-grid .img-wrap {
+.section_team-grid .section-content .team-grid .staff-card-wrap .img-wrap {
   -webkit-font-smoothing: antialiased;
   color: #112343;
+  border-bottom: .4rem solid #1addae;
   width: 100%;
   height: fit-content;
   margin-bottom: 2.38em;
@@ -6968,35 +6970,49 @@ section.section_testimonial .section-content .text-content {
   font-size: .8rem;
   font-weight: normal;
   line-height: 143%;
+  position: relative;
 }
 
 @media only screen and (width >= 768px) {
-  .section_team-grid .section-content .team-grid .img-wrap {
+  .section_team-grid .section-content .team-grid .staff-card-wrap .img-wrap {
     font-size: clamp(.8rem, .8rem + 1vw, 1rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  .section_team-grid .section-content .team-grid .img-wrap {
+  .section_team-grid .section-content .team-grid .staff-card-wrap .img-wrap {
     font-size: 1rem;
   }
 }
 
-.section_team-grid .section-content .team-grid .img-wrap img {
+.section_team-grid .section-content .team-grid .staff-card-wrap .img-wrap img {
   object-fit: cover;
   object-position: top;
   aspect-ratio: 22 / 25;
   width: 100%;
 }
 
-.section_team-grid .section-content .team-grid .accord_wrap {
+.section_team-grid .section-content .team-grid .staff-card-wrap .img-wrap .bars-container {
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  bottom: 0;
+}
+
+.section_team-grid .section-content .team-grid .staff-card-wrap .img-wrap .bars-container .horizontal-bars {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap {
   -o-transition: .4s;
   -o-transition: .4s;
   width: 100%;
   transition: all .4s;
 }
 
-.section_team-grid .section-content .team-grid .accord_wrap .staff-name {
+.section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap .staff-name {
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
@@ -7008,18 +7024,18 @@ section.section_testimonial .section-content .text-content {
 }
 
 @media only screen and (width >= 768px) {
-  .section_team-grid .section-content .team-grid .accord_wrap .staff-name {
+  .section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap .staff-name {
     font-size: clamp(1.2rem, 1.2rem + 1vw, 1.75rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  .section_team-grid .section-content .team-grid .accord_wrap .staff-name {
+  .section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap .staff-name {
     font-size: 1.75rem;
   }
 }
 
-.section_team-grid .section-content .team-grid .accord_wrap .job-title {
+.section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap .job-title {
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
@@ -7030,32 +7046,32 @@ section.section_testimonial .section-content .text-content {
 }
 
 @media only screen and (width >= 768px) {
-  .section_team-grid .section-content .team-grid .accord_wrap .job-title {
+  .section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap .job-title {
     font-size: clamp(1.25rem, 1.25rem + 1vw, 1.1rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  .section_team-grid .section-content .team-grid .accord_wrap .job-title {
+  .section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap .job-title {
     font-size: 1.1rem;
   }
 }
 
-.section_team-grid .section-content .team-grid .accord_wrap .accord_head {
+.section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap .accord_head {
   -o-transition: .2s;
   padding: 0 0 5px;
   transition: all .2s;
   position: relative;
 }
 
-.section_team-grid .section-content .team-grid .accord_wrap .accord_head .arrow-icon {
+.section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap .accord_head .arrow-icon {
   align-self: end;
   width: auto;
   height: 20px;
   position: relative;
 }
 
-.section_team-grid .section-content .team-grid .accord_wrap .accord_body {
+.section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap .accord_body {
   -webkit-font-smoothing: antialiased;
   color: #112343;
   opacity: 0;
@@ -7070,44 +7086,73 @@ section.section_testimonial .section-content .text-content {
 }
 
 @media only screen and (width >= 768px) {
-  .section_team-grid .section-content .team-grid .accord_wrap .accord_body {
+  .section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap .accord_body {
     font-size: clamp(.8rem, .8rem + 1vw, 1rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  .section_team-grid .section-content .team-grid .accord_wrap .accord_body {
+  .section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap .accord_body {
     font-size: 1rem;
   }
 }
 
-.section_team-grid .section-content .team-grid .accord_wrap:hover {
+.section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap:hover {
   cursor: pointer;
   -o-transition: .4s;
   transition: all .4s;
 }
 
-.section_team-grid .section-content .team-grid .accord_wrap.active {
+.section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap.active {
   -o-transition: .4s;
   transition: all .4s;
 }
 
-.section_team-grid .section-content .team-grid .accord_wrap.active .accord_body {
+.section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap.active .accord_body {
   opacity: 1;
   max-height: 2000px;
   padding: 10px 0 30px;
 }
 
-.section_team-grid .section-content .team-grid .accord_wrap.active .accord_head .job-title {
-  color: #00f;
+.section_team-grid .section-content .team-grid .staff-card-wrap .accord_wrap.active .accord_head .job-title {
   -o-transition: .2s;
   transition: all .2s;
 }
 
-.section_team-grid .section-content .team-grid .accord_wrap.active img {
-  -o-transition: .2s;
-  transition: all .2s;
-  transform: rotateZ(90deg);
+.section_team-grid .section-content .team-grid .staff-card-wrap.mint-scheme div.img-wrap {
+  border-color: #1addae;
+}
+
+.section_team-grid .section-content .team-grid .staff-card-wrap.mint-scheme div.img-wrap svg path {
+  fill: #1addae;
+}
+
+.section_team-grid .section-content .team-grid .staff-card-wrap.mint-scheme button.btn-vtwo div.btn-arrow-container {
+  background-color: #1addae;
+}
+
+.section_team-grid .section-content .team-grid .staff-card-wrap.yellow-scheme div.img-wrap {
+  border-color: #fbdb34;
+}
+
+.section_team-grid .section-content .team-grid .staff-card-wrap.yellow-scheme div.img-wrap svg path {
+  fill: #fbdb34;
+}
+
+.section_team-grid .section-content .team-grid .staff-card-wrap.yellow-scheme button.btn-vtwo div.btn-arrow-container {
+  background-color: #fbdb34;
+}
+
+.section_team-grid .section-content .team-grid .staff-card-wrap.blue-scheme div.img-wrap {
+  border-color: #46d1ee;
+}
+
+.section_team-grid .section-content .team-grid .staff-card-wrap.blue-scheme div.img-wrap svg path {
+  fill: #46d1ee;
+}
+
+.section_team-grid .section-content .team-grid .staff-card-wrap.blue-scheme button.btn-vtwo div.btn-arrow-container {
+  background-color: #46d1ee;
 }
 
 @media only screen and (width >= 768px) {

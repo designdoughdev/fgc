@@ -34,8 +34,16 @@ $big_title = get_sub_field('big_title');
 
 
             <div class="team-grid">
+                <?php $colourSchemes = ['mint', 'yellow', 'blue']; // Array of color schemes 
+                        ?>
+
 
                 <?php if (have_rows('staff_cards')) : while (have_rows('staff_cards')) : the_row();
+
+
+
+                                $colourScheme = $colourSchemes[get_row_index() % 3];
+
 
 
                                 $image = get_sub_field('image');
@@ -43,13 +51,19 @@ $big_title = get_sub_field('big_title');
                                 $job = get_sub_field('job_role');
                                 $bio = get_sub_field('bio'); ?>
 
-                <div class=" staff-card-wrap">
+                <div class=" staff-card-wrap <?php echo $colourScheme; ?>-scheme">
                     <?php
 
                                     if (!empty($image)) : ?>
                     <div class="img-wrap">
 
                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <div class="bars-container">
+                            <?php
+                                                // horizontal bars
+                                                echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars.svg');
+                                                ?>
+                        </div>
 
                     </div>
                     <?php endif; ?>
