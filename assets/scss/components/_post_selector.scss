@@ -70,9 +70,6 @@ section.section_posts_selector{
 
                 .post-info{
                     @include h-five;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 1em;
                     @include rem-to-em(margin, 1.5rem, 0.875rem, 1rem, (bottom));
 
                 }
@@ -80,6 +77,10 @@ section.section_posts_selector{
                 .post_title{
                     @include h-four;
                     margin-bottom: 1.8em;
+                }
+
+                .post-link{
+                    @include btn;
                 }
 
                 // colour scheme options
@@ -92,8 +93,21 @@ section.section_posts_selector{
                         }
                     }
 
-                    a.btn{
+                    .post-link{
                         background-color: $mintGreen;
+                    }
+
+                    // colour version
+                    &.block-colour-style-card{
+                        background-color: $lightMintGreen;
+
+                        .text-content{
+                            div.btn-arrow-container{
+                                background-color: $mintGreen;
+                            }
+
+                        }
+
                     }
                 }
 
@@ -105,8 +119,21 @@ section.section_posts_selector{
                         }
                     }
 
-                    a.btn{
+                    .post-link{
                         background-color: $skyBlue;
+                    }
+
+                    // colour version
+                    &.block-colour-style-card{
+                        background-color: $lightSkyBlue;
+
+                        .text-content{
+                            div.btn-arrow-container{
+                                background-color: $skyBlue;
+                            }
+
+                        }
+
                     }
                 }
 
@@ -118,9 +145,54 @@ section.section_posts_selector{
                         }
                     }
 
-                    a.btn{
+                    .post-link{
                         background-color: $yellow;
                     }
+
+                    // colour version
+                    &.block-colour-style-card{
+                        background-color: $lightYellow;
+
+                        .text-content{
+                            div.btn-arrow-container{
+                                background-color: $yellow;
+                            }
+                        }
+
+                    }
+                }
+
+                // if block colour version background option slected
+
+                &.block-colour-style-card{
+
+                    .img-wrap{
+    
+                        img{
+                            aspect-ratio: 37/13;
+                        }
+        
+                        .bars-container{
+                            display: none;
+                        }
+                    }
+
+                    .text-content{
+                        padding: 1.75rem 1.3rem 2.5rem 1.3rem;
+
+                        .post-link{
+                            @include btnvtwo;
+                            width: fit-content;
+
+                            .btn-arrow-container{
+                                margin-left: 0;
+                            }
+                        }
+                    }
+    
+    
+    
+
                 }
             }
         }
@@ -149,6 +221,17 @@ section.section_posts_selector{
 
                     .selected-post-card{
                         margin-bottom: 0;
+
+                        .text-content{
+
+                            .post-info{
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                gap: 1em;
+
+                            }
+
+                        }
                     }
 
                     // if 3 posts are selected
@@ -164,6 +247,17 @@ section.section_posts_selector{
                                     aspect-ratio: 1;
                                 }
                             }
+
+                            .text-content{
+
+
+                                a.post-link{
+                                    background-color: $cobaltBlue;
+                                    color: white;
+                                }
+                            }
+
+
                         }
 
                     }

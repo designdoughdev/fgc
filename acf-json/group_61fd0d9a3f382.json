@@ -3730,35 +3730,6 @@
                             "new_lines": "br"
                         },
                         {
-                            "key": "field_6739fff5e455a",
-                            "label": "Layout",
-                            "name": "layout",
-                            "aria-label": "",
-                            "type": "select",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "rows": "Rows",
-                                "grid": "Grid",
-                                "slider": "Slider",
-                                "editorial": "Editorial"
-                            },
-                            "default_value": "rows",
-                            "return_format": "value",
-                            "multiple": 0,
-                            "allow_null": 0,
-                            "allow_in_bindings": 1,
-                            "ui": 0,
-                            "ajax": 0,
-                            "placeholder": ""
-                        },
-                        {
                             "key": "field_6739fff5e4560",
                             "label": "Selected Posts",
                             "name": "selected_posts",
@@ -3842,6 +3813,35 @@
                                     "parent_repeater": "field_6739fff5e4560"
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_6739fff5e455a",
+                            "label": "Block Colour Style",
+                            "name": "block_colour_style",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Enable to switch to card style version with coloured backgrounds. This will only work for 2 posts not 3",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_6739fff5e4560",
+                                        "operator": "<",
+                                        "value": "3"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "allow_in_bindings": 1,
+                            "ui_on_text": "Block Colour Style",
+                            "ui_off_text": "No Background Style",
+                            "ui": 1
                         }
                     ],
                     "min": "",
@@ -6951,5 +6951,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731858462
+    "modified": 1731880515
 }

@@ -3,7 +3,7 @@ $row = get_row_index() - 0;
 $smallTitle = get_sub_field('small_title');
 $bigTitle = get_sub_field('big_title');
 $body = get_sub_field('body');
-$layout = get_query_var('layout');
+$blockColourStyle = get_sub_field('block_colour_style');
 $selectedPosts = get_sub_field('selected_posts');
 ?>
 
@@ -38,7 +38,7 @@ $selectedPosts = get_sub_field('selected_posts');
             <!-------------------------- Post cards/tiles --------------------------------->
 
 
-            <div class="cards-section <?php if (count($selectedPosts) == 3) {
+            <div class="cards-section <?php if (count($selectedPosts) == 3 && !$blockColourStyle) {
                                             echo " three-col-layout";
                                         } ?>">
 
@@ -55,7 +55,9 @@ $selectedPosts = get_sub_field('selected_posts');
                 <?php $date = get_the_date('j | n | y', $linkID); ?>
 
 
-                <div class="selected-post-card <?php echo $colourScheme; ?>-scheme ">
+                <div class="selected-post-card <?php echo $colourScheme; ?>-scheme <?php if (count($selectedPosts) < 3 && $blockColourStyle) {
+                                                                                            echo " block-colour-style-card";
+                                                                                        } ?>">
                     <div class="img-wrap">
                         <!-- <img src="" alt=""> -->
 
@@ -73,21 +75,25 @@ $selectedPosts = get_sub_field('selected_posts');
                                 ?>
                         </div>
                     </div>
-                    <div class="post-info">
-                        <div class="date-info">
-                            <p><span><?php echo $day; ?></span><span><?php echo $date; ?></span></p>
+                    <div class="text-content">
+                        <div class="post-info">
+                            <div class="date-info">
+                                <p><span><?php echo $day; ?></span><span><?php echo $date; ?></span></p>
 
+                            </div>
+                            <?php if ($author): ?>
+                            <p class="author-info">Written By: <?php echo $author ?></p>
+                            <?php endif; ?>
                         </div>
-                        <?php if ($author): ?>
-                        <p class="author-info">Written By: <?php echo $author ?></p>
-                        <?php endif; ?>
+
+                        <h3 class="post_title"><?php echo get_the_title($linkID); ?></h3>
+
+                        <a href="<?php echo  get_the_permalink($linkID) ?>" class="post-link"
+                            aria-label="Read more about <?php echo esc_attr(get_the_title($linkID)); ?>">Read more <div
+                                class="btn-arrow-container"></div></a>
+
                     </div>
 
-                    <h3 class="post_title"><?php echo get_the_title($linkID); ?></h3>
-
-                    <a href="<?php echo  get_the_permalink($linkID) ?>" class="btn"
-                        aria-label="Read more about <?php echo esc_attr(get_the_title($linkID)); ?>">Read more <div
-                            class="btn-arrow-container"></div></a>
 
 
 
