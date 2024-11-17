@@ -45,6 +45,9 @@ section.section_postcode_search{
                     background-color: $grey;
                     flex-grow: 1;
                 }
+                button{
+                    min-height: 2.5em;
+                }
             }
         }
 
