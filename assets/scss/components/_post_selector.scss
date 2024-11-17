@@ -1,0 +1,176 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
+
+section.section_posts_selector{
+
+    @include sections_padding;
+
+    .section-content{
+
+        /*------------------------ Default / Mobile Styles -------------------------------*/
+        .title-tag{
+            @include title_tag($darkNavy, $skyBlue)
+        }
+
+        .top-section{
+
+            .title-wrap{
+
+                .heading{
+                    @include h-one;
+                    margin-bottom: 0.7em;
+                    padding-right: 11vw;
+                }
+            }
+
+            .body{
+                @include body;
+                margin-bottom: 3em;
+                padding-right: 11vw;
+            }
+        }
+
+        .cards-section{
+
+            .selected-post-card{
+
+                margin-bottom: 2.5rem;
+
+
+
+                .img-wrap{
+                    width: 100%;
+                    height: fit-content;
+                    position: relative; // for bars container
+                    @include body;
+                    @include rem-to-em(margin, 2rem, 1rem, 1rem, (bottom));
+                    
+    
+                    img{
+                        object-fit: cover;
+                        width: 100%;
+                        aspect-ratio: 6/4.5;
+                    }
+    
+                    .bars-container{
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        height: fit-content;
+    
+                        .horizontal-bars{
+                            width: 100%;
+                            height: auto;
+                            display: block;
+                        }
+                    }
+                }
+
+                .post-info{
+                    @include h-five;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1em;
+                    @include rem-to-em(margin, 1.5rem, 0.875rem, 1rem, (bottom));
+
+                }
+
+                .post_title{
+                    @include h-four;
+                    margin-bottom: 1.8em;
+                }
+
+                // colour scheme options
+
+                &.mint-scheme{
+
+                    .bars-container{
+                        svg path{
+                            fill: $mintGreen;
+                        }
+                    }
+
+                    a.btn{
+                        background-color: $mintGreen;
+                    }
+                }
+
+                &.blue-scheme{
+
+                    .bars-container{
+                        svg path{
+                            fill: $skyBlue;
+                        }
+                    }
+
+                    a.btn{
+                        background-color: $skyBlue;
+                    }
+                }
+
+                &.yellow-scheme{
+
+                    .bars-container{
+                        svg path{
+                            fill: $yellow;
+                        }
+                    }
+
+                    a.btn{
+                        background-color: $yellow;
+                    }
+                }
+            }
+        }
+
+        /*------------------------ Desktop Styles -------------------------------*/
+
+        &{
+            @include respond-to(md){
+
+                padding-right: 6vw;
+
+                .top-section{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1vw;
+
+                    .body{
+                        margin-bottom: 9.5em;
+                    }
+                }
+
+                .cards-section{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1vw;
+
+                    .selected-post-card{
+                        margin-bottom: 0;
+                    }
+
+                    // if 3 posts are selected
+
+                    &.three-col-layout{
+
+                        grid-template-columns: repeat(3, 1fr);
+
+                        .selected-post-card{
+
+                            .img-wrap{
+                                img{
+                                    aspect-ratio: 1;
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+    }
+}

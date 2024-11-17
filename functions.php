@@ -47,7 +47,7 @@ add_action('after_setup_theme', 'fgc_theme_support');
 // require get_parent_theme_file_path('/inc/admincss.php');
 // require get_parent_theme_file_path('/inc/comments.php');
 // require get_parent_theme_file_path('/inc/contactform.php');
-// require get_parent_theme_file_path('/inc/responsiveimages.php');
+require get_parent_theme_file_path('/inc/responsiveimages.php');
 // require get_parent_theme_file_path('/inc/siteoptions.php');
 // require get_parent_theme_file_path('/inc/customposttypes.php');
 // require get_parent_theme_file_path('/inc/disableadminbar.php');

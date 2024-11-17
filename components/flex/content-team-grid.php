@@ -42,7 +42,7 @@ $big_title = get_sub_field('big_title');
 
 
 
-                                $colourScheme = $colourSchemes[get_row_index() % 3];
+                                $colourScheme = $colourSchemes[(get_row_index() - 1) % 3];
 
 
 
@@ -51,7 +51,7 @@ $big_title = get_sub_field('big_title');
                                 $job = get_sub_field('job_role');
                                 $bio = get_sub_field('bio'); ?>
 
-                <div class=" staff-card-wrap <?php echo $colourScheme; ?>-scheme">
+                <div class=" staff-card-wrap <?php echo $colourScheme; ?>-scheme ">
                     <?php
 
                                     if (!empty($image)) : ?>

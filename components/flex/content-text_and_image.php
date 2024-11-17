@@ -428,8 +428,9 @@ endif
 
             </div>
             <div class="text-content">
-                <h2 class="title-tag">Well-being of Future
-                    Generations (Wales) Act 2015</h2>
+                <?php if ($smallTitle): ?>
+                <h2 class="title-tag"><?php echo $smallTitle; ?></h2>
+                <?php endif; ?>
                 <?php if ($bigTitle): ?>
                 <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
                 <?php endif; // big title 
