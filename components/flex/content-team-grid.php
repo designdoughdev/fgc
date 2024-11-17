@@ -58,10 +58,9 @@ $big_title = get_sub_field('big_title');
                         <h3 class="staff-name"><?php echo $name; ?></h3>
                         <p class="job-title"><?php echo $job; ?></p>
                         <div class="accord_head">
+                            <button class="btn-vtwo">Read more<div class="btn-arrow-container"></div></button>
 
-                            <img class="arrow-icon"
-                                src="<?php echo get_template_directory_uri() . '/assets/images/svg/arrow-right.svg'; ?>"
-                                alt="">
+
                         </div>
                         <div class="accord_body">
                             <?php echo $bio; ?>

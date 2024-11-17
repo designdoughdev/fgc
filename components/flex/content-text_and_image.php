@@ -57,7 +57,7 @@ endif
                 <p class="body text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor
                     incididunt ut labore et dolore magna aliqua ut enim ad.</p>
-                <a href="/" class="link btn text-white sky-blue">Visit Page<div class="btn-arrow-container"></div></a>
+                <a href="/" class="link btn sky-blue">Visit Page<div class="btn-arrow-container"></div></a>
             </div>
 
             <?php
