@@ -7,136 +7,170 @@ section.section_info_cards{
 
     @include sections_padding;
 
-    .section-content{
+    .background-container{
 
         /*------------------------ Default / Mobile Styles -------------------------------*/
-        .title-tag{
-            @include title_tag($darkNavy, $skyBlue)
+
+            
+        // if add background option is selected
+
+        &.add-background{
+            background-color: $lightLightSkyBlue;
+            @include h-two;
+            @include rem-to-em(padding, 2rem, 1rem, 1rem, (top, bottom));
         }
 
-        .top-section{
+        .section-content{
 
-            .title-wrap{
+            width: 90%;
+            margin: 0 auto;
 
-                .heading{
-                    @include h-one;
-                    margin-bottom: 0.7em;
-                    padding-right: 3vw;
-                }
+
+
+    
+    
+            .title-tag{
+                @include title_tag($darkNavy, $skyBlue)
+            }
+    
+            .top-section{
+    
                 @include body;
-                margin-bottom: 3.5em;
-            }
-
-        }
-        .cards-section{
-
-
-
-
-
-            .info-card{
-
-                display: flex;
-                justify-content: center;
-                margin-bottom: 3rem;
+                margin-bottom: 4em;
                 
-
-                .text-content{
-
-                    max-width: 75%;
-                    
-
-
-                    .tag{
-                        @include rem-to-em(margin, 2rem, 0.6875rem, 1rem, (bottom))
+    
+                .title-wrap{
+    
+                    .heading{
+                        @include h-one;
+                        margin-bottom: 0.7em;
+                        padding-right: 3vw;
                     }
     
-                    .card-title{
-                        @include h-three;
-                        @include rem-to-em(margin, 2rem, 2.8125rem, 1rem, (bottom))
-                    }
+                }
     
-                    .card-body{
-                        @include body;
-                    }
-                
-                }
-
-
-
-                // colour schemes
-
-                &.mint-scheme
-                .tag{
-                    background-color: $lightMintGreen;
-                }
-                &.blue-scheme
-                .tag{
-                    background-color: $lightSkyBlue;
-                }
-                &.yellow-scheme
-                .tag{
-                    background-color: $lightYellow;
-                }
-
-                
-            }
-        }
-
-
-
-        /*------------------------ Desktop Styles -------------------------------*/
-
-        &{
-            @include respond-to(md){
-
-                padding-right: 6vw;
-
-                .top-section{
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 1vw;
-
-
-                }
-
-                .cards-section{
+                .body{
+                    @include body;
                     padding-right: 6vw;
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    row-gap: 6rem;
-                    
-
-                    .info-card{
-                        border-right: 1px solid $lightNavy;
-                        margin-bottom: 0;
-                        // padding-right: 3vw;
-                    }
-
-                    // conditional alignment based on grid position
-
-                    // Every 1st, 4th, 7th, 10th, etc
-                    & > :nth-child(3n + 1) {
-                        justify-content: flex-start;
-                    }
-                    
-                    // Every 2nd, 5th, 8th, 11th, etc
-                    & > :nth-child(3n + 2) {
-                        justify-content: center;
-                    }
-                    
-                    // Every 3rd, 6th, 9th, 12th, etc 
-                    & > :nth-child(3n) {
-                        justify-content: flex-end;
-                        border-right: none;
-                    }
-
-
                 }
-
-
+    
             }
-        }
+            .cards-section{
+    
+    
+    
+    
+    
+                .info-card{
+    
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 3rem;
+                    
+    
+                    .text-content{
+    
+                        max-width: 75%;
+                        
+    
+    
+                        .tag{
+                            @include rem-to-em(margin, 2rem, 0.6875rem, 1rem, (bottom))
+                        }
+        
+                        .card-title{
+                            @include h-three;
+                            @include rem-to-em(margin, 2rem, 2.8125rem, 1rem, (bottom))
+                        }
+        
+                        .card-body{
+                            @include body;
+                        }
+                    
+                    }
+    
+    
+    
+                    // colour schemes
+    
+                    &.mint-scheme
+                    .tag{
+                        background-color: $lightMintGreen;
+                    }
+                    &.blue-scheme
+                    .tag{
+                        background-color: $lightSkyBlue;
+                    }
+                    &.yellow-scheme
+                    .tag{
+                        background-color: $lightYellow;
+                    }
+    
+                    
+                }
+            }
+    
+    
+    
+            /*------------------------ Desktop Styles -------------------------------*/
+    
+            &{
+                @include respond-to(md){
 
+                    &.add-background{
+                        @include rem-to-em(padding, 3rem, 1rem, 1rem, (top, bottom));
+                    }
+    
+    
+                    .top-section{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 1vw;
+                        margin-bottom: 8em;
+    
+    
+                    }
+    
+                    .cards-section{
+                        padding-right: 6vw;
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        row-gap: 6rem;
+                        
+    
+                        .info-card{
+                            border-right: 1px solid $lightNavy;
+                            margin-bottom: 0;
+                            // padding-right: 3vw;
+                        }
+    
+                        // conditional alignment based on grid position
+    
+                        // Every 1st, 4th, 7th, 10th, etc
+                        & > :nth-child(3n + 1) {
+                            justify-content: flex-start;
+                        }
+                        
+                        // Every 2nd, 5th, 8th, 11th, etc
+                        & > :nth-child(3n + 2) {
+                            justify-content: center;
+                        }
+                        
+                        // Every 3rd, 6th, 9th, 12th, etc 
+                        & > :nth-child(3n) {
+                            justify-content: flex-end;
+                            border-right: none;
+                        }
+    
+    
+                    }
+    
+    
+                }
+            }
+    
+        }
     }
+
+
 }

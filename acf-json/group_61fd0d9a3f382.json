@@ -3854,6 +3854,27 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_673b1ff8b39ff",
+                            "label": "Add Background",
+                            "name": "add_background",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Adds a light blue background colour to the section if selected",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "allow_in_bindings": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1
+                        },
+                        {
                             "key": "field_673a75125aeb2",
                             "label": "Small Title",
                             "name": "small_title",
@@ -3894,6 +3915,27 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": ""
+                        },
+                        {
+                            "key": "field_673b1d2534887",
+                            "label": "Body",
+                            "name": "body",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "rows": 4,
+                            "placeholder": "",
+                            "new_lines": "br"
                         },
                         {
                             "key": "field_673a75125aeb5",
@@ -6844,5 +6886,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731885058
+    "modified": 1731928352
 }

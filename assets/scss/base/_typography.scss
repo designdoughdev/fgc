@@ -402,35 +402,18 @@ $hfive : 14;
 
 
 // h6: used for categories and tags. 
-$hsix : 11;
+
 
 @mixin h-six {
-	font-family: $primary-font;
-    font-size: $hsix + px;
+	font-family: $secondary-font;
+	@include responsiveFontSize(0.5875rem, 0.6875rem); // font size
+	letter-spacing: normal;
+	line-height: normal;
 	font-weight: 200;
-	line-height: 1em;
-	// letter-spacing: -0.03em;
+	font-style: normal;
 	color: $darkNavy;
-	text-transform: uppercase;
 	-webkit-font-smoothing: antialiased;
-	@include respond-to(md) {
-	    font-size: $hsix * 0.8 + px;
-	}
-	@include respond-to(lg) {
-	    font-size: $hsix * 0.9 + px;
-	}
-	@include respond-to(xl) {
-	    font-size: $hsix + px;
-	}
-	@include respond-to(tablet) {
-	    font-size: $hsix * 0.8 + px;
-	}
-	@include respond-to(mobile) {
-	    font-size: $hsix * 0.7 + px;
-	}
-	@include respond-to(sm) {
-	    font-size: $hsix * 0.7 + px;
-	}	
+	text-transform: uppercase;
 }
 
 .h6 {

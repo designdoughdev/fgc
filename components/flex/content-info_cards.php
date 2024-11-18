@@ -1,5 +1,6 @@
 <?php
 $row = get_row_index() - 0;
+$add_background = get_sub_field('add_background');
 $smallTitle = get_sub_field('small_title');
 $bigTitle = get_sub_field('big_title');
 $body = get_sub_field('body');
@@ -12,7 +13,10 @@ $infoCards = get_sub_field('selected_posts');
                                         ?>">
 
 
-    <div class="container">
+    <div class="container_big background-container <?php if ($add_background) {
+                                                        echo " add-background ";
+                                                    } ?>">
+
 
 
         <div class="section-content">
@@ -28,6 +32,10 @@ $infoCards = get_sub_field('selected_posts');
                     <?php endif; // big title 
                     ?>
                 </div>
+                <?php if ($body): ?>
+                <p class="body"><?php echo $body; ?></p>
+                <?php endif; // body 
+                ?>
             </div>
 
             <!-------------------------- Info cards/tiles --------------------------------->
@@ -49,10 +57,10 @@ $infoCards = get_sub_field('selected_posts');
                 <div class="info-card <?php echo $colourScheme; ?>-scheme">
 
                     <div class="text-content">
-                        <p class="tag h6 card-index"><?php if (get_row_index() < 10) {
-                                                                echo 0;
-                                                            }
-                                                            echo get_row_index(); ?></p>
+                        <p class="tag card-index"><?php if (get_row_index() < 10) {
+                                                            echo 0;
+                                                        }
+                                                        echo get_row_index(); ?></p>
                         <h4 class="card-title"><?php echo $cardTitle; ?></h4>
                         <p class="card-body"><?php echo $cardBody; ?></p>
 
@@ -66,6 +74,11 @@ $infoCards = get_sub_field('selected_posts');
             <!--------------------------  --------------------------------->
 
         </div>
+
+
+
+
+
 
     </div>
 
