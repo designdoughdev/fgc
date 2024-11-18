@@ -7706,6 +7706,239 @@ section.section_testimonial .section-content .text-content {
   }
 }
 
+section.section_info_cards {
+  padding: 7vw 0;
+}
+
+@media only screen and (width >= 1200px) {
+  section.section_info_cards {
+    padding: 6vw 0;
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_info_cards {
+    padding: 5vw 0;
+  }
+}
+
+section.section_info_cards .section-content .title-tag {
+  letter-spacing: normal;
+  color: #112343;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-indent: -.59727rem;
+  margin-bottom: 15px;
+  padding-left: .59727rem;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+  position: relative;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_info_cards .section-content .title-tag {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_info_cards .section-content .title-tag {
+    font-size: .9375rem;
+  }
+}
+
+section.section_info_cards .section-content .title-tag:before {
+  content: "";
+  vertical-align: middle;
+  background-color: #46d1ee;
+  border-radius: .75rem;
+  width: .22727rem;
+  height: .22727rem;
+  margin-right: .37rem;
+  display: inline-block;
+}
+
+section.section_info_cards .section-content .top-section .title-wrap {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  margin-bottom: 3.5em;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .8rem;
+  font-weight: normal;
+  line-height: 143%;
+}
+
+section.section_info_cards .section-content .top-section .title-wrap .heading {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: .7em;
+  padding-right: 3vw;
+  font-family: Messina Sans, sans-serif;
+  font-size: 2.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_info_cards .section-content .top-section .title-wrap .heading {
+    font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_info_cards .section-content .top-section .title-wrap .heading {
+    font-size: 3.75rem;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  section.section_info_cards .section-content .top-section .title-wrap {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_info_cards .section-content .top-section .title-wrap {
+    font-size: 1rem;
+  }
+}
+
+section.section_info_cards .section-content .cards-section .info-card {
+  justify-content: center;
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+section.section_info_cards .section-content .cards-section .info-card .text-content {
+  max-width: 75%;
+}
+
+section.section_info_cards .section-content .cards-section .info-card .text-content .tag {
+  margin-bottom: 2.90909em;
+}
+
+section.section_info_cards .section-content .cards-section .info-card .text-content .card-title {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: .711111em;
+  font-family: Messina Sans, sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.05em;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_info_cards .section-content .cards-section .info-card .text-content .card-title {
+    font-size: 30.4px;
+  }
+}
+
+@media only screen and (width >= 1200px) {
+  section.section_info_cards .section-content .cards-section .info-card .text-content .card-title {
+    font-size: 34.2px;
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_info_cards .section-content .cards-section .info-card .text-content .card-title {
+    font-size: 38px;
+  }
+}
+
+@media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
+  section.section_info_cards .section-content .cards-section .info-card .text-content .card-title {
+    font-size: 30.4px;
+  }
+}
+
+@media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
+  section.section_info_cards .section-content .cards-section .info-card .text-content .card-title {
+    font-size: 26.6px;
+  }
+}
+
+@media only screen and (width <= 768px) {
+  section.section_info_cards .section-content .cards-section .info-card .text-content .card-title {
+    font-size: 26.6px;
+  }
+}
+
+section.section_info_cards .section-content .cards-section .info-card .text-content .card-body {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .8rem;
+  font-weight: normal;
+  line-height: 143%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_info_cards .section-content .cards-section .info-card .text-content .card-body {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_info_cards .section-content .cards-section .info-card .text-content .card-body {
+    font-size: 1rem;
+  }
+}
+
+section.section_info_cards .section-content .cards-section .info-card.mint-scheme .tag {
+  background-color: #d1f8ee;
+}
+
+section.section_info_cards .section-content .cards-section .info-card.blue-scheme .tag {
+  background-color: #cdf5ff;
+}
+
+section.section_info_cards .section-content .cards-section .info-card.yellow-scheme .tag {
+  background-color: #fef6cc;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_info_cards .section-content {
+    padding-right: 6vw;
+  }
+
+  section.section_info_cards .section-content .top-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+    display: grid;
+  }
+
+  section.section_info_cards .section-content .cards-section {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 6rem;
+    padding-right: 6vw;
+    display: grid;
+  }
+
+  section.section_info_cards .section-content .cards-section .info-card {
+    border-right: 1px solid #f3f4f6;
+    margin-bottom: 0;
+  }
+
+  section.section_info_cards .section-content .cards-section > :nth-child(3n+1) {
+    justify-content: flex-start;
+  }
+
+  section.section_info_cards .section-content .cards-section > :nth-child(3n+2) {
+    justify-content: center;
+  }
+
+  section.section_info_cards .section-content .cards-section > :nth-child(3n) {
+    border-right: none;
+    justify-content: flex-end;
+  }
+}
+
 header {
   margin-bottom: 6rem;
 }
