@@ -54,7 +54,7 @@ get_template_part('components/flex/content-text_and_image', 'full-image'); ?>
 
 // press releases carousel
 
-set_query_var('layout', 'press-releases');
+set_query_var('layout_old', 'press-releases');
 
 
 get_template_part('components/flex/content-post_aggregator', 'press-releases');
@@ -66,7 +66,7 @@ get_template_part('components/flex/content-post_aggregator', 'press-releases');
 
 // news carousel
 
-set_query_var('layout', 'news');
+set_query_var('layout_old', 'news');
 
 get_template_part('components/flex/content-post_aggregator', 'news');
 

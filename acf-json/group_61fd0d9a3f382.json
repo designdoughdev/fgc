@@ -3425,8 +3425,8 @@
                                 "id": ""
                             },
                             "choices": {
-                                "rows": "Rows",
-                                "grid": "Grid",
+                                "card-carousel": "Card Carousel",
+                                "double-tile-slider": "Double Tile Slider",
                                 "slider": "Slider",
                                 "editorial": "Editorial"
                             },
@@ -3434,6 +3434,7 @@
                             "return_format": "value",
                             "multiple": 0,
                             "allow_null": 0,
+                            "allow_in_bindings": 1,
                             "ui": 0,
                             "ajax": 0,
                             "placeholder": ""
@@ -6886,5 +6887,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731928352
+    "modified": 1731959707
 }
