@@ -87,7 +87,7 @@ $row = get_row_index() - 0;
         $latest = new WP_Query($args);
         ?>
 
-    <?php if ($layout == 'card-carousel') {  ?>
+    <?php if ($layout == 'card_carousel') {  ?>
 
     <!-- 
     <div class="post_rows">
@@ -98,8 +98,12 @@ $row = get_row_index() - 0;
     <div class="splide post-feed-carousel section-wrapper" aria-label="News Feed">
 
         <div class="text-container">
-            <h2 class="title-tag">News</h2>
-            <h3 class="heading h2">Stay connected with our latest news and updates</h3>
+            <?php if ($small_title): ?>
+            <h2 class="title-tag"><?php echo $small_title ?></h2>
+            <?php endif; ?>
+            <?php if ($big_title): ?>
+            <h3 class="heading h2"><?php echo $big_title ?></h3>
+            <?php endif; ?>
             <div class="button-container">
                 <button class="splide__arrow custom-prev btn-prev" aria-label="Previous slide">
                     Previous
@@ -119,56 +123,18 @@ $row = get_row_index() - 0;
                         ?>
 
                 <?php while ($latest->have_posts()) : $latest->the_post(); ?>
-                <?php // get_template_part('components/includes/post_template_rows'); 
 
+                <?php
+                            // get current post index
                             $index = $latest->current_post;
 
 
-                            $colourScheme = $colourSchemes[($index + 1) % 4];
+                            // set colour scheme variable to pass to template part
+                            set_query_var('colourScheme', $colourSchemes[($index + 1) % 4]); ?>
 
-                            ?>
-                <li class="splide__slide relative">
-                    <a href="/">
-                        <div class="post-card <?php echo $colourScheme; ?>-style">
-                            <div class="card-top">
-                                <div class="tag-container">
-
-                                    <p class=" tag h6">Explore</p>
-                                    <p class="tag h6">Do</p>
-                                </div>
-                                <div class="hand-icon-container">
-                                    <?php
-                                                echo file_get_contents(get_template_directory() . '/assets/images/svg/hand-icon.svg');
-                                                ?>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="h4">
-                                    <?php the_title(); ?>
-                                </h4>
-
-                                <div class="post-info">
-                                    <?php if (get_the_author_meta('first_name') && get_the_author_meta('last_name')): ?>
-                                    <p class="author h5 bold">
-                                        <?php echo get_the_author_meta('first_name') . " " . get_the_author_meta('last_name'); ?>
-                                    </p>
-                                    <?php endif; ?>
-                                    <p class="date h5 medium-text">
-                                        <?php echo get_the_date('l') . " " . get_the_date('d|m|y'); ?>
-                                    </p>
-
-                                </div>
-
-                            </div>
-                            <div class="card-bottom">
-                                <p>Read News Article</p>
-
-                            </div>
+                <?php get_template_part('components/includes/post_card_splide_slide', 'colourScheme'); ?>
 
 
-                        </div>
-                    </a>
-                </li>
 
                 <?php wp_reset_postdata(); ?>
                 <?php endwhile; ?>
@@ -184,13 +150,17 @@ $row = get_row_index() - 0;
 
 
     <?php }
-        if ($layout == 'double-tile-slider') { ?>
+        if ($layout == 'double_tile_slider') { ?>
 
     <div class="splide press-releases-carousel section-wrapper" aria-label="News Feed">
         <div class="text-container">
             <div class="text-inner">
-                <p class="title-tag">News</p>
-                <h3 class="heading h2">Stay connected with our latest news and updates</h3>
+                <?php if ($small_title): ?>
+                <h2 class="title-tag"><?php echo $small_title ?></h2>
+                <?php endif; ?>
+                <?php if ($big_title): ?>
+                <h3 class="heading h2"><?php echo $big_title ?></h3>
+                <?php endif; ?>
                 <a href="" class="btn cobalt text-white">All Press & Media<div class="btn-arrow-container"></div></a>
             </div>
 
@@ -299,32 +269,62 @@ $row = get_row_index() - 0;
 
 
 
-    <?php // get_template_part('components/includes/post_template_grid'); 
-            ?>
-
-
-
-
-
-    <!-- <div class="link_box">
-        <?php
-            if ($link) :
-                $link_url = $link['url'];
-                $link_title = $link['title'];
-                $link_target = $link['target'] ? $link['target'] : '_self';
-        ?>
-        <a class="btn_second" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
-            <span><?php echo $link_title; ?><img
-                    src="<?php echo get_template_directory_uri() . '/assets/images/svg/arrow-right-white.svg'; ?>"
-                    alt="button arrow"></span>
-        </a>
-        <?php endif; ?>
-    </div> -->
-
-
 
     <?php }
-        if ($layout == 'slider') { ?>
+        if ($layout == 'single_tile_slider') { ?>
+
+    <div class="container_big section-wrapper single-tile-carousel-layout">
+        <div class="splide single-tile-carousel" aria-label="Image Gallery">
+
+            <div class="text-container">
+                <?php if ($small_title): ?>
+                <h2 class="title-tag"><?php echo $small_title ?></h2>
+                <?php endif; ?>
+                <?php if ($big_title): ?>
+                <h3 class="heading h2"><?php echo $big_title ?></h3>
+                <?php endif; ?>
+                <div class="button-container">
+                    <button class="splide__arrow custom-prev btn-prev" aria-label="Previous slide">
+                        Previous
+                    </button>
+                    <button class="splide__arrow custom-next btn-next" aria-label="Next slide">
+                        Next
+                    </button>
+                </div>
+
+
+            </div>
+
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <?php $colourSchemes = ['blue', 'yellow', 'mint', 'green']; // The repeating set of values 
+                            ?>
+
+                    <?php while ($latest->have_posts()) : $latest->the_post(); ?>
+
+                    <?php
+                                // get current post index
+                                $index = $latest->current_post;
+
+
+                                // set colour scheme variable to pass to template part
+                                set_query_var('colourScheme', $colourSchemes[($index + 1) % 4]); ?>
+
+                    <?php get_template_part('components/includes/post_large_tile_splide_slide', 'colourScheme'); ?>
+
+
+
+                    <?php wp_reset_postdata(); ?>
+                    <?php endwhile; ?>
+
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
 
 
 

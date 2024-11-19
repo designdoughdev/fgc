@@ -1323,44 +1323,21 @@ iframe {
   color: #112343;
   -webkit-font-smoothing: antialiased;
   font-family: Messina Sans, sans-serif;
-  font-size: 38px;
+  font-size: 1.35rem;
+  font-style: normal;
   font-weight: 700;
-  line-height: 1.05em;
+  line-height: 102.632%;
 }
 
 @media only screen and (width >= 768px) {
   .h3, .medium-header {
-    font-size: 30.4px;
-  }
-}
-
-@media only screen and (width >= 1200px) {
-  .h3, .medium-header {
-    font-size: 34.2px;
+    font-size: clamp(1.35rem, 1.35rem + 1vw, 2.375rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
   .h3, .medium-header {
-    font-size: 38px;
-  }
-}
-
-@media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
-  .h3, .medium-header {
-    font-size: 30.4px;
-  }
-}
-
-@media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
-  .h3, .medium-header {
-    font-size: 26.6px;
-  }
-}
-
-@media only screen and (width <= 768px) {
-  .h3, .medium-header {
-    font-size: 26.6px;
+    font-size: 2.375rem;
   }
 }
 
@@ -3776,17 +3753,17 @@ section.section_images {
   }
 }
 
-section.section_images .section-wrapper.splide.images-carousel {
+section.section_images .splide.images-carousel {
   background-color: #46d1ee0d;
   padding: 5vw 0 7vw;
 }
 
-section.section_images .section-wrapper.splide.images-carousel .text-container {
+section.section_images .splide.images-carousel .text-container {
   margin-bottom: 4vw;
   padding: 0 7vw;
 }
 
-section.section_images .section-wrapper.splide.images-carousel .text-container .title-tag {
+section.section_images .splide.images-carousel .text-container .title-tag {
   letter-spacing: normal;
   color: #112343;
   text-transform: uppercase;
@@ -3803,18 +3780,18 @@ section.section_images .section-wrapper.splide.images-carousel .text-container .
 }
 
 @media only screen and (width >= 768px) {
-  section.section_images .section-wrapper.splide.images-carousel .text-container .title-tag {
+  section.section_images .splide.images-carousel .text-container .title-tag {
     font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_images .section-wrapper.splide.images-carousel .text-container .title-tag {
+  section.section_images .splide.images-carousel .text-container .title-tag {
     font-size: .9375rem;
   }
 }
 
-section.section_images .section-wrapper.splide.images-carousel .text-container .title-tag:before {
+section.section_images .splide.images-carousel .text-container .title-tag:before {
   content: "";
   vertical-align: middle;
   background-color: #2a5ad5;
@@ -3825,26 +3802,26 @@ section.section_images .section-wrapper.splide.images-carousel .text-container .
   display: inline-block;
 }
 
-section.section_images .section-wrapper.splide.images-carousel .text-container .button-container {
+section.section_images .splide.images-carousel .text-container .button-container {
   display: none;
 }
 
-section.section_images .section-wrapper.splide.images-carousel .splide__slide {
+section.section_images .splide.images-carousel .splide__slide {
   position: relative;
 }
 
-section.section_images .section-wrapper.splide.images-carousel .splide__slide div.img-wrap {
+section.section_images .splide.images-carousel .splide__slide div.img-wrap {
   width: auto;
   height: 100%;
 }
 
-section.section_images .section-wrapper.splide.images-carousel .splide__slide img {
+section.section_images .splide.images-carousel .splide__slide img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-section.section_images .section-wrapper.splide.images-carousel .splide__slide p.caption {
+section.section_images .splide.images-carousel .splide__slide p.caption {
   letter-spacing: normal;
   color: #112343;
   text-transform: uppercase;
@@ -3862,34 +3839,34 @@ section.section_images .section-wrapper.splide.images-carousel .splide__slide p.
 }
 
 @media only screen and (width >= 768px) {
-  section.section_images .section-wrapper.splide.images-carousel .splide__slide p.caption {
+  section.section_images .splide.images-carousel .splide__slide p.caption {
     font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_images .section-wrapper.splide.images-carousel .splide__slide p.caption {
+  section.section_images .splide.images-carousel .splide__slide p.caption {
     font-size: .9375rem;
   }
 }
 
 @media only screen and (width >= 768px) {
-  section.section_images .section-wrapper.splide.images-carousel {
+  section.section_images .splide.images-carousel {
     padding-bottom: 0 !important;
   }
 
-  section.section_images .section-wrapper.splide.images-carousel div.text-container {
+  section.section_images .splide.images-carousel div.text-container {
     grid-template-rows: max-content;
     grid-template-columns: 1fr 1fr;
     column-gap: 25vw;
     display: grid;
   }
 
-  section.section_images .section-wrapper.splide.images-carousel div.text-container .heading {
+  section.section_images .splide.images-carousel div.text-container .heading {
     grid-area: 2 / 1;
   }
 
-  section.section_images .section-wrapper.splide.images-carousel div.text-container .button-container {
+  section.section_images .splide.images-carousel div.text-container .button-container {
     grid-area: 2 / 2;
     place-self: end;
     align-items: flex-end;
@@ -4645,6 +4622,227 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel .verti
     justify-content: space-between;
     gap: 12vw;
     display: flex;
+  }
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel {
+  background-color: #46d1ee0d;
+  padding: 5vw 0 7vw;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel .text-container {
+  margin-bottom: 4vw;
+  padding: 0 7vw;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel .text-container .title-tag {
+  letter-spacing: normal;
+  color: #112343;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-indent: -.59727rem;
+  margin-bottom: 3em;
+  padding-left: .59727rem;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+  position: relative;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel .text-container .title-tag {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel .text-container .title-tag {
+    font-size: .9375rem;
+  }
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel .text-container .title-tag:before {
+  content: "";
+  vertical-align: middle;
+  background-color: #2a5ad5;
+  border-radius: .75rem;
+  width: .22727rem;
+  height: .22727rem;
+  margin-right: .37rem;
+  display: inline-block;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel .text-container .button-container {
+  display: none;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel .splide__slide {
+  position: relative;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel .splide__slide div.img-wrap {
+  width: auto;
+  height: 100%;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel .splide__slide img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel .splide__slide p.caption {
+  letter-spacing: normal;
+  color: #112343;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-transform: none;
+  max-width: 13.3rem;
+  padding: .9em .85em;
+  font-family: Messina Sans, sans-serif;
+  font-size: .75rem;
+  font-weight: 600;
+  line-height: normal;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel .splide__slide p.caption {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel .splide__slide p.caption {
+    font-size: .9375rem;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel {
+    padding-bottom: 0 !important;
+  }
+
+  section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel div.text-container {
+    grid-template-rows: max-content;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25vw;
+    display: grid;
+  }
+
+  section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel div.text-container .heading {
+    grid-area: 2 / 1;
+  }
+
+  section.section_posts_agg .section-wrapper.single-tile-carousel-layout .splide.single-tile-carousel div.text-container .button-container {
+    grid-area: 2 / 2;
+    place-self: end;
+    align-items: flex-end;
+    display: flex;
+  }
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile {
+  height: 100%;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .post-card {
+  flex-direction: column;
+  padding: 1em 1.5em;
+  display: flex;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .post-card .card-top {
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .post-card .card-top div.hand-icon-container {
+  width: 33px;
+  height: 51px;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .post-card .card-body {
+  margin-right: 3%;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .post-card .card-body .post-info {
+  margin: 3.5rem 0 3rem;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .post-card .card-bottom {
+  border-top: 1px solid #112343;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: .8rem;
+  display: flex;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .post-card .card-bottom p {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .8rem;
+  font-weight: normal;
+  line-height: 143%;
+  text-decoration: underline;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .post-card .card-bottom p {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .post-card .card-bottom p {
+    font-size: 1rem;
+  }
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .post-card .title-tag {
+  margin-bottom: 2em;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .post-card .heading {
+  margin-bottom: .8em;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .post-card .body {
+  margin-bottom: 1.5em;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .post-card a.btn {
+  margin: .7em 0 1.5rem;
+}
+
+section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .img-wrap {
+  display: none;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile {
+    grid-template-columns: 1.2fr 1fr;
+    display: grid;
+  }
+
+  section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .post-card {
+    padding: 2.69rem;
+  }
+
+  section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .post-card .card-body {
+    flex-grow: 1;
+  }
+
+  section.section_posts_agg .section-wrapper.single-tile-carousel-layout .post-card-large-tile .img-wrap {
+    aspect-ratio: 27 / 35;
+    order: 2;
+    display: block;
   }
 }
 
@@ -6814,44 +7012,21 @@ section.section_text .flex-content .text-editor h3 {
   color: #2a5ad5;
   -webkit-font-smoothing: antialiased;
   font-family: Messina Sans, sans-serif;
-  font-size: 38px;
+  font-size: 1.35rem;
+  font-style: normal;
   font-weight: 700;
-  line-height: 1.05em;
+  line-height: 102.632%;
 }
 
 @media only screen and (width >= 768px) {
   section.section_text .flex-content .text-editor h3 {
-    font-size: 30.4px;
-  }
-}
-
-@media only screen and (width >= 1200px) {
-  section.section_text .flex-content .text-editor h3 {
-    font-size: 34.2px;
+    font-size: clamp(1.35rem, 1.35rem + 1vw, 2.375rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
   section.section_text .flex-content .text-editor h3 {
-    font-size: 38px;
-  }
-}
-
-@media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
-  section.section_text .flex-content .text-editor h3 {
-    font-size: 30.4px;
-  }
-}
-
-@media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
-  section.section_text .flex-content .text-editor h3 {
-    font-size: 26.6px;
-  }
-}
-
-@media only screen and (width <= 768px) {
-  section.section_text .flex-content .text-editor h3 {
-    font-size: 26.6px;
+    font-size: 2.375rem;
   }
 }
 
@@ -7858,44 +8033,21 @@ section.section_info_cards .background-container .section-content .cards-section
   -webkit-font-smoothing: antialiased;
   margin-bottom: .711111em;
   font-family: Messina Sans, sans-serif;
-  font-size: 38px;
+  font-size: 1.35rem;
+  font-style: normal;
   font-weight: 700;
-  line-height: 1.05em;
+  line-height: 102.632%;
 }
 
 @media only screen and (width >= 768px) {
   section.section_info_cards .background-container .section-content .cards-section .info-card .text-content .card-title {
-    font-size: 30.4px;
-  }
-}
-
-@media only screen and (width >= 1200px) {
-  section.section_info_cards .background-container .section-content .cards-section .info-card .text-content .card-title {
-    font-size: 34.2px;
+    font-size: clamp(1.35rem, 1.35rem + 1vw, 2.375rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
   section.section_info_cards .background-container .section-content .cards-section .info-card .text-content .card-title {
-    font-size: 38px;
-  }
-}
-
-@media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
-  section.section_info_cards .background-container .section-content .cards-section .info-card .text-content .card-title {
-    font-size: 30.4px;
-  }
-}
-
-@media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
-  section.section_info_cards .background-container .section-content .cards-section .info-card .text-content .card-title {
-    font-size: 26.6px;
-  }
-}
-
-@media only screen and (width <= 768px) {
-  section.section_info_cards .background-container .section-content .cards-section .info-card .text-content .card-title {
-    font-size: 26.6px;
+    font-size: 2.375rem;
   }
 }
 
@@ -8795,44 +8947,21 @@ footer .footer-content .footer-top .footer-top-left .heading {
   -webkit-font-smoothing: antialiased;
   margin-bottom: 2em;
   font-family: Messina Sans, sans-serif;
-  font-size: 38px;
+  font-size: 1.35rem;
+  font-style: normal;
   font-weight: 700;
-  line-height: 1.05em;
+  line-height: 102.632%;
 }
 
 @media only screen and (width >= 768px) {
   footer .footer-content .footer-top .footer-top-left .heading {
-    font-size: 30.4px;
-  }
-}
-
-@media only screen and (width >= 1200px) {
-  footer .footer-content .footer-top .footer-top-left .heading {
-    font-size: 34.2px;
+    font-size: clamp(1.35rem, 1.35rem + 1vw, 2.375rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
   footer .footer-content .footer-top .footer-top-left .heading {
-    font-size: 38px;
-  }
-}
-
-@media only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 1), only screen and (device-width >= 768px) and (device-width <= 1024px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 768px) and (device-width <= 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 1112px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 834px) and (device-width <= 834px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1112px) and (device-width <= 1112px) and (orientation: landscape) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1366px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 1024px) and (device-width <= 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio >= 2) {
-  footer .footer-content .footer-top .footer-top-left .heading {
-    font-size: 30.4px;
-  }
-}
-
-@media only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 480px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 320px) and (device-width <= 568px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 667px) and (-webkit-device-pixel-ratio >= 2) and (orientation: landscape), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 414px) and (device-width <= 736px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 375px) and (device-width <= 812px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: portrait), only screen and (device-width >= 390px) and (device-width <= 844px) and (-webkit-device-pixel-ratio >= 3) and (orientation: landscape) {
-  footer .footer-content .footer-top .footer-top-left .heading {
-    font-size: 26.6px;
-  }
-}
-
-@media only screen and (width <= 768px) {
-  footer .footer-content .footer-top .footer-top-left .heading {
-    font-size: 26.6px;
+    font-size: 2.375rem;
   }
 }
 

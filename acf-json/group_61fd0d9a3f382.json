@@ -3425,9 +3425,9 @@
                                 "id": ""
                             },
                             "choices": {
-                                "card-carousel": "Card Carousel",
-                                "double-tile-slider": "Double Tile Slider",
-                                "slider": "Slider",
+                                "card_carousel": "Card Carousel",
+                                "double_tile_slider": "Double Tile Slider",
+                                "single_tile_slider": "Single Tile Slider",
                                 "editorial": "Editorial"
                             },
                             "default_value": "rows",
@@ -6887,5 +6887,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731959707
+    "modified": 1731963896
 }

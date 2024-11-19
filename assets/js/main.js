@@ -78,6 +78,51 @@ document.addEventListener('DOMContentLoaded', function () {
    }
  });
 
+
+
+// single large tile carousel
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Select all carousel elements with the class `images-carousel`
+  const carousels = document.querySelectorAll('.single-tile-carousel');
+
+  if (carousels) {
+    // Loop over each carousel and initialize Splide
+    carousels.forEach((carousel) => {
+      // Find custom arrows within the current carousel
+      const prevArrow = carousel.querySelector('.custom-prev');
+      const nextArrow = carousel.querySelector('.custom-next');
+
+      // Initialize Splide with default arrows disabled
+      const splide = new Splide(carousel, {
+        type: 'loop',
+        arrows: false, // Disable default arrows completely
+        updateOnMove: true,
+        gap: '1vw',
+        padding: { left: '6vw', right: '30vw' },
+        focus: 'center',
+        pagination: false,
+        breakpoints: {
+          767: {
+            gap: '7vw',
+            padding: '7vw',
+          },
+        },
+      }).mount();
+
+      // Add custom event listeners for the custom arrows
+      if (prevArrow) {
+        prevArrow.addEventListener('click', () => splide.go('<')); // Go to previous slide
+      }
+
+      if (nextArrow) {
+        nextArrow.addEventListener('click', () => splide.go('>')); // Go to next slide
+      }
+    });
+  }
+});
+
  // post feed carousel
 
 

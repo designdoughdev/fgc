@@ -2610,5 +2610,197 @@ body[data-theme='light'] {
     }
   }
   
+
+  @mixin singleLargeImageCarousel{
+    .splide.images-carousel{
+
+        
+
+        /*------------------------ Default/Mobile Styles -------------------------------*/
+        
+        background-color: rgba($skyBlue, 0.05);
+        padding: 5vw 0 7vw 0;
+
+        .text-container{
+
+            padding: 0 7vw;
+            margin-bottom: 4vw;
+
+
+            .title-tag{
+                @include title_tag($darkNavy, $cobaltBlue);
+                margin-bottom: 3em;
+    
+            }
+
+            .button-container{
+                display: none;
+            }
+        }
+
+        .splide__slide{
+
+            div.img-wrap{
+                height: 100%;
+                width: auto;
+            }
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+
+            position: relative;
+
+
+            p.caption{
+                position: absolute;
+                bottom: 1rem;
+                left: 1rem;
+                max-width: 13.3rem;
+                @include captionTwo;
+                
+            }
+
+        }
+
+        
+        /*------------------------ Desktop Styles -------------------------------*/
+
+        &{
+            @include respond-to('md'){
+
+                
+                padding-bottom: 0!important;
+
+                div.text-container{
+
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: max-content;
+                    column-gap: 25vw;
+
+                    .heading{
+                        grid-column: 1;
+                        grid-row: 2;
+
+                    }
+
+                    .button-container{
+                        display: block;
+                        grid-column: 2;
+                        grid-row: 2;
+                        align-self: end;
+                        justify-self: end;
+                        display: flex;
+                        align-items: flex-end;
+                    }
+
+                }
+
+                
+
+            }
+        }
+    }
+  }
+
+  @mixin singleLargeTileCarousel{
+    .splide.single-tile-carousel{
+
+        
+
+        /*------------------------ Default/Mobile Styles -------------------------------*/
+        
+        background-color: rgba($skyBlue, 0.05);
+        padding: 5vw 0 7vw 0;
+
+        .text-container{
+
+            padding: 0 7vw;
+            margin-bottom: 4vw;
+
+
+            .title-tag{
+                @include title_tag($darkNavy, $cobaltBlue);
+                margin-bottom: 3em;
+    
+            }
+
+            .button-container{
+                display: none;
+            }
+        }
+
+        .splide__slide{
+
+            div.img-wrap{
+                height: 100%;
+                width: auto;
+            }
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+
+            position: relative;
+
+
+            p.caption{
+                position: absolute;
+                bottom: 1rem;
+                left: 1rem;
+                max-width: 13.3rem;
+                @include captionTwo;
+                
+            }
+
+        }
+
+        
+        /*------------------------ Desktop Styles -------------------------------*/
+
+        &{
+            @include respond-to('md'){
+
+                
+                padding-bottom: 0!important;
+
+                div.text-container{
+
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: max-content;
+                    column-gap: 25vw;
+
+                    .heading{
+                        grid-column: 1;
+                        grid-row: 2;
+
+                    }
+
+                    .button-container{
+                        display: block;
+                        grid-column: 2;
+                        grid-row: 2;
+                        align-self: end;
+                        justify-self: end;
+                        display: flex;
+                        align-items: flex-end;
+                    }
+
+                }
+
+                
+
+            }
+        }
+    }
+  }
   
 

@@ -249,30 +249,14 @@ $secondary-font: "Chivo Mono", monospace;
 $hthree : 38;
 @mixin h-three{
 	font-family: $primary-font;
-    font-size: $hthree + px;
-	line-height: 1.05em;
+	@include responsiveFontSize(1.35rem, 2.375rem); // font size
+	@include letterSpacingEm(-0.07125rem, 2.375rem);
+	line-height: 102.632%;
 	font-weight: 700;
-	letter-spacing: -0.03em;
+	font-style: normal;
 	color: $darkNavy;
 	-webkit-font-smoothing: antialiased;
-	@include respond-to(md) {
-	    font-size: $hthree * 0.8 + px;
-	}
-	@include respond-to(lg) {
-	    font-size: $hthree * 0.9 + px;
-	}
-	@include respond-to(xl) {
-	    font-size: $hthree + px;
-	}
-	@include respond-to(tablet) {
-		font-size: $hthree * 0.8 + px;
-	}
-	@include respond-to(mobile) {
-	    font-size: $hthree * 0.7 + px;
-	}
-	@include respond-to(sm) {
-	    font-size: $hthree * 0.7 + px;
-	}	
+
 }
 
 .h3, .medium-header {
