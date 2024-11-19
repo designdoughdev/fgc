@@ -308,7 +308,7 @@ $row = get_row_index() - 0;
 
 
                                 // set colour scheme variable to pass to template part
-                                set_query_var('colourScheme', $colourSchemes[($index + 1) % 4]); ?>
+                                set_query_var('colourScheme', $colourSchemes[($index) % 4]); ?>
 
                     <?php get_template_part('components/includes/post_large_tile_splide_slide', 'colourScheme'); ?>
 

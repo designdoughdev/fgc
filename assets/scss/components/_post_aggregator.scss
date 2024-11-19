@@ -401,6 +401,12 @@ section.section_posts_agg{
 
         @include singleLargeTileCarousel;
 
+        a{
+            &:hover{
+                text-decoration: none;
+            }
+
+
         .post-card-large-tile{
 
             height: 100%;
@@ -452,6 +458,9 @@ section.section_posts_agg{
 
             }
         }
+
+        }
+
 
         
 
