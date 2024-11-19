@@ -1219,6 +1219,37 @@ $conpad : 1.5625vw;
     @include buttonsimple;
 }
 
+@mixin btn_no_style{
+    @include body;
+    background-color: white;
+    border: none;
+    line-height: 127%;
+    cursor: pointer;
+
+}
+
+@mixin btn_plain{
+    @include body;
+    @include buttonsimple;
+    @include border_radius;
+    color: white;
+    background-color: $cobaltBlue;
+    font-weight: 500;
+    padding: 0.23rem 0.91rem 0.23rem 0.91rem;
+    display: inline-flex;
+    height: 2.045rem;
+    width: fit-content;
+    align-items: center;
+    gap: 1.2em;
+    margin-right: 0.41rem;
+    position: relative; 
+
+}
+
+.btn_plain{
+    @include btn_plain;
+}
+
 @mixin btn{
     @include buttonsimple;
     @include border_radius;
@@ -2182,7 +2213,7 @@ body[data-theme='light'] {
     @include caption;
 }
 
-@mixin postCard{
+@mixin postCardDouble{
     .card-top{
         display: flex;
         justify-content: space-between;
@@ -2197,6 +2228,43 @@ body[data-theme='light'] {
 
     }
     .card-body{
+        margin-right: 3%;
+        .post-info{
+            margin: 3.5rem 0 3rem 0;
+        }
+    }
+    .card-bottom{
+        margin-top: 2rem;
+        border-top: 1px solid $darkNavy;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0.8rem;
+
+        p{
+            @include body;
+            text-decoration: underline;
+        }
+    }
+}
+
+@mixin postCard{
+    display: flex;
+    flex-direction: column;
+    .card-top{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+
+
+        div.hand-icon-container{
+            width: 33px;
+            height: 51px;
+        }
+
+
+    }
+    .card-body{
+        flex-grow: 1;
         margin-right: 3%;
         .post-info{
             margin: 3.5rem 0 3rem 0;

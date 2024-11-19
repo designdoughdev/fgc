@@ -132,7 +132,13 @@ $row = get_row_index() - 0;
                             // set colour scheme variable to pass to template part
                             set_query_var('colourScheme', $colourSchemes[($index + 1) % 4]); ?>
 
-                <?php get_template_part('components/includes/post_card_splide_slide', 'colourScheme'); ?>
+
+
+                <li class="splide__slide relative">
+
+                    <?php get_template_part('components/includes/post_card', 'colourScheme'); ?>
+
+                </li>
 
 
 
@@ -310,6 +316,8 @@ $row = get_row_index() - 0;
                                 // set colour scheme variable to pass to template part
                                 set_query_var('colourScheme', $colourSchemes[($index) % 4]); ?>
 
+
+
                     <?php get_template_part('components/includes/post_large_tile_splide_slide', 'colourScheme'); ?>
 
 
@@ -328,37 +336,63 @@ $row = get_row_index() - 0;
 
 
 
-    <?php } elseif ($layout == 'editorial') { ?>
+    <?php } elseif ($layout == 'grid_with_filter') { ?>
 
-    <div class="posts_editorial">
-        <?php while ($latest->have_posts()) : $latest->the_post(); ?>
+    <div class="posts-grid-with-filter section-wrapper">
+        <div class="container">
 
-        <div class="post_wrapper post_wrapper_top">
-            <a href="<?php the_permalink(); ?>">
-                <?php if (has_post_thumbnail()) { ?>
-                <div class="image_wrapper"
-                    style="background-size: cover; <?php if (has_post_thumbnail()) { ?> background-image: url('<?php the_post_thumbnail_url(); ?>'); <?php } else { ?> background: grey <?php } ?>;">
-                </div>
-                <?php } ?>
-                <div class="text_wrapper">
-                    <div class="meta_wrapper">
-                        <h6>
-                            <?php if ($get_post_type == 'post') { ?> News & views
-                            <?php } elseif ($get_post_type == 'case-study') { ?> Case Study
-                            <?php } else { ?> Job Vacancy <?php } ?>
-                        </h6>
-                        <h6> <?php echo $catname; ?> </h6>
+            <div class="top-section">
+                <?php if ($small_title): ?>
+                <h2 class="title-tag"><?php echo $small_title ?></h2>
+                <?php endif; ?>
+                <?php if ($big_title): ?>
+                <h3 class="heading h2"><?php echo $big_title ?></h3>
+                <?php endif; ?>
+                <div class="filter-bar-container">
+                    <div class="filter-top-section">
+                        <button class="filter-btn">
+                            Filter
+                            <img src="<?php echo get_template_directory_uri() . '/assets/images/svg/chevron-down.svg' ?>"
+                                alt="">
+                        </button>
+                        <div class="sort-container">
+                            <p>Sort by: </p> <button>Newest</button><span>|</span><button>Oldest</button>
+                        </div>
                     </div>
-                    <h4><?php the_title(); ?></h4>
-                    <img class="arrow"
-                        src="<?php echo get_template_directory_uri() . '/assets/images/svg/arrow-right.svg'; ?>"
-                        alt="arrow next">
                 </div>
-            </a>
-        </div>
 
-        <?php wp_reset_postdata(); ?>
-        <?php endwhile; ?>
+            </div>
+            <div class="posts-container">
+                <?php $colourSchemes = ['blue', 'yellow', 'mint', 'green']; // The repeating set of values 
+                        ?>
+
+                <?php while ($latest->have_posts()) : $latest->the_post(); ?>
+
+                <?php
+                            // get current post index
+                            $index = $latest->current_post;
+
+
+                            // set colour scheme variable to pass to template part
+                            set_query_var('colourScheme', $colourSchemes[($index + 1) % 4]); ?>
+
+
+
+                <?php get_template_part('components/includes/post_card', 'colourScheme'); ?>
+
+
+
+
+
+                <?php wp_reset_postdata(); ?>
+                <?php endwhile; ?>
+
+            </div>
+
+
+
+
+        </div>
     </div>
 
 
