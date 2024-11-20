@@ -1,4 +1,4 @@
-<a href="/">
+<a href="/" class="post-card-wrapper-link">
     <div class="post-card <?php echo $colourScheme; ?>-style">
         <div class="card-top">
             <div class="tag-container">

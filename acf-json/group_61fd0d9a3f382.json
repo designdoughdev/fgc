@@ -6836,6 +6836,83 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_673df22905d00": {
+                    "key": "layout_673df22905d00",
+                    "name": "text_dynamic",
+                    "label": "Text Dynamic",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_673df29505d04",
+                            "label": "Content Rows",
+                            "name": "content_rows",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "row",
+                            "min": 1,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_673df30005d05",
+                                    "label": "Slide Title",
+                                    "name": "slide_title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_673df29505d04"
+                                },
+                                {
+                                    "key": "field_673df31f05d06",
+                                    "label": "Text Body",
+                                    "name": "text_body",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "br",
+                                    "parent_repeater": "field_673df29505d04"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -6889,5 +6966,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1732030274
+    "modified": 1732118458
 }

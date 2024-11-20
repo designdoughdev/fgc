@@ -1246,7 +1246,30 @@ $conpad : 1.5625vw;
 
 }
 
-.btn_plain{
+.btn_plain_wide{
+    @include btn_plain;
+}
+
+@mixin btn_plain_wide{
+    @include body;
+    @include buttonsimple;
+    @include border_radius;
+    background-color: transparent;
+    border: 1px solid $darkNavy;
+    font-weight: 500;
+    padding: 0.31rem 2em 0.31rem 2em;
+    display: inline-flex;
+    // height: 2.045rem;
+    width: fit-content;
+    align-items: center;
+    // gap: 1.2em;
+    margin-right: 0.41rem;
+    position: relative; 
+    margin-bottom: 0.5em;
+
+}
+
+.btn_plain_wide{
     @include btn_plain;
 }
 
@@ -2248,6 +2271,7 @@ body[data-theme='light'] {
 }
 
 @mixin postCard{
+    
     display: flex;
     flex-direction: column;
     .card-top{

@@ -741,6 +741,35 @@ document.addEventListener("DOMContentLoaded", function() {
         if (nextArrow) nextArrow.addEventListener("click", ()=>splide.go(">")); // Go to next slide
     });
 });
+// text dynamic carousel
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("loaded text carousel");
+    // Initialize Splide carousel with fade transition
+    textDynamicCarousels = document.querySelectorAll(".text_dynamic_carousel");
+    console.log(textDynamicCarousels);
+    if (textDynamicCarousels) textDynamicCarousels.forEach((c)=>{
+        textDynSplide = new (0, _splideDefault.default)(c, {
+            type: "fade",
+            perPage: 1,
+            perMove: 1,
+            pagination: true,
+            arrows: false
+        }).mount();
+        // Handle thumbnail navigation
+        var thumbnails = document.querySelectorAll(".thumbnail_nav .thumbnail");
+        thumbnails.forEach(function(thumbnail) {
+            thumbnail.addEventListener("click", function() {
+                var index = parseInt(thumbnail.getAttribute("data-index"));
+                textDynSplide.go(index); // Navigate to the corresponding slide
+                // Remove 'active' class from all other thumbnails
+                thumbnails.forEach(function(thumb) {
+                    thumb.classList.remove("active");
+                });
+                thumbnail.classList.add("active");
+            });
+        });
+    });
+});
 //------------------------  -------------------------------//
 // header menu
 const headerMenu = document.querySelector(".header-menu-btns");

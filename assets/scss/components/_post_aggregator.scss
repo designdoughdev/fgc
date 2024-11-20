@@ -513,13 +513,23 @@ section.section_posts_agg{
             }
         }
         .posts-container{
-            .post-card{
-                @include body;
-                @include postCard;
-                padding: 1.69em;
-                margin-bottom: 4vw;
-                min-height: 28em;
+
+            a.post-card-wrapper-link{
+
+                &:hover{
+                    text-decoration: none;
+                }
+
+                .post-card{
+                    @include body;
+                    @include postCard;
+                    padding: 1.69em;
+                    margin-bottom: 4vw;
+                    min-height: 25em;
+                }
+
             }
+
 
 
         }
