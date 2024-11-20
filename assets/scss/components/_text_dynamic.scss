@@ -11,9 +11,8 @@ section.section_text_dynamic{
     .section-wrapper{
         background-color: $lightSkyBlue;
         @include h-four;
-        @include rem-to-em(padding, 6rem, 1.75, 1rem, (top, bottom))
 
-        padding: 3em 8vw;
+        padding: 3.5em 8vw;
 
         .thumbnail_nav{
 

@@ -8523,7 +8523,7 @@ section.section_text_dynamic .section-wrapper {
   color: #112343;
   -webkit-font-smoothing: antialiased;
   background-color: #cdf5ff;
-  padding: 3em 8vw;
+  padding: 3.5em 8vw;
   font-family: Messina Sans, sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
@@ -8637,9 +8637,9 @@ section.section_text_dynamic .section-wrapper .text_dynamic_carousel .slider-tex
 section.section_text_dynamic .section-wrapper .text_dynamic_carousel button.splide__pagination__page {
   background-color: #112343;
   border: none;
-  width: .75em;
-  height: .75em;
-  margin-right: .5em;
+  width: .6em;
+  height: .6em;
+  margin-right: .6em;
 }
 
 section.section_text_dynamic .section-wrapper .text_dynamic_carousel button.splide__pagination__page.is-active {
