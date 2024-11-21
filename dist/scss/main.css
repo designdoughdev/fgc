@@ -8503,18 +8503,12 @@ section.section_info_cards .background-container .section-content .cards-section
 }
 
 section.section_text_dynamic {
-  padding: 7vw 0;
-}
-
-@media only screen and (width >= 1200px) {
-  section.section_text_dynamic {
-    padding: 6vw 0;
-  }
+  padding: 5vw 0;
 }
 
 @media only screen and (width >= 1600px) {
   section.section_text_dynamic {
-    padding: 5vw 0;
+    padding: 3vw 0;
   }
 }
 

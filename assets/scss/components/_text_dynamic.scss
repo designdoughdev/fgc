@@ -6,7 +6,7 @@
 
 section.section_text_dynamic{
 
-    @include sections_padding;
+    @include sections_padding_small;
 
     .section-wrapper{
         background-color: $lightSkyBlue;
