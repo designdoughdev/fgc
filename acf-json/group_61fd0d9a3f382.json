@@ -3941,6 +3941,33 @@
                             "new_lines": "br"
                         },
                         {
+                            "key": "field_673efa57edb3d",
+                            "label": "Style",
+                            "name": "style",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "numbered": "Numbered",
+                                "icons": "Icons"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_673a75125aeb5",
                             "label": "Cards",
                             "name": "cards",
@@ -3961,6 +3988,41 @@
                             "button_label": "Add Row",
                             "rows_per_page": 20,
                             "sub_fields": [
+                                {
+                                    "key": "field_673efabaedb3e",
+                                    "label": "Icon",
+                                    "name": "icon",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_673efa57edb3d",
+                                                "operator": "==",
+                                                "value": "icons"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "hand": "Hand"
+                                    },
+                                    "default_value": false,
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "parent_repeater": "field_673a75125aeb5"
+                                },
                                 {
                                     "key": "field_673a75895aeb9",
                                     "label": "Card Title",
@@ -6966,5 +7028,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1732118458
+    "modified": 1732189305
 }

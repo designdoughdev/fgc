@@ -8406,6 +8406,38 @@ section.section_info_cards .background-container .section-content .cards-section
   margin-bottom: 2.90909em;
 }
 
+section.section_info_cards .background-container .section-content .cards-section .info-card .text-content .icon-container {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  aspect-ratio: 1;
+  border-radius: .13636rem;
+  justify-content: center;
+  align-items: center;
+  height: 5.3em;
+  margin-bottom: 2.62em;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .8rem;
+  font-weight: normal;
+  line-height: 143%;
+  display: flex;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_info_cards .background-container .section-content .cards-section .info-card .text-content .icon-container {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_info_cards .background-container .section-content .cards-section .info-card .text-content .icon-container {
+    font-size: 1rem;
+  }
+}
+
+section.section_info_cards .background-container .section-content .cards-section .info-card .text-content .icon-container svg {
+  max-height: 4rem;
+}
+
 section.section_info_cards .background-container .section-content .cards-section .info-card .text-content .card-title {
   letter-spacing: -.03em;
   color: #112343;
@@ -8451,16 +8483,28 @@ section.section_info_cards .background-container .section-content .cards-section
   }
 }
 
-section.section_info_cards .background-container .section-content .cards-section .info-card.mint-scheme .tag {
+section.section_info_cards .background-container .section-content .cards-section .info-card.mint-scheme .tag, section.section_info_cards .background-container .section-content .cards-section .info-card.mint-scheme .icon-container {
   background-color: #d1f8ee;
 }
 
-section.section_info_cards .background-container .section-content .cards-section .info-card.blue-scheme .tag {
+section.section_info_cards .background-container .section-content .cards-section .info-card.mint-scheme .icon-container svg path {
+  fill: #1addae;
+}
+
+section.section_info_cards .background-container .section-content .cards-section .info-card.blue-scheme .tag, section.section_info_cards .background-container .section-content .cards-section .info-card.blue-scheme .icon-container {
   background-color: #cdf5ff;
 }
 
-section.section_info_cards .background-container .section-content .cards-section .info-card.yellow-scheme .tag {
+section.section_info_cards .background-container .section-content .cards-section .info-card.blue-scheme .icon-container svg path {
+  fill: #46d1ee;
+}
+
+section.section_info_cards .background-container .section-content .cards-section .info-card.yellow-scheme .tag, section.section_info_cards .background-container .section-content .cards-section .info-card.yellow-scheme .icon-container {
   background-color: #fef6cc;
+}
+
+section.section_info_cards .background-container .section-content .cards-section .info-card.yellow-scheme .icon-container svg path {
+  fill: #fbdb34;
 }
 
 @media only screen and (width >= 768px) {
