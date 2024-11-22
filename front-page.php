@@ -41,12 +41,22 @@ get_template_part('components/flex/content-text_and_image', 'big-img-no-bg'); ?>
 
 set_query_var('layout', 'full-image');
 
+
+
+
+get_template_part('components/flex/content-text_and_image', 'full-image');
+
 //------------------------  -------------------------------//
+?>
 
 
-get_template_part('components/flex/content-text_and_image', 'full-image'); ?>
 
-<?php get_template_part('components/flex/content-wayfinder'); ?>
+<?php
+
+set_query_var('layout', 'sliding-rows');
+
+
+get_template_part('components/flex/content-wayfinder'); ?>
 
 <?php get_template_part('components/flex/content-image-gallery'); ?>
 
