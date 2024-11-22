@@ -53,9 +53,17 @@ function designdough_custom_post_types()
             array(
                 'labels' => $labels,
                 'public' => true,
-                'supports' => array('title',  'editor', 'custom-fields', 'thumbnail', 'category', 'tags', 'excerpt'),
+                'supports' => array(
+                    'title',
+                    //'editor',
+                    'custom-fields',
+                    'thumbnail',
+                    'category',
+                    // 'tags',
+                    //'excerpt'
+                ),
                 'taxonomies' => array('post_tag', 'category'),
-                'has_archive' => true,
+                'has_archive' => false,
                 'menu_icon' => 'dashicons-' . $post_type['menu_icon'],
                 'rewrite' => array('slug' => sanitize_title($post_type['name'])),
                 'slug'                       => 'type',
