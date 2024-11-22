@@ -6988,49 +6988,49 @@ section.section_wayfinder .section-content .text-content .title-tag:before {
   display: inline-block;
 }
 
-section.section_wayfinder .section-content .wayfinder-container {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows {
   width: 90vw;
   margin: 0 auto;
   position: relative;
 }
 
-section.section_wayfinder .section-content .wayfinder-container li:first-child {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows li:first-child {
   --index: 3;
   --index2: 0;
 }
 
-section.section_wayfinder .section-content .wayfinder-container li:first-child .wayfinder-row {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows li:first-child .wayfinder-row {
   z-index: 9;
 }
 
-section.section_wayfinder .section-content .wayfinder-container li:nth-child(2) {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows li:nth-child(2) {
   --index: 2;
   --index2: 1;
 }
 
-section.section_wayfinder .section-content .wayfinder-container li:nth-child(2) .wayfinder-row {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows li:nth-child(2) .wayfinder-row {
   z-index: 8;
 }
 
-section.section_wayfinder .section-content .wayfinder-container li:nth-child(3) {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows li:nth-child(3) {
   --index: 1;
   --index2: 2;
 }
 
-section.section_wayfinder .section-content .wayfinder-container li:nth-child(3) .wayfinder-row {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows li:nth-child(3) .wayfinder-row {
   z-index: 7;
 }
 
-section.section_wayfinder .section-content .wayfinder-container li:nth-child(4) {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows li:nth-child(4) {
   --index: 0;
   --index2: 3;
 }
 
-section.section_wayfinder .section-content .wayfinder-container li:nth-child(4) .wayfinder-row {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows li:nth-child(4) .wayfinder-row {
   z-index: 6;
 }
 
-section.section_wayfinder .section-content .wayfinder-container li {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows li {
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
@@ -7043,27 +7043,27 @@ section.section_wayfinder .section-content .wayfinder-container li {
 }
 
 @media only screen and (width >= 768px) {
-  section.section_wayfinder .section-content .wayfinder-container li {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows li {
     font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_wayfinder .section-content .wayfinder-container li {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows li {
     font-size: 3.75rem;
   }
 }
 
-section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap:hover {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap:hover {
   text-decoration: none;
 }
 
-section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row {
   padding: 1.3rem 2rem 1rem;
   transform: translateX(100%);
 }
 
-section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .bar-container {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .bar-container {
   z-index: 10;
   width: auto;
   height: 100%;
@@ -7072,34 +7072,34 @@ section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link
   right: 0;
 }
 
-section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .bar-container svg.vertical-bars-small {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .bar-container svg.vertical-bars-small {
   width: auto;
   height: 100%;
 }
 
-section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content {
   justify-items: space-between;
   display: flex;
 }
 
-section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .text-content {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .text-content {
   flex-direction: column;
   flex-grow: 1;
   align-items: start;
   display: flex;
 }
 
-section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .text-content .heading {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .text-content .heading {
   margin-top: .5em;
   margin-bottom: 0;
 }
 
-section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content {
   align-content: center;
   align-self: stretch;
 }
 
-section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container {
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
@@ -7119,23 +7119,23 @@ section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link
 }
 
 @media only screen and (width >= 768px) {
-  section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container {
     font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container {
     font-size: 3.75rem;
   }
 }
 
-section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container svg.arrow {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container svg.arrow {
   width: 40%;
   height: 40%;
 }
 
-section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container svg.arrow path {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container svg.arrow path {
   fill: #112343;
 }
 
@@ -7151,49 +7151,49 @@ section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link
   }
 }
 
-section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row.animate-slide-in {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row.animate-slide-in {
   animation: .8s ease-out forwards slide-in-right;
 }
 
-section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row.animate-slide-in .triangle {
+section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row.animate-slide-in .triangle {
   z-index: 20;
 }
 
 @media only screen and (width >= 768px) {
-  section.section_wayfinder .section-content .wayfinder-container {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows {
     width: 94vw;
     margin-left: auto;
   }
 
-  section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row {
     overflow-x: clip;
   }
 
-  section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content {
     justify-items: space-between;
     display: flex;
   }
 
-  section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .text-content {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .text-content {
     flex-direction: column;
     flex-grow: 1;
     align-items: start;
     display: flex;
   }
 
-  section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .text-content .heading {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .text-content .heading {
     margin-top: .5em;
     margin-bottom: 0;
   }
 
-  section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content {
     z-index: 20;
     align-content: center;
     align-self: stretch;
     margin-right: 15vw;
   }
 
-  section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container {
     letter-spacing: -.03em;
     color: #112343;
     -webkit-font-smoothing: antialiased;
@@ -7214,28 +7214,28 @@ section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link
 }
 
 @media only screen and (width >= 768px) and (width >= 768px) {
-  section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container {
     font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
   }
 }
 
 @media only screen and (width >= 768px) and (width >= 1600px) {
-  section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container {
     font-size: 3.75rem;
   }
 }
 
 @media only screen and (width >= 768px) {
-  section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container svg.arrow {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container svg.arrow {
     width: 40%;
     height: 40%;
   }
 
-  section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container svg.arrow path {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container svg.arrow path {
     fill: #112343;
   }
 
-  section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container .triangle {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container .triangle {
     letter-spacing: -.03em;
     color: #112343;
     -webkit-font-smoothing: antialiased;
@@ -7256,27 +7256,27 @@ section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link
 }
 
 @media only screen and (width >= 768px) and (width >= 768px) {
-  section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container .triangle {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container .triangle {
     font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
   }
 }
 
 @media only screen and (width >= 768px) and (width >= 1600px) {
-  section.section_wayfinder .section-content .wayfinder-container a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container .triangle {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.wayfinder-link-wrap .wayfinder-row .row-content .arrow-content .arrow-container .triangle {
     font-size: 3.75rem;
   }
 }
 
 @media only screen and (width >= 768px) {
-  section.section_wayfinder .section-content .wayfinder-container li .arrow-content {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows li .arrow-content {
     padding-right: calc(10vw * var(--index));
   }
 
-  section.section_wayfinder .section-content .wayfinder-container li {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows li {
     margin-left: calc(4vw * var(--index2));
   }
 
-  section.section_wayfinder .section-content .wayfinder-container .bar-container {
+  section.section_wayfinder .section-content .wayfinder-container.sliding-rows .bar-container {
     right: calc(-3vw * var(--index2)) !important;
   }
 }
@@ -7481,6 +7481,7 @@ section.section_text .flex-content .text-editor h6 {
 section.section_text .flex-content .text-editor p {
   -webkit-font-smoothing: antialiased;
   color: #112343;
+  margin-bottom: 1em;
   font-family: Messina Sans Book, sans-serif;
   font-size: .8rem;
   font-weight: normal;

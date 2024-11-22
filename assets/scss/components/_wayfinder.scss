@@ -27,8 +27,10 @@ section.section_wayfinder{
 
         }
 
+        /*------------------------ Sliding Rows Layout -------------------------------*/
 
-        .wayfinder-container{
+
+        .wayfinder-container.sliding-rows{
 
             @include container;
 
@@ -181,11 +183,19 @@ section.section_wayfinder{
 
         }
 
+        /*------------------------ Cards Layout -------------------------------*/
+
+        .wayfinder-container{
+            
+        }
+
         /*------------------------ Desktop Styles -------------------------------*/
+
+        /*------------------------ Sliding Rows Layout ---------------*/
 
         &{
             @include respond-to(md){
-                .wayfinder-container{
+                .wayfinder-container.sliding-rows{
 
                     width: calc(100vw - 6vw);
                     margin-left: auto;
