@@ -113,45 +113,6 @@ section.section_info_cards{
                     }
     
     
-    
-                    // colour schemes
-    
-                    &.mint-scheme{
-                        .tag{
-                            background-color: $lightMintGreen;
-                        }
-                        .icon-container{
-                            background-color: $lightMintGreen;
-                            svg path{
-                                fill: $mintGreen;
-                            }
-                        }
-                    }
-                    &.blue-scheme{
-                        .tag{
-                            background-color: $lightSkyBlue;
-                        }
-                        .icon-container{
-                            background-color: $lightSkyBlue;
-                            svg path{
-                                fill: $skyBlue;
-                            }
-                        }
-
-                    }
-
-                    &.yellow-scheme{
-                        .tag{
-                            background-color: $lightYellow;
-                        }
-                        .icon-container{
-                            background-color: $lightYellow;
-                            svg path{
-                                fill: $yellow;
-                            }
-                        }
-
-                    }
 
     
                     

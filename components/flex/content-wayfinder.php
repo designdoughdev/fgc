@@ -25,7 +25,16 @@ $layoutStyle = get_sub_field('layout_style');
 
 
 
-        <div class="wayfinder-container">
+        <div class="wayfinder-container cards-layout">
+
+            <?php $colourSchemes = ['mint', 'yellow', 'blue', 'green']; // The repeating set of values 
+                ?>
+
+
+
+
+
+
 
             <?php while (have_rows('signposts')) : the_row(); ?>
 
@@ -37,10 +46,17 @@ $layoutStyle = get_sub_field('layout_style');
                     // Get the parent page ID of the current page
                     $parentID = wp_get_post_parent_id($linkID);
                     $parentTitle = $parentID ? get_the_title($parentID) : null;
+
+
+
+
+
+                    // set colour scheme variable to pass to template part
+                    $colourScheme =  $colourSchemes[(get_row_index() - 1) % 4];
                     ?>
 
 
-            <div class="wayfinder-card">
+            <div class="wayfinder-card <?php echo $colourScheme; ?>-scheme">
                 <div class="text-content">
 
                     <p class=" tag h6"> <?php if ($parentTitle): ?>
@@ -51,13 +67,27 @@ $layoutStyle = get_sub_field('layout_style');
                     <h4 class="h1 heading">
                         <?php echo get_the_title($linkID); ?>
                     </h4>
-                    <p><?php echo $textBody; ?></p>
+                    <p class="text"><?php echo $textBody; ?></p>
 
-                    <a href="<?php echo  get_the_permalink($linkID) ?>" class="page-link btn"
+                    <a href="<?php echo  get_the_permalink($linkID) ?>" class="post-link btn"
                         aria-label="Read more about <?php echo esc_attr(get_the_title($linkID)); ?>">Read more <div
                             class="btn-arrow-container"></div></a>
 
+                    <div class="bars-container">
+
+                        <?php
+
+                                echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
+                                ?>
+
+                    </div>
+
                 </div>
+                <div class="img-wrap">
+
+                </div>
+
+
 
             </div>
 

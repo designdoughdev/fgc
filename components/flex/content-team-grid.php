@@ -55,7 +55,7 @@ $big_title = get_sub_field('big_title');
                     <?php
 
                                     if (!empty($image)) : ?>
-                    <div class="img-wrap">
+                    <div class="team-img-wrap">
 
                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                         <div class="bars-container">
