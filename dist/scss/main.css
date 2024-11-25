@@ -7426,8 +7426,7 @@ section.section_wayfinder .section-content .wayfinder-container.cards-layout .wa
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
-  z-index: 2;
-  padding: 2em;
+  height: 100%;
   font-family: Messina Sans, sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
@@ -7447,7 +7446,13 @@ section.section_wayfinder .section-content .wayfinder-container.cards-layout .wa
   }
 }
 
-section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content > * {
+section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content .text-content-inner {
+  z-index: 2;
+  padding: 2em;
+  position: relative;
+}
+
+section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content .text-content-inner > * {
   max-width: 70%;
 }
 

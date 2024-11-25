@@ -310,12 +310,20 @@ section.section_wayfinder{
                 .text-content{
                     @include h-four;
                     position: relative;
-                    z-index: 2;
-                    padding: 2em;
+                    height: 100%;
+                    
 
-                    & > * {
-                        max-width: 70%;
+                    .text-content-inner{
+                        padding: 2em;
+                        z-index: 2;
+                        position: relative;
+
+                        & > * {
+                            max-width: 70%;
+                        }
+
                     }
+
 
 
 

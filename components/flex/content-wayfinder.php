@@ -58,20 +58,24 @@ $layoutStyle = get_sub_field('layout_style');
 
             <div class="wayfinder-card <?php echo $colourScheme; ?>-scheme">
                 <div class="text-content">
+                    <div class="text-content-inner">
+                        <p class=" tag h6"> <?php if ($parentTitle): ?>
+                            <?php echo esc_html($parentTitle); ?>
+                            <?php else: ?>
+                            FGC
+                            <?php endif; ?></p>
+                        <h4 class="h1 heading">
+                            <?php echo get_the_title($linkID); ?>
+                        </h4>
+                        <p class="text"><?php echo $textBody; ?></p>
 
-                    <p class=" tag h6"> <?php if ($parentTitle): ?>
-                        <?php echo esc_html($parentTitle); ?>
-                        <?php else: ?>
-                        FGC
-                        <?php endif; ?></p>
-                    <h4 class="h1 heading">
-                        <?php echo get_the_title($linkID); ?>
-                    </h4>
-                    <p class="text"><?php echo $textBody; ?></p>
+                        <a href="<?php echo  get_the_permalink($linkID) ?>" class="post-link btn"
+                            aria-label="Read more about <?php echo esc_attr(get_the_title($linkID)); ?>">Read more <div
+                                class="btn-arrow-container"></div></a>
 
-                    <a href="<?php echo  get_the_permalink($linkID) ?>" class="post-link btn"
-                        aria-label="Read more about <?php echo esc_attr(get_the_title($linkID)); ?>">Read more <div
-                            class="btn-arrow-container"></div></a>
+                    </div>
+
+
 
                     <div class="bars-container">
 
