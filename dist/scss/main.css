@@ -7432,6 +7432,7 @@ section.section_wayfinder .section-content .wayfinder-container.cards-layout .wa
   font-weight: 500;
   line-height: 104%;
   position: relative;
+  overflow: clip;
 }
 
 @media only screen and (width >= 768px) {
@@ -7522,6 +7523,7 @@ section.section_wayfinder .section-content .wayfinder-container.cards-layout .wa
   opacity: .4;
   width: auto;
   height: 100%;
+  margin-left: auto;
 }
 
 @media only screen and (width >= 768px) {

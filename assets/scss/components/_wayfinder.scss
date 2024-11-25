@@ -311,6 +311,7 @@ section.section_wayfinder{
                     @include h-four;
                     position: relative;
                     height: 100%;
+                    overflow: clip;
                     
 
                     .text-content-inner{
@@ -354,6 +355,7 @@ section.section_wayfinder{
                             height: 100%;
                             width: auto;
                             opacity: 0.4;
+                            margin-left: auto;
     
                         }
                     }
