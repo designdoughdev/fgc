@@ -21,18 +21,18 @@
             <div class="text-col">
                 <h2 class="title-tag">Public Bodies</h2>
                 <h3 class="heading h2">Find out more information about your local public body.</h3>
-                <form class="search-form " action="">
 
+                <form class="search-form" action="" aria-label="Search form for postcode">
+                    <label for="postcode-input" class="sr-only">Postcode</label>
+                    <div class="search-box">
 
-                    <div class="search-box ">
-                        <input class="input" type="text" placeholder="Search">
-                        <button class="btn cobalt text-white">
+                        <input id="postcode-input" class="input" type="text" placeholder="Postcode here"
+                            aria-label="Enter your postcode" required>
+                        <button class="btn cobalt text-white" type="submit" aria-label="Search for postcode">
                             Search
-                            <div class="btn-arrow-container"></div>
+                            <span class="btn-arrow-container" aria-hidden="true"></span>
                         </button>
                     </div>
-
-
                 </form>
 
             </div>

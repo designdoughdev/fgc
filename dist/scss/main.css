@@ -4270,14 +4270,39 @@ section.section_postcode_search .postcode-search-wrapper .text-col .heading {
   margin-bottom: 1em;
 }
 
+section.section_postcode_search .postcode-search-wrapper .text-col label {
+  -webkit-font-smoothing: antialiased;
+  color: #afafaf;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 143%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_postcode_search .postcode-search-wrapper .text-col label {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_postcode_search .postcode-search-wrapper .text-col label {
+    font-size: 1rem;
+  }
+}
+
 section.section_postcode_search .postcode-search-wrapper .text-col div.search-box {
-  gap: .2rem;
+  gap: .5em;
+  margin-top: .5rem;
   display: flex;
 }
 
 section.section_postcode_search .postcode-search-wrapper .text-col div.search-box input {
+  color: #afafaf;
   background-color: #f3f4f6;
+  border: .01rem solid #1123431a;
   flex-grow: 1;
+  font-weight: 600;
 }
 
 section.section_postcode_search .postcode-search-wrapper .text-col div.search-box button {
