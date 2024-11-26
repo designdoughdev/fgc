@@ -960,98 +960,107 @@ section.section_text_and_image{
 }
 
     /*-----------------------------  Full Image Layout -----------------------------------------------------------*/
-    .section-content.full-image-layout{
+    .full-image-layout-content-wrapper{
+        .section-content.full-image-layout{
 
-        /*------------------------ Default/Mobile Styles -------------------------------*/
-
-        background-position: center; 
-        background-repeat: no-repeat; 
-        background-size: cover; 
-        display: flex;
-        align-items: flex-end;
-       
-        
-        .text-content{
-            height: fit-content;
-            margin: 18rem 0.5rem 2rem 0.5rem;
-            padding: 1.5rem 1rem 0 1rem;
-            @include mobile_text_col_spacing;
-            z-index: 3;
-        
-
-        }
-
-        div.bars-container{
-
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: fit-content;
-            // display: flex;
-            // justify-content: flex-end;
-
-
-            svg.horizontal-bars{
-                width: 100%;
-                height: auto;
-                margin-bottom: -0.2rem;
-                
+            /*------------------------ Default/Mobile Styles -------------------------------*/
+    
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            display: flex;
+            align-items: flex-end;
+           
+            
+            .text-content{
+                height: fit-content;
+                margin: 18rem 0.5rem 2rem 0.5rem;
+                padding: 1.5rem 1rem 0 1rem;
+                @include mobile_text_col_spacing;
+                z-index: 3;
+            
+    
             }
-
-
-        }  
-
-        /*------------------------ Desktop Styles -------------------------------*/
-
-        &{
-            @include respond-to('md'){
-
-                padding: 3rem;
-                height: 100%;
-
-
-                .text-content{
-                    width: 50%;
-                    display: flex;
-                    flex-direction: column;
-                    margin-left: auto;
-                    margin: 0 0 8rem auto;
+    
+            div.bars-container{
+    
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: fit-content;
+                // display: flex;
+                // justify-content: flex-end;
+    
+    
+                svg.horizontal-bars{
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: -0.2rem;
                     
-
-
-                    &>* {
-                        margin-left: 3rem;
-                        margin-right: 7vw;
-                    }
-                
-                    .title-tag{
-                        flex-grow: 1;
-                        margin-top: 4rem
-
-                    }
-                    .heading{
-                        @include h-one;
-                        margin-bottom: 2rem;
-                    }
-
-                    a.btn{
-                        margin-top: 2rem;
-                        margin-bottom: 2.5rem;
-                        margin-left: 3rem;
-                    }
-        
                 }
-        
-        
- 
-        
+    
+    
+            }  
+    
+
         }
+
+            /*------------------------ Desktop Styles -------------------------------*/
+
+            &{
+                @include respond-to('md'){
+
+                    @include container;
+
+                    .section-content.full-image-layout{
+                        padding: 3rem;
+                        height: 100%;
+        
+        
+                        .text-content{
+                            width: 50%;
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: auto;
+                            margin: 0 0 8rem auto;
+                            
+        
+        
+                            &>* {
+                                margin-left: 3rem;
+                                margin-right: 7vw;
+                            }
+                        
+                            .title-tag{
+                                flex-grow: 1;
+                                margin-top: 4rem
+        
+                            }
+                            .heading{
+                                @include h-one;
+                                margin-bottom: 2rem;
+                            }
+        
+                            a.btn{
+                                margin-top: 2rem;
+                                margin-bottom: 2.5rem;
+                                margin-left: 3rem;
+                            }
+                
+                        }
+                        
+                    }
+    
+
+            
+            
+        
+            
+            }
+        }
+
     }
-}
-
-
-
 
 
 

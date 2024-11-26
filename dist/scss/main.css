@@ -6973,7 +6973,7 @@ section.section_text_and_image .section-content.half-image-layout div.bars-conta
   }
 }
 
-section.section_text_and_image .section-content.full-image-layout {
+section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6981,30 +6981,30 @@ section.section_text_and_image .section-content.full-image-layout {
   display: flex;
 }
 
-section.section_text_and_image .section-content.full-image-layout .text-content {
+section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout .text-content {
   z-index: 3;
   height: fit-content;
   margin: 18rem .5rem 2rem;
   padding: 1.5rem 1rem 0;
 }
 
-section.section_text_and_image .section-content.full-image-layout .text-content .title-tag {
+section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout .text-content .title-tag {
   margin-bottom: 2em;
 }
 
-section.section_text_and_image .section-content.full-image-layout .text-content .heading {
+section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout .text-content .heading {
   margin-bottom: .8em;
 }
 
-section.section_text_and_image .section-content.full-image-layout .text-content .body {
+section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout .text-content .body {
   margin-bottom: 1.5em;
 }
 
-section.section_text_and_image .section-content.full-image-layout .text-content a.btn {
+section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout .text-content a.btn {
   margin: .7em 0 1.5rem;
 }
 
-section.section_text_and_image .section-content.full-image-layout div.bars-container {
+section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout div.bars-container {
   width: 100%;
   height: fit-content;
   position: absolute;
@@ -7012,36 +7012,42 @@ section.section_text_and_image .section-content.full-image-layout div.bars-conta
   right: 0;
 }
 
-section.section_text_and_image .section-content.full-image-layout div.bars-container svg.horizontal-bars {
+section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout div.bars-container svg.horizontal-bars {
   width: 100%;
   height: auto;
   margin-bottom: -.2rem;
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text_and_image .section-content.full-image-layout {
+  section.section_text_and_image .full-image-layout-content-wrapper {
+    width: 90vw;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout {
     height: 100%;
     padding: 3rem;
   }
 
-  section.section_text_and_image .section-content.full-image-layout .text-content {
+  section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout .text-content {
     flex-direction: column;
     width: 50%;
     margin: 0 0 8rem auto;
     display: flex;
   }
 
-  section.section_text_and_image .section-content.full-image-layout .text-content > * {
+  section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout .text-content > * {
     margin-left: 3rem;
     margin-right: 7vw;
   }
 
-  section.section_text_and_image .section-content.full-image-layout .text-content .title-tag {
+  section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout .text-content .title-tag {
     flex-grow: 1;
     margin-top: 4rem;
   }
 
-  section.section_text_and_image .section-content.full-image-layout .text-content .heading {
+  section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout .text-content .heading {
     letter-spacing: -.03em;
     color: #112343;
     -webkit-font-smoothing: antialiased;
@@ -7055,19 +7061,19 @@ section.section_text_and_image .section-content.full-image-layout div.bars-conta
 }
 
 @media only screen and (width >= 768px) and (width >= 768px) {
-  section.section_text_and_image .section-content.full-image-layout .text-content .heading {
+  section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout .text-content .heading {
     font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
   }
 }
 
 @media only screen and (width >= 768px) and (width >= 1600px) {
-  section.section_text_and_image .section-content.full-image-layout .text-content .heading {
+  section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout .text-content .heading {
     font-size: 3.75rem;
   }
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text_and_image .section-content.full-image-layout .text-content a.btn {
+  section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout .text-content a.btn {
     margin-top: 2rem;
     margin-bottom: 2.5rem;
     margin-left: 3rem;

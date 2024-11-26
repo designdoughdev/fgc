@@ -209,7 +209,7 @@ endif
 
             <!-------------------------- Layout Full Image --------------------------------->
 
-            <div class="container">
+            <div class="full-image-layout-content-wrapper">
                 <div class="section-content full-image-layout relative yellow-style" data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     style="background-image: url('<?php echo get_stylesheet_directory_uri() . '/assets/images/jpg/viaduct.jpg' ?>') ;">
@@ -681,33 +681,38 @@ endif
             <?php elseif ($layoutStyle == 'full-image'): ?>
 
             <!-------------------------- Layout Full Image --------------------------------->
-            <div class="section-content full-image-layout relative yellow-style" data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom"
-                style="background-image: url('<?php echo get_stylesheet_directory_uri() . '/assets/images/jpg/viaduct.jpg' ?>') ;">
+            <div class="full-image-layout-content-wrapper">
+                <div class="section-content full-image-layout relative yellow-style" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    style="background-image: url('<?php echo get_stylesheet_directory_uri() . '/assets/images/jpg/viaduct.jpg' ?>') ;">
 
 
-                <div class="text-content">
-                    <h2 class="title-tag">Meet the commissioner</h2>
-                    <h3 class="heading h2">Creating a legacy for Future Generations</h3>
-                    <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua ut enim ad.</p>
-                    <a href="/" class="link btn text-white">About the Act<div class="btn-arrow-container"></div></a>
+                    <div class="text-content">
+                        <h2 class="title-tag">Meet the commissioner</h2>
+                        <h3 class="heading h2">Creating a legacy for Future Generations</h3>
+                        <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua ut enim ad.</p>
+                        <a href="/" class="link btn text-white">About the Act<div class="btn-arrow-container"></div></a>
+
+                    </div>
+
+
+
+                    <div class="bars-container">
+
+                        <?php
+                            // horizontal bars
+                            echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars.svg');
+                            ?>
+
+                    </div>
+
 
                 </div>
-
-
-
-                <div class="bars-container">
-
-                    <?php
-                        // horizontal bars
-                        echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars.svg');
-                        ?>
-
-                </div>
-
 
             </div>
+
+
 
         </div>
 
