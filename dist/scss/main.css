@@ -3821,7 +3821,7 @@ section.section_big_search .search-wrapper div.search-flex-content form.search-f
 }
 
 section.section_big_search .search-wrapper div.search-flex-content form.search-form .search-box {
-  gap: .2rem;
+  gap: .5em;
   display: flex;
 }
 
