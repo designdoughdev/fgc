@@ -3429,8 +3429,7 @@
                                 "double_tile_slider": "Double Tile Slider",
                                 "single_tile_slider": "Single Tile Slider",
                                 "grid_with_filter": "Grid with Filter",
-                                "": "",
-                                "editorial": "Editorial"
+                                "list": "List"
                             },
                             "default_value": "rows",
                             "return_format": "value",
@@ -3519,14 +3518,16 @@
                                 "id": ""
                             },
                             "choices": {
-                                "project": "Work",
                                 "post": "News",
-                                "job": "Job Openings"
+                                "press-release": "Press Releases",
+                                "resource": "Resources",
+                                "public-body": "Public Bodies"
                             },
                             "default_value": false,
                             "return_format": "value",
                             "multiple": 0,
                             "allow_null": 0,
+                            "allow_in_bindings": 1,
                             "ui": 0,
                             "ajax": 0,
                             "placeholder": ""
@@ -6949,5 +6950,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1732208157
+    "modified": 1732637407
 }

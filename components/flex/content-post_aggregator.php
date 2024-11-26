@@ -396,84 +396,117 @@ $row = get_row_index() - 0;
     </div>
 
 
-    <?php } ?>
+    <?php } elseif ($layout == 'list') { ?>
 
-    <!-- selected posts -->
-    <?php } else { ?>
+    <div class="posts-list-layout section-wrapper">
+        <div class="container">
 
-    <?php if ($layout == 'rows') {  ?>
+            <div class="top-section">
+                <?php if ($small_title): ?>
+                <h2 class="title-tag"><?php echo esc_html($small_title); ?></h2>
+                <?php endif; ?>
+                <?php if ($big_title): ?>
+                <h3 class="heading h2"><?php echo esc_html($big_title); ?></h3>
+                <?php endif; ?>
+            </div>
 
-    <div class="post_rows">
-        <div class="rows_title_wrap">
-            <h2 class="title"><?php echo $big_title; ?></h2>
-        </div>
-        <?php if (have_rows('selected_posts')) : while (have_rows('selected_posts')) : the_row(); ?>
-        <?php $post_object = get_sub_field('post'); ?>
-        <?php if ($post_object) : ?>
-        <?php // override $post
-                            $post = $post_object;
-                            setup_postdata($post);
-                            ?>
-        <a class="post_row" href="<?php the_permalink(); ?>">
-            <div class="container">
-                <div class="post_row_grid">
-                    <div class="title_col">
-                        <h3 class="post-title"><?php the_title(); ?></h3>
+            <div class="filter-bar">
+                <button class="filter-button active" data-filter="all">A-Z</button>
+                <?php
+                        // Get all terms from the 'type' taxonomy
+                        $terms = get_terms(array(
+                            'taxonomy' => 'type',
+                            'hide_empty' => true, // Only show terms with posts
+                        ));
+
+                        // Check if terms are retrieved
+                        if (!empty($terms) && !is_wp_error($terms)) {
+                            foreach ($terms as $term) {
+                        ?>
+                <button class="filter-button" data-filter="<?php echo esc_attr($term->slug); ?>">
+                    <?php echo esc_html($term->name); ?>
+                </button>
+                <?php
+                            }
+                        }
+                        ?>
+            </div>
+
+            <div class="posts-container">
+                <?php
+                        if (!empty($terms) && !is_wp_error($terms)) {
+                            $colourSchemes = ['blue', 'green', 'yellow', 'mint'];
+                            $index = 0;
+
+                            foreach ($terms as $term) {
+                                // Fetch posts associated with this term
+                                $args = array(
+                                    'post_type' => $chosen_post_type, // Adjust if your custom post type is different
+                                    'tax_query' => array(
+                                        array(
+                                            'taxonomy' => 'type',
+                                            'field' => 'term_id',
+                                            'terms' => $term->term_id,
+                                        ),
+                                    ),
+                                    'posts_per_page' => -1, // Show all posts for this term
+                                );
+
+                                $query = new WP_Query($args);
+
+                                // Only display the term name if there are posts
+                                if ($query->have_posts()) {
+                                    $colourScheme = $colourSchemes[$index % count($colourSchemes)];
+                        ?>
+                <div class="taxonomy-group" data-term="<?php echo esc_attr($term->slug); ?>">
+                    <div class="taxonomy-title-container <?php echo esc_attr($colourScheme); ?>-scheme">
+                        <p>A - Z</p>
+                        <h4 class="taxonomy-title"><?php echo esc_html($term->name); ?> in Wales</h4>
                     </div>
-                    <div class="meta_col">
+
+                    <div class="term-posts">
                         <?php
-                                            $categories = get_the_category();
-                                            $separator = ' ';
-                                            $output = '';
-                                            if (!empty($categories)) {
-                                                foreach ($categories as $category) {
-                                                    $output .= '<h6 class=" ' . esc_html($category->name) . '" href="' . esc_url(get_category_link($category->term_id)) . '" alt="' . esc_attr(sprintf(__('View all posts in %s', 'textdomain'), $category->name)) . '">' . esc_html($category->name) . '</h6>' . $separator;
-                                                }
-                                                echo trim($output, $separator);
+                                            while ($query->have_posts()) {
+                                                $query->the_post();
+                                            ?>
+                        <a href="<?php the_permalink(); ?>" class="post-link"
+                            aria-label="Read more about <?php the_title_attribute(); ?>">
+                            <div class="post-container">
+                                <h3 class="post-title"><?php the_title(); ?></h3>
+                                <div class="post-read-more-container">
+                                    <p class="post-read-more">Read more</p>
+                                </div>
+                            </div>
+                        </a>
+                        <?php
                                             }
                                             ?>
                     </div>
-                    <div class="images_wrap">
-                        <?php if (have_rows('portfolio_images')) : while (have_rows('portfolio_images')) : the_row(); ?>
-                        <?php
-                                                    $bannerArgs = array(
-                                                        'class' => '',
-                                                        'id' => $image,
-                                                        'lazyload' => false
-                                                    );
-                                                    echo build_srcset('banner', $bannerArgs);
-                                                    ?>
-                        <?php endwhile;
-                                            endif; ?>
-                    </div>
                 </div>
+                <?php
+                                    $index++;
+                                }
+
+                                wp_reset_postdata();
+                            }
+                        }
+                        ?>
             </div>
-        </a>
-        <?php wp_reset_postdata(); ?>
-        <?php endif; ?>
-        <?php endwhile; ?>
-        <?php endif; ?>
+
+        </div>
     </div>
 
-    <?php }
-        if ($layout == 'grid') { ?>
 
 
 
     <?php }
-        if ($layout == 'slider') { ?>
-
-
-    <?php } elseif ($layout == 'editorial') { ?>
-
-    <?php } ?>
-
-    <?php } ?>
-    <!-- recent or selected -->
+    }
+    ?>
 
 
 
-    <!-------------------------- original layout --------------------------------->
+
+    <!-------------------------- original non ACF layout --------------------------------->
 
 
 

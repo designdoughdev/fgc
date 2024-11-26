@@ -352,3 +352,33 @@ for (let i = 0; i < accordions.length; i++) {
 	});
 }
 
+
+// public body post filtering
+
+document.addEventListener('DOMContentLoaded', () => {
+  const filterButtons = document.querySelectorAll('.filter-button');
+  const taxonomyGroups = document.querySelectorAll('.taxonomy-group');
+
+  filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          const filter = button.getAttribute('data-filter');
+
+          // Update the active class on buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          // Filter taxonomy groups
+          taxonomyGroups.forEach(group => {
+              const term = group.getAttribute('data-term');
+
+              if (filter === 'all' || term === filter) {
+                  group.style.display = 'block';
+              } else {
+                  group.style.display = 'none';
+              }
+          });
+      });
+  });
+});
+
+

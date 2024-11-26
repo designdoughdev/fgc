@@ -1246,6 +1246,25 @@ $conpad : 1.5625vw;
 
 }
 
+@mixin btn_plain_deselected{
+    @include body;
+    @include buttonsimple;
+    @include border_radius;
+    color: $midGrey;
+    background-color: $lightGrey;
+    font-weight: 500;
+    padding: 0.23rem 0.91rem 0.23rem 0.91rem;
+    display: inline-flex;
+    height: 2.045rem;
+    width: fit-content;
+    align-items: center;
+    gap: 1.2em;
+    margin-right: 0.41rem;
+    position: relative; 
+
+}
+
+
 .btn_plain_wide{
     @include btn_plain;
 }
@@ -2737,6 +2756,10 @@ body[data-theme='light'] {
         }
 
     }
+    // taxonomy title - post agg
+    &.taxonomy-title-container{
+        background-color: $lightMintGreen;
+    }
     
 
 }
@@ -2799,6 +2822,10 @@ body[data-theme='light'] {
         }
 
     }
+        // taxonomy title - post agg
+        &.taxonomy-title-container{
+            background-color: $lightSkyBlue;
+        }
 
 }
 
@@ -2859,6 +2886,11 @@ body[data-theme='light'] {
 
         }
 
+    }
+
+    // taxonomy title - post agg
+    &.taxonomy-title-container{
+        background-color: $lightYellow;
     }
 }
 
@@ -2979,6 +3011,10 @@ body[data-theme='light'] {
 
         }
 
+    }
+    // taxonomy title - post agg
+    &.taxonomy-title-container{
+        background-color: $lightGreen;
     }
 }
 
