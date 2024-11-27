@@ -7092,7 +7092,7 @@ section.section_text_and_image .section-content.big-img-no-bg-layout div.vertica
   }
 
   section.section_text_and_image .section-content.big-img-no-bg-layout div.vertical-bars-container {
-    grid-area: 9 / 9 / span 3 / span 4;
+    grid-area: 10 / 9 / span 2 / span 4;
     width: 100%;
   }
 
