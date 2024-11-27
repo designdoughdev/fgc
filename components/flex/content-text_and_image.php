@@ -499,6 +499,13 @@ endif
 
                 </div>
 
+                <div class="mobile-bars-container">
+                    <?php echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars-small.svg');
+                    ?>
+
+
+                </div>
+
 
 
 

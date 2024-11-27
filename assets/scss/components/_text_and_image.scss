@@ -467,16 +467,21 @@ section.section_text_and_image{
 .section-content.half-text-half-img-layout.centre-style{
 
     /*------------------------ Default/Mobile Styles -------------------------------*/
-    @include container;
+    
     background-color: white; // override colour style class names
     @include mobile_text_col_spacing;
+
+    .text-content{
+        padding: 0 0.7rem;
+
+    }
 
     .title-tag{
         @include title_tag($darkNavy, $cobaltBlue);
     }
 
     div.img-wrap{
-        margin-bottom: 0.3rem;
+        margin-bottom: 1rem;
         width: 100%;
         height: fit-content;
 
@@ -484,6 +489,15 @@ section.section_text_and_image{
             height: 100%;
             width: 100%;
             object-fit: cover;
+        }
+    }
+
+    .mobile-bars-container{
+        margin-top: 0.5rem;
+
+        svg{
+            width: 100%;
+            height: auto;
         }
     }
 
@@ -542,6 +556,7 @@ section.section_text_and_image{
 
     &{
         @include respond-to('md'){
+            @include container;
 
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -567,6 +582,7 @@ section.section_text_and_image{
 
                     max-width: 90%;
                     margin-left: auto;
+                    padding: 0;
 
                     .title-tag{
                         @include rem-to-em(margin, 2rem, 0.875rem, 1rem, (bottom));
@@ -640,6 +656,11 @@ section.section_text_and_image{
             div.img-wrap{
                 
                 height: 100%;
+                margin-bottom: 0;
+            }
+
+            .mobile-bars-container{
+                display: none;
             }
 
 
