@@ -16,8 +16,8 @@ section.section_info_cards{
 
         &.add-background{
             background-color: $lightLightSkyBlue;
-            @include h-two;
-            @include rem-to-em(padding, 2rem, 1rem, 1rem, (top, bottom));
+            // @include h-two;
+            padding: 6rem 0;
         }
 
         .section-content{

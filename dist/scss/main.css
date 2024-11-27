@@ -8809,29 +8809,8 @@ section.section_info_cards {
 }
 
 section.section_info_cards .background-container.add-background {
-  letter-spacing: -.0300032em;
-  color: #112343;
-  -webkit-font-smoothing: antialiased;
   background-color: #daf6fc;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  font-family: Messina Sans, sans-serif;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 104.4%;
-}
-
-@media only screen and (width >= 768px) {
-  section.section_info_cards .background-container.add-background {
-    font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
-  }
-}
-
-@media only screen and (width >= 1600px) {
-  section.section_info_cards .background-container.add-background {
-    font-size: 2.8125rem;
-  }
+  padding: 6rem 0;
 }
 
 section.section_info_cards .background-container .section-content {
@@ -9232,29 +9211,9 @@ section.section_wellbeing_goals {
 }
 
 section.section_wellbeing_goals .background-container.add-background {
-  letter-spacing: -.0300032em;
-  color: #112343;
-  -webkit-font-smoothing: antialiased;
   background-color: #46d1ee0d;
   padding-top: 2em;
   padding-bottom: 2em;
-  font-family: Messina Sans, sans-serif;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 104.4%;
-}
-
-@media only screen and (width >= 768px) {
-  section.section_wellbeing_goals .background-container.add-background {
-    font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
-  }
-}
-
-@media only screen and (width >= 1600px) {
-  section.section_wellbeing_goals .background-container.add-background {
-    font-size: 2.8125rem;
-  }
 }
 
 section.section_wellbeing_goals .background-container .section-content {
