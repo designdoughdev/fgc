@@ -175,7 +175,44 @@ $video = get_field('video');
 
     <!--------------------------  --------------------------------->
 
-    <?php elseif ($layout == 'banner'): ?>
+    <?php elseif (is_single()): ?>
+
+    <section class="hero-container relative">
+
+        <?php get_template_part('components/includes/action-nav'); ?>
+
+
+
+
+
+
+
+
+
+        <div id="hero-overlay" class="container">
+
+            <div class="banner-container level-three-layout">
+                <div class="text-content">
+                    <div class="breadcrumbs-container">
+                        <?php display_breadcrumbs(); ?>
+
+                    </div>
+                    <h2 class="title-tag">public bodies</h2>
+                    <h3 class="heading"><?php the_title(); ?>
+                    </h3>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua ut enim ad.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
 
 
 
