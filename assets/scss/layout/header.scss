@@ -651,6 +651,94 @@ header{
 
 
     }
+
+            /*------------------------ Level 3 page banner layout -------------------------------*/
+            .banner-container.level-three-layout{
+                
+                background-color: $cobaltBlue;
+                padding: 7rem 0 5rem 0;
+
+                .text-content{
+                   @include container;
+              
+
+                                    
+                .breadcrumbs-container{
+
+                    background-color: white;
+                    @include border-radius;
+                    padding: 0.5em 0.9em;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    width: fit-content;
+                    margin-bottom: 6em;
+    
+                    .home-icon{
+                        width: 1rem;
+                        height: auto;
+                    }
+                    
+    
+    
+                    a{
+                        @include h-five;
+                        text-transform: none;
+                        font-family: $primary-font;
+                        font-weight: bold;
+                        text-decoration: underline;
+    
+                        &.current{
+                            font-weight: 300;
+                            text-decoration: none;
+                        }
+                    }
+                }
+    
+                .title-tag{
+                    @include title_tag(white, $yellow);
+                    margin-bottom: 1.87rem;
+                    
+    
+                }
+    
+                .heading{
+                    @include h-one;
+                    color: white;
+                    max-width: 10em;
+                    margin-bottom: 2.13rem;
+                }
+    
+                .text{
+                    @include body;
+                    color: white;
+                }
+                }
+
+
+                /*------------------------ Desktop Styles -------------------------------*/
+
+                &{
+                    @include respond-to(md){
+
+                        .text-content{
+                            @include container;
+                       
+         
+                                             
+
+             
+                         .text{
+                             max-width: 40em;
+                         }
+                         }
+         
+
+
+                    }
+                }
+                
+            }
     
 
 
