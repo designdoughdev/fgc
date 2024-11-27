@@ -10161,8 +10161,17 @@ header section.hero-container #hero-overlay .hero-grid .col-right a .hero-video-
   }
 }
 
-header section.hero-container.level-three-layout, header section.hero-container.level-three-layout #hero-overlay {
+header section.hero-container.level-three-layout {
   height: fit-content;
+}
+
+header section.hero-container.level-three-layout .action-nav-container {
+  position: absolute;
+}
+
+header section.hero-container.level-three-layout #hero-overlay {
+  height: fit-content;
+  position: relative;
 }
 
 header .banner-container.level-three-layout {

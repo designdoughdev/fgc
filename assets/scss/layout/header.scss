@@ -650,8 +650,13 @@ header{
         &.level-three-layout{
             height: fit-content;
 
+            .action-nav-container{
+                position: absolute;
+            }
+
             #hero-overlay{
                 height: fit-content;
+                position: relative;
             }
 
         }
