@@ -416,6 +416,10 @@ endif
                                                                                             } ?>" data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom">
 
+                <div class="img-wrap">
+                    <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/talk.jpg" ?> alt="">
+                </div>
+
 
 
                 <div class="text-col">
@@ -496,9 +500,7 @@ endif
                 </div>
 
 
-                <div class="img-wrap">
-                    <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/talk.jpg" ?> alt="">
-                </div>
+
 
 
 

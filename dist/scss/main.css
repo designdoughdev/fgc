@@ -6809,6 +6809,7 @@ section.section_text_and_image .section-content.half-text-half-img-layout.centre
 
   section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col .text-content {
     max-width: 90%;
+    margin-left: auto;
   }
 
   section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .text-col .text-content .title-tag {
@@ -6903,11 +6904,15 @@ section.section_text_and_image .section-content.half-text-half-img-layout.centre
     height: 100%;
   }
 
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .bottom-bars-container {
+    margin-left: auto;
+    transform: scaleX(-1);
+  }
+
   section.section_text_and_image .section-content.half-text-half-img-layout.centre-style.bars-at-top .top-bars-container {
     margin-bottom: 6rem;
-    margin-right: auto;
+    margin-left: auto;
     display: block;
-    transform: scaleX(-1);
   }
 
   section.section_text_and_image .section-content.half-text-half-img-layout.centre-style.bars-at-top .bottom-bars-container {
@@ -6935,23 +6940,28 @@ section.section_text_and_image .section-content.half-text-half-img-layout.centre
 
 @media only screen and (width >= 768px) {
   section.section_text_and_image .section-content.half-text-half-img-layout.centre-style.reverse .text-col {
-    padding-left: 5vw;
-    padding-right: 0;
+    padding-left: 0;
+    padding-right: 5vw;
+  }
+
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style.reverse .text-col .text-content {
+    margin-left: 0;
   }
 
   section.section_text_and_image .section-content.half-text-half-img-layout.centre-style.reverse.bars-at-top .top-bars-container {
-    margin-left: auto;
-    margin-right: 0;
-    transform: scaleX(1);
+    margin-left: 0;
+    margin-right: auto;
+    transform: scaleX(-1);
   }
 
-  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style.reverse div.text-col {
+  section.section_text_and_image .section-content.half-text-half-img-layout.centre-style.reverse div.img-wrap {
     order: 2;
   }
 
   section.section_text_and_image .section-content.half-text-half-img-layout.centre-style.reverse .bottom-bars-container {
-    margin-left: auto;
-    transform: scaleX(-1);
+    margin-left: 0;
+    margin-right: auto;
+    transform: scaleX(1);
   }
 }
 

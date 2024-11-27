@@ -566,6 +566,7 @@ section.section_text_and_image{
                 .text-content{
 
                     max-width: 90%;
+                    margin-left: auto;
 
                     .title-tag{
                         @include rem-to-em(margin, 2rem, 0.875rem, 1rem, (bottom));
@@ -641,14 +642,23 @@ section.section_text_and_image{
                 height: 100%;
             }
 
+
+            .bottom-bars-container{
+
+                margin-left: auto;
+                transform: scaleX(-1); /* Reflects the element horizontally */
+                
+
+            }
+
             // if bars at top option is sleceted
 
             &.bars-at-top{
                 .top-bars-container{
                     display: block;
-                    margin-right: auto;
+                    margin-left: auto;
                     margin-bottom: 6rem;
-                    transform: scaleX(-1); /* Reflects the element horizontally */
+                    // transform: scaleX(-1); /* Reflects the element horizontally */
                 }
                 .bottom-bars-container{
                     @include body;
@@ -661,15 +671,19 @@ section.section_text_and_image{
             &.reverse{
 
                 .text-col{
-                    padding-left: 5vw;
-                    padding-right: 0;
+                    padding-right: 5vw;
+                    padding-left: 0;
+
+                    .text-content{
+                        margin-left: 0;
+                    }
                 }
 
                 &.bars-at-top{
                     .top-bars-container{
-                        margin-right: 0;
-                        margin-left: auto;
-                        transform: scaleX(1); /* Reflects the element horizontally */
+                        margin-left: 0;
+                        margin-right: auto;
+                        transform: scaleX(-1); /* Reflects the element horizontally */
                     }
                 }
 
@@ -677,17 +691,20 @@ section.section_text_and_image{
 
                 
 
-                div.text-col{
+                div.img-wrap{
                     order: 2
                 }
 
                 .bottom-bars-container{
 
-                    margin-left: auto;
-                    transform: scaleX(-1); /* Reflects the element horizontally */
+           
+                    transform: scaleX(1); /* Reflects the element horizontally */
+                    margin-right: auto;
+                    margin-left: 0;
                     
- 
+    
                 }
+
 
             }
     
