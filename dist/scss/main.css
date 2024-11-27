@@ -10161,6 +10161,10 @@ header section.hero-container #hero-overlay .hero-grid .col-right a .hero-video-
   }
 }
 
+header section.hero-container.level-three-layout, header section.hero-container.level-three-layout #hero-overlay {
+  height: fit-content;
+}
+
 header .banner-container.level-three-layout {
   background-color: #2a5ad5;
   padding: 7rem 0 5rem;

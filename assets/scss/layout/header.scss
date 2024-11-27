@@ -644,6 +644,18 @@ header{
             }
 
         }
+
+        // level 3 page layout adjustments
+
+        &.level-three-layout{
+            height: fit-content;
+
+            #hero-overlay{
+                height: fit-content;
+            }
+
+        }
+        
         
         
 
