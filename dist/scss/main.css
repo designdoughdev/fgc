@@ -7142,6 +7142,7 @@ section.section_text_and_image .section-content.half-image-layout div.img-wrap {
 
 section.section_text_and_image .section-content.half-image-layout div.img-wrap img.landscape-img {
   object-fit: cover;
+  aspect-ratio: 2;
   width: 100%;
   height: 100%;
 }
@@ -7251,6 +7252,10 @@ section.section_text_and_image .section-content.half-image-layout div.bars-conta
 
   section.section_text_and_image .section-content.half-image-layout div.img-wrap {
     display: none;
+  }
+
+  section.section_text_and_image .section-content.half-image-layout div.img-wrap img.landscape-img {
+    aspect-ratio: initial;
   }
 
   section.section_text_and_image .section-content.half-image-layout div.bars-container {

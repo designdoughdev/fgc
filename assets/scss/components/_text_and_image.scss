@@ -867,6 +867,7 @@ section.section_text_and_image{
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
+                aspect-ratio: 2/1;
             }
 
             img.portrait-img{
@@ -955,6 +956,10 @@ section.section_text_and_image{
         
                 div.img-wrap{
                     display: none;
+
+                    img.landscape-img{
+                        aspect-ratio: initial;
+                    }
                 }
         
         
