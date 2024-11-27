@@ -1246,7 +1246,49 @@ $conpad : 1.5625vw;
 
 }
 
-.btn_plain{
+@mixin btn_plain_deselected{
+    @include body;
+    @include buttonsimple;
+    @include border_radius;
+    color: $midGrey;
+    background-color: $lightGrey;
+    font-weight: 500;
+    padding: 0.23rem 0.91rem 0.23rem 0.91rem;
+    display: inline-flex;
+    height: 2.045rem;
+    width: fit-content;
+    align-items: center;
+    gap: 1.2em;
+    margin-right: 0.41rem;
+    position: relative; 
+
+}
+
+
+.btn_plain_wide{
+    @include btn_plain;
+}
+
+@mixin btn_plain_wide{
+    @include body;
+    @include buttonsimple;
+    @include border_radius;
+    background-color: transparent;
+    border: 1px solid $darkNavy;
+    font-weight: 500;
+    padding: 0.31rem 2em 0.31rem 2em;
+    display: inline-flex;
+    // height: 2.045rem;
+    width: fit-content;
+    align-items: center;
+    // gap: 1.2em;
+    margin-right: 0.41rem;
+    position: relative; 
+    margin-bottom: 0.5em;
+
+}
+
+.btn_plain_wide{
     @include btn_plain;
 }
 
@@ -2248,6 +2290,7 @@ body[data-theme='light'] {
 }
 
 @mixin postCard{
+    
     display: flex;
     flex-direction: column;
     .card-top{
@@ -2287,7 +2330,7 @@ body[data-theme='light'] {
 
 
 /*------------------------ Card colour styles -------------------------------*/
-
+///* Colour scheme for text image flexes *//
 // green 
 
 @mixin GreenStyle{
@@ -2653,6 +2696,363 @@ body[data-theme='light'] {
     @include NavyStyle;
     
 }
+
+
+// light colour schemes
+
+@mixin mintScheme{
+
+
+    .tag{
+        background-color: $lightMintGreen;
+    }
+    &.wayfinder-card{
+        background-color: $lightMintGreen;
+        .tag{
+            background-color: $mintGreen;
+        }
+
+    }
+    .icon-container{
+        background-color: $lightMintGreen;
+        svg path{
+            fill: $mintGreen;
+        }
+    }
+    .bars-container{
+        svg path{
+            fill: $mintGreen;
+        }
+
+    }
+    div.team-img-wrap{
+        border-color: $mintGreen;
+
+        svg path{
+            fill: $mintGreen;
+        }
+        
+
+    }
+    button.btn-vtwo{
+        div.btn-arrow-container{
+            background-color: $mintGreen;
+        }
+    }
+
+    .post-link{
+        background-color: $mintGreen;
+    }
+
+    // colour version
+    &.block-colour-style-card{
+        background-color: $lightMintGreen;
+
+        .text-content{
+            div.btn-arrow-container{
+                background-color: $mintGreen;
+            }
+
+        }
+
+    }
+    // taxonomy title - post agg
+    &.taxonomy-title-container{
+        background-color: $lightMintGreen;
+    }
+    // wellbeing goals
+    .card-goal-container{
+        background-color: $lightMintGreen;
+
+    }
+    
+
+}
+
+.mint-scheme{
+    @include mintScheme;
+}
+
+@mixin blueScheme{
+    .tag{
+        background-color: $lightSkyBlue;
+    }
+    &.wayfinder-card{
+        background-color: $lightSkyBlue;
+        .tag{
+            background-color: $skyBlue;
+        }
+
+    }
+    .icon-container{
+        background-color: $lightSkyBlue;
+        svg path{
+            fill: $skyBlue;
+        }
+    }
+    .bars-container{
+        svg path{
+            fill: $skyBlue;
+        }
+
+    }
+    div.team-img-wrap{
+        border-color: $skyBlue
+
+        svg path{
+            fill: $skyBlue;
+        }
+        
+
+    }
+    button.btn-vtwo{
+        div.btn-arrow-container{
+            background-color: $skyBlue;
+        }
+    }
+
+    .post-link{
+        background-color: $skyBlue;
+    }
+
+    // colour version
+    &.block-colour-style-card{
+        background-color: $lightSkyBlue;
+
+        .text-content{
+            div.btn-arrow-container{
+                background-color: $skyBlue;
+            }
+
+        }
+
+    }
+    // taxonomy title - post agg
+    &.taxonomy-title-container{
+        background-color: $lightSkyBlue;
+    }
+
+    // wellbeing goals
+    .card-goal-container{
+        background-color: $lightSkyBlue;
+
+    }
+
+}
+
+.blue-scheme{
+    @include blueScheme;
+}
+
+@mixin YellowScheme{
+    .tag{
+        background-color: $lightYellow;
+    }
+    &.wayfinder-card{
+        background-color: $lightYellow;
+        .tag{
+            background-color: $yellow;
+        }
+
+    }
+    .icon-container{
+        background-color: $lightYellow;
+        svg path{
+            fill: $yellow;
+        }
+    }
+    .bars-container{
+        svg path{
+            fill: $yellow;
+        }
+
+    }
+    div.team-img-wrap{
+        border-color: $yellow;
+
+        svg path{
+            fill: $yellow;
+        }
+        
+
+    }
+    button.btn-vtwo{
+        div.btn-arrow-container{
+            background-color: $yellow;
+        }
+    }
+
+    .post-link{
+        background-color: $yellow;
+    }
+
+    // colour version
+    &.block-colour-style-card{
+        background-color: $lightYellow;
+
+        .text-content{
+            div.btn-arrow-container{
+                background-color: $yellow;
+            }
+
+        }
+
+    }
+
+    // taxonomy title - post agg
+    &.taxonomy-title-container{
+        background-color: $lightYellow;
+    }
+
+    // wellbeing goals
+    .card-goal-container{
+        background-color: $lightYellow;
+
+    }
+}
+
+.yellow-scheme{
+    @include YellowScheme;
+}
+
+@mixin navyScheme{
+    .tag{
+        background-color: $lightNavy;
+    }
+    &.wayfinder-card{
+        background-color: $lightNavy;
+        .tag{
+            background-color: $darkNavy;
+            color: white;
+        }
+
+    }
+    .icon-container{
+        background-color: $lightNavy;
+        svg path{
+            fill: $darkNavy;
+        }
+    }
+    .bars-container{
+        svg path{
+            fill: $darkNavy;
+        }
+
+    }
+    div.team-img-wrap{
+        border-color: $darkNavy;
+
+        svg path{
+            fill: $darkNavy;
+        }
+        
+
+    }
+    button.btn-vtwo{
+        div.btn-arrow-container{
+            background-color: $darkNavy;
+        }
+    }
+    .post-link{
+        background-color: $darkNavy;
+        color: white;
+    }
+
+    // colour version
+    &.block-colour-style-card{
+        background-color: $lightNavy;
+
+        .text-content{
+            div.btn-arrow-container{
+                background-color: $darkNavy;
+            }
+
+        }
+
+    }
+
+
+}
+
+.navy-scheme{
+    @include navyScheme;
+}
+
+@mixin greenScheme{
+    .tag{
+        background-color: $green;
+    }
+    &.wayfinder-card{
+        background-color: $lightGreen;
+        .tag{
+            background-color: $green;
+        }
+
+    }
+    .icon-container{
+        background-color: $green;
+        svg path{
+            fill: $green;
+        }
+    }
+    .bars-container{
+        svg path{
+            fill: $green;
+        }
+
+    }
+    div.team-img-wrap{
+        border-color: $green;
+
+        svg path{
+            fill: $green;
+        }
+        
+
+    }
+    button.btn-vtwo{
+        div.btn-arrow-container{
+            background-color: $green;
+        }
+    }
+    .post-link{
+        background-color: $green;
+    }
+
+    // colour version
+    &.block-colour-style-card{
+        background-color: $lightGreen;
+
+        .text-content{
+            div.btn-arrow-container{
+                background-color: $green;
+            }
+
+        }
+
+    }
+    // taxonomy title - post agg
+    &.taxonomy-title-container{
+        background-color: $lightGreen;
+    }
+
+    // wellbeing goals
+    .card-goal-container{
+        background-color: $lightGreen;
+
+    }
+}
+
+.green-scheme{
+    @include greenScheme;
+}
+
+
+
+
+
+
+
 
 /*------------------------ Relative spacing to font size (margin/padding) -------------------------------*/
 

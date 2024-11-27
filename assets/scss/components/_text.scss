@@ -45,6 +45,7 @@ section.section_text {
             }
             p{
                 @include body;
+                margin-bottom: 1em;
             }
             blockquote {
                 @include border-radius;

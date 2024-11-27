@@ -4,23 +4,22 @@ $add_background = get_sub_field('add_background');
 $smallTitle = get_sub_field('small_title');
 $bigTitle = get_sub_field('big_title');
 $body = get_sub_field('body');
-$style = get_sub_field('style');
 $infoCards = get_sub_field('selected_posts');
 ?>
 
 
 
-<section class="section_info_cards row-<?php // echo $row; 
-                                        ?>">
+<section class="section_wellbeing_goals row-<?php // echo $row; 
+                                            ?>">
 
 
-    <div class="container_big background-container <?php if ($add_background) {
-                                                        echo " add-background ";
-                                                    } ?>">
+    <div class="container background-container <?php if ($add_background) {
+                                                    echo " add-background ";
+                                                } ?>">
 
 
 
-        <div class="section-content">
+        <div class="section-content container_small">
             <?php if ($smallTitle): ?>
             <h2 class="title-tag"><?php echo $smallTitle; ?></h2>
             <?php endif; ?>
@@ -55,34 +54,24 @@ $infoCards = get_sub_field('selected_posts');
 
                 <?php $icon = get_sub_field('icon'); ?>
                 <?php $cardTitle = get_sub_field('card_title'); ?>
+                <?php $cardGoal = get_sub_field('goal_progress'); ?>
                 <?php $cardBody = get_sub_field('card_body'); ?>
 
 
 
-                <div class="info-card <?php echo $colourScheme; ?>-scheme">
+                <div class="wellbeing-card <?php echo $colourScheme; ?>-scheme">
 
                     <div class="text-content">
-                        <?php if ($style == 'icons'): ?>
 
-
-                        <div class="icon-container">
-
-                            <?php if ($icon): ?>
-
-                            <?php
-                                        echo file_get_contents(get_template_directory() . '/assets/images/svg/' . $icon . '-icon.svg');
-                                        ?>
-                            <?php endif; ?>
-
-                        </div>
-                        <?php else:  // numbered style 
-                            ?>
                         <p class="tag card-index"><?php if (get_row_index() < 10) {
-                                                                echo 0;
-                                                            }
-                                                            echo get_row_index(); ?></p>
-                        <?php endif; ?>
+                                                            echo 0;
+                                                        }
+                                                        echo get_row_index(); ?></p>
+
                         <h4 class="card-title"><?php echo $cardTitle; ?></h4>
+                        <div class="card-goal-container">
+                            <p class="card-goal"><?php echo $cardGoal; ?></p>
+                        </div>
                         <p class="card-body"><?php echo $cardBody; ?></p>
 
                     </div>

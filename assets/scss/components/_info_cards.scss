@@ -72,11 +72,34 @@ section.section_info_cards{
     
                         max-width: 75%;
                         
-    
+                        // numbered version
     
                         .tag{
                             @include rem-to-em(margin, 2rem, 0.6875rem, 1rem, (bottom))
                         }
+
+                        //icon version
+
+                        .icon-container{
+                            @include body;
+                            @include border-radius;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            
+                            height: 5.3em;
+                            aspect-ratio: 1;
+
+                            margin-bottom: 2.62em;
+
+                            svg{
+                                max-height: 4rem;
+                            }
+
+                        }
+
+
+                        //
         
                         .card-title{
                             @include h-three;
@@ -90,21 +113,7 @@ section.section_info_cards{
                     }
     
     
-    
-                    // colour schemes
-    
-                    &.mint-scheme
-                    .tag{
-                        background-color: $lightMintGreen;
-                    }
-                    &.blue-scheme
-                    .tag{
-                        background-color: $lightSkyBlue;
-                    }
-                    &.yellow-scheme
-                    .tag{
-                        background-color: $lightYellow;
-                    }
+
     
                     
                 }

@@ -83,84 +83,9 @@ section.section_posts_selector{
                     @include btn;
                 }
 
-                // colour scheme options
+              
 
-                &.mint-scheme{
-
-                    .bars-container{
-                        svg path{
-                            fill: $mintGreen;
-                        }
-                    }
-
-                    .post-link{
-                        background-color: $mintGreen;
-                    }
-
-                    // colour version
-                    &.block-colour-style-card{
-                        background-color: $lightMintGreen;
-
-                        .text-content{
-                            div.btn-arrow-container{
-                                background-color: $mintGreen;
-                            }
-
-                        }
-
-                    }
-                }
-
-                &.blue-scheme{
-
-                    .bars-container{
-                        svg path{
-                            fill: $skyBlue;
-                        }
-                    }
-
-                    .post-link{
-                        background-color: $skyBlue;
-                    }
-
-                    // colour version
-                    &.block-colour-style-card{
-                        background-color: $lightSkyBlue;
-
-                        .text-content{
-                            div.btn-arrow-container{
-                                background-color: $skyBlue;
-                            }
-
-                        }
-
-                    }
-                }
-
-                &.yellow-scheme{
-
-                    .bars-container{
-                        svg path{
-                            fill: $yellow;
-                        }
-                    }
-
-                    .post-link{
-                        background-color: $yellow;
-                    }
-
-                    // colour version
-                    &.block-colour-style-card{
-                        background-color: $lightYellow;
-
-                        .text-content{
-                            div.btn-arrow-container{
-                                background-color: $yellow;
-                            }
-                        }
-
-                    }
-                }
+                
 
                 // if block colour version background option slected
 

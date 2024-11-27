@@ -49,13 +49,15 @@ add_action('after_setup_theme', 'fgc_theme_support');
 // require get_parent_theme_file_path('/inc/contactform.php');
 require get_parent_theme_file_path('/inc/responsiveimages.php');
 // require get_parent_theme_file_path('/inc/siteoptions.php');
-// require get_parent_theme_file_path('/inc/customposttypes.php');
+require get_parent_theme_file_path('/inc/customposttypes.php');
 // require get_parent_theme_file_path('/inc/disableadminbar.php');
-// require get_parent_theme_file_path('/inc/posttonews.php');
+require get_parent_theme_file_path('/inc/posttonews.php');
 // require get_parent_theme_file_path('/inc/excerpt-length.php');
 require get_parent_theme_file_path('/inc/disable-comments.php');
 require get_parent_theme_file_path('/inc/disable-gutenburg.php');
 require get_parent_theme_file_path('/inc/disable-content-editor.php');
+require get_parent_theme_file_path('/inc/disable-tags.php');
+require get_parent_theme_file_path('/inc/disable-categories.php');
 require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 
 
@@ -210,7 +212,7 @@ add_action('after_switch_theme', 'dd_theme_activate_required_plugins');
 //------------------------ Custom theme functions -------------------------------//
 
 
-// Function to display breadcrumb navigation with 'current' class on the current page
+// Function to display breadcrumb navigation 
 function display_breadcrumbs()
 {
     global $post;

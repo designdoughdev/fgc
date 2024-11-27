@@ -27,8 +27,10 @@ section.section_wayfinder{
 
         }
 
+        /*------------------------ Sliding Rows Layout -------------------------------*/
 
-        .wayfinder-container{
+
+        .wayfinder-container.sliding-rows{
 
             @include container;
 
@@ -183,9 +185,11 @@ section.section_wayfinder{
 
         /*------------------------ Desktop Styles -------------------------------*/
 
+        /*------------------------ Sliding Rows Layout ---------------*/
+
         &{
             @include respond-to(md){
-                .wayfinder-container{
+                .wayfinder-container.sliding-rows{
 
                     width: calc(100vw - 6vw);
                     margin-left: auto;
@@ -291,6 +295,88 @@ section.section_wayfinder{
                 }
 
             }
+        }
+
+        /*------------------------ Cards Layout -------------------------------*/
+
+        .wayfinder-container.cards-layout{
+
+            @include container;
+
+
+            .wayfinder-card{
+                
+
+                .text-content{
+                    @include h-four;
+                    position: relative;
+                    height: 100%;
+                    overflow: clip;
+                    
+
+                    .text-content-inner{
+                        padding: 2em;
+                        z-index: 2;
+                        position: relative;
+
+                        & > * {
+                            max-width: 70%;
+                        }
+
+                    }
+
+
+
+
+
+                    .tag{
+                        margin-bottom: 5em;
+                    }
+                    .heading{
+                        @include h-one;
+                        margin-bottom: 1em;
+                    }
+                    .text{
+                        @include body;
+                        margin-bottom: 2em;
+                    }
+                    .btn{
+                        margin-bottom: 0;
+                    }
+
+                    .bars-container{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        height: 100%;
+                        width: fit-content;
+    
+                        svg{
+                            height: 100%;
+                            width: auto;
+                            opacity: 0.4;
+                            margin-left: auto;
+    
+                        }
+                    }
+
+
+                }
+
+
+
+
+
+            }
+
+            &{
+                @include respond-to(md){
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1rem;
+                }
+            }
+
         }
 
 

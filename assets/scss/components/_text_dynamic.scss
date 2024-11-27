@@ -1,0 +1,73 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
+
+
+section.section_text_dynamic{
+
+    @include sections_padding_small;
+
+    .section-wrapper{
+        background-color: $lightSkyBlue;
+        @include h-four;
+
+        padding: 3.5em 8vw;
+
+        .thumbnail_nav{
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: fit-content;
+            margin: 0 auto;
+
+
+
+            button.thumbnail{
+                
+                @include btn_plain_wide;
+                background-color: transparent;
+                border: 1px solid $darkNavy;
+                color: $darkNavy;
+                margin-bottom: 0.5em;
+
+                &.active{
+                    background-color: $cobaltBlue;
+                    color: white;
+                    border: none;
+
+                }
+            }
+        }
+
+        .text_dynamic_carousel{
+            padding: 0 1rem;
+
+            .slider-text-body{
+                @include h-four;
+                font-weight: 700;
+                margin: 2.5em 0 1.5em 0;
+                text-align: center;
+            }
+
+            button.splide__pagination__page{
+                height: 0.6em;
+                width: 0.6em;
+                background-color: $darkNavy;
+                margin-right: 0.6em;
+                border: none;
+    
+                &.is-active{
+                    background-color: $cobaltBlue;
+                }
+            }
+
+
+        }
+
+    }
+
+
+
+}

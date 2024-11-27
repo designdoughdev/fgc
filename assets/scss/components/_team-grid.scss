@@ -66,7 +66,7 @@
                 flex-direction: column;
                 margin-bottom: 2em;
 
-                .img-wrap{
+                .team-img-wrap{
                     width: 100%;
                     border-bottom: 0.4rem solid $mintGreen;
                     height: fit-content;
@@ -171,62 +171,7 @@
 
                 }
 
-                // colour schemes
 
-                &.mint-scheme{
-
-                    div.img-wrap{
-                        border-color: $mintGreen;
-
-                        svg path{
-                            fill: $mintGreen;
-                        }
-                        
-
-                    }
-                    button.btn-vtwo{
-                        div.btn-arrow-container{
-                            background-color: $mintGreen;
-                        }
-                    }
-                    
-                   }
-
-                   &.yellow-scheme{
-
-                    div.img-wrap{
-                        border-color: $yellow;
-
-                        svg path{
-                            fill: $yellow;
-                        }
-
-                    }
-                    button.btn-vtwo{
-                        div.btn-arrow-container{
-                            background-color: $yellow;
-                        }
-                    }
-                    
-                   }
-
-                   &.blue-scheme{
-
-                    div.img-wrap{
-                        border-color: $skyBlue;
-
-                        svg path{
-                            fill: $skyBlue;
-                        }
-
-                    }
-                    button.btn-vtwo{
-                        div.btn-arrow-container{
-                            background-color: $skyBlue;
-                        }
-                    }
-                    
-                   }
 
             }
 
