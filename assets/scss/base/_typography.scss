@@ -227,7 +227,7 @@ $secondary-font: "Chivo Mono", monospace;
 
 @mixin h-two {
 	font-family: $primary-font;
-	@include responsiveFontSize(1.5625rem, 2.8125rem); // font size
+	@include responsiveFontSize(2rem, 2.8125rem); // font size
 	@include letterSpacingEm(-0.04688rem, 1.5625rem);
 	line-height: 104.4%;
 	font-weight: 700;
@@ -242,7 +242,7 @@ $secondary-font: "Chivo Mono", monospace;
 }
 
 @mixin h-two-sizing{
-	@include responsiveFontSize(1.5625rem, 2.8125rem); // font size
+	@include responsiveFontSize(2rem, 2.8125rem); // font size
 }
 
 // h3: used for subheadings within flexes, after an h2
@@ -413,7 +413,7 @@ blockquote {
 
 @mixin body{
  	font-family: $primary-font-book;
-	 @include responsiveFontSize(0.8rem, 1rem); // font size
+	 @include responsiveFontSize(0.9rem, 1rem); // font size
 	 line-height: 143% ;
 	 font-weight: normal;
 	-webkit-font-smoothing: antialiased;
@@ -427,7 +427,7 @@ blockquote {
 
 @mixin bodyRegular{
 	font-family: $primary-font;
-	@include responsiveFontSize(0.8rem, 1rem); // font size
+	@include responsiveFontSize(0.9rem, 1rem); // font size
 	line-height: 143% ;
    -webkit-font-smoothing: antialiased;
    color: $darkNavy;
@@ -440,7 +440,7 @@ blockquote {
 
 @mixin bodyLarge{
 	font-family: $primary-font-book;
-	@include responsiveFontSize(1rem, 1.125rem); // font size
+	@include responsiveFontSize(1.1rem, 1.125rem); // font size
 	@include letterSpacingEm(-0.03375rem, 1.125rem);
 	line-height: normal;
    -webkit-font-smoothing: antialiased;
