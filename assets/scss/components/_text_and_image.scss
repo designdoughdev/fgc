@@ -9,75 +9,102 @@ section.section_text_and_image{
     @include sections_padding;
 
     /*----------------------------- Full Colour Layout -----------------------------------------------------------*/
-    .section-content.full-colour-layout{
+    .full-colour-layout-wrapper{
+            .section-content.full-colour-layout{
 
-        /*------------------------ Default/Mobile Styles -------------------------------*/
+                /*------------------------ Default/Mobile Styles -------------------------------*/
+                @include body;
+                color: white;
+                padding: 40% 1em 50% 1em;
         
-        color: white;
-        padding: 7vw 5vw;
-
-        .vertical-bars{
-            display: none;
-        }
-
-
-        .col{
-            margin-right: 3vw;
-            .title-tag{
-                margin-bottom: 4.5em;
-            }
-            .heading{
-                margin-bottom: 1em;
-            }
-            .body{
-                margin-bottom: 3em;
-                max-width: 80%;
-            }
-        }
-
-        /*------------------------ Desktop Styles -------------------------------*/
-
-        &{
-            @include respond-to('md'){
-
-            padding: 7rem 10rem;
-
-            .col{
-                width: 50%;
-            }
-
-            .vertical-bars{
-                display: block;
-                position: absolute;
-                top: 0;
-                right: 0;
-                height: 100%;
-                width: auto;
-                
-
-            }
-
-            // reverse layout option selected
-
-            &.reverse{
-
-                .col{
-                    margin-left: auto;
-                    margin-right: 0;
-
-                }
-
                 .vertical-bars{
-                    left: 0;
-                    transform: scaleX(-1); /* Reflects the element horizontally */
+                    display: none;
+                }
+
+                .horizontal-bars-small{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    height: auto;
+                    width: 100%;
+                }
+        
+        
+                .col{
+                    position: relative;
+                    z-index: 2;
+                    margin-right: 3vw;
+                    .title-tag{
+                        margin-bottom: 2.5em;
+                    }
+                    .heading{
+                        margin-bottom: 1em;
+                    }
+                    .body{
+                        margin-bottom: 3em;
+                        max-width: 80%;
+                    }
+                }
+
+            }
+        
+            /*------------------------ Desktop Styles -------------------------------*/
+
+                &{
+
+                    @include respond-to('md'){
+
+                        @include container;
+
+                    .section-content.full-colour-layout{
+                        padding: 7rem 10rem;
+        
+                        .col{
+                            width: 50%;
+                        }
+            
+                        .vertical-bars{
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            height: 100%;
+                            width: auto;
+                            
+            
+                        }
+
+                        .horizontal-bars-small{
+                            display: none;
+                        }
+            
+                        // reverse layout option selected
+            
+                        &.reverse{
+            
+                            .col{
+                                margin-left: auto;
+                                margin-right: 0;
+            
+                            }
+            
+                            .vertical-bars{
+                                left: 0;
+                                transform: scaleX(-1); /* Reflects the element horizontally */
+                                
+                
+                            }
+                        }
+                    }
+        
+
                     
-    
                 }
             }
-            
+        
+
         }
-    }
-}
+    
 
     /*----------------------------- Rows Layout -----------------------------------------------------------*/
     .section-content.rows-layout{
