@@ -587,9 +587,19 @@ endif
 
                     <?php
 
-
+                    // large
                     echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
+
+                    // small
+
+
+
+
+                    echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars-block.svg');
+
                     ?>
+
+
 
                 </div>
 
@@ -599,7 +609,9 @@ endif
 
 
 
+
             </div>
+
 
         <?php endif; ?>
 
