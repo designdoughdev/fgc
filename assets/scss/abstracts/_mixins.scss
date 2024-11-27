@@ -2760,6 +2760,11 @@ body[data-theme='light'] {
     &.taxonomy-title-container{
         background-color: $lightMintGreen;
     }
+    // wellbeing goals
+    .card-goal-container{
+        background-color: $lightMintGreen;
+
+    }
     
 
 }
@@ -2822,10 +2827,16 @@ body[data-theme='light'] {
         }
 
     }
-        // taxonomy title - post agg
-        &.taxonomy-title-container{
-            background-color: $lightSkyBlue;
-        }
+    // taxonomy title - post agg
+    &.taxonomy-title-container{
+        background-color: $lightSkyBlue;
+    }
+
+    // wellbeing goals
+    .card-goal-container{
+        background-color: $lightSkyBlue;
+
+    }
 
 }
 
@@ -2892,6 +2903,12 @@ body[data-theme='light'] {
     &.taxonomy-title-container{
         background-color: $lightYellow;
     }
+
+    // wellbeing goals
+    .card-goal-container{
+        background-color: $lightYellow;
+
+    }
 }
 
 .yellow-scheme{
@@ -2953,6 +2970,8 @@ body[data-theme='light'] {
         }
 
     }
+
+
 }
 
 .navy-scheme{
@@ -3015,6 +3034,12 @@ body[data-theme='light'] {
     // taxonomy title - post agg
     &.taxonomy-title-container{
         background-color: $lightGreen;
+    }
+
+    // wellbeing goals
+    .card-goal-container{
+        background-color: $lightGreen;
+
     }
 }
 

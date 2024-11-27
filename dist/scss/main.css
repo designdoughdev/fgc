@@ -3371,7 +3371,7 @@ body[data-theme="light"] ::selection {
   background-color: #1addae;
 }
 
-.mint-scheme.taxonomy-title-container {
+.mint-scheme.taxonomy-title-container, .mint-scheme .card-goal-container {
   background-color: #d1f8ee;
 }
 
@@ -3408,7 +3408,7 @@ body[data-theme="light"] ::selection {
   background-color: #46d1ee;
 }
 
-.blue-scheme.taxonomy-title-container {
+.blue-scheme.taxonomy-title-container, .blue-scheme .card-goal-container {
   background-color: #cdf5ff;
 }
 
@@ -3448,7 +3448,7 @@ body[data-theme="light"] ::selection {
   background-color: #fbdb34;
 }
 
-.yellow-scheme.taxonomy-title-container {
+.yellow-scheme.taxonomy-title-container, .yellow-scheme .card-goal-container {
   background-color: #fef6cc;
 }
 
@@ -3530,7 +3530,7 @@ body[data-theme="light"] ::selection {
   background-color: #a8e332;
 }
 
-.green-scheme.taxonomy-title-container {
+.green-scheme.taxonomy-title-container, .green-scheme .card-goal-container {
   background-color: #eef9d6;
 }
 
@@ -9170,6 +9170,270 @@ section.section_text_dynamic .section-wrapper .text_dynamic_carousel button.spli
   background-color: #2a5ad5;
 }
 
+section.section_wellbeing_goals {
+  padding: 7vw 0;
+}
+
+@media only screen and (width >= 1200px) {
+  section.section_wellbeing_goals {
+    padding: 6vw 0;
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_wellbeing_goals {
+    padding: 5vw 0;
+  }
+}
+
+section.section_wellbeing_goals .background-container.add-background {
+  letter-spacing: -.0300032em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  background-color: #46d1ee0d;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  font-family: Messina Sans, sans-serif;
+  font-size: 1.5625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 104.4%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_wellbeing_goals .background-container.add-background {
+    font-size: clamp(1.5625rem, 1.5625rem + 1vw, 2.8125rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_wellbeing_goals .background-container.add-background {
+    font-size: 2.8125rem;
+  }
+}
+
+section.section_wellbeing_goals .background-container .section-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+section.section_wellbeing_goals .background-container .section-content .title-tag {
+  letter-spacing: normal;
+  color: #112343;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-indent: -.59727rem;
+  margin-bottom: 15px;
+  padding-left: .59727rem;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+  position: relative;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_wellbeing_goals .background-container .section-content .title-tag {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_wellbeing_goals .background-container .section-content .title-tag {
+    font-size: .9375rem;
+  }
+}
+
+section.section_wellbeing_goals .background-container .section-content .title-tag:before {
+  content: "";
+  vertical-align: middle;
+  background-color: #46d1ee;
+  border-radius: .75rem;
+  width: .22727rem;
+  height: .22727rem;
+  margin-right: .37rem;
+  display: inline-block;
+}
+
+section.section_wellbeing_goals .background-container .section-content .top-section {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  margin-bottom: 4em;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .8rem;
+  font-weight: normal;
+  line-height: 143%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_wellbeing_goals .background-container .section-content .top-section {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_wellbeing_goals .background-container .section-content .top-section {
+    font-size: 1rem;
+  }
+}
+
+section.section_wellbeing_goals .background-container .section-content .top-section .title-wrap .heading {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: .7em;
+  padding-right: 3vw;
+  font-family: Messina Sans, sans-serif;
+  font-size: 2.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_wellbeing_goals .background-container .section-content .top-section .title-wrap .heading {
+    font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_wellbeing_goals .background-container .section-content .top-section .title-wrap .heading {
+    font-size: 3.75rem;
+  }
+}
+
+section.section_wellbeing_goals .background-container .section-content .top-section .body {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  padding-right: 6vw;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .8rem;
+  font-weight: normal;
+  line-height: 143%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_wellbeing_goals .background-container .section-content .top-section .body {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_wellbeing_goals .background-container .section-content .top-section .body {
+    font-size: 1rem;
+  }
+}
+
+section.section_wellbeing_goals .background-container .section-content .cards-section .wellbeing-card {
+  margin-bottom: 3rem;
+}
+
+section.section_wellbeing_goals .background-container .section-content .cards-section .wellbeing-card:not(:last-child) {
+  border-bottom: 1px solid #0000001a;
+}
+
+section.section_wellbeing_goals .background-container .section-content .cards-section .wellbeing-card .text-content .tag {
+  margin-bottom: 2.90909em;
+}
+
+section.section_wellbeing_goals .background-container .section-content .cards-section .wellbeing-card .text-content .card-title {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: .711111em;
+  font-family: Messina Sans, sans-serif;
+  font-size: 1.35rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 102.632%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_wellbeing_goals .background-container .section-content .cards-section .wellbeing-card .text-content .card-title {
+    font-size: clamp(1.35rem, 1.35rem + 1vw, 2.375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_wellbeing_goals .background-container .section-content .cards-section .wellbeing-card .text-content .card-title {
+    font-size: 2.375rem;
+  }
+}
+
+section.section_wellbeing_goals .background-container .section-content .cards-section .wellbeing-card .text-content .card-goal-container {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+section.section_wellbeing_goals .background-container .section-content .cards-section .wellbeing-card .text-content .card-goal-container .card-goal {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  padding: .5em;
+  font-family: Messina Sans, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 104%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_wellbeing_goals .background-container .section-content .cards-section .wellbeing-card .text-content .card-goal-container .card-goal {
+    font-size: clamp(1.2rem, 1.2rem + 1vw, 1.75rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_wellbeing_goals .background-container .section-content .cards-section .wellbeing-card .text-content .card-goal-container .card-goal {
+    font-size: 1.75rem;
+  }
+}
+
+section.section_wellbeing_goals .background-container .section-content .cards-section .wellbeing-card .text-content .card-goal-container .bars-container {
+  width: fit-content;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+section.section_wellbeing_goals .background-container .section-content .cards-section .wellbeing-card .text-content .card-body {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  max-width: 40em;
+  margin: 1em 0 3em;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .8rem;
+  font-weight: normal;
+  line-height: 143%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_wellbeing_goals .background-container .section-content .cards-section .wellbeing-card .text-content .card-body {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_wellbeing_goals .background-container .section-content .cards-section .wellbeing-card .text-content .card-body {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  section.section_wellbeing_goals .background-container .section-content.add-background {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  section.section_wellbeing_goals .background-container .section-content .top-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+    margin-bottom: 2em;
+    display: grid;
+  }
+}
+
 header {
   margin-bottom: 6rem;
 }
@@ -9894,6 +10158,160 @@ header section.hero-container #hero-overlay .hero-grid .col-right a .hero-video-
 @media only screen and (width >= 1600px) and (width >= 1600px) {
   header section.hero-container #hero-overlay .hero-grid .hero-text-container .heading {
     font-size: 3.75rem;
+  }
+}
+
+header .banner-container.level-three-layout {
+  background-color: #2a5ad5;
+  padding: 7rem 0 5rem;
+}
+
+header .banner-container.level-three-layout .text-content {
+  width: 90vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+header .banner-container.level-three-layout .text-content .breadcrumbs-container {
+  background-color: #fff;
+  border-radius: .13636rem;
+  align-items: center;
+  gap: .4rem;
+  width: fit-content;
+  margin-bottom: 6em;
+  padding: .5em .9em;
+  display: flex;
+}
+
+header .banner-container.level-three-layout .text-content .breadcrumbs-container .home-icon {
+  width: 1rem;
+  height: auto;
+}
+
+header .banner-container.level-three-layout .text-content .breadcrumbs-container a {
+  letter-spacing: normal;
+  color: #112343;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-transform: none;
+  font-family: Messina Sans, sans-serif;
+  font-size: .75rem;
+  font-weight: bold;
+  line-height: normal;
+  text-decoration: underline;
+}
+
+@media only screen and (width >= 768px) {
+  header .banner-container.level-three-layout .text-content .breadcrumbs-container a {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  header .banner-container.level-three-layout .text-content .breadcrumbs-container a {
+    font-size: .9375rem;
+  }
+}
+
+header .banner-container.level-three-layout .text-content .breadcrumbs-container a.current {
+  font-weight: 300;
+  text-decoration: none;
+}
+
+header .banner-container.level-three-layout .text-content .title-tag {
+  letter-spacing: normal;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-indent: -.59727rem;
+  margin-bottom: 1.87rem;
+  padding-left: .59727rem;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+  position: relative;
+}
+
+@media only screen and (width >= 768px) {
+  header .banner-container.level-three-layout .text-content .title-tag {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  header .banner-container.level-three-layout .text-content .title-tag {
+    font-size: .9375rem;
+  }
+}
+
+header .banner-container.level-three-layout .text-content .title-tag:before {
+  content: "";
+  vertical-align: middle;
+  background-color: #fbdb34;
+  border-radius: .75rem;
+  width: .22727rem;
+  height: .22727rem;
+  margin-right: .37rem;
+  display: inline-block;
+}
+
+header .banner-container.level-three-layout .text-content .heading {
+  letter-spacing: -.03em;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  max-width: 10em;
+  margin-bottom: 2.13rem;
+  font-family: Messina Sans, sans-serif;
+  font-size: 2.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+@media only screen and (width >= 768px) {
+  header .banner-container.level-three-layout .text-content .heading {
+    font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  header .banner-container.level-three-layout .text-content .heading {
+    font-size: 3.75rem;
+  }
+}
+
+header .banner-container.level-three-layout .text-content .text {
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .8rem;
+  font-weight: normal;
+  line-height: 143%;
+}
+
+@media only screen and (width >= 768px) {
+  header .banner-container.level-three-layout .text-content .text {
+    font-size: clamp(.8rem, .8rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  header .banner-container.level-three-layout .text-content .text {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  header .banner-container.level-three-layout .text-content {
+    width: 90vw;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  header .banner-container.level-three-layout .text-content .text {
+    max-width: 40em;
   }
 }
 
