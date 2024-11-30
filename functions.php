@@ -252,6 +252,7 @@ function filter_posts()
     $topic = $_POST['topic'] ?? '';
     $location = $_POST['location'] ?? '';
     $year = $_POST['year'] ?? '';
+    $sort = $_POST['sort'] ?? 'newest';  // Default to 'newest'
 
     $args = [
         'post_type' => 'post',
@@ -301,6 +302,15 @@ function filter_posts()
                 'year' => $year,
             ],
         ];
+    }
+
+    // Add sorting logic based on 'newest' or 'oldest'
+    if ($sort === 'oldest') {
+        $args['orderby'] = 'date';
+        $args['order'] = 'ASC';  // Oldest posts first
+    } else {
+        $args['orderby'] = 'date';
+        $args['order'] = 'DESC'; // Newest posts first
     }
 
     $query = new WP_Query($args);
