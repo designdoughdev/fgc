@@ -479,6 +479,7 @@ section.section_posts_agg{
             }
 
             .filter-bar-container{
+                display: none;
                 border-top: 1px solid rgba($darkNavy, 0.1);    
                 @include body;
                 padding: 1em 0;  
@@ -495,6 +496,7 @@ section.section_posts_agg{
                     }
     
                     .sort-container{
+                        margin-left: auto;
                         display: flex;
                         gap: 0.1rem;
                         p{
@@ -587,6 +589,7 @@ section.section_posts_agg{
         .top-section{
 
             .filter-bar-container{
+                display: block;
 
 
                 .filter-top-section{

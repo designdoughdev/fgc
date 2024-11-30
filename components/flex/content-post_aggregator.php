@@ -351,11 +351,11 @@ $row = get_row_index() - 0;
 
                 <div class="filter-bar-container">
                     <div class="filter-top-section">
-                        <button class="filter-btn">
+                        <!-- <button class="filter-btn">
                             Filter
                             <img src="<?php echo get_template_directory_uri() . '/assets/images/svg/chevron-down.svg' ?>"
                                 alt="">
-                        </button>
+                        </button> -->
                         <div class="sort-container">
                             <p>Sort by: </p>
                             <button data-sort="newest" class="active">Newest</button>

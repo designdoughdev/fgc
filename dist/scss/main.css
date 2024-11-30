@@ -5259,6 +5259,7 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .
   font-size: .9rem;
   font-weight: normal;
   line-height: 143%;
+  display: none;
 }
 
 @media only screen and (width >= 768px) {
@@ -5332,6 +5333,7 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container .filter-top-section .sort-container {
   gap: .1rem;
+  margin-left: auto;
   display: flex;
 }
 
@@ -5381,7 +5383,7 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .
 }
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container .filter-top-section .sort-container button.active {
-  font-weight: 700 !important;
+  font-weight: 700;
 }
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container .filter-top-section .filter-bar {
@@ -5801,6 +5803,10 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-contain
 }
 
 @media only screen and (width >= 768px) {
+  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container {
+    display: block;
+  }
+
   section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container .filter-top-section {
     justify-content: space-between;
     align-items: center;
