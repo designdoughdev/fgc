@@ -466,9 +466,6 @@ document.addEventListener('DOMContentLoaded', () => {
           });
   });
 
-
-
-document.addEventListener('DOMContentLoaded', () => {
   // Handle sort buttons
   const sortButtons = document.querySelectorAll('.sort-container button');
 
@@ -480,11 +477,11 @@ document.addEventListener('DOMContentLoaded', () => {
           sortInput.name = 'sort';
           sortInput.value = sortValue;
 
-          // Ensure previous sort input is removed if it exists
-          const existingSortInput = form.querySelector('input[name="sort"]');
-          if (existingSortInput) {
-              existingSortInput.remove();
-          }
+          // Toggle active class between buttons
+          sortButtons.forEach((btn) => {
+              btn.classList.remove('active');  // Remove 'active' from all buttons
+          });
+          button.classList.add('active');  // Add 'active' to the clicked button
 
           form.appendChild(sortInput); // Add sort value to the form
           form.requestSubmit(); // Programmatically submit the form

@@ -358,7 +358,7 @@ $row = get_row_index() - 0;
                         </button>
                         <div class="sort-container">
                             <p>Sort by: </p>
-                            <button data-sort="newest">Newest</button>
+                            <button data-sort="newest" class="active">Newest</button>
                             <span>|</span>
                             <button data-sort="oldest">Oldest</button>
                         </div>

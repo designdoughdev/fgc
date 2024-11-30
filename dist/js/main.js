@@ -880,11 +880,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
         });
     });
     // Handle form submission
-    const form1 = document.querySelector(".filter-form"); // Corrected to use class selector
+    const form = document.querySelector(".filter-form"); // Corrected to use class selector
     const postsContainer = document.querySelector(".posts-container"); // Corrected to use class selector
-    form1.addEventListener("submit", (event)=>{
+    form.addEventListener("submit", (event)=>{
         event.preventDefault(); // Prevent default form submission
-        const formData = new FormData(form1);
+        const formData = new FormData(form);
         fetch("/wp-admin/admin-ajax.php?action=filter_posts", {
             method: "POST",
             body: new URLSearchParams(formData)
@@ -904,24 +904,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
             sortInput.type = "hidden";
             sortInput.name = "sort";
             sortInput.value = sortValue;
-            form1.appendChild(sortInput); // Add sort value to the form
-            form1.requestSubmit(); // Programmatically submit the form
-        });
-    });
-});
-document.addEventListener("DOMContentLoaded", ()=>{
-    // Handle sort buttons
-    const sortButtons = document.querySelectorAll(".sort-container button");
-    sortButtons.forEach((button)=>{
-        button.addEventListener("click", ()=>{
-            const sortValue = button.getAttribute("data-sort");
-            const sortInput = document.createElement("input");
-            sortInput.type = "hidden";
-            sortInput.name = "sort";
-            sortInput.value = sortValue;
-            // Ensure previous sort input is removed if it exists
-            const existingSortInput = form.querySelector('input[name="sort"]');
-            if (existingSortInput) existingSortInput.remove();
+            // Toggle active class between buttons
+            sortButtons.forEach((btn)=>{
+                btn.classList.remove("active"); // Remove 'active' from all buttons
+            });
+            button.classList.add("active"); // Add 'active' to the clicked button
             form.appendChild(sortInput); // Add sort value to the form
             form.requestSubmit(); // Programmatically submit the form
         });

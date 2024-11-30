@@ -504,6 +504,10 @@ section.section_posts_agg{
                         button{
                             @include btn_no_style;
 
+                            &.active{
+                                font-weight: 700;
+                            }
+
                         }
                     }
 
