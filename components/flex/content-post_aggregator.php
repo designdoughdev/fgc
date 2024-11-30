@@ -558,6 +558,7 @@ $row = get_row_index() - 0;
                         ?>
             </div>
 
+
             <div class="posts-container">
                 <?php
                         // Get the search query from the URL and normalize it
@@ -566,7 +567,6 @@ $row = get_row_index() - 0;
                         // Normalize the search postcode: replace spaces with hyphens and convert to lowercase
                         if (!empty($search_postcode)) {
                             $search_postcode = strtolower(str_replace(' ', '-', $search_postcode));
-                            error_log("Normalized Postcode from Search: " . $search_postcode);
                         }
 
                         if (!empty($terms) && !is_wp_error($terms)) {
@@ -577,12 +577,8 @@ $row = get_row_index() - 0;
                             foreach ($terms as $term) {
                                 // Ensure the term is an object before proceeding
                                 if (!is_object($term)) {
-                                    error_log("Term is not a valid object: " . print_r($term, true));
                                     continue;
                                 }
-
-                                // Log the term details
-                                error_log("Processing term: " . print_r($term, true));
 
                                 // Build the query arguments
                                 $args = array(
@@ -600,27 +596,15 @@ $row = get_row_index() - 0;
 
                                 // If there's a postcode search, add it to the query
                                 if (!empty($search_postcode)) {
-                                    // Check if the normalized postcode term exists in the 'postcode' taxonomy
-                                    $postcode_term = get_term_by('slug', $search_postcode, 'postcode');
-                                    if ($postcode_term) {
-                                        error_log("Postcode Term Found: " . print_r($postcode_term, true));
-                                        $args['tax_query'][] = array(
-                                            'taxonomy' => 'postcode',
-                                            'field'    => 'slug',
-                                            'terms'    => $search_postcode,
-                                        );
-                                    } else {
-                                        error_log("No term found for postcode: " . $search_postcode);
-                                    }
+
+                                    $args['tax_query'][] = array(
+                                        'taxonomy' => 'postcode',
+                                        'field'    => 'slug',
+                                        'terms'    => $search_postcode,
+                                    );
                                 }
 
-                                // Log the final query arguments
-                                error_log("Final Query Args: " . print_r($args, true));
-
                                 $query = new WP_Query($args);
-
-                                // Log the SQL query for debugging
-                                error_log("SQL Query: " . $query->request);
 
                                 // Only display the term name if there are posts
                                 if ($query->have_posts()) {
@@ -656,9 +640,6 @@ $row = get_row_index() - 0;
                 </div>
                 <?php
                                     $index++;
-                                } else {
-                                    // Log if no posts are found for the query
-                                    error_log("No posts found for term: " . $term->name);
                                 }
 
                                 wp_reset_postdata();
@@ -666,14 +647,15 @@ $row = get_row_index() - 0;
 
                             // If no posts were found after looping through all terms, display the "no records" message
                             if (!$posts_found) {
-                                echo '<p>Sorry, no matching records</p>';
+                                echo '<p class="body-large">Sorry, no matching results</p>';
                             }
                         } else {
-                            // Log if terms are invalid or empty
-                            error_log("Terms are either empty or invalid: " . print_r($terms, true));
+                            // If terms are empty or invalid, show the message
+                            echo '<p class="body-large">Sorry, no matching results</p>';
                         }
                         ?>
             </div>
+
 
 
 

@@ -1588,6 +1588,27 @@ blockquote {
   }
 }
 
+.body-large {
+  letter-spacing: -.03em;
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: 1.1rem;
+  line-height: normal;
+}
+
+@media only screen and (width >= 768px) {
+  .body-large {
+    font-size: clamp(1.1rem, 1.1rem + 1vw, 1.125rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  .body-large {
+    font-size: 1.125rem;
+  }
+}
+
 .link {
   -webkit-font-smoothing: antialiased;
   color: #112343;
