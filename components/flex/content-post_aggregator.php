@@ -348,6 +348,7 @@ $row = get_row_index() - 0;
                 <?php if ($big_title): ?>
                 <h3 class="heading h2"><?php echo $big_title ?></h3>
                 <?php endif; ?>
+
                 <div class="filter-bar-container">
                     <div class="filter-top-section">
                         <button class="filter-btn">
@@ -356,44 +357,160 @@ $row = get_row_index() - 0;
                                 alt="">
                         </button>
                         <div class="sort-container">
-                            <p>Sort by: </p> <button>Newest</button><span>|</span><button>Oldest</button>
+                            <p>Sort by: </p>
+                            <button data-sort="newest">Newest</button>
+                            <span>|</span>
+                            <button data-sort="oldest">Oldest</button>
                         </div>
                     </div>
+                    <div class="filter-bar">
+                        <?php
+                                // Fetch default WordPress categories
+                                $categories = get_terms([
+                                    'taxonomy' => 'category',
+                                    'hide_empty' => false,
+                                ]);
+
+                                // Fetch terms for custom taxonomies
+                                $types = get_terms([
+                                    'taxonomy' => 'type',
+                                    'hide_empty' => false,
+                                ]);
+
+                                $topics = get_terms([
+                                    'taxonomy' => 'topic',
+                                    'hide_empty' => false,
+                                ]);
+
+                                $locations = get_terms([
+                                    'taxonomy' => 'location',
+                                    'hide_empty' => false,
+                                ]);
+
+                                // Fetch unique published years
+                                global $wpdb;
+                                $years = $wpdb->get_col("
+    SELECT DISTINCT YEAR(post_date) 
+    FROM $wpdb->posts 
+    WHERE post_status = 'publish' AND post_type = 'post'
+    ORDER BY YEAR(post_date) DESC
+");
+                                ?>
+                        <form class="filter-form custom-dropdown-form" method="POST">
+                            <!-- Default WordPress Categories -->
+                            <div class="dropdown-wrapper">
+                                <label for="category">Category</label>
+                                <div class="custom-dropdown">
+                                    <button type="button" class="dropdown-toggle" aria-expanded="false">
+                                        Select Category
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <?php foreach ($categories as $category): ?>
+                                        <li tabindex="0" data-value="<?php echo esc_attr($category->slug); ?>">
+                                            <?php echo esc_html($category->name); ?>
+                                        </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                    <input type="hidden" name="category" id="category">
+                                </div>
+                            </div>
+
+                            <!-- Custom Taxonomy: Type -->
+                            <div class="dropdown-wrapper">
+                                <label for="type">Type</label>
+                                <div class="custom-dropdown">
+                                    <button type="button" class="dropdown-toggle" aria-expanded="false">
+                                        Select Type
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <?php foreach ($types as $type): ?>
+                                        <li tabindex="0" data-value="<?php echo esc_attr($type->slug); ?>">
+                                            <?php echo esc_html($type->name); ?>
+                                        </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                    <input type="hidden" name="type" id="type">
+                                </div>
+                            </div>
+
+                            <!-- Custom Taxonomy: Topic -->
+                            <div class="dropdown-wrapper">
+                                <label for="topic">Topic</label>
+                                <div class="custom-dropdown">
+                                    <button type="button" class="dropdown-toggle" aria-expanded="false">
+                                        Select Topic
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <?php foreach ($topics as $topic): ?>
+                                        <li tabindex="0" data-value="<?php echo esc_attr($topic->slug); ?>">
+                                            <?php echo esc_html($topic->name); ?>
+                                        </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                    <input type="hidden" name="topic" id="topic">
+                                </div>
+                            </div>
+
+                            <!-- Custom Taxonomy: Location -->
+                            <div class="dropdown-wrapper">
+                                <label for="location">Location</label>
+                                <div class="custom-dropdown">
+                                    <button type="button" class="dropdown-toggle" aria-expanded="false">
+                                        Select Location
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <?php foreach ($locations as $location): ?>
+                                        <li tabindex="0" data-value="<?php echo esc_attr($location->slug); ?>">
+                                            <?php echo esc_html($location->name); ?>
+                                        </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                    <input type="hidden" name="location" id="location">
+                                </div>
+                            </div>
+
+                            <!-- Published Year -->
+                            <div class="dropdown-wrapper">
+                                <label for="year">Year</label>
+                                <div class="custom-dropdown">
+                                    <button type="button" class="dropdown-toggle" aria-expanded="false">
+                                        Select Year
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <?php foreach ($years as $year): ?>
+                                        <li tabindex="0" data-value="<?php echo esc_attr($year); ?>">
+                                            <?php echo esc_html($year); ?>
+                                        </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                    <input type="hidden" name="year" id="year">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Apply Filters</button>
+                        </form>
+
+
+
+                    </div>
                 </div>
-
             </div>
-            <div class="posts-container">
-                <?php $colourSchemes = ['blue', 'yellow', 'mint', 'green']; // The repeating set of values 
-                        ?>
 
+            <div class="posts-container" id="posts-container">
+                <?php $colourSchemes = ['blue', 'yellow', 'mint', 'green']; ?>
                 <?php while ($latest->have_posts()) : $latest->the_post(); ?>
-
                 <?php
-                            // get current post index
                             $index = $latest->current_post;
-
-
-                            // set colour scheme variable to pass to template part
-                            set_query_var('colourScheme', $colourSchemes[($index + 1) % 4]); ?>
-
-
-
+                            set_query_var('colourScheme', $colourSchemes[($index + 1) % 4]);
+                            ?>
                 <?php get_template_part('components/includes/post_card', 'colourScheme'); ?>
-
-
-
-
-
                 <?php wp_reset_postdata(); ?>
                 <?php endwhile; ?>
-
             </div>
-
-
-
 
         </div>
     </div>
+
 
 
     <?php } elseif ($layout == 'list') { ?>

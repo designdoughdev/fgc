@@ -244,3 +244,79 @@ function display_breadcrumbs()
     // Display the breadcrumb trail
     echo $breadcrumb;
 }
+
+function filter_posts()
+{
+    $category = $_POST['category'] ?? '';
+    $type = $_POST['type'] ?? '';
+    $topic = $_POST['topic'] ?? '';
+    $location = $_POST['location'] ?? '';
+    $year = $_POST['year'] ?? '';
+
+    $args = [
+        'post_type' => 'post',
+        'posts_per_page' => -1,
+        'tax_query' => [
+            'relation' => 'AND',
+        ],
+    ];
+
+    // Add taxonomy filters if provided
+    if ($category) {
+        $args['tax_query'][] = [
+            'taxonomy' => 'category',
+            'field' => 'slug',
+            'terms' => $category,
+        ];
+    }
+
+    if ($type) {
+        $args['tax_query'][] = [
+            'taxonomy' => 'type',
+            'field' => 'slug',
+            'terms' => $type,
+        ];
+    }
+
+    if ($topic) {
+        $args['tax_query'][] = [
+            'taxonomy' => 'topic',
+            'field' => 'slug',
+            'terms' => $topic,
+        ];
+    }
+
+    if ($location) {
+        $args['tax_query'][] = [
+            'taxonomy' => 'location',
+            'field' => 'slug',
+            'terms' => $location,
+        ];
+    }
+
+    // Add year filter if provided
+    if ($year) {
+        $args['date_query'] = [
+            [
+                'year' => $year,
+            ],
+        ];
+    }
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            get_template_part('components/includes/post_card');
+        }
+        wp_reset_postdata();
+    } else {
+        echo '<p>No posts found</p>';
+    }
+
+    die();
+}
+
+add_action('wp_ajax_filter_posts', 'filter_posts');
+add_action('wp_ajax_nopriv_filter_posts', 'filter_posts');

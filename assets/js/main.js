@@ -405,4 +405,84 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// news filtering
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Handle dropdown interactions
+  const dropdowns = document.querySelectorAll('.custom-dropdown');
+
+  dropdowns.forEach((dropdown) => {
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      const menu = dropdown.querySelector('.dropdown-menu');
+      const hiddenInput = dropdown.querySelector('input[type="hidden"]');
+
+      toggle.addEventListener('click', () => {
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', !expanded);
+          menu.classList.toggle('visible');
+      });
+
+      menu.addEventListener('click', (event) => {
+          if (event.target.tagName === 'LI') {
+              const value = event.target.getAttribute('data-value');
+              const text = event.target.textContent;
+
+              hiddenInput.value = value; // Update hidden input
+              toggle.textContent = text; // Update toggle text
+              toggle.setAttribute('aria-expanded', 'false');
+              menu.classList.remove('visible');
+          }
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (event) => {
+          if (!dropdown.contains(event.target)) {
+              toggle.setAttribute('aria-expanded', 'false');
+              menu.classList.remove('visible');
+          }
+      });
+  });
+
+  // Handle form submission
+  const form = document.querySelector('.filter-form');  // Corrected to use class selector
+  const postsContainer = document.querySelector('.posts-container');  // Corrected to use class selector
+
+  form.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent default form submission
+
+      const formData = new FormData(form);
+
+      fetch('/wp-admin/admin-ajax.php?action=filter_posts', {
+          method: 'POST',
+          body: new URLSearchParams(formData), // Serialize form data
+      })
+          .then((response) => response.text())
+          .then((html) => {
+              postsContainer.innerHTML = html; // Replace posts with filtered results
+          })
+          .catch((error) => {
+              console.error('Error:', error);
+              postsContainer.innerHTML = '<p>Error loading posts. Please try again.</p>';
+          });
+  });
+
+  // Handle sort buttons
+  const sortButtons = document.querySelectorAll('.sort-container button');
+
+  sortButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+          const sortValue = button.getAttribute('data-sort');
+          const sortInput = document.createElement('input');
+          sortInput.type = 'hidden';
+          sortInput.name = 'sort';
+          sortInput.value = sortValue;
+
+          form.appendChild(sortInput); // Add sort value to the form
+          form.requestSubmit(); // Programmatically submit the form
+      });
+  });
+});
+
+
+
 
