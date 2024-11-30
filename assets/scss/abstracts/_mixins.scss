@@ -1264,6 +1264,26 @@ $conpad : 1.5625vw;
 
 }
 
+@mixin btn_plain_deselected_dropdown{
+    @include btn_plain_deselected;
+    width: max-content;
+    padding: 1.3em 0 1.3em 1.5em;
+
+    &:after{
+        content: "";
+        display: inline-block; 
+        background-image: url('/assets/images/svg/chevron-down-dark.svg'); 
+        background-size: contain; 
+        background-repeat: no-repeat;
+        height: 0.5rem;
+        width: 1rem;
+        margin-right: 1.5em;
+        
+
+       
+    }
+}
+
 
 .btn_plain_wide{
     @include btn_plain;

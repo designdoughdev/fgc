@@ -399,9 +399,9 @@ $row = get_row_index() - 0;
                         <form class="filter-form custom-dropdown-form" method="POST">
                             <!-- Default WordPress Categories -->
                             <div class="dropdown-wrapper">
-                                <label for="category">Category</label>
                                 <div class="custom-dropdown">
-                                    <button type="button" class="dropdown-toggle" aria-expanded="false">
+                                    <button type="button" class="dropdown-toggle" aria-expanded="false"
+                                        aria-labelledby="category-label">
                                         Select Category
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
@@ -411,15 +411,17 @@ $row = get_row_index() - 0;
                                         </li>
                                         <?php endforeach; ?>
                                     </ul>
-                                    <input type="hidden" name="category" id="category">
+                                    <input type="hidden" name="category" id="category" aria-labelledby="category-label">
                                 </div>
+                                <span id="category-label" class="sr-only">Category</span>
+                                <!-- Hidden label for screen readers -->
                             </div>
 
                             <!-- Custom Taxonomy: Type -->
                             <div class="dropdown-wrapper">
-                                <label for="type">Type</label>
                                 <div class="custom-dropdown">
-                                    <button type="button" class="dropdown-toggle" aria-expanded="false">
+                                    <button type="button" class="dropdown-toggle" aria-expanded="false"
+                                        aria-labelledby="type-label">
                                         Select Type
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
@@ -429,15 +431,17 @@ $row = get_row_index() - 0;
                                         </li>
                                         <?php endforeach; ?>
                                     </ul>
-                                    <input type="hidden" name="type" id="type">
+                                    <input type="hidden" name="type" id="type" aria-labelledby="type-label">
                                 </div>
+                                <span id="type-label" class="sr-only">Type</span>
+                                <!-- Hidden label for screen readers -->
                             </div>
 
                             <!-- Custom Taxonomy: Topic -->
                             <div class="dropdown-wrapper">
-                                <label for="topic">Topic</label>
                                 <div class="custom-dropdown">
-                                    <button type="button" class="dropdown-toggle" aria-expanded="false">
+                                    <button type="button" class="dropdown-toggle" aria-expanded="false"
+                                        aria-labelledby="topic-label">
                                         Select Topic
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
@@ -447,15 +451,17 @@ $row = get_row_index() - 0;
                                         </li>
                                         <?php endforeach; ?>
                                     </ul>
-                                    <input type="hidden" name="topic" id="topic">
+                                    <input type="hidden" name="topic" id="topic" aria-labelledby="topic-label">
                                 </div>
+                                <span id="topic-label" class="sr-only">Topic</span>
+                                <!-- Hidden label for screen readers -->
                             </div>
 
                             <!-- Custom Taxonomy: Location -->
                             <div class="dropdown-wrapper">
-                                <label for="location">Location</label>
                                 <div class="custom-dropdown">
-                                    <button type="button" class="dropdown-toggle" aria-expanded="false">
+                                    <button type="button" class="dropdown-toggle" aria-expanded="false"
+                                        aria-labelledby="location-label">
                                         Select Location
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
@@ -465,15 +471,17 @@ $row = get_row_index() - 0;
                                         </li>
                                         <?php endforeach; ?>
                                     </ul>
-                                    <input type="hidden" name="location" id="location">
+                                    <input type="hidden" name="location" id="location" aria-labelledby="location-label">
                                 </div>
+                                <span id="location-label" class="sr-only">Location</span>
+                                <!-- Hidden label for screen readers -->
                             </div>
 
                             <!-- Published Year -->
                             <div class="dropdown-wrapper">
-                                <label for="year">Year</label>
                                 <div class="custom-dropdown">
-                                    <button type="button" class="dropdown-toggle" aria-expanded="false">
+                                    <button type="button" class="dropdown-toggle" aria-expanded="false"
+                                        aria-labelledby="year-label">
                                         Select Year
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
@@ -483,11 +491,15 @@ $row = get_row_index() - 0;
                                         </li>
                                         <?php endforeach; ?>
                                     </ul>
-                                    <input type="hidden" name="year" id="year">
+                                    <input type="hidden" name="year" id="year" aria-labelledby="year-label">
                                 </div>
+                                <span id="year-label" class="sr-only">Year</span>
+                                <!-- Hidden label for screen readers -->
                             </div>
 
-                            <button type="submit" class="submit-btn">Apply Filters</button>
+                            <button type="submit" class="submit-btn btn cobalt text-white">Apply<div
+                                    class="btn-arrow-container">
+                                </div></button>
                         </form>
 
 
@@ -497,13 +509,10 @@ $row = get_row_index() - 0;
             </div>
 
             <div class="posts-container" id="posts-container">
-                <?php $colourSchemes = ['blue', 'yellow', 'mint', 'green']; ?>
                 <?php while ($latest->have_posts()) : $latest->the_post(); ?>
-                <?php
-                            $index = $latest->current_post;
-                            set_query_var('colourScheme', $colourSchemes[($index + 1) % 4]);
-                            ?>
-                <?php get_template_part('components/includes/post_card', 'colourScheme'); ?>
+
+
+                <?php get_template_part('components/includes/post_card'); ?>
                 <?php wp_reset_postdata(); ?>
                 <?php endwhile; ?>
             </div>
