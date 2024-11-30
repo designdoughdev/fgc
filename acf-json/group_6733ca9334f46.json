@@ -19,7 +19,8 @@
             "choices": {
                 "boxed": "Boxed Text",
                 "banner": "Banner",
-                "second_level_page": "Second Level Page"
+                "second_level_page": "Second Level Page",
+                "third_level_page": "Third Level Page"
             },
             "default_value": false,
             "return_format": "value",
@@ -70,5 +71,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731484597
+    "modified": 1732996219
 }
