@@ -52,7 +52,7 @@ $video = get_field('video');
                     </div>
 
                     <div class="hamburger-icon-container">
-                        <button class="md:hidden ms-auto hamburger-btn" aria-label="Menu" @click="isOpen = !isOpen">
+                        <button class="hamburger-btn">
                             <img class="hamburger-icon"
                                 src="<?php bloginfo('template_url'); ?>/assets/images/svg/hamburger.svg" alt="menu">
                         </button>

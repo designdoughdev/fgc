@@ -1,16 +1,15 @@
-<nav class="mobile-nav " x-show="isOpen" @click.away="isOpen = false"
-    x-transition:enter="transition ease-out duration-300 -mr-96" x-transition:enter-start=""
-    x-transition:enter-end="transform -translate-x-96" x-transition:leave="transition ease-out duration-300"
-    x-transition:leave-start="" x-transition:leave-end="transform translate-x-96">
-    <div class="">
-        <button class="close-btn" @click="isOpen = false">&times;</button>
-        <ul>
-            <li>Page</li>
-            <li>Page</li>
-            <li>Page</li>
-            <li>Page</li>
-            <li>Page</li>
-        </ul>
+<nav class="mobile-nav overlay">
+
+
+    <!-- Button to close the overlay navigation -->
+    <button class="mobile-menu-close-btn">&times;</button>
+
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
     </div>
 
 </nav>

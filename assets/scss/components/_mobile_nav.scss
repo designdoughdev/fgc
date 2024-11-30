@@ -1,0 +1,60 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
+@use '../abstracts/variables' as *;
+
+ /* The Overlay (background) */
+ .mobile-nav.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    right: 0;
+    top: 0;
+    background-color: white; /* Black fallback color */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    @include shorttransition;
+  }
+  
+  /* Position the content inside the overlay */
+  .mobile-nav.overlay-content {
+    position: fixed;
+    height: 100%;
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+  }
+  
+  /* The navigation links inside the overlay */
+  .mobile-nav.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: black;
+    display: block; /* Display block instead of inline */
+    @include shorttransition;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .mobile-nav.overlay a:hover, .mobile-nav.overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .mobile-nav.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .mobile-nav.overlay a {font-size: 20px}
+    .mobile-nav.overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  } 

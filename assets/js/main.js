@@ -30,6 +30,30 @@ document.querySelectorAll('.wayfinder-row').forEach((item, index) => {
 window.Alpine = Alpine
 Alpine.start();
 
+//------------------------ Mobile menu -------------------------------//
+
+
+// open menu
+document.addEventListener("DOMContentLoaded", () => 
+  {
+    document.querySelector('.hamburger-btn').addEventListener('click', ()=> 
+      { document.querySelector('.mobile-nav').style.width = "100%";
+
+  })
+});
+
+// close menu
+document.addEventListener("DOMContentLoaded", () => 
+  {
+    document.querySelector('.mobile-menu-close-btn').addEventListener('click', ()=> 
+      { document.querySelector('.mobile-nav').style.width = "0";
+        console.log('closed')
+
+  })
+});
+
+
+
 
 //------------------------ Splide Carousels -------------------------------//
 
