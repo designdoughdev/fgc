@@ -525,7 +525,7 @@ $row = get_row_index() - 0;
     <?php } elseif ($layout == 'list') { ?>
 
     <div class="posts-list-layout section-wrapper">
-        <div class="container">
+        <div class="container_small">
 
             <div class="top-section">
                 <?php if ($small_title): ?>
