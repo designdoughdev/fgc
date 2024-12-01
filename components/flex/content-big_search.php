@@ -44,6 +44,8 @@ $big_title = get_sub_field('big_title');
                         </button>
                     </div>
 
+                    <label>Category</label>
+
                     <div class="custom-dropdown" role="listbox" aria-labelledby="category-label">
                         <button class="dropdown-toggle" type="button" id="category-label" aria-haspopup="listbox"
                             aria-expanded="false">

@@ -3917,31 +3917,100 @@ section.section_big_search .search-wrapper div.search-flex-content form.search-f
 }
 
 section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-toggle {
-  color: #333;
+  -webkit-font-smoothing: antialiased;
+  color: #afafaf;
+  -webkit-font-smoothing: antialiased;
   cursor: pointer;
-  text-align: left;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  justify-content: space-between;
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: .13636rem;
   align-items: center;
+  gap: 1.2em;
   width: 100%;
-  padding: 10px 15px;
-  display: flex;
+  height: 2.045rem;
+  margin-right: .41rem;
+  padding: 1.3em 0 1.3em 1.5em;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .9rem;
+  font-weight: 500;
+  line-height: 143%;
+  text-decoration: none;
+  display: inline-flex;
+  position: relative;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-toggle {
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-toggle {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-toggle {
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-toggle {
+    font-size: 1rem;
+  }
+}
+
+section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-toggle:hover {
+  text-decoration: none;
+}
+
+section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-toggle:after {
+  content: "";
+  background-image: url("../chevron-down-dark.8b827591.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1rem;
+  height: .5rem;
+  margin-left: auto;
+  margin-right: 1.5em;
+  display: inline-block;
 }
 
 section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-menu {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
   z-index: 1000;
   background-color: #fff;
-  border: 1px solid #ccc;
-  width: 100%;
+  max-height: 200px;
   margin: 0;
   padding: 0;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .9rem;
+  font-weight: normal;
+  line-height: 143%;
   list-style: none;
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  box-shadow: 0 2px 5px #0003;
+  right: 0;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-menu {
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-menu {
+    font-size: 1rem;
+  }
 }
 
 section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-menu[aria-hidden="false"] {
@@ -3954,8 +4023,12 @@ section.section_big_search .search-wrapper div.search-flex-content form.search-f
 }
 
 section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-menu li:hover, section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-menu li:focus {
-  background-color: #e0e0e0;
-  outline: none;
+  color: #fff;
+  background-color: #2a5ad5;
+}
+
+section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-menu li:focus {
+  background-color: #e0f7ff;
 }
 
 section.section_big_search .search-wrapper div.search-flex-content form.search-form .search-box {
@@ -4128,7 +4201,7 @@ section.section_big_search .search-wrapper div.search-flex-content form.search-f
   }
 }
 
-section.section_big_search .search-wrapper div.search-flex-content form.search-form select {
+section.section_big_search .search-wrapper div.search-flex-content form.search-form .custom-dropdown {
   grid-area: 2 / 2;
   width: 100%;
   padding-right: 1rem;
