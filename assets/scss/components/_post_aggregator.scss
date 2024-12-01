@@ -524,6 +524,12 @@ section.section_posts_agg{
         }
         .posts-container{
 
+            .no-posts-msg{
+                @include h-four;
+                margin: 1em 0;
+
+            }
+
            
 
     & > * {

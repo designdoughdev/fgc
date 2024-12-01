@@ -322,7 +322,7 @@ function filter_posts()
         }
         wp_reset_postdata();
     } else {
-        echo '<h4 class="no-posts-msg">Sorry, no results</h4>';
+        echo '<p class="no-posts-msg">Sorry, no results</p>';
     }
 
     die();

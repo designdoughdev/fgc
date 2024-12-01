@@ -5532,6 +5532,29 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .
   display: none;
 }
 
+section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-container .no-posts-msg {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  margin: 1em 0;
+  font-family: Messina Sans, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 104%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-container .no-posts-msg {
+    font-size: clamp(1.2rem, 1.2rem + 1vw, 1.75rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-container .no-posts-msg {
+    font-size: 1.75rem;
+  }
+}
+
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-container > :nth-child(4n+1) .post-card {
   background-color: #fef6cc;
 }
