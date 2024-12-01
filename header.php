@@ -2,6 +2,9 @@
 
 $layout = get_field('layout');
 $video = get_field('video');
+$smallTitle = get_field('small_title');
+$bigTitle = get_field('big_title');
+$body = get_field('body');
 
 ?>
 <!DOCTYPE html>
@@ -127,10 +130,11 @@ $video = get_field('video');
                             <a href="" class="btn sky-blue">Cymru Can<div class="btn-arrow-container"></div></a>
                         </div>
                         <?php else: ?>
+                        <?php if ($body) { ?>
                         <p class="text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua ut enim ad.
+                            <?php echo $body; ?>
                         </p>
+                        <?php } ?>
                         <?php endif; ?>
                     </div>
 
@@ -174,31 +178,71 @@ $video = get_field('video');
     </section>
 
     <!--------------------------  --------------------------------->
+    <?php elseif (is_search() || is_single()): ?>
 
-    <?php elseif (is_single() || $layout == 'third_level_page'): ?>
+    <section class="hero-container relative level-three-layout">
+
+        <?php get_template_part('components/includes/action-nav'); ?>
+
+        <div id="hero-overlay" class="container">
+
+            <div class="banner-container level-three-layout">
+                <div class="text-content">
+                    <?php if (!is_search()) { ?>
+                    <div class="breadcrumbs-container">
+                        <?php display_breadcrumbs(); ?>
+
+                    </div>
+                    <?php } ?>
+                    <h2 class="title-tag"><?php if (is_search()) {
+                                                    echo "Search";
+                                                } else {
+                                                    echo $smallTitle;
+                                                } ?></h2>
+                    <h3 class="heading"><?php if (is_search()) {
+                                                echo "Search Results";
+                                            } else {
+                                                the_title();
+                                            } ?>
+                    </h3>
+                    <?php if (!is_search() && $body) { ?>
+                    <p class="text">
+                        <?php echo $body; ?>
+                    </p>
+                    <?php } ?>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <?php elseif ($layout == 'second_level_page'): ?>
 
     <section class="hero-container relative level-three-layout">
 
         <?php get_template_part('components/includes/action-nav'); ?>
 
 
-
-
-
-
-
-
-
         <div id="hero-overlay" class="container">
 
             <div class="banner-container level-three-layout">
                 <div class="text-content">
+
                     <div class="breadcrumbs-container">
                         <?php display_breadcrumbs(); ?>
 
                     </div>
-                    <h2 class="title-tag">public bodies</h2>
-                    <h3 class="heading"><?php the_title(); ?>
+
+                    <?php if ($smallTitle): ?>
+                    <h2 class="title-tag"><?php echo $smallTitle; ?></h2>
+                    <?php endif;
+                        ?>
+
+                    <h3 class="heading"><?php
+                                            the_title(); ?>
                     </h3>
                     <p class="text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -212,6 +256,10 @@ $video = get_field('video');
 
     </section>
 
+    <!--------------------------  --------------------------------->
+
+    <?php elseif ($layout == 'third_level_page'): ?>
+
 
 
 
@@ -221,61 +269,37 @@ $video = get_field('video');
     <!--------------------------  --------------------------------->
 
     <?php else: ?>
-    <section class="hero-container relative">
+
+    <section class="hero-container relative level-three-layout">
 
         <?php get_template_part('components/includes/action-nav'); ?>
 
-        <video autoplay muted loop playsinline style="width: 100%; height: 100%">
-            <source src="<?php bloginfo('template_url'); ?>/assets/video/home-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-
         <div id="hero-overlay" class="container">
 
-            <div class="hero-grid container">
-                <div class="col-left">
-                    <div class="hero-text-container cobalt">
-                        <h2 class="title-tag">Welcome</h2>
-                        <h3 class="heading">Help us create a Wales that we all want to live in, now and in the future.
-                        </h3>
-                        <div class="button-container">
-                            <a href="" class="btn mint">Cymru Can<div class="btn-arrow-container"></div></a>
-                            <a href="" class="btn sky-blue">Cymru Can<div class="btn-arrow-container"></div></a>
-                        </div>
+            <div class="banner-container level-three-layout">
+                <div class="text-content">
+                    <?php if (!is_search()) { ?>
+                    <div class="breadcrumbs-container">
+                        <?php display_breadcrumbs(); ?>
+
                     </div>
-
-                </div>
-
-                <div class="col-right">
-                    <a href="https://www.youtube.com/" target="_blank">
-
-                        <div class="hero-video-link-container">
-                            <div class="img-wrap">
-                                <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/derek.jpg" ?>
-                                    alt="">
-                            </div>
-
-
-                            <div class="text-half">
-                                <div class="text">
-                                    <h6 class="bold">CYMRU CAN |</h6>
-                                    <p>our Vision and Purpose</p>
-
-                                </div>
-
-                                <div class="play-btn">
-                                    <p>Watch Video Now</p>
-                                    <img class="play-icon"
-                                        src="<?php bloginfo('template_url'); ?>/assets/images/svg/play-icon.svg" alt="">
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </a>
-
+                    <?php } ?>
+                    <h2 class="title-tag"><?php if (is_search()) {
+                                                    echo "Search";
+                                                } else {
+                                                    echo $smallTitle;
+                                                } ?></h2>
+                    <h3 class="heading"><?php if (is_search()) {
+                                                echo "Search Results";
+                                            } else {
+                                                the_title();
+                                            } ?>
+                    </h3>
+                    <?php if (!is_search() && $body) { ?>
+                    <p class="text">
+                        <?php echo $body; ?>
+                    </p>
+                    <?php } ?>
                 </div>
 
             </div>

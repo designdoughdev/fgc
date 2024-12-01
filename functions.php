@@ -330,3 +330,23 @@ function filter_posts()
 
 add_action('wp_ajax_filter_posts', 'filter_posts');
 add_action('wp_ajax_nopriv_filter_posts', 'filter_posts');
+
+// custom search query changes
+
+add_action('pre_get_posts', function ($query) {
+    if ($query->is_main_query() && $query->is_search()) {
+        // Check if a post type is specified
+        $post_type = get_query_var('post_type', null);
+
+        // If post_type is provided, modify the query to include it
+        if ($post_type) {
+            $query->set('post_type', $post_type);
+        } else {
+            // Optional: Include multiple post types if none is specified
+            $query->set('post_type', array('post', 'page')); // Adjust as needed
+        }
+
+        // Additional query modifications (optional)
+        $query->set('posts_per_page', 10); // Example: Limit results
+    }
+});
