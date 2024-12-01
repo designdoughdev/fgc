@@ -30,8 +30,8 @@ $big_title = get_sub_field('big_title');
                 <h3 class="heading h1">Looking for something specific?</h3>
 
                 <?php endif; ?>
-                <form class="search-form" action="<?php echo esc_url(home_url('/')); ?>" method="get" role="search"
-                    aria-label="Site Search">
+                <form class="search-form big-search-form" action="<?php echo esc_url(home_url('/')); ?>" method="get"
+                    role="search" aria-label="Site Search">
                     <div class="search-box">
                         <input class="input" type="text" name="s" placeholder="Search" aria-label="Search query"
                             required>

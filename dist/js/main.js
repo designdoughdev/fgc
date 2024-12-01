@@ -916,7 +916,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 });
 // search form dropdowns
 document.addEventListener("DOMContentLoaded", ()=>{
-    const searchForms = document.querySelectorAll(".search-form");
+    const searchForms = document.querySelectorAll(".big-search-form");
     searchForms.forEach((form)=>{
         const dropdownToggle = form.querySelector(".dropdown-toggle");
         const dropdownMenu = form.querySelector(".dropdown-menu");
@@ -924,6 +924,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         // Toggle dropdown visibility
         dropdownToggle.addEventListener("click", (event)=>{
             event.preventDefault();
+            console.log("clicked");
             const isExpanded = dropdownToggle.getAttribute("aria-expanded") === "true";
             // Toggle aria attributes and menu visibility
             dropdownToggle.setAttribute("aria-expanded", !isExpanded);
