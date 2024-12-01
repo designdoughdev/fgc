@@ -408,8 +408,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // news filtering
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Handle dropdown interactions
-  const dropdowns = document.querySelectorAll('.custom-dropdown');
+  // Handle dropdown interactions only within .posts-grid-with-filter
+  const dropdowns = document.querySelectorAll('.posts-grid-with-filter .custom-dropdown');
 
   dropdowns.forEach((dropdown) => {
       const toggle = dropdown.querySelector('.dropdown-toggle');
@@ -488,6 +488,54 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
+
+// search form dropdowns
+
+document.addEventListener('DOMContentLoaded', () => {
+  const searchForms = document.querySelectorAll('.search-form');
+
+  searchForms.forEach((form) => {
+      const dropdownToggle = form.querySelector('.dropdown-toggle');
+      const dropdownMenu = form.querySelector('.dropdown-menu');
+      const hiddenInput = form.querySelector('#post_type_input');
+
+      // Toggle dropdown visibility
+      dropdownToggle.addEventListener('click', (event) => {
+          event.preventDefault();
+          const isExpanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
+
+          // Toggle aria attributes and menu visibility
+          dropdownToggle.setAttribute('aria-expanded', !isExpanded);
+          dropdownMenu.setAttribute('aria-hidden', isExpanded ? 'true' : 'false');
+      });
+
+      // Handle option selection
+      dropdownMenu.addEventListener('click', (event) => {
+          if (event.target.matches('[role="option"]')) {
+              const value = event.target.dataset.value;
+              const text = event.target.textContent.trim();
+
+              // Update button text and hidden input
+              dropdownToggle.textContent = text;
+              hiddenInput.value = value;
+
+              // Close the dropdown
+              dropdownToggle.setAttribute('aria-expanded', 'false');
+              dropdownMenu.setAttribute('aria-hidden', 'true');
+          }
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (event) => {
+          if (!form.contains(event.target)) {
+              dropdownToggle.setAttribute('aria-expanded', 'false');
+              dropdownMenu.setAttribute('aria-hidden', 'true');
+          }
+      });
+  });
+});
+
+
 
 
 

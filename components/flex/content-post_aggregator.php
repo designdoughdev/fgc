@@ -401,18 +401,20 @@ $row = get_row_index() - 0;
                             <div class="dropdown-wrapper">
                                 <div class="custom-dropdown">
                                     <button type="button" class="dropdown-toggle" aria-expanded="false"
-                                        aria-labelledby="category-label">
+                                        id="category-label">
                                         Select Category
                                     </button>
-                                    <ul class="dropdown-menu" role="menu">
+                                    <ul class="dropdown-menu" role="listbox" aria-hidden="true">
                                         <?php foreach ($categories as $category): ?>
-                                        <li tabindex="0" data-value="<?php echo esc_attr($category->slug); ?>">
+                                        <li role="option" tabindex="0"
+                                            data-value="<?php echo esc_attr($category->slug); ?>">
                                             <?php echo esc_html($category->name); ?>
                                         </li>
                                         <?php endforeach; ?>
                                     </ul>
-                                    <input type="hidden" name="category" id="category" aria-labelledby="category-label">
+                                    <input type="hidden" name="category" id="category">
                                 </div>
+
                                 <span id="category-label" class="sr-only">Category</span>
                                 <!-- Hidden label for screen readers -->
                             </div>

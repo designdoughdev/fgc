@@ -3910,6 +3910,54 @@ section.section_big_search .search-wrapper div.search-flex-content form.search-f
   }
 }
 
+section.section_big_search .search-wrapper div.search-flex-content form.search-form .custom-dropdown {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-toggle {
+  color: #333;
+  cursor: pointer;
+  text-align: left;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  display: flex;
+}
+
+section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-menu {
+  z-index: 1000;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 2px 5px #0003;
+}
+
+section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-menu[aria-hidden="false"] {
+  display: block;
+}
+
+section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-menu li {
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-menu li:hover, section.section_big_search .search-wrapper div.search-flex-content form.search-form .dropdown-menu li:focus {
+  background-color: #e0e0e0;
+  outline: none;
+}
+
 section.section_big_search .search-wrapper div.search-flex-content form.search-form .search-box {
   gap: .5em;
   display: flex;

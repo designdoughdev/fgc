@@ -59,6 +59,58 @@ section.section_big_search{
                      }
     
                 }
+
+                .custom-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    width: 100%;
+                }
+                
+                .dropdown-toggle {
+                    background-color: #f0f0f0;
+                    color: #333;
+                    padding: 10px 15px;
+                    border: 1px solid #ccc;
+                    cursor: pointer;
+                    text-align: left;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                
+                .dropdown-menu {
+                    display: none; /* Hidden by default */
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background-color: #fff;
+                    border: 1px solid #ccc;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                    z-index: 1000;
+                    width: 100%;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                .dropdown-menu[aria-hidden="false"] {
+                    display: block; /* Show when aria-hidden is false */
+                }
+                
+                .dropdown-menu li {
+                    padding: 10px 15px;
+                    cursor: pointer;
+                }
+                
+                .dropdown-menu li:hover,
+                .dropdown-menu li:focus {
+                    background-color: #e0e0e0;
+                    outline: none;
+                }
+                
+                
+                
     
                 .search-box{
                     display: flex;
