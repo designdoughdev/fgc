@@ -5,6 +5,7 @@ $video = get_field('video');
 $smallTitle = get_field('small_title');
 $bigTitle = get_field('big_title');
 $body = get_field('body');
+$image = get_field('image');
 
 ?>
 <!DOCTYPE html>
@@ -18,7 +19,7 @@ $body = get_field('body');
     <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/node_modules/aos/dist/aos.css"> -->
 
 </head>
-<header x-data="{ isOpen: false }">
+<header>
 
 
     <div class="header-bar">
@@ -91,7 +92,16 @@ $body = get_field('body');
         <?php else: ?>
 
         <div class="banner-img-wrap relative">
-            <img src="https://picsum.photos/2000/1333" alt="">
+            <?php if ($image):
+                        $heroImage = array(
+                            'class' => '',
+                            'id' => $image['ID'],
+                            'alt' => $image['alt'],
+                            'lazyload' => false
+                        );
+                        echo build_srcset('banner', $heroImage);
+
+                    endif ?>
 
             <div class="bar-container">
 
@@ -120,10 +130,12 @@ $body = get_field('body');
 
                         </div>
                         <?php endif; ?>
-
-                        <h2 class="title-tag">Welcome</h2>
-                        <h3 class="heading">Help us create a Wales that we all want to live in, now and in the future.
-                        </h3>
+                        <?php if ($smallTitle): ?>
+                        <h2 class="title-tag"><?php echo $smallTitle; ?></h2>
+                        <?php endif; ?>
+                        <?php if ($bigTitle): ?>
+                        <h3 class="heading"><?php echo $bigTitle; ?></h3>
+                        <?php endif; ?>
                         <?php if (is_front_page()): ?>
                         <div class="button-container">
                             <a href="" class="btn mint">Cymru Can<div class="btn-arrow-container"></div></a>
@@ -221,6 +233,69 @@ $body = get_field('body');
 
     <?php elseif ($layout == 'second_level_page'): ?>
 
+    <section class="hero-container relative level-two-layout">
+
+        <?php get_template_part('components/includes/action-nav'); ?>
+
+
+        <div id="hero-overlay" class="container">
+
+            <div class="banner-container level-two-layout">
+
+                <div class="text-content">
+                    <?php if ($smallTitle): ?>
+                    <h2 class="title-tag"><?php echo $smallTitle; ?></h2>
+                    <?php endif;
+                        ?>
+                    <div class="text-content-grid">
+                        <h3 class="heading"><?php
+                                                the_title(); ?>
+                        </h3>
+                        <?php if ($body): ?>
+                        <p class="text">
+                            <?php echo $body; ?>
+                        </p>
+                        <?php endif; ?>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="hero-img img-wrap">
+                <div class="breadcrumbs-outer-wrapper">
+                    <div class="breadcrumbs-container">
+                        <?php display_breadcrumbs(); ?>
+
+                    </div>
+
+                </div>
+
+                <?php if ($image):
+                        $heroImage = array(
+                            'class' => '',
+                            'id' => $image['ID'],
+                            'alt' => $image['alt'],
+                            'lazyload' => false
+                        );
+                        echo build_srcset('banner', $heroImage);
+
+                    endif ?>
+
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--------------------------  --------------------------------->
+
+    <?php elseif ($layout == 'third_level_page'): ?>
+
     <section class="hero-container relative level-three-layout">
 
         <?php get_template_part('components/includes/action-nav'); ?>
@@ -244,10 +319,11 @@ $body = get_field('body');
                     <h3 class="heading"><?php
                                             the_title(); ?>
                     </h3>
+                    <?php if ($body): ?>
                     <p class="text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua ut enim ad.
+                        <?php echo $body ?>
                     </p>
+                    <?php endif ?>
                 </div>
 
             </div>
@@ -255,10 +331,6 @@ $body = get_field('body');
         </div>
 
     </section>
-
-    <!--------------------------  --------------------------------->
-
-    <?php elseif ($layout == 'third_level_page'): ?>
 
 
 

@@ -3290,5 +3290,36 @@ body[data-theme='light'] {
         }
     }
   }
+
+  @mixin breadcrumbs{
+    background-color: white;
+    @include border-radius;
+    padding: 0.5em 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: fit-content;
+    margin-bottom: 1.5rem;
+
+    .home-icon{
+        width: 1rem;
+        height: auto;
+    }
+    
+
+
+    a{
+        @include h-five;
+        text-transform: none;
+        font-family: $primary-font;
+        font-weight: bold;
+        text-decoration: underline;
+
+        &.current{
+            font-weight: 300;
+            text-decoration: none;
+        }
+    }
+  }
   
 

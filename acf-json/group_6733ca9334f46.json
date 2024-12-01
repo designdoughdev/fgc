@@ -18,7 +18,6 @@
             },
             "choices": {
                 "boxed": "Boxed Text",
-                "banner": "Banner",
                 "second_level_page": "Second Level Page",
                 "third_level_page": "Third Level Page"
             },
@@ -53,6 +52,35 @@
             "append": ""
         },
         {
+            "key": "field_674cd8f7ffc0f",
+            "label": "Big Title",
+            "name": "big_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6733cd1a096e5",
+                        "operator": "==",
+                        "value": "boxed"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_674cab23c9595",
             "label": "Body",
             "name": "body",
@@ -72,6 +100,40 @@
             "rows": 4,
             "placeholder": "",
             "new_lines": "br"
+        },
+        {
+            "key": "field_674cd3ba9228d",
+            "label": "Image",
+            "name": "image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6733cd1a096e5",
+                        "operator": "!=",
+                        "value": "third_level_page"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -92,5 +154,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1733077853
+    "modified": 1733089727
 }

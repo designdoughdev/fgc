@@ -463,34 +463,8 @@ header{
 
                     // breadcrumbs
                     .breadcrumbs-container{
-                        background-color: white;
-                        @include border-radius;
-                        padding: 0.5em 0.9em;
-                        display: flex;
-                        align-items: center;
-                        gap: 0.4rem;
-                        width: fit-content;
-                        margin-bottom: 1.5rem;
+                        @include breadcrumbs;
 
-                        .home-icon{
-                            width: 1rem;
-                            height: auto;
-                        }
-                        
-
-
-                        a{
-                            @include h-five;
-                            text-transform: none;
-                            font-family: $primary-font;
-                            font-weight: bold;
-                            text-decoration: underline;
-
-                            &.current{
-                                font-weight: 300;
-                                text-decoration: none;
-                            }
-                        }
                     }
         
                     .title-tag{
@@ -660,6 +634,44 @@ header{
             }
 
         }
+
+        &.level-two-layout{
+            height: fit-content;
+
+            .action-nav-container{
+                position: absolute;
+            }
+
+            #hero-overlay{
+                height: fit-content;
+                position: relative;
+            }
+
+            .hero-img.img-wrap{
+                position: relative;
+                width: 100%;
+                aspect-ratio: 10.8 / 2.2;
+
+                .breadcrumbs-outer-wrapper{
+                    position: absolute;
+                    top: -1.2em;
+                    left: 4.5vw;
+
+                    .breadcrumbs-container{
+                        @include breadcrumbs;
+    
+                    }
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            }
+
+        }
         
         
         
@@ -668,6 +680,64 @@ header{
 
 
     }
+
+                /*------------------------ Level 2 page banner layout -------------------------------*/
+            
+                .banner-container.level-two-layout{
+                
+                    background-color: $cobaltBlue;
+                    padding: 4rem 0;
+    
+    
+    
+                    .text-content{
+                       @include container;                                
+            
+                        .title-tag{
+                            @include title_tag(white, $yellow);
+                            margin-bottom: 1.87rem;
+                            
+            
+                        }
+            
+                        .heading{
+                            @include h-one;
+                            color: white;
+                            max-width: 10em;
+                            margin-bottom: 2.13rem;
+                        }
+            
+                        .text{
+                            @include body;
+                            color: white;
+                        }
+                    }
+    
+    
+    
+                    /*------------------------ Desktop Styles -------------------------------*/
+    
+                    &{
+                        @include respond-to(md){
+    
+                            .text-content{
+                                @include container;
+                           
+             
+                                                 
+    
+                 
+                             .text{
+                                 max-width: 40em;
+                             }
+                             }
+             
+    
+    
+                        }
+                    }
+                    
+                }
 
             /*------------------------ Level 3 page banner layout -------------------------------*/
             .banner-container.level-three-layout{
@@ -682,34 +752,8 @@ header{
                                     
                 .breadcrumbs-container{
 
-                    background-color: white;
-                    @include border-radius;
-                    padding: 0.5em 0.9em;
-                    display: flex;
-                    align-items: center;
-                    gap: 0.4rem;
-                    width: fit-content;
-                    margin-bottom: 6em;
+                    @include breadcrumbs;
     
-                    .home-icon{
-                        width: 1rem;
-                        height: auto;
-                    }
-                    
-    
-    
-                    a{
-                        @include h-five;
-                        text-transform: none;
-                        font-family: $primary-font;
-                        font-weight: bold;
-                        text-decoration: underline;
-    
-                        &.current{
-                            font-weight: 300;
-                            text-decoration: none;
-                        }
-                    }
                 }
     
                 .title-tag{
@@ -756,7 +800,8 @@ header{
                 }
                 
             }
-    
+
+
 
 
 }
