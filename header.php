@@ -137,10 +137,29 @@ $image = get_field('image');
                         <h3 class="heading"><?php echo $bigTitle; ?></h3>
                         <?php endif; ?>
                         <?php if (is_front_page()): ?>
+                        <?php
+                                if (have_rows('page_links')): ?>
+
                         <div class="button-container">
-                            <a href="" class="btn mint">Cymru Can<div class="btn-arrow-container"></div></a>
-                            <a href="" class="btn sky-blue">Cymru Can<div class="btn-arrow-container"></div></a>
+                            <?php while (have_rows('page_links')) : the_row(); ?>
+                            <?php $linkID = get_sub_field('page_link'); ?>
+
+                            <?php if ($linkID): ?>
+
+                            <a href="<?php echo esc_url(get_the_permalink($linkID)); ?>" class="btn link-button"
+                                aria-label="Visit the page: <?php echo esc_attr(get_the_title($linkID)); ?>">
+                                <?php echo esc_html(get_the_title($linkID)); ?>
+                                <div class="btn-arrow-container" aria-hidden="true"></div>
+                            </a>
+
+                            <?php endif; ?>
+                            <?php endwhile; ?>
                         </div>
+
+
+
+                        <?php endif; ?>
+
                         <?php else: ?>
                         <?php if ($body) { ?>
                         <p class="text">
@@ -153,26 +172,50 @@ $image = get_field('image');
                 </div>
 
                 <div class="col-right">
-                    <a href="https://www.youtube.com/" target="_blank">
+                    <?php if (have_rows('video_link_box')): ?>
+                    <?php while (have_rows('video_link_box')) : the_row(); ?>
+
+                    <?php
+                                $title = get_sub_field('title');
+                                $subtitle = get_sub_field('subtitle');
+                                $link = get_sub_field('link');
+                                $videoImage = get_sub_field('video_image');
+                                $btnText = get_sub_field('button_text');
+                                ?>
+
+                    <a href="<?php echo $link['url']; ?>" target="_blank">
 
                         <div class="hero-video-link-container">
                             <div class="img-wrap">
-                                <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/derek.jpg" ?>
-                                    alt="">
+                                <?php if ($videoImage):
+                                                $smallImage = array(
+                                                    'class' => '',
+                                                    'id' => $videoImage['ID'],
+                                                    'alt' => $videoImage['alt'],
+                                                    'lazyload' => false
+                                                );
+                                                echo build_srcset('banner', $smallImage);
+
+                                            endif ?>
                             </div>
 
 
                             <div class="text-half">
                                 <div class="text">
-                                    <h6 class="bold">CYMRU CAN |</h6>
-                                    <p>our Vision and Purpose</p>
+                                    <h6 class="bold"><?php echo $title; ?> |</h6>
+                                    <p><?php echo $subtitle; ?></p>
 
                                 </div>
 
                                 <div class="play-btn">
-                                    <p>Watch Video Now</p>
+                                    <p><?php if ($btnText) {
+                                                        echo $btnText;
+                                                    } else {
+                                                        echo "Watch Video Now";
+                                                    } ?></p>
                                     <img class="play-icon"
                                         src="<?php bloginfo('template_url'); ?>/assets/images/svg/play-icon.svg" alt="">
+
 
                                 </div>
 
@@ -180,6 +223,8 @@ $image = get_field('image');
 
                         </div>
                     </a>
+                    <?php endwhile; ?>
+                    <?php endif; ?>
 
                 </div>
 
