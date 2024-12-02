@@ -55,20 +55,55 @@
             @include title_tag($darkNavy, $cobaltBlue)
             }
       
-            a.menu-item-link{
+            .root-menu-item-button{
       
               display: flex;
               justify-content: space-between;
               align-items: center;
+              background-color: white;
+              border: none;
+              width: 100%;
+              cursor: pointer;
         
-              &:hover{
-                text-decoration: none;
-              }
+
         
               &:not(:last-child){
                 border-bottom: 1px solid rgba($darkNavy, 0.1); 
         
               }
+
+              // sub-menus
+
+              .sub-menu-content {
+                height: 100%;
+                background-color: white;
+                text-align: initial;
+                position: absolute;
+                left: 0;
+                top: 0;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                transition: all 0.3s ease;
+                width: 100%;
+                margin-left: 100%;
+         
+            
+                li {
+                    padding: 0.5em 0;
+                    border-bottom: 1px solid #ddd;
+                }
+            }
+
+              &.active .sub-menu-content{
+                width: 100%;
+                margin-left: 0;
+
+              }
+
+
+
+
         
               .menu-item{
                 @include h-one;
@@ -182,6 +217,12 @@
   
         }
       }
+
+
+
+    
+
+    
   
 
   

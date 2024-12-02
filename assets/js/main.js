@@ -55,6 +55,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const rootMenuItems = document.querySelectorAll(".root-menu-item-button");
+
+  rootMenuItems.forEach(item => {
+      item.addEventListener("click", () => {
+          // Toggle active class to show/hide sub-menu
+          item.classList.toggle("active");
+      });
+  });
+});
+
+
 
 
 

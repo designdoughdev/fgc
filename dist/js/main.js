@@ -619,6 +619,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
         else document.body.style.overflow = ""; // Prevent scrolling
     });
 });
+document.addEventListener("DOMContentLoaded", ()=>{
+    const rootMenuItems = document.querySelectorAll(".root-menu-item-button");
+    rootMenuItems.forEach((item)=>{
+        item.addEventListener("click", ()=>{
+            // Toggle active class to show/hide sub-menu
+            item.classList.toggle("active");
+        });
+    });
+});
 //------------------------ Splide Carousels -------------------------------//
 // images gallery
 document.addEventListener("DOMContentLoaded", function() {

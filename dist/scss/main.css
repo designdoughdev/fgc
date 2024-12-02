@@ -3837,21 +3837,45 @@ textarea {
   display: inline-block;
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper .text-content a.menu-item-link {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .root-menu-item-button {
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   display: flex;
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper .text-content a.menu-item-link:hover {
-  text-decoration: none;
-}
-
-.mobile-nav .menu-content .menu-content-inner-wrapper .text-content a.menu-item-link:not(:last-child) {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .root-menu-item-button:not(:last-child) {
   border-bottom: 1px solid #1123431a;
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper .text-content a.menu-item-link .menu-item {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .root-menu-item-button .sub-menu-content {
+  text-align: initial;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0 100%;
+  padding: 0;
+  list-style: none;
+  transition: all .3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .root-menu-item-button .sub-menu-content li {
+  border-bottom: 1px solid #ddd;
+  padding: .5em 0;
+}
+
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .root-menu-item-button.active .sub-menu-content {
+  width: 100%;
+  margin-left: 0;
+}
+
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .root-menu-item-button .menu-item {
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
@@ -3865,18 +3889,18 @@ textarea {
 }
 
 @media only screen and (width >= 768px) {
-  .mobile-nav .menu-content .menu-content-inner-wrapper .text-content a.menu-item-link .menu-item {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .text-content .root-menu-item-button .menu-item {
     font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  .mobile-nav .menu-content .menu-content-inner-wrapper .text-content a.menu-item-link .menu-item {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .text-content .root-menu-item-button .menu-item {
     font-size: 3.75rem;
   }
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper .text-content a.menu-item-link .menu-item-icon:after {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .root-menu-item-button .menu-item-icon:after {
   content: "";
   vertical-align: middle;
   background-color: #2a5ad5;

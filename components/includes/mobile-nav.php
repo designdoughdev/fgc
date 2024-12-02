@@ -16,11 +16,27 @@
 
                         <?php while (have_rows('root_menu_pages', 'option')) : the_row(); ?>
                             <?php $pageID = get_sub_field('root_menu_page'); ?>
-                            <a href="" class="menu-item-link">
+                            <button class="root-menu-item-button">
                                 <li class="menu-item root-menu-item"><?php echo esc_attr(get_the_title($pageID)); ?>
+
+
                                 </li>
+                                <!-- Sub-menu for child pages -->
+                                <?php
+                                $child_pages = get_pages(array('child_of' => $pageID, 'sort_column' => 'menu_order'));
+                                if ($child_pages): ?>
+                                    <ul class="sub-menu-content">
+                                        <?php foreach ($child_pages as $child): ?>
+                                            <li>
+                                                <a href="<?php echo esc_url(get_permalink($child->ID)); ?>">
+                                                    <?php echo esc_html($child->post_title); ?>
+                                                </a>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                <?php endif; ?>
                                 <div class="menu-item-icon"></div>
-                            </a>
+                            </button>
 
 
 
