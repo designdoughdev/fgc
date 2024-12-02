@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = 'hidden'; // Prevent scrolling
 
       }else{
-        document.body.style.overflow = ''; // Prevent scrolling
+        document.body.style.overflow = ''; 
 
       }
       
@@ -520,13 +520,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// news filtering
 
 // news filtering
 document.addEventListener('DOMContentLoaded', () => {
   // Find all filter forms
   const filterForms = document.querySelectorAll('.filter-form');
   const postsContainer = document.querySelector('.posts-container'); // Shared posts container
+  const overlayFilterMenu = document.querySelector('.overlay-filter-menu'); // Overlay filter menu
 
   filterForms.forEach((form) => {
     // Handle dropdown interactions within the scope of this form
@@ -536,10 +536,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const toggle = dropdown.querySelector('.dropdown-toggle');
       const menu = dropdown.querySelector('.dropdown-menu');
       const hiddenInput = dropdown.querySelector('input[type="hidden"]');
-
+    
       toggle.addEventListener('click', () => {
         const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    
+        // Close all other dropdowns
+        dropdowns.forEach((otherDropdown) => {
+          const otherToggle = otherDropdown.querySelector('.dropdown-toggle');
+          const otherMenu = otherDropdown.querySelector('.dropdown-menu');
+    
+          if (otherDropdown !== dropdown) {
+            otherToggle.setAttribute('aria-expanded', 'false');
+            otherToggle.classList.remove('active');
+            otherMenu.classList.remove('visible');
+          }
+        });
+    
+        // Toggle current dropdown
         toggle.setAttribute('aria-expanded', !expanded);
+        toggle.classList.toggle('active');
         menu.classList.toggle('visible');
       });
 
@@ -550,6 +565,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           hiddenInput.value = value; // Update hidden input
           toggle.textContent = text; // Update toggle text
+          toggle.classList.remove('active');
           toggle.setAttribute('aria-expanded', 'false');
           menu.classList.remove('visible');
         }
@@ -577,6 +593,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .then((response) => response.text())
         .then((html) => {
           postsContainer.innerHTML = html; // Replace posts with filtered results
+
+          // Remove 'menu-open' class from overlay filter menu
+          if (overlayFilterMenu) {
+            overlayFilterMenu.classList.remove('menu-open');
+            document.body.style.overflow = '';
+          }
         })
         .catch((error) => {
           console.error('Error:', error);
@@ -611,6 +633,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
 
 
 // search form dropdowns

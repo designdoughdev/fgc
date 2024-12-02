@@ -531,7 +531,7 @@ section.section_posts_agg{
             
             /* Dropdown Menu Items */
             .dropdown-menu li {
-                padding: 0.3em;
+                padding: 0.3em 1.5em;
                 cursor: pointer;
             }
             
@@ -556,18 +556,67 @@ section.section_posts_agg{
         // mobile filter form
 
         .mobile-filter-menu{
+            position: fixed;
+            width: 100%;
+            padding-top: 1rem;
             form.filter-form{
                 flex-direction: column;
                 padding: 1rem;
 
-                button.dropdown-toggle{
-                    width: 100%;
+                ul.dropdown-menu{
+                    @include body;
+                    display: block;
+                    position: initial;
+                    box-shadow: none;
+                    max-height: 1px;
+                    overflow: hidden;
+                    opacity: 0;
+                    @include transition;
 
-                    &:after{
-                        margin-left: auto;
+                    li:hover{
+                        background-color: $greyFour;
+                        color: $darkNavy;
                     }
                 }
 
+                button.dropdown-toggle{
+                    width: 100%;
+                    color: $midGrey;
+
+                    &:after{
+                        margin-left: auto;
+                        transform: rotate(0deg); // Initial rotation
+                        transform-origin: center; 
+                        @include shorttransition;
+                    }
+
+                    &.active{
+
+                        &::after{
+                            transform: rotate(180deg); // Rotate 180 degrees
+                        }
+                        & + ul.dropdown-menu{
+                            max-height: 2000px;
+                            padding: 0;
+                            opacity: 1;
+
+                        }
+
+                    }
+
+
+                }
+
+
+            }
+
+            button.submit-btn{
+                margin-top: 1rem;
+                width: 100%;
+                margin-right: 0;
+                .btn-arrow-container{
+                    margin-left: auto;
+                }
             }
 
         }
@@ -590,7 +639,7 @@ section.section_posts_agg{
 
         .overlay-filter-menu{
             width: 0;
-            position: absolute;
+            position: fixed;
             top: 0;
             right: 0;
             height: 100svh;
@@ -602,57 +651,14 @@ section.section_posts_agg{
                 width: 100%;
             }
 
-            // accordions
-
-            .accord_wrap{
-                .accord_head {
-                    position: relative;
-    
-                    padding: 0 0 5px 0;
-                    @include shorttransition;
-                    // cursor: pointer;
-        
-    
-                }
-                .accord_body {
-                    
-                    @include body;
-                    max-height: 1px;
-                    overflow: hidden;
-                    opacity: 0;
-                    @include transition;
-                    
-                    
-        
-                }
-        
-                &:hover {
-                    cursor: pointer;
-                    @include transition;
-                }
-                &.active {
-                    @include transition;
-                    .accord_body {
-                        max-height: 2000px;
-                        padding: 0.5rem 0;
-                        opacity: 1;
-                        
-                    }
-        
-                    .accord_head{
-                        @include shorttransition;
-                    }
-        
-                    // img{
-                    //     transform: rotateZ(90deg);
-                    //     @include shorttransition;
-                    // }
-
+            button.filter-overlay-close-btn{
+                background-color: transparent;
+                border: none;
+                display: block;
+                margin-left: auto;
+                padding: 0.3rem;
             }
 
-            
-    
-            }
 
         }
 
