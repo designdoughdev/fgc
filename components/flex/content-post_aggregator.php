@@ -368,14 +368,15 @@ $row = get_row_index() - 0;
                 <div class="overlay-filter-menu">
                     <button class="filter-overlay-close-btn">Close</button>
 
-                    <form class="filter-form custom-dropdown-form" method="POST">
-                        <?php foreach ($filterCategories as $key => $items): ?>
-                            <div class="dropdown-wrapper">
-                                <div class="accord_wrap">
-                                    <div class="accord_head">
-                                        <button class="btn-vtwo">Select <?php echo ucfirst($key); ?></button>
-                                    </div>
-                                    <div class="accord_body">
+                    <div class="mobile-filter-menu">
+                        <form class="filter-form custom-dropdown-form" method="POST">
+                            <?php foreach ($filterCategories as $key => $items): ?>
+                                <div class="dropdown-wrapper">
+                                    <div class="custom-dropdown">
+                                        <button type="button" class="dropdown-toggle" aria-expanded="false"
+                                            aria-labelledby="<?php echo $key; ?>-label">
+                                            Select <?php echo ucfirst($key); ?>
+                                        </button>
                                         <ul class="dropdown-menu" role="menu">
                                             <?php if (is_array($items)): ?>
                                                 <?php foreach ($items as $item): ?>
@@ -388,19 +389,22 @@ $row = get_row_index() - 0;
                                         <input type="hidden" name="<?php echo $key; ?>" id="<?php echo $key; ?>"
                                             aria-labelledby="<?php echo $key; ?>-label">
                                     </div>
+                                    <span id="<?php echo $key; ?>-label" class="sr-only">
+                                        <?php echo ucfirst($key); ?>
+                                    </span>
+                                    <!-- Hidden label for screen readers -->
                                 </div>
-                                <span id="<?php echo $key; ?>-label" class="sr-only">
-                                    <?php echo ucfirst($key); ?>
-                                </span>
-                                <!-- Hidden label for screen readers -->
-                            </div>
-                        <?php endforeach; ?>
+                            <?php endforeach; ?>
 
-                        <button type="submit" class="submit-btn btn cobalt text-white">
-                            Apply
-                            <div class="btn-arrow-container"></div>
-                        </button>
-                    </form>
+                            <button type="submit" class="submit-btn btn cobalt text-white">
+                                Apply
+                                <div class="btn-arrow-container"></div>
+                            </button>
+                        </form>
+
+                    </div>
+
+
 
                 </div>
 

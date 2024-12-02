@@ -663,20 +663,22 @@ document.addEventListener("DOMContentLoaded", ()=>{
     });
 });
 //------------------------ Filter overlay menu -------------------------------//
-// document.addEventListener("DOMContentLoaded", () => {
-//   const filterMenu = document.querySelector('.overlay-filter-menu');
-//   const filterBtn = document.querySelector('.filter-btn');
-//   // const closeBtn = document.querySelector('.mobile-menu-close-btn');
-//   // Open menu
-//   filterBtn.addEventListener('click', () => {
-//       filterMenu.classList.add('menu-open');
-//       if(filterMenu.classList.contains('menu-open')){
-//         document.body.style.overflow = 'hidden'; // Prevent scrolling
-//       }else{
-//         document.body.style.overflow = ''; // Prevent scrolling
-//       }
-//   });
-// });
+document.addEventListener("DOMContentLoaded", ()=>{
+    const filterMenu = document.querySelector(".overlay-filter-menu");
+    const filterBtn = document.querySelector(".filter-btn");
+    const closeBtn = document.querySelector(".filter-overlay-close-btn");
+    // const closeBtn = document.querySelector('.mobile-menu-close-btn');
+    // Open menu
+    filterBtn.addEventListener("click", ()=>{
+        filterMenu.classList.add("menu-open");
+        document.body.style.overflow = "hidden"; // Prevent scrolling
+    });
+    // Close Menu
+    closeBtn.addEventListener("click", ()=>{
+        filterMenu.classList.remove("menu-open");
+        document.body.style.overflow = "";
+    });
+});
 //------------------------ Splide Carousels -------------------------------//
 // images gallery
 document.addEventListener("DOMContentLoaded", function() {
@@ -905,68 +907,72 @@ document.addEventListener("DOMContentLoaded", ()=>{
     });
 });
 // news filtering
+// news filtering
 document.addEventListener("DOMContentLoaded", ()=>{
-    // Handle dropdown interactions only within .posts-grid-with-filter
-    const dropdowns = document.querySelectorAll(".posts-grid-with-filter .custom-dropdown");
-    dropdowns.forEach((dropdown)=>{
-        const toggle = dropdown.querySelector(".dropdown-toggle");
-        const menu = dropdown.querySelector(".dropdown-menu");
-        const hiddenInput = dropdown.querySelector('input[type="hidden"]');
-        toggle.addEventListener("click", ()=>{
-            const expanded = toggle.getAttribute("aria-expanded") === "true";
-            toggle.setAttribute("aria-expanded", !expanded);
-            menu.classList.toggle("visible");
-        });
-        menu.addEventListener("click", (event)=>{
-            if (event.target.tagName === "LI") {
-                const value = event.target.getAttribute("data-value");
-                const text = event.target.textContent;
-                hiddenInput.value = value; // Update hidden input
-                toggle.textContent = text; // Update toggle text
-                toggle.setAttribute("aria-expanded", "false");
-                menu.classList.remove("visible");
-            }
-        });
-        // Close dropdown when clicking outside
-        document.addEventListener("click", (event)=>{
-            if (!dropdown.contains(event.target)) {
-                toggle.setAttribute("aria-expanded", "false");
-                menu.classList.remove("visible");
-            }
-        });
-    });
-    // Handle form submission
-    const form = document.querySelector(".filter-form"); // Corrected to use class selector
-    const postsContainer = document.querySelector(".posts-container"); // Corrected to use class selector
-    form.addEventListener("submit", (event)=>{
-        event.preventDefault(); // Prevent default form submission
-        const formData = new FormData(form);
-        fetch("/wp-admin/admin-ajax.php?action=filter_posts", {
-            method: "POST",
-            body: new URLSearchParams(formData)
-        }).then((response)=>response.text()).then((html)=>{
-            postsContainer.innerHTML = html; // Replace posts with filtered results
-        }).catch((error)=>{
-            console.error("Error:", error);
-            postsContainer.innerHTML = "<p>Error loading posts. Please try again.</p>";
-        });
-    });
-    // Handle sort buttons
-    const sortButtons = document.querySelectorAll(".sort-container button");
-    sortButtons.forEach((button)=>{
-        button.addEventListener("click", ()=>{
-            const sortValue = button.getAttribute("data-sort");
-            const sortInput = document.createElement("input");
-            sortInput.type = "hidden";
-            sortInput.name = "sort";
-            sortInput.value = sortValue;
-            // Toggle active class between buttons
-            sortButtons.forEach((btn)=>{
-                btn.classList.remove("active"); // Remove 'active' from all buttons
+    // Find all filter forms
+    const filterForms = document.querySelectorAll(".filter-form");
+    const postsContainer = document.querySelector(".posts-container"); // Shared posts container
+    filterForms.forEach((form)=>{
+        // Handle dropdown interactions within the scope of this form
+        const dropdowns = form.querySelectorAll(".custom-dropdown");
+        dropdowns.forEach((dropdown)=>{
+            const toggle = dropdown.querySelector(".dropdown-toggle");
+            const menu = dropdown.querySelector(".dropdown-menu");
+            const hiddenInput = dropdown.querySelector('input[type="hidden"]');
+            toggle.addEventListener("click", ()=>{
+                const expanded = toggle.getAttribute("aria-expanded") === "true";
+                toggle.setAttribute("aria-expanded", !expanded);
+                menu.classList.toggle("visible");
             });
-            button.classList.add("active"); // Add 'active' to the clicked button
-            form.appendChild(sortInput); // Add sort value to the form
-            form.requestSubmit(); // Programmatically submit the form
+            menu.addEventListener("click", (event)=>{
+                if (event.target.tagName === "LI") {
+                    const value = event.target.getAttribute("data-value");
+                    const text = event.target.textContent;
+                    hiddenInput.value = value; // Update hidden input
+                    toggle.textContent = text; // Update toggle text
+                    toggle.setAttribute("aria-expanded", "false");
+                    menu.classList.remove("visible");
+                }
+            });
+            // Close dropdown when clicking outside
+            document.addEventListener("click", (event)=>{
+                if (!dropdown.contains(event.target)) {
+                    toggle.setAttribute("aria-expanded", "false");
+                    menu.classList.remove("visible");
+                }
+            });
+        });
+        // Handle form submission
+        form.addEventListener("submit", (event)=>{
+            event.preventDefault(); // Prevent default form submission
+            const formData = new FormData(form);
+            fetch("/wp-admin/admin-ajax.php?action=filter_posts", {
+                method: "POST",
+                body: new URLSearchParams(formData)
+            }).then((response)=>response.text()).then((html)=>{
+                postsContainer.innerHTML = html; // Replace posts with filtered results
+            }).catch((error)=>{
+                console.error("Error:", error);
+                postsContainer.innerHTML = "<p>Error loading posts. Please try again.</p>";
+            });
+        });
+        // Handle sort buttons within the scope of this form
+        const sortButtons = form.querySelectorAll(".sort-container button");
+        sortButtons.forEach((button)=>{
+            button.addEventListener("click", ()=>{
+                const sortValue = button.getAttribute("data-sort");
+                const sortInput = form.querySelector('input[name="sort"]') || document.createElement("input");
+                sortInput.type = "hidden";
+                sortInput.name = "sort";
+                sortInput.value = sortValue;
+                if (!form.contains(sortInput)) form.appendChild(sortInput); // Add sort input if not already present
+                // Toggle active class between buttons
+                sortButtons.forEach((btn)=>{
+                    btn.classList.remove("active"); // Remove 'active' from all buttons
+                });
+                button.classList.add("active"); // Add 'active' to the clicked button
+                form.requestSubmit(); // Programmatically submit the form
+            });
         });
     });
 });
