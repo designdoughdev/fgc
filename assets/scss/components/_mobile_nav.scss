@@ -75,24 +75,55 @@
               // sub-menus
 
               .sub-menu-content {
-                height: 100%;
+                display: flex;
+                flex-direction: column;
+                min-height: calc(100svh - 7rem);
                 background-color: white;
                 text-align: initial;
                 position: absolute;
                 left: 0;
                 top: 0;
                 list-style: none;
-                padding: 0;
+                
                 margin: 0;
                 transition: all 0.3s ease;
                 width: 100%;
                 margin-left: 100%;
-         
-            
-                li {
-                    padding: 0.5em 0;
-                    border-bottom: 1px solid #ddd;
+
+                .text-content{
+                  padding: 2rem 1rem;
+                  flex-grow: 1;
+
+                  .parent-page-title{
+                    @include h-one;
+                    margin-bottom: 0.3em;
+                  }
+
+                  a:hover{
+                    text-decoration: none;
+                  }
+
+                  li{
+                    padding: 0.75em 0;
+                    border-bottom: 1px solid rgba($darkNavy, 0.1);
+                    display: flex;
+                    justify-content: space-between;
+                  }
+
+
                 }
+
+                .bars-container{
+                  svg path{
+                    fill: $yellow;
+                    
+                  }
+                }
+
+
+
+
+         
             }
 
               &.active .sub-menu-content{
@@ -214,6 +245,10 @@
         svg{
           width: 100%;
           height: auto;
+
+          path{
+            fill: $cobaltBlue;
+          }
   
         }
       }

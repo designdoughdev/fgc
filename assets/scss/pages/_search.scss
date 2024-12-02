@@ -53,6 +53,7 @@ section.search-results-content{
     
                     .post-read-more{
                         text-decoration: underline;
+                        white-space: nowrap;
     
                         &:after {
                             content: "";

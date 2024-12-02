@@ -25,15 +25,38 @@
                                 <?php
                                 $child_pages = get_pages(array('child_of' => $pageID, 'sort_column' => 'menu_order'));
                                 if ($child_pages): ?>
-                                    <ul class="sub-menu-content">
-                                        <?php foreach ($child_pages as $child): ?>
-                                            <li>
-                                                <a href="<?php echo esc_url(get_permalink($child->ID)); ?>">
-                                                    <?php echo esc_html($child->post_title); ?>
-                                                </a>
-                                            </li>
-                                        <?php endforeach; ?>
-                                    </ul>
+                                    <div class="sub-menu-content">
+
+                                        <div class="text-content">
+                                            <p class="title-tag">Welcome</p>
+                                            <h4 class="parent-page-title"><?php echo esc_attr(get_the_title($pageID)); ?></h4>
+
+                                            <ul>
+                                                <?php foreach ($child_pages as $child): ?>
+                                                    <a class="child-menu-item h4"
+                                                        href="<?php echo esc_url(get_permalink($child->ID)); ?>">
+                                                        <li>
+
+                                                            <?php echo esc_html($child->post_title); ?> <div class="menu-item-icon">
+                                                            </div>
+                                                        </li>
+
+                                                    </a>
+
+                                                <?php endforeach; ?>
+
+                                            </ul>
+
+                                        </div>
+
+                                        <div class="bars-container">
+                                            <?php echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars-small.svg'); ?>
+                                        </div>
+
+
+
+
+                                    </div>
                                 <?php endif; ?>
                                 <div class="menu-item-icon"></div>
                             </button>
