@@ -3768,32 +3768,16 @@ textarea {
   min-height: 100svh;
   transition: all .2s;
   position: fixed;
-  top: 0;
   right: 0;
   overflow-x: hidden;
 }
 
-.mobile-nav.open {
+.mobile-nav.menu-open {
   width: 100%;
-}
-
-.mobile-nav.closed {
-  width: 0;
 }
 
 .mobile-nav li {
   list-style-type: none;
-}
-
-.mobile-nav .mobile-menu-close-btn {
-  z-index: 99;
-  cursor: pointer;
-  background-color: #0000;
-  border: none;
-  font-size: 1.5rem;
-  position: absolute;
-  top: 3rem;
-  right: 1rem;
 }
 
 .mobile-nav .menu-content {
@@ -3806,10 +3790,15 @@ textarea {
 }
 
 .mobile-nav .menu-content .menu-content-inner-wrapper {
-  padding: 6rem 1rem 12rem;
+  padding-bottom: 7em;
+  position: relative;
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper .title-tag {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content {
+  padding: 2rem 1rem 1rem;
+}
+
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .title-tag {
   letter-spacing: normal;
   color: #112343;
   text-transform: uppercase;
@@ -3826,18 +3815,18 @@ textarea {
 }
 
 @media only screen and (width >= 768px) {
-  .mobile-nav .menu-content .menu-content-inner-wrapper .title-tag {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .text-content .title-tag {
     font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  .mobile-nav .menu-content .menu-content-inner-wrapper .title-tag {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .text-content .title-tag {
     font-size: .9375rem;
   }
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper .title-tag:before {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .title-tag:before {
   content: "";
   vertical-align: middle;
   background-color: #2a5ad5;
@@ -3848,21 +3837,21 @@ textarea {
   display: inline-block;
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper a.menu-item-link {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content a.menu-item-link {
   justify-content: space-between;
   align-items: center;
   display: flex;
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper a.menu-item-link:hover {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content a.menu-item-link:hover {
   text-decoration: none;
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper a.menu-item-link:not(:last-child) {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content a.menu-item-link:not(:last-child) {
   border-bottom: 1px solid #1123431a;
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper a.menu-item-link .menu-item {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content a.menu-item-link .menu-item {
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
@@ -3876,18 +3865,18 @@ textarea {
 }
 
 @media only screen and (width >= 768px) {
-  .mobile-nav .menu-content .menu-content-inner-wrapper a.menu-item-link .menu-item {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .text-content a.menu-item-link .menu-item {
     font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  .mobile-nav .menu-content .menu-content-inner-wrapper a.menu-item-link .menu-item {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .text-content a.menu-item-link .menu-item {
     font-size: 3.75rem;
   }
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper a.menu-item-link .menu-item-icon:after {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content a.menu-item-link .menu-item-icon:after {
   content: "";
   vertical-align: middle;
   background-color: #2a5ad5;
@@ -3901,7 +3890,7 @@ textarea {
   display: inline-block;
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-links {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .mobile-menu-links {
   -webkit-font-smoothing: antialiased;
   color: #112343;
   padding: 2em 0;
@@ -3912,36 +3901,36 @@ textarea {
 }
 
 @media only screen and (width >= 768px) {
-  .mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-links {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .text-content .mobile-menu-links {
     font-size: clamp(.9rem, .9rem + 1vw, 1rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  .mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-links {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .text-content .mobile-menu-links {
     font-size: 1rem;
   }
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-links .mobile-menu-link {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .mobile-menu-links .mobile-menu-link {
   font-weight: 600;
   text-decoration: underline;
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-links .mobile-menu-link .mobile-menu-link-item {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .mobile-menu-links .mobile-menu-link .mobile-menu-link-item {
   border-bottom: 1px solid #1123431a;
   padding: .5em 0;
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-links .mobile-menu-link:last-of-type .mobile-menu-link-item {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .mobile-menu-links .mobile-menu-link:last-of-type .mobile-menu-link-item {
   border-bottom: none;
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .mobile-menu-bottom {
   -webkit-font-smoothing: antialiased;
   color: #112343;
   grid-template-columns: 1fr 2fr;
-  padding: 1em 0;
+  padding: 1em 0 2em;
   font-family: Messina Sans Book, sans-serif;
   font-size: .9em;
   font-weight: normal;
@@ -3950,18 +3939,18 @@ textarea {
 }
 
 @media only screen and (width >= 768px) {
-  .mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .text-content .mobile-menu-bottom {
     font-size: clamp(.9rem, .9rem + 1vw, 1rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  .mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .text-content .mobile-menu-bottom {
     font-size: 1rem;
   }
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom .col .title {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .mobile-menu-bottom .col .title {
   letter-spacing: normal;
   color: #112343;
   text-transform: uppercase;
@@ -3974,31 +3963,43 @@ textarea {
 }
 
 @media only screen and (width >= 768px) {
-  .mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom .col .title {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .text-content .mobile-menu-bottom .col .title {
     font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  .mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom .col .title {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .text-content .mobile-menu-bottom .col .title {
     font-size: .9375rem;
   }
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom .col a {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .mobile-menu-bottom .col a {
   color: #112343;
   text-decoration: underline;
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom .col.social-col .social-icons {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .mobile-menu-bottom .col.social-col .social-icons {
   flex-wrap: wrap;
   gap: 1.45rem;
   display: flex;
 }
 
-.mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom .col.social-col .social-icons img.social-icon {
+.mobile-nav .menu-content .menu-content-inner-wrapper .text-content .mobile-menu-bottom .col.social-col .social-icons img.social-icon {
   width: auto;
   height: 1.7rem;
+}
+
+.mobile-nav .menu-content .bars-container {
+  width: 100%;
+  height: fit-content;
+  bottom: 0;
+  left: 0;
+}
+
+.mobile-nav .menu-content .bars-container svg {
+  width: 100%;
+  height: auto;
 }
 
 @media only screen and (width >= 768px) {

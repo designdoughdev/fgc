@@ -30,7 +30,7 @@ $image = get_field('image');
             </div>
         </div>
 
-        <div class="main-header">
+        <div class="main-header relative">
 
             <div class="main-header-content container">
 
@@ -63,14 +63,18 @@ $image = get_field('image');
                     </div>
 
 
-                    <?php get_template_part('components/includes/mobile-nav'); ?>
+
                 </div>
 
             </div>
 
 
 
+
+
         </div>
+        <?php get_template_part('components/includes/mobile-nav'); ?>
+
     </div>
 
     <?php if ($layout == 'boxed'): ?>

@@ -40,18 +40,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Open menu
   hamburgerBtn.addEventListener('click', () => {
-      mobileNav.classList.remove('closed');
-      mobileNav.classList.add('open');
-      document.body.style.overflow = 'hidden'; // Prevent scrolling
+      mobileNav.classList.toggle('menu-open');
+
+      if(mobileNav.classList.contains('menu-open')){
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+
+      }else{
+        document.body.style.overflow = ''; // Prevent scrolling
+
+      }
+      
   });
 
-  // Close menu
-  closeBtn.addEventListener('click', () => {
-      mobileNav.classList.remove('open');
-      mobileNav.classList.add('closed');
-      console.log('closed')
-      document.body.style.overflow = ''; // Re-enable scrolling
-  });
+
 });
 
 
