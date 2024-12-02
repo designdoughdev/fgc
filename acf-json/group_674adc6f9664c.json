@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_674adc6fe7b0d",
-            "label": "Main Menu",
-            "name": "main_menu",
+            "label": "Root Menu Pages",
+            "name": "root_menu_pages",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -27,7 +27,7 @@
                 {
                     "key": "field_674add28e7b0f",
                     "label": "Root Menu Pages",
-                    "name": "root_menu_pages",
+                    "name": "root_menu_page",
                     "aria-label": "",
                     "type": "post_object",
                     "instructions": "Input here the root pages for the menu of the whole site. These will be parent pages and their children will then display in the menu",
@@ -51,6 +51,60 @@
                     "ui": 1,
                     "bidirectional_target": [],
                     "parent_repeater": "field_674adc6fe7b0d"
+                }
+            ]
+        },
+        {
+            "key": "field_674d8f214e92a",
+            "label": "Mobile Menu Links",
+            "name": "mobile_menu_links",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 5,
+            "collapsed": "field_674d8f214e92f",
+            "button_label": "Add Menu Item",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_674d8f214e92f",
+                    "label": "Mobile Page Link",
+                    "name": "mobile_page_link",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "These are the smaller page links displayed below the main menu on mobile",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page"
+                    ],
+                    "post_status": [
+                        "publish"
+                    ],
+                    "taxonomy": "",
+                    "return_format": "id",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "allow_in_bindings": 0,
+                    "bidirectional": 0,
+                    "ui": 1,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_674d8f214e92a"
                 }
             ]
         },
@@ -342,5 +396,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1732979956
+    "modified": 1733136315
 }

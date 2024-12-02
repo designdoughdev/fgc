@@ -33,24 +33,27 @@ Alpine.start();
 //------------------------ Mobile menu -------------------------------//
 
 
-// open menu
-document.addEventListener("DOMContentLoaded", () => 
-  {
-    document.querySelector('.hamburger-btn').addEventListener('click', ()=> 
-      { document.querySelector('.mobile-nav').style.width = "100%";
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileNav = document.querySelector('.mobile-nav');
+  const hamburgerBtn = document.querySelector('.hamburger-btn');
+  const closeBtn = document.querySelector('.mobile-menu-close-btn');
 
-  })
+  // Open menu
+  hamburgerBtn.addEventListener('click', () => {
+      mobileNav.classList.remove('closed');
+      mobileNav.classList.add('open');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+  });
+
+  // Close menu
+  closeBtn.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      mobileNav.classList.add('closed');
+      console.log('closed')
+      document.body.style.overflow = ''; // Re-enable scrolling
+  });
 });
 
-// close menu
-document.addEventListener("DOMContentLoaded", () => 
-  {
-    document.querySelector('.mobile-menu-close-btn').addEventListener('click', ()=> 
-      { document.querySelector('.mobile-nav').style.width = "0";
-        console.log('closed')
-
-  })
-});
 
 
 

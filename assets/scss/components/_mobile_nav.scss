@@ -5,56 +5,172 @@
 @use '../abstracts/variables' as *;
 
  /* The Overlay (background) */
- .mobile-nav.overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
-    height: 100%;
+ .mobile-nav {
+
+  /*------------------------ Default small screen styles -------------------------------*/
+
+    min-height: 100svh;
     width: 0;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     right: 0;
     top: 0;
-    background-color: white; /* Black fallback color */
+    background-color: white;
     overflow-x: hidden; /* Disable horizontal scroll */
     @include shorttransition;
-  }
-  
-  /* Position the content inside the overlay */
-  .mobile-nav.overlay-content {
-    position: fixed;
-    height: 100%;
-    width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
-  }
-  
-  /* The navigation links inside the overlay */
-  .mobile-nav.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: black;
-    display: block; /* Display block instead of inline */
-    @include shorttransition;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .mobile-nav.overlay a:hover, .mobile-nav.overlay a:focus {
-    color: #f1f1f1;
-  }
-  
-  /* Position the close button (top right corner) */
-  .mobile-nav.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-  }
-  
-  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-  @media screen and (max-height: 450px) {
-    .mobile-nav.overlay a {font-size: 20px}
-    .mobile-nav.overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
+
+    &.open{
+      width: 100%;
     }
-  } 
+
+    &.closed{
+      width: 0;
+    }
+
+    li{
+      list-style-type: none;
+    }
+  
+    .mobile-menu-close-btn {
+      background-color: transparent;
+      border: none;
+      position: absolute;
+      top: 3rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      z-index: 99;
+      cursor: pointer;
+    }
+
+    .menu-content {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+  
+      .menu-content-inner-wrapper{
+  
+        padding: 5rem 1rem 12rem 1rem;
+  
+        .title-tag{
+        @include title_tag($darkNavy, $cobaltBlue)
+        }
+  
+        a.menu-item-link{
+  
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+    
+          &:hover{
+            text-decoration: none;
+          }
+    
+          &:not(:last-child){
+            border-bottom: 1px solid rgba($darkNavy, 0.1); 
+    
+          }
+    
+          .menu-item{
+            @include h-one;
+            padding: 0.5em 0;
+            cursor: pointer;
+      
+    
+      
+          }
+    
+          .menu-item-icon{
+            &:after {
+              content: "";
+              display: inline-block; 
+              background-image: url('/assets/images/svg/arrow-right-white.svg'); 
+              background-size: 38%; 
+              background-repeat: no-repeat;           
+              background-position: center;
+              background-color: $cobaltBlue;
+              width: 20px;
+              height: 20px;
+              margin-left: 2rem;
+              vertical-align: middle;
+      
+          }
+    
+          }
+    
+        }
+  
+        .mobile-menu-links{
+          @include body;
+          padding: 2em 0;
+  
+          .mobile-menu-link{
+            
+            text-decoration: underline;
+            font-weight: 600;
+  
+            .mobile-menu-link-item{
+              padding: 0.5em 0;
+              border-bottom: 1px solid rgba($darkNavy, 0.1);
+  
+            }
+          
+          }
+  
+          .mobile-menu-link:last-of-type{
+            .mobile-menu-link-item{
+              border-bottom: none;
+  
+            }
+  
+          }
+  
+        }
+  
+  
+  
+      }
+  
+      .bars-container{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+  
+        svg{
+          width: 100%;
+          height: auto;
+  
+        }
+      }
+  
+  
+  
+     
+    }
+
+    /*------------------------ medium screen styles -------------------------------*/
+
+    &{
+      @include respond-to(md){
+        
+        .bars-container{
+          display: none;
+        }
+
+      }
+    }
+  }
+
+
+  
+
+
+  
+
+
+  
+

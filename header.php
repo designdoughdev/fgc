@@ -75,24 +75,24 @@ $image = get_field('image');
 
     <?php if ($layout == 'boxed'): ?>
 
-    <!-------------------------- Hero / Page Header --------------------------------->
+        <!-------------------------- Hero / Page Header --------------------------------->
 
-    <section class="hero-container relative">
+        <section class="hero-container relative">
 
-        <?php get_template_part('components/includes/action-nav'); ?>
+            <?php get_template_part('components/includes/action-nav'); ?>
 
 
-        <?php if (is_front_page()): ?>
+            <?php if (is_front_page()): ?>
 
-        <video autoplay muted loop playsinline style="width: 100%; height: 100%">
-            <source src="<?php bloginfo('template_url'); ?>/assets/video/home-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+                <video autoplay muted loop playsinline style="width: 100%; height: 100%">
+                    <source src="<?php bloginfo('template_url'); ?>/assets/video/home-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
 
-        <?php else: ?>
+            <?php else: ?>
 
-        <div class="banner-img-wrap relative">
-            <?php if ($image):
+                <div class="banner-img-wrap relative">
+                    <?php if ($image):
                         $heroImage = array(
                             'class' => '',
                             'id' => $image['ID'],
@@ -103,79 +103,81 @@ $image = get_field('image');
 
                     endif ?>
 
-            <div class="bar-container">
+                    <div class="bar-container">
 
-                <img src=<?php echo get_template_directory_uri() . '/assets/images/svg/vertical-bars.svg' ?> alt="">
+                        <img src=<?php echo get_template_directory_uri() . '/assets/images/svg/vertical-bars.svg' ?> alt="">
 
-            </div>
-
-
-        </div>
-
-
-        <?php endif; ?>
-
-
-
-        <div id="hero-overlay" class="container">
-
-            <div class="hero-grid container <?php if (!is_front_page()) {
-                                                    echo 'standard-page';
-                                                } ?>">
-                <div class="col-left">
-                    <div class="hero-text-container cobalt">
-                        <?php if (!is_front_page()): ?>
-                        <div class="breadcrumbs-container">
-                            <?php display_breadcrumbs(); ?>
-
-                        </div>
-                        <?php endif; ?>
-                        <?php if ($smallTitle): ?>
-                        <h2 class="title-tag"><?php echo $smallTitle; ?></h2>
-                        <?php endif; ?>
-                        <?php if ($bigTitle): ?>
-                        <h3 class="heading"><?php echo $bigTitle; ?></h3>
-                        <?php endif; ?>
-                        <?php if (is_front_page()): ?>
-                        <?php
-                                if (have_rows('page_links')): ?>
-
-                        <div class="button-container">
-                            <?php while (have_rows('page_links')) : the_row(); ?>
-                            <?php $linkID = get_sub_field('page_link'); ?>
-
-                            <?php if ($linkID): ?>
-
-                            <a href="<?php echo esc_url(get_the_permalink($linkID)); ?>" class="btn link-button"
-                                aria-label="Visit the page: <?php echo esc_attr(get_the_title($linkID)); ?>">
-                                <?php echo esc_html(get_the_title($linkID)); ?>
-                                <div class="btn-arrow-container" aria-hidden="true"></div>
-                            </a>
-
-                            <?php endif; ?>
-                            <?php endwhile; ?>
-                        </div>
-
-
-
-                        <?php endif; ?>
-
-                        <?php else: ?>
-                        <?php if ($body) { ?>
-                        <p class="text">
-                            <?php echo $body; ?>
-                        </p>
-                        <?php } ?>
-                        <?php endif; ?>
                     </div>
+
 
                 </div>
 
-                <div class="col-right">
-                    <?php if (have_rows('video_link_box')): ?>
-                    <?php while (have_rows('video_link_box')) : the_row(); ?>
 
-                    <?php
+            <?php endif; ?>
+
+
+
+            <div id="hero-overlay" class="container">
+
+                <div class="hero-grid container <?php if (!is_front_page()) {
+                                                    echo 'standard-page';
+                                                } ?>">
+                    <div class="col-left">
+                        <div class="hero-text-container cobalt">
+                            <?php if (!is_front_page()): ?>
+                                <div class="breadcrumbs-container">
+                                    <?php display_breadcrumbs(); ?>
+
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($smallTitle): ?>
+                                <h2 class="title-tag"><?php echo $smallTitle; ?></h2>
+                            <?php endif; ?>
+                            <?php if ($bigTitle): ?>
+                                <h3 class="heading"><?php echo $bigTitle; ?></h3>
+                            <?php endif; ?>
+                            <?php if (is_front_page()): ?>
+                                <?php
+                                if (have_rows('page_links')): ?>
+
+                                    <div class="button-container">
+                                        <?php while (have_rows('page_links')) : the_row(); ?>
+                                            <?php $linkID = get_sub_field('page_link'); ?>
+
+                                            <?php if ($linkID): ?>
+
+                                                <a href="<?php echo esc_url(get_the_permalink($linkID)); ?>" class="btn link-button"
+                                                    aria-label="Visit the page: <?php echo esc_attr(get_the_title($linkID)); ?>">
+                                                    <?php echo esc_html(get_the_title($linkID)); ?>
+                                                    <div class="btn-arrow-container" aria-hidden="true"></div>
+                                                </a>
+
+                                            <?php endif; ?>
+                                        <?php endwhile; ?>
+                                    </div>
+
+
+
+                                <?php endif; ?>
+
+                            <?php else: ?>
+                                <?php if ($body) { ?>
+                                    <p class="text">
+                                        <?php echo $body; ?>
+                                    </p>
+                                <?php } ?>
+                            <?php endif; ?>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-right">
+                        <?php if (have_rows('video_link_box')): ?>
+
+                            <?php while (have_rows('video_link_box')) : the_row(); ?>
+
+                                <?php
                                 $title = get_sub_field('title');
                                 $subtitle = get_sub_field('subtitle');
                                 $link = get_sub_field('link');
@@ -183,11 +185,11 @@ $image = get_field('image');
                                 $btnText = get_sub_field('button_text');
                                 ?>
 
-                    <a href="<?php echo $link['url']; ?>" target="_blank">
+                                <a href="<?php echo $link['url']; ?>" target="_blank">
 
-                        <div class="hero-video-link-container">
-                            <div class="img-wrap">
-                                <?php if ($videoImage):
+                                    <div class="hero-video-link-container">
+                                        <div class="img-wrap">
+                                            <?php if ($videoImage):
                                                 $smallImage = array(
                                                     'class' => '',
                                                     'id' => $videoImage['ID'],
@@ -197,127 +199,128 @@ $image = get_field('image');
                                                 echo build_srcset('banner', $smallImage);
 
                                             endif ?>
-                            </div>
+                                        </div>
 
 
-                            <div class="text-half">
-                                <div class="text">
-                                    <h6 class="bold"><?php echo $title; ?> |</h6>
-                                    <p><?php echo $subtitle; ?></p>
+                                        <div class="text-half">
+                                            <div class="text">
+                                                <h6 class="bold"><?php echo $title; ?> |</h6>
+                                                <p><?php echo $subtitle; ?></p>
 
-                                </div>
+                                            </div>
 
-                                <div class="play-btn">
-                                    <p><?php if ($btnText) {
+                                            <div class="play-btn">
+                                                <p><?php if ($btnText) {
                                                         echo $btnText;
                                                     } else {
                                                         echo "Watch Video Now";
                                                     } ?></p>
-                                    <img class="play-icon"
-                                        src="<?php bloginfo('template_url'); ?>/assets/images/svg/play-icon.svg" alt="">
+                                                <img class="play-icon"
+                                                    src="<?php bloginfo('template_url'); ?>/assets/images/svg/play-icon.svg" alt="">
 
 
-                                </div>
+                                            </div>
 
-                            </div>
+                                        </div>
 
-                        </div>
-                    </a>
-                    <?php endwhile; ?>
-                    <?php endif; ?>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!--------------------------  --------------------------------->
-    <?php elseif (is_search() || is_single()): ?>
-
-    <section class="hero-container relative level-three-layout">
-
-        <?php get_template_part('components/includes/action-nav'); ?>
-
-        <div id="hero-overlay" class="container">
-
-            <div class="banner-container level-three-layout">
-                <div class="text-content">
-                    <?php if (!is_search()) { ?>
-                    <div class="breadcrumbs-container">
-                        <?php display_breadcrumbs(); ?>
-
-                    </div>
-                    <?php } ?>
-                    <h2 class="title-tag"><?php if (is_search()) {
-                                                    echo "Search";
-                                                } else {
-                                                    echo $smallTitle;
-                                                } ?></h2>
-                    <h3 class="heading"><?php if (is_search()) {
-                                                echo "Search Results";
-                                            } else {
-                                                the_title();
-                                            } ?>
-                    </h3>
-                    <?php if (!is_search() && $body) { ?>
-                    <p class="text">
-                        <?php echo $body; ?>
-                    </p>
-                    <?php } ?>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <?php elseif ($layout == 'second_level_page'): ?>
-
-    <section class="hero-container relative level-two-layout">
-
-        <?php get_template_part('components/includes/action-nav'); ?>
-
-
-        <div id="hero-overlay" class="container">
-
-            <div class="banner-container level-two-layout">
-
-                <div class="text-content">
-                    <?php if ($smallTitle): ?>
-                    <h2 class="title-tag"><?php echo $smallTitle; ?></h2>
-                    <?php endif;
-                        ?>
-                    <div class="text-content-grid">
-                        <h3 class="heading"><?php
-                                                the_title(); ?>
-                        </h3>
-                        <?php if ($body): ?>
-                        <p class="text">
-                            <?php echo $body; ?>
-                        </p>
+                                    </div>
+                                </a>
+                            <?php endwhile; ?>
                         <?php endif; ?>
 
                     </div>
 
+
                 </div>
 
-
             </div>
-            <div class="hero-img img-wrap">
-                <div class="breadcrumbs-outer-wrapper">
-                    <div class="breadcrumbs-container">
-                        <?php display_breadcrumbs(); ?>
 
+        </section>
+
+        <!--------------------------  --------------------------------->
+    <?php elseif (is_search() || is_single()): ?>
+
+        <section class="hero-container relative level-three-layout">
+
+            <?php get_template_part('components/includes/action-nav'); ?>
+
+            <div id="hero-overlay" class="container">
+
+                <div class="banner-container level-three-layout">
+                    <div class="text-content">
+                        <?php if (!is_search()) { ?>
+                            <div class="breadcrumbs-container">
+                                <?php display_breadcrumbs(); ?>
+
+                            </div>
+                        <?php } ?>
+                        <h2 class="title-tag"><?php if (is_search()) {
+                                                    echo "Search";
+                                                } else {
+                                                    echo $smallTitle;
+                                                } ?></h2>
+                        <h3 class="heading"><?php if (is_search()) {
+                                                echo "Search Results";
+                                            } else {
+                                                the_title();
+                                            } ?>
+                        </h3>
+                        <?php if (!is_search() && $body) { ?>
+                            <p class="text">
+                                <?php echo $body; ?>
+                            </p>
+                        <?php } ?>
                     </div>
 
                 </div>
 
-                <?php if ($image):
+            </div>
+
+        </section>
+
+
+    <?php elseif ($layout == 'second_level_page'): ?>
+
+        <section class="hero-container relative level-two-layout">
+
+            <?php get_template_part('components/includes/action-nav'); ?>
+
+
+            <div id="hero-overlay" class="container">
+
+                <div class="banner-container level-two-layout">
+
+                    <div class="text-content">
+                        <?php if ($smallTitle): ?>
+                            <h2 class="title-tag"><?php echo $smallTitle; ?></h2>
+                        <?php endif;
+                        ?>
+                        <div class="text-content-grid">
+                            <h3 class="heading"><?php
+                                                the_title(); ?>
+                            </h3>
+                            <?php if ($body): ?>
+                                <p class="text">
+                                    <?php echo $body; ?>
+                                </p>
+                            <?php endif; ?>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="hero-img img-wrap">
+                    <div class="breadcrumbs-outer-wrapper">
+                        <div class="breadcrumbs-container">
+                            <?php display_breadcrumbs(); ?>
+
+                        </div>
+
+                    </div>
+
+                    <?php if ($image):
                         $heroImage = array(
                             'class' => '',
                             'id' => $image['ID'],
@@ -331,51 +334,51 @@ $image = get_field('image');
 
 
 
-            </div>
-
-        </div>
-
-    </section>
-
-    <!--------------------------  --------------------------------->
-
-    <?php elseif ($layout == 'third_level_page'): ?>
-
-    <section class="hero-container relative level-three-layout">
-
-        <?php get_template_part('components/includes/action-nav'); ?>
-
-
-        <div id="hero-overlay" class="container">
-
-            <div class="banner-container level-three-layout">
-                <div class="text-content">
-
-                    <div class="breadcrumbs-container">
-                        <?php display_breadcrumbs(); ?>
-
-                    </div>
-
-                    <?php if ($smallTitle): ?>
-                    <h2 class="title-tag"><?php echo $smallTitle; ?></h2>
-                    <?php endif;
-                        ?>
-
-                    <h3 class="heading"><?php
-                                            the_title(); ?>
-                    </h3>
-                    <?php if ($body): ?>
-                    <p class="text">
-                        <?php echo $body ?>
-                    </p>
-                    <?php endif ?>
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+        <!--------------------------  --------------------------------->
+
+    <?php elseif ($layout == 'third_level_page'): ?>
+
+        <section class="hero-container relative level-three-layout">
+
+            <?php get_template_part('components/includes/action-nav'); ?>
+
+
+            <div id="hero-overlay" class="container">
+
+                <div class="banner-container level-three-layout">
+                    <div class="text-content">
+
+                        <div class="breadcrumbs-container">
+                            <?php display_breadcrumbs(); ?>
+
+                        </div>
+
+                        <?php if ($smallTitle): ?>
+                            <h2 class="title-tag"><?php echo $smallTitle; ?></h2>
+                        <?php endif;
+                        ?>
+
+                        <h3 class="heading"><?php
+                                            the_title(); ?>
+                        </h3>
+                        <?php if ($body): ?>
+                            <p class="text">
+                                <?php echo $body ?>
+                            </p>
+                        <?php endif ?>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
 
 
 
@@ -383,47 +386,47 @@ $image = get_field('image');
 
 
 
-    <!--------------------------  --------------------------------->
+        <!--------------------------  --------------------------------->
 
     <?php else: ?>
 
-    <section class="hero-container relative level-three-layout">
+        <section class="hero-container relative level-three-layout">
 
-        <?php get_template_part('components/includes/action-nav'); ?>
+            <?php get_template_part('components/includes/action-nav'); ?>
 
-        <div id="hero-overlay" class="container">
+            <div id="hero-overlay" class="container">
 
-            <div class="banner-container level-three-layout">
-                <div class="text-content">
-                    <?php if (!is_search()) { ?>
-                    <div class="breadcrumbs-container">
-                        <?php display_breadcrumbs(); ?>
+                <div class="banner-container level-three-layout">
+                    <div class="text-content">
+                        <?php if (!is_search()) { ?>
+                            <div class="breadcrumbs-container">
+                                <?php display_breadcrumbs(); ?>
 
-                    </div>
-                    <?php } ?>
-                    <h2 class="title-tag"><?php if (is_search()) {
+                            </div>
+                        <?php } ?>
+                        <h2 class="title-tag"><?php if (is_search()) {
                                                     echo "Search";
                                                 } else {
                                                     echo $smallTitle;
                                                 } ?></h2>
-                    <h3 class="heading"><?php if (is_search()) {
+                        <h3 class="heading"><?php if (is_search()) {
                                                 echo "Search Results";
                                             } else {
                                                 the_title();
                                             } ?>
-                    </h3>
-                    <?php if (!is_search() && $body) { ?>
-                    <p class="text">
-                        <?php echo $body; ?>
-                    </p>
-                    <?php } ?>
+                        </h3>
+                        <?php if (!is_search() && $body) { ?>
+                            <p class="text">
+                                <?php echo $body; ?>
+                            </p>
+                        <?php } ?>
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
     <?php endif; ?>
 
