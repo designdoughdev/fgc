@@ -464,7 +464,84 @@ section.section_posts_agg{
 
     /*------------------------ Posts Grid with Filter Layout -------------------------------*/
 
+
+
+
     .posts-grid-with-filter.section-wrapper{
+
+        position: relative;
+
+        // overlay slide out filter menu
+
+        .overlay-filter-menu{
+            width: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100svh;
+            background-color: white;
+            z-index: 99;
+            @include shorttransition;
+    
+            &.menu-open{
+                width: 100%;
+            }
+
+            // accordions
+
+            .accord_wrap{
+                .accord_head {
+                    position: relative;
+    
+                    padding: 0 0 5px 0;
+                    @include shorttransition;
+                    // cursor: pointer;
+        
+    
+                }
+                .accord_body {
+                    
+                    @include body;
+                    max-height: 1px;
+                    overflow: hidden;
+                    opacity: 0;
+                    @include transition;
+                    
+                    
+        
+                }
+        
+                &:hover {
+                    cursor: pointer;
+                    @include transition;
+                }
+                &.active {
+                    @include transition;
+                    .accord_body {
+                        max-height: 2000px;
+                        padding: 10px 0 30px 0;
+                        opacity: 1;
+                        
+                    }
+        
+                    .accord_head{
+                        @include shorttransition;
+                    }
+        
+                    // img{
+                    //     transform: rotateZ(90deg);
+                    //     @include shorttransition;
+                    // }
+
+            }
+
+            
+    
+            }
+
+        }
+
+
 
         /*------------------------ Default / Mobile Styling -------------------------------*/
 
@@ -478,6 +555,12 @@ section.section_posts_agg{
                 @include title_tag($darkNavy, $skyBlue);
             }
 
+            .filter-btn{
+                @include btn_plain;
+                margin-bottom: 1rem;
+
+            }
+
             .filter-bar-container{
                 display: none;
                 border-top: 1px solid rgba($darkNavy, 0.1);    
@@ -485,15 +568,7 @@ section.section_posts_agg{
                 padding: 1em 0;  
 
                 .filter-top-section{
-                    .filter-btn{
-                        @include btn_plain;
-                        margin-bottom: 1rem;
-    
-                        img{
-                            width: 0.5rem;
-                            height: 0.9rem;
-                        }
-                    }
+
     
                     .sort-container{
                         margin-left: auto;
@@ -594,6 +669,12 @@ section.section_posts_agg{
 
         .top-section{
 
+
+            button.filter-btn{
+                display: none;
+                margin-bottom: 0
+            }
+
             .filter-bar-container{
                 display: block;
 
@@ -603,11 +684,10 @@ section.section_posts_agg{
                     justify-content: space-between;
                     align-items: center;
 
+
                 }
 
-                button.filter-btn{
-                    margin-bottom: 0
-                }
+
 
                 .filter-bar{
                     display: block;

@@ -66,6 +66,33 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//------------------------ filter menu -------------------------------//
+
+//------------------------ Mobile menu -------------------------------//
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const filterMenu = document.querySelector('.overlay-filter-menu');
+  const filterBtn = document.querySelector('.filter-btn');
+  // const closeBtn = document.querySelector('.mobile-menu-close-btn');
+
+  // Open menu
+  filterBtn.addEventListener('click', () => {
+      filterMenu.classList.add('menu-open');
+
+      if(filterMenu.classList.contains('menu-open')){
+        // document.body.style.overflow = 'hidden'; // Prevent scrolling
+
+      }else{
+        // document.body.style.overflow = ''; // Prevent scrolling
+
+      }
+      
+  });
+
+
+});
+
 
 
 
