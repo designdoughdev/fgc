@@ -130,7 +130,7 @@ $image = get_field('image');
                         <div class="hero-text-container cobalt">
                             <?php if (!is_front_page()): ?>
                                 <div class="breadcrumbs-container">
-                                    <?php display_breadcrumbs(); ?>
+                                    <?php display_breadcrumbs(false); ?>
 
                                 </div>
                             <?php endif; ?>
@@ -254,7 +254,7 @@ $image = get_field('image');
                     <div class="text-content">
                         <?php if (!is_search()) { ?>
                             <div class="breadcrumbs-container">
-                                <?php display_breadcrumbs(); ?>
+                                <?php display_breadcrumbs(false); ?>
 
                             </div>
                         <?php } ?>
@@ -318,7 +318,7 @@ $image = get_field('image');
                 <div class="hero-img img-wrap">
                     <div class="breadcrumbs-outer-wrapper">
                         <div class="breadcrumbs-container">
-                            <?php display_breadcrumbs(); ?>
+                            <?php display_breadcrumbs(false); ?>
 
                         </div>
 
@@ -359,7 +359,7 @@ $image = get_field('image');
                     <div class="text-content">
 
                         <div class="breadcrumbs-container">
-                            <?php display_breadcrumbs(); ?>
+                            <?php display_breadcrumbs(false); ?>
 
                         </div>
 
@@ -404,7 +404,7 @@ $image = get_field('image');
                     <div class="text-content">
                         <?php if (!is_search()) { ?>
                             <div class="breadcrumbs-container">
-                                <?php display_breadcrumbs(); ?>
+                                <?php display_breadcrumbs(false); ?>
 
                             </div>
                         <?php } ?>

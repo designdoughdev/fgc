@@ -3320,6 +3320,15 @@ body[data-theme='light'] {
             text-decoration: none;
         }
     }
+
+    p.root-ancestor{
+        @include h-five;
+        text-transform: none;
+        font-family: $primary-font;
+        font-weight: bold;
+        
+
+    }
   }
   
 

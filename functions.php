@@ -213,16 +213,14 @@ add_action('after_switch_theme', 'dd_theme_activate_required_plugins');
 
 
 // Function to display breadcrumb navigation 
-function display_breadcrumbs()
+function display_breadcrumbs($root_parent_as_link = true)
 {
     global $post;
 
     $home_icon_url = get_template_directory_uri() . '/assets/images/svg/home.svg';
 
-
     $breadcrumb = '<img class="home-icon" src="' . $home_icon_url . '" alt="Home Icon">';
     $breadcrumb .= '<a href="' . home_url() . '">Home</a>';
-
 
     // Initialize an array to hold the ancestor pages
     $ancestors = array();
@@ -234,8 +232,18 @@ function display_breadcrumbs()
     }
 
     // Loop through each ancestor page and add it as a clickable link
+    $is_first_ancestor = true;
     foreach ($ancestors as $ancestor) {
-        $breadcrumb .= ' &gt; <a href="' . get_permalink($ancestor) . '">' . get_the_title($ancestor) . '</a>';
+        $ancestor_title = get_the_title($ancestor);
+
+        // Check if this is the root parent and if links should be disabled
+        if ($is_first_ancestor && !$root_parent_as_link) {
+            $breadcrumb .= ' &gt; <p class="root-ancestor">' . $ancestor_title . '</p>'; // Display as plain text
+        } else {
+            $breadcrumb .= ' &gt; <a href="' . get_permalink($ancestor) . '">' . $ancestor_title . '</a>';
+        }
+
+        $is_first_ancestor = false; // After the first ancestor, this is no longer true
     }
 
     // Add the current page as a clickable link with 'current' class
@@ -244,6 +252,7 @@ function display_breadcrumbs()
     // Display the breadcrumb trail
     echo $breadcrumb;
 }
+
 
 function filter_posts()
 {
