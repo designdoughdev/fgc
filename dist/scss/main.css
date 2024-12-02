@@ -3772,7 +3772,7 @@ textarea {
   overflow-x: hidden;
 }
 
-.mobile-nav.menu-open {
+.mobile-nav.open {
   width: 100%;
 }
 
@@ -5678,7 +5678,7 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .overlay-filte
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .overlay-filter-menu .accord_wrap.active .accord_body {
   opacity: 1;
   max-height: 2000px;
-  padding: 10px 0 30px;
+  padding: .5rem 0;
 }
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .overlay-filter-menu .accord_wrap.active .accord_head {

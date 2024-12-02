@@ -340,31 +340,71 @@ $row = get_row_index() - 0;
 
 
             <div class="posts-grid-with-filter section-wrapper">
-                <!-------------------------- Overlay slide out filter menu --------------------------------->
+                <?php
+                // Fetch terms and categories
+                $categories = get_terms(['taxonomy' => 'category', 'hide_empty' => false]);
+                $types = get_terms(['taxonomy' => 'type', 'hide_empty' => false]);
+                $topics = get_terms(['taxonomy' => 'topic', 'hide_empty' => false]);
+                $locations = get_terms(['taxonomy' => 'location', 'hide_empty' => false]);
 
+                // Fetch unique published years
+                global $wpdb;
+                $years = $wpdb->get_col("
+        SELECT DISTINCT YEAR(post_date) 
+        FROM $wpdb->posts 
+        WHERE post_status = 'publish' AND post_type = 'post'
+        ORDER BY YEAR(post_date) DESC
+    ");
+
+                // Filter categories array
+                $filterCategories = [
+                    'category' => $categories,
+                    'type' => $types,
+                    'topic' => $topics,
+                    'location' => $locations,
+                    'year' => $years
+                ];
+                ?>
                 <div class="overlay-filter-menu">
+                    <button class="filter-overlay-close-btn">Close</button>
 
-                    <div class="accord_wrap">
+                    <form class="filter-form custom-dropdown-form" method="POST">
+                        <?php foreach ($filterCategories as $key => $items): ?>
+                            <div class="dropdown-wrapper">
+                                <div class="accord_wrap">
+                                    <div class="accord_head">
+                                        <button class="btn-vtwo">Select <?php echo ucfirst($key); ?></button>
+                                    </div>
+                                    <div class="accord_body">
+                                        <ul class="dropdown-menu" role="menu">
+                                            <?php if (is_array($items)): ?>
+                                                <?php foreach ($items as $item): ?>
+                                                    <li tabindex="0" data-value="<?php echo esc_attr($item->slug ?? $item); ?>">
+                                                        <?php echo esc_html($item->name ?? $item); ?>
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+                                        </ul>
+                                        <input type="hidden" name="<?php echo $key; ?>" id="<?php echo $key; ?>"
+                                            aria-labelledby="<?php echo $key; ?>-label">
+                                    </div>
+                                </div>
+                                <span id="<?php echo $key; ?>-label" class="sr-only">
+                                    <?php echo ucfirst($key); ?>
+                                </span>
+                                <!-- Hidden label for screen readers -->
+                            </div>
+                        <?php endforeach; ?>
 
-                        <div class="accord_head">
-                            <button class="btn-vtwo">Filter</button>
-
-
-                        </div>
-                        <div class="accord_body">
-                            <p>body</p>
-                        </div>
-
-                    </div>
-
-
+                        <button type="submit" class="submit-btn btn cobalt text-white">
+                            Apply
+                            <div class="btn-arrow-container"></div>
+                        </button>
+                    </form>
 
                 </div>
 
-
-                <!--------------------------  --------------------------------->
                 <div class="container">
-
                     <div class="top-section">
                         <?php if ($small_title): ?>
                             <h2 class="title-tag"><?php echo $small_title ?></h2>
@@ -373,14 +413,10 @@ $row = get_row_index() - 0;
                             <h3 class="heading h2"><?php echo $big_title ?></h3>
                         <?php endif; ?>
 
-                        <button class="filter-btn">
-                            Filters
-
-                        </button>
+                        <button class="filter-btn">Filters</button>
 
                         <div class="filter-bar-container">
                             <div class="filter-top-section">
-
                                 <div class="sort-container">
                                     <p>Sort by: </p>
                                     <button data-sort="newest" class="active">Newest</button>
@@ -388,162 +424,50 @@ $row = get_row_index() - 0;
                                     <button data-sort="oldest">Oldest</button>
                                 </div>
                             </div>
+
                             <div class="filter-bar">
-                                <?php
-                                // Fetch default WordPress categories
-                                $categories = get_terms([
-                                    'taxonomy' => 'category',
-                                    'hide_empty' => false,
-                                ]);
-
-                                // Fetch terms for custom taxonomies
-                                $types = get_terms([
-                                    'taxonomy' => 'type',
-                                    'hide_empty' => false,
-                                ]);
-
-                                $topics = get_terms([
-                                    'taxonomy' => 'topic',
-                                    'hide_empty' => false,
-                                ]);
-
-                                $locations = get_terms([
-                                    'taxonomy' => 'location',
-                                    'hide_empty' => false,
-                                ]);
-
-                                // Fetch unique published years
-                                global $wpdb;
-                                $years = $wpdb->get_col("
-    SELECT DISTINCT YEAR(post_date) 
-    FROM $wpdb->posts 
-    WHERE post_status = 'publish' AND post_type = 'post'
-    ORDER BY YEAR(post_date) DESC
-");
-                                ?>
                                 <form class="filter-form custom-dropdown-form" method="POST">
-                                    <!-- Default WordPress Categories -->
-                                    <div class="dropdown-wrapper">
-                                        <div class="custom-dropdown">
-                                            <button type="button" class="dropdown-toggle" aria-expanded="false"
-                                                id="category-label">
-                                                Select Category
-                                            </button>
-                                            <ul class="dropdown-menu" role="listbox" aria-hidden="true">
-                                                <?php foreach ($categories as $category): ?>
-                                                    <li role="option" tabindex="0"
-                                                        data-value="<?php echo esc_attr($category->slug); ?>">
-                                                        <?php echo esc_html($category->name); ?>
-                                                    </li>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                            <input type="hidden" name="category" id="category">
+                                    <?php foreach ($filterCategories as $key => $items): ?>
+                                        <div class="dropdown-wrapper">
+                                            <div class="custom-dropdown">
+                                                <button type="button" class="dropdown-toggle" aria-expanded="false"
+                                                    aria-labelledby="<?php echo $key; ?>-label">
+                                                    Select <?php echo ucfirst($key); ?>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <?php if (is_array($items)): ?>
+                                                        <?php foreach ($items as $item): ?>
+                                                            <li tabindex="0" data-value="<?php echo esc_attr($item->slug ?? $item); ?>">
+                                                                <?php echo esc_html($item->name ?? $item); ?>
+                                                            </li>
+                                                        <?php endforeach; ?>
+                                                    <?php endif; ?>
+                                                </ul>
+                                                <input type="hidden" name="<?php echo $key; ?>" id="<?php echo $key; ?>"
+                                                    aria-labelledby="<?php echo $key; ?>-label">
+                                            </div>
+                                            <span id="<?php echo $key; ?>-label" class="sr-only">
+                                                <?php echo ucfirst($key); ?>
+                                            </span>
+                                            <!-- Hidden label for screen readers -->
                                         </div>
+                                    <?php endforeach; ?>
 
-                                        <span id="category-label" class="sr-only">Category</span>
-                                        <!-- Hidden label for screen readers -->
-                                    </div>
-
-                                    <!-- Custom Taxonomy: Type -->
-                                    <div class="dropdown-wrapper">
-                                        <div class="custom-dropdown">
-                                            <button type="button" class="dropdown-toggle" aria-expanded="false"
-                                                aria-labelledby="type-label">
-                                                Select Type
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <?php foreach ($types as $type): ?>
-                                                    <li tabindex="0" data-value="<?php echo esc_attr($type->slug); ?>">
-                                                        <?php echo esc_html($type->name); ?>
-                                                    </li>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                            <input type="hidden" name="type" id="type" aria-labelledby="type-label">
-                                        </div>
-                                        <span id="type-label" class="sr-only">Type</span>
-                                        <!-- Hidden label for screen readers -->
-                                    </div>
-
-                                    <!-- Custom Taxonomy: Topic -->
-                                    <div class="dropdown-wrapper">
-                                        <div class="custom-dropdown">
-                                            <button type="button" class="dropdown-toggle" aria-expanded="false"
-                                                aria-labelledby="topic-label">
-                                                Select Topic
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <?php foreach ($topics as $topic): ?>
-                                                    <li tabindex="0" data-value="<?php echo esc_attr($topic->slug); ?>">
-                                                        <?php echo esc_html($topic->name); ?>
-                                                    </li>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                            <input type="hidden" name="topic" id="topic" aria-labelledby="topic-label">
-                                        </div>
-                                        <span id="topic-label" class="sr-only">Topic</span>
-                                        <!-- Hidden label for screen readers -->
-                                    </div>
-
-                                    <!-- Custom Taxonomy: Location -->
-                                    <div class="dropdown-wrapper">
-                                        <div class="custom-dropdown">
-                                            <button type="button" class="dropdown-toggle" aria-expanded="false"
-                                                aria-labelledby="location-label">
-                                                Select Location
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <?php foreach ($locations as $location): ?>
-                                                    <li tabindex="0" data-value="<?php echo esc_attr($location->slug); ?>">
-                                                        <?php echo esc_html($location->name); ?>
-                                                    </li>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                            <input type="hidden" name="location" id="location" aria-labelledby="location-label">
-                                        </div>
-                                        <span id="location-label" class="sr-only">Location</span>
-                                        <!-- Hidden label for screen readers -->
-                                    </div>
-
-                                    <!-- Published Year -->
-                                    <div class="dropdown-wrapper">
-                                        <div class="custom-dropdown">
-                                            <button type="button" class="dropdown-toggle" aria-expanded="false"
-                                                aria-labelledby="year-label">
-                                                Select Year
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <?php foreach ($years as $year): ?>
-                                                    <li tabindex="0" data-value="<?php echo esc_attr($year); ?>">
-                                                        <?php echo esc_html($year); ?>
-                                                    </li>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                            <input type="hidden" name="year" id="year" aria-labelledby="year-label">
-                                        </div>
-                                        <span id="year-label" class="sr-only">Year</span>
-                                        <!-- Hidden label for screen readers -->
-                                    </div>
-
-                                    <button type="submit" class="submit-btn btn cobalt text-white">Apply<div
-                                            class="btn-arrow-container">
-                                        </div></button>
+                                    <button type="submit" class="submit-btn btn cobalt text-white">
+                                        Apply
+                                        <div class="btn-arrow-container"></div>
+                                    </button>
                                 </form>
-
-
-
                             </div>
                         </div>
                     </div>
 
                     <div class="posts-container" id="posts-container">
                         <?php while ($latest->have_posts()) : $latest->the_post(); ?>
-
-
                             <?php get_template_part('components/includes/post_card'); ?>
                             <?php wp_reset_postdata(); ?>
                         <?php endwhile; ?>
                     </div>
-
                 </div>
             </div>
 

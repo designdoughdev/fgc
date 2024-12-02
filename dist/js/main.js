@@ -629,7 +629,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
     });
 });
 //------------------------ filter menu -------------------------------//
-//------------------------ Mobile menu -------------------------------//
 document.addEventListener("DOMContentLoaded", ()=>{
     const filterMenu = document.querySelector(".overlay-filter-menu");
     const filterBtn = document.querySelector(".filter-btn");
@@ -637,9 +636,47 @@ document.addEventListener("DOMContentLoaded", ()=>{
     // Open menu
     filterBtn.addEventListener("click", ()=>{
         filterMenu.classList.add("menu-open");
-        filterMenu.classList.contains("menu-open");
+        if (filterMenu.classList.contains("menu-open")) document.body.style.overflow = "hidden"; // Prevent scrolling
+        else document.body.style.overflow = ""; // Prevent scrolling
     });
 });
+//------------------------ Mobile menu -------------------------------//
+//------------------------ Mobile menu -------------------------------//
+document.addEventListener("DOMContentLoaded", ()=>{
+    const mobileNav = document.querySelector(".mobile-nav");
+    const hamburgerBtn = document.querySelector(".hamburger-btn");
+    const closeBtn = document.querySelector(".mobile-menu-close-btn");
+    // Open menu
+    hamburgerBtn.addEventListener("click", ()=>{
+        mobileNav.classList.toggle("open");
+        if (mobileNav.classList.contains("open")) document.body.style.overflow = "hidden"; // Prevent scrolling
+        else document.body.style.overflow = ""; // Prevent scrolling
+    });
+});
+document.addEventListener("DOMContentLoaded", ()=>{
+    const rootMenuItems = document.querySelectorAll(".root-menu-item");
+    rootMenuItems.forEach((item)=>{
+        item.addEventListener("click", (e)=>{
+            // Toggle active class to show/hide sub-menu
+            e.target.classList.toggle("active");
+        });
+    });
+});
+//------------------------ Filter overlay menu -------------------------------//
+// document.addEventListener("DOMContentLoaded", () => {
+//   const filterMenu = document.querySelector('.overlay-filter-menu');
+//   const filterBtn = document.querySelector('.filter-btn');
+//   // const closeBtn = document.querySelector('.mobile-menu-close-btn');
+//   // Open menu
+//   filterBtn.addEventListener('click', () => {
+//       filterMenu.classList.add('menu-open');
+//       if(filterMenu.classList.contains('menu-open')){
+//         document.body.style.overflow = 'hidden'; // Prevent scrolling
+//       }else{
+//         document.body.style.overflow = ''; // Prevent scrolling
+//       }
+//   });
+// });
 //------------------------ Splide Carousels -------------------------------//
 // images gallery
 document.addEventListener("DOMContentLoaded", function() {
