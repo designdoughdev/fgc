@@ -3806,7 +3806,7 @@ textarea {
 }
 
 .mobile-nav .menu-content .menu-content-inner-wrapper {
-  padding: 5rem 1rem 12rem;
+  padding: 6rem 1rem 12rem;
 }
 
 .mobile-nav .menu-content .menu-content-inner-wrapper .title-tag {
@@ -3937,17 +3937,68 @@ textarea {
   border-bottom: none;
 }
 
-.mobile-nav .menu-content .bars-container {
-  width: 100%;
-  height: fit-content;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  grid-template-columns: 1fr 2fr;
+  padding: 1em 0;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .9em;
+  font-weight: normal;
+  line-height: 143%;
+  display: grid;
 }
 
-.mobile-nav .menu-content .bars-container svg {
-  width: 100%;
-  height: auto;
+@media only screen and (width >= 768px) {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom {
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom {
+    font-size: 1rem;
+  }
+}
+
+.mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom .col .title {
+  letter-spacing: normal;
+  color: #112343;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 1em;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+}
+
+@media only screen and (width >= 768px) {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom .col .title {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  .mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom .col .title {
+    font-size: .9375rem;
+  }
+}
+
+.mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom .col a {
+  color: #112343;
+  text-decoration: underline;
+}
+
+.mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom .col.social-col .social-icons {
+  flex-wrap: wrap;
+  gap: 1.45rem;
+  display: flex;
+}
+
+.mobile-nav .menu-content .menu-content-inner-wrapper .mobile-menu-bottom .col.social-col .social-icons img.social-icon {
+  width: auto;
+  height: 1.7rem;
 }
 
 @media only screen and (width >= 768px) {

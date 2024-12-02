@@ -1,11 +1,12 @@
 <nav class="mobile-nav overlay closed">
 
 
-    <!-- Button to close the overlay navigation -->
-    <button class="mobile-menu-close-btn">&times;</button>
+
 
     <!-- Overlay content -->
     <div class="menu-content">
+        <!-- Button to close the overlay navigation -->
+        <button class="mobile-menu-close-btn">&times;</button>
         <div class="menu-content-inner-wrapper">
             <ul>
                 <p class="title-tag">Welcome</p>
@@ -48,13 +49,57 @@
 
             <?php endif; ?>
 
+            <div class="mobile-menu-bottom">
+                <div class="col social-col">
+                    <h3 class="title">Social</h3>
+
+                    <?php if (have_rows('social_accounts', 'option')): ?>
+                        <div class="social-icons">
+
+                            <?php while (have_rows('social_accounts', 'option')) : the_row(); ?>
+                                <?php $socialIcon = get_sub_field('social_icon_alternate'); ?>
+                                <img class="social-icon" src="<?php echo $socialIcon['url']; ?>" alt="">
 
 
+                            <?php endwhile; ?>
+                        </div>
+
+                    <?php endif; ?>
+
+
+
+
+
+
+                </div>
+                <div class="col contact-col">
+                    <h3 class="title">Contact</h3>
+
+                    <?php if (have_rows('footer', 'option')): ?>
+
+
+                        <?php while (have_rows('footer', 'option')) : the_row(); ?>
+                            <?php $contactInfo = get_sub_field('text_area_2'); ?>
+                            <div class="contact-info"><?php echo $contactInfo; ?></div>
+
+
+                        <?php endwhile; ?>
+                </div>
+
+
+            <?php endif; ?>
+
+
+            </div>
         </div>
 
-        <div class="bars-container">
+
+
+    </div>
+
+    <!-- <div class="bars-container">
             <?php echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars-small.svg'); ?>
-        </div>
+        </div> -->
 
 
 
