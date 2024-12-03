@@ -8912,6 +8912,10 @@ section.section_wayfinder .section-content .wayfinder-container.cards-layout {
   position: relative;
 }
 
+section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card {
+  margin-bottom: 1rem;
+}
+
 section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content {
   letter-spacing: -.03em;
   color: #112343;
@@ -8939,23 +8943,23 @@ section.section_wayfinder .section-content .wayfinder-container.cards-layout .wa
 
 section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content .text-content-inner {
   z-index: 2;
-  padding: 2em;
+  padding: 1em;
   position: relative;
 }
 
 section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content .text-content-inner > * {
-  max-width: 70%;
+  max-width: 90%;
 }
 
 section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content .tag {
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 
 section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content .heading {
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
-  margin-bottom: 1em;
+  margin-bottom: .4em;
   font-family: Messina Sans, sans-serif;
   font-size: 2.0625rem;
   font-style: normal;
@@ -8978,7 +8982,7 @@ section.section_wayfinder .section-content .wayfinder-container.cards-layout .wa
 section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content .text {
   -webkit-font-smoothing: antialiased;
   color: #112343;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   font-family: Messina Sans Book, sans-serif;
   font-size: .9rem;
   font-weight: normal;
@@ -9021,6 +9025,50 @@ section.section_wayfinder .section-content .wayfinder-container.cards-layout .wa
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     display: grid;
+  }
+
+  section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card {
+    margin-bottom: 0;
+  }
+
+  section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content .text-content-inner {
+    z-index: 2;
+    padding: 2em;
+    position: relative;
+  }
+
+  section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content .text-content-inner > * {
+    max-width: 70%;
+  }
+
+  section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content .tag {
+    margin-bottom: 5em;
+  }
+
+  section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content .heading {
+    margin-bottom: 1em;
+  }
+
+  section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content .text {
+    -webkit-font-smoothing: antialiased;
+    color: #112343;
+    margin-bottom: 2em;
+    font-family: Messina Sans Book, sans-serif;
+    font-size: .9rem;
+    font-weight: normal;
+    line-height: 143%;
+  }
+}
+
+@media only screen and (width >= 768px) and (width >= 768px) {
+  section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content .text {
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 768px) and (width >= 1600px) {
+  section.section_wayfinder .section-content .wayfinder-container.cards-layout .wayfinder-card .text-content .text {
+    font-size: 1rem;
   }
 }
 

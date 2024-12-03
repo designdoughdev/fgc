@@ -303,8 +303,14 @@ section.section_wayfinder{
 
             @include container;
 
+            /*------------------------ Default mobile styles -------------------------------*/
+
 
             .wayfinder-card{
+
+                margin-bottom: 1rem;
+
+                
                 
 
                 .text-content{
@@ -315,12 +321,12 @@ section.section_wayfinder{
                     
 
                     .text-content-inner{
-                        padding: 2em;
+                        padding: 1em;
                         z-index: 2;
                         position: relative;
 
                         & > * {
-                            max-width: 70%;
+                            max-width: 90%;
                         }
 
                     }
@@ -330,15 +336,15 @@ section.section_wayfinder{
 
 
                     .tag{
-                        margin-bottom: 5em;
+                        margin-bottom: 2em;
                     }
                     .heading{
                         @include h-one;
-                        margin-bottom: 1em;
+                        margin-bottom: 0.4em;
                     }
                     .text{
                         @include body;
-                        margin-bottom: 2em;
+                        margin-bottom: 1em;
                     }
                     .btn{
                         margin-bottom: 0;
@@ -369,11 +375,48 @@ section.section_wayfinder{
 
             }
 
+            /*------------------------ Desktop Styles -------------------------------*/
+
             &{
                 @include respond-to(md){
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     gap: 1rem;
+
+
+                    .wayfinder-card{
+
+                        margin-bottom: 0;
+        
+                        
+                        
+        
+                        .text-content{
+                            
+        
+                            .text-content-inner{
+                                padding: 2em;
+                                z-index: 2;
+                                position: relative;
+        
+                                & > * {
+                                    max-width: 70%;
+                                }
+        
+                            }
+                            .tag{
+                                margin-bottom: 5em;
+                            }
+                            .heading{
+                                margin-bottom: 1em;
+                            }
+                            .text{
+                                @include body;
+                                margin-bottom: 2em;
+                            }
+                            
+                        }
+                    }
                 }
             }
 
