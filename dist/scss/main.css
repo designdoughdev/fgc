@@ -5621,7 +5621,7 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper form.filter-fo
 }
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper form.filter-form > * {
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper form.filter-form .custom-dropdown {
