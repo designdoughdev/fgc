@@ -5848,6 +5848,10 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .overlay-filte
   display: block;
 }
 
+section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section {
+  margin-bottom: .5rem;
+}
+
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .heading {
   max-width: 8em;
   margin-bottom: .5em;
@@ -5945,16 +5949,26 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .
   text-decoration: none;
 }
 
+section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-btn:after {
+  content: "";
+  vertical-align: middle;
+  background-image: url("../chevron-down.2dd99e00.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
+  display: inline-block;
+}
+
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper {
   -webkit-font-smoothing: antialiased;
   color: #112343;
-  border-top: 1px solid #1123431a;
   padding: 1em 0;
   font-family: Messina Sans Book, sans-serif;
   font-size: .9rem;
   font-weight: normal;
   line-height: 143%;
-  display: none;
 }
 
 @media only screen and (width >= 768px) {
@@ -6024,7 +6038,7 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .
   font-weight: 700;
 }
 
-section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper .filter-top-section .filter-bar {
+section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper .filter-form.desktop {
   display: none;
 }
 
@@ -6470,6 +6484,7 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-contain
   }
 
   section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper {
+    border-top: 1px solid #1123431a;
     display: block;
   }
 
@@ -6480,8 +6495,8 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-contain
     display: flex;
   }
 
-  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper .filter-bar {
-    display: block;
+  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper .filter-form.desktop {
+    display: flex;
   }
 
   section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-container {

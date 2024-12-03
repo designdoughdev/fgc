@@ -430,7 +430,7 @@ $row = get_row_index() - 0;
                             </div>
 
                             <div class="filter-bar">
-                                <form class="filter-form custom-dropdown-form" method="POST">
+                                <form class="filter-form desktop custom-dropdown-form" method="POST">
                                     <?php foreach ($filterCategories as $key => $items): ?>
                                         <div class="dropdown-wrapper">
                                             <div class="custom-dropdown">

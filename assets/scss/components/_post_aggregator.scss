@@ -659,6 +659,7 @@ section.section_posts_agg{
         /*------------------------ Default / Mobile Styling -------------------------------*/
 
         .top-section{
+            margin-bottom: 0.5rem;
             .heading{
                 max-width: 8em;
                 margin-bottom: 0.5em;
@@ -674,14 +675,26 @@ section.section_posts_agg{
                 width: 100%;
                 background-color: $darkNavy;
                 justify-content: center;
+
+                &:after {
+                    content: "";
+                    display: inline-block; 
+                    background-image: url('/assets/images/svg/chevron-down.svg'); 
+                    background-repeat: no-repeat;           
+                    background-position: center;
+                    width: 20px;
+                    height: 20px;
+                    margin-left: 0;
+                    vertical-align: middle;
+
+            }
                 
                 
 
             }
 
             .filter-entire-wrapper{
-                display: none;
-                border-top: 1px solid rgba($darkNavy, 0.1);    
+                   
                 @include body;
                 padding: 1em 0;  
 
@@ -706,10 +719,10 @@ section.section_posts_agg{
                         }
                     }
 
-                    .filter-bar{
-                        display: none;
-                    }
 
+                }
+                .filter-form.desktop{
+                    display: none
                 }
                 
 
@@ -795,6 +808,7 @@ section.section_posts_agg{
 
             .filter-entire-wrapper{
                 display: block;
+                border-top: 1px solid rgba($darkNavy, 0.1); 
 
 
                 .filter-top-section{
@@ -806,16 +820,12 @@ section.section_posts_agg{
 
                 }
 
-
-
-                .filter-bar{
-                    display: block;
-
-
-
-
-
+                .filter-form.desktop{
+                    display: flex;
                 }
+
+
+
                 
 
             }
