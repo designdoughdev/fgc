@@ -486,6 +486,9 @@ header{
                     }
 
                     .button-container{
+                        .link-button{
+                            margin-bottom: 0.5rem;
+                        }
                         .link-button:first-child{
                             background-color: $mintGreen;
                         }

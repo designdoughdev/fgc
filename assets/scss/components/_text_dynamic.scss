@@ -8,6 +8,20 @@ section.section_text_dynamic{
 
     @include sections_padding_small;
 
+    .container-wrapper{
+            // add conatiner at medium breakpoint
+
+    &{
+        @include respond-to(md){
+            @include container;
+        }
+    }
+
+    }
+
+    /*------------------------ default styles -------------------------------*/
+
+
     .section-wrapper{
         background-color: $lightSkyBlue;
         @include h-four;
