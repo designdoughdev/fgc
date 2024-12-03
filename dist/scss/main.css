@@ -5897,12 +5897,13 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .
   color: #fff;
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
-  background-color: #2a5ad5;
+  background-color: #112343;
   border: none;
   border-radius: .13636rem;
+  justify-content: center;
   align-items: center;
   gap: 1.2em;
-  width: fit-content;
+  width: 100%;
   height: 2.045rem;
   margin-bottom: 1rem;
   margin-right: .41rem;
