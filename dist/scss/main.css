@@ -3555,6 +3555,10 @@ body[data-theme="light"] ::selection {
   background-color: #eef9d6;
 }
 
+body {
+  overflow-x: clip;
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   font-size: 100%;
   font: inherit;
@@ -5841,7 +5845,7 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .overlay-filte
   -o-transition: .2s;
   background-color: #fff;
   width: 0;
-  height: 100svh;
+  height: 100vh;
   transition: all .2s;
   position: fixed;
   top: 0;
