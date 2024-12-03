@@ -35,7 +35,10 @@ $image = get_field('image');
             <div class="main-header-content container">
 
                 <div class="main-header-left">
-                    <img class="header-logo" src="<?php bloginfo('template_url'); ?>/assets/images/svg/logo.svg" alt="">
+                    <a href="<?php echo get_home_url(); ?>" aria-label="Home">
+                        <img class="header-logo" src="<?php bloginfo('template_url'); ?>/assets/images/svg/logo.svg"
+                            alt="">
+                    </a>
 
                 </div>
                 <?php if (have_rows('root_menu_pages', 'option')): ?>
