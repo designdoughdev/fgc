@@ -905,6 +905,8 @@ section.section_posts_agg{
 
             .filter-button{
                 @include btn_plain_deselected;
+                margin-bottom: 0.8em;
+            
 
                 &.active{
                     background-color: $cobaltBlue;

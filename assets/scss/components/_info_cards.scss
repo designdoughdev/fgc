@@ -66,11 +66,14 @@ section.section_info_cards{
                     display: flex;
                     justify-content: center;
                     margin-bottom: 3rem;
+                    padding-bottom: 1em;
+                    border-bottom: 1px solid $lightNavy;
                     
     
                     .text-content{
     
                         max-width: 75%;
+                        margin-right: auto;
                         
                         // numbered version
     
@@ -150,7 +153,12 @@ section.section_info_cards{
                         .info-card{
                             border-right: 1px solid $lightNavy;
                             margin-bottom: 0;
+                            border-bottom: none;
                             // padding-right: 3vw;
+
+                            .text-content{
+                                margin-left: auto;
+                            }
                         }
     
                         // conditional alignment based on grid position

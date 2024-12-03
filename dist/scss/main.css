@@ -6645,6 +6645,7 @@ section.section_posts_agg .posts-list-layout.section-wrapper .filter-bar .filter
   gap: 1.2em;
   width: fit-content;
   height: 2.045rem;
+  margin-bottom: .8em;
   margin-right: .41rem;
   padding: .23rem .91rem;
   font-family: Messina Sans Book, sans-serif;
@@ -10087,13 +10088,16 @@ section.section_info_cards .background-container .section-content .top-section .
 }
 
 section.section_info_cards .background-container .section-content .cards-section .info-card {
+  border-bottom: 1px solid #f3f4f6;
   justify-content: center;
   margin-bottom: 3rem;
+  padding-bottom: 1em;
   display: flex;
 }
 
 section.section_info_cards .background-container .section-content .cards-section .info-card .text-content {
   max-width: 75%;
+  margin-right: auto;
 }
 
 section.section_info_cards .background-container .section-content .cards-section .info-card .text-content .tag {
@@ -10198,8 +10202,13 @@ section.section_info_cards .background-container .section-content .cards-section
   }
 
   section.section_info_cards .background-container .section-content .cards-section .info-card {
+    border-bottom: none;
     border-right: 1px solid #f3f4f6;
     margin-bottom: 0;
+  }
+
+  section.section_info_cards .background-container .section-content .cards-section .info-card .text-content {
+    margin-left: auto;
   }
 
   section.section_info_cards .background-container .section-content .cards-section > :nth-child(3n+1) {
