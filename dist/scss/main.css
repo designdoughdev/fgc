@@ -5718,7 +5718,7 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper form.filter-fo
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper form.filter-form .dropdown-menu li {
   cursor: pointer;
-  padding: .3em 1.5em;
+  padding: .5em 1.5em;
 }
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper form.filter-form .dropdown-menu li:hover, section.section_posts_agg .posts-grid-with-filter.section-wrapper form.filter-form .dropdown-menu li:focus {
