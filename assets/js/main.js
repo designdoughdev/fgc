@@ -522,15 +522,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // news filtering
+
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Find all filter forms
-  const filterForms = document.querySelectorAll('.filter-form');
+  // Find all filter bar containers
+  const filterBarContainers = document.querySelectorAll('.filter-bar-container');
   const postsContainer = document.querySelector('.posts-container'); // Shared posts container
   const overlayFilterMenu = document.querySelector('.overlay-filter-menu'); // Overlay filter menu
 
-  filterForms.forEach((form) => {
-    // Handle dropdown interactions within the scope of this form
-    const dropdowns = form.querySelectorAll('.custom-dropdown');
+  filterBarContainers.forEach((container) => {
+    // Handle dropdown interactions within the scope of this container
+    const dropdowns = container.querySelectorAll('.custom-dropdown');
 
     dropdowns.forEach((dropdown) => {
       const toggle = dropdown.querySelector('.dropdown-toggle');
@@ -581,33 +583,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Handle form submission
-    form.addEventListener('submit', (event) => {
-      event.preventDefault(); // Prevent default form submission
+    const form = container.querySelector('form');
 
-      const formData = new FormData(form);
+    if (form) {
+      form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent default form submission
 
-      fetch('/wp-admin/admin-ajax.php?action=filter_posts', {
-        method: 'POST',
-        body: new URLSearchParams(formData), // Serialize form data
-      })
-        .then((response) => response.text())
-        .then((html) => {
-          postsContainer.innerHTML = html; // Replace posts with filtered results
+        const formData = new FormData(form);
 
-          // Remove 'menu-open' class from overlay filter menu
-          if (overlayFilterMenu) {
-            overlayFilterMenu.classList.remove('menu-open');
-            document.body.style.overflow = '';
-          }
+        fetch('/wp-admin/admin-ajax.php?action=filter_posts', {
+          method: 'POST',
+          body: new URLSearchParams(formData), // Serialize form data
         })
-        .catch((error) => {
-          console.error('Error:', error);
-          postsContainer.innerHTML = '<p>Error loading posts. Please try again.</p>';
-        });
-    });
+          .then((response) => response.text())
+          .then((html) => {
+            postsContainer.innerHTML = html; // Replace posts with filtered results
 
-    // Handle sort buttons within the scope of this form
-    const sortButtons = form.querySelectorAll('.sort-container button');
+            // Remove 'menu-open' class from overlay filter menu
+            if (overlayFilterMenu) {
+              overlayFilterMenu.classList.remove('menu-open');
+              document.body.style.overflow = '';
+            }
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+            postsContainer.innerHTML = '<p>Error loading posts. Please try again.</p>';
+          });
+      });
+    }
+
+    // Handle sort buttons within the scope of this container
+    const sortButtons = container.querySelectorAll('.sort-container button');
 
     sortButtons.forEach((button) => {
       button.addEventListener('click', () => {
@@ -633,6 +639,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
 
 
 

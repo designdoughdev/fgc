@@ -423,9 +423,9 @@ $row = get_row_index() - 0;
                             <div class="filter-top-section">
                                 <div class="sort-container">
                                     <p>Sort by: </p>
-                                    <button data-sort="newest" class="active">Newest</button>
+                                    <button class="sort-btn" data-sort="newest" class="active">Newest</button>
                                     <span>|</span>
-                                    <button data-sort="oldest">Oldest</button>
+                                    <button class="sort-btn" data-sort="oldest">Oldest</button>
                                 </div>
                             </div>
 
