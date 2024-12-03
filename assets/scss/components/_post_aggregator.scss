@@ -574,22 +574,34 @@ section.section_posts_agg{
                 button.dropdown-toggle{
                     width: 100%;
                     color: $midGrey;
+                    background-color: white;
+                    border-bottom: 1px solid rgba($darkNavy, 0.1);
 
                     &:after{
                         margin-left: auto;
                         transform: rotate(0deg); // Initial rotation
                         transform-origin: center; 
                         @include shorttransition;
+                        background-image: url('/assets/images/svg/arrow-right-white.svg'); 
+                        background-size: 38%; 
+                        background-repeat: no-repeat;           
+                        background-position: center;
+                        background-color: $cobaltBlue;
+                        width: 20px;
+                        height: 20px;
+                        vertical-align: middle;
                     }
+
+
 
                     &.active{
 
                         &::after{
-                            transform: rotate(180deg); // Rotate 180 degrees
+                            transform: rotate(90deg); 
                         }
                         & + ul.dropdown-menu{
                             max-height: 2000px;
-                            padding: 0;
+                            padding: 0.2em 0 0 0;
                             opacity: 1;
 
                         }
@@ -643,13 +655,28 @@ section.section_posts_agg{
                 width: 100%;
             }
 
-            button.filter-overlay-close-btn{
-                background-color: transparent;
-                border: none;
-                display: block;
-                margin-left: auto;
-                padding: 0.3rem;
+            div.top-row{
+
+                display: flex;
+                justify-content: space-between;
+                @include body;
+                margin: 0 1em;
+                padding: 1em 0;
+                border-bottom: 1px solid rgba($darkNavy, 0.1);
+
+
+                button.filter-overlay-close-btn{
+                    background-color: transparent;
+                    border: none;
+                    display: block;
+                    margin-left: auto;
+                  
+                    text-decoration: underline;
+                }
+
             }
+
+
 
 
         }

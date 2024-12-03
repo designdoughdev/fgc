@@ -5782,25 +5782,35 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .mobile-filter
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .mobile-filter-menu form.filter-form button.dropdown-toggle {
   color: #afafaf;
+  background-color: #fff;
+  border-bottom: 1px solid #1123431a;
   width: 100%;
 }
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .mobile-filter-menu form.filter-form button.dropdown-toggle:after {
   transform-origin: center;
   -o-transition: .2s;
+  vertical-align: middle;
+  background-color: #2a5ad5;
+  background-image: url("../arrow-right-white.d209d955.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 38%;
+  width: 20px;
+  height: 20px;
   margin-left: auto;
   transition: all .2s;
   transform: rotate(0);
 }
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .mobile-filter-menu form.filter-form button.dropdown-toggle.active:after {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .mobile-filter-menu form.filter-form button.dropdown-toggle.active + ul.dropdown-menu {
   opacity: 1;
   max-height: 2000px;
-  padding: 0;
+  padding: .2em 0 0;
 }
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .mobile-filter-menu button.submit-btn {
@@ -5840,11 +5850,37 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .overlay-filte
   width: 100%;
 }
 
-section.section_posts_agg .posts-grid-with-filter.section-wrapper .overlay-filter-menu button.filter-overlay-close-btn {
+section.section_posts_agg .posts-grid-with-filter.section-wrapper .overlay-filter-menu div.top-row {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  border-bottom: 1px solid #1123431a;
+  justify-content: space-between;
+  margin: 0 1em;
+  padding: 1em 0;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .9rem;
+  font-weight: normal;
+  line-height: 143%;
+  display: flex;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_posts_agg .posts-grid-with-filter.section-wrapper .overlay-filter-menu div.top-row {
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_posts_agg .posts-grid-with-filter.section-wrapper .overlay-filter-menu div.top-row {
+    font-size: 1rem;
+  }
+}
+
+section.section_posts_agg .posts-grid-with-filter.section-wrapper .overlay-filter-menu div.top-row button.filter-overlay-close-btn {
   background-color: #0000;
   border: none;
   margin-left: auto;
-  padding: .3rem;
+  text-decoration: underline;
   display: block;
 }
 

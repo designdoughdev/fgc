@@ -366,7 +366,11 @@ $row = get_row_index() - 0;
                 ];
                 ?>
                 <div class="overlay-filter-menu">
-                    <button class="filter-overlay-close-btn">Close</button>
+                    <div class="top-row">
+                        <h3 class="title">Filters</h3>
+                        <button class="filter-overlay-close-btn">Back</button>
+                    </div>
+
 
                     <div class="mobile-filter-menu filter-bar-container">
                         <form class="filter-form custom-dropdown-form" method="POST">
