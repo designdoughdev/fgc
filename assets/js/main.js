@@ -74,7 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // const closeBtn = document.querySelector('.mobile-menu-close-btn');
 
   // Open menu
-  filterBtn.addEventListener('click', () => {
+  if(filterBtn){
+    filterBtn.addEventListener('click', () => {
       filterMenu.classList.add('menu-open');
 
       if(filterMenu.classList.contains('menu-open')){
@@ -86,6 +87,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       
   });
+
+  }
+
 
 
 });
@@ -138,27 +142,31 @@ document.addEventListener("DOMContentLoaded", () => {
   // const closeBtn = document.querySelector('.mobile-menu-close-btn');
 
   // Open menu
-  filterBtn.addEventListener('click', () => {
+
+  if(filterBtn){
+    filterBtn.addEventListener('click', () => {
       filterMenu.classList.add('menu-open');
 
     
         document.body.style.overflow = 'hidden'; // Prevent scrolling
-
-
-        
-
-
-      
   });
+
+  }
+
 
     // Close Menu
 
-    closeBtn.addEventListener('click', () => {
-      filterMenu.classList.remove('menu-open');
-      document.body.style.overflow = ''; 
-
+    if(closeBtn){
+      closeBtn.addEventListener('click', () => {
+        filterMenu.classList.remove('menu-open');
+        document.body.style.overflow = ''; 
+  
+        
+    });
       
-  });
+    }
+
+
 
 
 

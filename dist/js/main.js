@@ -634,7 +634,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const filterBtn = document.querySelector(".filter-btn");
     // const closeBtn = document.querySelector('.mobile-menu-close-btn');
     // Open menu
-    filterBtn.addEventListener("click", ()=>{
+    if (filterBtn) filterBtn.addEventListener("click", ()=>{
         filterMenu.classList.add("menu-open");
         if (filterMenu.classList.contains("menu-open")) document.body.style.overflow = "hidden"; // Prevent scrolling
         else document.body.style.overflow = ""; // Prevent scrolling
@@ -669,12 +669,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const closeBtn = document.querySelector(".filter-overlay-close-btn");
     // const closeBtn = document.querySelector('.mobile-menu-close-btn');
     // Open menu
-    filterBtn.addEventListener("click", ()=>{
+    if (filterBtn) filterBtn.addEventListener("click", ()=>{
         filterMenu.classList.add("menu-open");
         document.body.style.overflow = "hidden"; // Prevent scrolling
     });
     // Close Menu
-    closeBtn.addEventListener("click", ()=>{
+    if (closeBtn) closeBtn.addEventListener("click", ()=>{
         filterMenu.classList.remove("menu-open");
         document.body.style.overflow = "";
     });
