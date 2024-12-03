@@ -396,6 +396,42 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Select all carousel elements with the class `images-carousel`
+  const carousels = document.querySelectorAll('.info-card-carousel');
+
+  if (carousels) {
+    // Loop over each carousel and initialize Splide
+    carousels.forEach((carousel) => {
+      // Find custom arrows within the current carousel
+      const prevArrow = carousel.querySelector('.custom-prev');
+      const nextArrow = carousel.querySelector('.custom-next');
+
+      // Initialize Splide with default arrows disabled
+      const splide = new Splide(carousel, {
+        type: 'loop',
+        arrows: false,
+        updateOnMove: true,
+        perPage: 1,
+        padding: { left: '3vw', right: '3vw' }, 
+        gap: '6vw',
+        focus: 'center',
+        pagination: true,
+
+      }).mount();
+
+      // Add custom event listeners for the custom arrows
+      if (prevArrow) {
+        prevArrow.addEventListener('click', () => splide.go('<')); // Go to previous slide
+      }
+
+      if (nextArrow) {
+        nextArrow.addEventListener('click', () => splide.go('>')); // Go to next slide
+      }
+    });
+  }
+});
  
  
   

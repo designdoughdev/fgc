@@ -10087,12 +10087,66 @@ section.section_info_cards .background-container .section-content .top-section .
   }
 }
 
+section.section_info_cards .background-container .section-content .cards-section .slider-button-container {
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 1rem;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 2em 0 1em;
+  display: grid;
+}
+
+section.section_info_cards .background-container .section-content .cards-section .slider-button-container button {
+  aspect-ratio: 1;
+  background-color: #112343;
+  border: none;
+  border-radius: .13636rem;
+  justify-content: center;
+  align-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+}
+
+section.section_info_cards .background-container .section-content .cards-section .slider-button-container button img {
+  width: auto;
+  height: 35%;
+}
+
+section.section_info_cards .background-container .section-content .cards-section .splide__pagination button.splide__pagination__page {
+  background-color: #fff;
+  border: 1px solid #112343;
+  border-radius: 50%;
+  width: .5em;
+  height: .5em;
+  margin-right: .6em;
+  padding: 0;
+}
+
+section.section_info_cards .background-container .section-content .cards-section .splide__pagination button.splide__pagination__page.is-active {
+  background-color: #112343;
+}
+
 section.section_info_cards .background-container .section-content .cards-section .info-card {
   border-bottom: 1px solid #f3f4f6;
   justify-content: center;
   margin-bottom: 3rem;
   padding-bottom: 1em;
   display: flex;
+}
+
+section.section_info_cards .background-container .section-content .cards-section .info-card.slider-card {
+  text-align: center;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+section.section_info_cards .background-container .section-content .cards-section .info-card.slider-card .icon-container, section.section_info_cards .background-container .section-content .cards-section .info-card.slider-card .text-content {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 section.section_info_cards .background-container .section-content .cards-section .info-card .text-content {

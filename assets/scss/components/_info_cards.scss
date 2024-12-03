@@ -56,6 +56,57 @@ section.section_info_cards{
     
             }
             .cards-section{
+
+                //splide controls
+                .slider-button-container{
+                    padding: 2em 0 1em 0;
+                    width: fit-content;
+                    margin: 0 auto;
+                    justify-content: center;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1rem;
+                    
+ 
+                    button{
+                        @include border-radius;
+                        width: 1.9rem;
+                        height: 1.9rem;
+                        aspect-ratio: 1;
+                        padding: 0;
+                        border: none;
+                        background-color: $darkNavy;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0;
+                   
+
+                        img{
+                            height: 35%;
+                            width: auto;
+                        }
+                    }
+                }
+
+                .splide__pagination{
+
+                    button.splide__pagination__page{
+                        height: 0.5em;
+                        width: 0.5em;
+                        border-radius: 50%;
+                        background-color: white;
+                        margin-right: 0.6em;
+                        border: 1px solid $darkNavy;
+                        padding: 0;
+
+            
+                        &.is-active{
+                            background-color: $darkNavy;
+                        }
+                    }
+
+                }
     
     
     
@@ -68,6 +119,21 @@ section.section_info_cards{
                     margin-bottom: 3rem;
                     padding-bottom: 1em;
                     border-bottom: 1px solid $lightNavy;
+
+                    &.slider-card{
+                        border-bottom: none;
+                        text-align: center;
+                        margin-bottom: 0;
+
+                        .icon-container{
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        .text-content{
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
                     
     
                     .text-content{
