@@ -38,15 +38,24 @@ $image = get_field('image');
                     <img class="header-logo" src="<?php bloginfo('template_url'); ?>/assets/images/svg/logo.svg" alt="">
 
                 </div>
+                <?php if (have_rows('root_menu_pages', 'option')): ?>
+                    <div class="main-header-centre">
+                        <div class="header-menu-btns">
+                            <?php $colourSchemes = ['mint', 'yellow', 'sky-blue']; ?>
 
-                <div class="main-header-centre">
-                    <div class="header-menu-btns">
-                        <button class="btn-menu mint" value="discover">Discover</button>
-                        <button class="btn-menu yellow" value="explore">Explore</button>
-                        <button class="btn-menu sky-blue" value="do">Do</button>
+                            <?php while (have_rows('root_menu_pages', 'option')) : the_row(); ?>
+                                <?php $colourScheme = $colourSchemes[(get_row_index() - 1) % 3]; ?>
+
+                                <?php $pageID = get_sub_field('root_menu_page'); ?>
+
+                                <button class="btn-menu <?php echo $colourScheme; ?>"
+                                    value="<?php echo esc_attr(get_post_field('post_name', $pageID)); ?>"><?php echo esc_attr(get_the_title($pageID)); ?></button>
+
+                            <?php endwhile; ?>
+                        </div>
+
                     </div>
-
-                </div>
+                <?php endif; ?>
                 <div class="main-header-right">
 
                     <div class="right-links-container">
