@@ -368,7 +368,7 @@ $row = get_row_index() - 0;
                 <div class="overlay-filter-menu">
                     <button class="filter-overlay-close-btn">Close</button>
 
-                    <div class="mobile-filter-menu">
+                    <div class="mobile-filter-menu filter-bar-container">
                         <form class="filter-form custom-dropdown-form" method="POST">
                             <?php foreach ($filterCategories as $key => $items): ?>
                                 <div class="dropdown-wrapper">
@@ -419,11 +419,11 @@ $row = get_row_index() - 0;
 
                         <button class="filter-btn">Filters</button>
 
-                        <div class="filter-bar-container">
+                        <div class="filter-bar-container filter-entire-wrapper">
                             <div class="filter-top-section">
                                 <div class="sort-container">
                                     <p>Sort by: </p>
-                                    <button class="sort-btn" data-sort="newest" class="active">Newest</button>
+                                    <button class="sort-btn active" data-sort="newest">Newest</button>
                                     <span>|</span>
                                     <button class="sort-btn" data-sort="oldest">Oldest</button>
                                 </div>

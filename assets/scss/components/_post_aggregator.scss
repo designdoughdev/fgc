@@ -682,7 +682,7 @@ section.section_posts_agg{
 
             }
 
-            .filter-bar-container{
+            .filter-entire-wrapper{
                 display: none;
                 border-top: 1px solid rgba($darkNavy, 0.1);    
                 @include body;
@@ -796,7 +796,7 @@ section.section_posts_agg{
                 margin-bottom: 0
             }
 
-            .filter-bar-container{
+            .filter-entire-wrapper{
                 display: block;
 
 
@@ -804,6 +804,7 @@ section.section_posts_agg{
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    margin-bottom: 1em;
 
 
                 }
@@ -962,12 +963,7 @@ section.section_posts_agg{
 
                 .top-section{
 
-                    .filter-bar-container{
 
-
-                        
-
-                    }
                 }
 
                 .posts-container{

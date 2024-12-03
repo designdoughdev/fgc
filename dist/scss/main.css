@@ -5943,7 +5943,7 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .
   text-decoration: none;
 }
 
-section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container {
+section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper {
   -webkit-font-smoothing: antialiased;
   color: #112343;
   border-top: 1px solid #1123431a;
@@ -5956,24 +5956,24 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .
 }
 
 @media only screen and (width >= 768px) {
-  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container {
+  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper {
     font-size: clamp(.9rem, .9rem + 1vw, 1rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container {
+  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper {
     font-size: 1rem;
   }
 }
 
-section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container .filter-top-section .sort-container {
+section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper .filter-top-section .sort-container {
   gap: .1rem;
   margin-left: auto;
   display: flex;
 }
 
-section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container .filter-top-section .sort-container p {
+section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper .filter-top-section .sort-container p {
   -webkit-font-smoothing: antialiased;
   color: #112343;
   font-family: Messina Sans Book, sans-serif;
@@ -5983,18 +5983,18 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .
 }
 
 @media only screen and (width >= 768px) {
-  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container .filter-top-section .sort-container p {
+  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper .filter-top-section .sort-container p {
     font-size: clamp(.9rem, .9rem + 1vw, 1rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container .filter-top-section .sort-container p {
+  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper .filter-top-section .sort-container p {
     font-size: 1rem;
   }
 }
 
-section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container .filter-top-section .sort-container button {
+section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper .filter-top-section .sort-container button {
   -webkit-font-smoothing: antialiased;
   color: #112343;
   cursor: pointer;
@@ -6007,22 +6007,22 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .
 }
 
 @media only screen and (width >= 768px) {
-  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container .filter-top-section .sort-container button {
+  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper .filter-top-section .sort-container button {
     font-size: clamp(.9rem, .9rem + 1vw, 1rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container .filter-top-section .sort-container button {
+  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper .filter-top-section .sort-container button {
     font-size: 1rem;
   }
 }
 
-section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container .filter-top-section .sort-container button.active {
+section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper .filter-top-section .sort-container button.active {
   font-weight: 700;
 }
 
-section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container .filter-top-section .filter-bar {
+section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper .filter-top-section .filter-bar {
   display: none;
 }
 
@@ -6467,17 +6467,18 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-contain
     display: none;
   }
 
-  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container {
+  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper {
     display: block;
   }
 
-  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container .filter-top-section {
+  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper .filter-top-section {
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1em;
     display: flex;
   }
 
-  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-bar-container .filter-bar {
+  section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .filter-entire-wrapper .filter-bar {
     display: block;
   }
 
