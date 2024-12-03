@@ -3792,6 +3792,7 @@ textarea {
 .mobile-nav .menu-content .menu-content-inner-wrapper {
   padding-bottom: 7em;
   position: relative;
+  overflow-x: clip;
 }
 
 .mobile-nav .menu-content .menu-content-inner-wrapper .text-content {

@@ -36,6 +36,9 @@
       overflow-y: auto;
   
       .menu-content-inner-wrapper{
+
+        //hide sub menu
+        overflow-x: clip;
   
         
         padding-bottom: 7em;
