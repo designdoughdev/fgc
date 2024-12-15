@@ -7111,9 +7111,9 @@
         ],
         [
             {
-                "param": "post_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "default"
+                "value": "press-release"
             }
         ],
         [
@@ -7133,5 +7133,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1732698785
+    "modified": 1733610015
 }

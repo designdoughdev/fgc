@@ -103,15 +103,7 @@ if (function_exists('acf')) {
 
 
 
-// if( function_exists('acf_add_options_page') ) {
-//     acf_add_options_page();
-// }
 
-// /* Actions and Filters */
-// add_action( 'wp_enqueue_scripts', 'starkers_script_enqueuer' );
-// add_filter( 'body_class', function( $classes ) {
-// 	return array_merge( $classes, array( 'class-name' ) );
-// } );
 
 
 

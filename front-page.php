@@ -64,10 +64,10 @@ get_template_part('components/flex/content-wayfinder'); ?>
 
 // press releases carousel
 
-set_query_var('layout_old', 'press-releases');
+// set_query_var('layout_old', 'press-releases');
 
 
-get_template_part('components/flex/content-post_aggregator', 'press-releases');
+// get_template_part('components/flex/content-post_aggregator', 'press-releases');
 
 //------------------------  -------------------------------//
 
@@ -76,9 +76,9 @@ get_template_part('components/flex/content-post_aggregator', 'press-releases');
 
 // news carousel
 
-set_query_var('layout_old', 'news');
+// set_query_var('layout_old', 'news');
 
-get_template_part('components/flex/content-post_aggregator', 'news');
+// get_template_part('components/flex/content-post_aggregator', 'news');
 
 //------------------------  -------------------------------//
 ?>
