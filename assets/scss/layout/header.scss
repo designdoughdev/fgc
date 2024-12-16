@@ -298,38 +298,57 @@ header{
                 }
 
 
-                .menu-grid{
-                    display: grid;
-                    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-        
-                    .col:not(:last-child){
-                        border-right: 2px solid $grey;
-                    }
-        
-                    .col{
-                        padding: 0 1rem;
-    
-    
-        
-                        a.parent-page-link{
-                            @include h-four-3;
-                            @include shorttransition;
-                            
-    
-    
+                .menu-grid-container{
+
+                    height: 100%;
+
+                    .menu-grid{
+                        height: 90%;
+                        display: grid;
+                        grid-template-columns: 1fr 3fr;
+
+                        .menu-section-title{
+                            margin-bottom: 2em;
                         }
+
+            
+                        .col:not(:last-child) {
+                            border-right: 2px solid $grey;
+                        }
+    
+                        .child-menu-grid{
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            grid-auto-rows: max-content;
+                        }
+            
+                        .col, .child-section{
+                            padding: 0 1rem;
         
-                        ul{
-                            margin-top: 0.8rem;
-                            margin-bottom: 1.3rem;
-                            li{
-                                list-style-type: none;
-                                margin-bottom: 0.5rem;
-                                a{
-                                    @include body;
-                                    font-weight: 300;
+        
+            
+                            a.parent-page-link{
+                                @include h-four-3;
+                                @include shorttransition;
+                                
+        
+        
+                            }
+            
+                            ul{
+                                margin-top: 0.8rem;
+                                margin-bottom: 1.3rem;
+                                li{
+                                    list-style-type: none;
+                                    margin-bottom: 0.5rem;
+                                    a{
+                                        @include body;
+                                        font-weight: 300;
+                                    }
                                 }
                             }
+    
+    
                         }
                     }
                 }
