@@ -8567,7 +8567,10 @@ section.section_text_and_image .full-image-layout-content-wrapper .section-conte
 
   section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout div.bars-container {
     width: fit-content;
+    max-width: 25%;
     height: 100%;
+    margin-left: auto;
+    overflow-x: clip;
   }
 
   section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout div.bars-container svg.horizontal-bars {

@@ -1159,6 +1159,9 @@ section.section_text_and_image{
                         div.bars-container{
                             height: 100%;
                             width: fit-content;
+                            max-width: 25%;
+                            margin-left: auto;
+                            overflow-x: clip;
 
                             svg.horizontal-bars{
                                 display: none;
