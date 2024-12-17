@@ -1031,10 +1031,9 @@ section.section_text_and_image{
                             display: block;
                             height: 100%;
                             width: 100%;
+                            object-fit: cover;
 
                             img{
-                                height: 100%;
-                                width: 100%;
                                 object-fit: cover;
                             }
                         }
@@ -1104,11 +1103,14 @@ section.section_text_and_image{
         
         
                         .text-content{
-                            width: 50%;
+                            width: 45%;
                             display: flex;
                             flex-direction: column;
                             margin-left: auto;
-                            margin: 0 0 8rem auto;
+                            margin: 0 auto 8rem 0;
+                            
+
+            
                             
         
         
@@ -1133,6 +1135,18 @@ section.section_text_and_image{
                                 margin-left: 3rem;
                             }
                 
+                        }
+
+                        // reverse layout
+
+                        &.reverse{
+
+                            .text-content{
+                                margin: 0 0 8rem auto;
+
+                            }
+                                
+                            
                         }
                         
                     }

@@ -2096,30 +2096,8 @@
                             "aria-label": "",
                             "type": "select",
                             "instructions": "",
-                            "required": 1,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_651438b594262",
-                                        "operator": "==",
-                                        "value": "half-text-half-img"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "field": "field_651438b594262",
-                                        "operator": "==",
-                                        "value": "big-img-no-bg"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "field": "field_651438b594262",
-                                        "operator": "==",
-                                        "value": "rows"
-                                    }
-                                ]
-                            ],
+                            "required": 0,
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -2132,7 +2110,7 @@
                                 "blue": "Blue",
                                 "navy": "Navy"
                             },
-                            "default_value": false,
+                            "default_value": "blue",
                             "return_format": "value",
                             "multiple": 0,
                             "allow_null": 0,
@@ -7167,5 +7145,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1734371994
+    "modified": 1734436662
 }

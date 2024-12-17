@@ -359,20 +359,45 @@ endif
 
 
 
-            <h2 class="title-tag">Cymru Can</h2>
+
+            <?php if ($link || $smallTitle): ?>
+            <h2 class="title-tag"><?php if ($link) {
+                                                echo $link_title;
+                                            } else {
+                                                echo $smallTitle;
+                                            } ?></h2>
+            <?php endif;  // title tag
+                ?>
+
+
             <div class="text-content">
-                <h3 class="heading h2">The innovative goals paving the way for a stronger, greener Wales</h3>
-                <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut
-                    labore et
-                    dolore magna aliqua ut enim ad.</p>
-                <a href="/" class="link btn text-white">Cymru Can<div class="btn-arrow-container"></div></a>
+                <?php if ($bigTitle): ?>
+                <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
+                <?php endif; // big title 
+                    ?>
+                <?php if ($body): ?>
+                <p class="body"><?php echo $body; ?></p>
+                <?php endif; // body 
+                    ?>
+                <?php if ($link): ?>
+                <a href="/" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?>
+                    <div class="btn-arrow-container">
+                    </div>
+                </a>
+                <?php endif; // link 
+                    ?>
 
             </div>
 
 
             <div class="img-wrap">
-                <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/tree.jpg" ?> alt="">
+                <?php $landscapeImage = array(
+                        'class' => '',
+                        'id' => $image['ID'],
+                        'alt' => $image['alt'],
+                        'lazyload' => false
+                    );
+                    echo build_srcset('standard', $landscapeImage); ?>
             </div>
 
             <div class="vertical-bars-container">
@@ -418,7 +443,13 @@ endif
         data-aos-anchor-placement="top-bottom">
 
         <div class="img-wrap">
-            <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/talk.jpg" ?> alt="">
+            <?php $landscapeImage = array(
+                        'class' => '',
+                        'id' => $image['ID'],
+                        'alt' => $image['alt'],
+                        'lazyload' => false
+                    );
+                    echo build_srcset('standard', $landscapeImage); ?>
         </div>
 
 
@@ -641,9 +672,11 @@ endif
 
             <h2 class="title-tag">Well-being of Future
                 Generations (Wales) Act 2015</h2>
-            <h3 class="heading h2">Shaping a brighter tomorrow: Discover how the Well-being of Future Generations Act is
+            <h3 class="heading h2">Shaping a brighter tomorrow: Discover how the Well-being of Future Generations
+                Act is
                 transforming Wales</h3>
-            <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut
                 labore et
                 dolore magna aliqua ut enim ad.</p>
             <a href="/" class="link btn text-white">About the Act<div class="btn-arrow-container"></div></a>
@@ -680,10 +713,10 @@ endif
 
             <div class="text-content">
                 <?php if ($link || $smallTitle): ?>
-                <h2 class="title-tag"><?php if ($link) {
-                                                    echo $link_title;
-                                                } else {
+                <h2 class="title-tag"><?php if ($smallTitle) {
                                                     echo $smallTitle;
+                                                } else {
+                                                    echo $link_title;
                                                 } ?></h2>
                 <?php endif;  // title tag
                     ?>
@@ -753,17 +786,37 @@ endif
 
             <!-------------------------- Layout Full Image --------------------------------->
             <div class="full-image-layout-content-wrapper">
-                <div class="section-content full-image-layout relative yellow-style" data-aos="fade-up"
+                <div class="section-content full-image-layout relative <?php if ($colourScheme) {
+                                                                                echo $colourScheme;
+                                                                            } ?>-style <?php if ($reverseLayout) {
+                                                                                            echo " reverse ";
+                                                                                        } ?>" data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
-                    style="background-image: url('<?php echo get_stylesheet_directory_uri() . '/assets/images/jpg/viaduct.jpg' ?>') ;">
+                    style="background-image: url('<?php echo $image['url'] ?>') ;">
 
 
                     <div class="text-content">
-                        <h2 class="title-tag">Meet the commissioner</h2>
-                        <h3 class="heading h2">Creating a legacy for Future Generations</h3>
-                        <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua ut enim ad.</p>
-                        <a href="/" class="link btn text-white">About the Act<div class="btn-arrow-container"></div></a>
+                        <?php if ($link || $smallTitle): ?>
+                        <h2 class="title-tag"><?php if ($link) {
+                                                            echo $link_title;
+                                                        } else {
+                                                            echo $smallTitle;
+                                                        } ?></h2>
+                        <?php endif;  // title tag 
+                            ?>
+                        <?php if ($bigTitle): ?>
+                        <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
+                        <?php endif; // big title 
+                            ?>
+                        <?php if ($body): ?>
+                        <p class="body"><?php echo $body; ?></p>
+                        <?php endif; // body 
+                            ?>
+                        <?php if ($link): ?>
+                        <a href="/" class="link btn" target="<?php echo $link_target; ?>"><?php echo $link_title; ?><div
+                                class="btn-arrow-container"></div></a>
+                        <?php endif; // link 
+                            ?>
 
                     </div>
 

@@ -2586,6 +2586,13 @@ body[data-theme='light'] {
         background-color: $lightSkyBlue;
     }
 
+        // full image layout
+        &.full-image-layout{
+            .text-content{
+                background-color: $lightSkyBlue;
+            }
+        }
+
 
     
     &.full-colour-layout{
