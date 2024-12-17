@@ -863,14 +863,20 @@ section.section_text_and_image{
             position: relative;
             z-index: 2;
 
-            img.landscape-img{
+            .landscape-img{
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
                 aspect-ratio: 2/1;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
             }
 
-            img.portrait-img{
+            .portrait-img{
                 display: none;
             }
         }
@@ -1009,20 +1015,28 @@ section.section_text_and_image{
                         
     
             
-                        img.landscape-img{
+                        .landscape-img{
                             display: none;
                             width: 100%;
                             height: 100%;
-                            object-fit: cover;
-                            object-position: center;
-                            object-position: left 10rem;
+
+                            img{
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                            }
                         }
             
-                        img.portrait-img{
+                        .portrait-img{
                             display: block;
                             height: 100%;
                             width: 100%;
-                            object-fit: cover;
+
+                            img{
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                            }
                         }
                     }
                 }

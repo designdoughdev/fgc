@@ -8265,14 +8265,20 @@ section.section_text_and_image .section-content.half-image-layout div.img-wrap {
   position: relative;
 }
 
-section.section_text_and_image .section-content.half-image-layout div.img-wrap img.landscape-img {
+section.section_text_and_image .section-content.half-image-layout div.img-wrap .landscape-img {
   object-fit: cover;
   aspect-ratio: 2;
   width: 100%;
   height: 100%;
 }
 
-section.section_text_and_image .section-content.half-image-layout div.img-wrap img.portrait-img {
+section.section_text_and_image .section-content.half-image-layout div.img-wrap .landscape-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+section.section_text_and_image .section-content.half-image-layout div.img-wrap .portrait-img {
   display: none;
 }
 
@@ -8421,20 +8427,28 @@ section.section_text_and_image .section-content.half-image-layout div.bars-conta
     display: block;
   }
 
-  section.section_text_and_image .section-content.half-image-layout div.img-wrap img.landscape-img {
-    object-fit: cover;
-    object-position: center;
-    object-position: left 10rem;
+  section.section_text_and_image .section-content.half-image-layout div.img-wrap .landscape-img {
     width: 100%;
     height: 100%;
     display: none;
   }
 
-  section.section_text_and_image .section-content.half-image-layout div.img-wrap img.portrait-img {
+  section.section_text_and_image .section-content.half-image-layout div.img-wrap .landscape-img img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+  }
+
+  section.section_text_and_image .section-content.half-image-layout div.img-wrap .portrait-img {
+    width: 100%;
+    height: 100%;
     display: block;
+  }
+
+  section.section_text_and_image .section-content.half-image-layout div.img-wrap .portrait-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 }
 

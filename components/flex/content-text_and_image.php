@@ -10,6 +10,7 @@ $layoutStyle = get_sub_field('layout_style');
 $colourScheme = get_sub_field('colour_scheme');
 $smallTitle = get_sub_field('small_title');
 $bigTitle = get_sub_field('big_title');
+$image = get_sub_field('image');
 $body = get_sub_field('body');
 $link = get_sub_field('link');
 $reverseLayout = get_sub_field('reverse');
@@ -678,22 +679,57 @@ endif
 
 
             <div class="text-content">
-                <h2 class="title-tag">Meet the commissioner</h2>
-                <h3 class="heading h2">Creating a legacy for Future Generations</h3>
-                <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua ut enim ad.</p>
-                <a href="/" class="link btn">About the Act<div class="btn-arrow-container"></div></a>
+                <?php if ($link || $smallTitle): ?>
+                <h2 class="title-tag"><?php if ($link) {
+                                                    echo $link_title;
+                                                } else {
+                                                    echo $smallTitle;
+                                                } ?></h2>
+                <?php endif;  // title tag
+                    ?>
+                <?php if ($bigTitle): ?>
+                <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
+                <?php endif; // big title 
+                    ?>
+                <?php if ($body): ?>
+                <p class="body"><?php echo $body; ?></p>
+                <?php endif; // body 
+                    ?>
+                <?php if ($link): ?>
+                <a href="/" class="link btn" target="<?php echo $link_target; ?>"><?php echo $link_title; ?><div
+                        class="btn-arrow-container"></div></a>
+                <?php endif; // link 
+                    ?>
 
             </div>
 
 
-
+            <?php if ($image): ?>
             <div class="img-wrap">
-                <img class="landscape-img"
-                    src=<?php echo get_template_directory_uri() . "/assets/images/jpg/derek-crop.jpg" ?> alt="">
-                <img class="portrait-img"
-                    src=<?php echo get_template_directory_uri() . "/assets/images/jpg/derek-crop.jpg" ?> alt="">
+                <div class="landscape-img">
+
+                    <?php $landscapeImage = array(
+                                'class' => '',
+                                'id' => $image['ID'],
+                                'alt' => $image['alt'],
+                                'lazyload' => false
+                            );
+                            echo build_srcset('standard', $landscapeImage); ?>
+
+                </div>
+                <div class="portrait-img">
+
+                    <?php $portraitImage = array(
+                                'class' => '',
+                                'id' => $image['ID'],
+                                'alt' => $image['alt'],
+                                'lazyload' => false
+                            );
+                            echo build_srcset('standard', $portraitImage); ?>
+
+                </div>
             </div>
+            <?php endif; ?>
 
             <div class="bars-container">
 
