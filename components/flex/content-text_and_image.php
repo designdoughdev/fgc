@@ -14,6 +14,7 @@ $image = get_sub_field('image');
 $body = get_sub_field('body');
 $link = get_sub_field('link');
 $reverseLayout = get_sub_field('reverse');
+$barsAtSide = get_sub_field('bars_at_side');
 
 
 
@@ -302,9 +303,14 @@ endif
 
     <!-------------------------- Layout Full Colour --------------------------------->
 
+
+
     <div class="full-colour-layout-wrapper">
         <div class="section-content full-colour-layout relative <?php echo $colourScheme ?>-style <?php if ($reverseLayout) {
                                                                                                             echo "reverse ";
+                                                                                                        }
+                                                                                                        if ($barsAtSide) {
+                                                                                                            echo " bars-at-side ";
                                                                                                         } ?>">
 
 
@@ -790,6 +796,9 @@ endif
                                                                                 echo $colourScheme;
                                                                             } ?>-style <?php if ($reverseLayout) {
                                                                                             echo " reverse ";
+                                                                                        }
+                                                                                        if ($barsAtSide) {
+                                                                                            echo " bars-at-side ";
                                                                                         } ?>" data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     style="background-image: url('<?php echo $image['url'] ?>') ;">
@@ -827,6 +836,9 @@ endif
                         <?php
                             // horizontal bars
                             echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars.svg');
+
+                            // vertical bars
+                            echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
                             ?>
 
                     </div>

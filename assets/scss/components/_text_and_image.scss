@@ -1083,6 +1083,11 @@ section.section_text_and_image{
                     margin-bottom: -0.2rem;
                     
                 }
+
+                svg.vertical-bars{
+                    display: none;
+                    
+                }
     
     
             }  
@@ -1147,6 +1152,24 @@ section.section_text_and_image{
                             }
                                 
                             
+                        }
+
+                        // bars at side option selected 
+
+                        div.bars-container{
+                            height: 100%;
+                            width: fit-content;
+
+                            svg.horizontal-bars{
+                                display: none;
+                            }
+
+                            svg.vertical-bars{
+                                display: block;
+                                height: 100%;
+                                width: fit-content;
+                            }
+
                         }
                         
                     }

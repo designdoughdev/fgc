@@ -2187,6 +2187,35 @@
                             "ui": 1
                         },
                         {
+                            "key": "field_6761917511f4d",
+                            "label": "Bars at Side",
+                            "name": "bars_at_side",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Enable to put vertical bar pattern at the side of the flex as opposed to the default position at the bottom",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_651438b594262",
+                                        "operator": "==",
+                                        "value": "full-image"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "allow_in_bindings": 0,
+                            "ui_on_text": "Bars at Side",
+                            "ui_off_text": "Bars at Bottom",
+                            "ui": 1
+                        },
+                        {
                             "key": "field_64f86e2e47f6a",
                             "label": "Small Title",
                             "name": "small_title",
@@ -7145,5 +7174,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1734436662
+    "modified": 1734447793
 }
