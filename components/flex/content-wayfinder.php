@@ -2,10 +2,12 @@
 ?>
 
 <?php // Retrieve the variable in the template part
-$layout = get_query_var('layout'); // non acf versions
+
 
 
 // acf fields
+$smallTitle = get_sub_field('small_title');
+$bigTitle = get_sub_field('big_title');
 $layoutStyle = get_sub_field('layout_style');
 ?>
 
@@ -100,16 +102,20 @@ $layoutStyle = get_sub_field('layout_style');
         </div>
 
 
-        <!-------------------------- Non acf version --------------------------------->
+        <!-------------------------- Sliding Rows Layout --------------------------------->
 
-        <?php elseif ($layout == 'sliding-rows'): ?>
+        <?php elseif ($layoutStyle == 'sliding-rows'): ?>
 
 
 
 
         <div class="text-content container" data-aos="fade-up">
-            <h2 class="title-tag">About us</h2>
-            <h3 class="heading h2">Inside the Commissioner's office: Where advocacy meets innovation</h3>
+            <?php if ($smallTitle): ?>
+            <h2 class="title-tag"><?php echo $smallTitle; ?></h2>
+            <?php endif; ?>
+            <?php if ($bigTitle): ?>
+            <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
+            <?php endif; ?>
 
         </div>
 
@@ -118,21 +124,36 @@ $layoutStyle = get_sub_field('layout_style');
             <ul>
 
                 <?php $colourSchemes = ['mint', 'yellow', 'blue', 'navy']; // The repeating set of values 
-                    $titles = ['How We Work', 'Tools', 'Case Studies', 'Careers']; // The repeating set of values 
                     ?>
 
 
-                <?php for ($x = 0; $x < 4; $x++) {
+                <?php while (have_rows('signposts')) : the_row(); ?>
 
-                        $colourScheme = $colourSchemes[$x % 4]; // Use modulo to cycle through values
-                        $title = $titles[$x % 4]; // Use modulo to cycle through values
+                <?php
+                        $linkID = get_sub_field('page_link');
+                        $textBody = get_sub_field('text_body');
+                        $image = get_sub_field('image');
+
+                        // Get the parent page ID of the current page
+                        $parentID = wp_get_post_parent_id($linkID);
+                        $parentTitle = $parentID ? get_the_title($parentID) : null;
+
+
+
+
+
+                        // set colour scheme variable to pass to template part
+                        $colourScheme =  $colourSchemes[(get_row_index() - 1) % 4];
+
+
 
 
                         // wayfinder element
-                    ?>
+                        ?>
 
                 <li>
-                    <a href="/" class="wayfinder-link-wrap <?php echo $colourScheme; ?>-style relative">
+                    <a href="<?php echo  get_the_permalink($linkID) ?>"
+                        class="wayfinder-link-wrap <?php echo $colourScheme; ?>-style relative">
 
 
                         <div class="wayfinder-row <?php echo $colourScheme; ?>-style  relative">
@@ -150,7 +171,7 @@ $layoutStyle = get_sub_field('layout_style');
                                 <div class="text-content">
                                     <p class=" tag h6">Explore</p>
                                     <h4 class="h1 heading">
-                                        <?php echo $title; ?>
+                                        <?php echo esc_attr(get_the_title($linkID)); ?>
                                     </h4>
                                 </div>
                                 <div class="arrow-content">
@@ -172,7 +193,8 @@ $layoutStyle = get_sub_field('layout_style');
 
                 </li>
 
-                <?php } ?>
+                <?php endwhile; ?>
+
             </ul>
 
         </div>

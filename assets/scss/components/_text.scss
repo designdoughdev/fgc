@@ -6,127 +6,193 @@
 section.section_text {
     @include sections_padding;
 
-    .flex-content{
-
+    .inner-container{
         /*------------------------ Default/Mobile Stlyes -------------------------------*/
 
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
 
-        .title-tag{
-            @include title_tag($darkNavy, $cobaltBlue);
-            margin-bottom: 1.7em;
+        .side-menu-container{
+
+            a.link{
+                @include body;
+                @include smallArrowBefore($skyBlue);
+                text-decoration: underline;
+                display: inline-block;
+                margin: 1em 2em 0.7em 0;
+                padding: 0.7em 0;
+            }
+
+            :not(:last-child){
+                border-bottom: 1px solid rgba(black, 0.1);
+
+            }
+            
         }
-    
-        // text editor styling
-    
-        .text-editor{
-    
-            & > * {
-                margin: 1em 0;
-            }
-    
-            h1{
-                @include h-one;
-            }
-            h2{
-                @include h-two;
-            }
-            h3{
-                @include h-three;
-                color: $cobaltBlue;
-            }
-            h4{
-                @include h-four;
-            }
-            h5{
-                @include h-five;
-            }
-            h6{
-                @include h-six;
-            }
-            p{
-                @include body;
-                margin-bottom: 1em;
-            }
-            blockquote {
-                @include border-radius;
-                background-color: $lightLightSkyBlue;
-                font-weight: 700;
-                padding: 0.5em 0.75em 0.55em 0.75em;
+        
 
-            }
-              
-              
-            strong, b{
-                font-weight: 700;
-            }
-            
-            em, i{
-                font-weight: 700;
-            }
-            
-            
-            ol, ul, li {
-                @include body;
-            }
-            
 
+
+        .flex-content{
             
-            ul li {
-            list-style-type:disc;
-            margin-left: 1rem;
+            order: 2;
+
+            .title-tag{
+                @include title_tag($darkNavy, $cobaltBlue);
+                margin-bottom: 1.7em;
             }
-            
-            ol li {
-            list-style-type:decimal;
-            margin-left: 1rem;
-                &::marker{
+        
+            // text editor styling
+        
+            .text-editor{
+        
+                & > * {
+                    margin: 1em 0;
+                }
+        
+                h1{
                     @include h-one;
-                    @include respond-to(md){
-                        @include h-two;
+                }
+                h2{
+                    @include h-two;
+                }
+                h3{
+                    @include h-three;
+                    color: $cobaltBlue;
+                }
+                h4{
+                    @include h-four;
+                }
+                h5{
+                    @include h-five;
+                }
+                h6{
+                    @include h-six;
+                }
+                p{
+                    @include body;
+                    margin-bottom: 1em;
+                }
+                blockquote {
+                    @include border-radius;
+                    background-color: $lightLightSkyBlue;
+                    font-weight: 700;
+                    padding: 0.5em 0.75em 0.55em 0.75em;
+    
+                }
+                  
+                  
+                strong, b{
+                    font-weight: 700;
+                }
+                
+                em, i{
+                    font-weight: 700;
+                }
+                
+                
+                ol, ul, li {
+                    @include body;
+                }
+                
+    
+                
+                ul li {
+                list-style-type:disc;
+                margin-left: 1rem;
+                }
+                
+                ol li {
+                list-style-type:decimal;
+                margin-left: 1rem;
+                    &::marker{
+                        @include h-one;
+                        @include respond-to(md){
+                            @include h-two;
+                        }
+                        color: $darkNavy;
                     }
+                }
+                
+                li:last-child {
+                padding-bottom: 0.5rem;
+                }
+                
+                
+                a {
                     color: $darkNavy;
-                }
-            }
-            
-            li:last-child {
-            padding-bottom: 0.5rem;
-            }
-            
-            
-            a {
-                color: $darkNavy;
-                text-decoration: none;
-                position: relative;
-                font-weight: 600;
-                @include transition;
-                &:before{
-                    content:"";
-                    height: 1px;
-                    width: 0%;
-                    position: absolute;
-                    bottom: 0;
-                    @include transition;
-                }
-                &:hover{
+                    text-decoration: none;
+                    position: relative;
+                    font-weight: 600;
                     @include transition;
                     &:before{
-                        width: 100%;
+                        content:"";
+                        height: 1px;
+                        width: 0%;
+                        position: absolute;
+                        bottom: 0;
                         @include transition;
                     }
+                    &:hover{
+                        @include transition;
+                        &:before{
+                            width: 100%;
+                            @include transition;
+                        }
+                    }
                 }
+                  
             }
-              
-        }
+    
+            .links-container{
+                @include bodyLarge;
+                margin: 2em 0;
+                padding: 0.5em 2em;
+                background-color: $lightSkyBlue;
+    
+                a.link{
+                    @include body;
+                    @include smallArrowBefore($skyBlue);
+                    text-decoration: underline;
+                    display: inline-block;
+                    margin: 1em 2em 0.7em 0;
+                }
+                
+            }
 
-        /*------------------------ Desktop Styles -------------------------------*/
+        }
+    
+            /*------------------------ Desktop Styles -------------------------------*/
+    
 
         &{
             @include respond-to(md){
-                max-width: 75%;
+
+                flex-direction: row;
+                gap: 5vw;
+
+                .flex-content{
+                    order: 1;
+                    max-width: 65%;
+
+                }
+
+                .side-menu-container{
+                    order: 2;
+
+                    a.link{
+                        display: block;
+                    }
+                }
+
             }
         }
 
+
     }
+
+
 
 
 

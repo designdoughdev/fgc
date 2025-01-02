@@ -1062,6 +1062,7 @@ section.section_text_and_image{
                 padding: 1.5rem 1rem 0 1rem;
                 @include mobile_text_col_spacing;
                 z-index: 3;
+
             
     
             }
@@ -1073,6 +1074,7 @@ section.section_text_and_image{
                 right: 0;
                 width: 100%;
                 height: fit-content;
+                opacity: 0.6;
                 // display: flex;
                 // justify-content: flex-end;
     
@@ -1156,24 +1158,30 @@ section.section_text_and_image{
 
                         // bars at side option selected 
 
-                        div.bars-container{
-                            height: 100%;
-                            width: fit-content;
-                            max-width: 25%;
-                            margin-left: auto;
-                            overflow-x: clip;
+                        &.bars-at-side{
 
-                            svg.horizontal-bars{
-                                display: none;
-                            }
-
-                            svg.vertical-bars{
-                                display: block;
+                            div.bars-container{
                                 height: 100%;
                                 width: fit-content;
+                                max-width: 25%;
+                                margin-left: auto;
+                                overflow-x: clip;
+    
+                                svg.horizontal-bars{
+                                    display: none;
+                                }
+    
+                                svg.vertical-bars{
+                                    display: block;
+                                    height: 100%;
+                                    width: fit-content;
+                                }
+    
                             }
 
                         }
+
+
                         
                     }
     

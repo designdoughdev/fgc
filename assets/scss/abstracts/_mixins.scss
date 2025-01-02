@@ -2259,6 +2259,41 @@ body[data-theme='light'] {
     } 
 }
 
+@mixin smallArrowBefore($colour){
+    &:before {
+        content: "";
+        display: inline-block; 
+        background-image: url('/assets/images/svg/arrow-right.svg'); 
+        background-size: 38%; 
+        background-repeat: no-repeat;           
+        background-position: center;
+        background-color: $colour;
+        width: 20px;
+        height: 20px;
+        margin-right: 1em;
+        vertical-align: middle;
+
+    }
+    
+}
+
+@mixin smallArrowAfter($colour){
+    &:after {
+        content: "";
+        display: inline-block; 
+        background-image: url('/assets/images/svg/arrow-right.svg'); 
+        background-size: 38%; 
+        background-repeat: no-repeat;           
+        background-position: center;
+        background-color: $colour;
+        width: 20px;
+        height: 20px;
+        margin-left: 1em;
+        vertical-align: middle;
+
+    }
+}
+
 @mixin tag{
     @include h-six;
     display: inline-block;
@@ -2677,8 +2712,25 @@ body[data-theme='light'] {
 
     // full image layout
     &.full-image-layout{
+        .title-tag{
+            @include title_tag(white, $skyBlue);
+        }
         .text-content{
-            background-color: $lightNavy;
+            background-color: $darkNavy;
+
+            .heading, .body{
+                color: white!important;
+            }
+            
+        }
+        a.btn{
+            background-color: $cobaltBlue;
+            color: white;
+        }
+        svg{
+            path{
+                fill: $skyBlue;
+            }
         }
         
     }
@@ -3303,8 +3355,9 @@ body[data-theme='light'] {
     @include border-radius;
     padding: 0.5em 0.9em;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.5rem;
     width: fit-content;
     margin-bottom: 1.5rem;
 

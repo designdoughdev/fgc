@@ -3292,8 +3292,64 @@ body[data-theme="light"] ::selection {
   fill: #f3f4f6 !important;
 }
 
-.navy-style .triangle, .navy-style.full-image-layout .text-content {
+.navy-style .triangle {
   background-color: #f3f4f6;
+}
+
+.navy-style.full-image-layout .title-tag {
+  letter-spacing: normal;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-indent: -.59727rem;
+  margin-bottom: 15px;
+  padding-left: .59727rem;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+  position: relative;
+}
+
+@media only screen and (width >= 768px) {
+  .navy-style.full-image-layout .title-tag {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  .navy-style.full-image-layout .title-tag {
+    font-size: .9375rem;
+  }
+}
+
+.navy-style.full-image-layout .title-tag:before {
+  content: "";
+  vertical-align: middle;
+  background-color: #46d1ee;
+  border-radius: .75rem;
+  width: .22727rem;
+  height: .22727rem;
+  margin-right: .37rem;
+  display: inline-block;
+}
+
+.navy-style.full-image-layout .text-content {
+  background-color: #112343;
+}
+
+.navy-style.full-image-layout .text-content .heading, .navy-style.full-image-layout .text-content .body {
+  color: #fff !important;
+}
+
+.navy-style.full-image-layout a.btn {
+  color: #fff;
+  background-color: #2a5ad5;
+}
+
+.navy-style.full-image-layout svg path {
+  fill: #46d1ee;
 }
 
 .navy-style.full-colour-layout {
@@ -8483,6 +8539,7 @@ section.section_text_and_image .full-image-layout-content-wrapper .section-conte
 }
 
 section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout div.bars-container {
+  opacity: .6;
   width: 100%;
   height: fit-content;
   position: absolute;
@@ -8565,7 +8622,7 @@ section.section_text_and_image .full-image-layout-content-wrapper .section-conte
     margin: 0 0 8rem auto;
   }
 
-  section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout div.bars-container {
+  section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout.bars-at-side div.bars-container {
     width: fit-content;
     max-width: 25%;
     height: 100%;
@@ -8573,11 +8630,11 @@ section.section_text_and_image .full-image-layout-content-wrapper .section-conte
     overflow-x: clip;
   }
 
-  section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout div.bars-container svg.horizontal-bars {
+  section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout.bars-at-side div.bars-container svg.horizontal-bars {
     display: none;
   }
 
-  section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout div.bars-container svg.vertical-bars {
+  section.section_text_and_image .full-image-layout-content-wrapper .section-content.full-image-layout.bars-at-side div.bars-container svg.vertical-bars {
     width: fit-content;
     height: 100%;
     display: block;
@@ -9133,7 +9190,60 @@ section.section_text {
   }
 }
 
-section.section_text .flex-content .title-tag {
+section.section_text .inner-container {
+  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+}
+
+section.section_text .inner-container .side-menu-container a.link {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  margin: 1em 2em .7em 0;
+  padding: .7em 0;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .9rem;
+  font-weight: normal;
+  line-height: 143%;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .inner-container .side-menu-container a.link {
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text .inner-container .side-menu-container a.link {
+    font-size: 1rem;
+  }
+}
+
+section.section_text .inner-container .side-menu-container a.link:before {
+  content: "";
+  vertical-align: middle;
+  background-color: #46d1ee;
+  background-image: url("../arrow-right.99b6cc4c.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 38%;
+  width: 20px;
+  height: 20px;
+  margin-right: 1em;
+  display: inline-block;
+}
+
+section.section_text .inner-container .side-menu-container :not(:last-child) {
+  border-bottom: 1px solid #0000001a;
+}
+
+section.section_text .inner-container .flex-content {
+  order: 2;
+}
+
+section.section_text .inner-container .flex-content .title-tag {
   letter-spacing: normal;
   color: #112343;
   text-transform: uppercase;
@@ -9150,18 +9260,18 @@ section.section_text .flex-content .title-tag {
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text .flex-content .title-tag {
+  section.section_text .inner-container .flex-content .title-tag {
     font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_text .flex-content .title-tag {
+  section.section_text .inner-container .flex-content .title-tag {
     font-size: .9375rem;
   }
 }
 
-section.section_text .flex-content .title-tag:before {
+section.section_text .inner-container .flex-content .title-tag:before {
   content: "";
   vertical-align: middle;
   background-color: #2a5ad5;
@@ -9172,11 +9282,11 @@ section.section_text .flex-content .title-tag:before {
   display: inline-block;
 }
 
-section.section_text .flex-content .text-editor > * {
+section.section_text .inner-container .flex-content .text-editor > * {
   margin: 1em 0;
 }
 
-section.section_text .flex-content .text-editor h1 {
+section.section_text .inner-container .flex-content .text-editor h1 {
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
@@ -9188,18 +9298,18 @@ section.section_text .flex-content .text-editor h1 {
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text .flex-content .text-editor h1 {
+  section.section_text .inner-container .flex-content .text-editor h1 {
     font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_text .flex-content .text-editor h1 {
+  section.section_text .inner-container .flex-content .text-editor h1 {
     font-size: 3.75rem;
   }
 }
 
-section.section_text .flex-content .text-editor h2 {
+section.section_text .inner-container .flex-content .text-editor h2 {
   letter-spacing: -.0300032em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
@@ -9211,18 +9321,18 @@ section.section_text .flex-content .text-editor h2 {
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text .flex-content .text-editor h2 {
+  section.section_text .inner-container .flex-content .text-editor h2 {
     font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_text .flex-content .text-editor h2 {
+  section.section_text .inner-container .flex-content .text-editor h2 {
     font-size: 2.8125rem;
   }
 }
 
-section.section_text .flex-content .text-editor h3 {
+section.section_text .inner-container .flex-content .text-editor h3 {
   letter-spacing: -.03em;
   color: #2a5ad5;
   -webkit-font-smoothing: antialiased;
@@ -9234,18 +9344,18 @@ section.section_text .flex-content .text-editor h3 {
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text .flex-content .text-editor h3 {
+  section.section_text .inner-container .flex-content .text-editor h3 {
     font-size: clamp(1.35rem, 1.35rem + 1vw, 2.375rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_text .flex-content .text-editor h3 {
+  section.section_text .inner-container .flex-content .text-editor h3 {
     font-size: 2.375rem;
   }
 }
 
-section.section_text .flex-content .text-editor h4 {
+section.section_text .inner-container .flex-content .text-editor h4 {
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
@@ -9256,18 +9366,18 @@ section.section_text .flex-content .text-editor h4 {
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text .flex-content .text-editor h4 {
+  section.section_text .inner-container .flex-content .text-editor h4 {
     font-size: clamp(1.2rem, 1.2rem + 1vw, 1.75rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_text .flex-content .text-editor h4 {
+  section.section_text .inner-container .flex-content .text-editor h4 {
     font-size: 1.75rem;
   }
 }
 
-section.section_text .flex-content .text-editor h5 {
+section.section_text .inner-container .flex-content .text-editor h5 {
   letter-spacing: normal;
   color: #112343;
   text-transform: uppercase;
@@ -9279,18 +9389,18 @@ section.section_text .flex-content .text-editor h5 {
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text .flex-content .text-editor h5 {
+  section.section_text .inner-container .flex-content .text-editor h5 {
     font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_text .flex-content .text-editor h5 {
+  section.section_text .inner-container .flex-content .text-editor h5 {
     font-size: .9375rem;
   }
 }
 
-section.section_text .flex-content .text-editor h6 {
+section.section_text .inner-container .flex-content .text-editor h6 {
   letter-spacing: normal;
   color: #112343;
   -webkit-font-smoothing: antialiased;
@@ -9303,18 +9413,18 @@ section.section_text .flex-content .text-editor h6 {
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text .flex-content .text-editor h6 {
+  section.section_text .inner-container .flex-content .text-editor h6 {
     font-size: clamp(.5875rem, .5875rem + 1vw, .6875rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_text .flex-content .text-editor h6 {
+  section.section_text .inner-container .flex-content .text-editor h6 {
     font-size: .6875rem;
   }
 }
 
-section.section_text .flex-content .text-editor p {
+section.section_text .inner-container .flex-content .text-editor p {
   -webkit-font-smoothing: antialiased;
   color: #112343;
   margin-bottom: 1em;
@@ -9325,29 +9435,29 @@ section.section_text .flex-content .text-editor p {
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text .flex-content .text-editor p {
+  section.section_text .inner-container .flex-content .text-editor p {
     font-size: clamp(.9rem, .9rem + 1vw, 1rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_text .flex-content .text-editor p {
+  section.section_text .inner-container .flex-content .text-editor p {
     font-size: 1rem;
   }
 }
 
-section.section_text .flex-content .text-editor blockquote {
+section.section_text .inner-container .flex-content .text-editor blockquote {
   background-color: #daf6fc;
   border-radius: .13636rem;
   padding: .5em .75em .55em;
   font-weight: 700;
 }
 
-section.section_text .flex-content .text-editor strong, section.section_text .flex-content .text-editor b, section.section_text .flex-content .text-editor em, section.section_text .flex-content .text-editor i {
+section.section_text .inner-container .flex-content .text-editor strong, section.section_text .inner-container .flex-content .text-editor b, section.section_text .inner-container .flex-content .text-editor em, section.section_text .inner-container .flex-content .text-editor i {
   font-weight: 700;
 }
 
-section.section_text .flex-content .text-editor ol, section.section_text .flex-content .text-editor ul, section.section_text .flex-content .text-editor li {
+section.section_text .inner-container .flex-content .text-editor ol, section.section_text .inner-container .flex-content .text-editor ul, section.section_text .inner-container .flex-content .text-editor li {
   -webkit-font-smoothing: antialiased;
   color: #112343;
   font-family: Messina Sans Book, sans-serif;
@@ -9357,28 +9467,28 @@ section.section_text .flex-content .text-editor ol, section.section_text .flex-c
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text .flex-content .text-editor ol, section.section_text .flex-content .text-editor ul, section.section_text .flex-content .text-editor li {
+  section.section_text .inner-container .flex-content .text-editor ol, section.section_text .inner-container .flex-content .text-editor ul, section.section_text .inner-container .flex-content .text-editor li {
     font-size: clamp(.9rem, .9rem + 1vw, 1rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_text .flex-content .text-editor ol, section.section_text .flex-content .text-editor ul, section.section_text .flex-content .text-editor li {
+  section.section_text .inner-container .flex-content .text-editor ol, section.section_text .inner-container .flex-content .text-editor ul, section.section_text .inner-container .flex-content .text-editor li {
     font-size: 1rem;
   }
 }
 
-section.section_text .flex-content .text-editor ul li {
+section.section_text .inner-container .flex-content .text-editor ul li {
   margin-left: 1rem;
   list-style-type: disc;
 }
 
-section.section_text .flex-content .text-editor ol li {
+section.section_text .inner-container .flex-content .text-editor ol li {
   margin-left: 1rem;
   list-style-type: decimal;
 }
 
-section.section_text .flex-content .text-editor ol li::marker {
+section.section_text .inner-container .flex-content .text-editor ol li::marker {
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
@@ -9390,19 +9500,19 @@ section.section_text .flex-content .text-editor ol li::marker {
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text .flex-content .text-editor ol li::marker {
+  section.section_text .inner-container .flex-content .text-editor ol li::marker {
     font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_text .flex-content .text-editor ol li::marker {
+  section.section_text .inner-container .flex-content .text-editor ol li::marker {
     font-size: 3.75rem;
   }
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text .flex-content .text-editor ol li::marker {
+  section.section_text .inner-container .flex-content .text-editor ol li::marker {
     letter-spacing: -.0300032em;
     color: #112343;
     -webkit-font-smoothing: antialiased;
@@ -9415,22 +9525,22 @@ section.section_text .flex-content .text-editor ol li::marker {
 }
 
 @media only screen and (width >= 768px) and (width >= 768px) {
-  section.section_text .flex-content .text-editor ol li::marker {
+  section.section_text .inner-container .flex-content .text-editor ol li::marker {
     font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
   }
 }
 
 @media only screen and (width >= 768px) and (width >= 1600px) {
-  section.section_text .flex-content .text-editor ol li::marker {
+  section.section_text .inner-container .flex-content .text-editor ol li::marker {
     font-size: 2.8125rem;
   }
 }
 
-section.section_text .flex-content .text-editor li:last-child {
+section.section_text .inner-container .flex-content .text-editor li:last-child {
   padding-bottom: .5rem;
 }
 
-section.section_text .flex-content .text-editor a {
+section.section_text .inner-container .flex-content .text-editor a {
   color: #112343;
   -o-transition: .4s;
   font-weight: 600;
@@ -9439,7 +9549,7 @@ section.section_text .flex-content .text-editor a {
   position: relative;
 }
 
-section.section_text .flex-content .text-editor a:before {
+section.section_text .inner-container .flex-content .text-editor a:before {
   content: "";
   -o-transition: .4s;
   width: 0%;
@@ -9449,20 +9559,96 @@ section.section_text .flex-content .text-editor a:before {
   bottom: 0;
 }
 
-section.section_text .flex-content .text-editor a:hover {
+section.section_text .inner-container .flex-content .text-editor a:hover {
   -o-transition: .4s;
   transition: all .4s;
 }
 
-section.section_text .flex-content .text-editor a:hover:before {
+section.section_text .inner-container .flex-content .text-editor a:hover:before {
   -o-transition: .4s;
   width: 100%;
   transition: all .4s;
 }
 
+section.section_text .inner-container .flex-content .links-container {
+  letter-spacing: -.03em;
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  background-color: #cdf5ff;
+  margin: 2em 0;
+  padding: .5em 2em;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: 1.1rem;
+  line-height: normal;
+}
+
 @media only screen and (width >= 768px) {
-  section.section_text .flex-content {
-    max-width: 75%;
+  section.section_text .inner-container .flex-content .links-container {
+    font-size: clamp(1.1rem, 1.1rem + 1vw, 1.125rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text .inner-container .flex-content .links-container {
+    font-size: 1.125rem;
+  }
+}
+
+section.section_text .inner-container .flex-content .links-container a.link {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  margin: 1em 2em .7em 0;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .9rem;
+  font-weight: normal;
+  line-height: 143%;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .inner-container .flex-content .links-container a.link {
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text .inner-container .flex-content .links-container a.link {
+    font-size: 1rem;
+  }
+}
+
+section.section_text .inner-container .flex-content .links-container a.link:before {
+  content: "";
+  vertical-align: middle;
+  background-color: #46d1ee;
+  background-image: url("../arrow-right.99b6cc4c.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 38%;
+  width: 20px;
+  height: 20px;
+  margin-right: 1em;
+  display: inline-block;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .inner-container {
+    flex-direction: row;
+    gap: 5vw;
+  }
+
+  section.section_text .inner-container .flex-content {
+    order: 1;
+    max-width: 65%;
+  }
+
+  section.section_text .inner-container .side-menu-container {
+    order: 2;
+  }
+
+  section.section_text .inner-container .side-menu-container a.link {
+    display: block;
   }
 }
 
@@ -10943,7 +11129,7 @@ header .header-bar .main-header .main-header-content .main-header-right .hamburg
   -webkit-font-smoothing: antialiased;
   color: #112343;
   cursor: pointer;
-  background-color: #1addae;
+  background-color: #fff;
   border: none;
   place-content: center;
   width: fit-content;
@@ -11235,8 +11421,9 @@ header section.hero-container #hero-overlay .hero-grid .hero-text-container {
 header section.hero-container #hero-overlay .hero-grid .hero-text-container .breadcrumbs-container {
   background-color: #fff;
   border-radius: .13636rem;
+  flex-wrap: wrap;
   align-items: center;
-  gap: .4rem;
+  gap: .5rem;
   width: fit-content;
   margin-bottom: 1.5rem;
   padding: .5em .9em;
@@ -11580,8 +11767,9 @@ header section.hero-container.level-two-layout .hero-img.img-wrap .breadcrumbs-o
 header section.hero-container.level-two-layout .hero-img.img-wrap .breadcrumbs-outer-wrapper .breadcrumbs-container {
   background-color: #fff;
   border-radius: .13636rem;
+  flex-wrap: wrap;
   align-items: center;
-  gap: .4rem;
+  gap: .5rem;
   width: fit-content;
   margin-bottom: 1.5rem;
   padding: .5em .9em;
@@ -11775,8 +11963,9 @@ header .banner-container.level-three-layout .text-content {
 header .banner-container.level-three-layout .text-content .breadcrumbs-container {
   background-color: #fff;
   border-radius: .13636rem;
+  flex-wrap: wrap;
   align-items: center;
-  gap: .4rem;
+  gap: .5rem;
   width: fit-content;
   margin-bottom: 1.5rem;
   padding: .5em .9em;
