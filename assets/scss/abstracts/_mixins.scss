@@ -2511,6 +2511,13 @@ body[data-theme='light'] {
         }
 
     }
+
+    // staff card - team grid
+    &.staff-card-wrap{
+        div.team-img-wrap{
+            border-bottom: .4rem solid $yellow;
+        }
+    }
 }
 
 .yellow-style{
@@ -2805,7 +2812,7 @@ body[data-theme='light'] {
 
     }
     div.team-img-wrap{
-        border-color: $mintGreen;
+        border-bottom: .4rem solid $mintGreen;
 
         svg path{
             fill: $mintGreen;
@@ -2876,7 +2883,7 @@ body[data-theme='light'] {
 
     }
     div.team-img-wrap{
-        border-color: $skyBlue
+        border-bottom: .4rem solid $skyBlue;
 
         svg path{
             fill: $skyBlue;
@@ -2947,7 +2954,7 @@ body[data-theme='light'] {
 
     }
     div.team-img-wrap{
-        border-color: $yellow;
+        border-bottom: .4rem solid $yellow;
 
         svg path{
             fill: $yellow;

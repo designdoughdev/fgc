@@ -22,8 +22,12 @@ $big_title = get_sub_field('big_title');
                                     } ?>">
 
             <div class="title-wrap">
+                <?php if ($small_title): ?>
                 <h2 class="title-tag"><?php echo $small_title; ?></h2>
+                <?php endif; ?>
+                <?php if ($big_title): ?>
                 <h3 class="heading"><?php echo $big_title; ?></h3>
+                <?php endif; ?>
             </div>
 
             <?php if (have_rows('team_block')) : while (have_rows('team_block')) : the_row();

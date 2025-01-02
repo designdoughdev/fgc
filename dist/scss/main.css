@@ -3030,6 +3030,10 @@ body[data-theme="light"] ::selection {
   background-color: #fbdb34 !important;
 }
 
+.yellow-style.staff-card-wrap div.team-img-wrap {
+  border-bottom: .4rem solid #fbdb34;
+}
+
 .mint-style {
   background-color: #d1f8ee;
 }
@@ -3429,7 +3433,7 @@ body[data-theme="light"] ::selection {
 }
 
 .mint-scheme div.team-img-wrap {
-  border-color: #1addae;
+  border-bottom: .4rem solid #1addae;
 }
 
 .mint-scheme div.team-img-wrap svg path {
@@ -3469,8 +3473,11 @@ body[data-theme="light"] ::selection {
 }
 
 .blue-scheme div.team-img-wrap {
-  border-color: #46d1ee svg path;
-  border-color-fill: #46d1ee;
+  border-bottom: .4rem solid #46d1ee;
+}
+
+.blue-scheme div.team-img-wrap svg path {
+  fill: #46d1ee;
 }
 
 .blue-scheme button.btn-vtwo div.btn-arrow-container, .blue-scheme .post-link {
@@ -3506,7 +3513,7 @@ body[data-theme="light"] ::selection {
 }
 
 .yellow-scheme div.team-img-wrap {
-  border-color: #fbdb34;
+  border-bottom: .4rem solid #fbdb34;
 }
 
 .yellow-scheme div.team-img-wrap svg path {
@@ -6233,6 +6240,10 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-contain
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-container > :nth-child(4n+1) .post-card.testimonial p.quote-info:before {
   background-color: #fbdb34 !important;
+}
+
+section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-container > :nth-child(4n+1) .post-card.staff-card-wrap div.team-img-wrap {
+  border-bottom: .4rem solid #fbdb34;
 }
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-container > :nth-child(4n+2) .post-card {
@@ -10024,7 +10035,6 @@ section.section_testimonial .container-wrapper .section-content .text-content {
 .section_team-grid .section-content .team-grid .staff-card-wrap .team-img-wrap {
   -webkit-font-smoothing: antialiased;
   color: #112343;
-  border-bottom: .4rem solid #1addae;
   width: 100%;
   height: fit-content;
   margin-bottom: 2.38em;
