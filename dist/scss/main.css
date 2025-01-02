@@ -9186,18 +9186,12 @@ section.section_wayfinder .section-content .wayfinder-container.cards-layout .wa
 }
 
 section.section_text {
-  padding: 7vw 0;
-}
-
-@media only screen and (width >= 1200px) {
-  section.section_text {
-    padding: 6vw 0;
-  }
+  padding: 5vw 0;
 }
 
 @media only screen and (width >= 1600px) {
   section.section_text {
-    padding: 5vw 0;
+    padding: 3vw 0;
   }
 }
 

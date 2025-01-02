@@ -4,7 +4,7 @@
 @use '../utils/grid' as *;
 
 section.section_text {
-    @include sections_padding;
+    @include sections_padding_small;
 
     .inner-container{
         /*------------------------ Default/Mobile Stlyes -------------------------------*/

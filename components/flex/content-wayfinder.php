@@ -169,7 +169,12 @@ $layoutStyle = get_sub_field('layout_style');
 
                             <div class="row-content">
                                 <div class="text-content">
-                                    <p class=" tag h6">Explore</p>
+                                    <p class=" tag h6"><?php if ($parentTitle): ?>
+                                        <?php echo esc_html($parentTitle); ?>
+                                        <?php else: ?>
+                                        FGC
+                                        <?php endif; ?></p>
+                                    </p>
                                     <h4 class="h1 heading">
                                         <?php echo esc_attr(get_the_title($linkID)); ?>
                                     </h4>
