@@ -94,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-//------------------------ Mobile menu -------------------------------//
 
 
 //------------------------ Mobile menu -------------------------------//
@@ -440,13 +439,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // header menu
 
-const headerMenu = document.querySelector('.header-menu-btns');
+const headerMenu = document.querySelector('.main-header-centre');
 
 if(headerMenu){
 
    document.addEventListener('mouseover', (e)=> {
       
-      const mainHeader = document.querySelector('main-header');
       const actionNav = document.querySelector('.action-nav');
 
 

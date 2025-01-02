@@ -641,7 +641,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
     });
 });
 //------------------------ Mobile menu -------------------------------//
-//------------------------ Mobile menu -------------------------------//
 document.addEventListener("DOMContentLoaded", ()=>{
     const mobileNav = document.querySelector(".mobile-nav");
     const hamburgerBtn = document.querySelector(".hamburger-btn");
@@ -871,9 +870,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 //------------------------  -------------------------------//
 // header menu
-const headerMenu = document.querySelector(".header-menu-btns");
+const headerMenu = document.querySelector(".main-header-centre");
 if (headerMenu) document.addEventListener("mouseover", (e)=>{
-    const mainHeader = document.querySelector("main-header");
     const actionNav = document.querySelector(".action-nav");
     // display menu block
     if (headerMenu.contains(e.target)) actionNav.classList.add("show");
