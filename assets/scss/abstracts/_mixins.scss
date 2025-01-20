@@ -1264,6 +1264,26 @@ $conpad : 1.5625vw;
 
 }
 
+@mixin btn_plain_deselected_dropdown{
+    @include btn_plain_deselected;
+    width: max-content;
+    padding: 1.3em 0 1.3em 1.5em;
+
+    &:after{
+        content: "";
+        display: inline-block; 
+        background-image: url('/assets/images/svg/chevron-down-dark.svg'); 
+        background-size: contain; 
+        background-repeat: no-repeat;
+        height: 0.5rem;
+        width: 1rem;
+        margin-right: 1.5em;
+        
+
+       
+    }
+}
+
 
 .btn_plain_wide{
     @include btn_plain;
@@ -2239,6 +2259,41 @@ body[data-theme='light'] {
     } 
 }
 
+@mixin smallArrowBefore($colour){
+    &:before {
+        content: "";
+        display: inline-block; 
+        background-image: url('/assets/images/svg/arrow-right.svg'); 
+        background-size: 38%; 
+        background-repeat: no-repeat;           
+        background-position: center;
+        background-color: $colour;
+        width: 20px;
+        height: 20px;
+        margin-right: 1em;
+        vertical-align: middle;
+
+    }
+    
+}
+
+@mixin smallArrowAfter($colour){
+    &:after {
+        content: "";
+        display: inline-block; 
+        background-image: url('/assets/images/svg/arrow-right.svg'); 
+        background-size: 38%; 
+        background-repeat: no-repeat;           
+        background-position: center;
+        background-color: $colour;
+        width: 20px;
+        height: 20px;
+        margin-left: 1em;
+        vertical-align: middle;
+
+    }
+}
+
 @mixin tag{
     @include h-six;
     display: inline-block;
@@ -2456,6 +2511,13 @@ body[data-theme='light'] {
         }
 
     }
+
+    // staff card - team grid
+    &.staff-card-wrap{
+        div.team-img-wrap{
+            border-bottom: .4rem solid $yellow;
+        }
+    }
 }
 
 .yellow-style{
@@ -2566,6 +2628,13 @@ body[data-theme='light'] {
         background-color: $lightSkyBlue;
     }
 
+        // full image layout
+        &.full-image-layout{
+            .text-content{
+                background-color: $lightSkyBlue;
+            }
+        }
+
 
     
     &.full-colour-layout{
@@ -2650,8 +2719,25 @@ body[data-theme='light'] {
 
     // full image layout
     &.full-image-layout{
+        .title-tag{
+            @include title_tag(white, $skyBlue);
+        }
         .text-content{
-            background-color: $lightNavy;
+            background-color: $darkNavy;
+
+            .heading, .body{
+                color: white!important;
+            }
+            
+        }
+        a.btn{
+            background-color: $cobaltBlue;
+            color: white;
+        }
+        svg{
+            path{
+                fill: $skyBlue;
+            }
         }
         
     }
@@ -2726,7 +2812,7 @@ body[data-theme='light'] {
 
     }
     div.team-img-wrap{
-        border-color: $mintGreen;
+        border-bottom: .4rem solid $mintGreen;
 
         svg path{
             fill: $mintGreen;
@@ -2797,7 +2883,7 @@ body[data-theme='light'] {
 
     }
     div.team-img-wrap{
-        border-color: $skyBlue
+        border-bottom: .4rem solid $skyBlue;
 
         svg path{
             fill: $skyBlue;
@@ -2868,7 +2954,7 @@ body[data-theme='light'] {
 
     }
     div.team-img-wrap{
-        border-color: $yellow;
+        border-bottom: .4rem solid $yellow;
 
         svg path{
             fill: $yellow;
@@ -3268,6 +3354,47 @@ body[data-theme='light'] {
 
             }
         }
+    }
+  }
+
+  @mixin breadcrumbs{
+    background-color: white;
+    @include border-radius;
+    padding: 0.5em 0.9em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    margin-bottom: 1.5rem;
+
+    .home-icon{
+        width: 1rem;
+        height: auto;
+    }
+    
+
+
+    a{
+        @include h-five;
+        text-transform: none;
+        font-family: $primary-font;
+        font-weight: bold;
+        text-decoration: underline;
+
+        &.current{
+            font-weight: 300;
+            text-decoration: none;
+        }
+    }
+
+    p.root-ancestor{
+        @include h-five;
+        text-transform: none;
+        font-family: $primary-font;
+        font-weight: bold;
+        
+
     }
   }
   

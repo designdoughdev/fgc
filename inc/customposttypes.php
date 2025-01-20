@@ -137,7 +137,7 @@ add_action('init', 'create_Topic_taxonomy');
 function create_type_taxonomy()
 {
     $labels = array(
-        'name'              => _x('types', 'taxonomy general name', 'textdomain'),
+        'name'              => _x('Types', 'taxonomy general name', 'textdomain'),
         'singular_name'     => _x('type', 'taxonomy singular name', 'textdomain'),
         'search_items'      => __('Search types', 'textdomain'),
         'all_items'         => __('All Types', 'textdomain'),
@@ -165,7 +165,7 @@ add_action('init', 'create_type_taxonomy');
 function create_postcode_taxonomy()
 {
     $labels = array(
-        'name'              => _x('postcodes', 'taxonomy general name', 'textdomain'),
+        'name'              => _x('Postcodes', 'taxonomy general name', 'textdomain'),
         'singular_name'     => _x('postcode', 'taxonomy singular name', 'textdomain'),
         'search_items'      => __('Search Postcodes', 'textdomain'),
         'all_items'         => __('All Postcodes', 'textdomain'),
@@ -180,7 +180,7 @@ function create_postcode_taxonomy()
 
     $args = array(
         'labels' => $labels,
-        'rewrite' => array('slug' => 'Postcode'),
+        'rewrite' => array('slug' => 'postcode'),
         'hierarchical' => true,
         'show_admin_column' => true,
     );

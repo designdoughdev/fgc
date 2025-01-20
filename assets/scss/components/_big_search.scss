@@ -59,6 +59,61 @@ section.section_big_search{
                      }
     
                 }
+
+                .custom-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    width: 100%;
+                }
+                
+                .dropdown-toggle {
+                    @include btn_plain_deselected_dropdown;
+                    width: 100%;
+
+                    &:after{
+                        margin-left: auto; //position chevron at the end of button
+                    }
+                }
+                
+                .dropdown-menu {
+                    @include body;
+                    display: none; /* Ensure menu is hidden by default */
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    background-color: #fff;
+                    z-index: 1000;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    max-height: 200px; 
+                    overflow-y: auto;  
+                }
+                
+                .dropdown-menu[aria-hidden="false"] {
+                    display: block; /* Show when aria-hidden is false */
+                }
+                
+                .dropdown-menu li {
+                    padding: 10px 15px;
+                    cursor: pointer;
+                }
+                
+                .dropdown-menu li:hover,
+                .dropdown-menu li:focus {
+                    background-color: $cobaltBlue;
+                    color: white;
+                }
+
+                /* Accessibility */
+                .dropdown-menu li:focus {
+                    background-color: #e0f7ff;
+                }
+                
+                
+                
     
                 .search-box{
                     display: flex;
@@ -131,7 +186,7 @@ section.section_big_search{
                         grid-row: 1;
                     }
 
-                    select{
+                    .custom-dropdown{
                         grid-column: 2;
                         grid-row: 2; 
 

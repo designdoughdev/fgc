@@ -1,0 +1,83 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
+
+section.search-results-content{ 
+    @include body;
+    min-height: 30rem;
+
+    .title_tag{
+        @include title_tag($darkNavy, $skyBlue)
+    }
+
+    .no-results-msg{
+        @include h-three;
+        margin: 1em 0;
+    }
+
+    
+    .page-item-container{
+
+        &:not(:last-child){
+            border-bottom: 1px solid rgba($darkNavy, 0.1);  
+
+        }
+        a.post-link{
+
+
+    
+            &:hover{
+                text-decoration: none;
+    
+                
+            }
+    
+            .post-container{
+                @include h-four;
+                padding: 0.7em 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+    
+    
+    
+                .post-title{
+                    
+                    font-weight: 700;
+                }
+    
+                .post-read-more-container{
+                    @include body;
+    
+                    .post-read-more{
+                        text-decoration: underline;
+                        white-space: nowrap;
+    
+                        &:after {
+                            content: "";
+                            display: inline-block; 
+                            background-image: url('/assets/images/svg/arrow-right-white.svg'); 
+                            background-size: 38%; 
+                            background-repeat: no-repeat;           
+                            background-position: center;
+                            background-color: $cobaltBlue;
+                            width: 20px;
+                            height: 20px;
+                            margin-left: 2em;
+                            vertical-align: middle;
+    
+                    }
+                }
+    
+    
+                }
+            }
+    
+        }
+    
+    }
+
+}
+

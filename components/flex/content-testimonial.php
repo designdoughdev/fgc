@@ -6,19 +6,19 @@
 <?php $row = get_row_index() - 0; ?>
 
 <section class="section_testimonial  row-<?php echo $row; ?> relative">
-    <div class="container">
+    <div class="container-wrapper">
 
         <div class="section-content <?php echo $colourScheme ?>-style testimonial">
 
             <div class="text-content">
                 <?php if ($small_title): ?>
-                <h2 class="title-tag"><?php echo $small_title; ?></h2>
+                    <h2 class="title-tag"><?php echo $small_title; ?></h2>
                 <?php endif; ?>
                 <?php if ($quote): ?>
-                <h4 class="quote h2"><?php echo $quote; ?></h4>
+                    <h4 class="quote h2"><?php echo $quote; ?></h4>
                 <?php endif; ?>
                 <?php if ($quote_info): ?>
-                <p class="quote-info"><?php echo $quote_info; ?></p>
+                    <p class="quote-info"><?php echo $quote_info; ?></p>
                 <?php endif; ?>
 
             </div>

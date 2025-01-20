@@ -15,7 +15,8 @@
 // $rows = count($images);
 // }
 
-$layoutOld = get_query_var('layout_old');
+// $layoutOld = get_query_var('layout_old');
+$layoutOld = 'none';
 // $style = get_sub_field('style');
 ?>
 
@@ -158,6 +159,67 @@ $row = get_row_index() - 0;
     <?php }
         if ($layout == 'double_tile_slider') { ?>
 
+    <?php if (wp_is_mobile()) { ?>
+    <div class="splide post-feed-carousel section-wrapper" aria-label="News Feed">
+
+        <div class="text-container">
+            <?php if ($small_title): ?>
+            <h2 class="title-tag"><?php echo $small_title ?></h2>
+            <?php endif; ?>
+            <?php if ($big_title): ?>
+            <h3 class="heading h2"><?php echo $big_title ?></h3>
+            <?php endif; ?>
+            <div class="button-container">
+                <button class="splide__arrow custom-prev btn-prev" aria-label="Previous slide">
+                    Previous
+                </button>
+                <button class="splide__arrow custom-next btn-next" aria-label="Next slide">
+                    Next
+                </button>
+            </div>
+
+
+        </div>
+
+        <div class="splide__track">
+            <ul class="splide__list">
+
+                <?php $colourSchemes = ['blue', 'yellow', 'mint', 'green']; // The repeating set of values 
+                            ?>
+
+                <?php while ($latest->have_posts()) : $latest->the_post(); ?>
+
+                <?php
+                                // get current post index
+                                $index = $latest->current_post;
+
+
+                                // set colour scheme variable to pass to template part
+                                set_query_var('colourScheme', $colourSchemes[($index + 1) % 4]); ?>
+
+
+
+                <li class="splide__slide relative">
+
+                    <?php get_template_part('components/includes/post_card', 'colourScheme'); ?>
+
+                </li>
+
+
+
+                <?php wp_reset_postdata(); ?>
+                <?php endwhile; ?>
+
+
+
+
+
+
+            </ul>
+        </div>
+    </div>
+    <?php  } else { ?>
+
     <div class="splide press-releases-carousel section-wrapper" aria-label="News Feed">
         <div class="text-container">
             <div class="text-inner">
@@ -170,101 +232,46 @@ $row = get_row_index() - 0;
                 <a href="" class="btn cobalt text-white">All Press & Media<div class="btn-arrow-container"></div></a>
             </div>
 
+            <?php if ($latest->found_posts > 2) { ?>
+
+
             <div class="button-container">
                 <button class="splide__arrow custom-prev btn-prev" aria-label="Previous slide">Previous</button>
                 <button class="splide__arrow custom-next btn-next" aria-label="Next slide">Next</button>
             </div>
+            <?php } ?>
         </div>
 
         <div class="splide__track">
             <ul class="splide__list">
                 <?php
-                        $colourSchemes = ['blue', 'mint', 'yellow', 'green']; // Array of color schemes
+                            $colourSchemes = ['blue', 'mint', 'yellow', 'green']; // Array of color schemes
 
-                        // Loop through posts in pairs
-                        while ($latest->have_posts()) : $latest->the_post();
-                        ?>
+                            // Loop through posts in pairs
+                            while ($latest->have_posts()) : $latest->the_post();
+                            ?>
                 <li class="splide__slide">
                     <!-- First stacked slide in the pair -->
                     <?php
-                                $index = $latest->current_post;
-                                $colourScheme = $colourSchemes[$index % count($colourSchemes)];
-                                ?>
-                    <a href="<?php the_permalink(); ?>" class="stacked-slide">
-                        <div class="press-release-card <?php echo $colourScheme; ?>-style">
-                            <div class="text-col relative">
-                                <?php echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg'); ?>
+                                    $index = $latest->current_post;
+                                    $colourScheme = $colourSchemes[$index % count($colourSchemes)];
 
-                                <div class="text-content">
-                                    <div class="card-top">
-                                        <div class="tag-container">
-                                            <p class="tag h6">Explore</p>
-                                            <p class="tag h6">Do</p>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h4 class="h4"><?php the_title(); ?></h4>
-                                        <div class="post-info">
-                                            <?php if (get_the_author_meta('first_name') && get_the_author_meta('last_name')): ?>
-                                            <p class="author h5 bold">
-                                                <?php echo get_the_author_meta('first_name') . " " . get_the_author_meta('last_name'); ?>
-                                            </p>
-                                            <?php endif; ?>
-                                            <p class="date h5 medium-text"><?php echo get_the_date('l d|m|y'); ?></p>
-                                        </div>
-                                    </div>
-                                    <div class="card-bottom">
-                                        <p>Read News Article</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="img-wrap">
-                                <img src="<?php echo get_template_directory_uri() . "/assets/images/jpg/cardiff.jpg"; ?>"
-                                    alt="">
-                            </div>
-                        </div>
-                    </a>
+                                    // set colour scheme variable to pass to template part
+                                    set_query_var('colourScheme', $colourScheme) ?>
+
+                    <?php get_template_part('components/includes/stacked_slide_post', 'colourScheme'); ?>
+
 
                     <!-- Second stacked slide in the pair (if available) -->
                     <?php if ($latest->have_posts()): $latest->the_post(); ?>
                     <?php
-                                    $index = $latest->current_post;
-                                    $colourScheme = $colourSchemes[$index % count($colourSchemes)];
-                                    ?>
-                    <a href="<?php the_permalink(); ?>" class="stacked-slide">
-                        <div class="press-release-card <?php echo $colourScheme; ?>-style">
-                            <div class="text-col relative">
-                                <?php echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg'); ?>
+                                        $index = $latest->current_post;
+                                        $colourScheme = $colourSchemes[$index % count($colourSchemes)];
 
-                                <div class="text-content">
-                                    <div class="card-top">
-                                        <div class="tag-container">
-                                            <p class="tag h6">Explore</p>
-                                            <p class="tag h6">Do</p>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h4 class="h4"><?php the_title(); ?></h4>
-                                        <div class="post-info">
-                                            <?php if (get_the_author_meta('first_name') && get_the_author_meta('last_name')): ?>
-                                            <p class="author h5 bold">
-                                                <?php echo get_the_author_meta('first_name') . " " . get_the_author_meta('last_name'); ?>
-                                            </p>
-                                            <?php endif; ?>
-                                            <p class="date h5 medium-text"><?php echo get_the_date('l d|m|y'); ?></p>
-                                        </div>
-                                    </div>
-                                    <div class="card-bottom">
-                                        <p>Read News Article</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="img-wrap">
-                                <img src="<?php echo get_template_directory_uri() . "/assets/images/jpg/builders.jpg"; ?>"
-                                    alt="">
-                            </div>
-                        </div>
-                    </a>
+                                        // set colour scheme variable to pass to template part
+                                        set_query_var('colourScheme', $colourScheme) ?>
+
+                    <?php get_template_part('components/includes/stacked_slide_post', 'colourScheme'); ?>
                     <?php endif; ?>
                 </li>
                 <?php endwhile; ?>
@@ -273,11 +280,15 @@ $row = get_row_index() - 0;
     </div>
     <?php wp_reset_postdata(); ?>
 
+    <?php
+
+            } ?>
 
 
 
-    <?php }
-        if ($layout == 'single_tile_slider') { ?>
+
+
+    <?php } elseif ($layout == 'single_tile_slider') { ?>
 
     <div class="container_big section-wrapper single-tile-carousel-layout">
         <div class="splide single-tile-carousel" aria-label="Image Gallery">
@@ -338,9 +349,81 @@ $row = get_row_index() - 0;
 
     <?php } elseif ($layout == 'grid_with_filter') { ?>
 
-    <div class="posts-grid-with-filter section-wrapper">
-        <div class="container">
 
+    <div class="posts-grid-with-filter section-wrapper">
+        <?php
+                // Fetch terms and categories
+                $categories = get_terms(['taxonomy' => 'category', 'hide_empty' => false]);
+                $types = get_terms(['taxonomy' => 'type', 'hide_empty' => false]);
+                $topics = get_terms(['taxonomy' => 'topic', 'hide_empty' => false]);
+                $locations = get_terms(['taxonomy' => 'location', 'hide_empty' => false]);
+
+                // Fetch unique published years
+                global $wpdb;
+                $years = $wpdb->get_col("
+        SELECT DISTINCT YEAR(post_date) 
+        FROM $wpdb->posts 
+        WHERE post_status = 'publish' AND post_type = 'post'
+        ORDER BY YEAR(post_date) DESC
+    ");
+
+                // Filter categories array
+                $filterCategories = [
+                    'category' => $categories,
+                    'type' => $types,
+                    'topic' => $topics,
+                    'location' => $locations,
+                    'year' => $years
+                ];
+                ?>
+        <div class="overlay-filter-menu">
+            <div class="top-row">
+                <h3 class="title">Filters</h3>
+                <button class="filter-overlay-close-btn">Back</button>
+            </div>
+
+
+            <div class="mobile-filter-menu filter-bar-container">
+                <form class="filter-form custom-dropdown-form" method="POST">
+                    <?php foreach ($filterCategories as $key => $items): ?>
+                    <div class="dropdown-wrapper">
+                        <div class="custom-dropdown">
+                            <button type="button" class="dropdown-toggle" aria-expanded="false"
+                                aria-labelledby="<?php echo $key; ?>-label">
+                                Select <?php echo ucfirst($key); ?>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <?php if (is_array($items)): ?>
+                                <?php foreach ($items as $item): ?>
+                                <li tabindex="0" data-value="<?php echo esc_attr($item->slug ?? $item); ?>">
+                                    <?php echo esc_html($item->name ?? $item); ?>
+                                </li>
+                                <?php endforeach; ?>
+                                <?php endif; ?>
+                            </ul>
+                            <input type="hidden" name="<?php echo $key; ?>" id="<?php echo $key; ?>"
+                                aria-labelledby="<?php echo $key; ?>-label">
+                        </div>
+                        <span id="<?php echo $key; ?>-label" class="sr-only">
+                            <?php echo ucfirst($key); ?>
+                        </span>
+                        <!-- Hidden label for screen readers -->
+                    </div>
+                    <?php endforeach; ?>
+
+                    <button type="submit" class="submit-btn btn cobalt text-white">
+                        Apply
+                        <div class="btn-arrow-container"></div>
+                    </button>
+                </form>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="container">
             <div class="top-section">
                 <?php if ($small_title): ?>
                 <h2 class="title-tag"><?php echo $small_title ?></h2>
@@ -348,58 +431,71 @@ $row = get_row_index() - 0;
                 <?php if ($big_title): ?>
                 <h3 class="heading h2"><?php echo $big_title ?></h3>
                 <?php endif; ?>
-                <div class="filter-bar-container">
+
+                <button class="filter-btn">Filters</button>
+
+                <div class="filter-bar-container filter-entire-wrapper">
                     <div class="filter-top-section">
-                        <button class="filter-btn">
-                            Filter
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/svg/chevron-down.svg' ?>"
-                                alt="">
-                        </button>
                         <div class="sort-container">
-                            <p>Sort by: </p> <button>Newest</button><span>|</span><button>Oldest</button>
+                            <p>Sort by: </p>
+                            <button class="sort-btn active" data-sort="newest">Newest</button>
+                            <span>|</span>
+                            <button class="sort-btn" data-sort="oldest">Oldest</button>
                         </div>
                     </div>
+
+                    <div class="filter-bar">
+                        <form class="filter-form desktop custom-dropdown-form" method="POST">
+                            <?php foreach ($filterCategories as $key => $items): ?>
+                            <div class="dropdown-wrapper">
+                                <div class="custom-dropdown">
+                                    <button type="button" class="dropdown-toggle" aria-expanded="false"
+                                        aria-labelledby="<?php echo $key; ?>-label">
+                                        Select <?php echo ucfirst($key); ?>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <?php if (is_array($items)): ?>
+                                        <?php foreach ($items as $item): ?>
+                                        <li tabindex="0" data-value="<?php echo esc_attr($item->slug ?? $item); ?>">
+                                            <?php echo esc_html($item->name ?? $item); ?>
+                                        </li>
+                                        <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    </ul>
+                                    <input type="hidden" name="<?php echo $key; ?>" id="<?php echo $key; ?>"
+                                        aria-labelledby="<?php echo $key; ?>-label">
+                                </div>
+                                <span id="<?php echo $key; ?>-label" class="sr-only">
+                                    <?php echo ucfirst($key); ?>
+                                </span>
+                                <!-- Hidden label for screen readers -->
+                            </div>
+                            <?php endforeach; ?>
+
+                            <button type="submit" class="submit-btn btn cobalt text-white">
+                                Apply
+                                <div class="btn-arrow-container"></div>
+                            </button>
+                        </form>
+                    </div>
                 </div>
-
             </div>
-            <div class="posts-container">
-                <?php $colourSchemes = ['blue', 'yellow', 'mint', 'green']; // The repeating set of values 
-                        ?>
 
+            <div class="posts-container" id="posts-container">
                 <?php while ($latest->have_posts()) : $latest->the_post(); ?>
-
-                <?php
-                            // get current post index
-                            $index = $latest->current_post;
-
-
-                            // set colour scheme variable to pass to template part
-                            set_query_var('colourScheme', $colourSchemes[($index + 1) % 4]); ?>
-
-
-
-                <?php get_template_part('components/includes/post_card', 'colourScheme'); ?>
-
-
-
-
-
+                <?php get_template_part('components/includes/post_card'); ?>
                 <?php wp_reset_postdata(); ?>
                 <?php endwhile; ?>
-
             </div>
-
-
-
-
         </div>
     </div>
+
 
 
     <?php } elseif ($layout == 'list') { ?>
 
     <div class="posts-list-layout section-wrapper">
-        <div class="container">
+        <div class="container_small">
 
             <div class="top-section">
                 <?php if ($small_title): ?>
@@ -432,36 +528,65 @@ $row = get_row_index() - 0;
                         ?>
             </div>
 
+
             <div class="posts-container">
                 <?php
+                        // Get the search query from the URL and normalize it
+                        $search_postcode = isset($_GET['postcode']) ? sanitize_text_field($_GET['postcode']) : '';
+
+                        // Normalize the search postcode: replace spaces with hyphens and convert to lowercase
+                        if (!empty($search_postcode)) {
+                            $search_postcode = strtolower(str_replace(' ', '-', $search_postcode));
+                        }
+
                         if (!empty($terms) && !is_wp_error($terms)) {
                             $colourSchemes = ['blue', 'green', 'yellow', 'mint'];
                             $index = 0;
+                            $posts_found = false; // Flag to check if any posts are found
 
                             foreach ($terms as $term) {
-                                // Fetch posts associated with this term
+                                // Ensure the term is an object before proceeding
+                                if (!is_object($term)) {
+                                    continue;
+                                }
+
+                                // Build the query arguments
                                 $args = array(
-                                    'post_type' => $chosen_post_type, // Adjust if your custom post type is different
+                                    'post_type' => 'public-body',
                                     'tax_query' => array(
+                                        'relation' => 'AND',
                                         array(
                                             'taxonomy' => 'type',
-                                            'field' => 'term_id',
-                                            'terms' => $term->term_id,
+                                            'field'    => 'term_id',
+                                            'terms'    => $term->term_id,
                                         ),
                                     ),
-                                    'posts_per_page' => -1, // Show all posts for this term
+                                    'posts_per_page' => -1,
                                 );
+
+                                // If there's a postcode search, add it to the query
+                                if (!empty($search_postcode)) {
+
+                                    $args['tax_query'][] = array(
+                                        'taxonomy' => 'postcode',
+                                        'field'    => 'slug',
+                                        'terms'    => $search_postcode,
+                                    );
+                                }
 
                                 $query = new WP_Query($args);
 
                                 // Only display the term name if there are posts
                                 if ($query->have_posts()) {
+                                    $posts_found = true; // If posts exist, set this flag to true
                                     $colourScheme = $colourSchemes[$index % count($colourSchemes)];
                         ?>
                 <div class="taxonomy-group" data-term="<?php echo esc_attr($term->slug); ?>">
                     <div class="taxonomy-title-container <?php echo esc_attr($colourScheme); ?>-scheme">
                         <p>A - Z</p>
-                        <h4 class="taxonomy-title"><?php echo esc_html($term->name); ?> in Wales</h4>
+                        <h4 class="taxonomy-title">
+                            <?php echo esc_html(is_object($term) ? $term->name : 'No valid term'); ?> in Wales
+                        </h4>
                     </div>
 
                     <div class="term-posts">
@@ -489,9 +614,22 @@ $row = get_row_index() - 0;
 
                                 wp_reset_postdata();
                             }
+
+                            // If no posts were found after looping through all terms, display the "no records" message
+                            if (!$posts_found) {
+                                echo '<p class="body-large">Sorry, no matching results</p>';
+                            }
+                        } else {
+                            // If terms are empty or invalid, show the message
+                            echo '<p class="body-large">Sorry, no matching results</p>';
                         }
                         ?>
             </div>
+
+
+
+
+
 
         </div>
     </div>

@@ -103,15 +103,7 @@ if (function_exists('acf')) {
 
 
 
-// if( function_exists('acf_add_options_page') ) {
-//     acf_add_options_page();
-// }
 
-// /* Actions and Filters */
-// add_action( 'wp_enqueue_scripts', 'starkers_script_enqueuer' );
-// add_filter( 'body_class', function( $classes ) {
-// 	return array_merge( $classes, array( 'class-name' ) );
-// } );
 
 
 
@@ -167,8 +159,9 @@ function dd_theme_register_required_plugins()
             'name'      => 'Duplicator Pro',
             'slug'      => 'duplicator-pro',
             'source'    => get_template_directory() . '/plugins/duplicator-pro.zip',
-            'required'  => false,  // Optional plugin
+            'required'  => false,
         ),
+
         // Contact Form 7 - Available in the WordPress repository
         array(
             'name'      => 'Contact Form 7',
@@ -213,16 +206,14 @@ add_action('after_switch_theme', 'dd_theme_activate_required_plugins');
 
 
 // Function to display breadcrumb navigation 
-function display_breadcrumbs()
+function display_breadcrumbs($root_parent_as_link = true)
 {
     global $post;
 
     $home_icon_url = get_template_directory_uri() . '/assets/images/svg/home.svg';
 
-
     $breadcrumb = '<img class="home-icon" src="' . $home_icon_url . '" alt="Home Icon">';
     $breadcrumb .= '<a href="' . home_url() . '">Home</a>';
-
 
     // Initialize an array to hold the ancestor pages
     $ancestors = array();
@@ -234,8 +225,18 @@ function display_breadcrumbs()
     }
 
     // Loop through each ancestor page and add it as a clickable link
+    $is_first_ancestor = true;
     foreach ($ancestors as $ancestor) {
-        $breadcrumb .= ' &gt; <a href="' . get_permalink($ancestor) . '">' . get_the_title($ancestor) . '</a>';
+        $ancestor_title = get_the_title($ancestor);
+
+        // Check if this is the root parent and if links should be disabled
+        if ($is_first_ancestor && !$root_parent_as_link) {
+            $breadcrumb .= ' &gt; <p class="root-ancestor">' . $ancestor_title . '</p>'; // Display as plain text
+        } else {
+            $breadcrumb .= ' &gt; <a href="' . get_permalink($ancestor) . '">' . $ancestor_title . '</a>';
+        }
+
+        $is_first_ancestor = false; // After the first ancestor, this is no longer true
     }
 
     // Add the current page as a clickable link with 'current' class
@@ -244,3 +245,110 @@ function display_breadcrumbs()
     // Display the breadcrumb trail
     echo $breadcrumb;
 }
+
+
+function filter_posts()
+{
+    $category = $_POST['category'] ?? '';
+    $type = $_POST['type'] ?? '';
+    $topic = $_POST['topic'] ?? '';
+    $location = $_POST['location'] ?? '';
+    $year = $_POST['year'] ?? '';
+    $sort = $_POST['sort'] ?? 'newest';  // Default to 'newest'
+
+    $args = [
+        'post_type' => 'post',
+        'posts_per_page' => -1,
+        'tax_query' => [
+            'relation' => 'AND',
+        ],
+    ];
+
+    // Add taxonomy filters if provided
+    if ($category) {
+        $args['tax_query'][] = [
+            'taxonomy' => 'category',
+            'field' => 'slug',
+            'terms' => $category,
+        ];
+    }
+
+    if ($type) {
+        $args['tax_query'][] = [
+            'taxonomy' => 'type',
+            'field' => 'slug',
+            'terms' => $type,
+        ];
+    }
+
+    if ($topic) {
+        $args['tax_query'][] = [
+            'taxonomy' => 'topic',
+            'field' => 'slug',
+            'terms' => $topic,
+        ];
+    }
+
+    if ($location) {
+        $args['tax_query'][] = [
+            'taxonomy' => 'location',
+            'field' => 'slug',
+            'terms' => $location,
+        ];
+    }
+
+    // Add year filter if provided
+    if ($year) {
+        $args['date_query'] = [
+            [
+                'year' => $year,
+            ],
+        ];
+    }
+
+    // Add sorting logic based on 'newest' or 'oldest'
+    if ($sort === 'oldest') {
+        $args['orderby'] = 'date';
+        $args['order'] = 'ASC';  // Oldest posts first
+    } else {
+        $args['orderby'] = 'date';
+        $args['order'] = 'DESC'; // Newest posts first
+    }
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            get_template_part('components/includes/post_card');
+        }
+        wp_reset_postdata();
+    } else {
+        echo '<p class="no-posts-msg">Sorry, no results</p>';
+    }
+
+    die();
+}
+
+add_action('wp_ajax_filter_posts', 'filter_posts');
+add_action('wp_ajax_nopriv_filter_posts', 'filter_posts');
+
+// custom search query changes
+
+add_action('pre_get_posts', function ($query) {
+    if ($query->is_main_query() && $query->is_search()) {
+        // Check if a post type is specified
+        $post_type = get_query_var('post_type', null);
+
+        // If post_type is provided, modify the query to include it
+        if ($post_type) {
+            $query->set('post_type', $post_type);
+        } else {
+            // Optional: Include multiple post types if none is specified
+            $query->set('post_type', array('post', 'page')); // Adjust as needed
+        }
+
+        // Additional query modifications (optional)
+        $query->set('posts_per_page', 10); // Example: Limit results
+    }
+});

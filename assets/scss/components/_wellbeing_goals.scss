@@ -16,7 +16,6 @@ section.section_wellbeing_goals{
 
         &.add-background{
             background-color: rgba($skyBlue, 0.05);
-            @include h-two;
             @include rem-to-em(padding, 2rem, 1rem, 1rem, (top, bottom));
         }
 

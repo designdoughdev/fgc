@@ -464,11 +464,229 @@ section.section_posts_agg{
 
     /*------------------------ Posts Grid with Filter Layout -------------------------------*/
 
+
+
+
     .posts-grid-with-filter.section-wrapper{
+
+        position: relative;
+
+        // filter form
+
+        form.filter-form{
+
+            display: flex;
+            flex-wrap: wrap;
+
+            & > * {
+                margin-bottom: 1rem;
+            }
+
+            .custom-dropdown {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+            }
+            
+            // dropdown toggle button
+            .dropdown-toggle {
+
+                @include btn_plain_deselected_dropdown;
+                margin-right: 1em;
+            }
+            
+            .dropdown-toggle[aria-expanded="true"] {
+                background-color: #e0e0e0;
+            }
+            
+            // Dropdown Menu - Hidden by Default 
+            .dropdown-menu {
+                display: none; 
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #fff;
+                z-index: 1000;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                max-height: 200px; 
+                overflow-y: auto;  
+            }
+            
+            /* Dropdown Menu - Visible */
+            .dropdown-menu.visible {
+                display: block; /* Show menu when it has the "visible" class */
+            }
+            
+            /* Dropdown Menu Items */
+            .dropdown-menu li {
+                padding: 0.5em 1.5em;
+                cursor: pointer;
+            }
+            
+            /* Hover and Focus Styles */
+            .dropdown-menu li:hover,
+            .dropdown-menu li:focus {
+                background-color: $cobaltBlue;
+                color: white;
+            }
+            
+            
+            /* Accessibility */
+            .dropdown-menu li:focus {
+                background-color: #e0f7ff;
+            }
+
+            button.submit-btn{
+                height: 2.6em;
+            }
+        }
+
+        // mobile filter form
+
+        .mobile-filter-menu{
+            position: fixed;
+            width: 100%;
+            padding-top: 1rem;
+            form.filter-form{
+                flex-direction: column;
+                padding: 1rem;
+
+                ul.dropdown-menu{
+                    @include body;
+                    display: block;
+                    position: initial;
+                    box-shadow: none;
+                    max-height: 1px;
+                    overflow: hidden;
+                    opacity: 0;
+                    @include transition;
+
+                    li:hover{
+                        background-color: $greyFour;
+                        color: $darkNavy;
+                    }
+                }
+
+                button.dropdown-toggle{
+                    width: 100%;
+                    color: $midGrey;
+                    background-color: white;
+                    border-bottom: 1px solid rgba($darkNavy, 0.1);
+
+                    &:after{
+                        margin-left: auto;
+                        transform: rotate(0deg); // Initial rotation
+                        transform-origin: center; 
+                        @include shorttransition;
+                        background-image: url('/assets/images/svg/arrow-right-white.svg'); 
+                        background-size: 38%; 
+                        background-repeat: no-repeat;           
+                        background-position: center;
+                        background-color: $cobaltBlue;
+                        width: 20px;
+                        height: 20px;
+                        vertical-align: middle;
+                    }
+
+
+
+                    &.active{
+
+                        &::after{
+                            transform: rotate(90deg); 
+                        }
+                        & + ul.dropdown-menu{
+                            max-height: 2000px;
+                            padding: 0.2em 0 0 0;
+                            opacity: 1;
+
+                        }
+
+                    }
+
+
+                }
+
+
+            }
+
+            button.submit-btn{
+                margin-top: 1rem;
+                width: 100%;
+                margin-right: 0;
+                .btn-arrow-container{
+                    margin-left: auto;
+                }
+            }
+
+        }
+
+
+
+        // hiding custom labels for screen readers
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            border: 0;
+            clip: rect(0 0 0 0);
+            overflow: hidden;
+        }
+
+        // overlay slide out filter menu
+
+        .overlay-filter-menu{
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            background-color: white;
+            z-index: 99;
+            @include shorttransition;
+    
+            &.menu-open{
+                width: 100%;
+            }
+
+            div.top-row{
+
+                display: flex;
+                justify-content: space-between;
+                @include body;
+                margin: 0 1em;
+                padding: 1em 0;
+                border-bottom: 1px solid rgba($darkNavy, 0.1);
+
+
+                button.filter-overlay-close-btn{
+                    background-color: transparent;
+                    border: none;
+                    display: block;
+                    margin-left: auto;
+                  
+                    text-decoration: underline;
+                }
+
+            }
+
+
+
+
+        }
+
+
 
         /*------------------------ Default / Mobile Styling -------------------------------*/
 
         .top-section{
+            margin-bottom: 0.5rem;
             .heading{
                 max-width: 8em;
                 margin-bottom: 0.5em;
@@ -478,23 +696,40 @@ section.section_posts_agg{
                 @include title_tag($darkNavy, $skyBlue);
             }
 
-            .filter-bar-container{
-                border-top: 1px solid rgba($darkNavy, 0.1);    
+            .filter-btn{
+                @include btn_plain;
+                margin-bottom: 1rem;
+                width: 100%;
+                background-color: $darkNavy;
+                justify-content: center;
+
+                &:after {
+                    content: "";
+                    display: inline-block; 
+                    background-image: url('/assets/images/svg/chevron-down.svg'); 
+                    background-repeat: no-repeat;           
+                    background-position: center;
+                    width: 20px;
+                    height: 20px;
+                    margin-left: 0;
+                    vertical-align: middle;
+
+            }
+                
+                
+
+            }
+
+            .filter-entire-wrapper{
+                   
                 @include body;
                 padding: 1em 0;  
 
                 .filter-top-section{
-                    .filter-btn{
-                        @include btn_plain;
-                        margin-bottom: 1rem;
-    
-                        img{
-                            width: 0.5rem;
-                            height: 0.9rem;
-                        }
-                    }
+
     
                     .sort-container{
+                        margin-left: auto;
                         display: flex;
                         gap: 0.1rem;
                         p{
@@ -504,9 +739,17 @@ section.section_posts_agg{
                         button{
                             @include btn_no_style;
 
+                            &.active{
+                                font-weight: 700;
+                            }
+
                         }
                     }
 
+
+                }
+                .filter-form.desktop{
+                    display: none
                 }
                 
 
@@ -514,7 +757,48 @@ section.section_posts_agg{
         }
         .posts-container{
 
+            .no-posts-msg{
+                @include h-four;
+                margin: 1em 0;
+
+            }
+
+           
+
+    & > * {
+        // Apply different schemes to the first four children
+        &:nth-child(4n + 1) {
+
+            .post-card{
+                
+                @include YellowStyle;
+    
+
+            }
+
+        }
+        &:nth-child(4n + 2) {
+            .post-card{
+                @include MintStyle;
+
+            }
+        }
+        &:nth-child(4n + 3) {
+            .post-card{
+                @include GreenStyle
+
+            }
+        }
+        &:nth-child(4n + 4) {
+            .post-card{
+                @include BlueStyle;
+            }
+        }
+        }
+
+
             a.post-card-wrapper-link{
+                
 
                 &:hover{
                     text-decoration: none;
@@ -543,19 +827,32 @@ section.section_posts_agg{
 
         .top-section{
 
-            .filter-bar-container{
+
+            button.filter-btn{
+                display: none;
+                margin-bottom: 0
+            }
+
+            .filter-entire-wrapper{
+                display: block;
+                border-top: 1px solid rgba($darkNavy, 0.1); 
 
 
                 .filter-top-section{
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    margin-bottom: 1em;
+
 
                 }
 
-                button.filter-btn{
-                    margin-bottom: 0
+                .filter-form.desktop{
+                    display: flex;
                 }
+
+
+
                 
 
             }
@@ -608,6 +905,8 @@ section.section_posts_agg{
 
             .filter-button{
                 @include btn_plain_deselected;
+                margin-bottom: 0.8em;
+            
 
                 &.active{
                     background-color: $cobaltBlue;
@@ -659,6 +958,7 @@ section.section_posts_agg{
     
                             .post-read-more{
                                 text-decoration: underline;
+                                white-space: nowrap;
     
                                 &:after {
                                     content: "";
@@ -699,12 +999,7 @@ section.section_posts_agg{
 
                 .top-section{
 
-                    .filter-bar-container{
 
-
-                        
-
-                    }
                 }
 
                 .posts-container{

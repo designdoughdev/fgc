@@ -1,3 +1,11 @@
+<?php
+
+$author = get_field('author');
+
+
+?>
+
+
 <a href="/" class="post-card-wrapper-link">
     <div class="post-card <?php echo $colourScheme; ?>-style">
         <div class="card-top">
@@ -18,9 +26,9 @@
             </h4>
 
             <div class="post-info">
-                <?php if (get_the_author_meta('first_name') && get_the_author_meta('last_name')): ?>
+                <?php if ($author): ?>
                 <p class="author h5 bold">
-                    <?php echo get_the_author_meta('first_name') . " " . get_the_author_meta('last_name'); ?>
+                    <?php echo $author; ?>
                 </p>
                 <?php endif; ?>
                 <p class="date h5 medium-text">

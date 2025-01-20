@@ -10,9 +10,11 @@ $layoutStyle = get_sub_field('layout_style');
 $colourScheme = get_sub_field('colour_scheme');
 $smallTitle = get_sub_field('small_title');
 $bigTitle = get_sub_field('big_title');
+$image = get_sub_field('image');
 $body = get_sub_field('body');
 $link = get_sub_field('link');
 $reverseLayout = get_sub_field('reverse');
+$barsAtSide = get_sub_field('bars_at_side');
 
 
 
@@ -39,271 +41,20 @@ endif
 
 
 
-    <!-------------------------- Non ACF versions --------------------------------->
-
-    <?php if ($layout == 'full-colour'): ?>
-
-
-    <!-------------------------- Layout Full Colour --------------------------------->
-
-    <div class="container">
-        <div class="section-content full-colour-layout relative blue-style">
-
-
-
-            <div class="col">
-                <h2 class="title-tag">international</h2>
-                <h3 class="heading h2 text-white">Empowering Change Worldwide</h3>
-                <p class="body text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor
-                    incididunt ut labore et dolore magna aliqua ut enim ad.</p>
-                <a href="/" class="link btn sky-blue">Visit Page<div class="btn-arrow-container"></div></a>
-            </div>
-
-            <?php
-                echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
-                ?>
-
-        </div>
-
-    </div>
-
-
-    <!---------------------------------------------------------------------->
-
-    <?php elseif ($layout == 'big-img-no-bg'): ?>
-
-    <!-------------------------- Layout Big Image No BG --------------------------------->
-    <div class="container">
-        <div class="section-content big-img-no-bg-layout relative mint-style" data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom">
-
-
-
-
-            <h2 class="title-tag">Cymru Can</h2>
-            <div class="text-content">
-                <h3 class="heading h2">The innovative goals paving the way for a stronger, greener Wales</h3>
-                <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut
-                    labore et
-                    dolore magna aliqua ut enim ad.</p>
-                <a href="/" class="link btn text-white">Cymru Can<div class="btn-arrow-container"></div></a>
-
-            </div>
-
-
-            <div class="img-wrap">
-                <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/tree.jpg" ?> alt="">
-            </div>
-
-            <div class="vertical-bars-container">
-
-                <?php
-                    // small version
-                    echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars-small.svg');
-                    // large version
-                    echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
-                    ?>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-
-    <!---------------------------------------------------------------------->
-
-
-
-
-    <!-------------------------- Layout Rows --------------------------------->
-
-    <?php elseif ($layout == 'rows'): ?>
-    <div class="container">
-        <div class="section-content rows-layout relative blue-style" data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom">
-
-
-
-
-            <h2 class="title-tag">Well-being of Future
-                Generations (Wales) Act 2015</h2>
-            <h3 class="heading h2">Shaping a brighter tomorrow: Discover how the Well-being of Future Generations Act is
-                transforming Wales</h3>
-            <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et
-                dolore magna aliqua ut enim ad.</p>
-            <a href="/" class="link btn text-white">About the Act<div class="btn-arrow-container"></div></a>
-
-            <div class="img-wrap">
-                <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/talk.jpg" ?> alt="">
-            </div>
-
-            <div class="vertical-bars-container">
-
-                <?php
-                    // small version
-                    echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars-small.svg');
-                    // large version
-                    echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
-                    ?>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-
-    <?php elseif ($layout == 'half-image'): ?>
-
-    <!-------------------------- Layout Half image --------------------------------->
-
-
-    <div class="container">
-        <div class="section-content half-image-layout relative mint-style" data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom">
-
-
-            <div class="text-content">
-                <h2 class="title-tag">Meet the commissioner</h2>
-                <h3 class="heading h2">Creating a legacy for Future Generations</h3>
-                <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua ut enim ad.</p>
-                <a href="/" class="link btn">About the Act<div class="btn-arrow-container"></div></a>
-
-            </div>
-
-
-
-            <div class="img-wrap">
-                <img class="landscape-img"
-                    src=<?php echo get_template_directory_uri() . "/assets/images/jpg/derek-crop.jpg" ?> alt="">
-                <img class="portrait-img"
-                    src=<?php echo get_template_directory_uri() . "/assets/images/jpg/derek-crop.jpg" ?> alt="">
-            </div>
-
-            <div class="bars-container">
-
-                <?php
-                    // horizontal bars
-                    echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars-small.svg');
-                    // vertical bars
-                    echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
-                    ?>
-
-
-
-                <div class="caption light-navy">
-                    <p class="bold">Derek Walker</p>
-                    <p>Future Generations Commissioner for Wales</p>
-                </div>
-
-            </div>
-
-            <?php elseif ($layout == 'full-image'): ?>
-
-            <!-------------------------- Layout Full Image --------------------------------->
-
-            <div class="full-image-layout-content-wrapper">
-                <div class="section-content full-image-layout relative yellow-style" data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    style="background-image: url('<?php echo get_stylesheet_directory_uri() . '/assets/images/jpg/viaduct.jpg' ?>') ;">
-
-
-                    <div class="text-content">
-                        <h2 class="title-tag">Meet the commissioner</h2>
-                        <h3 class="heading h2">Creating a legacy for Future Generations</h3>
-                        <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua ut enim ad.</p>
-                        <a href="/" class="link btn text-white">About the Act<div class="btn-arrow-container"></div></a>
-
-                    </div>
-
-                    <div class="bars-container">
-
-                        <?php
-                            // horizontal bars
-                            echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars.svg');
-                            ?>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <?php elseif ($layout == 'big-img-no-bg'): ?>
-
-            <!-------------------------- Layout Big Image No BG --------------------------------->
-            <div class="section-content big-img-no-bg-layout relative mint-style" data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom">
-
-
-
-
-                <h2 class="title-tag">Cymru Can</h2>
-                <div class="text-content">
-                    <h3 class="heading h2">The innovative goals paving the way for a stronger, greener Wales</h3>
-                    <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut
-                        labore et
-                        dolore magna aliqua ut enim ad.</p>
-                    <a href="/" class="link btn text-white">Cymru Can<div class="btn-arrow-container"></div></a>
-
-                </div>
-
-
-                <div class="img-wrap">
-                    <img src=<?php echo get_template_directory_uri() . "https://picsum.photos/2000/1333" ?> alt="">
-                </div>
-
-                <div class="vertical-bars-container">
-
-                    <?php
-                        // small version
-                        echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars-small.svg');
-                        // large version
-                        echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
-                        ?>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-
-    <!---------------------------------------------------------------------->
-
-    <!---------------------------------------------------------------------->
-    <?php endif; ?>
-
-    <!--------------------------  --------------------------------->
-
-
-
-
-    <!-------------------------- ACF Versions --------------------------------->
-
     <?php if ($layoutStyle == 'full-colour'): ?>
 
 
 
     <!-------------------------- Layout Full Colour --------------------------------->
 
-    <div class="container">
+
+
+    <div class="full-colour-layout-wrapper">
         <div class="section-content full-colour-layout relative <?php echo $colourScheme ?>-style <?php if ($reverseLayout) {
                                                                                                             echo "reverse ";
+                                                                                                        }
+                                                                                                        if ($barsAtSide) {
+                                                                                                            echo " bars-at-side ";
                                                                                                         } ?>">
 
 
@@ -335,6 +86,9 @@ endif
             <?php
                 echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
                 ?>
+            <?php
+                echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars-small.svg');
+                ?>
 
         </div>
 
@@ -355,20 +109,45 @@ endif
 
 
 
-            <h2 class="title-tag">Cymru Can</h2>
+
+            <?php if ($link || $smallTitle): ?>
+            <h2 class="title-tag"><?php if ($link) {
+                                                echo $link_title;
+                                            } else {
+                                                echo $smallTitle;
+                                            } ?></h2>
+            <?php endif;  // title tag
+                ?>
+
+
             <div class="text-content">
-                <h3 class="heading h2">The innovative goals paving the way for a stronger, greener Wales</h3>
-                <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut
-                    labore et
-                    dolore magna aliqua ut enim ad.</p>
-                <a href="/" class="link btn text-white">Cymru Can<div class="btn-arrow-container"></div></a>
+                <?php if ($bigTitle): ?>
+                <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
+                <?php endif; // big title 
+                    ?>
+                <?php if ($body): ?>
+                <p class="body"><?php echo $body; ?></p>
+                <?php endif; // body 
+                    ?>
+                <?php if ($link): ?>
+                <a href="/" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?>
+                    <div class="btn-arrow-container">
+                    </div>
+                </a>
+                <?php endif; // link 
+                    ?>
 
             </div>
 
 
             <div class="img-wrap">
-                <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/tree.jpg" ?> alt="">
+                <?php $landscapeImage = array(
+                        'class' => '',
+                        'id' => $image['ID'],
+                        'alt' => $image['alt'],
+                        'lazyload' => false
+                    );
+                    echo build_srcset('standard', $landscapeImage); ?>
             </div>
 
             <div class="vertical-bars-container">
@@ -413,6 +192,16 @@ endif
                                                                                             } ?>" data-aos="fade-up"
         data-aos-anchor-placement="top-bottom">
 
+        <div class="img-wrap">
+            <?php $landscapeImage = array(
+                        'class' => '',
+                        'id' => $image['ID'],
+                        'alt' => $image['alt'],
+                        'lazyload' => false
+                    );
+                    echo build_srcset('standard', $landscapeImage); ?>
+        </div>
+
 
 
         <div class="text-col">
@@ -428,9 +217,14 @@ endif
 
             </div>
             <div class="text-content">
-                <?php if ($smallTitle): ?>
-                <h2 class="title-tag"><?php echo $smallTitle; ?></h2>
-                <?php endif; ?>
+                <?php if ($link || $smallTitle): ?>
+                <h2 class="title-tag"><?php if ($link) {
+                                                        echo $link_title;
+                                                    } else {
+                                                        echo $smallTitle;
+                                                    } ?></h2>
+                <?php endif;  // title tag 
+                        ?>
                 <?php if ($bigTitle): ?>
                 <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
                 <?php endif; // big title 
@@ -487,10 +281,15 @@ endif
 
         </div>
 
+        <div class="mobile-bars-container">
+            <?php echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars-small.svg');
+                    ?>
 
-        <div class="img-wrap">
-            <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/talk.jpg" ?> alt="">
+
         </div>
+
+
+
 
 
 
@@ -514,8 +313,14 @@ endif
         <div class="text-col">
 
             <div class="text-content">
-                <h2 class="title-tag">Well-being of Future
-                    Generations (Wales) Act 2015</h2>
+                <?php if ($link || $smallTitle): ?>
+                <h2 class="title-tag"><?php if ($link) {
+                                                        echo $link_title;
+                                                    } else {
+                                                        echo $smallTitle;
+                                                    } ?></h2>
+                <?php endif;  // title tag 
+                        ?>
                 <?php if ($bigTitle): ?>
                 <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
                 <?php endif; // big title 
@@ -563,7 +368,13 @@ endif
         </div>
 
         <div class="img-wrap">
-            <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/talk.jpg" ?> alt="">
+            <?php $landscapeImage = array(
+                        'class' => '',
+                        'id' => $image['ID'],
+                        'alt' => $image['alt'],
+                        'lazyload' => false
+                    );
+                    echo build_srcset('standard', $landscapeImage); ?>
         </div>
 
 
@@ -573,9 +384,19 @@ endif
 
             <?php
 
-
+                    // large
                     echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
+
+                    // small
+
+
+
+
+                    echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars-block.svg');
+
                     ?>
+
+
 
         </div>
 
@@ -585,7 +406,9 @@ endif
 
 
 
+
     </div>
+
 
     <?php endif; ?>
 
@@ -603,18 +426,38 @@ endif
 
 
 
-            <h2 class="title-tag">Well-being of Future
-                Generations (Wales) Act 2015</h2>
-            <h3 class="heading h2">Shaping a brighter tomorrow: Discover how the Well-being of Future Generations Act is
-                transforming Wales</h3>
-            <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et
-                dolore magna aliqua ut enim ad.</p>
-            <a href="/" class="link btn text-white">About the Act<div class="btn-arrow-container"></div></a>
+            <h2 class="title-tag"><?php if ($link || $smallTitle): ?>
+                <h2 class="title-tag"><?php if ($link) {
+                                                        echo $link_title;
+                                                    } else {
+                                                        echo $smallTitle;
+                                                    } ?></h2>
+                <?php endif;  // title tag 
+                        ?></h2>
+             <?php if ($bigTitle): ?>
+                <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
+                <?php endif; // big title 
+                        ?>
+                <?php if ($body): ?>
+                <p class="body"><?php echo $body; ?></p>
+                <?php endif; // body 
+                        ?>
+                            <?php if ($link): ?>
+                <a href="/" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?>
+                    <div class="btn-arrow-container"></div>
+                </a>
+                <?php endif; // link 
+                        ?>
 
-            <div class="img-wrap">
-                <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/talk.jpg" ?> alt="">
-            </div>
+<div class="img-wrap">
+            <?php $landscapeImage = array(
+                        'class' => '',
+                        'id' => $image['ID'],
+                        'alt' => $image['alt'],
+                        'lazyload' => false
+                    );
+                    echo build_srcset('standard', $landscapeImage); ?>
+        </div>
 
             <div class="vertical-bars-container">
 
@@ -643,22 +486,57 @@ endif
 
 
             <div class="text-content">
-                <h2 class="title-tag">Meet the commissioner</h2>
-                <h3 class="heading h2">Creating a legacy for Future Generations</h3>
-                <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua ut enim ad.</p>
-                <a href="/" class="link btn">About the Act<div class="btn-arrow-container"></div></a>
+                <?php if ($link || $smallTitle): ?>
+                <h2 class="title-tag"><?php if ($smallTitle) {
+                                                    echo $smallTitle;
+                                                } else {
+                                                    echo $link_title;
+                                                } ?></h2>
+                <?php endif;  // title tag
+                    ?>
+                <?php if ($bigTitle): ?>
+                <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
+                <?php endif; // big title 
+                    ?>
+                <?php if ($body): ?>
+                <p class="body"><?php echo $body; ?></p>
+                <?php endif; // body 
+                    ?>
+                <?php if ($link): ?>
+                <a href="/" class="link btn" target="<?php echo $link_target; ?>"><?php echo $link_title; ?><div
+                        class="btn-arrow-container"></div></a>
+                <?php endif; // link 
+                    ?>
 
             </div>
 
 
-
+            <?php if ($image): ?>
             <div class="img-wrap">
-                <img class="landscape-img"
-                    src=<?php echo get_template_directory_uri() . "/assets/images/jpg/derek-crop.jpg" ?> alt="">
-                <img class="portrait-img"
-                    src=<?php echo get_template_directory_uri() . "/assets/images/jpg/derek-crop.jpg" ?> alt="">
+                <div class="landscape-img">
+
+                    <?php $landscapeImage = array(
+                                'class' => '',
+                                'id' => $image['ID'],
+                                'alt' => $image['alt'],
+                                'lazyload' => false
+                            );
+                            echo build_srcset('standard', $landscapeImage); ?>
+
+                </div>
+                <div class="portrait-img">
+
+                    <?php $portraitImage = array(
+                                'class' => '',
+                                'id' => $image['ID'],
+                                'alt' => $image['alt'],
+                                'lazyload' => false
+                            );
+                            echo build_srcset('standard', $portraitImage); ?>
+
+                </div>
             </div>
+            <?php endif; ?>
 
             <div class="bars-container">
 
@@ -682,17 +560,40 @@ endif
 
             <!-------------------------- Layout Full Image --------------------------------->
             <div class="full-image-layout-content-wrapper">
-                <div class="section-content full-image-layout relative yellow-style" data-aos="fade-up"
+                <div class="section-content full-image-layout relative <?php if ($colourScheme) {
+                                                                                echo $colourScheme;
+                                                                            } ?>-style <?php if ($reverseLayout) {
+                                                                                            echo " reverse ";
+                                                                                        }
+                                                                                        if ($barsAtSide) {
+                                                                                            echo " bars-at-side ";
+                                                                                        } ?>" data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
-                    style="background-image: url('<?php echo get_stylesheet_directory_uri() . '/assets/images/jpg/viaduct.jpg' ?>') ;">
+                    style="background-image: url('<?php echo $image['url'] ?>') ;">
 
 
                     <div class="text-content">
-                        <h2 class="title-tag">Meet the commissioner</h2>
-                        <h3 class="heading h2">Creating a legacy for Future Generations</h3>
-                        <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua ut enim ad.</p>
-                        <a href="/" class="link btn text-white">About the Act<div class="btn-arrow-container"></div></a>
+                        <?php if ($link || $smallTitle): ?>
+                        <h2 class="title-tag"><?php if ($link) {
+                                                            echo $link_title;
+                                                        } else {
+                                                            echo $smallTitle;
+                                                        } ?></h2>
+                        <?php endif;  // title tag 
+                            ?>
+                        <?php if ($bigTitle): ?>
+                        <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
+                        <?php endif; // big title 
+                            ?>
+                        <?php if ($body): ?>
+                        <p class="body"><?php echo $body; ?></p>
+                        <?php endif; // body 
+                            ?>
+                        <?php if ($link): ?>
+                        <a href="/" class="link btn" target="<?php echo $link_target; ?>"><?php echo $link_title; ?><div
+                                class="btn-arrow-container"></div></a>
+                        <?php endif; // link 
+                            ?>
 
                     </div>
 
@@ -703,6 +604,9 @@ endif
                         <?php
                             // horizontal bars
                             echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars.svg');
+
+                            // vertical bars
+                            echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
                             ?>
 
                     </div>

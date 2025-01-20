@@ -9,75 +9,102 @@ section.section_text_and_image{
     @include sections_padding;
 
     /*----------------------------- Full Colour Layout -----------------------------------------------------------*/
-    .section-content.full-colour-layout{
+    .full-colour-layout-wrapper{
+            .section-content.full-colour-layout{
 
-        /*------------------------ Default/Mobile Styles -------------------------------*/
+                /*------------------------ Default/Mobile Styles -------------------------------*/
+                @include body;
+                color: white;
+                padding: 40% 1em 50% 1em;
         
-        color: white;
-        padding: 7vw 5vw;
-
-        .vertical-bars{
-            display: none;
-        }
-
-
-        .col{
-            margin-right: 3vw;
-            .title-tag{
-                margin-bottom: 4.5em;
-            }
-            .heading{
-                margin-bottom: 1em;
-            }
-            .body{
-                margin-bottom: 3em;
-                max-width: 80%;
-            }
-        }
-
-        /*------------------------ Desktop Styles -------------------------------*/
-
-        &{
-            @include respond-to('md'){
-
-            padding: 7rem 10rem;
-
-            .col{
-                width: 50%;
-            }
-
-            .vertical-bars{
-                display: block;
-                position: absolute;
-                top: 0;
-                right: 0;
-                height: 100%;
-                width: auto;
-                
-
-            }
-
-            // reverse layout option selected
-
-            &.reverse{
-
-                .col{
-                    margin-left: auto;
-                    margin-right: 0;
-
-                }
-
                 .vertical-bars{
-                    left: 0;
-                    transform: scaleX(-1); /* Reflects the element horizontally */
+                    display: none;
+                }
+
+                .horizontal-bars-small{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    height: auto;
+                    width: 100%;
+                }
+        
+        
+                .col{
+                    position: relative;
+                    z-index: 2;
+                    margin-right: 3vw;
+                    .title-tag{
+                        margin-bottom: 2.5em;
+                    }
+                    .heading{
+                        margin-bottom: 1em;
+                    }
+                    .body{
+                        margin-bottom: 3em;
+                        max-width: 80%;
+                    }
+                }
+
+            }
+        
+            /*------------------------ Desktop Styles -------------------------------*/
+
+                &{
+
+                    @include respond-to('md'){
+
+                        @include container;
+
+                    .section-content.full-colour-layout{
+                        padding: 7rem 10rem;
+        
+                        .col{
+                            width: 50%;
+                        }
+            
+                        .vertical-bars{
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            height: 100%;
+                            width: auto;
+                            
+            
+                        }
+
+                        .horizontal-bars-small{
+                            display: none;
+                        }
+            
+                        // reverse layout option selected
+            
+                        &.reverse{
+            
+                            .col{
+                                margin-left: auto;
+                                margin-right: 0;
+            
+                            }
+            
+                            .vertical-bars{
+                                left: 0;
+                                transform: scaleX(-1); /* Reflects the element horizontally */
+                                
+                
+                            }
+                        }
+                    }
+        
+
                     
-    
                 }
             }
-            
+        
+
         }
-    }
-}
+    
 
     /*----------------------------- Rows Layout -----------------------------------------------------------*/
     .section-content.rows-layout{
@@ -241,6 +268,10 @@ section.section_text_and_image{
             }
         }
 
+        .mobile-bars-container{
+            margin-top: 1rem;
+        }
+
         .links-container{
             margin-bottom: 0.8rem;
             a{
@@ -286,25 +317,19 @@ section.section_text_and_image{
         div.vertical-bars-container{
 
             position: relative;
-            height: 4rem;
+            height: auto;
             width: fit-content;
             margin-left: auto;
 
-            .vertical-bars-small{
-
-                height: 100%;
-                width: auto;
-                position: absolute;
-                top: 0;
-                right: 0;
-
-            }
 
 
             .vertical-bars{
 
                 display: none;
            
+            }
+            .vertical-bars-block{
+                margin: 1rem 0;
             }
 
         }
@@ -316,6 +341,10 @@ section.section_text_and_image{
 
         &{
             @include respond-to('md'){
+
+                .mobile-bars-container{
+                    display: none;
+                }
 
                 width: 100%;
                 display: grid;
@@ -397,6 +426,9 @@ section.section_text_and_image{
 
 
                     }
+                    .vertical-bars-block{
+                        display: none;
+                    }
                 }
 
                 &.reverse{
@@ -429,21 +461,27 @@ section.section_text_and_image{
     }
 }
 
+
 // centred style variation
 
 .section-content.half-text-half-img-layout.centre-style{
 
     /*------------------------ Default/Mobile Styles -------------------------------*/
-    @include container;
+    
     background-color: white; // override colour style class names
     @include mobile_text_col_spacing;
+
+    .text-content{
+        padding: 0 0.7rem;
+
+    }
 
     .title-tag{
         @include title_tag($darkNavy, $cobaltBlue);
     }
 
     div.img-wrap{
-        margin-bottom: 0.3rem;
+        margin-bottom: 1rem;
         width: 100%;
         height: fit-content;
 
@@ -451,6 +489,15 @@ section.section_text_and_image{
             height: 100%;
             width: 100%;
             object-fit: cover;
+        }
+    }
+
+    .mobile-bars-container{
+        margin-top: 0.5rem;
+
+        svg{
+            width: 100%;
+            height: auto;
         }
     }
 
@@ -509,15 +556,11 @@ section.section_text_and_image{
 
     &{
         @include respond-to('md'){
+            @include container;
 
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0.3rem;
-
-            
-
-            
-
 
 
             .text-col{
@@ -533,6 +576,8 @@ section.section_text_and_image{
                 .text-content{
 
                     max-width: 90%;
+                    margin-left: auto;
+                    padding: 0;
 
                     .title-tag{
                         @include rem-to-em(margin, 2rem, 0.875rem, 1rem, (bottom));
@@ -606,6 +651,20 @@ section.section_text_and_image{
             div.img-wrap{
                 
                 height: 100%;
+                margin-bottom: 0;
+            }
+
+            .mobile-bars-container{
+                display: none;
+            }
+
+
+            .bottom-bars-container{
+
+                margin-left: auto;
+                transform: scaleX(-1); /* Reflects the element horizontally */
+                
+
             }
 
             // if bars at top option is sleceted
@@ -613,9 +672,9 @@ section.section_text_and_image{
             &.bars-at-top{
                 .top-bars-container{
                     display: block;
-                    margin-right: auto;
+                    margin-left: auto;
                     margin-bottom: 6rem;
-                    transform: scaleX(-1); /* Reflects the element horizontally */
+                    // transform: scaleX(-1); /* Reflects the element horizontally */
                 }
                 .bottom-bars-container{
                     @include body;
@@ -628,15 +687,19 @@ section.section_text_and_image{
             &.reverse{
 
                 .text-col{
-                    padding-left: 5vw;
-                    padding-right: 0;
+                    padding-right: 5vw;
+                    padding-left: 0;
+
+                    .text-content{
+                        margin-left: 0;
+                    }
                 }
 
                 &.bars-at-top{
                     .top-bars-container{
-                        margin-right: 0;
-                        margin-left: auto;
-                        transform: scaleX(1); /* Reflects the element horizontally */
+                        margin-left: 0;
+                        margin-right: auto;
+                        transform: scaleX(-1); /* Reflects the element horizontally */
                     }
                 }
 
@@ -644,17 +707,20 @@ section.section_text_and_image{
 
                 
 
-                div.text-col{
+                div.img-wrap{
                     order: 2
                 }
 
                 .bottom-bars-container{
 
-                    margin-left: auto;
-                    transform: scaleX(-1); /* Reflects the element horizontally */
+           
+                    transform: scaleX(1); /* Reflects the element horizontally */
+                    margin-right: auto;
+                    margin-left: 0;
                     
- 
+    
                 }
+
 
             }
     
@@ -746,7 +812,7 @@ section.section_text_and_image{
                 div.vertical-bars-container{
 
                     
-                    grid-area: 9 / 9 / span 3 / span 4;
+                    grid-area: 10 / 9 / span 2 / span 4;
                     width: 100%;
 
                     .vertical-bars-small{
@@ -797,13 +863,20 @@ section.section_text_and_image{
             position: relative;
             z-index: 2;
 
-            img.landscape-img{
+            .landscape-img{
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
+                aspect-ratio: 2/1;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
             }
 
-            img.portrait-img{
+            .portrait-img{
                 display: none;
             }
         }
@@ -889,6 +962,10 @@ section.section_text_and_image{
         
                 div.img-wrap{
                     display: none;
+
+                    img.landscape-img{
+                        aspect-ratio: initial;
+                    }
                 }
         
         
@@ -938,20 +1015,27 @@ section.section_text_and_image{
                         
     
             
-                        img.landscape-img{
+                        .landscape-img{
                             display: none;
                             width: 100%;
                             height: 100%;
-                            object-fit: cover;
-                            object-position: center;
-                            object-position: left 10rem;
+
+                            img{
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                            }
                         }
             
-                        img.portrait-img{
+                        .portrait-img{
                             display: block;
                             height: 100%;
                             width: 100%;
                             object-fit: cover;
+
+                            img{
+                                object-fit: cover;
+                            }
                         }
                     }
                 }
@@ -978,6 +1062,7 @@ section.section_text_and_image{
                 padding: 1.5rem 1rem 0 1rem;
                 @include mobile_text_col_spacing;
                 z-index: 3;
+
             
     
             }
@@ -989,6 +1074,7 @@ section.section_text_and_image{
                 right: 0;
                 width: 100%;
                 height: fit-content;
+                opacity: 0.6;
                 // display: flex;
                 // justify-content: flex-end;
     
@@ -997,6 +1083,11 @@ section.section_text_and_image{
                     width: 100%;
                     height: auto;
                     margin-bottom: -0.2rem;
+                    
+                }
+
+                svg.vertical-bars{
+                    display: none;
                     
                 }
     
@@ -1019,11 +1110,14 @@ section.section_text_and_image{
         
         
                         .text-content{
-                            width: 50%;
+                            width: 45%;
                             display: flex;
                             flex-direction: column;
                             margin-left: auto;
-                            margin: 0 0 8rem auto;
+                            margin: 0 auto 8rem 0;
+                            
+
+            
                             
         
         
@@ -1049,6 +1143,45 @@ section.section_text_and_image{
                             }
                 
                         }
+
+                        // reverse layout
+
+                        &.reverse{
+
+                            .text-content{
+                                margin: 0 0 8rem auto;
+
+                            }
+                                
+                            
+                        }
+
+                        // bars at side option selected 
+
+                        &.bars-at-side{
+
+                            div.bars-container{
+                                height: 100%;
+                                width: fit-content;
+                                max-width: 25%;
+                                margin-left: auto;
+                                overflow-x: clip;
+    
+                                svg.horizontal-bars{
+                                    display: none;
+                                }
+    
+                                svg.vertical-bars{
+                                    display: block;
+                                    height: 100%;
+                                    width: fit-content;
+                                }
+    
+                            }
+
+                        }
+
+
                         
                     }
     
