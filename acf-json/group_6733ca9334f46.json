@@ -58,16 +58,8 @@
             "aria-label": "",
             "type": "text",
             "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6733cd1a096e5",
-                        "operator": "==",
-                        "value": "boxed"
-                    }
-                ]
-            ],
+            "required": 0,
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -338,5 +330,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1733127251
+    "modified": 1737397852
 }

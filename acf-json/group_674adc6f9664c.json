@@ -404,7 +404,7 @@
                             "label": "Header Link",
                             "name": "header_link",
                             "aria-label": "",
-                            "type": "page_link",
+                            "type": "post_object",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -420,10 +420,13 @@
                                 "publish"
                             ],
                             "taxonomy": "",
-                            "allow_archives": 1,
+                            "return_format": "object",
                             "multiple": 0,
                             "allow_null": 0,
                             "allow_in_bindings": 1,
+                            "bidirectional": 0,
+                            "ui": 1,
+                            "bidirectional_target": [],
                             "parent_repeater": "field_674ae1add88c4"
                         }
                     ]
@@ -556,5 +559,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1734367692
+    "modified": 1737415229
 }
