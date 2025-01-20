@@ -10,7 +10,7 @@ $img = get_sub_field('image');
 
 <section class="image-section row-<?php echo $row; ?> ">
 
-    <div class="container">
+    <div class="container_small">
         <div class="img-wrap">
             <img src="<?php echo $img['url'] ?>" alt="">
         </div>
