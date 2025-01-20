@@ -159,8 +159,9 @@ function dd_theme_register_required_plugins()
             'name'      => 'Duplicator Pro',
             'slug'      => 'duplicator-pro',
             'source'    => get_template_directory() . '/plugins/duplicator-pro.zip',
-            'required'  => false,  // Optional plugin
+            'required'  => false,
         ),
+
         // Contact Form 7 - Available in the WordPress repository
         array(
             'name'      => 'Contact Form 7',

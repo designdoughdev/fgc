@@ -70,8 +70,9 @@ $image = get_field('image');
 
                     <div class="hamburger-icon-container">
                         <button class="hamburger-btn">
-                            <img class="hamburger-icon"
-                                src="<?php bloginfo('template_url'); ?>/assets/images/svg/hamburger.svg" alt="menu">
+                        <?php
+                                            echo file_get_contents(get_template_directory() . '/assets/images/svg/hamburger.svg');
+                                            ?>
                         </button>
                     </div>
 
