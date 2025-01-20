@@ -61,10 +61,10 @@ endif
 
             <div class="col">
                 <?php if ($link || $smallTitle): ?>
-                <h2 class="title-tag"><?php if ($link) {
-                                                    echo $link_title;
-                                                } else {
+                <h2 class="title-tag"><?php if ($smallTitle) {
                                                     echo $smallTitle;
+                                                } else {
+                                                    echo $link_title;
                                                 } ?></h2>
                 <?php endif;  // title tag
                     ?>
@@ -111,13 +111,13 @@ endif
 
 
             <?php if ($link || $smallTitle): ?>
-            <h2 class="title-tag"><?php if ($link) {
-                                                echo $link_title;
-                                            } else {
-                                                echo $smallTitle;
-                                            } ?></h2>
-            <?php endif;  // title tag
-                ?>
+                <h2 class="title-tag"><?php if ($smallTitle) {
+                                                    echo $smallTitle;
+                                                } else {
+                                                    echo $link_title;
+                                                } ?></h2>
+                <?php endif;  // title tag
+                    ?>
 
 
             <div class="text-content">
@@ -217,14 +217,14 @@ endif
 
             </div>
             <div class="text-content">
-                <?php if ($link || $smallTitle): ?>
-                <h2 class="title-tag"><?php if ($link) {
-                                                        echo $link_title;
-                                                    } else {
-                                                        echo $smallTitle;
-                                                    } ?></h2>
-                <?php endif;  // title tag 
-                        ?>
+            <?php if ($link || $smallTitle): ?>
+                <h2 class="title-tag"><?php if ($smallTitle) {
+                                                    echo $smallTitle;
+                                                } else {
+                                                    echo $link_title;
+                                                } ?></h2>
+                <?php endif;  // title tag
+                    ?>
                 <?php if ($bigTitle): ?>
                 <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
                 <?php endif; // big title 
@@ -313,14 +313,14 @@ endif
         <div class="text-col">
 
             <div class="text-content">
-                <?php if ($link || $smallTitle): ?>
-                <h2 class="title-tag"><?php if ($link) {
-                                                        echo $link_title;
-                                                    } else {
-                                                        echo $smallTitle;
-                                                    } ?></h2>
-                <?php endif;  // title tag 
-                        ?>
+            <?php if ($link || $smallTitle): ?>
+                <h2 class="title-tag"><?php if ($smallTitle) {
+                                                    echo $smallTitle;
+                                                } else {
+                                                    echo $link_title;
+                                                } ?></h2>
+                <?php endif;  // title tag
+                    ?>
                 <?php if ($bigTitle): ?>
                 <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
                 <?php endif; // big title 
@@ -426,14 +426,15 @@ endif
 
 
 
-            <h2 class="title-tag"><?php if ($link || $smallTitle): ?>
-                <h2 class="title-tag"><?php if ($link) {
-                                                        echo $link_title;
-                                                    } else {
-                                                        echo $smallTitle;
-                                                    } ?></h2>
-                <?php endif;  // title tag 
-                        ?></h2>
+            <?php if ($link || $smallTitle): ?>
+                <h2 class="title-tag"><?php if ($smallTitle) {
+                                                    echo $smallTitle;
+                                                } else {
+                                                    echo $link_title;
+                                                } ?></h2>
+                <?php endif;  // title tag ?>
+                    
+                
              <?php if ($bigTitle): ?>
                 <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
                 <?php endif; // big title 
@@ -573,13 +574,13 @@ endif
 
 
                     <div class="text-content">
-                        <?php if ($link || $smallTitle): ?>
-                        <h2 class="title-tag"><?php if ($link) {
-                                                            echo $link_title;
-                                                        } else {
+                    <?php if ($link || $smallTitle): ?>
+                        <h2 class="title-tag"><?php if ($smallTitle) {
                                                             echo $smallTitle;
+                                                        } else {
+                                                            echo $link_title;
                                                         } ?></h2>
-                        <?php endif;  // title tag 
+                        <?php endif;  // title tag
                             ?>
                         <?php if ($bigTitle): ?>
                         <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
