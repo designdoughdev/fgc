@@ -10512,6 +10512,10 @@ section.section_info_cards .background-container .section-content .cards-section
   }
 }
 
+section.section_info_cards .background-container .section-content .cards-section .info-card .text-content a.btn {
+  margin-top: 1.8em;
+}
+
 @media only screen and (width >= 768px) {
   section.section_info_cards .background-container .section-content.add-background {
     padding-top: 3em;
@@ -10540,6 +10544,15 @@ section.section_info_cards .background-container .section-content .cards-section
 
   section.section_info_cards .background-container .section-content .cards-section .info-card .text-content {
     margin-left: auto;
+  }
+
+  section.section_info_cards .background-container .section-content .cards-section .info-card.centered {
+    text-align: center;
+  }
+
+  section.section_info_cards .background-container .section-content .cards-section .info-card.centered .icon-container {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   section.section_info_cards .background-container .section-content .cards-section > :nth-child(3n+1) {

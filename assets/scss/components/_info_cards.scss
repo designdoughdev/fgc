@@ -180,6 +180,10 @@ section.section_info_cards{
                         .card-body{
                             @include body;
                         }
+
+                        a.btn{
+                            margin-top: 1.8em;
+                        }
                     
                     }
     
@@ -227,6 +231,20 @@ section.section_info_cards{
                             .text-content{
                                 margin-left: auto;
                             }
+
+                            // centred version
+
+                            &.centered{
+
+                                text-align: center;
+
+                                .icon-container{
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                }
+
+                            }
+
                         }
     
                         // conditional alignment based on grid position

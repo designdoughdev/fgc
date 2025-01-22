@@ -3860,6 +3860,27 @@
                             "placeholder": ""
                         },
                         {
+                            "key": "field_679111cacf193",
+                            "label": "Centre Align",
+                            "name": "center_align",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Will centre align all card content",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "allow_in_bindings": 0,
+                            "ui_on_text": "Centred",
+                            "ui_off_text": "Left Aligned",
+                            "ui": 1
+                        },
+                        {
                             "key": "field_673a75125aeb5",
                             "label": "Cards",
                             "name": "cards",
@@ -3957,6 +3978,24 @@
                                     "rows": 4,
                                     "placeholder": "",
                                     "new_lines": "br",
+                                    "parent_repeater": "field_673a75125aeb5"
+                                },
+                                {
+                                    "key": "field_67911ee0bc9fe",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "allow_in_bindings": 0,
                                     "parent_repeater": "field_673a75125aeb5"
                                 }
                             ]
@@ -7128,5 +7167,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737558036
+    "modified": 1737563899
 }
