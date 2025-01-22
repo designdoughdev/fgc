@@ -79,9 +79,7 @@ $centerAlign = get_sub_field('center_align');
 
                                                         <?php if ($icon): ?>
 
-                                                            <?php
-                                                            echo file_get_contents(get_template_directory() . '/assets/images/svg/' . $icon . '-icon.svg');
-                                                            ?>
+                                                            <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt'] ?: 'Default alt text for icon'); ?>">
                                                         <?php endif; ?>
 
                                                     </div>
@@ -150,9 +148,7 @@ $centerAlign = get_sub_field('center_align');
 
                                         <?php if ($icon): ?>
 
-                                            <?php
-                                            echo file_get_contents(get_template_directory() . '/assets/images/svg/' . $icon . '-icon.svg');
-                                            ?>
+                                            <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt'] ?: 'Default alt text for icon'); ?>">
                                         <?php endif; ?>
 
                                     </div>

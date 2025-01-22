@@ -3424,10 +3424,6 @@ body[data-theme="light"] ::selection {
   background-color: #1addae;
 }
 
-.mint-scheme .icon-container {
-  background-color: #d1f8ee;
-}
-
 .mint-scheme .icon-container svg path, .mint-scheme .bars-container svg path {
   fill: #1addae;
 }
@@ -3464,10 +3460,6 @@ body[data-theme="light"] ::selection {
   background-color: #46d1ee;
 }
 
-.blue-scheme .icon-container {
-  background-color: #cdf5ff;
-}
-
 .blue-scheme .icon-container svg path, .blue-scheme .bars-container svg path {
   fill: #46d1ee;
 }
@@ -3502,10 +3494,6 @@ body[data-theme="light"] ::selection {
 
 .yellow-scheme.wayfinder-card .tag {
   background-color: #fbdb34;
-}
-
-.yellow-scheme .icon-container {
-  background-color: #fef6cc;
 }
 
 .yellow-scheme .icon-container svg path, .yellow-scheme .bars-container svg path {
@@ -3545,10 +3533,6 @@ body[data-theme="light"] ::selection {
   background-color: #112343;
 }
 
-.navy-scheme .icon-container {
-  background-color: #f3f4f6;
-}
-
 .navy-scheme .icon-container svg path, .navy-scheme .bars-container svg path {
   fill: #112343;
 }
@@ -3586,7 +3570,7 @@ body[data-theme="light"] ::selection {
   background-color: #eef9d6;
 }
 
-.green-scheme.wayfinder-card .tag, .green-scheme .icon-container {
+.green-scheme.wayfinder-card .tag {
   background-color: #a8e332;
 }
 
@@ -10427,7 +10411,17 @@ section.section_info_cards .background-container .section-content .cards-section
   margin-bottom: 0;
 }
 
-section.section_info_cards .background-container .section-content .cards-section .info-card.slider-card .icon-container, section.section_info_cards .background-container .section-content .cards-section .info-card.slider-card .text-content {
+section.section_info_cards .background-container .section-content .cards-section .info-card.slider-card .icon-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.section_info_cards .background-container .section-content .cards-section .info-card.slider-card .icon-container img {
+  width: 100%;
+  height: auto;
+}
+
+section.section_info_cards .background-container .section-content .cards-section .info-card.slider-card .text-content {
   margin-left: auto;
   margin-right: auto;
 }

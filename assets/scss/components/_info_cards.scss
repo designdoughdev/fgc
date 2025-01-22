@@ -128,6 +128,11 @@ section.section_info_cards{
                         .icon-container{
                             margin-left: auto;
                             margin-right: auto;
+
+                            img{
+                                width: 100%;
+                                height: auto;
+                            }
                         }
                         .text-content{
                             margin-left: auto;
@@ -166,9 +171,6 @@ section.section_info_cards{
                             }
 
                         }
-
-
-                        //
         
                         .card-title{
                             @include h-three;

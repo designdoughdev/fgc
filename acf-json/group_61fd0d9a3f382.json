@@ -3411,7 +3411,8 @@
                                 "post": "News",
                                 "press-release": "Press Releases",
                                 "resource": "Resources",
-                                "public-body": "Public Bodies"
+                                "public-body": "Public Bodies",
+                                "public-information": "Public Information"
                             },
                             "default_value": false,
                             "return_format": "value",
@@ -3884,7 +3885,7 @@
                                     "label": "Icon",
                                     "name": "icon",
                                     "aria-label": "",
-                                    "type": "select",
+                                    "type": "image",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": [
@@ -3901,17 +3902,17 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "choices": {
-                                        "hand": "Hand"
-                                    },
-                                    "default_value": false,
-                                    "return_format": "value",
-                                    "multiple": 0,
-                                    "allow_null": 0,
-                                    "allow_in_bindings": 0,
-                                    "ui": 0,
-                                    "ajax": 0,
-                                    "placeholder": "",
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "allow_in_bindings": 1,
+                                    "preview_size": "thumbnail",
                                     "parent_repeater": "field_673a75125aeb5"
                                 },
                                 {
@@ -7127,5 +7128,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1735831871
+    "modified": 1737558036
 }
