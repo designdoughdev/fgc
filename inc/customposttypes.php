@@ -26,6 +26,11 @@ function designdough_custom_post_types()
             'singular_name' => 'Public Body',
             'menu_icon' => 'portfolio',
         ),
+        array(
+            'name' => 'Public Information',
+            'singular_name' => 'Public Information',
+            'menu_icon' => 'text-page',
+        ),
 
     );
 
@@ -188,3 +193,30 @@ function create_postcode_taxonomy()
     register_taxonomy('postcode', array('public-body'), $args);
 }
 add_action('init', 'create_postcode_taxonomy');
+
+function create_public_information_taxonomy()
+{
+    $labels = array(
+        'name'              => _x('Public Information Categories', 'taxonomy general name', 'textdomain'),
+        'singular_name'     => _x('public information category', 'taxonomy singular name', 'textdomain'),
+        'search_items'      => __('Search Public Information Categories', 'textdomain'),
+        'all_items'         => __('All Public Information Categories', 'textdomain'),
+        'parent_item'       => __('Parent Public Information Category', 'textdomain'),
+        'parent_item_colon' => __('Parent Public Information Category:', 'textdomain'),
+        'edit_item'         => __('Edit Public Information Category', 'textdomain'),
+        'update_item'       => __('Update Public Information Category', 'textdomain'),
+        'add_new_item'      => __('Add New Public Information Category', 'textdomain'),
+        'new_item_name'     => __('New Public Information Category', 'textdomain'),
+        'menu_name'         => __('Public Information Categories', 'textdomain'),
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'rewrite' => array('slug' => 'public-information'),
+        'hierarchical' => true,
+        'show_admin_column' => true,
+    );
+
+    register_taxonomy('public-information-category', array('public-information'), $args);
+}
+add_action('init', 'create_public_information_taxonomy');
