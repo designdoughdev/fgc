@@ -363,7 +363,7 @@ $conpad : 1.5625vw;
     width: 94vw;
     position: relative;
     margin: $zeroauto;
-    max-width: 2000px;
+
 }
 
 @mixin container {
@@ -371,14 +371,14 @@ $conpad : 1.5625vw;
     width: 90vw;
     position: relative;
     margin: $zeroauto;
-    max-width: 2000px;
+
     
 }
 
 @mixin mediumcontainer {
     width: 84vw;
     margin: $zeroauto;
-    max-width: 2000px;
+
 
 }
 
