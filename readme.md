@@ -2,11 +2,9 @@
 
 1. Navigate to your Wordpress local development environment and into your 'themes' directory 
 
-2. Install the starter theme within this folder. You can clone the repository by using:
+2. Install the starter theme within this folder. You can clone the repository by using git clone.
 
 
-
-```git clone https://github.com/designdoughdev/dd-starter-parcel.git```
 
 3. First and very importantly delete the .git folder within the theme folder (this will be hidden). You are then free to initialise your own repository for your new site whenever you like.
 
