@@ -11345,20 +11345,6 @@ section.section_wellbeing_goals .background-container .section-content .cards-se
   margin-top: 1rem;
 }
 
-.section_timeline_scroll .timeline_container .timeline_stages .bars-container {
-  z-index: 10;
-  width: auto;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.section_timeline_scroll .timeline_container .timeline_stages .bars-container svg {
-  width: auto;
-  height: 100%;
-}
-
 .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_title_wrap {
   letter-spacing: -.03em;
   color: #112343;
@@ -11372,7 +11358,6 @@ section.section_wellbeing_goals .background-container .section-content .cards-se
   font-weight: 700;
   line-height: 100%;
   display: flex;
-  position: relative;
 }
 
 @media only screen and (width >= 768px) {

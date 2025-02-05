@@ -65,19 +65,7 @@
 
             }
 
-            .bars-container{
-                position: absolute;
-                right: 0;
-                top: 0;
-                height: 100%;
-                width: auto;
-                z-index: 10;
-                
-                svg{
-                    height: 100%;
-                    width: auto;
-                }
-            }
+
 
 
 
@@ -86,7 +74,6 @@
 
 
                 .stage_title_wrap {
-                    position: relative;
                     @include h-one;
 
                 // add circle marker
@@ -126,6 +113,8 @@
                     }
 
                 }
+
+
                 .stage_body_text {
                     padding: 0 1.8rem;
                     @include wysiwyg;
@@ -181,6 +170,20 @@
 
 
                 }
+
+                // .bars-container{
+                //     position: absolute;
+                //     right: 0;
+                //     top: 0;
+                //     height: 100%;
+                //     width: auto;
+                //     z-index: 10;
+                    
+                //     svg{
+                //         height: 100%;
+                //         width: auto;
+                //     }
+                // }
 
             }
         }

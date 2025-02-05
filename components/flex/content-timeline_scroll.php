@@ -49,6 +49,8 @@
                         <h4 class="stage_title"><?php echo $stage_title; ?></h4>
                         <button class="btn-vthree"><div class="btn-arrow-container"></div></button>
                     </div>
+
+
                     <div class="stage_body_text accord_body"><?php echo $stage_body_text; ?></div>
                     <?php if($link) { ?>
                         <a class="btn_default" href="<?php echo esc_url($link['url']); ?>"
