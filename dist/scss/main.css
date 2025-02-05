@@ -1839,7 +1839,6 @@ body {
 
 .container {
   width: 90vw;
-  max-width: 2000px;
   margin: 0 auto;
   position: relative;
 }
@@ -1856,13 +1855,11 @@ body {
 
 .container_medium {
   width: 84vw;
-  max-width: 2000px;
   margin: 0 auto;
 }
 
 .container_big {
   width: 94vw;
-  max-width: 2000px;
   margin: 0 auto;
   position: relative;
 }
@@ -7656,7 +7653,6 @@ section.section_text_and_image .full-colour-layout-wrapper .section-content.full
 @media only screen and (width >= 768px) {
   section.section_text_and_image .full-colour-layout-wrapper {
     width: 90vw;
-    max-width: 2000px;
     margin: 0 auto;
     position: relative;
   }
@@ -7851,7 +7847,6 @@ section.section_text_and_image .section-content.rows-layout div.vertical-bars-co
 section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned {
   background-color: #fff;
   width: 90vw;
-  max-width: 2000px;
   margin: 0 auto;
   position: relative;
 }
@@ -8252,7 +8247,6 @@ section.section_text_and_image .section-content.half-text-half-img-layout.centre
     grid-template-columns: 1fr 1fr;
     gap: .3rem;
     width: 90vw;
-    max-width: 2000px;
     margin: 0 auto;
     display: grid;
     position: relative;
@@ -8825,7 +8819,6 @@ section.section_text_and_image .full-image-layout-content-wrapper .section-conte
 @media only screen and (width >= 768px) {
   section.section_text_and_image .full-image-layout-content-wrapper {
     width: 90vw;
-    max-width: 2000px;
     margin: 0 auto;
     position: relative;
   }
@@ -8983,7 +8976,6 @@ section.section_wayfinder .section-content .text-content .title-tag:before {
 
 section.section_wayfinder .section-content .wayfinder-container.sliding-rows {
   width: 90vw;
-  max-width: 2000px;
   margin: 0 auto;
   position: relative;
 }
@@ -9277,7 +9269,6 @@ section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.w
 
 section.section_wayfinder .section-content .wayfinder-container.cards-layout {
   width: 90vw;
-  max-width: 2000px;
   margin: 0 auto;
   position: relative;
 }
@@ -9927,7 +9918,6 @@ section.section_testimonial {
 @media only screen and (width >= 768px) {
   section.section_testimonial .container-wrapper {
     width: 90vw;
-    max-width: 2000px;
     margin: 0 auto;
     position: relative;
   }
@@ -10850,7 +10840,6 @@ section.section_text_dynamic {
 @media only screen and (width >= 768px) {
   section.section_text_dynamic .container-wrapper {
     width: 90vw;
-    max-width: 2000px;
     margin: 0 auto;
     position: relative;
   }
@@ -12275,30 +12264,32 @@ section.section_timeline_journey .info-card .text-content .tag {
 }
 
 section.section_timeline_journey .info-card .text-content .icon-container {
-  -webkit-font-smoothing: antialiased;
+  letter-spacing: -.03em;
   color: #112343;
+  -webkit-font-smoothing: antialiased;
   aspect-ratio: 1;
   border-radius: .13636rem;
   justify-content: center;
   align-items: center;
-  height: 5.3em;
-  margin: 0 auto 2.62em;
-  font-family: Messina Sans Book, sans-serif;
-  font-size: 1.8rem;
-  font-weight: normal;
-  line-height: 143%;
+  height: 3em;
+  margin: 0 auto 1.5em;
+  font-family: Messina Sans, sans-serif;
+  font-size: 2.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
   display: flex;
 }
 
 @media only screen and (width >= 768px) {
   section.section_timeline_journey .info-card .text-content .icon-container {
-    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+    font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
   section.section_timeline_journey .info-card .text-content .icon-container {
-    font-size: 1rem;
+    font-size: 3.75rem;
   }
 }
 
@@ -13335,7 +13326,6 @@ header .banner-container.level-two-layout {
 
 header .banner-container.level-two-layout .text-content {
   width: 90vw;
-  max-width: 2000px;
   margin: 0 auto;
   position: relative;
 }
@@ -13428,7 +13418,6 @@ header .banner-container.level-two-layout .text-content .text {
 @media only screen and (width >= 768px) {
   header .banner-container.level-two-layout .text-content {
     width: 90vw;
-    max-width: 2000px;
     margin: 0 auto;
     position: relative;
   }
@@ -13445,7 +13434,6 @@ header .banner-container.level-three-layout {
 
 header .banner-container.level-three-layout .text-content {
   width: 90vw;
-  max-width: 2000px;
   margin: 0 auto;
   position: relative;
 }
@@ -13609,7 +13597,6 @@ header .banner-container.level-three-layout .text-content .text {
 @media only screen and (width >= 768px) {
   header .banner-container.level-three-layout .text-content {
     width: 90vw;
-    max-width: 2000px;
     margin: 0 auto;
     position: relative;
   }
