@@ -1,39 +1,253 @@
-.section_timeline_journey {
-    @include sections_padding;
-    .container {
-        .title_wrap {
-            padding-bottom: 40px;
-        }
-        .intro_text_wrap {
-            padding-bottom: 100px;
-            @include respond-to('lg') {
-                width: 60%;
-            }
-        }
-        .timeline_journey_container {
-            .timeline_step_wrap {
-                display: grid;
-                gap: 40px;
-                margin-bottom: 140px;
-                @include respond-to('lg') {
-                    grid-template-columns: 1fr 1fr;
-                }
-                &.reverse {
-                    .text_wrap {
-                        // swap the columns
-                        order: 2;
-                    }
-                }
+@use '../abstracts/colours' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
+@use '../abstracts/variables' as *;
 
-                .text_wrap {
-                    padding: 40px;
-                }
-                .image_wrap {
-                    padding: 40px;
-                    background-size: cover;
-                    background-position: center;
-                }
-            }
+section.section_timeline_journey {
+    @include sections_padding;
+
+    /*------------------------ default mobile styles -------------------------------*/
+
+    .timeline_container{
+        @include rem-to-em(padding, 12rem, 3.75rem, 1rem, (top));
+        @include rem-to-em(padding, 8rem, 3.75rem, 1rem, (left, right));
+        background-color: $greyFour;
+        text-align: center;
+    }
+
+    .timeline-stage-index{
+        @include h-one;
+    }
+
+    .title-tag{
+        @include h-five;
+        margin-bottom: 2em;
+    }
+
+    .heading{
+        @include h-one;
+        max-width: 17em;
+        margin: 0 auto 1em auto;
+    }
+
+
+
+    .line-container{
+        display: flex;
+        justify-content: center;
+        @include rem-to-em(margin, 4rem, 3.75rem, 1rem, (top, bottom));
+
+        &.top{
+            height: 200px;
+        }
+
+        &.bottom{
+            height: 60px;
+        }
+
+        .line{
+            width: 2px;
+            background-color: $darkNavy;
+            height: 100%;
         }
     }
+
+    .stage-content{
+        padding-bottom: 1rem;
+    }
+
+    .stage_body_text{
+        margin: 0 auto;
+        @include h-one-sizing;
+        max-width: 15em;
+        @include wysiwyg;
+    }
+
+    .cards-section{
+        @include rem-to-em(margin, 16rem, 3.75rem, 1rem, (top, bottom));
+        
+    }
+
+    .info-card{
+    
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3rem;
+        padding-bottom: 1em;
+        border-bottom: 1px solid $lightNavy;
+
+        &.slider-card{
+            border-bottom: none;
+            text-align: center;
+            margin-bottom: 0;
+
+            .icon-container{
+                margin-left: auto;
+                margin-right: auto;
+
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .text-content{
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+
+        .text-content{
+
+            max-width: 75%;
+            // margin-right: auto;
+            
+            // numbered version
+
+            .tag{
+                @include rem-to-em(margin, 2rem, 0.6875rem, 1rem, (bottom))
+            }
+
+            //icon version
+
+            .icon-container{
+                @include body;
+                @include border-radius;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                height: 5.3em;
+                aspect-ratio: 1;
+                margin: 0 auto 2.62em auto;
+
+                svg{
+                    max-height: 4rem;
+                }
+
+            }
+
+            .card-title{
+                @include h-three;
+                @include rem-to-em(margin, 2rem, 2.8125rem, 1rem, (bottom))
+            }
+
+            .card-body{
+                @include body;
+            }
+
+            a.btn{
+                margin-top: 1.8em;
+            }
+        
+        }
+
+
+
+
+        
+    }
+
+
+
+    /*------------------------ Desktop Styles -------------------------------*/
+
+    @include respond-to(md){
+        .cards-section{
+        
+            display: flex;
+            // grid-template-columns: repeat(3, 1fr);
+            // row-gap: 6rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0 3vw;
+            
+    
+            .info-card{
+                @include h-one-sizing;
+                margin: 1em 0;
+                border-right: 1px solid $darkNavy;
+                border-bottom: none;
+                width: 33%;
+                // padding-right: 3vw;
+
+    
+                .text-content{
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+    
+                // centred version
+    
+                &.centered{
+    
+                    text-align: center;
+    
+                    .icon-container{
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+    
+                }
+
+                &:last-of-type{
+                    border-right: none!important;
+                }
+    
+            }
+    
+            // conditional alignment based on grid position
+    
+            // Every 1st, 4th, 7th, 10th, etc
+            & > :nth-child(3n + 1) {
+                justify-content: flex-start;
+            }
+            
+            // Every 2nd, 5th, 8th, 11th, etc
+            & > :nth-child(3n + 2) {
+                justify-content: center;
+            }
+            
+            // Every 3rd, 6th, 9th, 12th, etc 
+            & > :nth-child(3n) {
+                justify-content: flex-end;
+                border-right: none;
+            }
+
+
+            // four column layout version
+
+            &.four_columns{
+
+                padding: 0;
+
+                .info-card{
+                    width: 24%;
+                }
+
+                // overwrite last item in row welement from 3 col styles
+                & > :nth-child(3n) {
+                    justify-content: flex-start;
+                    border-right: 1px solid $darkNavy;
+                }
+
+                // Every 4th, 8th, etc
+                & > :nth-child(4n) {
+                    justify-content: flex-end;
+                    border-right: none;
+                }
+            }
+
+
+    
+    
+        }
+
+    }
+
+
+
+
+
 }

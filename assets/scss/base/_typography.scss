@@ -515,27 +515,10 @@ ul li {
 
 ol li {
   list-style-type:none;
-//   margin-left: 1rem;
-	// &::marker{
-	// 	@include h-one;
-	// 	@include respond-to(md){
-	// 		@include h-two;
-	// 	}
-	// 	color: black;
-	// }
+
 }
 
-// ol li {
-//   list-style-type:decimal;
-//   margin-left: 1rem;
-// 	&::marker{
-// 		@include h-one;
-// 		@include respond-to(md){
-// 			@include h-two;
-// 		}
-// 		color: black;
-// 	}
-// }
+
 
 a {
 	

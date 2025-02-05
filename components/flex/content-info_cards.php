@@ -7,6 +7,7 @@ $body = get_sub_field('body');
 $style = get_sub_field('style');
 $infoCards = get_sub_field('selected_posts');
 $centerAlign = get_sub_field('center_align');
+
 ?>
 
 
@@ -66,10 +67,12 @@ $centerAlign = get_sub_field('center_align');
                                         <?php $icon = get_sub_field('icon'); ?>
                                         <?php $cardTitle = get_sub_field('card_title'); ?>
                                         <?php $cardBody = get_sub_field('card_body'); ?>
+                                        <?php $link = get_sub_field('link'); ?>
 
 
 
-                                        <div class="info-card <?php echo $colourScheme; ?>-scheme slider-card">
+
+                                        <div class="info-card <?php echo $colourScheme; ?>-scheme slider-card <?php if ($centerAlign){echo " centered ";} ?>">
 
                                             <div class="text-content">
                                                 <?php if ($style == 'icons'): ?>
@@ -79,9 +82,7 @@ $centerAlign = get_sub_field('center_align');
 
                                                         <?php if ($icon): ?>
 
-                                                            <?php
-                                                            echo file_get_contents(get_template_directory() . '/assets/images/svg/' . $icon . '-icon.svg');
-                                                            ?>
+                                                            <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt'] ?: 'Default alt text for icon'); ?>">
                                                         <?php endif; ?>
 
                                                     </div>
@@ -94,6 +95,16 @@ $centerAlign = get_sub_field('center_align');
                                                 <?php endif; ?>
                                                 <h4 class="card-title"><?php echo $cardTitle; ?></h4>
                                                 <p class="card-body"><?php echo $cardBody; ?></p>
+
+                                                <?php if ($link): ?>
+                                                    <a href="<?php echo esc_url($link['url']); ?>" 
+                                                    class="post-link btn" 
+                                                    target="<?php echo esc_attr($link['target'] ?: '_self'); ?>" 
+                                                    aria-label="Read more about <?php echo esc_attr($link['title']); ?>">
+                                                        Read more 
+                                                        <div class="btn-arrow-container"></div>
+                                                    </a>
+                                                <?php endif; ?>
 
                                             </div>
 
@@ -137,10 +148,11 @@ $centerAlign = get_sub_field('center_align');
                         <?php $icon = get_sub_field('icon'); ?>
                         <?php $cardTitle = get_sub_field('card_title'); ?>
                         <?php $cardBody = get_sub_field('card_body'); ?>
+                        <?php $link = get_sub_field('link'); ?>
 
 
 
-                        <div class="info-card <?php echo $colourScheme; ?>-scheme">
+                        <div class="info-card <?php echo $colourScheme; ?>-scheme <?php if ($centerAlign){echo " centered ";} ?>">
 
                             <div class="text-content">
                                 <?php if ($style == 'icons'): ?>
@@ -150,9 +162,7 @@ $centerAlign = get_sub_field('center_align');
 
                                         <?php if ($icon): ?>
 
-                                            <?php
-                                            echo file_get_contents(get_template_directory() . '/assets/images/svg/' . $icon . '-icon.svg');
-                                            ?>
+                                            <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt'] ?: 'Default alt text for icon'); ?>">
                                         <?php endif; ?>
 
                                     </div>
@@ -165,6 +175,16 @@ $centerAlign = get_sub_field('center_align');
                                 <?php endif; ?>
                                 <h4 class="card-title"><?php echo $cardTitle; ?></h4>
                                 <p class="card-body"><?php echo $cardBody; ?></p>
+
+                                <?php if ($link): ?>
+                                    <a href="<?php echo esc_url($link['url']); ?>" 
+                                    class="post-link btn" 
+                                    target="<?php echo esc_attr($link['target'] ?: '_self'); ?>" 
+                                    aria-label="Read more about <?php echo esc_attr($link['title']); ?>">
+                                        Read more 
+                                        <div class="btn-arrow-container"></div>
+                                    </a>
+                                <?php endif; ?>
 
                             </div>
 

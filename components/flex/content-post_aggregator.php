@@ -494,145 +494,177 @@ $row = get_row_index() - 0;
 
     <?php } elseif ($layout == 'list') { ?>
 
-    <div class="posts-list-layout section-wrapper">
-        <div class="container_small">
+        
 
-            <div class="top-section">
-                <?php if ($small_title): ?>
-                <h2 class="title-tag"><?php echo esc_html($small_title); ?></h2>
-                <?php endif; ?>
-                <?php if ($big_title): ?>
-                <h3 class="heading h2"><?php echo esc_html($big_title); ?></h3>
-                <?php endif; ?>
-            </div>
+        <div class="posts-list-layout section-wrapper">
+            <div class="container_small">
 
-            <div class="filter-bar">
-                <button class="filter-button active" data-filter="all">A-Z</button>
-                <?php
+                <div class="top-section">
+                    <?php if ($small_title): ?>
+                    <h2 class="title-tag"><?php echo esc_html($small_title); ?></h2>
+                    <?php endif; ?>
+                    <?php if ($big_title): ?>
+                    <h3 class="heading h2"><?php echo esc_html($big_title); ?></h3>
+                    <?php endif; ?>
+                </div>
+
+                <div class="filter-bar">
+                    <button class="filter-button active" data-filter="all">A-Z</button>
+                    <?php if ($chosen_post_type == 'public-information'){
+                        //public information query
+                        $terms = get_terms(array(
+                            'taxonomy' => 'public-information-category',
+                            'hide_empty' => true, // Only show terms with posts
+                        ));
+
+                    }else{
+                        // public bodies query
                         // Get all terms from the 'type' taxonomy
                         $terms = get_terms(array(
                             'taxonomy' => 'type',
                             'hide_empty' => true, // Only show terms with posts
                         ));
 
-                        // Check if terms are retrieved
-                        if (!empty($terms) && !is_wp_error($terms)) {
-                            foreach ($terms as $term) {
-                        ?>
-                <button class="filter-button" data-filter="<?php echo esc_attr($term->slug); ?>">
-                    <?php echo esc_html($term->name); ?>
-                </button>
-                <?php
+                    }
+
+
+                            // Check if terms are retrieved
+                            if (!empty($terms) && !is_wp_error($terms)) {
+                                foreach ($terms as $term) {
+                            ?>
+                    <button class="filter-button" data-filter="<?php echo esc_attr($term->slug); ?>">
+                        <?php echo esc_html($term->name); ?>
+                    </button>
+                    <?php
+                                }
                             }
-                        }
-                        ?>
-            </div>
-
-
-            <div class="posts-container">
-                <?php
-                        // Get the search query from the URL and normalize it
-                        $search_postcode = isset($_GET['postcode']) ? sanitize_text_field($_GET['postcode']) : '';
-
-                        // Normalize the search postcode: replace spaces with hyphens and convert to lowercase
-                        if (!empty($search_postcode)) {
-                            $search_postcode = strtolower(str_replace(' ', '-', $search_postcode));
-                        }
-
-                        if (!empty($terms) && !is_wp_error($terms)) {
-                            $colourSchemes = ['blue', 'green', 'yellow', 'mint'];
-                            $index = 0;
-                            $posts_found = false; // Flag to check if any posts are found
-
-                            foreach ($terms as $term) {
-                                // Ensure the term is an object before proceeding
-                                if (!is_object($term)) {
-                                    continue;
-                                }
-
-                                // Build the query arguments
-                                $args = array(
-                                    'post_type' => 'public-body',
-                                    'tax_query' => array(
-                                        'relation' => 'AND',
-                                        array(
-                                            'taxonomy' => 'type',
-                                            'field'    => 'term_id',
-                                            'terms'    => $term->term_id,
-                                        ),
-                                    ),
-                                    'posts_per_page' => -1,
-                                );
-
-                                // If there's a postcode search, add it to the query
-                                if (!empty($search_postcode)) {
-
-                                    $args['tax_query'][] = array(
-                                        'taxonomy' => 'postcode',
-                                        'field'    => 'slug',
-                                        'terms'    => $search_postcode,
-                                    );
-                                }
-
-                                $query = new WP_Query($args);
-
-                                // Only display the term name if there are posts
-                                if ($query->have_posts()) {
-                                    $posts_found = true; // If posts exist, set this flag to true
-                                    $colourScheme = $colourSchemes[$index % count($colourSchemes)];
-                        ?>
-                <div class="taxonomy-group" data-term="<?php echo esc_attr($term->slug); ?>">
-                    <div class="taxonomy-title-container <?php echo esc_attr($colourScheme); ?>-scheme">
-                        <p>A - Z</p>
-                        <h4 class="taxonomy-title">
-                            <?php echo esc_html(is_object($term) ? $term->name : 'No valid term'); ?> in Wales
-                        </h4>
-                    </div>
-
-                    <div class="term-posts">
-                        <?php
-                                            while ($query->have_posts()) {
-                                                $query->the_post();
-                                            ?>
-                        <a href="<?php the_permalink(); ?>" class="post-link"
-                            aria-label="Read more about <?php the_title_attribute(); ?>">
-                            <div class="post-container">
-                                <h3 class="post-title"><?php the_title(); ?></h3>
-                                <div class="post-read-more-container">
-                                    <p class="post-read-more">Read more</p>
-                                </div>
-                            </div>
-                        </a>
-                        <?php
-                                            }
-                                            ?>
-                    </div>
+                            ?>
                 </div>
-                <?php
-                                    $index++;
-                                }
 
-                                wp_reset_postdata();
+
+                <div class="posts-container">
+                    <?php
+                            // Get the search query from the URL and normalize it
+                            $search_postcode = isset($_GET['postcode']) ? sanitize_text_field($_GET['postcode']) : '';
+
+                            // Normalize the search postcode: replace spaces with hyphens and convert to lowercase
+                            if (!empty($search_postcode)) {
+                                $search_postcode = strtolower(str_replace(' ', '-', $search_postcode));
                             }
 
-                            // If no posts were found after looping through all terms, display the "no records" message
-                            if (!$posts_found) {
+                            if (!empty($terms) && !is_wp_error($terms)) {
+                                $colourSchemes = ['blue', 'green', 'yellow', 'mint'];
+                                $index = 0;
+                                $posts_found = false; // Flag to check if any posts are found
+
+                                foreach ($terms as $term) {
+                                    // Ensure the term is an object before proceeding
+                                    if (!is_object($term)) {
+                                        continue;
+                                    }
+
+                                    if ($chosen_post_type == 'public-information'){
+                                        
+                                        // Build the query arguments
+                                        $args = array(
+                                            'post_type' => 'public-information',
+                                            'tax_query' => array(
+                                                'relation' => 'AND',
+                                                array(
+                                                    'taxonomy' => 'public-information-category',
+                                                    'field'    => 'term_id',
+                                                    'terms'    => $term->term_id,
+                                                ),
+                                            ),
+                                            'posts_per_page' => -1,
+                                        );
+                                 
+                
+                                    }else{
+
+                                        // Build the query arguments
+                                        $args = array(
+                                            'post_type' => 'public-body',
+                                            'tax_query' => array(
+                                                'relation' => 'AND',
+                                                array(
+                                                    'taxonomy' => 'type',
+                                                    'field'    => 'term_id',
+                                                    'terms'    => $term->term_id,
+                                                ),
+                                            ),
+                                            'posts_per_page' => -1,
+                                        );
+                                    }
+
+                                    // If there's a postcode search, add it to the query
+                                    if (!empty($search_postcode)) {
+
+                                        $args['tax_query'][] = array(
+                                            'taxonomy' => 'postcode',
+                                            'field'    => 'slug',
+                                            'terms'    => $search_postcode,
+                                        );
+                                    }
+
+                                    $query = new WP_Query($args);
+
+                                    // Only display the term name if there are posts
+                                    if ($query->have_posts()) {
+                                        $posts_found = true; 
+                                        $colourScheme = $colourSchemes[$index % count($colourSchemes)];
+                            ?>
+                    <div class="taxonomy-group" data-term="<?php echo esc_attr($term->slug); ?>">
+                        <div class="taxonomy-title-container <?php echo esc_attr($colourScheme); ?>-scheme">
+                            <p>A - Z</p>
+                            <h4 class="taxonomy-title">
+                                <?php echo esc_html(is_object($term) ? $term->name : 'No valid term'); 
+                                        echo $chosen_post_type == 'public-body' ? ' in Wales': '';
+                                ?>
+                            </h4>
+                        </div>
+
+                        <div class="term-posts">
+                            <?php
+                                                while ($query->have_posts()) {
+                                                    $query->the_post();
+                                                ?>
+                            <a href="<?php the_permalink(); ?>" class="post-link"
+                                aria-label="Read more about <?php the_title_attribute(); ?>">
+                                <div class="post-container">
+                                    <h3 class="post-title"><?php the_title(); ?></h3>
+                                    <div class="post-read-more-container">
+                                        <p class="post-read-more">Read more</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <?php
+                                                }
+                                                ?>
+                        </div>
+                    </div>
+                    <?php
+                                        $index++;
+                                    }
+
+                                    wp_reset_postdata();
+                                }
+
+                         
+                                if (!$posts_found) {
+                                    echo '<p class="body-large">Sorry, no matching results</p>';
+                                }
+                            } else {
+                                
                                 echo '<p class="body-large">Sorry, no matching results</p>';
                             }
-                        } else {
-                            // If terms are empty or invalid, show the message
-                            echo '<p class="body-large">Sorry, no matching results</p>';
-                        }
-                        ?>
+                            ?>
+                </div>
+
             </div>
-
-
-
-
-
-
         </div>
-    </div>
+
+
 
 
 

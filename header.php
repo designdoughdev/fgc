@@ -63,9 +63,23 @@ $image = get_field('image');
                 <div class="main-header-right">
 
                     <div class="right-links-container">
-                        <a href="">Contact</a>
-                        <a href="">Future Generations Act</a>
-                        <a href="">Cymru Can</a>
+
+                        <?php $header = get_field('header', 'option'); 
+
+                        foreach ($header['header_links'] as $link_row) {
+                            $link = $link_row['header_link']; 
+
+                            $post_url = get_permalink($link); // Post URL
+                            $post_title = get_the_title($link); // Post title
+                            ?>
+                            
+                            <a href="<?php echo esc_url($post_url); ?>">
+                                <?php echo esc_html($post_title); ?>
+                            </a>
+                   
+                        <?php } ?>
+
+
                     </div>
 
                     <div class="hamburger-icon-container">

@@ -1,49 +1,119 @@
-<?php 
+<?php
     $row = get_row_index() - 0; 
 
-    $small_title = get_sub_field('small_title');
-    $big_title = get_sub_field('big_title');
-    $intro_text = get_sub_field('intro_text');
+    
+
 ?>
 
-<!-- todo: implement background image behind the entire flex  -->
-<section class="section_timeline_journey row-<?php echo $row; ?> fade-in">
+
+<section class="section_timeline_journey row-<?php echo $row; ?>">
     <div class="container">
-        <div class="title_wrap">
-            <?php if($small_title) { ?><h5><?php echo $small_title; ?></h5><?php } ?>
-            <?php if($big_title) { ?><h2><?php echo $big_title; ?></h2><?php } ?>
-        </div>
-        <?php if($intro_text) { ?><div class="intro_text_wrap"><?php echo $intro_text; ?></div><?php } ?>
 
-        <div class="timeline_journey_container">
-            <?php if(have_rows('timeline_steps')) : while(have_rows('timeline_steps')) : the_row(); ?>
+        <div class="timeline_container">
 
-            <?php 
-                $title = get_sub_field('title');
-                $text_body = get_sub_field('text_body');
-                $date = get_sub_field('date');
-                $timeline_image = get_sub_field('timeline_image');
-                $icon = get_sub_field('icon');
-                $reverse_cols = get_sub_field('reverse_cols');
-            ?>
+            <div class="timeline_stages">
+                <?php $colourSchemes = ['mint', 'blue', 'yellow', 'navy']; ?>
+                <?php $totalCards = count(get_sub_field('timeline_stages')); ?>
 
-            <div
-                class="timeline_step_wrap <?php if ($reverse_cols == true) { ?> reverse <?php } ?> fade-in fade-in-delay-1">
 
-                <div class="text_wrap">
-                    <?php if($icon) { ?>
-                    <img src="<?php echo $icon; ?>" alt="timeline stage icon" class="">
-                    <?php } ?>
-                    <h4><?php echo $date; ?></h4>
-                    <h3><?php echo $title; ?></h3>
-                    <p><?php echo $text_body; ?></p>
+                <?php if(have_rows('timeline_stages')) : while(have_rows('timeline_stages')) : the_row(); ?>
+
+                <?php $small_title = get_sub_field('stage_small_title'); ?>
+                <?php $big_title = get_sub_field('stage_title'); ?>
+                <?php $stage_body_text = get_sub_field('stage_body_text'); ?>
+                <?php $four_columns = get_sub_field('four_columns'); ?>
+                <?php // $centerAlign = get_sub_field('center_align_cards'); ?>
+                
+
+                <?php $colourScheme = $colourSchemes[(get_row_index() - 1) % 4]; ?>
+
+                <div class="timeline_stage_journey <?php echo $colourScheme; ?>-scheme ">
+                    <?php if (get_row_index() != 1): // dont display for first item?>
+                    <div class="line-container top">
+                        <div class="line"></div>
+                    </div>
+                    <?php endif; ?>
+                    <p class="timeline-stage-index">
+                        <?php if (get_row_index() < 10) { echo 0;} echo get_row_index(); ?></p>
+                    <div class="line-container bottom">
+                        <div class="line"></div>
+                    </div>
+
+
+                    
+                    <div class="stage-content">
+                        <?php if ($small_title): ?>
+                            <h2 class="title-tag"><?php echo $small_title; ?></h2>
+                        <?php endif; ?>
+                        <?php if ($big_title): ?>
+                            <h3 class="heading"><?php echo $big_title; ?></h3>
+                        <?php endif; ?>
+
+                        <?php if ($stage_body_text): ?>
+                            <div class="stage_body_text"><?php echo $stage_body_text; ?></div>
+                        <?php endif; ?>
+
+                        <?php if (have_rows('cards')): ?>
+                            <div class="cards-section <?php if ($four_columns) { echo " four_columns "; } ?>">
+                        <?php endif; ?>
+
+                            <?php while (have_rows('cards')) : the_row(); ?>
+
+
+                                <?php $icon = get_sub_field('icon'); ?>
+                                <?php $cardTitle = get_sub_field('card_title'); ?>
+                                <?php $cardBody = get_sub_field('card_body'); ?>
+                                <?php $link = get_sub_field('link'); ?>
+
+
+
+                                <div class="info-card <?php if ($centerAlign){echo " centered ";} ?>">
+
+                                    <div class="text-content">
+                                
+
+                                        <div class="icon-container">
+
+                                            <?php if ($icon): ?>
+
+                                                <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt'] ?: 'Default alt text for icon'); ?>">
+                                            <?php endif; ?>
+
+                                        </div>
+                                        
+                                        <h4 class="card-title"><?php echo $cardTitle; ?></h4>
+                                        <p class="card-body"><?php echo $cardBody; ?></p>
+
+                                        <?php if ($link): ?>
+                                            <a href="<?php echo esc_url($link['url']); ?>" 
+                                            class="post-link btn" 
+                                            target="<?php echo esc_attr($link['target'] ?: '_self'); ?>" 
+                                            aria-label="Read more about <?php echo esc_attr($link['title']); ?>">
+                                                Read more 
+                                                <div class="btn-arrow-container"></div>
+                                            </a>
+                                        <?php endif; ?>
+
+                                    </div>
+
+
+                                </div>
+                            <?php endwhile; ?>
+
+                        <?php if (have_rows('cards')): ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                    
                 </div>
-                <!-- todo: fix srcset problem! -->
-                <div class="image_wrap" style="background-image: url('<?php echo $timeline_image; ?>');">
 
-                </div>
+
+
+                <?php endwhile; endif; ?>
+                <div class="line-container top">
+                        <div class="line"></div>
+                    </div>
             </div>
-            <?php endwhile; endif;?>
         </div>
 
     </div>

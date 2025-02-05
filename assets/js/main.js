@@ -1,7 +1,11 @@
-import Alpine from 'alpinejs';
+// import Alpine from 'alpinejs';
 import Splide from '@splidejs/splide';
 import 'animate.css';
 import AOS from 'aos';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
 
 
 
@@ -22,13 +26,33 @@ document.querySelectorAll('.wayfinder-row').forEach((item, index) => {
 });
 
 
-
- 
-
  
 // initialise Alpine
-window.Alpine = Alpine
-Alpine.start();
+// window.Alpine = Alpine
+// Alpine.start();
+
+//------------------------ GSAP animations -------------------------------//
+
+gsap.registerPlugin(ScrollTrigger);
+
+// timeline marker animation
+
+gsap.registerPlugin(ScrollTrigger);
+let tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".scroll-container", // this is the parent container, which will trigger the animation
+        start: "top center", // trigger when the TOP of the trigger element (above) enters middle of viewport
+        end: () => `bottom-=${document.querySelector(".timeline_scroll_icon").offsetHeight} center`, // Adjust end dynamically        
+        // scrub: true, // stylistic lagging
+        // markers: true,
+        pin: '.timeline_scroll_icon',
+    },
+});
+
+// Function to refresh ScrollTrigger after accordion changes
+function refreshScrollTrigger() {
+  ScrollTrigger.refresh();
+}
 
 //------------------------ Mobile menu -------------------------------//
 
@@ -520,6 +544,9 @@ for (let i = 0; i < accordions.length; i++) {
 		// Find the accordion_down_arrow within the clicked accord_wrap
 		// this.querySelector('.accordion_down_arrow').classList.toggle('active');
 
+        // resfresh scroll trigger for GSAP animations
+        
+
 		// Close all other acc heads and arrows
 		for (let j = 0; j < accordions.length; j++) {
 			if (i !== j) {
@@ -530,6 +557,9 @@ for (let i = 0; i < accordions.length; i++) {
 				// }
 			}
 		}
+    setTimeout(refreshScrollTrigger, 500); // Delay slightly to wait for height transition
+
+
 	});
 }
 
