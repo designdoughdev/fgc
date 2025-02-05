@@ -386,6 +386,12 @@ $conpad : 1.5625vw;
 
 }
 
+@mixin extrasmallcontainer {
+    width: 55vw;
+    margin: $zeroauto;
+
+}
+
 @mixin containerleft {
     width: 95vw;
     margin-right: auto;
@@ -408,6 +414,9 @@ $conpad : 1.5625vw;
     @include smallcontainer;
 }
 
+.container_extra_small {
+    @include extrasmallcontainer;
+}
 .container_medium {
     @include mediumcontainer;
 }
@@ -1473,6 +1482,90 @@ $conpad : 1.5625vw;
     @include btnvtwo;
 }
 
+@mixin btnvthree{
+    @include buttonsimple;
+    @include border_radius;
+    background-color: transparent;
+    font-weight: 400;
+    display: flex;
+    height: 2.5rem;
+    width: 100%;
+    align-items: center;
+    gap: 1.2em;
+    position: relative; 
+    text-decoration: underline;
+    padding: 0;
+
+    &:hover{
+        text-decoration: underline;
+        font-weight: 500;
+    }
+
+    .btn-arrow-container {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-color: aquamarine;
+        align-self: stretch;
+        height: 100%;
+        aspect-ratio: 1;
+        @include border_radius;
+        overflow: hidden; /* Hide any content that moves outside */
+    }
+
+    /* Initial arrow inside the container (this is ::after) */
+    .btn-arrow-container::after {
+        content: "";
+        display: inline-block; 
+        background-image: url('/assets/images/svg/arrow-right.svg'); 
+        background-size: 38%; 
+        background-repeat: no-repeat;           
+        background-position: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 50%; /* Start centered */
+        transform: translateX(-50%); /* Adjust the exact center alignment */
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    /* Replacement arrow (this is ::before) */
+    .btn-arrow-container::before {
+        content: "";
+        display: inline-block;
+        background-image: url('/assets/images/svg/arrow-right.svg');
+        background-size: 38%;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%; /* Initially out of view on the left */
+        opacity: 0; /* Initially hidden */
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    /* Hover effect on the button */
+    // &:hover .btn-arrow-container::after {
+    //     transform: translateX(100%);  /* Move arrow to the right */
+    //     opacity: 0;  /* Fade out */
+    // }
+
+    // &:hover .btn-arrow-container::before {
+    //     left: 50%;   /* Move the arrow into the container from the left */
+    //     transform: translateX(-50%); /* Center it */
+    //     opacity: 1;  /* Make the second arrow visible */
+    // }
+}
+
+.btn-vthree{
+    @include btnvthree;
+}
+
 @mixin btn-gallery{
     background-color: transparent;
     border: 1px solid $darkNavy;
@@ -2385,7 +2478,7 @@ body[data-theme='light'] {
 
 
 /*------------------------ Card colour styles -------------------------------*/
-///* Colour scheme for text image flexes *//
+///* Colour style for text image flexes *//
 // green 
 
 @mixin GreenStyle{
@@ -2820,7 +2913,7 @@ body[data-theme='light'] {
         
 
     }
-    button.btn-vtwo{
+    button.btn-vtwo, button.btn-vthree{
         div.btn-arrow-container{
             background-color: $mintGreen;
         }
@@ -2849,6 +2942,24 @@ body[data-theme='light'] {
     // wellbeing goals
     .card-goal-container{
         background-color: $lightMintGreen;
+
+    }
+
+    // timeline scroll
+    .stage_title_wrap{
+        background-color: $lightMintGreen;
+    }
+
+    // timeline journey
+    &.timeline_stage_journey{
+
+        .title-tag{
+            @include title_tag($darkNavy, $mintGreen);
+        }
+
+        .timeline-stage-index{
+            color: $mintGreen;
+        }
 
     }
     
@@ -2891,7 +3002,7 @@ body[data-theme='light'] {
         
 
     }
-    button.btn-vtwo{
+    button.btn-vtwo, button.btn-vthree{
         div.btn-arrow-container{
             background-color: $skyBlue;
         }
@@ -2922,6 +3033,11 @@ body[data-theme='light'] {
     .card-goal-container{
         background-color: $lightSkyBlue;
 
+    }
+
+    // timeline scroll
+    .stage_title_wrap{
+        background-color: $lightLightSkyBlue;
     }
 
 }
@@ -2962,7 +3078,7 @@ body[data-theme='light'] {
         
 
     }
-    button.btn-vtwo{
+    button.btn-vtwo, button.btn-vthree{
         div.btn-arrow-container{
             background-color: $yellow;
         }
@@ -2994,6 +3110,11 @@ body[data-theme='light'] {
     .card-goal-container{
         background-color: $lightYellow;
 
+    }
+
+    // timeline scroll
+    .stage_title_wrap{
+        background-color: $lightYellow;
     }
 }
 
@@ -3034,7 +3155,7 @@ body[data-theme='light'] {
         
 
     }
-    button.btn-vtwo{
+    button.btn-vtwo, button.btn-vthree{
         div.btn-arrow-container{
             background-color: $darkNavy;
         }
@@ -3096,7 +3217,7 @@ body[data-theme='light'] {
         
 
     }
-    button.btn-vtwo{
+    button.btn-vtwo, button.btn-vthree{
         div.btn-arrow-container{
             background-color: $green;
         }
@@ -3357,7 +3478,7 @@ body[data-theme='light'] {
     }
   }
 
-  @mixin breadcrumbs{
+@mixin breadcrumbs{
     background-color: white;
     @include border-radius;
     padding: 0.5em 0.9em;
@@ -3396,6 +3517,105 @@ body[data-theme='light'] {
         
 
     }
-  }
+}
+
+@mixin wysiwyg{
+    & > * {
+        margin: 1em 0;
+    }
+
+    h1{
+        @include h-one;
+    }
+    h2{
+        @include h-two;
+    }
+    h3{
+        @include h-three;
+        color: $cobaltBlue;
+    }
+    h4{
+        @include h-four;
+    }
+    h5{
+        @include h-five;
+    }
+    h6{
+        @include h-six;
+    }
+    p{
+        @include body;
+        margin-bottom: 1em;
+    }
+    blockquote {
+        @include border-radius;
+        @include body;
+        background-color: $lightLightSkyBlue;
+        font-weight: bold;
+        padding: 0.5em 0.75em 0.55em 0.75em;
+
+    }
+      
+      
+    strong, b{
+        font-weight: 700;
+    }
+    
+    em, i{
+        font-weight: 700;
+    }
+    
+    
+    ol, ul, li {
+        @include body;
+    }
+    
+
+    
+    ul li {
+    list-style-type:disc;
+    margin-left: 1rem;
+    }
+    
+    ol li {
+    list-style-type:decimal;
+    margin-left: 1rem;
+        &::marker{
+            @include h-one;
+            @include respond-to(md){
+                @include h-two;
+            }
+            color: $darkNavy;
+        }
+    }
+    
+    li:last-child {
+    padding-bottom: 0.5rem;
+    }
+    
+    
+    a {
+        color: $darkNavy;
+        text-decoration: none;
+        position: relative;
+        font-weight: 600;
+        @include transition;
+        &:before{
+            content:"";
+            height: 1px;
+            width: 0%;
+            position: absolute;
+            bottom: 0;
+            @include transition;
+        }
+        &:hover{
+            @include transition;
+            &:before{
+                width: 100%;
+                @include transition;
+            }
+        }
+    }
+}
   
 
