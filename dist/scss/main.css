@@ -1839,6 +1839,7 @@ body {
 
 .container {
   width: 90vw;
+  max-width: 2000px;
   margin: 0 auto;
   position: relative;
 }
@@ -1855,6 +1856,7 @@ body {
 
 .container_medium {
   width: 84vw;
+  max-width: 2000px;
   margin: 0 auto;
 }
 
@@ -7654,6 +7656,7 @@ section.section_text_and_image .full-colour-layout-wrapper .section-content.full
 @media only screen and (width >= 768px) {
   section.section_text_and_image .full-colour-layout-wrapper {
     width: 90vw;
+    max-width: 2000px;
     margin: 0 auto;
     position: relative;
   }
@@ -7848,6 +7851,7 @@ section.section_text_and_image .section-content.rows-layout div.vertical-bars-co
 section.section_text_and_image .section-content.half-text-half-img-layout.side-aligned {
   background-color: #fff;
   width: 90vw;
+  max-width: 2000px;
   margin: 0 auto;
   position: relative;
 }
@@ -8248,6 +8252,7 @@ section.section_text_and_image .section-content.half-text-half-img-layout.centre
     grid-template-columns: 1fr 1fr;
     gap: .3rem;
     width: 90vw;
+    max-width: 2000px;
     margin: 0 auto;
     display: grid;
     position: relative;
@@ -8820,6 +8825,7 @@ section.section_text_and_image .full-image-layout-content-wrapper .section-conte
 @media only screen and (width >= 768px) {
   section.section_text_and_image .full-image-layout-content-wrapper {
     width: 90vw;
+    max-width: 2000px;
     margin: 0 auto;
     position: relative;
   }
@@ -8977,6 +8983,7 @@ section.section_wayfinder .section-content .text-content .title-tag:before {
 
 section.section_wayfinder .section-content .wayfinder-container.sliding-rows {
   width: 90vw;
+  max-width: 2000px;
   margin: 0 auto;
   position: relative;
 }
@@ -9270,6 +9277,7 @@ section.section_wayfinder .section-content .wayfinder-container.sliding-rows a.w
 
 section.section_wayfinder .section-content .wayfinder-container.cards-layout {
   width: 90vw;
+  max-width: 2000px;
   margin: 0 auto;
   position: relative;
 }
@@ -9919,6 +9927,7 @@ section.section_testimonial {
 @media only screen and (width >= 768px) {
   section.section_testimonial .container-wrapper {
     width: 90vw;
+    max-width: 2000px;
     margin: 0 auto;
     position: relative;
   }
@@ -10841,6 +10850,7 @@ section.section_text_dynamic {
 @media only screen and (width >= 768px) {
   section.section_text_dynamic .container-wrapper {
     width: 90vw;
+    max-width: 2000px;
     margin: 0 auto;
     position: relative;
   }
@@ -13230,7 +13240,7 @@ header section.hero-container.level-two-layout #hero-overlay {
 }
 
 header section.hero-container.level-two-layout .hero-img.img-wrap {
-  aspect-ratio: 10.8 / 2.2;
+  aspect-ratio: 10.8 / 3.8;
   width: 100%;
   position: relative;
 }
@@ -13325,6 +13335,7 @@ header .banner-container.level-two-layout {
 
 header .banner-container.level-two-layout .text-content {
   width: 90vw;
+  max-width: 2000px;
   margin: 0 auto;
   position: relative;
 }
@@ -13417,6 +13428,7 @@ header .banner-container.level-two-layout .text-content .text {
 @media only screen and (width >= 768px) {
   header .banner-container.level-two-layout .text-content {
     width: 90vw;
+    max-width: 2000px;
     margin: 0 auto;
     position: relative;
   }
@@ -13433,6 +13445,7 @@ header .banner-container.level-three-layout {
 
 header .banner-container.level-three-layout .text-content {
   width: 90vw;
+  max-width: 2000px;
   margin: 0 auto;
   position: relative;
 }
@@ -13596,6 +13609,7 @@ header .banner-container.level-three-layout .text-content .text {
 @media only screen and (width >= 768px) {
   header .banner-container.level-three-layout .text-content {
     width: 90vw;
+    max-width: 2000px;
     margin: 0 auto;
     position: relative;
   }
