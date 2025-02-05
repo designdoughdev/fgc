@@ -122,9 +122,9 @@ section.section_text {
                 
                 a {
                     color: $darkNavy;
-                    text-decoration: none;
+                    text-decoration: underline;
                     position: relative;
-                    font-weight: 600;
+                    
                     @include transition;
                     &:before{
                         content:"";
@@ -136,10 +136,8 @@ section.section_text {
                     }
                     &:hover{
                         @include transition;
-                        &:before{
-                            width: 100%;
-                            @include transition;
-                        }
+                        font-weight: 600;
+             
                     }
                 }
                   

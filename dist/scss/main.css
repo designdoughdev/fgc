@@ -9797,8 +9797,7 @@ section.section_text .inner-container .flex-content .text-editor li:last-child {
 section.section_text .inner-container .flex-content .text-editor a {
   color: #112343;
   -o-transition: .4s;
-  font-weight: 600;
-  text-decoration: none;
+  text-decoration: underline;
   transition: all .4s;
   position: relative;
 }
@@ -9815,12 +9814,7 @@ section.section_text .inner-container .flex-content .text-editor a:before {
 
 section.section_text .inner-container .flex-content .text-editor a:hover {
   -o-transition: .4s;
-  transition: all .4s;
-}
-
-section.section_text .inner-container .flex-content .text-editor a:hover:before {
-  -o-transition: .4s;
-  width: 100%;
+  font-weight: 600;
   transition: all .4s;
 }
 
