@@ -11702,7 +11702,7 @@ section.section_wellbeing_goals .background-container .section-content .cards-se
 }
 
 .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text a {
-  color: #112343;
+  color: #2a5ad5;
   -o-transition: .4s;
   text-decoration: underline;
   transition: all .4s;
@@ -12199,7 +12199,7 @@ section.section_timeline_journey .stage_body_text li:last-child {
 }
 
 section.section_timeline_journey .stage_body_text a {
-  color: #112343;
+  color: #2a5ad5;
   -o-transition: .4s;
   text-decoration: underline;
   transition: all .4s;
