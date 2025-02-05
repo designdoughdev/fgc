@@ -3040,6 +3040,19 @@ body[data-theme='light'] {
         background-color: $lightLightSkyBlue;
     }
 
+    // timeline journey
+    &.timeline_stage_journey{
+
+        .title-tag{
+            @include title_tag($darkNavy, $skyBlue);
+        }
+
+        .timeline-stage-index{
+            color: $skyBlue;
+        }
+
+    }
+
 }
 
 .blue-scheme{
@@ -3116,6 +3129,19 @@ body[data-theme='light'] {
     .stage_title_wrap{
         background-color: $lightYellow;
     }
+
+    // timeline journey
+    &.timeline_stage_journey{
+
+        .title-tag{
+            @include title_tag($darkNavy, $yellow);
+        }
+
+        .timeline-stage-index{
+            color: $yellow;
+        }
+
+    }
 }
 
 .yellow-scheme{
@@ -3174,6 +3200,19 @@ body[data-theme='light'] {
                 background-color: $darkNavy;
             }
 
+        }
+
+    }
+
+    // timeline journey
+    &.timeline_stage_journey{
+
+        .title-tag{
+            @include title_tag($cobaltBlue, $mintGreen);
+        }
+
+        .timeline-stage-index{
+            color: $cobaltBlue;
         }
 
     }

@@ -21,7 +21,8 @@
                 <?php $small_title = get_sub_field('stage_small_title'); ?>
                 <?php $big_title = get_sub_field('stage_title'); ?>
                 <?php $stage_body_text = get_sub_field('stage_body_text'); ?>
-                <?php $centerAlign = get_sub_field('center_align_cards'); ?>
+                <?php $four_columns = get_sub_field('four_columns'); ?>
+                <?php // $centerAlign = get_sub_field('center_align_cards'); ?>
                 
 
                 <?php $colourScheme = $colourSchemes[(get_row_index() - 1) % 4]; ?>
@@ -53,7 +54,7 @@
                         <?php endif; ?>
 
                         <?php if (have_rows('cards')): ?>
-                            <div class="cards-section">
+                            <div class="cards-section <?php if ($four_columns) { echo " four_columns "; } ?>">
                         <?php endif; ?>
 
                             <?php while (have_rows('cards')) : the_row(); ?>

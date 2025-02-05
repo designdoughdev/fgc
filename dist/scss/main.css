@@ -3624,6 +3624,49 @@ body[data-theme="light"] ::selection {
   background-color: #daf6fc;
 }
 
+.blue-scheme.timeline_stage_journey .title-tag {
+  letter-spacing: normal;
+  color: #112343;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-indent: -.59727rem;
+  margin-bottom: 15px;
+  padding-left: .59727rem;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+  position: relative;
+}
+
+@media only screen and (width >= 768px) {
+  .blue-scheme.timeline_stage_journey .title-tag {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  .blue-scheme.timeline_stage_journey .title-tag {
+    font-size: .9375rem;
+  }
+}
+
+.blue-scheme.timeline_stage_journey .title-tag:before {
+  content: "";
+  vertical-align: middle;
+  background-color: #46d1ee;
+  border-radius: .75rem;
+  width: .22727rem;
+  height: .22727rem;
+  margin-right: .37rem;
+  display: inline-block;
+}
+
+.blue-scheme.timeline_stage_journey .timeline-stage-index {
+  color: #46d1ee;
+}
+
 .yellow-scheme .tag, .yellow-scheme.wayfinder-card {
   background-color: #fef6cc;
 }
@@ -3658,6 +3701,49 @@ body[data-theme="light"] ::selection {
 
 .yellow-scheme.taxonomy-title-container, .yellow-scheme .card-goal-container, .yellow-scheme .stage_title_wrap {
   background-color: #fef6cc;
+}
+
+.yellow-scheme.timeline_stage_journey .title-tag {
+  letter-spacing: normal;
+  color: #112343;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-indent: -.59727rem;
+  margin-bottom: 15px;
+  padding-left: .59727rem;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+  position: relative;
+}
+
+@media only screen and (width >= 768px) {
+  .yellow-scheme.timeline_stage_journey .title-tag {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  .yellow-scheme.timeline_stage_journey .title-tag {
+    font-size: .9375rem;
+  }
+}
+
+.yellow-scheme.timeline_stage_journey .title-tag:before {
+  content: "";
+  vertical-align: middle;
+  background-color: #fbdb34;
+  border-radius: .75rem;
+  width: .22727rem;
+  height: .22727rem;
+  margin-right: .37rem;
+  display: inline-block;
+}
+
+.yellow-scheme.timeline_stage_journey .timeline-stage-index {
+  color: #fbdb34;
 }
 
 .navy-scheme .tag, .navy-scheme.wayfinder-card {
@@ -3696,6 +3782,49 @@ body[data-theme="light"] ::selection {
 
 .navy-scheme.block-colour-style-card .text-content div.btn-arrow-container {
   background-color: #112343;
+}
+
+.navy-scheme.timeline_stage_journey .title-tag {
+  letter-spacing: normal;
+  color: #2a5ad5;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-indent: -.59727rem;
+  margin-bottom: 15px;
+  padding-left: .59727rem;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+  position: relative;
+}
+
+@media only screen and (width >= 768px) {
+  .navy-scheme.timeline_stage_journey .title-tag {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  .navy-scheme.timeline_stage_journey .title-tag {
+    font-size: .9375rem;
+  }
+}
+
+.navy-scheme.timeline_stage_journey .title-tag:before {
+  content: "";
+  vertical-align: middle;
+  background-color: #1addae;
+  border-radius: .75rem;
+  width: .22727rem;
+  height: .22727rem;
+  margin-right: .37rem;
+  display: inline-block;
+}
+
+.navy-scheme.timeline_stage_journey .timeline-stage-index {
+  color: #2a5ad5;
 }
 
 .green-scheme .tag {
@@ -11274,7 +11403,7 @@ section.section_wellbeing_goals .background-container .section-content .cards-se
   line-height: 100%;
   position: absolute;
   top: 50%;
-  left: -2.05em;
+  left: -2.08em;
   transform: translateY(-50%);
 }
 
@@ -12294,7 +12423,7 @@ section.section_timeline_journey .info-card .text-content a.btn {
   }
 
   section.section_timeline_journey .cards-section .info-card:last-of-type {
-    border-right: none;
+    border-right: none !important;
   }
 
   section.section_timeline_journey .cards-section > :nth-child(3n+1) {
@@ -12306,6 +12435,24 @@ section.section_timeline_journey .info-card .text-content a.btn {
   }
 
   section.section_timeline_journey .cards-section > :nth-child(3n) {
+    border-right: none;
+    justify-content: flex-end;
+  }
+
+  section.section_timeline_journey .cards-section.four_columns {
+    padding: 0;
+  }
+
+  section.section_timeline_journey .cards-section.four_columns .info-card {
+    width: 24%;
+  }
+
+  section.section_timeline_journey .cards-section.four_columns > :nth-child(3n) {
+    border-right: 1px solid #112343;
+    justify-content: flex-start;
+  }
+
+  section.section_timeline_journey .cards-section.four_columns > :nth-child(4n) {
     border-right: none;
     justify-content: flex-end;
   }

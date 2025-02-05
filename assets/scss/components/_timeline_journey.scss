@@ -192,7 +192,7 @@ section.section_timeline_journey {
                 }
 
                 &:last-of-type{
-                    border-right: none;
+                    border-right: none!important;
                 }
     
             }
@@ -213,6 +213,30 @@ section.section_timeline_journey {
             & > :nth-child(3n) {
                 justify-content: flex-end;
                 border-right: none;
+            }
+
+
+            // four column layout version
+
+            &.four_columns{
+
+                padding: 0;
+
+                .info-card{
+                    width: 24%;
+                }
+
+                // overwrite last item in row welement from 3 col styles
+                & > :nth-child(3n) {
+                    justify-content: flex-start;
+                    border-right: 1px solid $darkNavy;
+                }
+
+                // Every 4th, 8th, etc
+                & > :nth-child(4n) {
+                    justify-content: flex-end;
+                    border-right: none;
+                }
             }
 
 
