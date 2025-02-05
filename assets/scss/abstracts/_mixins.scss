@@ -3208,7 +3208,7 @@ body[data-theme='light'] {
     &.timeline_stage_journey{
 
         .title-tag{
-            @include title_tag($cobaltBlue, $mintGreen);
+            @include title_tag($darkNavy, $cobaltBlue);
         }
 
         .timeline-stage-index{
