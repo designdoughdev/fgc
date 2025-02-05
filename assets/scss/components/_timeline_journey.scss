@@ -112,16 +112,16 @@ section.section_timeline_journey {
             //icon version
 
             .icon-container{
-                @include body;
+                @include h-one;
                 @include border-radius;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 1.8rem;
+
                 
-                height: 5.3em;
+                height: 3em;
                 aspect-ratio: 1;
-                margin: 0 auto 2.62em auto;
+                margin: 0 auto 1.5em auto;
 
                 svg{
                     max-height: 4rem;

@@ -1860,7 +1860,6 @@ body {
 
 .container_big {
   width: 94vw;
-  max-width: 2000px;
   margin: 0 auto;
   position: relative;
 }
@@ -12265,30 +12264,32 @@ section.section_timeline_journey .info-card .text-content .tag {
 }
 
 section.section_timeline_journey .info-card .text-content .icon-container {
-  -webkit-font-smoothing: antialiased;
+  letter-spacing: -.03em;
   color: #112343;
+  -webkit-font-smoothing: antialiased;
   aspect-ratio: 1;
   border-radius: .13636rem;
   justify-content: center;
   align-items: center;
-  height: 5.3em;
-  margin: 0 auto 2.62em;
-  font-family: Messina Sans Book, sans-serif;
-  font-size: 1.8rem;
-  font-weight: normal;
-  line-height: 143%;
+  height: 3em;
+  margin: 0 auto 1.5em;
+  font-family: Messina Sans, sans-serif;
+  font-size: 2.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
   display: flex;
 }
 
 @media only screen and (width >= 768px) {
   section.section_timeline_journey .info-card .text-content .icon-container {
-    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+    font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
   section.section_timeline_journey .info-card .text-content .icon-container {
-    font-size: 1rem;
+    font-size: 3.75rem;
   }
 }
 
@@ -13230,7 +13231,7 @@ header section.hero-container.level-two-layout #hero-overlay {
 }
 
 header section.hero-container.level-two-layout .hero-img.img-wrap {
-  aspect-ratio: 10.8 / 2.2;
+  aspect-ratio: 10.8 / 3.8;
   width: 100%;
   position: relative;
 }
