@@ -371,12 +371,14 @@ $conpad : 1.5625vw;
     width: 90vw;
     position: relative;
     margin: $zeroauto;
+    max-width: 2000px;
     
 }
 
 @mixin mediumcontainer {
     width: 84vw;
     margin: $zeroauto;
+    max-width: 2000px;
 
 }
 
@@ -3208,7 +3210,7 @@ body[data-theme='light'] {
     &.timeline_stage_journey{
 
         .title-tag{
-            @include title_tag($cobaltBlue, $mintGreen);
+            @include title_tag($darkNavy, $cobaltBlue);
         }
 
         .timeline-stage-index{
@@ -3634,10 +3636,10 @@ body[data-theme='light'] {
     
     
     a {
-        color: $darkNavy;
-        text-decoration: none;
+        color: $cobaltBlue;
+        text-decoration: underline;
         position: relative;
-        font-weight: 600;
+        
         @include transition;
         &:before{
             content:"";
@@ -3649,10 +3651,8 @@ body[data-theme='light'] {
         }
         &:hover{
             @include transition;
-            &:before{
-                width: 100%;
-                @include transition;
-            }
+            font-weight: 600;
+
         }
     }
 }

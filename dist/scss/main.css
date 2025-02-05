@@ -3786,7 +3786,7 @@ body[data-theme="light"] ::selection {
 
 .navy-scheme.timeline_stage_journey .title-tag {
   letter-spacing: normal;
-  color: #2a5ad5;
+  color: #112343;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
   text-transform: uppercase;
@@ -3815,7 +3815,7 @@ body[data-theme="light"] ::selection {
 .navy-scheme.timeline_stage_journey .title-tag:before {
   content: "";
   vertical-align: middle;
-  background-color: #1addae;
+  background-color: #2a5ad5;
   border-radius: .75rem;
   width: .22727rem;
   height: .22727rem;
@@ -9797,8 +9797,7 @@ section.section_text .inner-container .flex-content .text-editor li:last-child {
 section.section_text .inner-container .flex-content .text-editor a {
   color: #112343;
   -o-transition: .4s;
-  font-weight: 600;
-  text-decoration: none;
+  text-decoration: underline;
   transition: all .4s;
   position: relative;
 }
@@ -9815,12 +9814,7 @@ section.section_text .inner-container .flex-content .text-editor a:before {
 
 section.section_text .inner-container .flex-content .text-editor a:hover {
   -o-transition: .4s;
-  transition: all .4s;
-}
-
-section.section_text .inner-container .flex-content .text-editor a:hover:before {
-  -o-transition: .4s;
-  width: 100%;
+  font-weight: 600;
   transition: all .4s;
 }
 
@@ -11708,10 +11702,9 @@ section.section_wellbeing_goals .background-container .section-content .cards-se
 }
 
 .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text a {
-  color: #112343;
+  color: #2a5ad5;
   -o-transition: .4s;
-  font-weight: 600;
-  text-decoration: none;
+  text-decoration: underline;
   transition: all .4s;
   position: relative;
 }
@@ -11728,12 +11721,7 @@ section.section_wellbeing_goals .background-container .section-content .cards-se
 
 .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text a:hover {
   -o-transition: .4s;
-  transition: all .4s;
-}
-
-.section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text a:hover:before {
-  -o-transition: .4s;
-  width: 100%;
+  font-weight: 600;
   transition: all .4s;
 }
 
@@ -12211,10 +12199,9 @@ section.section_timeline_journey .stage_body_text li:last-child {
 }
 
 section.section_timeline_journey .stage_body_text a {
-  color: #112343;
+  color: #2a5ad5;
   -o-transition: .4s;
-  font-weight: 600;
-  text-decoration: none;
+  text-decoration: underline;
   transition: all .4s;
   position: relative;
 }
@@ -12231,12 +12218,7 @@ section.section_timeline_journey .stage_body_text a:before {
 
 section.section_timeline_journey .stage_body_text a:hover {
   -o-transition: .4s;
-  transition: all .4s;
-}
-
-section.section_timeline_journey .stage_body_text a:hover:before {
-  -o-transition: .4s;
-  width: 100%;
+  font-weight: 600;
   transition: all .4s;
 }
 
@@ -12292,7 +12274,7 @@ section.section_timeline_journey .info-card .text-content .icon-container {
   height: 5.3em;
   margin: 0 auto 2.62em;
   font-family: Messina Sans Book, sans-serif;
-  font-size: .9rem;
+  font-size: 1.8rem;
   font-weight: normal;
   line-height: 143%;
   display: flex;
