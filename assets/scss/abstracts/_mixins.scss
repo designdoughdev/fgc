@@ -3635,9 +3635,9 @@ body[data-theme='light'] {
     
     a {
         color: $darkNavy;
-        text-decoration: none;
+        text-decoration: underline;
         position: relative;
-        font-weight: 600;
+        
         @include transition;
         &:before{
             content:"";
@@ -3649,10 +3649,8 @@ body[data-theme='light'] {
         }
         &:hover{
             @include transition;
-            &:before{
-                width: 100%;
-                @include transition;
-            }
+            font-weight: 600;
+
         }
     }
 }

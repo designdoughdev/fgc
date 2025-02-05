@@ -11704,8 +11704,7 @@ section.section_wellbeing_goals .background-container .section-content .cards-se
 .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text a {
   color: #112343;
   -o-transition: .4s;
-  font-weight: 600;
-  text-decoration: none;
+  text-decoration: underline;
   transition: all .4s;
   position: relative;
 }
@@ -11722,12 +11721,7 @@ section.section_wellbeing_goals .background-container .section-content .cards-se
 
 .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text a:hover {
   -o-transition: .4s;
-  transition: all .4s;
-}
-
-.section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text a:hover:before {
-  -o-transition: .4s;
-  width: 100%;
+  font-weight: 600;
   transition: all .4s;
 }
 
@@ -12207,8 +12201,7 @@ section.section_timeline_journey .stage_body_text li:last-child {
 section.section_timeline_journey .stage_body_text a {
   color: #112343;
   -o-transition: .4s;
-  font-weight: 600;
-  text-decoration: none;
+  text-decoration: underline;
   transition: all .4s;
   position: relative;
 }
@@ -12225,12 +12218,7 @@ section.section_timeline_journey .stage_body_text a:before {
 
 section.section_timeline_journey .stage_body_text a:hover {
   -o-transition: .4s;
-  transition: all .4s;
-}
-
-section.section_timeline_journey .stage_body_text a:hover:before {
-  -o-transition: .4s;
-  width: 100%;
+  font-weight: 600;
   transition: all .4s;
 }
 
