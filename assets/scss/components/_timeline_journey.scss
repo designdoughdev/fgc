@@ -144,10 +144,6 @@ section.section_timeline_journey {
         
         }
 
-
-
-
-        
     }
 
 
@@ -168,7 +164,7 @@ section.section_timeline_journey {
             .info-card{
                 @include h-one-sizing;
                 margin: 1em 0;
-                border-right: 1px solid $darkNavy;
+                border-right: 1px solid rgba($darkNavy, 0.1);
                 border-bottom: none;
                 width: 33%;
                 // padding-right: 3vw;
@@ -230,7 +226,7 @@ section.section_timeline_journey {
                 // overwrite last item in row welement from 3 col styles
                 & > :nth-child(3n) {
                     justify-content: flex-start;
-                    border-right: 1px solid $darkNavy;
+                    border-right: 1px solid rgba($darkNavy, 0.1);
                 }
 
                 // Every 4th, 8th, etc

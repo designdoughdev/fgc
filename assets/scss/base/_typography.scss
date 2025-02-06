@@ -469,6 +469,10 @@ blockquote {
 .text-white{
 	color: white!important;
 
+	&:hover{
+		color: white!important;
+	}
+
 }
 
 .text-dark{

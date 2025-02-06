@@ -1642,7 +1642,7 @@ blockquote {
   }
 }
 
-.text-white {
+.text-white, .text-white:hover {
   color: #fff !important;
 }
 
@@ -3093,9 +3093,9 @@ body[data-theme="light"] ::selection {
   background-color: #fbdb34;
 }
 
-.yellow-style a.btn:hover {
+.yellow-style .btn:hover {
+  color: #112343;
   background-color: #fdf1ae;
-  color: #112343 !important;
 }
 
 .yellow-style svg path {
@@ -3583,6 +3583,18 @@ body[data-theme="light"] ::selection {
   color: #1addae;
 }
 
+.mint-scheme.accordion_item {
+  background-color: #d1f8ee;
+}
+
+.mint-scheme.accordion_item .tag {
+  background-color: #a2f1de;
+}
+
+.mint-scheme.accordion_item .bars-container {
+  opacity: .1;
+}
+
 .blue-scheme .tag, .blue-scheme.wayfinder-card {
   background-color: #cdf5ff;
 }
@@ -3666,6 +3678,18 @@ body[data-theme="light"] ::selection {
   color: #46d1ee;
 }
 
+.blue-scheme.accordion_item {
+  background-color: #cdf5ff;
+}
+
+.blue-scheme.accordion_item .tag {
+  background-color: #91eaff;
+}
+
+.blue-scheme.accordion_item .bars-container {
+  opacity: .1;
+}
+
 .yellow-scheme .tag, .yellow-scheme.wayfinder-card {
   background-color: #fef6cc;
 }
@@ -3743,6 +3767,18 @@ body[data-theme="light"] ::selection {
 
 .yellow-scheme.timeline_stage_journey .timeline-stage-index {
   color: #fbdb34;
+}
+
+.yellow-scheme.accordion_item {
+  background-color: #fef6cc;
+}
+
+.yellow-scheme.accordion_item .tag {
+  background-color: #fdf1ae;
+}
+
+.yellow-scheme.accordion_item .bars-container {
+  opacity: .1;
 }
 
 .navy-scheme .tag, .navy-scheme.wayfinder-card {
@@ -3824,6 +3860,18 @@ body[data-theme="light"] ::selection {
 
 .navy-scheme.timeline_stage_journey .timeline-stage-index {
   color: #2a5ad5;
+}
+
+.navy-scheme.accordion_item {
+  background-color: #f3f4f6;
+}
+
+.navy-scheme.accordion_item .tag {
+  background-color: #dbdee3;
+}
+
+.navy-scheme.accordion_item .bars-container {
+  opacity: .1;
 }
 
 .green-scheme .tag {
@@ -6367,7 +6415,7 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .top-section .
   -webkit-font-smoothing: antialiased;
   color: #112343;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #0000;
   border: none;
   font-family: Messina Sans Book, sans-serif;
   font-size: .9rem;
@@ -6465,9 +6513,9 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-contain
   background-color: #fbdb34;
 }
 
-section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-container > :nth-child(4n+1) .post-card a.btn:hover {
+section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-container > :nth-child(4n+1) .post-card .btn:hover {
+  color: #112343;
   background-color: #fdf1ae;
-  color: #112343 !important;
 }
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-container > :nth-child(4n+1) .post-card svg path {
@@ -12356,7 +12404,7 @@ section.section_timeline_journey .info-card .text-content a.btn {
 
   section.section_timeline_journey .cards-section .info-card {
     border-bottom: none;
-    border-right: 1px solid #112343;
+    border-right: 1px solid #1123431a;
     width: 33%;
     margin: 1em 0;
     font-size: 2.0625rem;
@@ -12416,13 +12464,595 @@ section.section_timeline_journey .info-card .text-content a.btn {
   }
 
   section.section_timeline_journey .cards-section.four_columns > :nth-child(3n) {
-    border-right: 1px solid #112343;
+    border-right: 1px solid #1123431a;
     justify-content: flex-start;
   }
 
   section.section_timeline_journey .cards-section.four_columns > :nth-child(4n) {
     border-right: none;
     justify-content: flex-end;
+  }
+}
+
+section.section_accordion {
+  padding: 12.5vw 0;
+}
+
+section.section_accordion .title_wrap .title-tag {
+  letter-spacing: normal;
+  color: #112343;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  text-indent: -.59727rem;
+  margin-bottom: 1.71429em;
+  padding-left: .59727rem;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+  position: relative;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .title_wrap .title-tag {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .title_wrap .title-tag {
+    font-size: .9375rem;
+  }
+}
+
+section.section_accordion .title_wrap .title-tag:before {
+  content: "";
+  vertical-align: middle;
+  background-color: #2a5ad5;
+  border-radius: .75rem;
+  width: .22727rem;
+  height: .22727rem;
+  margin-right: .37rem;
+  display: inline-block;
+}
+
+section.section_accordion .title_wrap .heading {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 2.13333em;
+  font-family: Messina Sans, sans-serif;
+  font-size: 2.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .title_wrap .heading {
+    font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .title_wrap .heading {
+    font-size: 3.75rem;
+  }
+}
+
+section.section_accordion .accordion_container {
+  display: flex;
+}
+
+section.section_accordion .accordion_container .accordion_items {
+  width: 100%;
+}
+
+section.section_accordion .accordion_container .accordion_items .item-outer-container:not(:first-of-type) {
+  margin-top: 1.5em;
+}
+
+section.section_accordion .accordion_container .accordion_items .item-outer-container:not(:last-of-type) {
+  border-bottom: 1px solid #1123431a;
+  padding-bottom: 1.7em;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item {
+  grid-template-rows: max-content max-content;
+  grid-template-columns: max-content auto max-content;
+  align-items: center;
+  column-gap: 1em;
+  padding: 1.6em .8em;
+  font-size: 2.0625rem;
+  display: grid;
+  position: relative;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item {
+    font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item {
+    font-size: 3.75rem;
+  }
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .bars-container {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .bars-container svg {
+  width: fit-content;
+  height: 100%;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .tag-container {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  align-items: flex-start;
+  font-family: Messina Sans, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 104%;
+  display: flex;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .tag-container {
+    font-size: clamp(1.2rem, 1.2rem + 1vw, 1.75rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .tag-container {
+    font-size: 1.75rem;
+  }
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_title {
+  letter-spacing: -.0300032em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  flex-grow: 1;
+  width: 75%;
+  font-family: Messina Sans, sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 104.4%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_title {
+    font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_title {
+    font-size: 2.8125rem;
+  }
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .accord_btn {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: #0000;
+  border: none;
+  align-items: center;
+  gap: 1.5em;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .9rem;
+  font-weight: normal;
+  line-height: 127%;
+  display: flex;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .accord_btn {
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .accord_btn {
+    font-size: 1rem;
+  }
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .accord_btn span {
+  display: none;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .accord_btn img {
+  font-size: inherit;
+  -o-transition: .2s;
+  width: 3em;
+  height: 3em;
+  transition: all .2s;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text {
+  grid-area: 2 / 2 / span 1 / span 1;
+  padding: 0 2.5rem 0 1.8rem;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text > * {
+  margin: 1em 0;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h1 {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  font-family: Messina Sans, sans-serif;
+  font-size: 2.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h1 {
+    font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h1 {
+    font-size: 3.75rem;
+  }
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h2 {
+  letter-spacing: -.0300032em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  font-family: Messina Sans, sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 104.4%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h2 {
+    font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h2 {
+    font-size: 2.8125rem;
+  }
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h3 {
+  letter-spacing: -.03em;
+  color: #2a5ad5;
+  -webkit-font-smoothing: antialiased;
+  font-family: Messina Sans, sans-serif;
+  font-size: 1.35rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 102.632%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h3 {
+    font-size: clamp(1.35rem, 1.35rem + 1vw, 2.375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h3 {
+    font-size: 2.375rem;
+  }
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h4 {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  font-family: Messina Sans, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 104%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h4 {
+    font-size: clamp(1.2rem, 1.2rem + 1vw, 1.75rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h4 {
+    font-size: 1.75rem;
+  }
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h5 {
+  letter-spacing: normal;
+  color: #112343;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h5 {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h5 {
+    font-size: .9375rem;
+  }
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h6 {
+  letter-spacing: normal;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  font-family: Chivo Mono, monospace;
+  font-size: .5875rem;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h6 {
+    font-size: clamp(.5875rem, .5875rem + 1vw, .6875rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h6 {
+    font-size: .6875rem;
+  }
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text p {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  margin-bottom: 1em;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .9rem;
+  font-weight: normal;
+  line-height: 143%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text p {
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text p {
+    font-size: 1rem;
+  }
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text blockquote {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  background-color: #daf6fc;
+  border-radius: .13636rem;
+  padding: .5em .75em .55em;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .9rem;
+  font-weight: bold;
+  line-height: 143%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text blockquote {
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text blockquote {
+    font-size: 1rem;
+  }
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text strong, section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text b, section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text em, section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text i {
+  font-weight: 700;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol, section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ul, section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text li {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .9rem;
+  font-weight: normal;
+  line-height: 143%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol, section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ul, section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text li {
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol, section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ul, section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text li {
+    font-size: 1rem;
+  }
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ul li {
+  margin-left: 1rem;
+  list-style-type: disc;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol li {
+  margin-left: 1rem;
+  list-style-type: decimal;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol li::marker {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  font-family: Messina Sans, sans-serif;
+  font-size: 2.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol li::marker {
+    font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol li::marker {
+    font-size: 3.75rem;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol li::marker {
+    letter-spacing: -.0300032em;
+    color: #112343;
+    -webkit-font-smoothing: antialiased;
+    font-family: Messina Sans, sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 104.4%;
+  }
+}
+
+@media only screen and (width >= 768px) and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol li::marker {
+    font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
+  }
+}
+
+@media only screen and (width >= 768px) and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol li::marker {
+    font-size: 2.8125rem;
+  }
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text li:last-child {
+  padding-bottom: .5rem;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text a {
+  color: #2a5ad5;
+  -o-transition: .4s;
+  text-decoration: underline;
+  transition: all .4s;
+  position: relative;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text a:before {
+  content: "";
+  -o-transition: .4s;
+  width: 0%;
+  height: 1px;
+  transition: all .4s;
+  position: absolute;
+  bottom: 0;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text a:hover {
+  -o-transition: .4s;
+  font-weight: 600;
+  transition: all .4s;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item.accord_wrap {
+  -o-transition: .4s;
+  transition: all .4s;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item.accord_wrap .accord_head {
+  -o-transition: .2s;
+  transition: all .2s;
+  position: relative;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item.accord_wrap .accord_body {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
+  opacity: 0;
+  -o-transition: .4s;
+  max-height: 1px;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .9rem;
+  font-weight: normal;
+  line-height: 143%;
+  transition: all .4s;
+  overflow: hidden;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item.accord_wrap .accord_body {
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item.accord_wrap .accord_body {
+    font-size: 1rem;
+  }
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item.accord_wrap:hover {
+  cursor: pointer;
+  -o-transition: .4s;
+  transition: all .4s;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item.accord_wrap.active {
+  -o-transition: .4s;
+  transition: all .4s;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item.accord_wrap.active .accord_body {
+  opacity: 1;
+  max-height: 2000px;
+  padding: 10px 0 30px;
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item.accord_wrap.active .accord_btn img {
+  transform: rotate(90deg);
+}
+
+section.section_accordion .accordion_container .accordion_items .accordion_item.accord_wrap.active .accord_head .job-title {
+  -o-transition: .2s;
+  transition: all .2s;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_accordion .accordion_container .accordion_items .accordion_item .accord_btn span {
+    display: block;
   }
 }
 

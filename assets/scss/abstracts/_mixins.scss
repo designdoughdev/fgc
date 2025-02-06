@@ -1232,7 +1232,7 @@ $conpad : 1.5625vw;
 
 @mixin btn_no_style{
     @include body;
-    background-color: white;
+    background-color: transparent;
     border: none;
     line-height: 127%;
     cursor: pointer;
@@ -2564,9 +2564,9 @@ body[data-theme='light'] {
         background-color: $yellow;
     }
 
-    a.btn:hover{
+    .btn:hover{
         background-color: $midYellow;
-        color: $darkNavy!important;
+        color: $darkNavy;
     }
 
     svg path{
@@ -2964,6 +2964,22 @@ body[data-theme='light'] {
         }
 
     }
+
+    // accordion flex
+    &.accordion_item{
+
+        background-color: $lightMintGreen;
+
+        .tag{
+            background-color: $midMintGreen;
+        }
+
+        .bars-container{
+            opacity: 0.1;
+        }
+    }
+
+
     
 
 }
@@ -3055,6 +3071,22 @@ body[data-theme='light'] {
 
     }
 
+    // accordion flex
+    &.accordion_item{
+
+        background-color: $lightSkyBlue;
+
+        .tag{
+            background-color: $midSkyBlue;
+        }
+
+        .bars-container{
+            opacity: 0.1;
+        }
+    }
+
+
+
 }
 
 .blue-scheme{
@@ -3144,6 +3176,19 @@ body[data-theme='light'] {
         }
 
     }
+    // accordion flex
+    &.accordion_item{
+
+        background-color: $lightYellow;;
+
+        .tag{
+            background-color: $midYellow;
+        }
+
+        .bars-container{
+            opacity: 0.1;
+        }
+    }
 }
 
 .yellow-scheme{
@@ -3217,6 +3262,20 @@ body[data-theme='light'] {
             color: $cobaltBlue;
         }
 
+    }
+
+    // accordion flex
+    &.accordion_item{
+
+        background-color: $lightNavy;
+
+        .tag{
+            background-color: $midNavy;
+        }
+
+        .bars-container{
+            opacity: 0.1;
+        }
     }
 
 

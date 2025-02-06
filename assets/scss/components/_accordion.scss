@@ -1,61 +1,215 @@
-.section_accordion {
-    @include sections_padding;
-    .accord_container {
-        &.grid {
-            .accord_wrap {
-                @include respond-to('lg') {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr 0.1fr;
-                    padding: 20px 0px;
-                }
-            }
-        }
-        &.standard {
+@use '../abstracts/colours' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
+@use '../abstracts/variables' as *;
 
+
+section.section_accordion {
+    @include sections_padding_large;
+
+    /*------------------------ Deafult Mobile Styles -------------------------------*/
+ 
+    .title_wrap {
+
+        .title-tag{
+            @include title_tag($darkNavy, $cobaltBlue);
+            @include rem-to-em(margin, 1.5rem, 0.875rem, 1rem, (bottom));
         }
-        .accord_wrap {
-            @include transition;
-            width: 100%;
-            border-top: solid 1px $grey;
-            &:last-child {
-                border-bottom: solid 1px $grey;
-            }
-            .accord_head {
-                position: relative;
-                padding: 15px 0px 1px 20px;
-                @include shorttransition;
-                // cursor: pointer;
-            }
-            .accord_body {
-                height: auto;
-                max-height: 1px;
-                overflow: hidden;
-                opacity: 0;
-                padding: 15px 0px 1px 20px;
-                @include transition;
-            }
-            .accord_image_wrap {
-                .accordion_down_arrow {
-                    height: 44px;
-                    transform: rotateZ(-180deg);
-                    @include shorttransition;
-                }
-            }
-            &:hover {
-                background-color: $offblack;
-                @include transition;
-            }
-            &.active {
-                @include transition;
-                .accord_body {
-                    max-height: 2000px;
-                    padding-bottom: 40px;
-                    opacity: 1;
-                }
-                .accordion_down_arrow {
-                    transform: rotateZ(0deg);
-                }
-            }
+
+        .heading{
+            @include h-one;
+            @include rem-to-em(margin, 8rem, 3.75rem, 1rem, (bottom))
         }
+
     }
+
+
+    .accordion_container {
+
+        display: flex;
+
+        .accordion_items{
+            // padding-left: 1.3rem;
+            width: 100%;
+
+            .item-outer-container:not(:first-of-type){
+                margin-top: 1.5em;
+
+            }
+
+            .item-outer-container:not(:last-of-type){
+
+                padding-bottom: 1.7em;
+                border-bottom: 1px solid rgba($darkNavy, 0.1);
+                
+            }
+
+
+            .accordion_item {
+                position: relative;
+                @include h-one-sizing;
+                display: grid;
+                grid-template-rows: max-content max-content;
+                grid-template-columns: max-content auto max-content;
+                column-gap: 1em;
+                align-items: center;
+                padding: 1.6em 0.8em;
+                
+
+                .bars-container{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: auto;
+
+                    svg{
+                        height: 100%;
+                        width: fit-content;
+
+                    }
+                }
+
+
+                    .tag-container{
+                        @include h-four;
+                        display: flex;
+                        align-items: flex-start;
+
+        
+                    }
+
+
+                    .item_title{
+                        @include h-two;
+                        flex-grow: 1;
+                        width: 75%;
+
+                    }
+
+                    .accord_btn{
+                        @include btn_no_style;
+                        display: flex;
+                        gap: 1.5em;
+                        white-space: nowrap;
+                        align-items: center;
+
+                        span{
+                            display: none;
+                        }
+
+                        img{
+                            font-size: inherit;
+                            width: 3em;
+                            height: 3em;
+                            @include shorttransition;
+                        }
+
+                    }
+
+
+
+             
+
+
+                    .item_body_text {
+                        grid-area: 2 / 2 / span 1 / span 1;
+                        padding: 0 2.5rem 0 1.8rem;
+                        @include wysiwyg;
+
+                    }
+
+                    &.accord_wrap {
+                        @include transition;
+                
+
+                
+                        .accord_head {
+                            position: relative;
+                            @include shorttransition;
+                            // cursor: pointer;
+                
+
+                        }
+                        .accord_body {
+                            
+                            @include body;
+                            max-height: 1px;
+                            overflow: hidden;
+                            opacity: 0;
+                            @include transition;
+                            
+                            
+                
+                        }
+                
+                        &:hover {
+                            cursor: pointer;
+                            @include transition;
+                        }
+                        &.active {
+                            @include transition;
+                            .accord_body {
+                                max-height: 2000px;
+                                padding: 10px 0 30px 0;
+                                opacity: 1;
+                                
+                            }
+
+                            .accord_btn img{
+                                transform: rotate(90deg);
+
+                                
+                            }
+                
+                            .accord_head .job-title{
+                                @include shorttransition;
+                            }
+                
+
+                
+                        }
+
+                        
+
+
+                    }
+
+
+            }
+        }
+
+
+        
+    }
+
+    /*------------------------ Desktop Styles -------------------------------*/
+
+    @include respond-to(md){
+
+        .accordion_container {
+
+
+            .accordion_items{   
+    
+                .accordion_item {
+
+                    .accord_btn{
+
+                        span{
+                            display: block;
+                        }
+                    }
+    
+                }
+            }
+            
+        }
+
+    }
+
+
+
+
 }

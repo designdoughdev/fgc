@@ -1,54 +1,76 @@
 <?php
-$row = get_row_index() - 0;
-$full_width = get_sub_field('full_width');
+    $row = get_row_index() - 0; 
 
-$title = get_sub_field('title');
-$subtitle = get_sub_field('sub_title');
-$layout = get_sub_field('layout');
-// end
+    $small_title = get_sub_field('small_title');
+    $big_title = get_sub_field('big_title');    
+
 ?>
 
-<section class="section_accordion row-<?php echo $row; ?> fade-in">
 
-    <?php if(!$full_width ) { ?>
-    <div class="container">
-        <?php } ?>
-
-        <div class="accord_container <?php echo $layout; ?>">
-            <?php if($title) {?><h2 class=""><?php echo $title; ?></h2><?php }?>
-            <?php if($subtitle) {?><h4 class=""><?php echo $subtitle; ?></h4><?php }?>
-
-            <?php if(have_rows('accordion_rows')) : while(have_rows('accordion_rows')) : the_row(); ?>
-            <?php 
-            $title = get_sub_field('title');
-            $text_body = get_sub_field('text_body');
-            $use_image = get_sub_field('use_image');
-            $image = get_sub_field('image');
-            ?>
-            <div class="accord_wrap">
-                <div class="accord_head">
-                    <h4><?php echo $title; ?></h3>
-                </div>
-                <div class="accord_body">
-                    <?php echo $text_body; ?>
-                </div>
-                <div class="accord_image_wrap">
-                    <img class="accordion_down_arrow"
-                        src="<?php echo get_template_directory_uri() . '/assets/images/svg/arrow-down-white.svg'; ?>"
-                        alt="arrow">
-                    <?php if ($use_image) { ?>
-                    <img src="<?php echo $image ?>" alt="accordion image">
-                    <?php } ?>
-                </div>
-
-            </div>
-
-            <?php endwhile; endif; ?>
-            <?php wp_reset_postdata(); ?>
+<section class="section_accordion row-<?php echo $row; ?>">
+    <div class="container_small">
+        <div class="title_wrap">
+            <?php if($small_title) { ?><p class="title-tag"><?php echo $small_title; ?></p><?php } ?>
+            <?php if($big_title) { ?><h2 class="heading"><?php echo $big_title; ?></h2><?php } ?>
+           
         </div>
 
-        <?php if(!$full_width) { ?>
-    </div>
-    <?php } ?>
+        <div class="accordion_container">
+            <div class="accordion_items">
+                <?php $colourSchemes = ['mint', 'yellow', 'blue', 'navy' ]; ?>
+                <?php $totalCards = count(get_sub_field('accordion_items')); ?>
 
+
+                <?php if(have_rows('accordion_items')) : while(have_rows('accordion_items')) : the_row(); ?>
+                <?php $item_title = get_sub_field('item_title'); ?>
+                <?php $item_body_text = get_sub_field('item_body_text'); ?>
+                <?php $link = get_sub_field('link'); ?>
+
+                <?php $colourScheme = $colourSchemes[(get_row_index() - 1) % 4]; ?>
+
+                <div class="item-outer-container">
+                    <div class="accordion_item <?php echo $colourScheme; ?>-scheme accord_wrap">
+
+
+                    
+                  
+                        <div class="tag-container">
+                            <p class="tag"><?php if (get_row_index() < 10) { echo 0;} echo get_row_index(); ?></p>
+                        </div>                     
+                        <h4 class="item_title accord_head"><?php echo $item_title; ?></h4>
+                        <button class="accord_btn"><span>Learn more</span><img src="<?php echo get_template_directory_uri() . '/assets/images/svg/arrow-right.svg'; ?>" alt=""></button>
+                        
+            
+
+
+                        <div class="item_body_text accord_body"><?php echo $item_body_text; ?></div>
+                            <?php if($link) { ?>
+                                <a class="btn_default" href="<?php echo esc_url($link['url']); ?>"
+                                    target="<?php echo esc_attr($link['target']); ?>"><span><?php echo esc_html($link['title']); ?></span></a>
+                            <?php } ?>
+
+                            <div class="bars-container">
+                                <?php
+                                                    // horizontal bars
+                                                    echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
+                                                    ?>
+                            </div>
+
+                        
+                        </div>
+
+                    </div>
+
+
+
+
+
+     
+
+
+                <?php endwhile; endif; ?>
+            </div>
+        </div>
+
+    </div>
 </section>
