@@ -929,8 +929,18 @@ for(let i = 0; i < accordions.length; i++)accordions[i].addEventListener("click"
     // Find the accordion_down_arrow within the clicked accord_wrap
     // this.querySelector('.accordion_down_arrow').classList.toggle('active');
     // resfresh scroll trigger for GSAP animations
+    let label = this.querySelector("span");
+    label.textContent = "Close Info";
     // Close all other acc heads and arrows
-    for(let j = 0; j < accordions.length; j++)if (i !== j) accordions[j].classList.remove("active");
+    for(let j = 0; j < accordions.length; j++)if (i !== j) {
+        accordions[j].classList.remove("active");
+        // const otherArrow = accordions[j].querySelector('.accordion_down_arrow');
+        // if (otherArrow) {
+        // 	otherArrow.classList.remove('active');
+        // }
+        let buttonLabel = accordions[j].querySelector("span");
+        buttonLabel.textContent = "Learn more";
+    }
     setTimeout(refreshScrollTrigger, 500); // Delay slightly to wait for height transition
 });
 // public body post filtering
