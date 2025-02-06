@@ -38,7 +38,9 @@ $big_title = get_sub_field('big_title');
                 <?php $image = get_sub_field('image'); ?>
 
                 <li class="splide__slide relative"><img src="<?php echo $image['url']; ?>" alt="">
-                    <p class="caption light-navy">Lorem ipsum dolor sit amet,</p>
+                    <?php if($image['caption']): ?>
+                        <p class="caption light-navy"><?php echo $image['caption']; ?></p>
+                    <?php endif; ?>
                 </li>
                 <?php endwhile; ?>
 
