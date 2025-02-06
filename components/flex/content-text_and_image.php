@@ -77,7 +77,7 @@ endif
                 <?php endif; // body 
                     ?>
                 <?php if ($link): ?>
-                <a href="/" class="link btn" target="<?php echo $link_target; ?>"><?php echo $link_title; ?><div
+                <a href="<?php echo $link_url; ?>" class="link btn" target="<?php echo $link_target; ?>"><?php echo $link_title; ?><div
                         class="btn-arrow-container"></div></a>
                 <?php endif; // link 
                     ?>
@@ -130,7 +130,7 @@ endif
                 <?php endif; // body 
                     ?>
                 <?php if ($link): ?>
-                <a href="/" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?>
+                <a href="<?php echo $link_url; ?>" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?>
                     <div class="btn-arrow-container">
                     </div>
                 </a>
@@ -258,7 +258,7 @@ endif
                 <?php endif; ?>
 
                 <?php if ($link): ?>
-                <a href="/" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?>
+                <a href="<?php echo $link_url; ?>" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?>
                     <div class="btn-arrow-container"></div>
                 </a>
                 <?php endif; // link 
@@ -354,7 +354,7 @@ endif
                 <?php endif; ?>
 
                 <?php if ($link): ?>
-                <a href="/" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?>
+                <a href="<?php echo $link_url; ?>" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?>
                     <div class="btn-arrow-container"></div>
                 </a>
                 <?php endif; // link 
@@ -444,7 +444,7 @@ endif
                 <?php endif; // body 
                         ?>
                             <?php if ($link): ?>
-                <a href="/" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?>
+                <a href="<?php echo $link_url; ?>" class="link btn text-white" target="<?php echo $link_target; ?>"><?php echo $link_title; ?>
                     <div class="btn-arrow-container"></div>
                 </a>
                 <?php endif; // link 
@@ -504,7 +504,7 @@ endif
                 <?php endif; // body 
                     ?>
                 <?php if ($link): ?>
-                <a href="/" class="link btn" target="<?php echo $link_target; ?>"><?php echo $link_title; ?><div
+                <a href="<?php echo $link_url; ?>" class="link btn" target="<?php echo $link_target; ?>"><?php echo $link_title; ?><div
                         class="btn-arrow-container"></div></a>
                 <?php endif; // link 
                     ?>
@@ -591,7 +591,7 @@ endif
                         <?php endif; // body 
                             ?>
                         <?php if ($link): ?>
-                        <a href="/" class="link btn" target="<?php echo $link_target; ?>"><?php echo $link_title; ?><div
+                        <a href="<?php echo $link_url; ?>" class="link btn" target="<?php echo $link_target; ?>"><?php echo $link_title; ?><div
                                 class="btn-arrow-container"></div></a>
                         <?php endif; // link 
                             ?>
