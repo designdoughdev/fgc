@@ -1642,7 +1642,7 @@ blockquote {
   }
 }
 
-.text-white {
+.text-white, .text-white:hover {
   color: #fff !important;
 }
 
@@ -3093,9 +3093,9 @@ body[data-theme="light"] ::selection {
   background-color: #fbdb34;
 }
 
-.yellow-style a.btn:hover {
+.yellow-style .btn:hover {
+  color: #112343;
   background-color: #fdf1ae;
-  color: #112343 !important;
 }
 
 .yellow-style svg path {
@@ -6465,9 +6465,9 @@ section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-contain
   background-color: #fbdb34;
 }
 
-section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-container > :nth-child(4n+1) .post-card a.btn:hover {
+section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-container > :nth-child(4n+1) .post-card .btn:hover {
+  color: #112343;
   background-color: #fdf1ae;
-  color: #112343 !important;
 }
 
 section.section_posts_agg .posts-grid-with-filter.section-wrapper .posts-container > :nth-child(4n+1) .post-card svg path {
