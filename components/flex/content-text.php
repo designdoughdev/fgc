@@ -83,9 +83,10 @@ $sideMenu = get_sub_field('side_menu');
                     $sibling_pages = new WP_Query($args);
 
                 ?>
-                <h3 class="parent-page-title"><?php echo get_the_title($parent_id); ?> </h3>
+                
 
             <div class="side-menu-container">
+            <h3 class="parent-page-title"><?php echo get_the_title($parent_id); ?> </h3>
 
                 <nav>
                     <ul>

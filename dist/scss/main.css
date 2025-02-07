@@ -9526,10 +9526,11 @@ section.section_text .inner-container {
   display: flex;
 }
 
-section.section_text .inner-container .parent-page-title {
+section.section_text .inner-container .side-menu-container .parent-page-title {
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
+  margin-bottom: .5em;
   font-family: Messina Sans, sans-serif;
   font-size: 1.35rem;
   font-style: normal;
@@ -9538,18 +9539,18 @@ section.section_text .inner-container .parent-page-title {
 }
 
 @media only screen and (width >= 768px) {
-  section.section_text .inner-container .parent-page-title {
+  section.section_text .inner-container .side-menu-container .parent-page-title {
     font-size: clamp(1.35rem, 1.35rem + 1vw, 2.375rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
-  section.section_text .inner-container .parent-page-title {
+  section.section_text .inner-container .side-menu-container .parent-page-title {
     font-size: 2.375rem;
   }
 }
 
-section.section_text .inner-container .side-menu-container {
+section.section_text .inner-container .side-menu-container nav {
   border: 1px solid #46d1ee;
   margin-bottom: 1em;
   padding: 1em;

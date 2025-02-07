@@ -13,15 +13,23 @@ section.section_text {
         flex-direction: column;
         gap: 1rem;
 
-        .parent-page-title{
-            @include h-three;
-        }
+
 
         .side-menu-container{
 
-            border: 1px solid $skyBlue;
-            padding: 1em;
-            margin-bottom: 1em;
+            .parent-page-title{
+                @include h-three;
+                margin-bottom: 0.5em;
+            }
+
+            nav{
+                border: 1px solid $skyBlue;
+                padding: 1em;
+                margin-bottom: 1em;
+
+            }
+
+
 
 
 
