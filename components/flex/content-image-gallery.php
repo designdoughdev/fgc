@@ -51,7 +51,8 @@ $big_title = get_sub_field('big_title');
                             <?php if ($link_text) : ?>
                                 <p><?php echo $link_text?></p>
                             <?php endif; ?>
-                            <a class="btn-vtwo">Read more<div class="btn-arrow-container"></div></a>
+                            <a class="btn-vtwo" href="<?php echo esc_url($link['url']); ?>"
+                            target="<?php echo esc_attr($link['target']); ?>" aria-label="Read more about <?php echo esc_html($link['title']); ?>">Read more<div class="btn-arrow-container"></div></a>
                         </div>
                  
                     <?php elseif($image['caption']): ?>
