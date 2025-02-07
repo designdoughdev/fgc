@@ -44,7 +44,7 @@ let tl = gsap.timeline({
         start: "top center", // trigger when the TOP of the trigger element (above) enters middle of viewport
         end: () => `bottom-=${document.querySelector(".timeline_scroll_icon").offsetHeight} center`, // Adjust end dynamically        
         // scrub: true, // stylistic lagging
-        // markers: true,
+        markers: true,
         pin: '.timeline_scroll_icon',
     },
 });
@@ -545,10 +545,17 @@ for (let i = 0; i < accordions.length; i++) {
 		// this.querySelector('.accordion_down_arrow').classList.toggle('active');
 
         // resfresh scroll trigger for GSAP animations
+        setTimeout(refreshScrollTrigger, 500); // Delay slightly to wait for height transition
 
       let label = this.querySelector('span');
 
-      label.textContent = 'Close Info';
+      if($label){
+        label.textContent = 'Close Info';
+      }
+
+      
+
+      
         
 
 		// Close all other acc heads and arrows
@@ -560,11 +567,15 @@ for (let i = 0; i < accordions.length; i++) {
 				// 	otherArrow.classList.remove('active');
 				// }
         let buttonLabel = accordions[j].querySelector('span');
-        buttonLabel.textContent = 'Learn more'
+        if($buttonLabel){
+          buttonLabel.textContent = 'Learn more'
+
+        }
+        
        
 			}
 		}
-    setTimeout(refreshScrollTrigger, 500); // Delay slightly to wait for height transition
+    
 
     
 

@@ -618,7 +618,7 @@ let tl = (0, _gsap.gsap).timeline({
         start: "top center",
         end: ()=>`bottom-=${document.querySelector(".timeline_scroll_icon").offsetHeight} center`,
         // scrub: true, // stylistic lagging
-        // markers: true,
+        markers: true,
         pin: ".timeline_scroll_icon"
     }
 });
@@ -929,8 +929,9 @@ for(let i = 0; i < accordions.length; i++)accordions[i].addEventListener("click"
     // Find the accordion_down_arrow within the clicked accord_wrap
     // this.querySelector('.accordion_down_arrow').classList.toggle('active');
     // resfresh scroll trigger for GSAP animations
+    setTimeout(refreshScrollTrigger, 500); // Delay slightly to wait for height transition
     let label = this.querySelector("span");
-    label.textContent = "Close Info";
+    if ($label) label.textContent = "Close Info";
     // Close all other acc heads and arrows
     for(let j = 0; j < accordions.length; j++)if (i !== j) {
         accordions[j].classList.remove("active");
@@ -939,9 +940,8 @@ for(let i = 0; i < accordions.length; i++)accordions[i].addEventListener("click"
         // 	otherArrow.classList.remove('active');
         // }
         let buttonLabel = accordions[j].querySelector("span");
-        buttonLabel.textContent = "Learn more";
+        if ($buttonLabel) buttonLabel.textContent = "Learn more";
     }
-    setTimeout(refreshScrollTrigger, 500); // Delay slightly to wait for height transition
 });
 // public body post filtering
 document.addEventListener("DOMContentLoaded", ()=>{
