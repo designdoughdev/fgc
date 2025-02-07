@@ -13,7 +13,25 @@ section.section_text {
         flex-direction: column;
         gap: 1rem;
 
+
+
         .side-menu-container{
+
+            .parent-page-title{
+                @include h-three;
+                margin-bottom: 0.5em;
+            }
+
+            nav{
+                border: 1px solid $skyBlue;
+                padding: 1em;
+                margin-bottom: 1em;
+
+            }
+
+
+
+
 
             a.link{
                 @include body;
@@ -24,10 +42,10 @@ section.section_text {
                 padding: 0.7em 0;
             }
 
-            :not(:last-child){
-                border-bottom: 1px solid rgba(black, 0.1);
-
+            li{
+                border-top: 1px solid rgba(black, 0.1);
             }
+
             
         }
         
@@ -47,99 +65,7 @@ section.section_text {
         
             .text-editor{
         
-                & > * {
-                    margin: 1em 0;
-                }
-        
-                h1{
-                    @include h-one;
-                }
-                h2{
-                    @include h-two;
-                }
-                h3{
-                    @include h-three;
-                    color: $cobaltBlue;
-                }
-                h4{
-                    @include h-four;
-                }
-                h5{
-                    @include h-five;
-                }
-                h6{
-                    @include h-six;
-                }
-                p{
-                    @include body;
-                    margin-bottom: 1em;
-                }
-                blockquote {
-                    @include border-radius;
-                    background-color: $lightLightSkyBlue;
-                    font-weight: 700;
-                    padding: 0.5em 0.75em 0.55em 0.75em;
-    
-                }
-                  
-                  
-                strong, b{
-                    font-weight: 700;
-                }
-                
-                em, i{
-                    font-weight: 700;
-                }
-                
-                
-                ol, ul, li {
-                    @include body;
-                }
-                
-    
-                
-                ul li {
-                list-style-type:disc;
-                margin-left: 1rem;
-                }
-                
-                ol li {
-                list-style-type:decimal;
-                margin-left: 1rem;
-                    &::marker{
-                        @include h-one;
-                        @include respond-to(md){
-                            @include h-two;
-                        }
-                        color: $darkNavy;
-                    }
-                }
-                
-                li:last-child {
-                padding-bottom: 0.5rem;
-                }
-                
-                
-                a {
-                    color: $darkNavy;
-                    text-decoration: underline;
-                    position: relative;
-                    
-                    @include transition;
-                    &:before{
-                        content:"";
-                        height: 1px;
-                        width: 0%;
-                        position: absolute;
-                        bottom: 0;
-                        @include transition;
-                    }
-                    &:hover{
-                        @include transition;
-                        font-weight: 600;
-             
-                    }
-                }
+                @include wysiwyg;
                   
             }
     

@@ -3473,8 +3473,8 @@ body[data-theme='light'] {
                 @include captionTwo;
                 border-radius: 0.2em;
 
-                .btn-vtwo{
-                    margin-top: 1rem;
+                p{
+                   margin-bottom: 1em;
                 }
                 
             }
@@ -3720,10 +3720,14 @@ body[data-theme='light'] {
     ol li {
     list-style-type:decimal;
     margin-left: 1rem;
+
         &::marker{
-            @include h-one;
+            @include body;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-right: 1em;
             @include respond-to(md){
-                @include h-two;
+                // @include h-four;
             }
             color: $darkNavy;
         }
