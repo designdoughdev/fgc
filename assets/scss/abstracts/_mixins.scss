@@ -3720,10 +3720,12 @@ body[data-theme='light'] {
     ol li {
     list-style-type:decimal;
     margin-left: 1rem;
+
         &::marker{
-            @include h-one;
+            @include h-four;
+            margin-right: 0.5em;
             @include respond-to(md){
-                @include h-two;
+                @include h-four;
             }
             color: $darkNavy;
         }
