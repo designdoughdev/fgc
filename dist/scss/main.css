@@ -12988,8 +12988,7 @@ section.section_accordion .accordion_container .accordion_items .accordion_item 
 }
 
 section.section_accordion .accordion_container .accordion_items .accordion_item.accord_wrap {
-  -o-transition: .4s;
-  transition: all .4s;
+  transition: all .6s cubic-bezier(.4, 0, .2, 1);
 }
 
 section.section_accordion .accordion_container .accordion_items .accordion_item.accord_wrap .accord_head {
@@ -13008,7 +13007,7 @@ section.section_accordion .accordion_container .accordion_items .accordion_item.
   font-size: .9rem;
   font-weight: normal;
   line-height: 143%;
-  transition: all .3s cubic-bezier(.4, 0, .2, 1);
+  transition: all .6s cubic-bezier(.4, 0, .2, 1);
   overflow: hidden;
 }
 
@@ -13026,13 +13025,11 @@ section.section_accordion .accordion_container .accordion_items .accordion_item.
 
 section.section_accordion .accordion_container .accordion_items .accordion_item.accord_wrap:hover {
   cursor: pointer;
-  -o-transition: .4s;
-  transition: all .4s;
+  transition: all .6s cubic-bezier(.4, 0, .2, 1);
 }
 
 section.section_accordion .accordion_container .accordion_items .accordion_item.accord_wrap.active {
-  -o-transition: .4s;
-  transition: all .4s;
+  transition: all .6s cubic-bezier(.4, 0, .2, 1);
 }
 
 section.section_accordion .accordion_container .accordion_items .accordion_item.accord_wrap.active .accord_body {
