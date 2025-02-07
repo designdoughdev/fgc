@@ -83,7 +83,7 @@ footer{
 
                 &{
                     @include respond-to(md){
-                        @include four_columns; 
+                        grid-template-columns: 1fr 1fr 1fr;
                         gap: 0.5rem;
                      }
     
@@ -121,7 +121,8 @@ footer{
 
             &{
                 @include respond-to(md){
-                    @include two_columns; 
+                    display: grid;
+                    grid-template-columns: 2fr 3fr;
                  }
 
             }
@@ -136,8 +137,36 @@ footer{
 
             .footer-bottom-right{
 
+                .col-title{
+                    @include h-five;
+                    color: white;
+                    margin-bottom: 1em;
+                }
+
+
                 .col{
                     margin-bottom: 1rem;
+
+                    .text-content{
+                        
+
+                        h5{
+                            @include h-five;
+                            margin-bottom: 1em;
+                            color: white;
+                        }
+                        p{
+                            @include body;
+                            color: white;
+                        }
+                        a{
+                            color: white;
+
+                            &:visited{
+                                color: white;
+                            }
+                        }
+                    }
                 }
 
                 @include two_columns;
@@ -145,7 +174,7 @@ footer{
                 &{
                     @include respond-to(md){
                         @include four_columns; 
-                        gap: 0.5rem;
+                        gap: 1rem;
                      }
     
                 }

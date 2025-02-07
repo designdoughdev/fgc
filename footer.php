@@ -22,46 +22,29 @@
 
             </div>
             <div class="footer-top-right">
-                <div class="menu-col">
-                    <ul>
-                        <li class="menu-parent-page">About</li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
+                <?php if (have_rows('root_menu_pages', 'option')): ?>
+                    <?php while (have_rows('root_menu_pages', 'option')) : the_row(); ?>
+                        <?php $pageID = get_sub_field('root_menu_page'); ?>
 
-                    </ul>
-                </div>
-                <div class="menu-col">
-                    <ul>
-                        <li class="menu-parent-page">About</li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
+                        <div class="menu-col">
+                            <ul>
+                            <li class="menu-parent-page"><?php echo get_the_title($pageID); ?></li>
 
-                    </ul>
-                </div>
-                <div class="menu-col">
-                    <ul>
-                        <li class="menu-parent-page">About</li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
+                            <?php while (have_rows('child_menu_items')) : the_row(); ?>
 
-                    </ul>
-                </div>
-                <div class="menu-col">
-                    <ul>
-                        <li class="menu-parent-page">About</li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
-                        <li><a href="/" class="menu-child-page">Cymru Can</a></li>
+                                <?php $child = get_sub_field('Child_Menu_Item'); ?>
 
-                    </ul>
-                </div>
+
+                                
+                                <li><a href="<?php echo esc_url(get_permalink($child->ID)); ?>" aria-label="Visit <?php echo esc_attr($child->post_title); ?>"class="menu-child-page"><?php echo esc_html($child->post_title); ?></a></li>
+                            <?php endwhile; ?>
+
+
+                            </ul>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+
 
 
 
@@ -77,21 +60,47 @@
             </div>
 
             <div class="footer-bottom-right">
+
+            <?php 
+            while( have_rows('footer', 'option') ): the_row(); 
+
+                // Get sub field values.
+                $textAreaOne = get_sub_field('text_area_1'); 
+                $textAreaTwo = get_sub_field('text_area_2'); 
+                $textAreaThree = get_sub_field('text_area_3'); 
+                $textAreaFour = get_sub_field('text_area_4'); 
+                ?>
+           
                 <div class="col">
-                    <div class="address">
-                        <p>Tramshed Tech<br>
-                            Pendyris Street<br>
-                            Cardiff CF11 6BH</p>
+
+                    <div class="text-content">
+                        <?php echo $textAreaOne; ?>
                     </div>
                 </div>
                 <div class="col">
-                    <p>02921 677 400</p>
-                    <p>Email Us</p>
+
+                <div class="text-content">
+                    <?php echo $textAreaTwo; ?>
+                </div>
                 </div>
                 <div class="col">
-                    <p>02921 677 400</p>
-                    <p>Email Us</p>
+
+                <div class="text-content">
+                    <?php echo $textAreaThree; ?>
                 </div>
+                </div>
+                <div class="col">
+
+                <div class="text-content">
+                    <?php echo $textAreaFour; ?>
+                </div>
+                </div>
+
+    
+
+
+
+                <?php endwhile; ?>
             </div>
 
         </div>

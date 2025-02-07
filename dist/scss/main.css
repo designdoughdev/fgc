@@ -4972,8 +4972,8 @@ section.section_images .splide.images-carousel .splide__slide .caption {
   }
 }
 
-section.section_images .splide.images-carousel .splide__slide .caption .btn-vtwo {
-  margin-top: 1rem;
+section.section_images .splide.images-carousel .splide__slide .caption p {
+  margin-bottom: 1em;
 }
 
 @media only screen and (width >= 768px) {
@@ -9807,10 +9807,27 @@ section.section_text .inner-container .flex-content .text-editor p {
 }
 
 section.section_text .inner-container .flex-content .text-editor blockquote {
+  -webkit-font-smoothing: antialiased;
+  color: #112343;
   background-color: #daf6fc;
   border-radius: .13636rem;
   padding: .5em .75em .55em;
-  font-weight: 700;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .9rem;
+  font-weight: bold;
+  line-height: 143%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .inner-container .flex-content .text-editor blockquote {
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text .inner-container .flex-content .text-editor blockquote {
+    font-size: 1rem;
+  }
 }
 
 section.section_text .inner-container .flex-content .text-editor strong, section.section_text .inner-container .flex-content .text-editor b, section.section_text .inner-container .flex-content .text-editor em, section.section_text .inner-container .flex-content .text-editor i {
@@ -9849,50 +9866,24 @@ section.section_text .inner-container .flex-content .text-editor ol li {
 }
 
 section.section_text .inner-container .flex-content .text-editor ol li::marker {
-  letter-spacing: -.03em;
-  color: #112343;
   -webkit-font-smoothing: antialiased;
-  font-family: Messina Sans, sans-serif;
-  font-size: 2.0625rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
+  color: #112343;
+  margin-right: 1em;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 143%;
 }
 
 @media only screen and (width >= 768px) {
   section.section_text .inner-container .flex-content .text-editor ol li::marker {
-    font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
   section.section_text .inner-container .flex-content .text-editor ol li::marker {
-    font-size: 3.75rem;
-  }
-}
-
-@media only screen and (width >= 768px) {
-  section.section_text .inner-container .flex-content .text-editor ol li::marker {
-    letter-spacing: -.0300032em;
-    color: #112343;
-    -webkit-font-smoothing: antialiased;
-    font-family: Messina Sans, sans-serif;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 104.4%;
-  }
-}
-
-@media only screen and (width >= 768px) and (width >= 768px) {
-  section.section_text .inner-container .flex-content .text-editor ol li::marker {
-    font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
-  }
-}
-
-@media only screen and (width >= 768px) and (width >= 1600px) {
-  section.section_text .inner-container .flex-content .text-editor ol li::marker {
-    font-size: 2.8125rem;
+    font-size: 1rem;
   }
 }
 
@@ -9901,7 +9892,7 @@ section.section_text .inner-container .flex-content .text-editor li:last-child {
 }
 
 section.section_text .inner-container .flex-content .text-editor a {
-  color: #112343;
+  color: #2a5ad5;
   -o-transition: .4s;
   text-decoration: underline;
   transition: all .4s;
@@ -11760,50 +11751,24 @@ section.section_wellbeing_goals .background-container .section-content .cards-se
 }
 
 .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text .body-text-container ol li::marker {
-  letter-spacing: -.03em;
-  color: #112343;
   -webkit-font-smoothing: antialiased;
-  font-family: Messina Sans, sans-serif;
-  font-size: 2.0625rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
+  color: #112343;
+  margin-right: 1em;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 143%;
 }
 
 @media only screen and (width >= 768px) {
   .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text .body-text-container ol li::marker {
-    font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
   .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text .body-text-container ol li::marker {
-    font-size: 3.75rem;
-  }
-}
-
-@media only screen and (width >= 768px) {
-  .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text .body-text-container ol li::marker {
-    letter-spacing: -.0300032em;
-    color: #112343;
-    -webkit-font-smoothing: antialiased;
-    font-family: Messina Sans, sans-serif;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 104.4%;
-  }
-}
-
-@media only screen and (width >= 768px) and (width >= 768px) {
-  .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text .body-text-container ol li::marker {
-    font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
-  }
-}
-
-@media only screen and (width >= 768px) and (width >= 1600px) {
-  .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text .body-text-container ol li::marker {
-    font-size: 2.8125rem;
+    font-size: 1rem;
   }
 }
 
@@ -12252,50 +12217,24 @@ section.section_timeline_journey .stage_body_text ol li {
 }
 
 section.section_timeline_journey .stage_body_text ol li::marker {
-  letter-spacing: -.03em;
-  color: #112343;
   -webkit-font-smoothing: antialiased;
-  font-family: Messina Sans, sans-serif;
-  font-size: 2.0625rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
+  color: #112343;
+  margin-right: 1em;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 143%;
 }
 
 @media only screen and (width >= 768px) {
   section.section_timeline_journey .stage_body_text ol li::marker {
-    font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
   section.section_timeline_journey .stage_body_text ol li::marker {
-    font-size: 3.75rem;
-  }
-}
-
-@media only screen and (width >= 768px) {
-  section.section_timeline_journey .stage_body_text ol li::marker {
-    letter-spacing: -.0300032em;
-    color: #112343;
-    -webkit-font-smoothing: antialiased;
-    font-family: Messina Sans, sans-serif;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 104.4%;
-  }
-}
-
-@media only screen and (width >= 768px) and (width >= 768px) {
-  section.section_timeline_journey .stage_body_text ol li::marker {
-    font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
-  }
-}
-
-@media only screen and (width >= 768px) and (width >= 1600px) {
-  section.section_timeline_journey .stage_body_text ol li::marker {
-    font-size: 2.8125rem;
+    font-size: 1rem;
   }
 }
 
@@ -12970,50 +12909,24 @@ section.section_accordion .accordion_container .accordion_items .accordion_item 
 }
 
 section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol li::marker {
-  letter-spacing: -.03em;
-  color: #112343;
   -webkit-font-smoothing: antialiased;
-  font-family: Messina Sans, sans-serif;
-  font-size: 2.0625rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
+  color: #112343;
+  margin-right: 1em;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 143%;
 }
 
 @media only screen and (width >= 768px) {
   section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol li::marker {
-    font-size: clamp(2.0625rem, 2.0625rem + 1vw, 3.75rem);
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
   section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol li::marker {
-    font-size: 3.75rem;
-  }
-}
-
-@media only screen and (width >= 768px) {
-  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol li::marker {
-    letter-spacing: -.0300032em;
-    color: #112343;
-    -webkit-font-smoothing: antialiased;
-    font-family: Messina Sans, sans-serif;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 104.4%;
-  }
-}
-
-@media only screen and (width >= 768px) and (width >= 768px) {
-  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol li::marker {
-    font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
-  }
-}
-
-@media only screen and (width >= 768px) and (width >= 1600px) {
-  section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol li::marker {
-    font-size: 2.8125rem;
+    font-size: 1rem;
   }
 }
 
@@ -14459,9 +14372,8 @@ footer .footer-content .footer-top .footer-top-right {
 
 @media only screen and (width >= 768px) {
   footer .footer-content .footer-top .footer-top-right {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: .5rem;
-    display: grid;
   }
 }
 
@@ -14525,7 +14437,7 @@ footer .footer-content .footer-bottom {
 
 @media only screen and (width >= 768px) {
   footer .footer-content .footer-bottom {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
     display: grid;
   }
 }
@@ -14543,14 +14455,87 @@ footer .footer-content .footer-bottom .footer-bottom-right {
   display: grid;
 }
 
+footer .footer-content .footer-bottom .footer-bottom-right .col-title {
+  letter-spacing: normal;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 1em;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+}
+
+@media only screen and (width >= 768px) {
+  footer .footer-content .footer-bottom .footer-bottom-right .col-title {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  footer .footer-content .footer-bottom .footer-bottom-right .col-title {
+    font-size: .9375rem;
+  }
+}
+
 footer .footer-content .footer-bottom .footer-bottom-right .col {
   margin-bottom: 1rem;
+}
+
+footer .footer-content .footer-bottom .footer-bottom-right .col .text-content h5 {
+  letter-spacing: normal;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 1em;
+  font-family: Chivo Mono, monospace;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: normal;
+}
+
+@media only screen and (width >= 768px) {
+  footer .footer-content .footer-bottom .footer-bottom-right .col .text-content h5 {
+    font-size: clamp(.75rem, .75rem + 1vw, .9375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  footer .footer-content .footer-bottom .footer-bottom-right .col .text-content h5 {
+    font-size: .9375rem;
+  }
+}
+
+footer .footer-content .footer-bottom .footer-bottom-right .col .text-content p {
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  font-family: Messina Sans Book, sans-serif;
+  font-size: .9rem;
+  font-weight: normal;
+  line-height: 143%;
+}
+
+@media only screen and (width >= 768px) {
+  footer .footer-content .footer-bottom .footer-bottom-right .col .text-content p {
+    font-size: clamp(.9rem, .9rem + 1vw, 1rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  footer .footer-content .footer-bottom .footer-bottom-right .col .text-content p {
+    font-size: 1rem;
+  }
+}
+
+footer .footer-content .footer-bottom .footer-bottom-right .col .text-content a, footer .footer-content .footer-bottom .footer-bottom-right .col .text-content a:visited {
+  color: #fff;
 }
 
 @media only screen and (width >= 768px) {
   footer .footer-content .footer-bottom .footer-bottom-right {
     grid-template-columns: repeat(4, 1fr);
-    gap: .5rem;
+    gap: 1rem;
     display: grid;
   }
 }
