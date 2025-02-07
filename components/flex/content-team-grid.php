@@ -75,11 +75,11 @@ $big_title = get_sub_field('big_title');
                     <div class="accord_wrap">
                         <h3 class="staff-name"><?php echo $name; ?></h3>
                         <p class="job-title"><?php echo $job; ?></p>
-                        <div class="accord_head">
-                            <button class="btn-vtwo">Read more<div class="btn-arrow-container"></div></button>
-
-
-                        </div>
+                        <?php if ($bio) : ?>
+                            <div class="accord_head">
+                                <button class="btn-vtwo">Read more<div class="btn-arrow-container"></div></button>
+                            </div>
+                        <?php endif; ?>x
                         <div class="accord_body">
                             <?php echo $bio; ?>
                         </div>
