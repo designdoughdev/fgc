@@ -31,6 +31,11 @@ function designdough_custom_post_types()
             'singular_name' => 'Public Information',
             'menu_icon' => 'text-page',
         ),
+        array(
+            'name' => 'Case Studies',
+            'singular_name' => 'Case Study',
+            'menu_icon' => 'search',
+        ),
 
     );
 
