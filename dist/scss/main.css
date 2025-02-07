@@ -9526,6 +9526,35 @@ section.section_text .inner-container {
   display: flex;
 }
 
+section.section_text .inner-container .parent-page-title {
+  letter-spacing: -.03em;
+  color: #112343;
+  -webkit-font-smoothing: antialiased;
+  font-family: Messina Sans, sans-serif;
+  font-size: 1.35rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 102.632%;
+}
+
+@media only screen and (width >= 768px) {
+  section.section_text .inner-container .parent-page-title {
+    font-size: clamp(1.35rem, 1.35rem + 1vw, 2.375rem);
+  }
+}
+
+@media only screen and (width >= 1600px) {
+  section.section_text .inner-container .parent-page-title {
+    font-size: 2.375rem;
+  }
+}
+
+section.section_text .inner-container .side-menu-container {
+  border: 1px solid #46d1ee;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
 section.section_text .inner-container .side-menu-container a.link {
   -webkit-font-smoothing: antialiased;
   color: #112343;
@@ -9565,8 +9594,8 @@ section.section_text .inner-container .side-menu-container a.link:before {
   display: inline-block;
 }
 
-section.section_text .inner-container .side-menu-container :not(:last-child) {
-  border-bottom: 1px solid #0000001a;
+section.section_text .inner-container .side-menu-container li {
+  border-top: 1px solid #0000001a;
 }
 
 section.section_text .inner-container .flex-content {

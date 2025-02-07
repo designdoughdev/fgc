@@ -60,33 +60,40 @@ $sideMenu = get_sub_field('side_menu');
             </div>
 
             <?php if ($sideMenu): ?>
+                <?php
+
+                    // Get the current page object
+                    global $post;
+
+                    // Get the parent page ID
+                    $parent_id = $post->post_parent;
+
+                    
+
+                    // Query sibling pages (same level as current page)
+                    $args = array(
+                        'post_type'      => 'page',
+                        'post_parent'    => $parent_id,
+                        'orderby'        => 'menu_order',
+                        'order'          => 'ASC',
+                        'post_status'    => 'publish',
+                        'post__not_in'   => array($post->ID), // Exclude current page
+                    );
+
+                    $sibling_pages = new WP_Query($args);
+
+                ?>
+                <h3 class="parent-page-title"><?php echo get_the_title($parent_id); ?> </h3>
 
             <div class="side-menu-container">
 
                 <nav>
                     <ul>
-                        <?php
-                            // Get the current page object
-                            global $post;
-
-                            // Get the parent page ID
-                            $parent_id = $post->post_parent;
-
-                            // Query sibling pages (same level as current page)
-                            $args = array(
-                                'post_type'      => 'page',
-                                'post_parent'    => $parent_id,
-                                'orderby'        => 'menu_order',
-                                'order'          => 'ASC',
-                                'post_status'    => 'publish',
-                                'post__not_in'   => array($post->ID), // Exclude current page
-                            );
-
-                            $sibling_pages = new WP_Query($args);
+                            <?php 
 
                             // Display the sibling pages
-                            if ($sibling_pages->have_posts()):
-                                while ($sibling_pages->have_posts()): $sibling_pages->the_post();
+                            if ($sibling_pages->have_posts()): ?>
+                                <?php while ($sibling_pages->have_posts()): $sibling_pages->the_post();
                             ?>
                         <li><a class="link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
                         <?php
