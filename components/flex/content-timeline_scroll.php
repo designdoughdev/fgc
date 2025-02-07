@@ -51,11 +51,23 @@
                     </div>
 
 
-                    <div class="stage_body_text accord_body"><?php echo $stage_body_text; ?></div>
-                    <?php if($link) { ?>
-                        <a class="btn_default" href="<?php echo esc_url($link['url']); ?>"
-                            target="<?php echo esc_attr($link['target']); ?>"><span><?php echo esc_html($link['title']); ?></span></a>
-                    <?php } ?>
+                    <div class="stage_body_text accord_body">
+                        <div class="body-text-container">
+                            <?php echo $stage_body_text; ?>
+
+                        </div>
+                        
+                        <?php if ($link): ?>
+                                    <a href="<?php echo esc_url($link['url']); ?>" 
+                                    class="post-link btn" 
+                                    target="<?php echo esc_attr($link['target'] ?: '_self'); ?>" 
+                                    aria-label="Read more about <?php echo esc_attr($link['title']); ?>">
+                                        Read more 
+                                        <div class="btn-arrow-container"></div>
+                                    </a>
+                        <?php endif; ?>
+                    </div>
+
 
                     
                 </div>

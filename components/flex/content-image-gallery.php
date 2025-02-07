@@ -33,13 +33,29 @@ $big_title = get_sub_field('big_title');
 
         <div class="splide__track">
             <ul class="splide__list">
+                <?php $colourSchemes = ['blue', 'yellow', 'mint']; ?>
+
                 <?php while (have_rows('images')) : the_row(); ?>
 
                 <?php $image = get_sub_field('image'); ?>
+                <?php $link = get_sub_field('link'); ?>
+                <?php $link_text = get_sub_field('link_text'); ?>
 
-                <li class="splide__slide relative"><img src="<?php echo $image['url']; ?>" alt="">
-                    <?php if($image['caption']): ?>
-                        <p class="caption light-navy"><?php echo $image['caption']; ?></p>
+                <?php $colourScheme = $colourSchemes[(get_row_index() - 1) % 3]; ?>
+                
+
+                <li class="splide__slide relative image-gallery-slide <?php echo $colourScheme; ?>-scheme"><img src="<?php echo $image['url']; ?>" alt="">
+                    
+                    <?php if($link): ?>
+                        <div class="caption">
+                            <?php if ($link_text) : ?>
+                                <p><?php echo $link_text?></p>
+                            <?php endif; ?>
+                            <a class="btn-vtwo">Read more<div class="btn-arrow-container"></div></a>
+                        </div>
+                 
+                    <?php elseif($image['caption']): ?>
+                        <p class="caption"><?php echo $image['caption']; ?></p>
                     <?php endif; ?>
                 </li>
                 <?php endwhile; ?>
