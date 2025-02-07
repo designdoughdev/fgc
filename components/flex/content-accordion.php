@@ -18,7 +18,6 @@
         <div class="accordion_container">
             <div class="accordion_items">
                 <?php $colourSchemes = ['mint', 'yellow', 'blue', 'navy' ]; ?>
-                <?php $totalCards = count(get_sub_field('accordion_items')); ?>
 
 
                 <?php if(have_rows('accordion_items')) : while(have_rows('accordion_items')) : the_row(); ?>
@@ -29,7 +28,7 @@
                 <?php $colourScheme = $colourSchemes[(get_row_index() - 1) % 4]; ?>
 
                 <div class="item-outer-container">
-                    <div class="accordion_item <?php echo $colourScheme; ?>-scheme accord_wrap">
+                    <div class="accordion_item <?php echo $colourScheme; ?>-scheme accord_wrap"> 
 
 
                     

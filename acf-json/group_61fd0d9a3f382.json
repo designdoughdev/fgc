@@ -2075,6 +2075,7 @@
                                     "collapsed": "",
                                     "button_label": "Add Link",
                                     "rows_per_page": 20,
+                                    "parent_repeater": "field_6762ab241ff69",
                                     "sub_fields": [
                                         {
                                             "key": "field_6762a8e490095",
@@ -2094,8 +2095,7 @@
                                             "allow_in_bindings": 0,
                                             "parent_repeater": "field_6762a8d490094"
                                         }
-                                    ],
-                                    "parent_repeater": "field_6762ab241ff69"
+                                    ]
                                 }
                             ]
                         },
@@ -6313,6 +6313,133 @@
                             "append": ""
                         },
                         {
+                            "key": "field_67a48616eada2",
+                            "label": "Small Title",
+                            "name": "small_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 1,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_67a48616eada6",
+                            "label": "Accordion Items",
+                            "name": "accordion_items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "row",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_67a48616eada7",
+                                    "label": "Item Title",
+                                    "name": "item_title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 1,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_67a48616eada6"
+                                },
+                                {
+                                    "key": "field_67a48616eada8",
+                                    "label": "Item Body Text",
+                                    "name": "item_body_text",
+                                    "aria-label": "",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "allow_in_bindings": 1,
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0,
+                                    "parent_repeater": "field_67a48616eada6"
+                                },
+                                {
+                                    "key": "field_67a48616eada9",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "allow_in_bindings": 1,
+                                    "parent_repeater": "field_67a48616eada6"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_67a48616eada3",
+                            "label": "Big Title",
+                            "name": "big_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 1,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
                             "key": "field_67a48616eada6",
                             "label": "Accordion Items",
                             "name": "accordion_items",
@@ -6537,6 +6664,7 @@
                                     "collapsed": "",
                                     "button_label": "Add Row",
                                     "rows_per_page": 20,
+                                    "parent_repeater": "field_67a1fc0d8561b",
                                     "sub_fields": [
                                         {
                                             "key": "field_67a230a1af382",
@@ -6627,8 +6755,7 @@
                                             "allow_in_bindings": 0,
                                             "parent_repeater": "field_67a23068af381"
                                         }
-                                    ],
-                                    "parent_repeater": "field_67a1fc0d8561b"
+                                    ]
                                 }
                             ]
                         }
@@ -6768,6 +6895,7 @@
                                     "collapsed": "",
                                     "button_label": "Add Row",
                                     "rows_per_page": 20,
+                                    "parent_repeater": "field_6738c96e2d9be",
                                     "sub_fields": [
                                         {
                                             "key": "field_6738c9b12d9c1",
@@ -6862,8 +6990,7 @@
                                             "new_lines": "br",
                                             "parent_repeater": "field_6738c99c2d9c0"
                                         }
-                                    ],
-                                    "parent_repeater": "field_6738c96e2d9be"
+                                    ]
                                 }
                             ]
                         }
@@ -7104,5 +7231,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738835770
+    "modified": 1738922943
 }

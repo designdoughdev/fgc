@@ -122,58 +122,43 @@ section.section_accordion {
 
                     &.accord_wrap {
                         @include transition;
-                
-
-                
+                        
                         .accord_head {
                             position: relative;
                             @include shorttransition;
-                            // cursor: pointer;
-                
-
                         }
+                        
                         .accord_body {
-                            
                             @include body;
-                            max-height: 1px;
+                            height: 0; // Use height instead of max-height
                             overflow: hidden;
                             opacity: 0;
-                            @include transition;
-                            
-                            
-                
+                            padding: 0; // Start with 0 padding
+                            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); // Use easing
                         }
-                
+                        
                         &:hover {
                             cursor: pointer;
                             @include transition;
                         }
+                        
                         &.active {
                             @include transition;
+                            
                             .accord_body {
-                                max-height: 2000px;
+                                height: auto; // Let it expand to content
                                 padding: 10px 0 30px 0;
                                 opacity: 1;
-                                
                             }
-
-                            .accord_btn img{
+                            
+                            .accord_btn img {
                                 transform: rotate(90deg);
-
-                                
                             }
-                
-                            .accord_head .job-title{
+                            
+                            .accord_head .job-title {
                                 @include shorttransition;
                             }
-                
-
-                
                         }
-
-                        
-
-
                     }
 
 
