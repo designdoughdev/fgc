@@ -13208,7 +13208,8 @@ header .header-bar .main-header .main-header-content .main-header-right .hamburg
   background-color: #fff;
   border: none;
   place-content: center;
-  width: fit-content;
+  width: 100%;
+  height: fit-content;
   font-family: Messina Sans Book, sans-serif;
   font-size: .9rem;
   font-weight: normal;
@@ -13233,8 +13234,8 @@ header .header-bar .main-header .main-header-content .main-header-right .hamburg
   text-decoration: none;
 }
 
-header .header-bar .main-header .main-header-content .main-header-right .hamburger-icon-container button.hamburger-btn .hamburger-icon {
-  width: 28px;
+header .header-bar .main-header .main-header-content .main-header-right .hamburger-icon-container button.hamburger-btn svg {
+  width: 100%;
   height: auto;
 }
 
@@ -14530,6 +14531,12 @@ footer .footer-content .footer-bottom .footer-bottom-right .col .text-content p 
 
 footer .footer-content .footer-bottom .footer-bottom-right .col .text-content a, footer .footer-content .footer-bottom .footer-bottom-right .col .text-content a:visited {
   color: #fff;
+}
+
+footer .footer-content .footer-bottom .footer-bottom-right .col .social-accounts {
+  gap: .25rem;
+  height: 20px;
+  display: flex;
 }
 
 @media only screen and (width >= 768px) {
