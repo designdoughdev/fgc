@@ -601,7 +601,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
     });
 });
 // Add delay to each AOS item
-document.querySelectorAll(".wayfinder-row").forEach((item, index)=>{
+const wayfinderRows = document.querySelectorAll(".wayfinder-row");
+if (wayfinderRows) wayfinderRows.forEach((item, index)=>{
     const delay = index * 200;
     item.setAttribute("data-aos-delay", delay);
 });

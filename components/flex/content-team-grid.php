@@ -79,7 +79,7 @@ $big_title = get_sub_field('big_title');
                             <div class="accord_head">
                                 <button class="btn-vtwo">Read more<div class="btn-arrow-container"></div></button>
                             </div>
-                        <?php endif; ?>x
+                        <?php endif; ?>
                         <div class="accord_body">
                             <?php echo $bio; ?>
                         </div>

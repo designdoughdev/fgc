@@ -7,10 +7,20 @@
         <div class="footer-top">
             <div class="footer-top-left">
                 <div class="top-left-content">
-                    <h3 class="title-tag">Newsletter</h3>
-                    <h4 class="heading">Lorem ipsum dolor sit amet consectetur. Ultrices nec ac. Consectet
-                        lorem ipsum.
+                <?php while( have_rows('footer', 'option') ): the_row(); 
+
+                    $footerLeftTitle = get_sub_field('footer_left_small_title'); 
+                    $footerLeftBody = get_sub_field('footer_left_body'); 
+                    ?>
+                    <?php if ($footerLeftTitle): ?>
+                    <h3 class="title-tag"><?php echo $footerLeftTitle; ?></h3>
+                    <?php endif; ?>
+                    <?php if ($footerLeftBody): ?>
+                    <h4 class="heading"><?php echo $footerLeftBody; ?>
                     </h4>
+                    <?php endif; ?>
+
+                    <?php endwhile; ?>
                     <div class="signup-container">
                         <input type="email" placeholder="Email">
                         <button><img src="<?php bloginfo('template_url'); ?>/assets/images/svg/arrow-right-sky-blue.svg"
@@ -74,33 +84,81 @@
                 <div class="col">
 
                     <div class="text-content">
-                        <?php echo $textAreaOne; ?>
+                        <?php if ($textAreaOne) echo $textAreaOne; ?>
                     </div>
                 </div>
                 <div class="col">
 
                 <div class="text-content">
-                    <?php echo $textAreaTwo; ?>
+                    <?php if ($textAreaTwo) echo $textAreaTwo; ?>
                 </div>
                 </div>
                 <div class="col">
 
                 <div class="text-content">
-                    <?php echo $textAreaThree; ?>
+                    <?php if ($textAreaThree) echo $textAreaThree; ?>
                 </div>
                 </div>
                 <div class="col">
 
-                <div class="text-content">
-                    <?php echo $textAreaFour; ?>
-                </div>
+                    <div class="text-content">
+                        <?php if ($textAreaFour) echo $textAreaFour; ?>
+                    </div>
+                    <?php endwhile; ?>
+
+                    <?php 
+$social_accounts = get_field('social_accounts', 'option');
+
+if ($social_accounts) : ?>
+    <ul class="social-accounts" role="list">
+        <?php foreach ($social_accounts as $account) : 
+            $image = isset($account['social_icon']) ? $account['social_icon'] : null;
+            $link = isset($account['social_link']) ? $account['social_link'] : null;
+        ?>
+
+            <?php if ($link || $image) : // Ensure we have at least one valid field ?>
+                <li role="listitem">
+                    <?php 
+                        $url = $link['url'] ?? '#'; // Default to "#" if no URL
+                        $target = !empty($link['target']) ? esc_attr($link['target']) : '_self'; // Check if target is set
+                        $rel = $target === '_blank' ? 'noopener noreferrer' : ''; // Security best practice
+                    ?>
+
+                    <?php if ($link) : ?>
+                        <a href="<?php echo esc_url($url); ?>" target="<?php echo $target; ?>" rel="<?php echo esc_attr($rel); ?>">
+                    <?php endif; ?>
+
+                    <?php if ($image && !empty($image['url'])) : ?>
+                        <img src="<?php echo esc_url($image['url']); ?>" 
+                             alt="<?php echo esc_attr($image['alt'] ?? 'Social media icon'); ?>"
+                             width="<?php echo esc_attr($image['width'] ?? '40'); ?>" 
+                             height="<?php echo esc_attr($image['height'] ?? '40'); ?>">
+                    <?php endif; ?>
+
+                    <?php if ($link) : ?>
+                        </a>
+                    <?php endif; ?>
+                </li>
+            <?php endif; ?>
+
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+
+
+
+                        
+
+
+
+
                 </div>
 
     
 
 
 
-                <?php endwhile; ?>
+                
             </div>
 
         </div>
