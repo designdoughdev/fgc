@@ -234,12 +234,14 @@ header{
                             display: flex;
                             align-content: center;
                             justify-content: center;
-                            
-        
-                            .hamburger-icon{
-                                width: 28px;
+                            width: 100%;
+                            height: fit-content;
+
+                            svg{
+                                width: 100%;
                                 height: auto;
                             }
+               
                         }
                     }
         
