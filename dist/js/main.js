@@ -1090,6 +1090,26 @@ document.addEventListener("DOMContentLoaded", ()=>{
         });
     });
 });
+//------------------------ Video flex play buttons -------------------------------//
+document.addEventListener("DOMContentLoaded", function() {
+    videoFlexes = document.querySelectorAll(".video-wrapper");
+    if (videoFlexes) videoFlexes.forEach((wrapper)=>{
+        let video = wrapper.querySelector("video");
+        let playButton = wrapper.querySelector(".play-button");
+        playButton.addEventListener("click", function() {
+            if (video.paused) {
+                video.play();
+                playButton.classList.add("hidden");
+            }
+        });
+        video.addEventListener("click", function() {
+            if (!video.paused) {
+                video.pause();
+                playButton.classList.remove("hidden");
+            }
+        });
+    });
+});
 
 },{"@splidejs/splide":"5CJev","animate.css":"8t3va","aos":"eRzTM","gsap":"fPSuC","gsap/ScrollTrigger":"7wnFk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5CJev":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

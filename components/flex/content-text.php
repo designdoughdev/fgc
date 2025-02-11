@@ -21,10 +21,11 @@ $sideMenu = get_sub_field('side_menu');
 
                 <?php if (have_rows('links_section')): ?>
                 <?php while (have_rows('links_section')) : the_row(); ?>
+                <?php $linksTitle = get_sub_field('links_title'); ?>
 
                 <?php if (have_rows('links')): ?>
                 <div class="links-container">
-                    <?php $linksTitle = get_sub_field('links_title'); ?>
+                    
                     <?php if ($linksTitle): ?>
                     <h3 class="links-title">
                         <?php echo $linksTitle; ?>

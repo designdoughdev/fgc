@@ -20,9 +20,6 @@ $layoutStyle = get_sub_field('layout_style');
 
 
 
-
-        <!-------------------------- ACF version --------------------------------->
-
         <?php if ($layoutStyle == 'cards'): ?>
 
 

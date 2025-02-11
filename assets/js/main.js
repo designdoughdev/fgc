@@ -791,6 +791,38 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+//------------------------ Video flex play buttons -------------------------------//
+
+document.addEventListener("DOMContentLoaded", function() {
+  videoFlexes = document.querySelectorAll(".video-wrapper");
+
+  if (videoFlexes){
+
+    videoFlexes.forEach(wrapper => {
+      let video = wrapper.querySelector("video");
+      let playButton = wrapper.querySelector(".play-button");
+
+      playButton.addEventListener("click", function() {
+          if (video.paused) {
+              video.play();
+              playButton.classList.add("hidden");
+          }
+      });
+
+      video.addEventListener("click", function() {
+          if (!video.paused) {
+              video.pause();
+              playButton.classList.remove("hidden");
+          }
+      });
+  });
+
+  }
+
+
+});
+
+
 
 
 

@@ -13,7 +13,7 @@
 
             <div class="timeline_stages">
                 <?php $colourSchemes = ['mint', 'blue', 'yellow', 'navy']; ?>
-                <?php $totalCards = count(get_sub_field('timeline_stages')); ?>
+
 
 
                 <?php if(have_rows('timeline_stages')) : while(have_rows('timeline_stages')) : the_row(); ?>
@@ -34,7 +34,7 @@
                     </div>
                     <?php endif; ?>
                     <p class="timeline-stage-index">
-                        <?php if (get_row_index() < 10) { echo 0;} echo get_row_index(); ?></p>
+                        <?php // if (get_row_index() < 10) { echo 0;} echo get_row_index(); ?></p>
                     <div class="line-container bottom">
                         <div class="line"></div>
                     </div>
