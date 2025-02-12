@@ -895,9 +895,17 @@ if (headerMenu) document.addEventListener("mouseover", (e)=>{
     const headerBar = document.querySelector(".header-bar");
     const actionNavContainer = document.querySelector(".action-nav-container");
     const actionNav = document.querySelector(".action-nav");
-    // set 'top' property of action nav conatiner based on header bar height
+    const heroCont = document.querySelector(".hero-container");
     const headerHeight = headerBar.offsetHeight; // Get height of header bar
+    // set 'top' property of action nav conatiner based on header bar height 
     actionNavContainer.style.top = `${headerHeight}px`; // Set top position
+    //  set hero section padding to header height
+    if (heroCont) {
+        heroCont.style.paddingTop = `${headerHeight}px`; // Set padding top 
+        window.addEventListener("resize", ()=>{
+            heroCont.style.paddingTop = `${headerHeight}px`; // Set padding top 
+        });
+    }
     // display menu block
     if (headerMenu.contains(e.target)) actionNav.classList.add("show");
     // remove menu block
