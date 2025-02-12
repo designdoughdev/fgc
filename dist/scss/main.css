@@ -13174,7 +13174,9 @@ header {
 
 header .header-bar {
   z-index: 99;
-  position: relative;
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
 }
 
 header .header-bar .pre-header {
@@ -13385,7 +13387,8 @@ header .header-bar .main-header .main-header-content .main-header-right .hamburg
 
 header div.action-nav-container {
   width: 100%;
-  top: -.5rem;
+  position: absolute;
+  top: 2rem;
   left: 0;
 }
 

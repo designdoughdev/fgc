@@ -101,9 +101,13 @@ $image = get_field('image');
 
 
         </div>
+        <?php get_template_part('components/includes/action-nav'); ?>
         <?php get_template_part('components/includes/mobile-nav'); ?>
+        
 
     </div>
+
+   
 
     <?php if ($layout == 'boxed'): ?>
 
@@ -111,7 +115,7 @@ $image = get_field('image');
 
     <section class="hero-container relative">
 
-        <?php get_template_part('components/includes/action-nav'); ?>
+        <?php // get_template_part('components/includes/action-nav'); ?>
 
 
         <?php if (is_front_page()): ?>
@@ -274,7 +278,7 @@ $image = get_field('image');
 
     <section class="hero-container relative level-three-layout">
 
-        <?php get_template_part('components/includes/action-nav'); ?>
+        <?php // get_template_part('components/includes/action-nav'); ?>
 
         <div id="hero-overlay" class="container">
 
@@ -315,7 +319,7 @@ $image = get_field('image');
 
     <section class="hero-container relative level-two-layout">
 
-        <?php get_template_part('components/includes/action-nav'); ?>
+        <?php // get_template_part('components/includes/action-nav'); ?>
 
 
         <div id="hero-overlay" class="container">
@@ -378,7 +382,7 @@ $image = get_field('image');
 
     <section class="hero-container relative level-three-layout">
 
-        <?php get_template_part('components/includes/action-nav'); ?>
+        <?php // get_template_part('components/includes/action-nav'); ?>
 
 
         <div id="hero-overlay" class="container">
@@ -424,7 +428,7 @@ $image = get_field('image');
 
     <section class="hero-container relative level-three-layout">
 
-        <?php get_template_part('components/includes/action-nav'); ?>
+        <?php // get_template_part('components/includes/action-nav'); ?>
 
         <div id="hero-overlay" class="container">
 

@@ -478,7 +478,16 @@ if(headerMenu){
 
    document.addEventListener('mouseover', (e)=> {
       
+      const headerBar = document.querySelector('.header-bar');
+      const actionNavContainer = document.querySelector('.action-nav-container');
       const actionNav = document.querySelector('.action-nav');
+
+      // set 'top' property of action nav conatiner based on header bar height
+
+      const headerHeight = headerBar.offsetHeight; // Get height of header bar
+      actionNavContainer.style.top = `${headerHeight}px`; // Set top position
+
+
 
 
       // display menu block

@@ -1,4 +1,4 @@
-<div class="action-nav-container relative">
+<div class="action-nav-container">
     <nav class="action-nav relative" aria-label="Main Menu Navigation">
         <?php if (have_rows('root_menu_pages', 'option')): ?>
         <?php $colourSchemes = ['mint', 'yellow', 'sky-blue']; ?>
