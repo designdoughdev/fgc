@@ -14067,8 +14067,7 @@ header section.hero-container.level-two-layout .hero-img.img-wrap img {
 
 header .banner-container.level-two-layout {
   background-color: #2a5ad5;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  padding: 4rem 0;
 }
 
 header .banner-container.level-two-layout .text-content {
