@@ -899,6 +899,7 @@ if (headerMenu) document.addEventListener("mouseover", (e)=>{
     const headerHeight = headerBar.offsetHeight; // Get height of header bar
     // set 'top' property of action nav conatiner based on header bar height 
     actionNavContainer.style.top = `${headerHeight}px`; // Set top position
+    actionNavContainer.style.display = `block`;
     //  set hero section padding to header height
     if (heroCont) {
         heroCont.style.paddingTop = `${headerHeight}px`; // Set padding top 
@@ -909,7 +910,10 @@ if (headerMenu) document.addEventListener("mouseover", (e)=>{
     // display menu block
     if (headerMenu.contains(e.target)) actionNav.classList.add("show");
     // remove menu block
-    if (!actionNav.contains(e.target) && !headerMenu.contains(e.target)) actionNav.classList.remove("show");
+    if (!actionNav.contains(e.target) && !headerMenu.contains(e.target)) {
+        actionNav.classList.remove("show");
+        actionNavContainer.style.display = `none`;
+    }
     if (e.target.classList.contains("btn-menu")) {
         const menuBtns = document.querySelectorAll(".btn-menu");
         console.log(menuBtns);

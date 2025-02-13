@@ -13397,6 +13397,7 @@ header .header-bar .main-header .main-header-content .main-header-right .hamburg
 
 header div.action-nav-container {
   width: 100%;
+  display: none;
   position: absolute;
   top: 2rem;
   left: 0;
