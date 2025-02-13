@@ -26,6 +26,11 @@ function designdough_custom_post_types()
             'singular_name' => 'Public Body',
             'menu_icon' => 'portfolio',
         ),
+		array(
+            'name' => 'Public Service Boards',
+            'singular_name' => 'Public Service Board',
+            'menu_icon' => 'portfolio',
+        ),
         array(
             'name' => 'Public Information',
             'singular_name' => 'public_info',

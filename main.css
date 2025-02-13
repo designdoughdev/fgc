@@ -1,0 +1,8 @@
+@import url(/node_modules/@splidejs/splide/dist/css/splide-core.min.css);
+@import url(../../node_modules/aos/dist/aos.css);
+@use 'abstracts';
+@use 'base';
+@use 'components';
+@use 'layout';
+@use 'pages';
+@use 'utils';
