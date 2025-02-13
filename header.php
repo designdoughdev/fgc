@@ -15,6 +15,15 @@ $image = get_field('image');
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- WordPress Favicon -->
+    <?php if ( function_exists( 'get_site_icon_url' ) && get_site_icon_url() ) : ?>
+        <link rel="icon" href="<?php echo esc_url( get_site_icon_url(32) ); ?>" sizes="32x32" type="image/png">
+        <link rel="icon" href="<?php echo esc_url( get_site_icon_url(192) ); ?>" sizes="192x192" type="image/png">
+        <link rel="apple-touch-icon" href="<?php echo esc_url( get_site_icon_url(180) ); ?>">
+        <meta name="msapplication-TileImage" content="<?php echo esc_url( get_site_icon_url(270) ); ?>">
+    <?php endif; ?>
+    
     <title><?php wp_title('|', true, 'right'); ?></title>
     <?php wp_head(); ?>
     <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/node_modules/aos/dist/aos.css"> -->
