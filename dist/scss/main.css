@@ -10352,29 +10352,6 @@ section.section_testimonial .container-wrapper .section-content .text-content {
   }
 }
 
-.section_team-grid .section-content .team-grid {
-  letter-spacing: -.0300032em;
-  color: #112343;
-  -webkit-font-smoothing: antialiased;
-  font-family: Messina Sans, sans-serif;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 104.4%;
-}
-
-@media only screen and (width >= 768px) {
-  .section_team-grid .section-content .team-grid {
-    font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
-  }
-}
-
-@media only screen and (width >= 1600px) {
-  .section_team-grid .section-content .team-grid {
-    font-size: 2.8125rem;
-  }
-}
-
 .section_team-grid .section-content .team-grid .staff-card-wrap {
   -webkit-font-smoothing: antialiased;
   color: #112343;
@@ -10436,11 +10413,13 @@ section.section_testimonial .container-wrapper .section-content .text-content {
   height: fit-content;
   position: absolute;
   bottom: 0;
+  overflow-x: clip;
 }
 
 .section_team-grid .section-content .team-grid .staff-card-wrap .team-img-wrap .bars-container .horizontal-bars {
-  width: 100%;
-  height: auto;
+  opacity: .5;
+  width: 300%;
+  height: 300%;
   display: block;
 }
 
@@ -10455,7 +10434,7 @@ section.section_testimonial .container-wrapper .section-content .text-content {
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
-  margin-bottom: .1em;
+  margin-bottom: .2em;
   font-family: Messina Sans, sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
@@ -10478,6 +10457,7 @@ section.section_testimonial .container-wrapper .section-content .text-content {
   letter-spacing: -.03em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
+  margin-bottom: .3em;
   font-family: Messina Sans, sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
