@@ -18,7 +18,7 @@ function designdough_custom_post_types()
         ),
         array(
             'name' => 'Resources',
-            'singular_name' => 'Resource',
+            'singular_name' => 'resources_posts',
             'menu_icon' => 'book',
         ),
         array(
@@ -28,7 +28,7 @@ function designdough_custom_post_types()
         ),
         array(
             'name' => 'Public Information',
-            'singular_name' => 'Public Information',
+            'singular_name' => 'public_info',
             'menu_icon' => 'text-page',
         ),
         array(
