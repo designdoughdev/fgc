@@ -18,6 +18,10 @@ if($post_type == 'resources_posts' || $post_type == 'public_info') {
     } else {
         $link = get_permalink();
     }
+} if($post_type == 'public-service-board' || $post_type == 'public-body') {
+	// get the website link field
+    $site_link = get_field('website');
+	$link = $site_link['url'];
 } else {
     $link = get_permalink();
 }
