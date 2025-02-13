@@ -9703,25 +9703,25 @@ section.section_text .inner-container .flex-content .text-editor h2 {
 }
 
 section.section_text .inner-container .flex-content .text-editor h3 {
-  letter-spacing: -.03em;
+  letter-spacing: -.0300032em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
   font-family: Messina Sans, sans-serif;
-  font-size: 1.35rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 102.632%;
+  line-height: 104.4%;
 }
 
 @media only screen and (width >= 768px) {
   section.section_text .inner-container .flex-content .text-editor h3 {
-    font-size: clamp(1.35rem, 1.35rem + 1vw, 2.375rem);
+    font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
   section.section_text .inner-container .flex-content .text-editor h3 {
-    font-size: 2.375rem;
+    font-size: 2.8125rem;
   }
 }
 
@@ -11591,25 +11591,25 @@ section.section_wellbeing_goals .background-container .section-content .cards-se
 }
 
 .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text .body-text-container h3 {
-  letter-spacing: -.03em;
+  letter-spacing: -.0300032em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
   font-family: Messina Sans, sans-serif;
-  font-size: 1.35rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 102.632%;
+  line-height: 104.4%;
 }
 
 @media only screen and (width >= 768px) {
   .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text .body-text-container h3 {
-    font-size: clamp(1.35rem, 1.35rem + 1vw, 2.375rem);
+    font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
   .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text .body-text-container h3 {
-    font-size: 2.375rem;
+    font-size: 2.8125rem;
   }
 }
 
@@ -12057,25 +12057,25 @@ section.section_timeline_journey .stage_body_text h2 {
 }
 
 section.section_timeline_journey .stage_body_text h3 {
-  letter-spacing: -.03em;
+  letter-spacing: -.0300032em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
   font-family: Messina Sans, sans-serif;
-  font-size: 1.35rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 102.632%;
+  line-height: 104.4%;
 }
 
 @media only screen and (width >= 768px) {
   section.section_timeline_journey .stage_body_text h3 {
-    font-size: clamp(1.35rem, 1.35rem + 1vw, 2.375rem);
+    font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
   section.section_timeline_journey .stage_body_text h3 {
-    font-size: 2.375rem;
+    font-size: 2.8125rem;
   }
 }
 
@@ -12749,25 +12749,25 @@ section.section_accordion .accordion_container .accordion_items .accordion_item 
 }
 
 section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h3 {
-  letter-spacing: -.03em;
+  letter-spacing: -.0300032em;
   color: #112343;
   -webkit-font-smoothing: antialiased;
   font-family: Messina Sans, sans-serif;
-  font-size: 1.35rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 102.632%;
+  line-height: 104.4%;
 }
 
 @media only screen and (width >= 768px) {
   section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h3 {
-    font-size: clamp(1.35rem, 1.35rem + 1vw, 2.375rem);
+    font-size: clamp(2rem, 2rem + 1vw, 2.8125rem);
   }
 }
 
 @media only screen and (width >= 1600px) {
   section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text h3 {
-    font-size: 2.375rem;
+    font-size: 2.8125rem;
   }
 }
 
