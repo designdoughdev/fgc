@@ -488,6 +488,7 @@ if(headerMenu){
 
       
       actionNavContainer.style.top = `${headerHeight}px`; // Set top position
+      actionNavContainer.style.display = `block`; 
 
       //  set hero section padding to header height
       
@@ -511,7 +512,9 @@ if(headerMenu){
       }
       // remove menu block
       if(!actionNav.contains(e.target) && !headerMenu.contains(e.target)){
+        
          actionNav.classList.remove('show');
+         actionNavContainer.style.display = `none`; 
       }
 
       if(e.target.classList.contains('btn-menu')){
