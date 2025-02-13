@@ -7,6 +7,8 @@ $bigTitle = get_field('big_title');
 $body = get_field('body');
 $image = get_field('image');
 
+$header = get_field('header', 'option'); 
+
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +25,7 @@ $image = get_field('image');
         <link rel="apple-touch-icon" href="<?php echo esc_url( get_site_icon_url(180) ); ?>">
         <meta name="msapplication-TileImage" content="<?php echo esc_url( get_site_icon_url(270) ); ?>">
     <?php endif; ?>
-    
+
     <title><?php wp_title('|', true, 'right'); ?></title>
     <?php wp_head(); ?>
     <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/node_modules/aos/dist/aos.css"> -->
@@ -48,6 +50,8 @@ $image = get_field('image');
                     <a href="<?php echo get_home_url(); ?>" aria-label="Home">
                         <img class="header-logo" src="<?php bloginfo('template_url'); ?>/assets/images/svg/logo.svg"
                             alt="">
+
+                        
                     </a>
 
                 </div>
@@ -73,7 +77,7 @@ $image = get_field('image');
 
                     <div class="right-links-container">
 
-                        <?php $header = get_field('header', 'option'); 
+                        <?php 
 
                         foreach ($header['header_links'] as $link_row) {
                             $link = $link_row['header_link']; 

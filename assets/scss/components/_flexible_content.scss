@@ -1,0 +1,88 @@
+@use '../abstracts/colours' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../utils/grid' as *;
+
+
+
+#post_content{
+	@include wysiwyg;
+
+	.post-intro-column, .post-column {
+	
+		padding: 0 0 1rem 0;
+	  h3 {
+		padding:0;
+		margin:0;
+	  }
+	}
+	
+	.post-intro-column, .post-column {
+
+		padding: 0 0 1rem 0;
+	
+	  h3 {
+	
+		padding:0;
+		margin:0;
+	  }
+	}
+	
+	.longform{
+	
+		p, li, ol{
+	
+			// font-family: $serif;
+	
+			font-size: 1rem 0;
+		}
+	
+		h3,h4 {
+	
+			margin: 1rem 0;
+		}
+	
+	
+	
+		p, ul, h4{
+	
+	
+		}
+	
+		em {
+	
+			font-style: italic;
+		}
+	
+
+
+	
+	
+	.archive-card {
+
+	  padding: 1rem;
+	  margin-bottom: 1rem;
+	  height: 400px;
+	  align-items: flex-end;
+	  display: flex;
+	}
+	
+	
+	.info-card {
+	
+		background: white;
+		display: inline-block;
+		padding: 1rem/2;
+		border: 4px solid black;
+		h3{
+	
+			margin: 0;
+		};
+	
+	}
+	
+	
+	
+
+	}
+}
