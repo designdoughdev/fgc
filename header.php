@@ -115,7 +115,7 @@ $image = get_field('image');
 
     <section class="hero-container relative">
 
-        <?php // get_template_part('components/includes/action-nav'); ?>
+        
 
 
         <?php if (is_front_page()): ?>
@@ -278,7 +278,7 @@ $image = get_field('image');
 
     <section class="hero-container relative level-three-layout">
 
-        <?php // get_template_part('components/includes/action-nav'); ?>
+        
 
         <div id="hero-overlay" class="container">
 
@@ -319,7 +319,7 @@ $image = get_field('image');
 
     <section class="hero-container relative level-two-layout">
 
-        <?php // get_template_part('components/includes/action-nav'); ?>
+        
 
 
         <div id="hero-overlay" class="container">
@@ -382,7 +382,7 @@ $image = get_field('image');
 
     <section class="hero-container relative level-three-layout">
 
-        <?php // get_template_part('components/includes/action-nav'); ?>
+        
 
 
         <div id="hero-overlay" class="container">
@@ -428,7 +428,7 @@ $image = get_field('image');
 
     <section class="hero-container relative level-three-layout">
 
-        <?php // get_template_part('components/includes/action-nav'); ?>
+        
 
         <div id="hero-overlay" class="container">
 
