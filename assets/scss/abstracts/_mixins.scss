@@ -3676,6 +3676,7 @@ body[data-theme='light'] {
     }
     h4{
         @include h-four;
+        color: $cobaltBlue;
     }
     h5{
         @include h-five;
