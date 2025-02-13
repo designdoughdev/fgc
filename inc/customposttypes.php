@@ -13,7 +13,7 @@ function designdough_custom_post_types()
     $post_types = array(
         array(
             'name' => 'Press Releases',
-            'singular_name' => 'Press Release',
+            'singular_name' => 'press_releases',
             'menu_icon' => 'megaphone',
         ),
         array(
@@ -141,7 +141,7 @@ function create_news_cat_taxonomy()
         'show_admin_column' => true,
     );
 
-    register_taxonomy('location', array('press_releases'), $args);
+    register_taxonomy('news_cat', array('press_releases'), $args);
 }
 add_action('init', 'create_news_cat_taxonomy');
 
