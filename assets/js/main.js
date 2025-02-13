@@ -53,7 +53,7 @@ let tl = gsap.timeline({
         start: "top center", // trigger when the TOP of the trigger element (above) enters middle of viewport
         end: () => `bottom-=${document.querySelector(".timeline_scroll_icon").offsetHeight} center`, // Adjust end dynamically        
         // scrub: true, // stylistic lagging
-        markers: true,
+        // markers: true,
         pin: '.timeline_scroll_icon',
     },
 });
@@ -478,7 +478,31 @@ if(headerMenu){
 
    document.addEventListener('mouseover', (e)=> {
       
+      const headerBar = document.querySelector('.header-bar');
+      const actionNavContainer = document.querySelector('.action-nav-container');
       const actionNav = document.querySelector('.action-nav');
+      const heroCont = document.querySelector('.hero-container');
+      const headerHeight = headerBar.offsetHeight; // Get height of header bar
+
+      // set 'top' property of action nav conatiner based on header bar height 
+
+      
+      actionNavContainer.style.top = `${headerHeight}px`; // Set top position
+
+      //  set hero section padding to header height
+      
+      if (heroCont) {
+
+        heroCont.style.paddingTop = `${headerHeight}px`; // Set padding top 
+
+        window.addEventListener('resize', ()=>{
+          heroCont.style.paddingTop = `${headerHeight}px`; // Set padding top 
+
+        });   
+
+      }
+
+
 
 
       // display menu block
@@ -790,6 +814,38 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
+
+//------------------------ Video flex play buttons -------------------------------//
+
+document.addEventListener("DOMContentLoaded", function() {
+  videoFlexes = document.querySelectorAll(".video-wrapper");
+
+  if (videoFlexes){
+
+    videoFlexes.forEach(wrapper => {
+      let video = wrapper.querySelector("video");
+      let playButton = wrapper.querySelector(".play-button");
+
+      playButton.addEventListener("click", function() {
+          if (video.paused) {
+              video.play();
+              playButton.classList.add("hidden");
+          }
+      });
+
+      video.addEventListener("click", function() {
+          if (!video.paused) {
+              video.pause();
+              playButton.classList.remove("hidden");
+          }
+      });
+  });
+
+  }
+
+
+});
+
 
 
 

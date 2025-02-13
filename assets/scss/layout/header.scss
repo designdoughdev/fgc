@@ -88,7 +88,9 @@ header{
 
 
     .header-bar{
-        position: relative;
+        position: fixed;
+        background-color: white;
+        width: 100%;
         z-index: 99;
 
         .pre-header{
@@ -259,9 +261,10 @@ header{
     //---- Action Nav ----/
 
     div.action-nav-container{
-        top: -0.5rem;
+        top: 2rem; // this will be set by js dependent on height of '.header-bar'
         left: 0;
         width: 100%;
+        position: absolute;
 
 
         nav.action-nav{
@@ -651,6 +654,7 @@ header{
 
         }
 
+
         // level 3 page layout adjustments
 
         &.level-three-layout{
@@ -719,6 +723,7 @@ header{
                 
                     background-color: $cobaltBlue;
                     padding: 4rem 0;
+                    
     
     
     

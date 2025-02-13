@@ -619,7 +619,7 @@ let tl = (0, _gsap.gsap).timeline({
         start: "top center",
         end: ()=>`bottom-=${document.querySelector(".timeline_scroll_icon").offsetHeight} center`,
         // scrub: true, // stylistic lagging
-        markers: true,
+        // markers: true,
         pin: ".timeline_scroll_icon"
     }
 });
@@ -892,7 +892,20 @@ document.addEventListener("DOMContentLoaded", function() {
 // header menu
 const headerMenu = document.querySelector(".main-header-centre");
 if (headerMenu) document.addEventListener("mouseover", (e)=>{
+    const headerBar = document.querySelector(".header-bar");
+    const actionNavContainer = document.querySelector(".action-nav-container");
     const actionNav = document.querySelector(".action-nav");
+    const heroCont = document.querySelector(".hero-container");
+    const headerHeight = headerBar.offsetHeight; // Get height of header bar
+    // set 'top' property of action nav conatiner based on header bar height 
+    actionNavContainer.style.top = `${headerHeight}px`; // Set top position
+    //  set hero section padding to header height
+    if (heroCont) {
+        heroCont.style.paddingTop = `${headerHeight}px`; // Set padding top 
+        window.addEventListener("resize", ()=>{
+            heroCont.style.paddingTop = `${headerHeight}px`; // Set padding top 
+        });
+    }
     // display menu block
     if (headerMenu.contains(e.target)) actionNav.classList.add("show");
     // remove menu block
@@ -1086,6 +1099,26 @@ document.addEventListener("DOMContentLoaded", ()=>{
             if (!form.contains(event.target)) {
                 dropdownToggle.setAttribute("aria-expanded", "false");
                 dropdownMenu.setAttribute("aria-hidden", "true");
+            }
+        });
+    });
+});
+//------------------------ Video flex play buttons -------------------------------//
+document.addEventListener("DOMContentLoaded", function() {
+    videoFlexes = document.querySelectorAll(".video-wrapper");
+    if (videoFlexes) videoFlexes.forEach((wrapper)=>{
+        let video = wrapper.querySelector("video");
+        let playButton = wrapper.querySelector(".play-button");
+        playButton.addEventListener("click", function() {
+            if (video.paused) {
+                video.play();
+                playButton.classList.add("hidden");
+            }
+        });
+        video.addEventListener("click", function() {
+            if (!video.paused) {
+                video.pause();
+                playButton.classList.remove("hidden");
             }
         });
     });

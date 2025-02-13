@@ -29,7 +29,6 @@
             </div>
             <div class="timeline_stages">
                 <?php $colourSchemes = ['blue', 'yellow', 'mint']; ?>
-                <?php $totalCards = count(get_sub_field('timeline_stages')); ?>
 
 
                 <?php if(have_rows('timeline_stages')) : while(have_rows('timeline_stages')) : the_row(); ?>

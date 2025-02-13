@@ -53,6 +53,58 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_67aa1255e044f": {
+                    "key": "layout_67aa1255e044f",
+                    "name": "video",
+                    "label": "Video",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67aa1255e0450",
+                            "label": "Video",
+                            "name": "video",
+                            "aria-label": "",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_67aa14299750e",
+                            "label": "Video Caption",
+                            "name": "video_caption",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_632b0dd679d77": {
                     "key": "layout_632b0dd679d77",
                     "name": "media",
@@ -1270,224 +1322,6 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_61fd0e83be839": {
-                    "key": "layout_61fd0e83be839",
-                    "name": "video",
-                    "label": "Video",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_65007ef47e983",
-                            "label": "Native or iFrame",
-                            "name": "native_or_iframe",
-                            "aria-label": "",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "Native: upload a video file \/ iFrame: embed a video from Vimeo",
-                            "default_value": 0,
-                            "ui_on_text": "Native",
-                            "ui_off_text": "iFrame",
-                            "ui": 1
-                        },
-                        {
-                            "key": "field_61fd0e8981f9a",
-                            "label": "Video",
-                            "name": "video",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "Enter Vimeo video number here. If the video URL is https:\/\/vimeo.com\/131632793 you just need to enter 131632793",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_61fd0e9281f9b",
-                            "label": "Preview Image",
-                            "name": "preview_image",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "This image will appear behind the video. This is just incase the video doesn't load.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "url",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
-                            "key": "field_61fd1059f60e5",
-                            "label": "Full Width Video",
-                            "name": "full_width_video",
-                            "aria-label": "",
-                            "type": "true_false",
-                            "instructions": "Do you want the video to be full width or width the page grid line?",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "",
-                            "default_value": 0,
-                            "ui": 1,
-                            "ui_on_text": "Full width",
-                            "ui_off_text": "Inside grid"
-                        },
-                        {
-                            "key": "field_61fd13839e5e5",
-                            "label": "Autoplay Video",
-                            "name": "autoplay",
-                            "aria-label": "",
-                            "type": "true_false",
-                            "instructions": "Do you want to autoplay this video?",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "",
-                            "default_value": 0,
-                            "ui": 1,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
-                        },
-                        {
-                            "key": "field_61fd12593f766",
-                            "label": "Overlay",
-                            "name": "overlay",
-                            "aria-label": "",
-                            "type": "true_false",
-                            "instructions": "Do you want a text overlay over this video?",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "",
-                            "default_value": 0,
-                            "ui": 1,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
-                        },
-                        {
-                            "key": "field_61fd12313f765",
-                            "label": "Video Text Overlay",
-                            "name": "video_text_overlay",
-                            "aria-label": "",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_61fd12593f766",
-                                        "operator": "==",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "visual",
-                            "toolbar": "full",
-                            "media_upload": 0,
-                            "delay": 0
-                        },
-                        {
-                            "key": "field_61fd213859db8",
-                            "label": "Text Position Options",
-                            "name": "video_text_position",
-                            "aria-label": "",
-                            "type": "select",
-                            "instructions": "Where would like the text overlay to sit?",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_61fd12593f766",
-                                        "operator": "==",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "overleft": "Left",
-                                "overright": "Right",
-                                "overcenter": "Centre"
-                            },
-                            "default_value": false,
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "return_format": "value",
-                            "ajax": 0,
-                            "placeholder": ""
-                        },
-                        {
-                            "key": "field_650083d034048",
-                            "label": "Video File",
-                            "name": "video_file",
-                            "aria-label": "",
-                            "type": "file",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "url",
-                            "library": "all",
-                            "min_size": "",
-                            "max_size": "",
-                            "mime_types": ""
                         }
                     ],
                     "min": "",
@@ -3813,7 +3647,7 @@
                                     "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
-                                    "required": 1,
+                                    "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
@@ -7309,5 +7143,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738926227
+    "modified": 1739199773
 }
