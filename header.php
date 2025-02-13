@@ -48,7 +48,7 @@ $header = get_field('header', 'option');
 
                 <div class="main-header-left">
                     <a href="<?php echo get_home_url(); ?>" aria-label="Home">
-                        <img class="header-logo" src="<?php bloginfo('template_url'); ?>/assets/images/svg/logo.svg"
+                        <img class="header-logo" src="<?php bloginfo('template_url'); ?>/assets/images/png/logo.png"
                             alt="">
 
                         
