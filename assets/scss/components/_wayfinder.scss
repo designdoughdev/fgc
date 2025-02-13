@@ -309,6 +309,7 @@ section.section_wayfinder{
             .wayfinder-card{
 
                 margin-bottom: 1rem;
+                display: flex;
 
                 
                 
@@ -318,6 +319,8 @@ section.section_wayfinder{
                     position: relative;
                     height: 100%;
                     overflow: clip;
+                    flex-grow: 1;
+                    
                     
 
                     .text-content-inner{
@@ -367,6 +370,15 @@ section.section_wayfinder{
                     }
 
 
+                }
+
+                .img-wrap{
+
+                    width: 34%;
+
+                    img{
+                        object-fit: cover;
+                    }
                 }
 
 

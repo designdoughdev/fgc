@@ -40,7 +40,7 @@ $layoutStyle = get_sub_field('layout_style');
             <?php
                     $linkID = get_sub_field('page_link');
                     $textBody = get_sub_field('text_body');
-                    $image = get_sub_field('image');
+                    $image = get_sub_field('signpost_image');
 
                     // Get the parent page ID of the current page
                     $parentID = wp_get_post_parent_id($linkID);
@@ -86,9 +86,20 @@ $layoutStyle = get_sub_field('layout_style');
                     </div>
 
                 </div>
-                <div class="img-wrap">
+                <?php if ($image) : ?>
+                    <div class="img-wrap">
+                            <!-- <img src="" alt=""> -->
 
-                </div>
+                            <?php $wayfinderImage = array(
+                                    'class' => '',
+                                    'id' => $image['ID'],
+                                    'alt' => $image['alt'],
+                                    'lazyload' => false
+                                );
+                                echo build_srcset('banner', $wayfinderImage); ?>
+
+                    </div>
+                <?php endif; ?>
 
 
 
