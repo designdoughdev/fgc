@@ -67,35 +67,35 @@ require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 // ACF field syncing
 
 // Only run if ACF is active
-if (function_exists('acf')) {
+// if (function_exists('acf')) {
 
-    // Define the ACF JSON directory
-    define('MY_ACF_JSON_DIR', get_stylesheet_directory() . '/acf-json');
+//     // Define the ACF JSON directory
+//     define('MY_ACF_JSON_DIR', get_stylesheet_directory() . '/acf-json');
 
-    // Create the ACF JSON directory if it doesn't exist
-    function my_acf_create_json_dir()
-    {
-        if (!file_exists(MY_ACF_JSON_DIR)) {
-            mkdir(MY_ACF_JSON_DIR, 0755, true);
-        }
-    }
-    add_action('after_setup_theme', 'my_acf_create_json_dir');
+//     // Create the ACF JSON directory if it doesn't exist
+//     function my_acf_create_json_dir()
+//     {
+//         if (!file_exists(MY_ACF_JSON_DIR)) {
+//             mkdir(MY_ACF_JSON_DIR, 0755, true);
+//         }
+//     }
+//     add_action('after_setup_theme', 'my_acf_create_json_dir');
 
-    // Save ACF JSON files to a specific folder in your theme
-    function my_acf_json_save_point($path)
-    {
-        return MY_ACF_JSON_DIR;
-    }
-    add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+//     // Save ACF JSON files to a specific folder in your theme
+//     function my_acf_json_save_point($path)
+//     {
+//         return MY_ACF_JSON_DIR;
+//     }
+//     add_filter('acf/settings/save_json', 'my_acf_json_save_point');
 
-    // Load ACF JSON files from a specific folder in your theme
-    function my_acf_json_load_point($paths)
-    {
-        array_unshift($paths, MY_ACF_JSON_DIR);
-        return $paths;
-    }
-    add_filter('acf/settings/load_json', 'my_acf_json_load_point');
-}
+//     // Load ACF JSON files from a specific folder in your theme
+//     function my_acf_json_load_point($paths)
+//     {
+//         array_unshift($paths, MY_ACF_JSON_DIR);
+//         return $paths;
+//     }
+//     add_filter('acf/settings/load_json', 'my_acf_json_load_point');
+// }
 
 
 //------------------------ DD theme -------------------------------//
