@@ -41,6 +41,8 @@ $layoutStyle = get_sub_field('layout_style');
                     $linkID = get_sub_field('page_link');
                     $textBody = get_sub_field('text_body');
                     $image = get_sub_field('signpost_image');
+                    $smallSignpostTitle = get_sub_field('small_signpost_title');
+                    $bigSignpostTitle = get_sub_field('big_signpost_title');
 
                     // Get the parent page ID of the current page
                     $parentID = wp_get_post_parent_id($linkID);
@@ -58,13 +60,21 @@ $layoutStyle = get_sub_field('layout_style');
             <div class="wayfinder-card <?php echo $colourScheme; ?>-scheme">
                 <div class="text-content">
                     <div class="text-content-inner">
-                        <p class=" tag h6"> <?php if ($parentTitle): ?>
-                            <?php echo esc_html($parentTitle); ?>
+                        <p class=" tag h6"> 
+                            <?php if ($smallSignpostTitle): ?>
+                                <?php echo esc_html($smallSignpostTitle); 
+                            elseif ($parentTitle): ?>
+                                <?php echo esc_html($parentTitle); ?>
                             <?php else: ?>
-                            FGC
+                                FGC
                             <?php endif; ?></p>
                         <h4 class="h1 heading">
-                            <?php echo get_the_title($linkID); ?>
+                            <?php
+                            if ($bigSignpostTitle): ?>
+                                <?php echo esc_html($bigSignpostTitle); ?>
+                            <?php else: ?>
+                                 <?php echo get_the_title($linkID); ?>
+                            <?php endif; ?>
                         </h4>
                         <p class="text"><?php echo $textBody; ?></p>
 
