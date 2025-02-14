@@ -3709,6 +3709,8 @@ body[data-theme='light'] {
     
     ol, ul, li {
         @include body;
+        margin: 1em 0;
+        
     }
     
 

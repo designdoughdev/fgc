@@ -9869,6 +9869,7 @@ section.section_text .inner-container .flex-content .text-editor strong, section
 section.section_text .inner-container .flex-content .text-editor ol, section.section_text .inner-container .flex-content .text-editor ul, section.section_text .inner-container .flex-content .text-editor li {
   -webkit-font-smoothing: antialiased;
   color: #112343;
+  margin: 1em 0;
   font-family: Messina Sans Book, sans-serif;
   font-size: .9rem;
   font-weight: normal;
@@ -11758,6 +11759,7 @@ section.section_wellbeing_goals .background-container .section-content .cards-se
 .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text .body-text-container ol, .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text .body-text-container ul, .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text .body-text-container li {
   -webkit-font-smoothing: antialiased;
   color: #112343;
+  margin: 1em 0;
   font-family: Messina Sans Book, sans-serif;
   font-size: .9rem;
   font-weight: normal;
@@ -12224,6 +12226,7 @@ section.section_timeline_journey .stage_body_text strong, section.section_timeli
 section.section_timeline_journey .stage_body_text ol, section.section_timeline_journey .stage_body_text ul, section.section_timeline_journey .stage_body_text li {
   -webkit-font-smoothing: antialiased;
   color: #112343;
+  margin: 1em 0;
   font-family: Messina Sans Book, sans-serif;
   font-size: .9rem;
   font-weight: normal;
@@ -12916,6 +12919,7 @@ section.section_accordion .accordion_container .accordion_items .accordion_item 
 section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ol, section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text ul, section.section_accordion .accordion_container .accordion_items .accordion_item .item_body_text li {
   -webkit-font-smoothing: antialiased;
   color: #112343;
+  margin: 1em 0;
   font-family: Messina Sans Book, sans-serif;
   font-size: .9rem;
   font-weight: normal;
@@ -13376,6 +13380,7 @@ section.video-section .video-caption:before {
 #post-content ol, #post-content ul, #post-content li {
   -webkit-font-smoothing: antialiased;
   color: #112343;
+  margin: 1em 0;
   font-family: Messina Sans Book, sans-serif;
   font-size: .9rem;
   font-weight: normal;
