@@ -8248,12 +8248,28 @@ section.section_text_and_image .section-content.half-text-half-img-layout.centre
   width: 100%;
   height: fit-content;
   margin-bottom: 1rem;
+  position: relative;
 }
 
 section.section_text_and_image .section-content.half-text-half-img-layout.centre-style div.img-wrap img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style div.img-wrap .img-bars-container {
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  bottom: 0;
+  overflow-x: clip;
+}
+
+section.section_text_and_image .section-content.half-text-half-img-layout.centre-style div.img-wrap .img-bars-container .horizontal-bars {
+  opacity: .5;
+  width: 175%;
+  height: 175%;
+  display: block;
 }
 
 section.section_text_and_image .section-content.half-text-half-img-layout.centre-style .mobile-bars-container {

@@ -484,11 +484,27 @@ section.section_text_and_image{
         margin-bottom: 1rem;
         width: 100%;
         height: fit-content;
+        position: relative;
 
         img{
             height: 100%;
             width: 100%;
             object-fit: cover;
+        }
+
+        .img-bars-container{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: fit-content;
+            overflow-x: clip;
+
+            .horizontal-bars{
+                width: 175%;
+                height: 175%;
+                opacity: 0.5;
+                display: block;
+            }
         }
     }
 

@@ -15,6 +15,7 @@ $body = get_sub_field('body');
 $link = get_sub_field('link');
 $reverseLayout = get_sub_field('reverse');
 $barsAtSide = get_sub_field('bars_at_side');
+$imgBars = get_sub_field('add_bars_to_image');
 
 
 
@@ -200,6 +201,16 @@ endif
                         'lazyload' => false
                     );
                     echo build_srcset('standard', $landscapeImage); ?>
+
+                    <?php if($imgBars): ?>
+
+                        <div class="img-bars-container">
+                            <?php
+                                // horizontal bars
+                                echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars.svg');
+                                ?>
+                        </div>
+                    <?php endif; ?>
         </div>
 
 
