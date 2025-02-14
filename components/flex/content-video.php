@@ -4,7 +4,7 @@ $videoUrl = get_sub_field('video');
 $videoCaption = get_sub_field('video_caption');
 ?>
 
-<section class="video-section row-<?php echo $row; ?>">
+<section class="fade_in_element video-section row-<?php echo $row; ?>">
     <div class="container_small">
         <div class="video-wrapper">
             <video id="video-<?php echo $row; ?>" playsinline>

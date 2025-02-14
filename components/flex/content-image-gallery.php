@@ -6,8 +6,8 @@ $big_title = get_sub_field('big_title');
 
 
 ?>
-<section class="section_images row-<?php echo $row;
-                                    ?>" data-aos="fade-left" data-aos-anchor-placement="top-bottom">
+<section class="fade_in_element section_images row-<?php echo $row;
+                                    ?>">
 
     <div class="splide images-carousel container_big section-wrapper" aria-label="Image Gallery">
 

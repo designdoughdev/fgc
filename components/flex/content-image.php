@@ -7,7 +7,7 @@ $link = get_sub_field('link');
 ?>
 
 
-<section class="image-section row-<?php echo $row; ?> ">
+<section class="fade_in_element image-section row-<?php echo $row; ?> ">
 
     <div class="container_small">
         <div class="img-wrap">

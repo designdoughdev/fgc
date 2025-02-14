@@ -101,8 +101,8 @@
             <?php if ( $image_link ) : ?>
 
 
-            <div class="archive-card <?php echo $colnum ?> cell"
-                style="background:url(<?php echo esc_url( $image_link['url'] ); ?>;" data-aos="fade-up">
+            <div class="fade_in_element archive-card <?php echo $colnum ?> cell"
+                style="background:url(<?php echo esc_url( $image_link['url'] ); ?>;" >
                 <div class="archive-info ">
 
                     <?php $content_link = get_sub_field( 'content_link' ); ?>

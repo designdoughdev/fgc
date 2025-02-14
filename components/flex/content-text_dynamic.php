@@ -1,4 +1,4 @@
-<section class="section_text_dynamic">
+<section class="section_text_dynamic fade_in_element">
     <div class="container-wrapper">
         <div class="section-wrapper">
             <div class="section-content">

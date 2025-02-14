@@ -9,8 +9,7 @@ $post_types = get_post_types(['public' => true], 'objects');
 $excluded_types = ['post', 'page', 'attachment'];
 ?>
 
-<section class="section_big_search row-<?php echo $row; ?>" data-aos="fade-up"
-    data-aos-anchor-placement="bottom-bottom">
+<section class="fade_in_element section_big_search row-<?php echo $row; ?>" >
     <div class="container">
         <div class="search-wrapper">
             <div class="triangle"></div>

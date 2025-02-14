@@ -104,8 +104,7 @@ endif
     <!-------------------------- Layout Big Image No BG --------------------------------->
 
     <div class="container">
-        <div class="section-content big-img-no-bg-layout relative mint-style" data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom">
+        <div class="fade_in_element section-content big-img-no-bg-layout relative mint-style" >
 
 
 
@@ -183,15 +182,14 @@ endif
             /// centred layout version 
         ?>
 
-    <div class="section-content half-text-half-img-layout <?php if($imgBars) { echo " bars-on-img ";} ?> centre-style <?php if ($colourScheme) {
+    <div class="fade_in_element section-content half-text-half-img-layout <?php if($imgBars) { echo " bars-on-img ";} ?> centre-style <?php if ($colourScheme) {
                                                                                     echo $colourScheme;
                                                                                 } ?>-style <?php if ($reverseLayout) {
                                                                                                 echo " reverse ";
                                                                                             }
                                                                                             if ($barsAtTop) {
                                                                                                 echo "bars-at-top";
-                                                                                            } ?>" data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom">
+                                                                                            } ?>" >
 
         <div class="img-wrap">
             <?php $landscapeImage = array(
@@ -314,12 +312,11 @@ endif
 
     <?php else: ?>
 
-    <div class="section-content half-text-half-img-layout side-aligned <?php if ($colourScheme) {
+    <div class="fade_in_element section-content half-text-half-img-layout side-aligned <?php if ($colourScheme) {
                                                                                     echo $colourScheme;
                                                                                 } ?>-style <?php if ($halfImageStyleVariation == 'right-style') {
                                                                                                 echo "reverse ";
-                                                                                            } ?>" data-aos=" fade-up"
-        data-aos-anchor-placement="top-bottom">
+                                                                                            } ?>" >
 
         <div class="text-col">
 
@@ -431,8 +428,7 @@ endif
     <?php elseif ($layoutStyle == 'rows'): ?>
 
     <div class="container">
-        <div class="section-content rows-layout relative blue-style" data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom">
+        <div class="fade_in_element section-content rows-layout relative blue-style">
 
 
 
@@ -493,8 +489,7 @@ endif
     <!-------------------------- Layout Half image --------------------------------->
 
     <div class="container">
-        <div class="section-content half-image-layout relative mint-style" data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom">
+        <div class="fade_in_element section-content half-image-layout relative mint-style" >
 
 
             <div class="text-content">
@@ -572,15 +567,14 @@ endif
 
             <!-------------------------- Layout Full Image --------------------------------->
             <div class="full-image-layout-content-wrapper">
-                <div class="section-content full-image-layout relative <?php if ($colourScheme) {
+                <div class="fade_in_element section-content full-image-layout relative <?php if ($colourScheme) {
                                                                                 echo $colourScheme;
                                                                             } ?>-style <?php if ($reverseLayout) {
                                                                                             echo " reverse ";
                                                                                         }
                                                                                         if ($barsAtSide) {
                                                                                             echo " bars-at-side ";
-                                                                                        } ?>" data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
+                                                                                        } ?>" 
                     style="background-image: url('<?php echo $image['url'] ?>') ;">
 
 
