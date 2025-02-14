@@ -51,10 +51,15 @@ $row = get_row_index() - 0;
     <?php if ($latest_or_selected == false) { ?>
 
     <?php
+	
+		$paged = 1; // start with first page
+        $posts_per_page = 16; // Show 16 posts initially
+	
         $args = array(
             'post_type' => $chosen_post_type,
-            'posts_per_page' => $chosen_no_of_posts,
+            'posts_per_page' => $posts_per_page,
             'order' => 'DSC',
+			'paged' => $paged
         );
         // conditionally filter by archived tag
         if ($filter_by_archived) {
@@ -86,6 +91,7 @@ $row = get_row_index() - 0;
         }
 
         $latest = new WP_Query($args);
+        $total_posts = $latest->found_posts; // Get total number of posts
         ?>
 
     <?php if ($layout == 'card_carousel') {  ?>
@@ -487,6 +493,19 @@ $row = get_row_index() - 0;
                 <?php wp_reset_postdata(); ?>
                 <?php endwhile; ?>
             </div>
+			
+			<?php if ($total_posts > $posts_per_page) : ?>
+            <div class="load-more-container text-center">
+                <button id="load-more" class="btn cobalt text-white" data-page="1"
+                    data-posts-per-page="<?php echo $posts_per_page; ?>" data-total="<?php echo $total_posts; ?>"
+                    data-post-type="<?php echo $chosen_post_type; ?>"
+                    data-archive="<?php echo $filter_by_archived ? 'yes' : 'no'; ?>">
+                    Load More
+                    <div class="btn-arrow-container"></div>
+                </button>
+            </div>
+            <?php endif; ?>
+			
         </div>
     </div>
 
@@ -900,3 +919,50 @@ $row = get_row_index() - 0;
 
 
 </section>
+
+
+<!-- AJAX handler -->
+<script>
+jQuery(document).ready(function($) {
+    $('#load-more').on('click', function() {
+        const button = $(this);
+        const currentPage = parseInt(button.data('page'));
+        const postsPerPage = parseInt(button.data('posts-per-page'));
+        const totalPosts = parseInt(button.data('total'));
+        const postType = button.data('post-type');
+        const archive = button.data('archive');
+
+        $.ajax({
+            url: '<?php echo admin_url('admin-ajax.php'); ?>', // This directly outputs the admin-ajax.php URL
+            type: 'POST',
+            data: {
+                action: 'load_more_posts',
+                page: currentPage + 1,
+                posts_per_page: postsPerPage,
+                post_type: postType,
+                archive: archive
+            },
+            beforeSend: function() {
+                button.text('Loading...').prop('disabled', true);
+            },
+            success: function(response) {
+                if (response.success) {
+                    $('#posts-container').append(response.data);
+                    button.text('Load More').prop('disabled', false);
+
+                    // Update the current page
+                    button.data('page', currentPage + 1);
+
+                    // Hide button if we've loaded all posts
+                    if ((currentPage + 1) * postsPerPage >= totalPosts) {
+                        button.hide();
+                    }
+                }
+            },
+            error: function() {
+                button.text('Load More').prop('disabled', false);
+            }
+        });
+    });
+});
+</script>

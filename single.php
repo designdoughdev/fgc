@@ -3,7 +3,7 @@
 
 <!-- this is the template for news, resources and public infomation FLEX type posts -->
 <section id="post-content" class="section-std">
-    <div class="container_small">
+    <div class="container_small" style="margin: 1em auto; !important">
 
         <!-- ACF flex data copied from the old website, restyled -->
 

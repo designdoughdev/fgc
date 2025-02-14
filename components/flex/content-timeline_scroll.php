@@ -6,7 +6,7 @@
     $intro_text = get_sub_field('intro_text');
     $icon = get_sub_field('icon');
     
-
+	$open_accords_on_load = get_sub_field('open_accordions_on_load');
 ?>
 
 
@@ -61,7 +61,7 @@
                                     class="post-link btn" 
                                     target="<?php echo esc_attr($link['target'] ?: '_self'); ?>" 
                                     aria-label="Read more about <?php echo esc_attr($link['title']); ?>">
-                                        Read more 
+                                        <?php echo $link['title']; ?>
                                         <div class="btn-arrow-container"></div>
                                     </a>
                         <?php endif; ?>
@@ -82,3 +82,15 @@
 
     </div>
 </section>
+
+<!-- open all accordions when page loads, if the respective field is selected -->
+<?php if($open_accords_on_load) { ?>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const accordions = document.querySelectorAll('.accord_wrap');
+    accordions.forEach((acc) => {
+        acc.classList.add('active');
+    })
+});
+</script>
+<?php } ?>

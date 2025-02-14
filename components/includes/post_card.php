@@ -18,17 +18,31 @@ if($post_type == 'resources_posts' || $post_type == 'public_info') {
     } else {
         $link = get_permalink();
     }
-} if($post_type == 'public-service-board' || $post_type == 'public-body') {
-	// get the website link field
+} else if($post_type == 'public-service-board') {
+
     $site_link = get_field('website');
-	$link = $site_link['url'];
+	if($site_link) {
+		$link = $site_link['url'];
+	} else {
+		$link = get_permalink();
+	}
+	
+} else if($post_type == 'public-body') {
+	
+    $site_link = get_field('website');
+	if($site_link) {
+		$link = $site_link['url'];
+	} else {
+		$link = get_permalink();
+	}
+	
 } else {
     $link = get_permalink();
 }
 
 ?>
 
-<a href="<?= $link; ?>" class="post-card-wrapper-link">
+<a href="<?php echo $link; ?>" class="post-card-wrapper-link">
     <div class="post-card <?php echo $colourScheme; ?>-style">
         <div class="card-top">
             <div class="tag-container">
@@ -49,11 +63,20 @@ if($post_type == 'resources_posts' || $post_type == 'public_info') {
             </h4>
 
             <div class="post-info">
-                <?php if ($author): ?>
+
                 <p class="author h5 bold">
-                    <?php echo $author; ?>
+                    <?php
+                    if (!empty($author)) {
+                        // If it's a single relationship, it's stored as an array with one post object
+                        if (is_array($author)) {
+                            $author_name = get_the_title($author[0]); // Get the title of the first related post
+                        } else {
+                            $author_name = get_the_title($author); // Handle case where ACF might return just an ID
+                        }
+                    }
+                    ?>
                 </p>
-                <?php endif; ?>
+
                 <p class="date h5 medium-text">
                     <?php echo get_the_date('l') . " " . get_the_date('d|m|y'); ?>
                 </p>

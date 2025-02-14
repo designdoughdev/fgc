@@ -334,7 +334,6 @@ add_action('wp_ajax_filter_posts', 'filter_posts');
 add_action('wp_ajax_nopriv_filter_posts', 'filter_posts');
 
 // custom search query changes
-
 add_action('pre_get_posts', function ($query) {
     if ($query->is_main_query() && $query->is_search()) {
         // Check if a post type is specified
@@ -352,3 +351,63 @@ add_action('pre_get_posts', function ($query) {
         $query->set('posts_per_page', 10); // Example: Limit results
     }
 });
+
+// ajax handler for get more posts
+
+function load_more_posts() {
+    $page = $_POST['page'];
+    $posts_per_page = $_POST['posts_per_page'];
+    $post_type = $_POST['post_type'];
+    $filter_by_archived = $_POST['archive'] === 'yes';
+
+    $args = array(
+        'post_type' => $post_type,
+        'posts_per_page' => $posts_per_page,
+        'order' => 'DSC',
+        'paged' => $page,
+        'post_status' => 'publish'
+    );
+
+    // Add your archive filtering logic
+    if ($filter_by_archived) {
+        $archive_term = get_term_by('slug', 'archive', 'post_tag');
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => 'post_tag',
+                'field'    => 'id',
+                'terms'    => $archive_term->term_id,
+                'operator' => 'IN',
+            ),
+        );
+    } else {
+        $archive_term = get_term_by('slug', 'archive', 'post_tag');
+        if ($archive_term && !is_wp_error($archive_term)) {
+            $args['tax_query'] = array(
+                array(
+                    'taxonomy' => 'post_tag',
+                    'field'    => 'id',
+                    'terms'    => $archive_term->term_id,
+                    'operator' => 'NOT IN',
+                ),
+            );
+        }
+    }
+
+    $query = new WP_Query($args);
+    
+    ob_start();
+    if($query->have_posts()) :
+        while($query->have_posts()) : $query->the_post();
+            get_template_part('components/includes/post_card');
+        endwhile;
+    endif;
+    wp_reset_postdata();
+    
+    $html = ob_get_clean();
+    
+    wp_send_json_success($html);
+    die();
+}
+
+add_action('wp_ajax_load_more_posts', 'load_more_posts');
+add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');

@@ -19,11 +19,16 @@ $author = get_field('author');
                 <div class="card-body">
                     <h4 class="h4"><?php the_title(); ?></h4>
                     <div class="post-info">
-                        <?php if ($author): ?>
-                        <p class="author h5 bold">
-                            <?php echo $author; ?>
-                        </p>
-                        <?php endif; ?>
+                        <?php
+                            if (!empty($author)) {
+                                // If it's a single relationship, it's stored as an array with one post object
+                                if (is_array($author)) {
+                                    $author_name = get_the_title($author[0]); // Get the title of the first related post
+                                } else {
+                                    $author_name = get_the_title($author); // Handle case where ACF might return just an ID
+                                }
+                            }
+                        ?>
                         <p class="date h5 medium-text"><?php echo get_the_date('l d|m|y'); ?></p>
                     </div>
                 </div>

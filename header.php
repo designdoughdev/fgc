@@ -345,9 +345,11 @@ $header = get_field('header', 'option');
                     <?php endif;
                         ?>
                     <div class="text-content-grid">
-                        <h3 class="heading"><?php
-                                                the_title(); ?>
+						
+                        <h3 class="heading">
+                            <?php if($bigTitle) { echo $bigTitle; } else { the_title(); } ?>
                         </h3>
+						
                         <?php if ($body): ?>
                         <p class="text">
                             <?php echo $body; ?>
@@ -410,12 +412,12 @@ $header = get_field('header', 'option');
 
                     <?php if ($smallTitle): ?>
                     <h2 class="title-tag"><?php echo $smallTitle; ?></h2>
-                    <?php endif;
-                        ?>
+                    <?php endif; ?>
 
-                    <h3 class="heading"><?php
-                                            the_title(); ?>
+                    <h3 class="heading">
+                        <?php if($bigTitle) { echo $bigTitle; } else { the_title(); } ?>
                     </h3>
+					
                     <?php if ($body): ?>
                     <p class="text">
                         <?php echo $body ?>

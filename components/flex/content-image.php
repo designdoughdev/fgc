@@ -1,9 +1,8 @@
 <?php
 $row = get_row_index() - 0;
 
-
 $img = get_sub_field('image');
-
+$link = get_sub_field('link');
 
 ?>
 
@@ -15,11 +14,12 @@ $img = get_sub_field('image');
             <img src="<?php echo $img['url'] ?>" alt="">
         </div>
         <?php if ($img['caption']): ?>
-            <p class="img-caption"><?php echo $img['caption'] ?> </p>
+        <?php if($link) { ?>
+        <p class="img-caption"><a href="<?= $link['url']; ?>"><?php echo $img['caption'] ?></a></p>
+        <?php } else { ?>
+        <p class="img-caption"><?php echo $img['caption'] ?></p>
+        <?php } ?>
         <?php endif; ?>
-
-
-
     </div>
 
 </section>
