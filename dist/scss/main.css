@@ -11556,10 +11556,6 @@ section.section_wellbeing_goals .background-container .section-content .cards-se
   }
 }
 
-.section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text {
-  padding: 0 1.8rem;
-}
-
 .section_timeline_scroll .timeline_container .timeline_stages .timeline_stage .stage_body_text .btn {
   margin-top: 1rem;
 }
