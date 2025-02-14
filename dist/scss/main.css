@@ -13498,7 +13498,18 @@ header .header-bar .pre-header .pre-header-right {
 
 header .header-bar .pre-header .pre-header-right .search-container {
   gap: .25rem;
+  width: auto;
   display: flex;
+}
+
+@media only screen and (width >= 1200px) {
+  header .header-bar .pre-header .pre-header-right .search-container:hover {
+    width: 220px;
+  }
+
+  header .header-bar .pre-header .pre-header-right .search-container:hover form, header .header-bar .pre-header .pre-header-right .search-container:hover form input {
+    width: 100%;
+  }
 }
 
 header .header-bar .pre-header .pre-header-right .search-container img.search-icon {

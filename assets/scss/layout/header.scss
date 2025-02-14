@@ -106,15 +106,27 @@ header{
                 align-items: center;
                 gap: 1rem;
     
-                .search-container{
+                .search-container {
                     display: flex;
                     gap: 0.25rem;
-    
+                    width: auto;
+                    &:hover {
+                        @include respond-to('lg') {
+                            width: 220px;
+
+                            form{
+                                width: 100%;
+
+                                input{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
                     img.search-icon{
                         width: 12px;
                         height: auto;
                     }
-    
                     input{
                         background-color: $darkNavy;
                         border: none;
