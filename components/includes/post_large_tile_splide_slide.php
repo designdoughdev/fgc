@@ -1,5 +1,5 @@
 <li class="splide__slide relative">
-    <a href="/">
+    <a href="<?php echo the_permalink(); ?>">
         <div class="post-card-large-tile ">
 
             <div class="img-wrap">
