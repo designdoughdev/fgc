@@ -13497,8 +13497,10 @@ header .header-bar .pre-header .pre-header-right {
 }
 
 header .header-bar .pre-header .pre-header-right .search-container {
+  -o-transition: .2s;
   gap: .25rem;
-  width: auto;
+  width: 90px;
+  transition: all .2s;
   display: flex;
 }
 

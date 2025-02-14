@@ -107,9 +107,10 @@ header{
                 gap: 1rem;
     
                 .search-container {
+                    @include shorttransition;
                     display: flex;
                     gap: 0.25rem;
-                    width: auto;
+                    width: 90px;
                     &:hover {
                         @include respond-to('lg') {
                             width: 220px;
