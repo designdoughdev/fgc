@@ -5573,7 +5573,7 @@ section.section_posts_agg .section-wrapper.splide.press-releases-carousel .verti
 
 @media only screen and (width >= 768px) {
   section.section_posts_agg .section-wrapper.splide.press-releases-carousel {
-    padding: 2.69rem;
+    padding: 0 2.69rem;
   }
 
   section.section_posts_agg .section-wrapper.splide.press-releases-carousel .text-container {
