@@ -4452,6 +4452,7 @@ textarea {
 }
 
 section.section_big_search {
+  z-index: 2;
   padding: 7vw 0;
   position: relative;
 }
@@ -14707,6 +14708,7 @@ footer {
   -webkit-font-smoothing: antialiased;
   color: #fff;
   background-color: #112343;
+  margin-top: 6vw;
   padding: 7vw 0;
   font-family: Messina Sans Book, sans-serif;
   font-size: .9rem;
