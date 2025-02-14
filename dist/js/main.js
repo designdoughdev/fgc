@@ -628,9 +628,9 @@ function refreshScrollTrigger() {
     (0, _scrollTrigger.ScrollTrigger).refresh();
 }
 // refresh scroll trigger on page load
-window.onload = ()=>{
-    refreshScrollTrigger();
-};
+window.addEventListener("load", ()=>{
+    (0, _scrollTrigger.ScrollTrigger).refresh();
+});
 //------------------------ DD animations -------------------------------//
 /* standard fade in - element */ function fadeInElement() {
     const fadeElements = document.querySelectorAll(".fade_in_element");

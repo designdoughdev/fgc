@@ -65,10 +65,9 @@ function refreshScrollTrigger() {
 
 // refresh scroll trigger on page load
 
-window.onload = () => {
-  refreshScrollTrigger();
-};
-
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
 //------------------------ DD animations -------------------------------//
 
 /* standard fade in - element */
