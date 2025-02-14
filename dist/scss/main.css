@@ -14484,15 +14484,15 @@ header .banner-container.level-two-layout .text-content .text {
 }
 
 @media only screen and (width >= 768px) {
-  header .banner-container.level-two-layout .text-content-grid {
-    grid-template-columns: 1fr 1fr;
-    display: grid;
-  }
-
   header .banner-container.level-two-layout .text-content {
     width: 90vw;
     margin: 0 auto;
     position: relative;
+  }
+
+  header .banner-container.level-two-layout .text-content .text-content-grid {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
   }
 
   header .banner-container.level-two-layout .text-content .text {
