@@ -5347,7 +5347,7 @@ section.section_posts_agg .section-wrapper.splide.post-feed-carousel .splide__sl
 
 @media only screen and (width >= 768px) {
   section.section_posts_agg .section-wrapper.splide.post-feed-carousel {
-    padding-bottom: 0 !important;
+    padding: 0 0 7vw;
   }
 
   section.section_posts_agg .section-wrapper.splide.post-feed-carousel div.text-container {
@@ -10234,7 +10234,8 @@ section.section_testimonial .container-wrapper .section-content .text-content {
 }
 
 .section_team-grid .section-content {
-  padding: 0 6vw 3em;
+  padding-top: 6vw;
+  padding-bottom: 3em;
 }
 
 .section_team-grid .section-content .title-wrap {
