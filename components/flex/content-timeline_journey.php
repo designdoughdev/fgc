@@ -34,7 +34,7 @@
                     </div>
                     <?php endif; ?>
                     <p class="timeline-stage-index">
-                        <?php // if (get_row_index() < 10) { echo 0;} echo get_row_index(); ?></p>
+                        <?php  if (get_row_index() > 0 && get_row_index() < 10) { echo 0;} echo get_row_index(); ?></p>
                     <div class="line-container bottom">
                         <div class="line"></div>
                     </div>
