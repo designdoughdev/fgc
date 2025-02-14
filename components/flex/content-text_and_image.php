@@ -183,7 +183,7 @@ endif
             /// centred layout version 
         ?>
 
-    <div class="section-content half-text-half-img-layout centre-style <?php if ($colourScheme) {
+    <div class="section-content half-text-half-img-layout <?php if($imgBars) { echo " bars-on-img ";} ?> centre-style <?php if ($colourScheme) {
                                                                                     echo $colourScheme;
                                                                                 } ?>-style <?php if ($reverseLayout) {
                                                                                                 echo " reverse ";

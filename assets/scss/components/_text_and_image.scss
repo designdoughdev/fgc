@@ -466,6 +466,13 @@ section.section_text_and_image{
 
 .section-content.half-text-half-img-layout.centre-style{
 
+    // if bars on image option is slected then hide all bars on text side of flex
+    &.bars-on-image{
+        .bottom-bars-container, .top-bars-container{
+            display: none!important;
+        }
+    }
+
     /*------------------------ Default/Mobile Styles -------------------------------*/
     
     background-color: white; // override colour style class names
@@ -500,9 +507,9 @@ section.section_text_and_image{
             overflow-x: clip;
 
             .horizontal-bars{
-                width: 175%;
-                height: 175%;
-                opacity: 0.5;
+                width: 225%;
+                height: 225%;
+                opacity: 0.6;
                 display: block;
             }
         }
