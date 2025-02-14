@@ -411,6 +411,10 @@ header{
 
     section.hero-container{
 
+        &.boxed{
+            margin-bottom: 9vw;
+        }
+
         /*------------------------ Default/ Mobile Styles -------------------------------*/
 
         position: relative;

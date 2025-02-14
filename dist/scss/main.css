@@ -13888,6 +13888,10 @@ header section.hero-container {
   position: relative;
 }
 
+header section.hero-container.boxed {
+  margin-bottom: 9vw;
+}
+
 header section.hero-container .banner-img-wrap {
   aspect-ratio: 1676 / 600;
   object-fit: cover;

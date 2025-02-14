@@ -126,7 +126,7 @@ $header = get_field('header', 'option');
 
     <!-------------------------- Hero / Page Header --------------------------------->
 
-    <section class="hero-container relative">
+    <section class="hero-container relative <?php echo $layout; ?>">
 
         
 
