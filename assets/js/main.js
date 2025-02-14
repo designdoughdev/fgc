@@ -53,7 +53,7 @@ let tl = gsap.timeline({
         start: "top center", // trigger when the TOP of the trigger element (above) enters middle of viewport
         end: () => `bottom-=${document.querySelector(".timeline_scroll_icon").offsetHeight} center`, // Adjust end dynamically        
         // scrub: true, // stylistic lagging
-        // markers: true,
+         markers: true,
         pin: '.timeline_scroll_icon',
     },
 });
@@ -62,6 +62,28 @@ let tl = gsap.timeline({
 function refreshScrollTrigger() {
   ScrollTrigger.refresh();
 }
+
+// refresh scroll trigger on page load
+
+window.onload = () => {
+  refreshScrollTrigger();
+};
+
+//------------------------ DD animations -------------------------------//
+
+/* standard fade in - element */
+function fadeInElement() {
+	const fadeElements = document.querySelectorAll('.fade_in_element');
+	fadeElements.forEach((element) => {
+		const elementTop = element.getBoundingClientRect().top;
+		const windowHeight = window.innerHeight;
+		if (elementTop < windowHeight * 0.8) {
+			element.classList.add('visible');
+		}
+	});
+}
+window.addEventListener('load', fadeInElement);
+window.addEventListener('scroll', fadeInElement);
 
 //------------------------ Mobile menu -------------------------------//
 

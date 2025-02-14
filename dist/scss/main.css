@@ -1974,20 +1974,6 @@ body {
   transition-delay: 2.4s !important;
 }
 
-.fade_in_element {
-  opacity: 0;
-  -o-transition: .4s;
-  transition: all .4s;
-  transform: translate(0, 10vh);
-}
-
-.fade_in_element.visible {
-  opacity: 1;
-  -o-transition: .4s;
-  transition: all .4s;
-  transform: translate(0);
-}
-
 .fade_in_container .container {
   opacity: 0;
   -o-transition: .4s;
@@ -15227,5 +15213,19 @@ section.search-results-content .page-item-container a.post-link .post-container 
   height: 20px;
   margin-left: 2em;
   display: inline-block;
+}
+
+.fade_in_element {
+  opacity: 0;
+  -o-transition: .4s;
+  transition: all .4s;
+  transform: translate(0, 8vh);
+}
+
+.fade_in_element.visible {
+  opacity: 1;
+  -o-transition: .4s;
+  transition: all .4s;
+  transform: translate(0);
 }
 /*# sourceMappingURL=main.css.map */

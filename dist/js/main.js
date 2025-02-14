@@ -619,7 +619,7 @@ let tl = (0, _gsap.gsap).timeline({
         start: "top center",
         end: ()=>`bottom-=${document.querySelector(".timeline_scroll_icon").offsetHeight} center`,
         // scrub: true, // stylistic lagging
-        // markers: true,
+        markers: true,
         pin: ".timeline_scroll_icon"
     }
 });
@@ -627,6 +627,21 @@ let tl = (0, _gsap.gsap).timeline({
 function refreshScrollTrigger() {
     (0, _scrollTrigger.ScrollTrigger).refresh();
 }
+// refresh scroll trigger on page load
+window.onload = ()=>{
+    refreshScrollTrigger();
+};
+//------------------------ DD animations -------------------------------//
+/* standard fade in - element */ function fadeInElement() {
+    const fadeElements = document.querySelectorAll(".fade_in_element");
+    fadeElements.forEach((element)=>{
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (elementTop < windowHeight * 0.8) element.classList.add("visible");
+    });
+}
+window.addEventListener("load", fadeInElement);
+window.addEventListener("scroll", fadeInElement);
 //------------------------ Mobile menu -------------------------------//
 document.addEventListener("DOMContentLoaded", ()=>{
     const mobileNav = document.querySelector(".mobile-nav");
