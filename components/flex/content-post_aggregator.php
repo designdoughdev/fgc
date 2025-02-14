@@ -919,10 +919,8 @@ $row = get_row_index() - 0;
 
 
 </section>
-
-
-<!-- AJAX handler -->
 <script>
+
 jQuery(document).ready(function($) {
     $('#load-more').on('click', function() {
         const button = $(this);
@@ -933,7 +931,7 @@ jQuery(document).ready(function($) {
         const archive = button.data('archive');
 
         $.ajax({
-            url: '<?php echo admin_url('admin-ajax.php'); ?>', // This directly outputs the admin-ajax.php URL
+            url: '<?php echo admin_url('admin-ajax.php'); ?>',
             type: 'POST',
             data: {
                 action: 'load_more_posts',
@@ -943,12 +941,12 @@ jQuery(document).ready(function($) {
                 archive: archive
             },
             beforeSend: function() {
-                button.text('Loading...').prop('disabled', true);
+                button.html('Loading...').prop('disabled', true);
             },
             success: function(response) {
                 if (response.success) {
                     $('#posts-container').append(response.data);
-                    button.text('Load More').prop('disabled', false);
+                    button.html('Load More <div class="btn-arrow-container"></div>').prop('disabled', false);
 
                     // Update the current page
                     button.data('page', currentPage + 1);
@@ -960,9 +958,10 @@ jQuery(document).ready(function($) {
                 }
             },
             error: function() {
-                button.text('Load More').prop('disabled', false);
+                button.html('Load More <div class="btn-arrow-container"></div>').prop('disabled', false);
             }
         });
     });
 });
+
 </script>
