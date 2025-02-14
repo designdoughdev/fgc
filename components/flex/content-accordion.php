@@ -28,31 +28,31 @@
                 <?php $colourScheme = $colourSchemes[(get_row_index() - 1) % 4]; ?>
 
                 <div class="item-outer-container">
-                    <div class="accordion_item <?php echo $colourScheme; ?>-scheme accord_wrap"> 
-
-
-                    
-                  
+                    <div class="accordion_item <?php echo $colourScheme; ?>-scheme accord_wrap">                     
+              
                         <div class="tag-container">
                             <p class="tag"><?php if (get_row_index() < 10) { echo 0;} echo get_row_index(); ?></p>
                         </div>                     
                         <h4 class="item_title accord_head"><?php echo $item_title; ?></h4>
                         <button class="accord_btn"><span>Learn more</span><img src="<?php echo get_template_directory_uri() . '/assets/images/svg/arrow-right.svg'; ?>" alt=""></button>
-                        
-            
-
-
-                        <div class="item_body_text accord_body"><?php echo $item_body_text; ?></div>
+           
+                        <div class="item_body_text accord_body">
+							<?php echo $item_body_text; ?>
                             <?php if($link) { ?>
-                                <a class="btn_default" href="<?php echo esc_url($link['url']); ?>"
-                                    target="<?php echo esc_attr($link['target']); ?>"><span><?php echo esc_html($link['title']); ?></span></a>
+                                <a class="btn post-link" href="<?php echo esc_url($link['url']); ?>"
+                                    target="<?php echo esc_attr($link['target']); ?>">
+									<span>
+										<?php echo esc_html($link['title']); ?>
+									</span>
+									<div class="btn-arrow-container">
+									</div>
+								</a>
                             <?php } ?>
-
+						</div>
                             <div class="bars-container">
-                                <?php
-                                                    // horizontal bars
-                                                    echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
-                                                    ?>
+                                <?php // horizontal bars
+                                     echo file_get_contents(get_template_directory() . '/assets/images/svg/vertical-bars.svg');
+                                ?>
                             </div>
 
                         
