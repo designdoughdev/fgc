@@ -9597,7 +9597,8 @@ section.section_text .inner-container .side-menu-container a.link {
   font-weight: normal;
   line-height: 143%;
   text-decoration: underline;
-  display: grid;
+  display: inline-block;
+  display: grid !important;
 }
 
 @media only screen and (width >= 768px) {
