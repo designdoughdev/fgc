@@ -619,7 +619,7 @@ let tl = (0, _gsap.gsap).timeline({
         start: "top center",
         end: ()=>`bottom-=${document.querySelector(".timeline_scroll_icon").offsetHeight} center`,
         // scrub: true, // stylistic lagging
-        markers: true,
+        // markers: true,
         pin: ".timeline_scroll_icon"
     }
 });

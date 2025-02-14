@@ -53,7 +53,7 @@ let tl = gsap.timeline({
         start: "top center", // trigger when the TOP of the trigger element (above) enters middle of viewport
         end: () => `bottom-=${document.querySelector(".timeline_scroll_icon").offsetHeight} center`, // Adjust end dynamically        
         // scrub: true, // stylistic lagging
-         markers: true,
+        // markers: true,
         pin: '.timeline_scroll_icon',
     },
 });
