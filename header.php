@@ -382,6 +382,13 @@ $header = get_field('header', 'option');
 
                     endif ?>
 
+                    <div class="bars-container">
+                        <?php
+                            // horizontal bars
+                            echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars.svg');
+                            ?>
+                    </div>
+
 
 
 

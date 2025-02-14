@@ -723,6 +723,21 @@ header{
                     object-fit: cover;
                 }
 
+                .bars-container{
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: fit-content;
+                    overflow-x: clip;
+
+                    .horizontal-bars{
+                        width: 175%;
+                        height: 175%;
+                        opacity: 0.5;
+                        display: block;
+                    }
+                }
+
             }
 
         }

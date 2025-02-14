@@ -14387,6 +14387,21 @@ header section.hero-container.level-two-layout .hero-img.img-wrap img {
   height: 100%;
 }
 
+header section.hero-container.level-two-layout .hero-img.img-wrap .bars-container {
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  bottom: 0;
+  overflow-x: clip;
+}
+
+header section.hero-container.level-two-layout .hero-img.img-wrap .bars-container .horizontal-bars {
+  opacity: .5;
+  width: 175%;
+  height: 175%;
+  display: block;
+}
+
 header .banner-container.level-two-layout {
   background-color: #2a5ad5;
   padding: 4rem 0;
