@@ -40,6 +40,8 @@ section.section_text {
                 display: inline-block;
                 margin: 1em 2em 0.7em 0;
                 padding: 0.7em 0;
+                display: grid;
+                grid-template-columns: max-content auto;
             }
 
             li{
