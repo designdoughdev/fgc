@@ -25,8 +25,8 @@ section.video-section{
     .play-button {
         @include body;
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 45%;
+        left: calc(50% - 80px);
         border: none;
         cursor: pointer;
 

@@ -13109,8 +13109,8 @@ section.video-section .play-button {
   line-height: 143%;
   display: flex;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 45%;
+  left: calc(50% - 80px);
 }
 
 @media only screen and (width >= 768px) {
