@@ -1,7 +1,0 @@
-.section_case_studies_archive {
-    @include sections_padding;
-    .post_grid {
-        // this is the archive page, not the aggregator, so let's call the grid class
-        @include post_grid;
-    }
-}
