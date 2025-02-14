@@ -774,6 +774,12 @@ header{
     
                     &{
                         @include respond-to(md){
+
+                            .text-content-grid{
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+
+                            }
     
                             .text-content{
                                 @include container;
