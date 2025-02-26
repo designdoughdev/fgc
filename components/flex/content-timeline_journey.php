@@ -21,6 +21,7 @@
                 <?php $small_title = get_sub_field('stage_small_title'); ?>
                 <?php $big_title = get_sub_field('stage_title'); ?>
                 <?php $stage_body_text = get_sub_field('stage_body_text'); ?>
+				<?php $stage_link = get_sub_field('stage_link'); ?>
                 <?php $four_columns = get_sub_field('four_columns'); ?>
                 <?php // $centerAlign = get_sub_field('center_align_cards'); ?>
                 
@@ -51,6 +52,15 @@
 
                         <?php if ($stage_body_text): ?>
                             <div class="stage_body_text"><?php echo $stage_body_text; ?></div>
+                        <?php endif; ?>
+						
+						<?php if ($stage_link): ?>
+                        <a href="<?php echo esc_url($stage_link['url']); ?>" class="post-link btn"
+                            target="<?php echo esc_attr($stage_link['target'] ?: '_self'); ?>"
+                            aria-label="Read more about <?php echo esc_attr($stage_link['title']); ?>">
+                            <?php echo esc_attr($stage_link['title']); ?>
+                            <div class="btn-arrow-container"></div>
+                        </a>
                         <?php endif; ?>
 
                         <?php if (have_rows('cards')): ?>

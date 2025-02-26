@@ -34,14 +34,20 @@ $latest_or_selected = get_sub_field('latest_or_selected');
 $filter_by_archived = get_sub_field('filter_by_archived');
 $portfolio_images = get_sub_field('portfolio_images');
 $row = get_row_index() - 0;
+
+$post_id = get_the_ID();
+
+$read_post = '';
+
+if($chosen_post_type == 'resources_posts') {
+    $read_post = 'Open Resource';
+} else if ($chosen_post_type == 'press_releases') {
+    $read_post = 'Read News article';
+} else {
+    $read_post = 'Read';
+}
+
 ?>
-
-<!-- todo: add view selector toggle -->
-<!-- todo: selected posts version -->
-
-<?php $post_id = get_the_ID(); ?>
-
-
 <section
     class="section_posts_agg row-<?php echo $row; ?> <?php if ($post_id === 711) { ?> header_window <?php } ?><?php if ($remove_top_padding) { ?> remove_top_padding<?php } ?>">
     <?php if ($big_title) { ?>
@@ -235,7 +241,8 @@ $row = get_row_index() - 0;
                 <?php if ($big_title): ?>
                 <h3 class="heading h2"><?php echo $big_title ?></h3>
                 <?php endif; ?>
-                <a href="" class="btn cobalt text-white">All Press & Media<div class="btn-arrow-container"></div></a>
+                <a href="<?= $link['url']; ?>" class="btn cobalt text-white">All Press & Media<div
+                        class="btn-arrow-container"></div></a>
             </div>
 
             <?php if ($latest->found_posts > 2) { ?>
@@ -493,8 +500,8 @@ $row = get_row_index() - 0;
                 <?php wp_reset_postdata(); ?>
                 <?php endwhile; ?>
             </div>
-			
-			<?php if ($total_posts > $posts_per_page) : ?>
+
+            <?php if ($total_posts > $posts_per_page) : ?>
             <div class="load-more-container text-center">
                 <button id="load-more" class="btn cobalt text-white" data-page="1"
                     data-posts-per-page="<?php echo $posts_per_page; ?>" data-total="<?php echo $total_posts; ?>"
@@ -505,7 +512,7 @@ $row = get_row_index() - 0;
                 </button>
             </div>
             <?php endif; ?>
-			
+
         </div>
     </div>
 
@@ -513,23 +520,23 @@ $row = get_row_index() - 0;
 
     <?php } elseif ($layout == 'list') { ?>
 
-        
 
-        <div class="posts-list-layout section-wrapper">
-            <div class="container_small">
 
-                <div class="top-section">
-                    <?php if ($small_title): ?>
-                    <h2 class="title-tag"><?php echo esc_html($small_title); ?></h2>
-                    <?php endif; ?>
-                    <?php if ($big_title): ?>
-                    <h3 class="heading h2"><?php echo esc_html($big_title); ?></h3>
-                    <?php endif; ?>
-                </div>
+    <div class="posts-list-layout section-wrapper">
+        <div class="container_small">
 
-                <div class="filter-bar">
-                    <button class="filter-button active" data-filter="all">A-Z</button>
-                    <?php if ($chosen_post_type == 'public-information'){
+            <div class="top-section">
+                <?php if ($small_title): ?>
+                <h2 class="title-tag"><?php echo esc_html($small_title); ?></h2>
+                <?php endif; ?>
+                <?php if ($big_title): ?>
+                <h3 class="heading h2"><?php echo esc_html($big_title); ?></h3>
+                <?php endif; ?>
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-button active" data-filter="all">A-Z</button>
+                <?php if ($chosen_post_type == 'public-information'){
                         //public information query
                         $terms = get_terms(array(
                             'taxonomy' => 'public-information-category',
@@ -551,18 +558,18 @@ $row = get_row_index() - 0;
                             if (!empty($terms) && !is_wp_error($terms)) {
                                 foreach ($terms as $term) {
                             ?>
-                    <button class="filter-button" data-filter="<?php echo esc_attr($term->slug); ?>">
-                        <?php echo esc_html($term->name); ?>
-                    </button>
-                    <?php
+                <button class="filter-button" data-filter="<?php echo esc_attr($term->slug); ?>">
+                    <?php echo esc_html($term->name); ?>
+                </button>
+                <?php
                                 }
                             }
                             ?>
-                </div>
+            </div>
 
 
-                <div class="posts-container">
-                    <?php
+            <div class="posts-container">
+                <?php
                             // Get the search query from the URL and normalize it
                             $search_postcode = isset($_GET['postcode']) ? sanitize_text_field($_GET['postcode']) : '';
 
@@ -633,36 +640,36 @@ $row = get_row_index() - 0;
                                         $posts_found = true; 
                                         $colourScheme = $colourSchemes[$index % count($colourSchemes)];
                             ?>
-                    <div class="taxonomy-group" data-term="<?php echo esc_attr($term->slug); ?>">
-                        <div class="taxonomy-title-container <?php echo esc_attr($colourScheme); ?>-scheme">
-                            <p>A - Z</p>
-                            <h4 class="taxonomy-title">
-                                <?php echo esc_html(is_object($term) ? $term->name : 'No valid term'); 
+                <div class="taxonomy-group" data-term="<?php echo esc_attr($term->slug); ?>">
+                    <div class="taxonomy-title-container <?php echo esc_attr($colourScheme); ?>-scheme">
+                        <p>A - Z</p>
+                        <h4 class="taxonomy-title">
+                            <?php echo esc_html(is_object($term) ? $term->name : 'No valid term'); 
                                         echo $chosen_post_type == 'public-body' ? ' in Wales': '';
                                 ?>
-                            </h4>
-                        </div>
+                        </h4>
+                    </div>
 
-                        <div class="term-posts">
-                            <?php
+                    <div class="term-posts">
+                        <?php
                                                 while ($query->have_posts()) {
                                                     $query->the_post();
                                                 ?>
-                            <a href="<?php the_permalink(); ?>" class="post-link"
-                                aria-label="Read more about <?php the_title_attribute(); ?>">
-                                <div class="post-container">
-                                    <h3 class="post-title"><?php the_title(); ?></h3>
-                                    <div class="post-read-more-container">
-                                        <p class="post-read-more">Read more</p>
-                                    </div>
+                        <a href="<?php the_permalink(); ?>" class="post-link"
+                            aria-label="Read more about <?php the_title_attribute(); ?>">
+                            <div class="post-container">
+                                <h3 class="post-title"><?php the_title(); ?></h3>
+                                <div class="post-read-more-container">
+                                    <p class="post-read-more">Read more</p>
                                 </div>
-                            </a>
-                            <?php
+                            </div>
+                        </a>
+                        <?php
                                                 }
                                                 ?>
-                        </div>
                     </div>
-                    <?php
+                </div>
+                <?php
                                         $index++;
                                     }
 
@@ -678,10 +685,10 @@ $row = get_row_index() - 0;
                                 echo '<p class="body-large">Sorry, no matching results</p>';
                             }
                             ?>
-                </div>
-
             </div>
+
         </div>
+    </div>
 
 
 
@@ -767,8 +774,7 @@ $row = get_row_index() - 0;
 
                             </div>
                             <div class="card-bottom">
-                                <p>Read News Article</p>
-
+                                <p><?= $read_post; ?></p>
                             </div>
 
 
@@ -795,7 +801,8 @@ $row = get_row_index() - 0;
             <div class="text-inner">
                 <p class="title-tag">News</p>
                 <h3 class="heading h2">Stay connected with our latest news and updates</h3>
-                <a href="" class="btn cobalt text-white">All Press & Media<div class="btn-arrow-container"></div></a>
+                <a href="<?= $link['url']; ?>" class="btn cobalt text-white">All Press & Media<div
+                        class="btn-arrow-container"></div></a>
             </div>
 
             <div class="button-container">
@@ -823,7 +830,7 @@ $row = get_row_index() - 0;
                     <?php
                             $colourScheme = $colourSchemes[$x % 4];
                             ?>
-                    <a href="/" class="stacked-slide">
+                    <a href="<?php the_permalink(); ?>" class="stacked-slide">
                         <div class="press-release-card <?php echo $colourScheme; ?>-style">
                             <div class="text-col relative">
 
@@ -846,7 +853,7 @@ $row = get_row_index() - 0;
                                         </div>
                                     </div>
                                     <div class="card-bottom">
-                                        <p>Read News Article</p>
+                                        <p><?= $read_post; ?></p>
                                     </div>
 
                                 </div>
@@ -864,7 +871,7 @@ $row = get_row_index() - 0;
                             if ($x + 1 < 12) { // Ensure we don't exceed the total number of slides
                                 $colourScheme = $colourSchemes[($x + 1) % 4];
                             ?>
-                    <a href="/" class="stacked-slide">
+                    <a href="<?php the_permalink(); ?>" class="stacked-slide">
                         <div class="press-release-card <?php echo $colourScheme; ?>-style">
                             <div class="text-col relative">
 
@@ -886,7 +893,7 @@ $row = get_row_index() - 0;
                                         </div>
                                     </div>
                                     <div class="card-bottom">
-                                        <p>Read News Article</p>
+                                        <p><?= $read_post; ?></p>
                                     </div>
 
                                 </div>
@@ -920,7 +927,6 @@ $row = get_row_index() - 0;
 
 </section>
 <script>
-
 jQuery(document).ready(function($) {
     $('#load-more').on('click', function() {
         const button = $(this);
@@ -946,7 +952,8 @@ jQuery(document).ready(function($) {
             success: function(response) {
                 if (response.success) {
                     $('#posts-container').append(response.data);
-                    button.html('Load More <div class="btn-arrow-container"></div>').prop('disabled', false);
+                    button.html('Load More <div class="btn-arrow-container"></div>').prop(
+                        'disabled', false);
 
                     // Update the current page
                     button.data('page', currentPage + 1);
@@ -958,10 +965,10 @@ jQuery(document).ready(function($) {
                 }
             },
             error: function() {
-                button.html('Load More <div class="btn-arrow-container"></div>').prop('disabled', false);
+                button.html('Load More <div class="btn-arrow-container"></div>').prop(
+                    'disabled', false);
             }
         });
     });
 });
-
 </script>

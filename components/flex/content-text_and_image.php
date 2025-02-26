@@ -74,7 +74,8 @@ endif
                 <?php endif; // big title 
                     ?>
                 <?php if ($body): ?>
-                <p class="body"><?php echo $body; ?></p>
+                <div class="body">
+					<?php echo $body; ?></div>
                 <?php endif; // body 
                     ?>
                 <?php if ($link): ?>
@@ -126,7 +127,7 @@ endif
                 <?php endif; // big title 
                     ?>
                 <?php if ($body): ?>
-                <p class="body"><?php echo $body; ?></p>
+                <div class="body"><?php echo $body; ?></div>
                 <?php endif; // body 
                     ?>
                 <?php if ($link): ?>
@@ -182,14 +183,7 @@ endif
             /// centred layout version 
         ?>
 
-    <div class="fade_in_element section-content half-text-half-img-layout <?php if($imgBars) { echo " bars-on-img ";} ?> centre-style <?php if ($colourScheme) {
-                                                                                    echo $colourScheme;
-                                                                                } ?>-style <?php if ($reverseLayout) {
-                                                                                                echo " reverse ";
-                                                                                            }
-                                                                                            if ($barsAtTop) {
-                                                                                                echo "bars-at-top";
-                                                                                            } ?>" >
+    <div class="fade_in_element section-content half-text-half-img-layout <?php if($imgBars) { echo " bars-on-img ";} ?> centre-style <?php if ($colourScheme) { echo $colourScheme; } ?>-style <?php if ($reverseLayout) { echo " reverse "; } if ($barsAtTop) { echo "bars-at-top"; } ?>">
 
         <div class="img-wrap">
             <?php $landscapeImage = array(
@@ -239,7 +233,9 @@ endif
                 <?php endif; // big title 
                         ?>
                 <?php if ($body): ?>
-                <p class="body"><?php echo $body; ?></p>
+                <div class="body">
+					<?php echo $body; ?>
+				</div>
                 <?php endif; // body 
                         ?>
 
@@ -334,7 +330,7 @@ endif
                 <?php endif; // big title 
                         ?>
                 <?php if ($body): ?>
-                <p class="body"><?php echo $body; ?></p>
+                <div class="body"><?php echo $body; ?></div>
                 <?php endif; // body 
                         ?>
 
@@ -447,7 +443,7 @@ endif
                 <?php endif; // big title 
                         ?>
                 <?php if ($body): ?>
-                <p class="body"><?php echo $body; ?></p>
+                <div class="body"><?php echo $body; ?></div>
                 <?php endif; // body 
                         ?>
                             <?php if ($link): ?>
@@ -506,7 +502,7 @@ endif
                 <?php endif; // big title 
                     ?>
                 <?php if ($body): ?>
-                <p class="body"><?php echo $body; ?></p>
+                <div class="body"><?php echo $body; ?></div>
                 <?php endif; // body 
                     ?>
                 <?php if ($link): ?>
@@ -589,12 +585,14 @@ endif
                             ?>
                         <?php if ($bigTitle): ?>
                         <h3 class="heading h2"><?php echo $bigTitle; ?></h3>
-                        <?php endif; // big title 
-                            ?>
+                        <?php endif; // big title ?>
+						
                         <?php if ($body): ?>
-                        <p class="body"><?php echo $body; ?></p>
-                        <?php endif; // body 
-                            ?>
+                        <div class="body">
+							<?php echo $body; ?>
+						</div>
+                        <?php endif; // body ?>
+						
                         <?php if ($link): ?>
                         <a href="<?php echo $link_url; ?>" class="link btn" target="<?php echo $link_target; ?>"><?php echo $link_title; ?><div
                                 class="btn-arrow-container"></div></a>

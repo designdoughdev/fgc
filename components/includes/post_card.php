@@ -40,6 +40,15 @@ if($post_type == 'resources_posts' || $post_type == 'public_info') {
     $link = get_permalink();
 }
 
+// determine 'read more' text
+if($post_type == 'resources_posts') {
+    $read_post = 'Open Resource';
+} else if ($post_type == 'press_releases') {
+    $read_post = 'Read News article';
+} else {
+    $read_post = 'Read';
+}
+
 ?>
 
 <a href="<?php echo $link; ?>" class="post-card-wrapper-link">
@@ -85,7 +94,7 @@ if($post_type == 'resources_posts' || $post_type == 'public_info') {
 
         </div>
         <div class="card-bottom">
-            <p>Read News Article</p>
+            <p><?= $read_post; ?></p>
         </div>
     </div>
 </a>

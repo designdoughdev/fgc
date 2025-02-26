@@ -51,7 +51,7 @@ require get_parent_theme_file_path('/inc/responsiveimages.php');
 // require get_parent_theme_file_path('/inc/siteoptions.php');
 require get_parent_theme_file_path('/inc/customposttypes.php');
 // require get_parent_theme_file_path('/inc/disableadminbar.php');
-require get_parent_theme_file_path('/inc/posttonews.php');
+// require get_parent_theme_file_path('/inc/posttonews.php');
 // require get_parent_theme_file_path('/inc/excerpt-length.php');
 require get_parent_theme_file_path('/inc/disable-comments.php');
 require get_parent_theme_file_path('/inc/disable-gutenburg.php');
@@ -411,3 +411,12 @@ function load_more_posts() {
 
 add_action('wp_ajax_load_more_posts', 'load_more_posts');
 add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
+
+
+// remove 'Posts' post type from the WP dash, because we are not using it
+function post_remove ()      //creating functions post_remove for removing menu item
+{ 
+   remove_menu_page('edit.php');
+}
+
+add_action('admin_menu', 'post_remove');   //adding action for triggering function call

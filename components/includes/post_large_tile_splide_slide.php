@@ -1,3 +1,18 @@
+<?php 
+// determine 'read more' text
+
+$post_type = get_post_type();
+
+if($post_type == 'resources_posts') {
+    $read_post = 'Open Resource';
+} else if ($post_type == 'press_releases') {
+    $read_post = 'Read News article';
+} else {
+    $read_post = 'Read';
+}
+
+?>
+
 <li class="splide__slide relative">
     <a href="<?php echo the_permalink(); ?>">
         <div class="post-card-large-tile ">
@@ -51,8 +66,7 @@
 
                 </div>
                 <div class="card-bottom">
-                    <p>Read News Article</p>
-
+                    <p><?= $read_post; ?></p>
                 </div>
 
             </div>

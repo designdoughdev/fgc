@@ -9,6 +9,8 @@ $image = get_field('image');
 
 $header = get_field('header', 'option'); 
 
+$post_type = get_post_type();
+
 ?>
 
 <!DOCTYPE html>
@@ -20,10 +22,10 @@ $header = get_field('header', 'option');
 
     <!-- WordPress Favicon -->
     <?php if ( function_exists( 'get_site_icon_url' ) && get_site_icon_url() ) : ?>
-        <link rel="icon" href="<?php echo esc_url( get_site_icon_url(32) ); ?>" sizes="32x32" type="image/png">
-        <link rel="icon" href="<?php echo esc_url( get_site_icon_url(192) ); ?>" sizes="192x192" type="image/png">
-        <link rel="apple-touch-icon" href="<?php echo esc_url( get_site_icon_url(180) ); ?>">
-        <meta name="msapplication-TileImage" content="<?php echo esc_url( get_site_icon_url(270) ); ?>">
+    <link rel="icon" href="<?php echo esc_url( get_site_icon_url(32) ); ?>" sizes="32x32" type="image/png">
+    <link rel="icon" href="<?php echo esc_url( get_site_icon_url(192) ); ?>" sizes="192x192" type="image/png">
+    <link rel="apple-touch-icon" href="<?php echo esc_url( get_site_icon_url(180) ); ?>">
+    <meta name="msapplication-TileImage" content="<?php echo esc_url( get_site_icon_url(270) ); ?>">
     <?php endif; ?>
 
     <title><?php wp_title('|', true, 'right'); ?></title>
@@ -37,7 +39,7 @@ $header = get_field('header', 'option');
     <div class="header-bar">
         <div class="pre-header">
             <div class="pre-header-right">
-                <p class="h5 text-white">ENG | CYM</p>
+                <p class="h5 text-white">CYM | ENG</p>
                 <?php get_template_part('components/includes/search-bar'); ?>
             </div>
         </div>
@@ -51,7 +53,7 @@ $header = get_field('header', 'option');
                         <img class="header-logo" src="<?php bloginfo('template_url'); ?>/assets/images/png/logo.png"
                             alt="">
 
-                        
+
                     </a>
 
                 </div>
@@ -85,11 +87,11 @@ $header = get_field('header', 'option');
                             $post_url = get_permalink($link); // Post URL
                             $post_title = get_the_title($link); // Post title
                             ?>
-                            
-                            <a href="<?php echo esc_url($post_url); ?>">
-                                <?php echo esc_html($post_title); ?>
-                            </a>
-                   
+
+                        <a href="<?php echo esc_url($post_url); ?>">
+                            <?php echo esc_html($post_title); ?>
+                        </a>
+
                         <?php } ?>
 
 
@@ -97,7 +99,7 @@ $header = get_field('header', 'option');
 
                     <div class="hamburger-icon-container">
                         <button class="hamburger-btn">
-                        <?php
+                            <?php
                                             echo file_get_contents(get_template_directory() . '/assets/images/svg/hamburger.svg');
                                             ?>
                         </button>
@@ -116,11 +118,11 @@ $header = get_field('header', 'option');
         </div>
         <?php get_template_part('components/includes/action-nav'); ?>
         <?php get_template_part('components/includes/mobile-nav'); ?>
-        
+
 
     </div>
 
-   
+
 
     <?php if ($layout == 'boxed'): ?>
 
@@ -128,7 +130,7 @@ $header = get_field('header', 'option');
 
     <section class="hero-container relative <?php echo $layout; ?>">
 
-        
+
 
 
         <?php if (is_front_page()): ?>
@@ -291,7 +293,7 @@ $header = get_field('header', 'option');
 
     <section class="hero-container relative level-three-layout">
 
-        
+
 
         <div id="hero-overlay" class="container">
 
@@ -303,11 +305,19 @@ $header = get_field('header', 'option');
 
                     </div>
                     <?php } ?>
-                    <h2 class="title-tag"><?php if (is_search()) {
+                    <h2 class="title-tag">
+                        <?php if (is_search()) {
                                                     echo "Search";
-                                                } else {
-                                                    echo $smallTitle;
-                                                } ?></h2>
+                                                } else if($post_type == 'resources_posts') {
+												echo 'Resource';
+												} else if($post_type == 'public_info') {
+												echo 'Public Information';
+												} else if($post_type == 'press_releases') {
+												echo 'News & Insights';
+												} else { 
+												echo $smallTitle;
+                                                } ?>
+                    </h2>
                     <h3 class="heading"><?php if (is_search()) {
                                                 echo "Search Results";
                                             } else {
@@ -332,7 +342,7 @@ $header = get_field('header', 'option');
 
     <section class="hero-container relative level-two-layout">
 
-        
+
 
 
         <div id="hero-overlay" class="container">
@@ -345,11 +355,11 @@ $header = get_field('header', 'option');
                     <?php endif;
                         ?>
                     <div class="text-content-grid">
-						
+
                         <h3 class="heading">
                             <?php if($bigTitle) { echo $bigTitle; } else { the_title(); } ?>
                         </h3>
-						
+
                         <?php if ($body): ?>
                         <p class="text">
                             <?php echo $body; ?>
@@ -382,12 +392,12 @@ $header = get_field('header', 'option');
 
                     endif ?>
 
-                    <div class="bars-container">
-                        <?php
+                <div class="bars-container">
+                    <?php
                             // horizontal bars
                             echo file_get_contents(get_template_directory() . '/assets/images/svg/horizontal-bars.svg');
                             ?>
-                    </div>
+                </div>
 
 
 
@@ -404,7 +414,7 @@ $header = get_field('header', 'option');
 
     <section class="hero-container relative level-three-layout">
 
-        
+
 
 
         <div id="hero-overlay" class="container">
@@ -424,7 +434,7 @@ $header = get_field('header', 'option');
                     <h3 class="heading">
                         <?php if($bigTitle) { echo $bigTitle; } else { the_title(); } ?>
                     </h3>
-					
+
                     <?php if ($body): ?>
                     <p class="text">
                         <?php echo $body ?>
@@ -450,7 +460,7 @@ $header = get_field('header', 'option');
 
     <section class="hero-container relative level-three-layout">
 
-        
+
 
         <div id="hero-overlay" class="container">
 

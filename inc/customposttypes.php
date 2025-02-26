@@ -12,34 +12,44 @@ function designdough_custom_post_types()
 {
     $post_types = array(
         array(
-            'name' => 'Press Releases',
+            'name' => 'News',
             'singular_name' => 'press_releases',
             'menu_icon' => 'megaphone',
+			'singular_label' => 'News', // custom key
         ),
         array(
             'name' => 'Resources',
             'singular_name' => 'resources_posts',
             'menu_icon' => 'book',
+			'singular_label' => 'Resource', // custom key
         ),
         array(
             'name' => 'Public Bodies',
             'singular_name' => 'Public Body',
             'menu_icon' => 'portfolio',
+			'singular_label' => 'Public Body', // custom key
+			'menu_icon' => 'money',
         ),
 		array(
             'name' => 'Public Service Boards',
             'singular_name' => 'Public Service Board',
             'menu_icon' => 'portfolio',
+			'singular_label' => 'PSB', // custom key
+			'menu_icon' => 'clipboard',
         ),
         array(
             'name' => 'Public Information',
             'singular_name' => 'public_info',
             'menu_icon' => 'text-page',
+			'singular_label' => 'Public Info', // custom key
+			'menu_icon' => 'bank',
         ),
         array(
             'name' => 'Case Studies',
             'singular_name' => 'Case Study',
             'menu_icon' => 'search',
+			'singular_label' => 'Case Study', // custom key
+			'menu_icon' => 'clipboard',
         ),
 
     );
@@ -51,11 +61,11 @@ function designdough_custom_post_types()
             'singular_name'      => _x($post_type['singular_name'], 'post type singular name', 'designdough'),
             'menu_name'          => _x($post_type['name'], 'admin menu', 'designdough'),
             'name_admin_bar'     => _x($post_type['singular_name'], 'add new on admin bar', 'designdough'),
-            'add_new'            => _x('Add New', sanitize_title($post_type['singular_name']), 'designdough'),
-            'add_new_item'       => __('Add New ' . $post_type['singular_name'], 'designdough'),
-            'new_item'           => __('New ' . $post_type['singular_name'], 'designdough'),
-            'edit_item'          => __('Edit ' . $post_type['singular_name'], 'designdough'),
-            'view_item'          => __('View ' . $post_type['singular_name'], 'designdough'),
+            'add_new'            => _x('Add New', sanitize_title($post_type['singular_label']), 'designdough'),
+            'add_new_item'       => __('Add New ' . $post_type['singular_label'], 'designdough'),
+            'new_item'           => __('New ' . $post_type['singular_label'], 'designdough'),
+            'edit_item'          => __('Edit ' . $post_type['singular_label'], 'designdough'),
+            'view_item'          => __('View ' . $post_type['singular_label'], 'designdough'),
             'all_items'          => __('All ' . $post_type['name'], 'designdough'),
             'search_items'       => __('Search ' . $post_type['name'], 'designdough'),
             'parent_item_colon'  => __('Parent ' . $post_type['name'] . ':', 'designdough'),

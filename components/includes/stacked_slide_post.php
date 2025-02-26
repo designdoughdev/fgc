@@ -1,7 +1,17 @@
 <?php
 
 $author = get_field('author');
+$post_type = get_post_type();
 
+
+// determine 'read more' text
+if($post_type == 'resources_posts') {
+    $read_post = 'Open Resource';
+} else if ($post_type == 'press_releases') {
+    $read_post = 'Read News article';
+} else {
+    $read_post = 'Read';
+}
 
 ?>
 <a href="<?php the_permalink(); ?>" class="stacked-slide">
@@ -33,7 +43,7 @@ $author = get_field('author');
                     </div>
                 </div>
                 <div class="card-bottom">
-                    <p>Read News Article</p>
+					<p><?= $read_post; ?></p>
                 </div>
             </div>
         </div>

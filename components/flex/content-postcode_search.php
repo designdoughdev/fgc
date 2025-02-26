@@ -14,7 +14,7 @@ $big_title = get_sub_field('big_title');
 
         <div class="postcode-search-wrapper">
             <div class="img-wrapper">
-                <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/train.jpg" ?> alt="">
+                <img src=<?php echo get_template_directory_uri() . "/assets/images/jpg/Aber-Food-Surplus.jpg" ?> alt="">
             </div>
 
 
